@@ -1,0 +1,183 @@
+{
+  "id": "hsk4-dialogue8",
+  "slug": "health-check-up",
+  "title": "体检",
+  "pinyin": "Tǐjiǎn",
+  "titleTranslation": "Tibbiy ko'rik",
+  "titleTranslation_ru": "Медосмотр",
+  "titleTranslation_en": "Health Check-up",
+  "level": 4,
+  "tag": "salomatlik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "体检",
+    "安排",
+    "检查",
+    "项目",
+    "身高",
+    "体重",
+    "视力",
+    "血压",
+    "抽血",
+    "结果",
+    "报告",
+    "规律",
+    "发现",
+    "治疗",
+    "按时"
+  ],
+  "sections": [
+    {
+      "id": "d8-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d8-s1",
+          "text_original": "你今天怎么请假了？",
+          "pinyin": "Nǐ jīntiān zěnme qǐngjià le?",
+          "text_translation": "Bugun nega ta'til olding?",
+          "text_translation_ru": "Почему ты сегодня взял отгул?",
+          "text_translation_en": "Why did you take leave today?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d8-s2",
+          "text_original": "我早上去做体检了，刚回来。",
+          "pinyin": "Wǒ zǎoshang qù zuò tǐjiǎn le, gāng huílái.",
+          "text_translation": "Ertalab tibbiy ko'rikdan o'tib keldim, hozirgina qaytdim.",
+          "text_translation_ru": "Утром ходил на медосмотр, только что вернулся.",
+          "text_translation_en": "I went for a health check-up this morning and just got back.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d8-s3",
+          "text_original": "你身体不舒服吗？",
+          "pinyin": "Nǐ shēntǐ bù shūfu ma?",
+          "text_translation": "Sog'lig'ing yomonmi?",
+          "text_translation_ru": "Тебе нездоровится?",
+          "text_translation_en": "Are you feeling unwell?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d8-s4",
+          "text_original": "没有。公司每年都安排一次体检，今天轮到我了。",
+          "pinyin": "Méiyǒu. Gōngsī měinián dōu ānpái yí cì tǐjiǎn, jīntiān lún dào wǒ le.",
+          "text_translation": "Yo'q. Kompaniya har yili bir marta tibbiy ko'rik tashkil qiladi, bugun mening navbatim keldi.",
+          "text_translation_ru": "Нет. Компания каждый год устраивает медосмотр, сегодня была моя очередь.",
+          "text_translation_en": "No. The company arranges a check-up every year, and today it was my turn.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d8-s5",
+          "text_original": "体检要检查哪些项目？",
+          "pinyin": "Tǐjiǎn yào jiǎnchá nǎxiē xiàngmù?",
+          "text_translation": "Tibbiy ko'rikda qaysi ko'rsatkichlar tekshiriladi?",
+          "text_translation_ru": "Какие показатели проверяют на медосмотре?",
+          "text_translation_en": "What items does the check-up examine?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d8-s6",
+          "text_original": "身高、体重、视力、血压，还有抽血和B超。",
+          "pinyin": "Shēngāo, tǐzhòng, shìlì, xuèyā, hái yǒu chōuxuè hé B chāo.",
+          "text_translation": "Bo'y, vazn, ko'rish, qon bosimi, yana qon olish va UTT (B-ultratovush).",
+          "text_translation_ru": "Рост, вес, зрение, давление, ещё забор крови и УЗИ.",
+          "text_translation_en": "Height, weight, eyesight, blood pressure, plus a blood draw and an ultrasound.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d8-s7",
+          "text_original": "抽血疼不疼？",
+          "pinyin": "Chōuxuè téng bù téng?",
+          "text_translation": "Qon olish og'riydimi?",
+          "text_translation_ru": "Брать кровь больно?",
+          "text_translation_en": "Does drawing blood hurt?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d8-s8",
+          "text_original": "有一点点疼，但是很快，几秒钟就好了。",
+          "pinyin": "Yǒu yì diǎndiǎn téng, dànshì hěn kuài, jǐ miǎozhōng jiù hǎo le.",
+          "text_translation": "Bir ozgina og'riydi, lekin juda tez, bir necha soniyada tugaydi.",
+          "text_translation_ru": "Чуть-чуть больно, но очень быстро — за несколько секунд и всё.",
+          "text_translation_en": "It hurts just a tiny bit, but it's quick — done in a few seconds.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d8-s9",
+          "text_original": "结果出来了吗？",
+          "pinyin": "Jiéguǒ chūlái le ma?",
+          "text_translation": "Natijalar chiqdimi?",
+          "text_translation_ru": "Результаты уже готовы?",
+          "text_translation_en": "Are the results out yet?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d8-s10",
+          "text_original": "大部分当天就能拿，有些要等两三天。",
+          "pinyin": "Dà bùfen dàngtiān jiù néng ná, yǒuxiē yào děng liǎng sān tiān.",
+          "text_translation": "Ko'pchiligini o'sha kuni olsa bo'ladi, ba'zilarini ikki-uch kun kutish kerak.",
+          "text_translation_ru": "Большинство можно получить в тот же день, некоторые нужно подождать два-три дня.",
+          "text_translation_en": "Most you can get the same day; some take two or three days.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d8-s11",
+          "text_original": "你担心检查结果吗？",
+          "pinyin": "Nǐ dānxīn jiǎnchá jiéguǒ ma?",
+          "text_translation": "Tekshiruv natijalaridan xavotirdamisan?",
+          "text_translation_ru": "Ты переживаешь из-за результатов обследования?",
+          "text_translation_en": "Are you worried about the check-up results?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d8-s12",
+          "text_original": "有一点担心，但是平时生活规律，应该没什么大问题。",
+          "pinyin": "Yǒu yì diǎn dānxīn, dànshì píngshí shēnghuó guīlǜ, yīnggāi méi shénme dà wèntí.",
+          "text_translation": "Bir oz xavotirlanaman, lekin odatda turmushim tartibli, katta muammo bo'lmasa kerak.",
+          "text_translation_ru": "Немного переживаю, но обычно у меня размеренный образ жизни, так что больших проблем быть не должно.",
+          "text_translation_en": "A little worried, but my daily life is regular, so there shouldn't be any big problems.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d8-s13",
+          "text_original": "体检以后拿到报告可以看看，有问题早发现早治疗。",
+          "pinyin": "Tǐjiǎn yǐhòu ná dào bàogào kěyǐ kàn kan, yǒu wèntí zǎo fāxiàn zǎo zhìliáo.",
+          "text_translation": "Tibbiy ko'rikdan keyin hisobotni olib ko'rib chiqsang bo'ladi, muammo bo'lsa erta aniqlanib, erta davolanadi.",
+          "text_translation_ru": "После осмотра можно посмотреть заключение: если есть проблема, чем раньше выявишь, тем раньше начнёшь лечить.",
+          "text_translation_en": "After the check-up you can look at the report — catching a problem early means treating it early.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d8-s14",
+          "text_original": "对。健康最重要，所以我每年都按时去体检。",
+          "pinyin": "Duì. Jiànkāng zuì zhòngyào, suǒyǐ wǒ měinián dōu ànshí qù tǐjiǎn.",
+          "text_translation": "To'g'ri. Sog'liq eng muhimi, shuning uchun har yili o'z vaqtida tibbiy ko'rikka boraman.",
+          "text_translation_ru": "Да. Здоровье важнее всего, поэтому я каждый год вовремя прохожу медосмотр.",
+          "text_translation_en": "Right. Health matters most, so I go for a check-up on time every year.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d8-s15",
+          "text_original": "下次体检的时候记得叫我一起。",
+          "pinyin": "Xià cì tǐjiǎn de shíhou jìde jiào wǒ yìqǐ.",
+          "text_translation": "Keyingi tibbiy ko'rikda meni ham birga chaqirishni unutma.",
+          "text_translation_ru": "В следующий раз на медосмотр не забудь позвать и меня.",
+          "text_translation_en": "Next time you go for a check-up, remember to ask me to come along.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d8-s16",
+          "text_original": "好，到时候我提前告诉你。",
+          "pinyin": "Hǎo, dàoshíhou wǒ tíqián gàosu nǐ.",
+          "text_translation": "Yaxshi, o'shanda oldindan senga aytaman.",
+          "text_translation_ru": "Хорошо, тогда я заранее тебе сообщу.",
+          "text_translation_en": "Okay, I'll let you know in advance when the time comes.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
