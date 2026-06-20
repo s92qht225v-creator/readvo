@@ -1,0 +1,204 @@
+{
+  "id": "hsk3-dialogue21",
+  "slug": "homestay",
+  "title": "民宿",
+  "pinyin": "Mínsù",
+  "titleTranslation": "Mehmon uy",
+  "titleTranslation_ru": "Гостевой дом",
+  "titleTranslation_en": "Homestay",
+  "level": 3,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "民宿",
+    "房东",
+    "热情",
+    "介绍",
+    "顿",
+    "提前",
+    "评价",
+    "评分",
+    "推荐"
+  ],
+  "sections": [
+    {
+      "id": "d21-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d21-s1",
+          "text_original": "听说你上周末去旅行了，住在哪儿？",
+          "pinyin": "Tīngshuō nǐ shàng zhōumò qù lǚxíng le, zhù zài nǎr?",
+          "text_translation": "Eshitishimcha, o'tgan dam olish kunlari sayohatga borgan ekansan, qayerda turding?",
+          "text_translation_ru": "Я слышал, ты в прошлые выходные ездил в путешествие — где останавливался?",
+          "text_translation_en": "I heard you went travelling last weekend — where did you stay?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s2",
+          "text_original": "我这次没住酒店，住的是民宿。",
+          "pinyin": "Wǒ zhè cì méi zhù jiǔdiàn, zhù de shì mínsù.",
+          "text_translation": "Bu safar mehmonxonada emas, mehmon uyda turdim.",
+          "text_translation_ru": "В этот раз я останавливался не в отеле, а в гостевом доме.",
+          "text_translation_en": "This time I didn't stay in a hotel — I stayed in a homestay.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s3",
+          "text_original": "民宿跟酒店有什么不一样？",
+          "pinyin": "Mínsù gēn jiǔdiàn yǒu shénme bù yíyàng?",
+          "text_translation": "Mehmon uy mehmonxonadan nimasi bilan farq qiladi?",
+          "text_translation_ru": "Чем гостевой дом отличается от отеля?",
+          "text_translation_en": "How is a homestay different from a hotel?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s4",
+          "text_original": "民宿更像家，房间不大但是很舒服。",
+          "pinyin": "Mínsù gèng xiàng jiā, fángjiān bú dà dànshì hěn shūfu.",
+          "text_translation": "Mehmon uy ko'proq uyga o'xshaydi, xona katta emas, lekin juda qulay.",
+          "text_translation_ru": "Гостевой дом больше похож на дом: комната небольшая, но очень уютная.",
+          "text_translation_en": "A homestay feels more like home — the room isn't big but it's very comfortable.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s5",
+          "text_original": "你是在哪里订的？",
+          "pinyin": "Nǐ shì zài nǎli dìng de?",
+          "text_translation": "Qayerdan band qilding?",
+          "text_translation_ru": "Где ты его забронировал?",
+          "text_translation_en": "Where did you book it?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s6",
+          "text_original": "我在手机上用一个软件订的，很方便。",
+          "pinyin": "Wǒ zài shǒujī shàng yòng yí ge ruǎnjiàn dìng de, hěn fāngbiàn.",
+          "text_translation": "Telefonda bitta ilova orqali band qildim, juda qulay.",
+          "text_translation_ru": "Забронировал в телефоне через приложение, очень удобно.",
+          "text_translation_en": "I booked it on my phone using an app — very convenient.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s7",
+          "text_original": "价格怎么样？",
+          "pinyin": "Jiàgé zěnmeyàng?",
+          "text_translation": "Narxi qanaqa?",
+          "text_translation_ru": "Как насчёт цены?",
+          "text_translation_en": "How was the price?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s8",
+          "text_original": "比酒店便宜一些。一晚上两百多块。",
+          "pinyin": "Bǐ jiǔdiàn piányi yì xiē. Yì wǎnshang liǎng bǎi duō kuài.",
+          "text_translation": "Mehmonxonadan biroz arzon. Bir kechasi ikki yuz yuandan oshadi.",
+          "text_translation_ru": "Немного дешевле отеля. За ночь — чуть больше двухсот юаней.",
+          "text_translation_en": "A bit cheaper than a hotel. Just over two hundred yuan a night.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s9",
+          "text_original": "房东人好吗？",
+          "pinyin": "Fángdōng rén hǎo ma?",
+          "text_translation": "Uy egasi yaxshi odammi?",
+          "text_translation_ru": "Хозяин хороший человек?",
+          "text_translation_en": "Was the host nice?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s10",
+          "text_original": "房东非常热情，还给我们介绍了附近好吃的地方。",
+          "pinyin": "Fángdōng fēicháng rèqíng, hái gěi wǒmen jièshào le fùjìn hǎochī de dìfang.",
+          "text_translation": "Uy egasi juda samimiy edi, hatto bizga yaqin atrofdagi mazali joylarni ham tavsiya qildi.",
+          "text_translation_ru": "Хозяин очень радушный, ещё и посоветовал нам вкусные места поблизости.",
+          "text_translation_en": "The host was very warm and even recommended some good places to eat nearby.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s11",
+          "text_original": "那真的不错！民宿有厨房吗？",
+          "pinyin": "Nà zhēn de búcuò! Mínsù yǒu chúfáng ma?",
+          "text_translation": "Bu rostdan ham zo'r ekan! Mehmon uyda oshxona bormi?",
+          "text_translation_ru": "Это и правда здорово! А в гостевом доме есть кухня?",
+          "text_translation_en": "That's really nice! Does the homestay have a kitchen?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s12",
+          "text_original": "有。可以自己做饭，很方便。",
+          "pinyin": "Yǒu. Kěyǐ zìjǐ zuò fàn, hěn fāngbiàn.",
+          "text_translation": "Bor. O'zing ovqat tayyorlasang bo'ladi, juda qulay.",
+          "text_translation_ru": "Есть. Можно самому готовить, очень удобно.",
+          "text_translation_en": "Yes. You can cook for yourself — very convenient.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s13",
+          "text_original": "你们自己做饭了吗？",
+          "pinyin": "Nǐmen zìjǐ zuò fàn le ma?",
+          "text_translation": "O'zlaring ovqat tayyorladingizmi?",
+          "text_translation_ru": "Вы сами готовили?",
+          "text_translation_en": "Did you cook for yourselves?",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s14",
+          "text_original": "做了一次。去附近的市场买了菜和鱼，做了一顿晚餐。",
+          "pinyin": "Zuò le yí cì. Qù fùjìn de shìchǎng mǎi le cài hé yú, zuò le yí dùn wǎncān.",
+          "text_translation": "Bir marta tayyorladik. Yaqin bozordan sabzavot va baliq olib, bir mahal kechki ovqat tayyorladik.",
+          "text_translation_ru": "Один раз. Сходили на ближайший рынок, купили овощи и рыбу и приготовили ужин.",
+          "text_translation_en": "We cooked once. We went to the nearby market, bought vegetables and fish, and made a dinner.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s15",
+          "text_original": "听起来好幸福！我也一直想试试民宿。",
+          "pinyin": "Tīng qǐlái hǎo xìngfú! Wǒ yě yìzhí xiǎng shì shi mínsù.",
+          "text_translation": "Eshitishga juda yoqimli ekan! Men ham doim mehmon uyni sinab ko'rmoqchi bo'lganman.",
+          "text_translation_ru": "Звучит так здорово! Я тоже всё время хотел попробовать гостевой дом.",
+          "text_translation_en": "That sounds so lovely! I've always wanted to try a homestay too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s16",
+          "text_original": "那你下次旅行可以试试。不过要提前订，周末人多。",
+          "pinyin": "Nà nǐ xià cì lǚxíng kěyǐ shì shi. Búguò yào tíqián dìng, zhōumò rén duō.",
+          "text_translation": "Unda keyingi sayohatingda sinab ko'r. Lekin oldindan band qilish kerak, dam olish kunlari odam ko'p bo'ladi.",
+          "text_translation_ru": "Тогда попробуй в следующую поездку. Только бронируй заранее — по выходным много желающих.",
+          "text_translation_en": "Then you can try it on your next trip. But book in advance — weekends are crowded.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s17",
+          "text_original": "好，我回去下个软件看看。",
+          "pinyin": "Hǎo, wǒ huíqù xià ge ruǎnjiàn kàn kan.",
+          "text_translation": "Yaxshi, uyga borib ilovani yuklab ko'rib chiqaman.",
+          "text_translation_ru": "Хорошо, вернусь домой, скачаю приложение и посмотрю.",
+          "text_translation_en": "Okay, I'll download an app and take a look when I get back.",
+          "speaker": "A"
+        },
+        {
+          "id": "d21-s18",
+          "text_original": "你看的时候注意看评价，选评分高的。",
+          "pinyin": "Nǐ kàn de shíhou zhùyì kàn píngjià, xuǎn píngfēn gāo de.",
+          "text_translation": "Ko'rayotganingda sharhlarga e'tibor ber, bahosi yuqorilarini tanla.",
+          "text_translation_ru": "Когда будешь смотреть, обращай внимание на отзывы и выбирай с высоким рейтингом.",
+          "text_translation_en": "When you look, pay attention to the reviews and pick ones with high ratings.",
+          "speaker": "B"
+        },
+        {
+          "id": "d21-s19",
+          "text_original": "好的，谢谢你的推荐！",
+          "pinyin": "Hǎo de, xièxie nǐ de tuījiàn!",
+          "text_translation": "Yaxshi, tavsiyang uchun rahmat!",
+          "text_translation_ru": "Хорошо, спасибо за рекомендацию!",
+          "text_translation_en": "Okay, thanks for the recommendation!",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
