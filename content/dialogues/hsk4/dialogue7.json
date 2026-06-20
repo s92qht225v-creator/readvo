@@ -1,0 +1,213 @@
+{
+  "id": "hsk4-dialogue7",
+  "slug": "credit-card",
+  "title": "信用卡",
+  "pinyin": "Xìnyòngkǎ",
+  "titleTranslation": "Kredit karta",
+  "titleTranslation_ru": "Кредитная карта",
+  "titleTranslation_en": "Credit Card",
+  "level": 4,
+  "tag": "xaridlar",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "信用卡",
+    "办",
+    "额度",
+    "刷",
+    "按时",
+    "还钱",
+    "利息",
+    "全额",
+    "还清",
+    "积累",
+    "信用",
+    "记录",
+    "贷款",
+    "消费",
+    "年费",
+    "积分",
+    "抵",
+    "研究"
+  ],
+  "sections": [
+    {
+      "id": "d7-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d7-s1",
+          "text_original": "你钱包里卡怎么这么多？",
+          "pinyin": "Nǐ qiánbāo lǐ kǎ zěnme zhème duō?",
+          "text_translation": "Hamyoningda nega bunchalik ko'p karta bor?",
+          "text_translation_ru": "Почему у тебя в кошельке столько карт?",
+          "text_translation_en": "Why do you have so many cards in your wallet?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d7-s2",
+          "text_original": "我最近办了一张信用卡，用来买东西很方便。",
+          "pinyin": "Wǒ zuìjìn bàn le yì zhāng xìnyòngkǎ, yòng lái mǎi dōngxi hěn fāngbiàn.",
+          "text_translation": "Yaqinda bitta kredit karta ochtirdim, xarid qilishda juda qulay.",
+          "text_translation_ru": "Я недавно оформил кредитную карту, ей очень удобно расплачиваться.",
+          "text_translation_en": "I recently got a credit card — it's very convenient for shopping.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d7-s3",
+          "text_original": "你以前没用过信用卡吗？",
+          "pinyin": "Nǐ yǐqián méi yòng guo xìnyòngkǎ ma?",
+          "text_translation": "Avval kredit kartadan foydalanmaganmiding?",
+          "text_translation_ru": "Ты раньше не пользовался кредитной картой?",
+          "text_translation_en": "Haven't you used a credit card before?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d7-s4",
+          "text_original": "用过，但是那张已经到期了。新卡额度更高一些。",
+          "pinyin": "Yòng guo, dànshì nà zhāng yǐjīng dàoqī le. Xīn kǎ édù gèng gāo yì xiē.",
+          "text_translation": "Foydalanganman, lekin u kartaning muddati tugagan. Yangi kartaning limiti biroz balandroq.",
+          "text_translation_ru": "Пользовался, но у той уже истёк срок. У новой карты лимит немного выше.",
+          "text_translation_en": "I have, but that one already expired. The new card has a slightly higher limit.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d7-s5",
+          "text_original": "额度是什么意思？",
+          "pinyin": "Édù shì shénme yìsi?",
+          "text_translation": "«Limit» nima degani?",
+          "text_translation_ru": "Что значит «лимит»?",
+          "text_translation_en": "What does \"limit\" mean?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d7-s6",
+          "text_original": "就是银行最多让你花多少钱。",
+          "pinyin": "Jiùshì yínháng zuìduō ràng nǐ huā duōshao qián.",
+          "text_translation": "Bu — bank senga ko'pi bilan qancha pul sarflashga ruxsat berishi.",
+          "text_translation_ru": "Это сколько максимум банк позволяет тебе потратить.",
+          "text_translation_en": "It's the most the bank lets you spend.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d7-s7",
+          "text_original": "那你这个月刷了多少？",
+          "pinyin": "Nà nǐ zhè ge yuè shuā le duōshao?",
+          "text_translation": "Unda bu oy qancha kartadan o'tkazding?",
+          "text_translation_ru": "А сколько ты потратил с карты в этом месяце?",
+          "text_translation_en": "So how much did you swipe this month?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d7-s8",
+          "text_original": "刷了一千多吧，买了几件衣服和日用品。",
+          "pinyin": "Shuā le yì qiān duō ba, mǎi le jǐ jiàn yīfu hé rìyòngpǐn.",
+          "text_translation": "Mingdan ko'proq o'tkazdim, bir nechta kiyim va kundalik ehtiyoj mollari oldim.",
+          "text_translation_ru": "Где-то больше тысячи, купил пару вещей и товары повседневного спроса.",
+          "text_translation_en": "Over a thousand, I think — I bought some clothes and daily necessities.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d7-s9",
+          "text_original": "那你要记得按时还钱，不然利息很高。",
+          "pinyin": "Nà nǐ yào jìde ànshí huán qián, bùrán lìxī hěn gāo.",
+          "text_translation": "Unda qarzni o'z vaqtida qaytarishni unutma, aks holda foizi juda baland.",
+          "text_translation_ru": "Тогда не забывай вовремя возвращать деньги, иначе проценты очень высокие.",
+          "text_translation_en": "Then remember to pay it back on time, otherwise the interest is very high.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d7-s10",
+          "text_original": "我知道，我每个月都会全额还清。",
+          "pinyin": "Wǒ zhīdào, wǒ měi ge yuè dōu huì quán'é huán qīng.",
+          "text_translation": "Bilaman, men har oy to'liq summani to'lab qo'yaman.",
+          "text_translation_ru": "Я знаю, я каждый месяц погашаю всю сумму полностью.",
+          "text_translation_en": "I know — I pay it off in full every month.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d7-s11",
+          "text_original": "那挺好的，还能积累信用记录。",
+          "pinyin": "Nà tǐng hǎo de, hái néng jīlěi xìnyòng jìlù.",
+          "text_translation": "Bu juda yaxshi, ustiga-ustak kredit tarixi to'planib boradi.",
+          "text_translation_ru": "Это хорошо, ещё и кредитную историю можно накопить.",
+          "text_translation_en": "That's great — you can also build up a credit record.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d7-s12",
+          "text_original": "对，以后买房贷款会比较方便。",
+          "pinyin": "Duì, yǐhòu mǎi fáng dàikuǎn huì bǐjiào fāngbiàn.",
+          "text_translation": "To'g'ri, kelajakda uy olish uchun kredit olish ancha qulay bo'ladi.",
+          "text_translation_ru": "Да, потом будет проще взять кредит на покупку жилья.",
+          "text_translation_en": "Right, it'll be easier to get a mortgage loan later.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d7-s13",
+          "text_original": "你觉得办信用卡有什么要注意的吗？",
+          "pinyin": "Nǐ juéde bàn xìnyòngkǎ yǒu shénme yào zhùyì de ma?",
+          "text_translation": "Seningcha kredit karta ochishda nimaga e'tibor berish kerak?",
+          "text_translation_ru": "Как ты думаешь, на что нужно обращать внимание при оформлении кредитной карты?",
+          "text_translation_en": "What do you think you should watch out for when getting a credit card?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d7-s14",
+          "text_original": "要选适合自己消费习惯的卡，年费、积分什么的都要看好。",
+          "pinyin": "Yào xuǎn shìhé zìjǐ xiāofèi xíguàn de kǎ, niánfèi, jīfēn shénme de dōu yào kàn hǎo.",
+          "text_translation": "O'z xarajat odatlaringga mos kartani tanlash kerak, yillik to'lov, bonus ballari va shu kabilarga ham diqqat qilish lozim.",
+          "text_translation_ru": "Нужно выбрать карту под свои привычки в тратах, и хорошо изучить годовую плату, баллы и тому подобное.",
+          "text_translation_en": "You should pick a card that suits your spending habits, and check things like the annual fee and reward points carefully.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d7-s15",
+          "text_original": "积分有什么用？",
+          "pinyin": "Jīfēn yǒu shénme yòng?",
+          "text_translation": "Bonus ballarining nima foydasi bor?",
+          "text_translation_ru": "А зачем нужны баллы?",
+          "text_translation_en": "What are reward points good for?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d7-s16",
+          "text_original": "可以换礼物、换机票，有时候还能抵现金。",
+          "pinyin": "Kěyǐ huàn lǐwù, huàn jīpiào, yǒu shíhou hái néng dǐ xiànjīn.",
+          "text_translation": "Sovg'a yoki aviachiptaga almashtirsa bo'ladi, ba'zan naqd pul o'rnini ham bosadi.",
+          "text_translation_ru": "Можно обменять на подарки, на авиабилеты, иногда даже зачесть вместо наличных.",
+          "text_translation_en": "You can redeem them for gifts or plane tickets, and sometimes even use them in place of cash.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d7-s17",
+          "text_original": "听起来不错，我也想办一张了。",
+          "pinyin": "Tīng qǐlái búcuò, wǒ yě xiǎng bàn yì zhāng le.",
+          "text_translation": "Yaxshi eshitilyapti, men ham bittasini ochtirgim keldi.",
+          "text_translation_ru": "Звучит неплохо, мне тоже захотелось оформить.",
+          "text_translation_en": "That sounds good — now I want to get one too.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d7-s18",
+          "text_original": "你可以先了解几家银行，选个合适的。",
+          "pinyin": "Nǐ kěyǐ xiān liǎojiě jǐ jiā yínháng, xuǎn ge héshì de.",
+          "text_translation": "Avval bir nechta bankni o'rganib chiqib, mos kelganini tanlasang bo'ladi.",
+          "text_translation_ru": "Сначала можешь изучить несколько банков и выбрать подходящий.",
+          "text_translation_en": "You can first look into a few banks and pick a suitable one.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d7-s19",
+          "text_original": "好，我去研究研究。",
+          "pinyin": "Hǎo, wǒ qù yánjiū yánjiū.",
+          "text_translation": "Yaxshi, borib o'rganib chiqaman.",
+          "text_translation_ru": "Хорошо, пойду изучу вопрос.",
+          "text_translation_en": "Okay, I'll go and look into it.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
