@@ -1,0 +1,180 @@
+{
+  "id": "hsk4-dialogue12",
+  "slug": "online-returns",
+  "title": "网购退货",
+  "pinyin": "Wǎnggòu tuìhuò",
+  "titleTranslation": "Onlayn xaridni qaytarish",
+  "titleTranslation_ru": "Возврат интернет-покупок",
+  "titleTranslation_en": "Online Shopping Returns",
+  "level": 4,
+  "tag": "xaridlar",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "退掉",
+    "差别",
+    "尺码",
+    "偏小",
+    "运费险",
+    "操作",
+    "订单",
+    "申请",
+    "上门取件",
+    "快递员",
+    "退款",
+    "政策"
+  ],
+  "sections": [
+    {
+      "id": "d12-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d12-s1",
+          "text_original": "你手里拿的是什么？又要去寄快递吗？",
+          "pinyin": "Nǐ shǒu lǐ ná de shì shénme? Yòu yào qù jì kuàidì ma?",
+          "text_translation": "Qo'lingdagi nima? Yana pochta jo'natgani ketyapsanmi?",
+          "text_translation_ru": "Что у тебя в руках? Опять идёшь отправлять посылку?",
+          "text_translation_en": "What's that in your hand? Off to send a parcel again?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d12-s2",
+          "text_original": "对，这件衣服不太合适，我要退掉。",
+          "pinyin": "Duì, zhè jiàn yīfu bú tài héshì, wǒ yào tuì diào.",
+          "text_translation": "Ha, bu kiyim unchalik mos kelmadi, qaytarib bermoqchiman.",
+          "text_translation_ru": "Да, эта одежда не очень подошла, хочу её вернуть.",
+          "text_translation_en": "Yeah, this piece of clothing doesn't fit well, so I'm returning it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d12-s3",
+          "text_original": "哪里不合适？我看挺好的啊。",
+          "pinyin": "Nǎli bù héshì? Wǒ kàn tǐng hǎo de a.",
+          "text_translation": "Qayeri mos kelmadi? Menimcha juda yaxshi-ku.",
+          "text_translation_ru": "Чем не подошла? По-моему, вполне хорошая.",
+          "text_translation_en": "What doesn't fit? It looks pretty good to me.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d12-s4",
+          "text_original": "颜色跟网上图片差别太大了，而且尺码也偏小。",
+          "pinyin": "Yánsè gēn wǎngshàng túpiàn chābié tài dà le, érqiě chǐmǎ yě piān xiǎo.",
+          "text_translation": "Rangi internetdagi rasmdan juda ko'p farq qiladi, ustiga-ustak o'lchami ham kichikroq chiqdi.",
+          "text_translation_ru": "Цвет сильно отличается от фото на сайте, к тому же размер маломерит.",
+          "text_translation_en": "The color is too different from the online photo, and the size runs small too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d12-s5",
+          "text_original": "退货麻烦吗？",
+          "pinyin": "Tuìhuò máfan ma?",
+          "text_translation": "Tovarni qaytarish mashaqqatlimi?",
+          "text_translation_ru": "Возврат товара хлопотный?",
+          "text_translation_en": "Is returning it a hassle?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d12-s6",
+          "text_original": "不麻烦。现在很多商家都送运费险，退货不用自己付钱。",
+          "pinyin": "Bù máfan. Xiànzài hěn duō shāngjiā dōu sòng yùnfèi xiǎn, tuìhuò búyòng zìjǐ fù qián.",
+          "text_translation": "Mashaqqatli emas. Hozir ko'p sotuvchilar yetkazib berish sug'urtasini beradi, qaytarishda o'zing pul to'lashing shart emas.",
+          "text_translation_ru": "Не хлопотный. Сейчас многие продавцы дают страховку доставки, и за возврат платить самому не нужно.",
+          "text_translation_en": "Not at all. These days many sellers include shipping insurance, so you don't pay for the return yourself.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d12-s7",
+          "text_original": "那怎么退？直接在手机上操作吗？",
+          "pinyin": "Nà zěnme tuì? Zhíjiē zài shǒujī shàng cāozuò ma?",
+          "text_translation": "Unda qanday qaytariladi? To'g'ridan-to'g'ri telefonda amalga oshiriladimi?",
+          "text_translation_ru": "А как вернуть? Прямо в телефоне всё делается?",
+          "text_translation_en": "So how do you return it? Do you do it all on your phone?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d12-s8",
+          "text_original": "对，在订单里点「申请退货」，然后选上门取件就行了。",
+          "pinyin": "Duì, zài dìngdān lǐ diǎn 'shēnqǐng tuìhuò', ránhòu xuǎn shàngmén qǔjiàn jiù xíng le.",
+          "text_translation": "Ha, buyurtmada «qaytarishga ariza» tugmasini bosib, keyin uydan olib ketishni tanlasang bo'ldi.",
+          "text_translation_ru": "Да, в заказе нажимаешь «оформить возврат», потом выбираешь забор на дому — и всё.",
+          "text_translation_en": "Right — in the order you tap \"request return,\" then choose door-to-door pickup, and that's it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d12-s9",
+          "text_original": "这么简单！那快递员什么时候来？",
+          "pinyin": "Zhème jiǎndān! Nà kuàidìyuán shénme shíhou lái?",
+          "text_translation": "Shunchalik osonmi! Unda kuryer qachon keladi?",
+          "text_translation_ru": "Так просто! А когда придёт курьер?",
+          "text_translation_en": "That simple! So when does the courier come?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d12-s10",
+          "text_original": "我约了下午三点上门，把衣服装好给他们就行。",
+          "pinyin": "Wǒ yuē le xiàwǔ sān diǎn shàngmén, bǎ yīfu zhuāng hǎo gěi tāmen jiù xíng.",
+          "text_translation": "Tushdan keyin soat uchga uyga kelishni kelishdim, kiyimni o'rab ularga bersam bo'ldi.",
+          "text_translation_ru": "Я договорился, что приедут к трём часам дня — нужно упаковать одежду и отдать им.",
+          "text_translation_en": "I scheduled a pickup for three in the afternoon — I just pack the clothes and hand them over.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d12-s11",
+          "text_original": "退款什么时候能到？",
+          "pinyin": "Tuìkuǎn shénme shíhou néng dào?",
+          "text_translation": "Pul qaytarib berilishi qachon keladi?",
+          "text_translation_ru": "Когда придёт возврат денег?",
+          "text_translation_en": "When will the refund come through?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d12-s12",
+          "text_original": "商家收到退货以后，一般两三天内就会退款。",
+          "pinyin": "Shāngjiā shōudào tuìhuò yǐhòu, yìbān liǎng sān tiān nèi jiù huì tuìkuǎn.",
+          "text_translation": "Sotuvchi qaytarilgan tovarni olgach, odatda ikki-uch kun ichida pulni qaytaradi.",
+          "text_translation_ru": "После того как продавец получит возврат, деньги обычно возвращают в течение двух-трёх дней.",
+          "text_translation_en": "After the seller receives the returned item, they usually refund you within two or three days.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d12-s13",
+          "text_original": "那还挺快的。我上次退货等了一个星期。",
+          "pinyin": "Nà hái tǐng kuài de. Wǒ shàng cì tuìhuò děng le yí ge xīngqī.",
+          "text_translation": "Bu ancha tez ekan. Men o'tgan safar qaytarganimda bir hafta kutgandim.",
+          "text_translation_ru": "Это довольно быстро. В прошлый раз я ждал возврата неделю.",
+          "text_translation_en": "That's pretty fast. Last time I returned something I waited a week.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d12-s14",
+          "text_original": "可能不同商家不一样。买之前最好先看看退货政策。",
+          "pinyin": "Kěnéng bùtóng shāngjiā bù yíyàng. Mǎi zhīqián zuì hǎo xiān kàn kan tuìhuò zhèngcè.",
+          "text_translation": "Balki har xil sotuvchilarda har xildir. Sotib olishdan oldin qaytarish qoidalarini ko'rib chiqqan ma'qul.",
+          "text_translation_ru": "Возможно, у разных продавцов по-разному. Перед покупкой лучше сначала посмотреть политику возврата.",
+          "text_translation_en": "It probably varies by seller. Before buying, it's best to check the return policy first.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d12-s15",
+          "text_original": "你说得对。我以后买东西也要注意这个。",
+          "pinyin": "Nǐ shuō de duì. Wǒ yǐhòu mǎi dōngxi yě yào zhùyì zhè ge.",
+          "text_translation": "To'g'ri aytasan. Bundan keyin xarid qilganda men ham shunga e'tibor beraman.",
+          "text_translation_ru": "Ты прав. Впредь при покупках я тоже буду на это обращать внимание.",
+          "text_translation_en": "You're right. From now on I'll pay attention to that when I shop too.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d12-s16",
+          "text_original": "对，不然退起来很麻烦。现在我去寄快递了。",
+          "pinyin": "Duì, bùrán tuì qǐlái hěn máfan. Xiànzài wǒ qù jì kuàidì le.",
+          "text_translation": "Ha, aks holda qaytarish juda mashaqqatli bo'ladi. Endi men pochta jo'natgani ketdim.",
+          "text_translation_ru": "Да, иначе возвращать очень хлопотно. Ну, я пошёл отправлять посылку.",
+          "text_translation_en": "Right, otherwise returns are a real hassle. Now I'm off to send the parcel.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
