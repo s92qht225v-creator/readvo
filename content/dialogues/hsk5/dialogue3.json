@@ -1,0 +1,180 @@
+{
+  "id": "hsk5-dialogue3",
+  "slug": "consumer-mindset",
+  "title": "消费观念",
+  "pinyin": "Xiāofèi guānniàn",
+  "titleTranslation": "Iste'mol qarashlari",
+  "titleTranslation_ru": "Потребительское мышление",
+  "titleTranslation_en": "Consumer Mindset",
+  "level": 5,
+  "tag": "xaridlar",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "上市",
+    "电池",
+    "高端",
+    "机型",
+    "划算",
+    "理性",
+    "追求",
+    "新款",
+    "消费",
+    "观点",
+    "认同",
+    "物质",
+    "过时",
+    "经历",
+    "回忆",
+    "价值观",
+    "依赖",
+    "反而",
+    "拿不定主意",
+    "需求",
+    "冲动"
+  ],
+  "sections": [
+    {
+      "id": "h5d3-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d3-s1",
+          "text_original": "你最近又买新手机了？这款好像刚上市没多久吧。",
+          "pinyin": "Nǐ zuìjìn yòu mǎi xīn shǒujī le? Zhè kuǎn hǎoxiàng gāng shàngshì méi duō jiǔ ba.",
+          "text_translation": "Yaqinda yana yangi telefon oldingmi? Bu model endigina sotuvga chiqqanga o'xshaydi.",
+          "text_translation_ru": "Ты снова купил новый телефон? Эта модель, кажется, только недавно вышла в продажу.",
+          "text_translation_en": "Did you buy a new phone again? This model seems to have just come out not long ago.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d3-s2",
+          "text_original": "对，我之前的手机用了两年了，电池不太行了，就换了一部。",
+          "pinyin": "Duì, wǒ zhīqián de shǒujī yòng le liǎng nián le, diànchí bú tài xíng le, jiù huàn le yí bù.",
+          "text_translation": "Ha, oldingi telefonimni ikki yil ishlatdim, batareyasi yaxshi ishlamay qoldi, shuning uchun almashtirdim.",
+          "text_translation_ru": "Да, прежним телефоном я пользовался два года, батарея стала слабовата, вот и поменял.",
+          "text_translation_en": "Yeah, I used my previous phone for two years, the battery wasn't great anymore, so I switched to a new one.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d3-s3",
+          "text_original": "可是这款新手机价格不低吧？我看广告说是高端机型。",
+          "pinyin": "Kěshì zhè kuǎn xīn shǒujī jiàgé bù dī ba? Wǒ kàn guǎnggào shuō shì gāoduān jīxíng.",
+          "text_translation": "Lekin bu yangi telefonning narxi past emas-ku? Reklamada yuqori darajadagi model deyilgan ekan.",
+          "text_translation_ru": "Но цена этого нового телефона немаленькая? Я видел в рекламе, что это высококлассная модель.",
+          "text_translation_en": "But this new phone isn't cheap, is it? The ad I saw said it's a high-end model.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d3-s4",
+          "text_original": "确实不便宜，但我觉得电子产品买好一点的，用得久一些，反而更划算。",
+          "pinyin": "Quèshí bù piányi, dàn wǒ juéde diànzǐ chǎnpǐn mǎi hǎo yì diǎn de, yòng de jiǔ yì xiē, fǎn'ér gèng huásuàn.",
+          "text_translation": "Rostdan ham arzon emas, lekin menimcha elektron mahsulotni biroz yaxshiroqdan olsang, uzoqroq xizmat qiladi, aksincha foydaliroq bo'ladi.",
+          "text_translation_ru": "Действительно недёшево, но я считаю, что электронику лучше брать получше — она служит дольше, и в итоге это даже выгоднее.",
+          "text_translation_en": "It really isn't cheap, but I think with electronics, buying something a bit better that lasts longer is actually more worth it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d3-s5",
+          "text_original": "你这个想法倒是挺理性的。不像有些人追求新款，年年都换。",
+          "pinyin": "Nǐ zhè ge xiǎngfǎ dào shì tǐng lǐxìng de. Bú xiàng yǒuxiē rén zhuīqiú xīnkuǎn, niánnián dōu huàn.",
+          "text_translation": "Bu fikring ancha oqilona ekan. Yangi modellarni quvib, har yili almashtiradigan ba'zilarga o'xshamaysan.",
+          "text_translation_ru": "А твой подход довольно рациональный. Не то что некоторые, кто гонится за новинками и меняет телефон каждый год.",
+          "text_translation_en": "Your thinking is actually quite rational. Unlike some people who chase the newest models and change every year.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d3-s6",
+          "text_original": "我也理解那些喜欢换手机的人。每个人对消费的看法不一样，关键是适合自己。",
+          "pinyin": "Wǒ yě lǐjiě nàxiē xǐhuān huàn shǒujī de rén. Měi ge rén duì xiāofèi de kànfǎ bù yíyàng, guānjiàn shì shìhé zìjǐ.",
+          "text_translation": "Telefon almashtirishni yoqtiradiganlarni ham tushunaman. Har kimning iste'molga qarashi har xil, asosiysi o'ziga mos bo'lsa bo'ldi.",
+          "text_translation_ru": "Я тоже понимаю тех, кто любит менять телефоны. У каждого свой взгляд на потребление, главное — чтобы подходило тебе самому.",
+          "text_translation_en": "I understand people who like changing phones too. Everyone sees spending differently — what matters is what suits you.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d3-s7",
+          "text_original": "那你平时在哪些方面比较舍得花钱？",
+          "pinyin": "Nà nǐ píngshí zài nǎxiē fāngmiàn bǐjiào shěde huā qián?",
+          "text_translation": "Unda odatda qaysi sohalarga pul sarflashga ko'proq tayyorsan?",
+          "text_translation_ru": "А на что ты обычно не жалеешь денег?",
+          "text_translation_en": "So in what areas are you usually more willing to spend money?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d3-s8",
+          "text_original": "旅行和吃饭。我觉得钱花在体验上比花在物品上更有意义。",
+          "pinyin": "Lǚxíng hé chīfàn. Wǒ juéde qián huā zài tǐyàn shàng bǐ huā zài wùpǐn shàng gèng yǒu yìyì.",
+          "text_translation": "Sayohat va ovqatga. Menimcha pulni tajribaga sarflash buyumlarga sarflashdan ko'ra ma'noliroq.",
+          "text_translation_ru": "Путешествия и еда. По-моему, тратить деньги на впечатления осмысленнее, чем на вещи.",
+          "text_translation_en": "Travel and food. I think spending money on experiences is more meaningful than spending it on things.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d3-s9",
+          "text_original": "这个观点我挺认同的。物质的东西容易过时，但经历和回忆是一辈子的。",
+          "pinyin": "Zhè ge guāndiǎn wǒ tǐng rèntóng de. Wùzhì de dōngxi róngyì guòshí, dàn jīnglì hé huíyì shì yí bèizi de.",
+          "text_translation": "Bu fikrga men ham juda qo'shilaman. Moddiy narsalar tez eskiradi, lekin boshdan kechirganlar va xotiralar bir umrlik.",
+          "text_translation_ru": "С этой точкой зрения я вполне согласен. Материальные вещи быстро устаревают, а опыт и воспоминания — на всю жизнь.",
+          "text_translation_en": "I quite agree with that view. Material things easily go out of date, but experiences and memories last a lifetime.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d3-s10",
+          "text_original": "不过每个人的价值观不同，也不能说谁对谁错。理性消费就好。",
+          "pinyin": "Búguò měi ge rén de jiàzhíguān bùtóng, yě bùnéng shuō shuí duì shuí cuò. Lǐxìng xiāofèi jiù hǎo.",
+          "text_translation": "Lekin har kimning qadriyatlari har xil, kim haq-u kim nohaq deb bo'lmaydi. Oqilona iste'mol qilsang bo'ldi.",
+          "text_translation_ru": "Но у каждого свои ценности, нельзя сказать, кто прав, а кто нет. Главное — разумное потребление.",
+          "text_translation_en": "But everyone has different values, so you can't say who's right or wrong. Spending rationally is what matters.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d3-s11",
+          "text_original": "说得很对。你现在买东西会先看评价再做决定吗？",
+          "pinyin": "Shuō de hěn duì. Nǐ xiànzài mǎi dōngxi huì xiān kàn píngjià zài zuò juédìng ma?",
+          "text_translation": "Juda to'g'ri aytasan. Hozir biror narsa olayotganda avval sharhlarni ko'rib, keyin qaror qilasanmi?",
+          "text_translation_ru": "Очень верно. Ты сейчас перед покупкой сначала читаешь отзывы, а потом решаешь?",
+          "text_translation_en": "Well said. When you buy something now, do you read the reviews first before deciding?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d3-s12",
+          "text_original": "会，但不会完全依赖评价。有时候评价太多反而让人拿不定主意。",
+          "pinyin": "Huì, dàn bú huì wánquán yīlài píngjià. Yǒu shíhou píngjià tài duō fǎn'ér ràng rén ná bú dìng zhǔyi.",
+          "text_translation": "Ko'raman, lekin sharhlarga to'liq tayanmayman. Ba'zan sharh juda ko'p bo'lsa, aksincha qaror qilishni qiyinlashtiradi.",
+          "text_translation_ru": "Читаю, но не полагаюсь на отзывы полностью. Иногда отзывов так много, что, наоборот, не можешь определиться.",
+          "text_translation_en": "I do, but I don't rely on reviews completely. Sometimes too many reviews actually make it hard to make up your mind.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d3-s13",
+          "text_original": "确实。我以前也经常看半天评价，结果还是不知道怎么选。",
+          "pinyin": "Quèshí. Wǒ yǐqián yě jīngcháng kàn bàntiān píngjià, jiéguǒ háishì bù zhīdào zěnme xuǎn.",
+          "text_translation": "Rostdan. Men ham avval ko'pincha yarim kun sharh o'qirdim, oqibatda baribir qaysi birini tanlashni bilmasdim.",
+          "text_translation_ru": "Действительно. Я раньше тоже подолгу читал отзывы, а в итоге всё равно не знал, что выбрать.",
+          "text_translation_en": "True. I used to spend ages reading reviews too, and still didn't know how to choose.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d3-s14",
+          "text_original": "所以我现在更关注自己的需求，减少冲动消费。",
+          "pinyin": "Suǒyǐ wǒ xiànzài gèng guānzhù zìjǐ de xūqiú, jiǎnshǎo chōngdòng xiāofèi.",
+          "text_translation": "Shuning uchun hozir ko'proq o'z ehtiyojimga e'tibor beraman, o'ylamasdan qilinadigan xaridlarni kamaytiraman.",
+          "text_translation_ru": "Поэтому теперь я больше ориентируюсь на свои потребности и сокращаю импульсивные покупки.",
+          "text_translation_en": "So now I focus more on my own needs and cut down on impulse buying.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d3-s15",
+          "text_original": "这种消费习惯很健康，值得学习。",
+          "pinyin": "Zhè zhǒng xiāofèi xíguàn hěn jiànkāng, zhídé xuéxí.",
+          "text_translation": "Bunday iste'mol odati juda sog'lom, o'rganishga arziydi.",
+          "text_translation_ru": "Такая потребительская привычка очень здоровая, её стоит перенять.",
+          "text_translation_en": "That kind of spending habit is very healthy — worth learning from.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
