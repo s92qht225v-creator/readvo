@@ -1,0 +1,177 @@
+{
+  "id": "hsk3-dialogue24",
+  "slug": "coffee-culture",
+  "title": "咖啡文化",
+  "pinyin": "Kāfēi wénhuà",
+  "titleTranslation": "Qahva madaniyati",
+  "titleTranslation_ru": "Кофейная культура",
+  "titleTranslation_en": "Coffee Culture",
+  "level": 3,
+  "tag": "ovqat",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "精神",
+    "美式",
+    "拿铁",
+    "放松",
+    "尽量",
+    "环境",
+    "手冲咖啡",
+    "有名",
+    "期待"
+  ],
+  "sections": [
+    {
+      "id": "d24-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d24-s1",
+          "text_original": "你每天都要喝咖啡吗？",
+          "pinyin": "Nǐ měitiān dōu yào hē kāfēi ma?",
+          "text_translation": "Har kuni qahva ichishing shartmi?",
+          "text_translation_ru": "Тебе обязательно пить кофе каждый день?",
+          "text_translation_en": "Do you have to drink coffee every day?",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s2",
+          "text_original": "对，我习惯了。早上不喝一杯，感觉没精神。",
+          "pinyin": "Duì, wǒ xíguàn le. Zǎoshang bù hē yì bēi, gǎnjué méi jīngshen.",
+          "text_translation": "Ha, odatlanib qolganman. Ertalab bir piyola ichmasam, o'zimni tetik his qilmayman.",
+          "text_translation_ru": "Да, я привык. Если утром не выпью чашку, чувствую себя без сил.",
+          "text_translation_en": "Yeah, I'm used to it. If I don't have a cup in the morning, I feel low on energy.",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s3",
+          "text_original": "你一般喝什么咖啡？",
+          "pinyin": "Nǐ yìbān hē shénme kāfēi?",
+          "text_translation": "Odatda qanday qahva ichasan?",
+          "text_translation_ru": "Какой кофе ты обычно пьёшь?",
+          "text_translation_en": "What kind of coffee do you usually drink?",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s4",
+          "text_original": "我喜欢喝美式，不加糖。有时候也会点拿铁。",
+          "pinyin": "Wǒ xǐhuān hē Měishì, bù jiā táng. Yǒu shíhou yě huì diǎn Nátiě.",
+          "text_translation": "Amerikanoni shakarsiz ichishni yoqtiraman. Ba'zan latte ham buyurtma qilaman.",
+          "text_translation_ru": "Я люблю американо без сахара. Иногда заказываю и латте.",
+          "text_translation_en": "I like Americano with no sugar. Sometimes I order a latte too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s5",
+          "text_original": "你为什么喜欢咖啡？",
+          "pinyin": "Nǐ wèishénme xǐhuān kāfēi?",
+          "text_translation": "Nega qahvani yoqtirasan?",
+          "text_translation_ru": "Почему ты любишь кофе?",
+          "text_translation_en": "Why do you like coffee?",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s6",
+          "text_original": "因为咖啡很香，喝的时候能让我放松。",
+          "pinyin": "Yīnwèi kāfēi hěn xiāng, hē de shíhou néng ràng wǒ fàngsōng.",
+          "text_translation": "Chunki qahva juda xushbo'y, ichganimda meni bo'shashtiradi.",
+          "text_translation_ru": "Потому что кофе очень ароматный и помогает мне расслабиться.",
+          "text_translation_en": "Because coffee smells great, and drinking it helps me relax.",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s7",
+          "text_original": "你一周花多少钱买咖啡？",
+          "pinyin": "Nǐ yì zhōu huā duōshao qián mǎi kāfēi?",
+          "text_translation": "Haftasiga qahvaga qancha pul sarflaysan?",
+          "text_translation_ru": "Сколько ты тратишь на кофе за неделю?",
+          "text_translation_en": "How much do you spend on coffee a week?",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s8",
+          "text_original": "大概一百块左右。我尽量少喝，但是太难了。",
+          "pinyin": "Dàgài yì bǎi kuài zuǒyòu. Wǒ jǐnliàng shǎo hē, dànshì tài nán le.",
+          "text_translation": "Taxminan yuz yuancha. Iloji boricha kam ichishga harakat qilaman, lekin juda qiyin.",
+          "text_translation_ru": "Примерно сто юаней. Стараюсь пить поменьше, но это очень трудно.",
+          "text_translation_en": "About a hundred yuan. I try to drink less, but it's really hard.",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s9",
+          "text_original": "你没想过自己在家做咖啡吗？",
+          "pinyin": "Nǐ méi xiǎng guo zìjǐ zài jiā zuò kāfēi ma?",
+          "text_translation": "Uyda o'zing qahva tayyorlashni o'ylab ko'rmaganmiding?",
+          "text_translation_ru": "Ты не думал сам варить кофе дома?",
+          "text_translation_en": "Haven't you thought about making coffee at home yourself?",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s10",
+          "text_original": "想过。但是自己做比较麻烦，而且没有店里做的好喝。",
+          "pinyin": "Xiǎng guo. Dànshì zìjǐ zuò bǐjiào máfan, érqiě méiyǒu diàn lǐ zuò de hǎo hē.",
+          "text_translation": "O'ylab ko'rganman. Lekin o'zing tayyorlash ancha mashaqqatli, ustiga-ustak do'kondagidek mazali bo'lmaydi.",
+          "text_translation_ru": "Думал. Но самому готовить хлопотно, и получается не так вкусно, как в кофейне.",
+          "text_translation_en": "I have. But making it yourself is a hassle, and it's not as tasty as in a shop.",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s11",
+          "text_original": "我也喜欢咖啡。最近发现一家新的咖啡店，环境特别好。",
+          "pinyin": "Wǒ yě xǐhuān kāfēi. Zuìjìn fāxiàn yì jiā xīn de kāfēi diàn, huánjìng tèbié hǎo.",
+          "text_translation": "Men ham qahvani yoqtiraman. Yaqinda yangi qahvaxona topdim, muhiti juda yaxshi.",
+          "text_translation_ru": "Я тоже люблю кофе. Недавно нашёл новую кофейню, обстановка там отличная.",
+          "text_translation_en": "I like coffee too. I recently found a new café — the atmosphere is really nice.",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s12",
+          "text_original": "真的吗？在哪儿？",
+          "pinyin": "Zhēn de ma? Zài nǎr?",
+          "text_translation": "Rostdanmi? Qayerda?",
+          "text_translation_ru": "Правда? Где?",
+          "text_translation_en": "Really? Where?",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s13",
+          "text_original": "在图书馆旁边，里面很安静，还能看书。",
+          "pinyin": "Zài túshūguǎn pángbiān, lǐmiàn hěn ānjìng, hái néng kàn shū.",
+          "text_translation": "Kutubxona yonida, ichi juda sokin, kitob ham o'qisa bo'ladi.",
+          "text_translation_ru": "Рядом с библиотекой, внутри очень тихо, можно даже почитать.",
+          "text_translation_en": "Next to the library — it's very quiet inside, and you can read there too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s14",
+          "text_original": "那很不错！周末我们可以一起去坐坐。",
+          "pinyin": "Nà hěn búcuò! Zhōumò wǒmen kěyǐ yìqǐ qù zuò zuo.",
+          "text_translation": "Bu juda zo'r! Dam olish kunlari birga borib o'tirsak bo'ladi.",
+          "text_translation_ru": "Это здорово! На выходных можем вместе туда зайти посидеть.",
+          "text_translation_en": "That's great! On the weekend we can go sit there together.",
+          "speaker": "B"
+        },
+        {
+          "id": "d24-s15",
+          "text_original": "好啊！那家店的手冲咖啡特别有名。",
+          "pinyin": "Hǎo a! Nà jiā diàn de shǒuchōng kāfēi tèbié yǒumíng.",
+          "text_translation": "Yaxshi! O'sha do'konning qo'lda damlangan qahvasi juda mashhur.",
+          "text_translation_ru": "Отлично! В той кофейне особенно знаменит кофе ручного заваривания.",
+          "text_translation_en": "Sure! That shop's pour-over coffee is especially famous.",
+          "speaker": "A"
+        },
+        {
+          "id": "d24-s16",
+          "text_original": "手冲咖啡？我还没试过。期待！",
+          "pinyin": "Shǒuchōng kāfēi? Wǒ hái méi shì guo. Qīdài!",
+          "text_translation": "Qo'lda damlangan qahva? Hali sinab ko'rmaganman. Intizorman!",
+          "text_translation_ru": "Кофе ручного заваривания? Я ещё не пробовал. Жду с нетерпением!",
+          "text_translation_en": "Pour-over coffee? I haven't tried it yet. Looking forward to it!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
