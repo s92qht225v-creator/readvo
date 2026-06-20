@@ -1,0 +1,219 @@
+{
+  "id": "hsk4-dialogue10",
+  "slug": "job-interview",
+  "title": "面试",
+  "pinyin": "Miànshì",
+  "titleTranslation": "Ish suhbati",
+  "titleTranslation_ru": "Собеседование",
+  "titleTranslation_en": "Job Interview",
+  "level": 4,
+  "tag": "ish",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "正式",
+    "面试",
+    "翻译",
+    "专业",
+    "匹配",
+    "资料",
+    "经验",
+    "未来",
+    "计划",
+    "紧张",
+    "相信",
+    "面试官",
+    "友好",
+    "结果",
+    "通知",
+    "好运",
+    "成功"
+  ],
+  "sections": [
+    {
+      "id": "d10-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d10-s1",
+          "text_original": "你今天穿得这么正式，要去哪里？",
+          "pinyin": "Nǐ jīntiān chuān de zhème zhèngshì, yào qù nǎli?",
+          "text_translation": "Bugun shunday rasmiy kiyinibsan, qayerga ketyapsan?",
+          "text_translation_ru": "Ты сегодня так официально одет — куда собрался?",
+          "text_translation_en": "You're dressed so formally today — where are you going?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d10-s2",
+          "text_original": "我下午有一个面试。",
+          "pinyin": "Wǒ xiàwǔ yǒu yí ge miànshì.",
+          "text_translation": "Tushdan keyin bitta ish suhbatim bor.",
+          "text_translation_ru": "У меня днём собеседование.",
+          "text_translation_en": "I have a job interview this afternoon.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d10-s3",
+          "text_original": "什么工作？",
+          "pinyin": "Shénme gōngzuò?",
+          "text_translation": "Qanday ish?",
+          "text_translation_ru": "Какая работа?",
+          "text_translation_en": "What job?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d10-s4",
+          "text_original": "翻译，跟我的专业很匹配。",
+          "pinyin": "Fānyì, gēn wǒ de zhuānyè hěn pǐpèi.",
+          "text_translation": "Tarjimonlik, mening mutaxassisligimga juda mos keladi.",
+          "text_translation_ru": "Переводчик — это очень подходит моей специальности.",
+          "text_translation_en": "Translation — it matches my major really well.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d10-s5",
+          "text_original": "你准备了多久了？",
+          "pinyin": "Nǐ zhǔnbèi le duō jiǔ le?",
+          "text_translation": "Qancha vaqtdan beri tayyorlanyapsan?",
+          "text_translation_ru": "Как долго ты готовишься?",
+          "text_translation_en": "How long have you been preparing?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d10-s6",
+          "text_original": "差不多一个星期。",
+          "pinyin": "Chàbuduō yí ge xīngqī.",
+          "text_translation": "Taxminan bir hafta.",
+          "text_translation_ru": "Почти неделю.",
+          "text_translation_en": "About a week.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d10-s7",
+          "text_original": "面试一般问什么问题？",
+          "pinyin": "Miànshì yìbān wèn shénme wèntí?",
+          "text_translation": "Suhbatda odatda qanday savollar so'raladi?",
+          "text_translation_ru": "Какие вопросы обычно задают на собеседовании?",
+          "text_translation_en": "What questions do they usually ask in interviews?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d10-s8",
+          "text_original": "他们会问我的翻译经验、为什么想换工作，还有未来的计划。",
+          "pinyin": "Tāmen huì wèn wǒ de fānyì jīngyàn, wèishénme xiǎng huàn gōngzuò, hái yǒu wèilái de jìhuà.",
+          "text_translation": "Ular tarjimonlik tajribamni, nega ish almashtirmoqchiligimni va kelajak rejalarimni so'rashadi.",
+          "text_translation_ru": "Спросят про мой опыт перевода, почему хочу сменить работу, и про планы на будущее.",
+          "text_translation_en": "They'll ask about my translation experience, why I want to change jobs, and my future plans.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d10-s9",
+          "text_original": "你紧张吗？",
+          "pinyin": "Nǐ jǐnzhāng ma?",
+          "text_translation": "Hayajonlanyapsanmi?",
+          "text_translation_ru": "Ты волнуешься?",
+          "text_translation_en": "Are you nervous?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d10-s10",
+          "text_original": "有一点紧张，但是我已经准备好了。",
+          "pinyin": "Yǒu yì diǎn jǐnzhāng, dànshì wǒ yǐjīng zhǔnbèi hǎo le.",
+          "text_translation": "Bir oz hayajonlanyapman, lekin allaqachon tayyorman.",
+          "text_translation_ru": "Немного волнуюсь, но я уже готов.",
+          "text_translation_en": "A little nervous, but I'm already prepared.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d10-s11",
+          "text_original": "加油！相信你可以的。",
+          "pinyin": "Jiāyóu! Xiāngxìn nǐ kěyǐ de.",
+          "text_translation": "Omad! Sen uddalashingga ishonaman.",
+          "text_translation_ru": "Удачи! Уверен, у тебя получится.",
+          "text_translation_en": "Good luck! I believe you can do it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d10-s12",
+          "text_original": "谢谢！面完以后我给你打电话。",
+          "pinyin": "Xièxie! Miàn wán yǐhòu wǒ gěi nǐ dǎ diànhuà.",
+          "text_translation": "Rahmat! Suhbat tugagach senga qo'ng'iroq qilaman.",
+          "text_translation_ru": "Спасибо! После собеседования позвоню тебе.",
+          "text_translation_en": "Thanks! I'll call you after the interview.",
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "id": "d10-sec2",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d10-narr1",
+          "text_original": "面试结束后",
+          "pinyin": "Miànshì jiéshù hòu",
+          "text_translation": "Suhbatdan keyin",
+          "text_translation_ru": "После собеседования",
+          "text_translation_en": "After the interview"
+        },
+        {
+          "id": "h4d10-s13",
+          "text_original": "面试怎么样？",
+          "pinyin": "Miànshì zěnmeyàng?",
+          "text_translation": "Suhbat qanday o'tdi?",
+          "text_translation_ru": "Как прошло собеседование?",
+          "text_translation_en": "How was the interview?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d10-s14",
+          "text_original": "还不错！面试官很友好，问的问题我都回答了。",
+          "pinyin": "Hái búcuò! Miànshìguān hěn yǒuhǎo, wèn de wèntí wǒ dōu huídá le.",
+          "text_translation": "Yomon emas! Suhbat oluvchi juda xushmuomala edi, so'ralgan savollarning hammasiga javob berdim.",
+          "text_translation_ru": "Неплохо! Интервьюер был очень дружелюбным, на все вопросы я ответил.",
+          "text_translation_en": "Pretty good! The interviewer was very friendly, and I answered all the questions.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d10-s15",
+          "text_original": "他们有说什么时候给结果吗？",
+          "pinyin": "Tāmen yǒu shuō shénme shíhou gěi jiéguǒ ma?",
+          "text_translation": "Ular natijani qachon berishini aytishdimi?",
+          "text_translation_ru": "Они сказали, когда дадут результат?",
+          "text_translation_en": "Did they say when they'll give the results?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d10-s16",
+          "text_original": "说这周内会通知我，让我等电话。",
+          "pinyin": "Shuō zhè zhōu nèi huì tōngzhī wǒ, ràng wǒ děng diànhuà.",
+          "text_translation": "Shu hafta ichida xabar berishlarini, qo'ng'iroqni kutib turishimni aytishdi.",
+          "text_translation_ru": "Сказали, что уведомят меня в течение недели, и попросили ждать звонка.",
+          "text_translation_en": "They said they'll notify me within this week and told me to wait for a call.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d10-s17",
+          "text_original": "那应该快了。祝你好运！",
+          "pinyin": "Nà yīnggāi kuài le. Zhù nǐ hǎoyùn!",
+          "text_translation": "Unda tez orada bo'lsa kerak. Omad tilayman!",
+          "text_translation_ru": "Тогда уже скоро. Желаю удачи!",
+          "text_translation_en": "Then it should be soon. Good luck!",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d10-s18",
+          "text_original": "谢谢！希望能成功。",
+          "pinyin": "Xièxie! Xīwàng néng chénggōng.",
+          "text_translation": "Rahmat! Muvaffaqiyatga erishishni umid qilaman.",
+          "text_translation_ru": "Спасибо! Надеюсь на успех.",
+          "text_translation_en": "Thanks! I hope it works out.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
