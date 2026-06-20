@@ -1,0 +1,177 @@
+{
+  "id": "hsk4-dialogue13",
+  "slug": "bank-account",
+  "title": "银行开户",
+  "pinyin": "Yínháng kāihù",
+  "titleTranslation": "Bank hisobini ochish",
+  "titleTranslation_ru": "Открытие банковского счёта",
+  "titleTranslation_en": "Opening a Bank Account",
+  "level": 4,
+  "tag": "xaridlar",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "开户",
+    "业务",
+    "储蓄卡",
+    "填表",
+    "柜台",
+    "卡费",
+    "手机银行",
+    "开通",
+    "转账"
+  ],
+  "sections": [
+    {
+      "id": "d13-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d13-s1",
+          "text_original": "你今天怎么回来这么晚？",
+          "pinyin": "Nǐ jīntiān zěnme huílái zhème wǎn?",
+          "text_translation": "Bugun nega bunchalik kech qaytding?",
+          "text_translation_ru": "Почему ты сегодня так поздно вернулся?",
+          "text_translation_en": "Why did you come back so late today?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d13-s2",
+          "text_original": "我去银行开户了，排队等了一个多小时。",
+          "pinyin": "Wǒ qù yínháng kāihù le, páiduì děng le yí ge duō xiǎoshí.",
+          "text_translation": "Bankka hisob ochgani bordim, navbatda bir soatdan ko'proq kutdim.",
+          "text_translation_ru": "Ходил в банк открывать счёт, в очереди прождал больше часа.",
+          "text_translation_en": "I went to the bank to open an account — I waited in line for over an hour.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d13-s3",
+          "text_original": "你要办什么业务？",
+          "pinyin": "Nǐ yào bàn shénme yèwù?",
+          "text_translation": "Qanday xizmatdan foydalanmoqchi eding?",
+          "text_translation_ru": "Какую услугу ты хотел оформить?",
+          "text_translation_en": "What service did you need to do?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d13-s4",
+          "text_original": "开一张储蓄卡，以后工资打到这个卡里。",
+          "pinyin": "Kāi yì zhāng chǔxùkǎ, yǐhòu gōngzī dǎ dào zhè ge kǎ lǐ.",
+          "text_translation": "Bitta debet karta ochdim, bundan keyin maosh shu kartaga tushadi.",
+          "text_translation_ru": "Открыл дебетовую карту, чтобы потом зарплата приходила на неё.",
+          "text_translation_en": "I opened a debit card so my salary will go into it from now on.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d13-s5",
+          "text_original": "开户需要带什么？",
+          "pinyin": "Kāihù xūyào dài shénme?",
+          "text_translation": "Hisob ochish uchun nima olib borish kerak?",
+          "text_translation_ru": "Что нужно с собой для открытия счёта?",
+          "text_translation_en": "What do you need to bring to open an account?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d13-s6",
+          "text_original": "带身份证就行了。还要填一张表。",
+          "pinyin": "Dài shēnfènzhèng jiù xíng le. Hái yào tián yì zhāng biǎo.",
+          "text_translation": "Pasportni olib borsang bo'ldi. Yana bitta blank to'ldirish kerak.",
+          "text_translation_ru": "Достаточно взять удостоверение личности. Ещё нужно заполнить бланк.",
+          "text_translation_en": "Just bring your ID card. You also have to fill in a form.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d13-s7",
+          "text_original": "现在办卡方便吗？",
+          "pinyin": "Xiànzài bàn kǎ fāngbiàn ma?",
+          "text_translation": "Hozir karta ochish qulaymi?",
+          "text_translation_ru": "Сейчас оформить карту удобно?",
+          "text_translation_en": "Is getting a card convenient these days?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d13-s8",
+          "text_original": "还行。就是在柜台等了很久，人太多了。",
+          "pinyin": "Hái xíng. Jiùshì zài guìtái děng le hěn jiǔ, rén tài duō le.",
+          "text_translation": "Yomon emas. Faqat kassada uzoq kutdim, odam juda ko'p edi.",
+          "text_translation_ru": "Терпимо. Просто у стойки долго ждал — людей было слишком много.",
+          "text_translation_en": "It's okay. I just waited a long time at the counter — there were too many people.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d13-s9",
+          "text_original": "办卡收钱吗？",
+          "pinyin": "Bàn kǎ shōu qián ma?",
+          "text_translation": "Karta ochish pullikmi?",
+          "text_translation_ru": "За оформление карты берут деньги?",
+          "text_translation_en": "Do they charge for getting a card?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d13-s10",
+          "text_original": "不收。但是每年要交十块的卡费。",
+          "pinyin": "Bù shōu. Dànshì měinián yào jiāo shí kuài de kǎ fèi.",
+          "text_translation": "Yo'q. Lekin har yili o'n yuanlik karta to'lovini to'lash kerak.",
+          "text_translation_ru": "Нет. Но каждый год нужно платить десять юаней за обслуживание карты.",
+          "text_translation_en": "No. But you have to pay a ten-yuan card fee every year.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d13-s11",
+          "text_original": "那你的工资以后都存这张卡里吗？",
+          "pinyin": "Nà nǐ de gōngzī yǐhòu dōu cún zhè zhāng kǎ lǐ ma?",
+          "text_translation": "Unda bundan keyin maoshing shu kartaga jamlanadimi?",
+          "text_translation_ru": "Значит, теперь вся твоя зарплата будет храниться на этой карте?",
+          "text_translation_en": "So from now on your salary will all be kept on this card?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d13-s12",
+          "text_original": "对。银行还帮我开通了手机银行，以后转账很方便。",
+          "pinyin": "Duì. Yínháng hái bāng wǒ kāitōng le shǒujī yínháng, yǐhòu zhuǎnzhàng hěn fāngbiàn.",
+          "text_translation": "Ha. Bank menga mobil bankni ham ulab berdi, bundan keyin pul o'tkazish juda qulay.",
+          "text_translation_ru": "Да. Банк ещё подключил мне мобильный банк, теперь переводить деньги очень удобно.",
+          "text_translation_en": "Yes. The bank also activated mobile banking for me, so transfers will be very convenient.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d13-s13",
+          "text_original": "手机银行安全吗？",
+          "pinyin": "Shǒujī yínháng ānquán ma?",
+          "text_translation": "Mobil bank xavfsizmi?",
+          "text_translation_ru": "Мобильный банк безопасен?",
+          "text_translation_en": "Is mobile banking safe?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d13-s14",
+          "text_original": "只要自己小心，一般没问题。",
+          "pinyin": "Zhǐyào zìjǐ xiǎoxīn, yìbān méi wèntí.",
+          "text_translation": "O'zing ehtiyot bo'lsang bo'ldi, odatda muammo bo'lmaydi.",
+          "text_translation_ru": "Если самому быть осторожным, обычно проблем нет.",
+          "text_translation_en": "As long as you're careful, it's usually fine.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d13-s15",
+          "text_original": "那挺好的。下次我也去开一张。",
+          "pinyin": "Nà tǐng hǎo de. Xià cì wǒ yě qù kāi yì zhāng.",
+          "text_translation": "Bu juda yaxshi. Keyingi safar men ham borib bittasini ochaman.",
+          "text_translation_ru": "Это здорово. В следующий раз и я схожу открою себе одну.",
+          "text_translation_en": "That's great. Next time I'll go open one too.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d13-s16",
+          "text_original": "你最好早点去，不然人很多。",
+          "pinyin": "Nǐ zuì hǎo zǎo diǎn qù, bùrán rén hěn duō.",
+          "text_translation": "Ertaroq borganing ma'qul, aks holda odam ko'p bo'ladi.",
+          "text_translation_ru": "Лучше иди пораньше, иначе будет много людей.",
+          "text_translation_en": "You'd better go early, otherwise it gets crowded.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
