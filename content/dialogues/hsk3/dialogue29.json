@@ -1,0 +1,178 @@
+{
+  "id": "hsk3-dialogue29",
+  "slug": "electric-bike",
+  "title": "电动车",
+  "pinyin": "Diàndòngchē",
+  "titleTranslation": "Elektromoped",
+  "titleTranslation_ru": "Электробайк",
+  "titleTranslation_en": "Electric Bike",
+  "level": 3,
+  "tag": "transport",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "电动车",
+    "安全",
+    "充满电",
+    "公里",
+    "上下班",
+    "充电",
+    "路面",
+    "滑",
+    "上牌照",
+    "商家"
+  ],
+  "sections": [
+    {
+      "id": "d29-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d29-s1",
+          "text_original": "你换新电动车了？这辆真好看！",
+          "pinyin": "Nǐ huàn xīn diàndòngchē le? Zhè liàng zhēn hǎokàn!",
+          "text_translation": "Yangi elektromoped olibsanmi? Bunisi juda chiroyli ekan!",
+          "text_translation_ru": "Ты сменил электробайк? Этот и правда красивый!",
+          "text_translation_en": "Did you get a new electric bike? This one looks really nice!",
+          "speaker": "A"
+        },
+        {
+          "id": "d29-s2",
+          "text_original": "对，上周买的。原来的那辆太旧了，骑起来不安全。",
+          "pinyin": "Duì, shàng zhōu mǎi de. Yuánlái de nà liàng tài jiù le, qí qǐlái bù ānquán.",
+          "text_translation": "Ha, o'tgan hafta oldim. Avvalgisi juda eski edi, minish xavfsiz emasdi.",
+          "text_translation_ru": "Да, купил на прошлой неделе. Прежний был слишком старый, на нём небезопасно ездить.",
+          "text_translation_en": "Yeah, bought it last week. My old one was too worn out — it wasn't safe to ride.",
+          "speaker": "B"
+        },
+        {
+          "id": "d29-s3",
+          "text_original": "这辆充满电能跑多远？",
+          "pinyin": "Zhè liàng chōngmǎn diàn néng pǎo duō yuǎn?",
+          "text_translation": "Buni to'liq quvvatlasa qancha masofa yura oladi?",
+          "text_translation_ru": "На полном заряде этот сколько проедет?",
+          "text_translation_en": "How far can this one go on a full charge?",
+          "speaker": "A"
+        },
+        {
+          "id": "d29-s4",
+          "text_original": "大概四十公里，我上下班够用了。",
+          "pinyin": "Dàgài sìshí gōnglǐ, wǒ shàngxiàbān gòu yòng le.",
+          "text_translation": "Taxminan qirq kilometr, ishga borib-kelishimga yetadi.",
+          "text_translation_ru": "Примерно сорок километров, мне на дорогу до работы и обратно хватает.",
+          "text_translation_en": "About forty kilometers — that's enough for my commute.",
+          "speaker": "B"
+        },
+        {
+          "id": "d29-s5",
+          "text_original": "充电方便吗？",
+          "pinyin": "Chōngdiàn fāngbiàn ma?",
+          "text_translation": "Quvvatlash qulaymi?",
+          "text_translation_ru": "Заряжать удобно?",
+          "text_translation_en": "Is charging convenient?",
+          "speaker": "A"
+        },
+        {
+          "id": "d29-s6",
+          "text_original": "方便，我住一楼，直接在门口充就行。",
+          "pinyin": "Fāngbiàn, wǒ zhù yī lóu, zhíjiē zài ménkǒu chōng jiù xíng.",
+          "text_translation": "Qulay, men birinchi qavatda yashayman, eshik oldida quvvatlasam bo'ldi.",
+          "text_translation_ru": "Удобно, я живу на первом этаже, можно заряжать прямо у входа.",
+          "text_translation_en": "Convenient — I live on the first floor, so I just charge it right by the door.",
+          "speaker": "B"
+        },
+        {
+          "id": "d29-s7",
+          "text_original": "充满一次电要多久？",
+          "pinyin": "Chōngmǎn yí cì diàn yào duō jiǔ?",
+          "text_translation": "Bir marta to'liq quvvatlash qancha vaqt oladi?",
+          "text_translation_ru": "Сколько занимает одна полная зарядка?",
+          "text_translation_en": "How long does a full charge take?",
+          "speaker": "A"
+        },
+        {
+          "id": "d29-s8",
+          "text_original": "大概五六个小时。晚上充，早上起来就能用。",
+          "pinyin": "Dàgài wǔ liù ge xiǎoshí. Wǎnshang chōng, zǎoshang qǐlái jiù néng yòng.",
+          "text_translation": "Taxminan besh-olti soat. Kechqurun quvvatlab qo'ysam, ertalab turib ishlataveraman.",
+          "text_translation_ru": "Примерно пять-шесть часов. Заряжаю вечером, а утром встал — и можно пользоваться.",
+          "text_translation_en": "About five or six hours. I charge it at night, and it's ready to use in the morning.",
+          "speaker": "B"
+        },
+        {
+          "id": "d29-s9",
+          "text_original": "这种车贵吗？",
+          "pinyin": "Zhè zhǒng chē guì ma?",
+          "text_translation": "Bunday mashina qimmatmi?",
+          "text_translation_ru": "Такой транспорт дорогой?",
+          "text_translation_en": "Is this kind of bike expensive?",
+          "speaker": "A"
+        },
+        {
+          "id": "d29-s10",
+          "text_original": "不贵，两千多块。比开车省钱多了。",
+          "pinyin": "Bú guì, liǎng qiān duō kuài. Bǐ kāichē shěng qián duō le.",
+          "text_translation": "Qimmat emas, ikki mingdan oshadi. Mashina haydashdan ancha tejamli.",
+          "text_translation_ru": "Недорого, чуть больше двух тысяч. Намного экономнее, чем ездить на машине.",
+          "text_translation_en": "Not expensive, just over two thousand yuan. Much cheaper than driving a car.",
+          "speaker": "B"
+        },
+        {
+          "id": "d29-s11",
+          "text_original": "下雨天骑车方便吗？",
+          "pinyin": "Xià yǔ tiān qí chē fāngbiàn ma?",
+          "text_translation": "Yomg'irli kunlari minish qulaymi?",
+          "text_translation_ru": "В дождливые дни ездить удобно?",
+          "text_translation_en": "Is it convenient to ride on rainy days?",
+          "speaker": "A"
+        },
+        {
+          "id": "d29-s12",
+          "text_original": "不太方便，路面滑，不太安全。下雨天我一般坐地铁。",
+          "pinyin": "Bú tài fāngbiàn, lùmiàn huá, bú tài ānquán. Xià yǔ tiān wǒ yìbān zuò dìtiě.",
+          "text_translation": "Unchalik qulay emas, yo'l sirpanchiq, xavfsiz emas. Yomg'irli kunlari odatda metroda yuraman.",
+          "text_translation_ru": "Не очень, дорога скользкая, не совсем безопасно. В дождь я обычно езжу на метро.",
+          "text_translation_en": "Not really — the road is slippery and not very safe. On rainy days I usually take the subway.",
+          "speaker": "B"
+        },
+        {
+          "id": "d29-s13",
+          "text_original": "这车需要上牌照吗？",
+          "pinyin": "Zhè chē xūyào shàng páizhào ma?",
+          "text_translation": "Bu mashinani ro'yxatga qo'yish (raqam olish) kerakmi?",
+          "text_translation_ru": "Этот транспорт нужно ставить на учёт?",
+          "text_translation_en": "Does this bike need to be registered with a license plate?",
+          "speaker": "A"
+        },
+        {
+          "id": "d29-s14",
+          "text_original": "需要。买车的时候商家会帮你办好。",
+          "pinyin": "Xūyào. Mǎi chē de shíhou shāngjiā huì bāng nǐ bàn hǎo.",
+          "text_translation": "Kerak. Sotib olayotganda sotuvchi sen uchun hammasini rasmiylashtirib beradi.",
+          "text_translation_ru": "Нужно. При покупке продавец всё оформит за тебя.",
+          "text_translation_en": "Yes. When you buy it, the seller takes care of the registration for you.",
+          "speaker": "B"
+        },
+        {
+          "id": "d29-s15",
+          "text_original": "那我以后也买一辆，上下班不用挤地铁了。",
+          "pinyin": "Nà wǒ yǐhòu yě mǎi yí liàng, shàngxiàbān búyòng jǐ dìtiě le.",
+          "text_translation": "Unda men ham keyinchalik bittasini olaman, ishga borib-kelishda metroda tiqilishmaydi.",
+          "text_translation_ru": "Тогда и я потом куплю такой, чтобы не толкаться в метро по дороге на работу.",
+          "text_translation_en": "Then I'll get one too — no more squeezing onto the subway for my commute.",
+          "speaker": "A"
+        },
+        {
+          "id": "d29-s16",
+          "text_original": "确实方便很多，而且还能省时间。",
+          "pinyin": "Quèshí fāngbiàn hěn duō, érqiě hái néng shěng shíjiān.",
+          "text_translation": "Haqiqatan ham ancha qulay, ustiga-ustak vaqtni ham tejaydi.",
+          "text_translation_ru": "Действительно намного удобнее, к тому же экономит время.",
+          "text_translation_en": "It really is a lot more convenient, and it saves time too.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
