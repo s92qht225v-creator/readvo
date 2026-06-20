@@ -20,6 +20,24 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
   const [activeId, setActiveId] = useState<string | null>(null);
   const { play, stop } = useAudioPlayer();
 
+  // ── Font size (A-/A+) ──────────────────────────────────────────────────────
+  // Percentage applied to the lines container; shared key with the other readers.
+  const [fontSize, setFontSize] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('readvo-font-size');
+      return saved ? Number(saved) : 100;
+    }
+    return 100;
+  });
+  useEffect(() => { localStorage.setItem('readvo-font-size', String(fontSize)); }, [fontSize]);
+  const [fontActive, setFontActive] = useState(false);
+  const fontTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const flashFont = useCallback(() => {
+    setFontActive(true);
+    if (fontTimerRef.current) clearTimeout(fontTimerRef.current);
+    fontTimerRef.current = setTimeout(() => setFontActive(false), 1500);
+  }, []);
+
   // ── Sequential "play all" ──────────────────────────────────────────────────
   // A dedicated <audio> element (not the singleton tap player) so we get an
   // `onended` hook to advance to the next sentence. Tapping a sentence cancels
@@ -82,7 +100,7 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
 
   return (
     <div className={`reader-core ${config.fontClass}`} dir={config.dir}>
-      <div className="reader-core__lines">
+      <div className="reader-core__lines" style={{ fontSize: `${fontSize}%` }}>
         {sentences.map((s) => (
           <div key={s.id} className="reader-core__line">
             {s.speaker && <span className="reader-core__speaker">{s.speaker}:</span>}
@@ -95,6 +113,12 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
             {showTranslation && <div className="reader-core__translation" dir="auto">{s.translation}</div>}
           </div>
         ))}
+      </div>
+
+      <div className={`dr-font-controls${fontActive ? ' dr-font-controls--active' : ''}`}>
+        <button className="dr-font-btn" onClick={() => { setFontSize((s) => Math.min(s + 10, 160)); flashFont(); }} type="button" aria-label="Increase font size">A+</button>
+        <div className="dr-font-divider" />
+        <button className="dr-font-btn" onClick={() => { setFontSize((s) => Math.max(s - 10, 80)); flashFont(); }} type="button" aria-label="Decrease font size">A-</button>
       </div>
 
       {fabExtra}
