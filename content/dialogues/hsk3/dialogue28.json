@@ -1,0 +1,146 @@
+{
+  "id": "hsk3-dialogue28",
+  "slug": "seeing-a-doctor",
+  "title": "看病买药",
+  "pinyin": "Kànbìng mǎi yào",
+  "titleTranslation": "Shifokorga borish va dori olish",
+  "titleTranslation_ru": "Визит к врачу и покупка лекарств",
+  "titleTranslation_en": "Seeing a Doctor & Buying Medicine",
+  "level": 3,
+  "tag": "salomatlik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "感冒药",
+    "药店",
+    "感冒冲剂",
+    "止咳糖浆",
+    "效果"
+  ],
+  "sections": [
+    {
+      "id": "d28-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d28-s1",
+          "text_original": "你脸色不太好，怎么了？",
+          "pinyin": "Nǐ liǎnsè bú tài hǎo, zěnme le?",
+          "text_translation": "Rangging unchalik yaxshi emas, nima bo'ldi?",
+          "text_translation_ru": "У тебя неважный вид, что случилось?",
+          "text_translation_en": "You don't look so good — what's wrong?",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s2",
+          "text_original": "我感冒了，头疼，嗓子也疼。",
+          "pinyin": "Wǒ gǎnmào le, tóuténg, sǎngzi yě téng.",
+          "text_translation": "Shamollab qoldim, boshim og'riyapti, tomog'im ham og'riyapti.",
+          "text_translation_ru": "Я простудился, болит голова и горло тоже болит.",
+          "text_translation_en": "I caught a cold — my head hurts and my throat hurts too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s3",
+          "text_original": "你吃药了吗？",
+          "pinyin": "Nǐ chī yào le ma?",
+          "text_translation": "Dori ichdingmi?",
+          "text_translation_ru": "Ты принял лекарство?",
+          "text_translation_en": "Have you taken any medicine?",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s4",
+          "text_original": "吃了一点感冒药，但是好像没什么用。",
+          "pinyin": "Chī le yì diǎn gǎnmào yào, dànshì hǎoxiàng méi shénme yòng.",
+          "text_translation": "Bir oz shamollashga qarshi dori ichdim, lekin foydasi yo'qqa o'xshaydi.",
+          "text_translation_ru": "Выпил немного лекарства от простуды, но, похоже, толку нет.",
+          "text_translation_en": "I took some cold medicine, but it doesn't seem to help.",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s5",
+          "text_original": "那你最好去医院看看，让医生开点药。",
+          "pinyin": "Nà nǐ zuì hǎo qù yīyuàn kàn kan, ràng yīshēng kāi diǎn yào.",
+          "text_translation": "Unda shifoxonaga borib ko'rganing ma'qul, shifokor dori yozib bersin.",
+          "text_translation_ru": "Тогда лучше сходи в больницу, пусть врач выпишет лекарства.",
+          "text_translation_en": "Then you'd better go to the hospital and have a doctor prescribe some medicine.",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s6",
+          "text_original": "我不想去医院，人太多了，要排很久。",
+          "pinyin": "Wǒ bù xiǎng qù yīyuàn, rén tài duō le, yào pái hěn jiǔ.",
+          "text_translation": "Shifoxonaga borgim kelmayapti, odam juda ko'p, uzoq navbatda turish kerak.",
+          "text_translation_ru": "Не хочу в больницу, там слишком много людей, придётся долго стоять в очереди.",
+          "text_translation_en": "I don't want to go to the hospital — it's too crowded, you have to wait a long time.",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s7",
+          "text_original": "那去药店买点药也行。药店就在小区门口。",
+          "pinyin": "Nà qù yàodiàn mǎi diǎn yào yě xíng. Yàodiàn jiù zài xiǎoqū ménkǒu.",
+          "text_translation": "Unda dorixonadan dori olsang ham bo'ladi. Dorixona turar joy darvozasi oldida.",
+          "text_translation_ru": "Тогда можно купить лекарства в аптеке. Аптека прямо у входа в наш район.",
+          "text_translation_en": "Then buying some medicine at the pharmacy works too. The pharmacy is right at the neighborhood entrance.",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s8",
+          "text_original": "好，我一会儿去买。你觉得我应该买什么药？",
+          "pinyin": "Hǎo, wǒ yíhuìr qù mǎi. Nǐ juéde wǒ yīnggāi mǎi shénme yào?",
+          "text_translation": "Yaxshi, birozdan keyin borib olaman. Seningcha qanday dori olishim kerak?",
+          "text_translation_ru": "Хорошо, скоро схожу куплю. Как думаешь, какое лекарство мне взять?",
+          "text_translation_en": "Okay, I'll go buy some soon. What medicine do you think I should get?",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s9",
+          "text_original": "你可以买感冒冲剂和止咳糖浆，效果不错。",
+          "pinyin": "Nǐ kěyǐ mǎi gǎnmào chōngjì hé zhǐké tángjiāng, xiàoguǒ búcuò.",
+          "text_translation": "Shamollashga qarshi kukun va yo'talga qarshi sirop olsang bo'ladi, natijasi yaxshi.",
+          "text_translation_ru": "Можешь купить порошок от простуды и сироп от кашля, они хорошо помогают.",
+          "text_translation_en": "You can buy cold granules and cough syrup — they work well.",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s10",
+          "text_original": "这些药贵吗？",
+          "pinyin": "Zhèxiē yào guì ma?",
+          "text_translation": "Bu dorilar qimmatmi?",
+          "text_translation_ru": "Эти лекарства дорогие?",
+          "text_translation_en": "Are these medicines expensive?",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s11",
+          "text_original": "不贵，几十块钱就够了。",
+          "pinyin": "Bú guì, jǐ shí kuài qián jiù gòu le.",
+          "text_translation": "Qimmat emas, bir necha o'n yuan yetadi.",
+          "text_translation_ru": "Недорогие, несколько десятков юаней — и хватит.",
+          "text_translation_en": "Not expensive — a few dozen yuan is enough.",
+          "speaker": "A"
+        },
+        {
+          "id": "d28-s12",
+          "text_original": "好，我去买。谢谢你！",
+          "pinyin": "Hǎo, wǒ qù mǎi. Xièxie nǐ!",
+          "text_translation": "Yaxshi, borib olaman. Rahmat senga!",
+          "text_translation_ru": "Хорошо, схожу куплю. Спасибо тебе!",
+          "text_translation_en": "Okay, I'll go buy them. Thank you!",
+          "speaker": "B"
+        },
+        {
+          "id": "d28-s13",
+          "text_original": "不客气！记得多喝水，多休息。",
+          "pinyin": "Bú kèqi! Jìde duō hē shuǐ, duō xiūxi.",
+          "text_translation": "Arzimaydi! Ko'proq suv ichishni va ko'proq dam olishni unutma.",
+          "text_translation_ru": "Не за что! Не забывай побольше пить воды и больше отдыхать.",
+          "text_translation_en": "You're welcome! Remember to drink lots of water and get plenty of rest.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
