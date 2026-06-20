@@ -1,0 +1,210 @@
+{
+  "id": "hsk3-dialogue23",
+  "slug": "ride-hailing-apps",
+  "title": "打车软件",
+  "pinyin": "Dǎchē ruǎnjiàn",
+  "titleTranslation": "Taksi chaqirish ilovasi",
+  "titleTranslation_ru": "Приложения для вызова такси",
+  "titleTranslation_en": "Ride-hailing Apps",
+  "level": 3,
+  "tag": "transport",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "打车软件",
+    "叫车",
+    "接单",
+    "优惠券",
+    "现金",
+    "安全",
+    "担心",
+    "评分",
+    "评价",
+    "取消",
+    "订单",
+    "重新",
+    "车牌号",
+    "拦车",
+    "安全第一"
+  ],
+  "sections": [
+    {
+      "id": "d23-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d23-s1",
+          "text_original": "你平时怎么去机场？",
+          "pinyin": "Nǐ píngshí zěnme qù jīchǎng?",
+          "text_translation": "Odatda aeroportga qanday borasan?",
+          "text_translation_ru": "Как ты обычно добираешься до аэропорта?",
+          "text_translation_en": "How do you usually get to the airport?",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s2",
+          "text_original": "我一般用打车软件叫车，很方便。",
+          "pinyin": "Wǒ yìbān yòng dǎchē ruǎnjiàn jiào chē, hěn fāngbiàn.",
+          "text_translation": "Odatda taksi chaqirish ilovasi orqali mashina chaqiraman, juda qulay.",
+          "text_translation_ru": "Обычно вызываю машину через приложение для такси, это удобно.",
+          "text_translation_en": "I usually call a car with a ride-hailing app — it's very convenient.",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s3",
+          "text_original": "你用哪个软件？",
+          "pinyin": "Nǐ yòng nǎ ge ruǎnjiàn?",
+          "text_translation": "Qaysi ilovadan foydalanasan?",
+          "text_translation_ru": "Каким приложением ты пользуешься?",
+          "text_translation_en": "Which app do you use?",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s4",
+          "text_original": "我常用滴滴，有时候也用高德。",
+          "pinyin": "Wǒ cháng yòng Dīdī, yǒu shíhou yě yòng Gāodé.",
+          "text_translation": "Ko'pincha Didi'dan foydalanaman, ba'zan Gaode'dan ham.",
+          "text_translation_ru": "Чаще всего пользуюсь Didi, иногда и Gaode.",
+          "text_translation_en": "I often use Didi, and sometimes Gaode too.",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s5",
+          "text_original": "叫车快吗？",
+          "pinyin": "Jiào chē kuài ma?",
+          "text_translation": "Mashina tez keladimi?",
+          "text_translation_ru": "Машина быстро приезжает?",
+          "text_translation_en": "Is calling a car fast?",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s6",
+          "text_original": "很快。一般两三分钟就有司机接单。",
+          "pinyin": "Hěn kuài. Yìbān liǎng sān fēnzhōng jiù yǒu sījī jiē dān.",
+          "text_translation": "Juda tez. Odatda ikki-uch daqiqada haydovchi buyurtmani qabul qiladi.",
+          "text_translation_ru": "Очень быстро. Обычно за две-три минуты водитель принимает заказ.",
+          "text_translation_en": "Very fast. Usually within two or three minutes a driver accepts the order.",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s7",
+          "text_original": "价格比出租车便宜吗？",
+          "pinyin": "Jiàgé bǐ chūzū chē piányi ma?",
+          "text_translation": "Narxi taksidan arzonmi?",
+          "text_translation_ru": "Цена дешевле, чем на обычном такси?",
+          "text_translation_en": "Is it cheaper than a regular taxi?",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s8",
+          "text_original": "有时候便宜一些，尤其是用优惠券的时候。",
+          "pinyin": "Yǒu shíhou piányi yì xiē, yóuqí shì yòng yōuhuìquàn de shíhou.",
+          "text_translation": "Ba'zan biroz arzonroq, ayniqsa chegirma kuponi ishlatganda.",
+          "text_translation_ru": "Иногда немного дешевле, особенно когда используешь купон.",
+          "text_translation_en": "Sometimes a bit cheaper, especially when you use a coupon.",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s9",
+          "text_original": "你怎么付钱？",
+          "pinyin": "Nǐ zěnme fù qián?",
+          "text_translation": "Qanday to'lov qilasan?",
+          "text_translation_ru": "Как ты платишь?",
+          "text_translation_en": "How do you pay?",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s10",
+          "text_original": "可以直接在软件上付，不用现金。",
+          "pinyin": "Kěyǐ zhíjiē zài ruǎnjiàn shàng fù, búyòng xiànjīn.",
+          "text_translation": "To'g'ridan-to'g'ri ilovada to'lasa bo'ladi, naqd pul kerak emas.",
+          "text_translation_ru": "Можно платить прямо в приложении, наличные не нужны.",
+          "text_translation_en": "You can pay directly in the app — no cash needed.",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s11",
+          "text_original": "安全吗？你担心过安全问题吗？",
+          "pinyin": "Ānquán ma? Nǐ dānxīn guo ānquán wèntí ma?",
+          "text_translation": "Xavfsizmi? Xavfsizlik masalasidan xavotirlanganmiding?",
+          "text_translation_ru": "Это безопасно? Ты переживал из-за вопросов безопасности?",
+          "text_translation_en": "Is it safe? Have you ever worried about safety?",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s12",
+          "text_original": "有一点担心。所以我一般会看司机的评分和评价。",
+          "pinyin": "Yǒu yì diǎn dānxīn. Suǒyǐ wǒ yìbān huì kàn sījī de píngfēn hé píngjià.",
+          "text_translation": "Bir oz xavotirlanaman. Shuning uchun odatda haydovchining bahosi va sharhlarini ko'rib chiqaman.",
+          "text_translation_ru": "Немного переживаю. Поэтому обычно смотрю рейтинг и отзывы водителя.",
+          "text_translation_en": "A little worried. So I usually check the driver's rating and reviews.",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s13",
+          "text_original": "如果司机评分低怎么办？",
+          "pinyin": "Rúguǒ sījī píngfēn dī zěnme bàn?",
+          "text_translation": "Agar haydovchining bahosi past bo'lsa nima qilasan?",
+          "text_translation_ru": "А если у водителя низкий рейтинг?",
+          "text_translation_en": "What if the driver's rating is low?",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s14",
+          "text_original": "我就取消订单，重新叫一辆。",
+          "pinyin": "Wǒ jiù qǔxiāo dìngdān, chóngxīn jiào yí liàng.",
+          "text_translation": "Unda buyurtmani bekor qilib, qaytadan boshqa mashina chaqiraman.",
+          "text_translation_ru": "Тогда отменяю заказ и заново вызываю другую машину.",
+          "text_translation_en": "Then I cancel the order and call another car.",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s15",
+          "text_original": "晚上打车你会注意什么？",
+          "pinyin": "Wǎnshang dǎchē nǐ huì zhùyì shénme?",
+          "text_translation": "Kechqurun taksi chaqirganda nimaga e'tibor berasan?",
+          "text_translation_ru": "На что ты обращаешь внимание, когда вызываешь машину вечером?",
+          "text_translation_en": "What do you pay attention to when taking a car at night?",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s16",
+          "text_original": "我会把车牌号发给朋友，让他们知道我在哪儿。",
+          "pinyin": "Wǒ huì bǎ chēpái hào fā gěi péngyou, ràng tāmen zhīdào wǒ zài nǎr.",
+          "text_translation": "Mashina raqamini do'stlarimga yuboraman, ular qayerdaligimni bilib turishadi.",
+          "text_translation_ru": "Отправляю номер машины друзьям, чтобы они знали, где я.",
+          "text_translation_en": "I send the license plate number to a friend so they know where I am.",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s17",
+          "text_original": "这个办法好！我也应该这样做。",
+          "pinyin": "Zhè ge bànfǎ hǎo! Wǒ yě yīnggāi zhèyàng zuò.",
+          "text_translation": "Bu usul yaxshi ekan! Men ham shunday qilishim kerak.",
+          "text_translation_ru": "Хороший способ! Мне тоже стоит так делать.",
+          "text_translation_en": "That's a good method! I should do that too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d23-s18",
+          "text_original": "对，安全第一。用软件打车还是比路边拦车方便。",
+          "pinyin": "Duì, ānquán dì-yī. Yòng ruǎnjiàn dǎchē háishì bǐ lùbiān lán chē fāngbiàn.",
+          "text_translation": "To'g'ri, xavfsizlik birinchi o'rinda. Ilova orqali taksi chaqirish yo'l chetida mashina to'xtatishdan baribir qulayroq.",
+          "text_translation_ru": "Да, безопасность прежде всего. Вызывать машину через приложение всё же удобнее, чем ловить на улице.",
+          "text_translation_en": "Right, safety first. Using an app is still more convenient than hailing a car on the street.",
+          "speaker": "B"
+        },
+        {
+          "id": "d23-s19",
+          "text_original": "是的。我以后也多用软件打车。",
+          "pinyin": "Shì de. Wǒ yǐhòu yě duō yòng ruǎnjiàn dǎchē.",
+          "text_translation": "Ha. Bundan keyin men ham ko'proq ilova orqali taksi chaqiraman.",
+          "text_translation_ru": "Да. Впредь я тоже буду чаще вызывать машину через приложение.",
+          "text_translation_en": "Yeah. From now on I'll use apps to get a car more often too.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
