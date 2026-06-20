@@ -1,0 +1,142 @@
+{
+  "id": "hsk4-dialogue11",
+  "slug": "driving-license",
+  "title": "考驾照",
+  "pinyin": "Kǎo jiàzhào",
+  "titleTranslation": "Haydovchilik guvohnomasi olish",
+  "titleTranslation_ru": "Получение водительских прав",
+  "titleTranslation_en": "Getting a Driver's License",
+  "level": 4,
+  "tag": "transport",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "学车",
+    "驾校",
+    "报名",
+    "驾照",
+    "科目",
+    "倒车入库",
+    "教练",
+    "凶",
+    "严",
+    "认真"
+  ],
+  "sections": [
+    {
+      "id": "d11-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d11-s1",
+          "text_original": "你最近怎么都不出来玩？",
+          "pinyin": "Nǐ zuìjìn zěnme dōu bù chūlái wán?",
+          "text_translation": "Yaqinda nega umuman aylangani chiqmayapsan?",
+          "text_translation_ru": "Почему ты в последнее время совсем не выходишь погулять?",
+          "text_translation_en": "Why haven't you been coming out to hang out lately?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d11-s2",
+          "text_original": "我最近在学车，周末都要去驾校。",
+          "pinyin": "Wǒ zuìjìn zài xué chē, zhōumò dōu yào qù jiàxiào.",
+          "text_translation": "Yaqinda haydashni o'rganyapman, dam olish kunlari avtomaktabga borishim kerak.",
+          "text_translation_ru": "Я сейчас учусь водить, по выходным хожу в автошколу.",
+          "text_translation_en": "I've been learning to drive lately — I have to go to the driving school on weekends.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d11-s3",
+          "text_original": "你报名考驾照了？",
+          "pinyin": "Nǐ bàomíng kǎo jiàzhào le?",
+          "text_translation": "Haydovchilik guvohnomasi imtihoniga yozildingmi?",
+          "text_translation_ru": "Ты записался на сдачу на водительские права?",
+          "text_translation_en": "Did you sign up to take the driver's license test?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d11-s4",
+          "text_original": "对，上个月报的名，现在在学科目二。",
+          "pinyin": "Duì, shàng ge yuè bào de míng, xiànzài zài xué kēmù èr.",
+          "text_translation": "Ha, o'tgan oy yozilganman, hozir ikkinchi bo'limni o'rganyapman.",
+          "text_translation_ru": "Да, записался в прошлом месяце, сейчас учу второй раздел.",
+          "text_translation_en": "Yeah, I signed up last month, and now I'm on test section two.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d11-s5",
+          "text_original": "科目二难不难？",
+          "pinyin": "Kēmù èr nán bu nán?",
+          "text_translation": "Ikkinchi bo'lim qiyinmi?",
+          "text_translation_ru": "Второй раздел сложный?",
+          "text_translation_en": "Is section two hard?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d11-s6",
+          "text_original": "我觉得倒车入库最难，练了好多次还是不太熟。",
+          "pinyin": "Wǒ juéde dàochē rùkù zuì nán, liàn le hǎo duō cì háishì bú tài shú.",
+          "text_translation": "Menimcha orqaga yurib mashinani joyga qo'yish eng qiyini, ko'p marta mashq qildim, baribir uncha pishiq emasman.",
+          "text_translation_ru": "По-моему, заезд задним ходом самый сложный — тренировался много раз, но всё ещё не очень уверенно.",
+          "text_translation_en": "I think reverse parking is the hardest — I've practiced many times and still not great at it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d11-s7",
+          "text_original": "教练凶不凶？",
+          "pinyin": "Jiàoliàn xiōng bu xiōng?",
+          "text_translation": "Murabbiy qattiqqo'lmi?",
+          "text_translation_ru": "Инструктор суровый?",
+          "text_translation_en": "Is the instructor fierce?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d11-s8",
+          "text_original": "有点严，但是教得很认真，是个好教练。",
+          "pinyin": "Yǒu diǎn yán, dànshì jiāo de hěn rènzhēn, shì ge hǎo jiàoliàn.",
+          "text_translation": "Biroz talabchan, lekin juda jiddiy o'rgatadi, yaxshi murabbiy.",
+          "text_translation_ru": "Немного строгий, но преподаёт очень добросовестно, хороший инструктор.",
+          "text_translation_en": "A bit strict, but he teaches conscientiously — he's a good instructor.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d11-s9",
+          "text_original": "你打算什么时候考试？",
+          "pinyin": "Nǐ dǎsuàn shénme shíhou kǎoshì?",
+          "text_translation": "Qachon imtihon topshirmoqchisan?",
+          "text_translation_ru": "Когда планируешь сдавать экзамен?",
+          "text_translation_en": "When do you plan to take the test?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d11-s10",
+          "text_original": "下个星期考科目二，希望一次能过。",
+          "pinyin": "Xià ge xīngqī kǎo kēmù èr, xīwàng yí cì néng guò.",
+          "text_translation": "Keyingi hafta ikkinchi bo'limni topshiraman, bir martada o'ta olishni umid qilaman.",
+          "text_translation_ru": "На следующей неделе сдаю второй раздел, надеюсь сдать с первого раза.",
+          "text_translation_en": "I take section two next week — I hope I pass on the first try.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d11-s11",
+          "text_original": "加油！考过了请我吃饭。",
+          "pinyin": "Jiāyóu! Kǎo guò le qǐng wǒ chī fàn.",
+          "text_translation": "Omad! O'tib olsang meni ovqatga taklif qil.",
+          "text_translation_ru": "Удачи! Сдашь — угощаешь меня обедом.",
+          "text_translation_en": "Good luck! If you pass, treat me to a meal.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d11-s12",
+          "text_original": "没问题！如果我过了，第一个告诉你。",
+          "pinyin": "Méi wèntí! Rúguǒ wǒ guò le, dì-yī ge gàosu nǐ.",
+          "text_translation": "Muammo yo'q! O'tib olsam, birinchi bo'lib senga aytaman.",
+          "text_translation_ru": "Без проблем! Если сдам, первым делом скажу тебе.",
+          "text_translation_en": "No problem! If I pass, you'll be the first to know.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
