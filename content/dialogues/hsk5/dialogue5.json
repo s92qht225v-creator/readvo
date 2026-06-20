@@ -1,0 +1,172 @@
+{
+  "id": "hsk5-dialogue5",
+  "slug": "education",
+  "title": "教育",
+  "pinyin": "Jiàoyù",
+  "titleTranslation": "Taʼlim",
+  "titleTranslation_ru": "Образование",
+  "titleTranslation_en": "Education",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "补课",
+    "家长",
+    "成绩",
+    "排满",
+    "不仅",
+    "课外班",
+    "奥数",
+    "普遍",
+    "起跑线",
+    "忽略",
+    "身心健康",
+    "过度",
+    "创造力",
+    "安排",
+    "足够",
+    "自由",
+    "落后",
+    "矛盾",
+    "平衡",
+    "重视",
+    "全面",
+    "发展"
+  ],
+  "sections": [
+    {
+      "id": "h5d5-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d5-s1",
+          "text_original": "你周末怎么这么忙？还在给学生补课吗？",
+          "pinyin": "Nǐ zhōumò zěnme zhème máng? Hái zài gěi xuéshēng bǔkè ma?",
+          "text_translation": "Dam olish kunlari nega bunchalik bandsan? Hali ham oʻquvchilarga qoʻshimcha dars berayapsanmi?",
+          "text_translation_ru": "Почему ты так занят по выходным? Всё ещё даёшь ученикам дополнительные занятия?",
+          "text_translation_en": "Why are you so busy on weekends? Are you still giving students extra lessons?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d5-s2",
+          "text_original": "对，家长对孩子的学习成绩要求越来越高，周末的时间几乎都排满了。",
+          "pinyin": "Duì, jiāzhǎng duì háizi de xuéxí chéngjī yāoqiú yuè lái yuè gāo, zhōumò de shíjiān jīhū dōu pái mǎn le.",
+          "text_translation": "Ha, ota-onalar bolalarning oʻquv natijalariga tobora yuqori talab qoʻyayapti, dam olish kunlarim deyarli toʻlib ketgan.",
+          "text_translation_ru": "Да, родители предъявляют всё более высокие требования к успеваемости детей, и выходные у меня почти полностью заняты.",
+          "text_translation_en": "Yes, parents demand higher and higher academic results from their children, and my weekends are almost completely full.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d5-s3",
+          "text_original": "你觉得现在的中小学生压力是不是太大了？",
+          "pinyin": "Nǐ juéde xiànzài de zhōng xiǎo xuéshēng yālì shì bú shì tài dà le?",
+          "text_translation": "Seningcha, hozirgi oʻrta va boshlangʻich maktab oʻquvchilarining zoʻriqishi haddan ziyod emasmi?",
+          "text_translation_ru": "Тебе не кажется, что у нынешних школьников слишком большая нагрузка?",
+          "text_translation_en": "Do you think the pressure on today's school students is too much?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d5-s4",
+          "text_original": "确实。他们不仅要完成学校的作业，还要参加各种课外班。",
+          "pinyin": "Quèshí. Tāmen bùjǐn yào wánchéng xuéxiào de zuòyè, hái yào cānjiā gè zhǒng kèwài bān.",
+          "text_translation": "Rostdan ham. Ular nafaqat maktab vazifalarini bajarishi, balki turli toʻgaraklarga ham qatnashishi kerak.",
+          "text_translation_ru": "Действительно. Им нужно не только выполнять школьные задания, но и посещать всевозможные дополнительные занятия.",
+          "text_translation_en": "It really is. They not only have to finish school homework but also attend all kinds of after-school classes.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d5-s5",
+          "text_original": "我听说现在很多孩子从小学就开始学奥数、英语、钢琴，几乎没有休息时间。",
+          "pinyin": "Wǒ tīngshuō xiànzài hěn duō háizi cóng xiǎoxué jiù kāishǐ xué àoshù, Yīngyǔ, gāngqín, jīhū méiyǒu xiūxi shíjiān.",
+          "text_translation": "Eshitishimcha, hozir koʻp bolalar boshlangʻich sinfdanoq matematika olimpiadasi, ingliz tili, pianino oʻrgana boshlaydi, dam olishga deyarli vaqt qolmaydi.",
+          "text_translation_ru": "Я слышал, что сейчас многие дети уже с начальной школы начинают заниматься олимпиадной математикой, английским, фортепиано — у них почти нет времени на отдых.",
+          "text_translation_en": "I've heard that nowadays many children start learning competitive math, English, and piano from primary school, with almost no time to rest.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d5-s6",
+          "text_original": "这种现象很普遍。家长们担心孩子输在起跑线上，但可能忽略了孩子的身心健康。",
+          "pinyin": "Zhè zhǒng xiànxiàng hěn pǔbiàn. Jiāzhǎngmen dānxīn háizi shū zài qǐpǎoxiàn shàng, dàn kěnéng hūlüè le háizi de shēnxīn jiànkāng.",
+          "text_translation": "Bu hodisa juda keng tarqalgan. Ota-onalar bolasi boshlanish chizigʻidayoq ortda qolishidan qoʻrqadi, biroq bolaning jismoniy va ruhiy sogʻligʻini eʼtibordan chetda qoldirayotgan boʻlishi mumkin.",
+          "text_translation_ru": "Это явление очень распространено. Родители боятся, что ребёнок отстанет уже на старте, но при этом, возможно, упускают из виду его физическое и душевное здоровье.",
+          "text_translation_en": "This phenomenon is very common. Parents worry their child will fall behind right at the starting line, but they may be neglecting the child's physical and mental health.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d5-s7",
+          "text_original": "我理解家长的心情，但过度学习会不会反而影响孩子的兴趣和创造力？",
+          "pinyin": "Wǒ lǐjiě jiāzhǎng de xīnqíng, dàn guòdù xuéxí huì bú huì fǎn'ér yǐngxiǎng háizi de xìngqù hé chuàngzàolì?",
+          "text_translation": "Ota-onalarning ahvolini tushunaman, lekin haddan ortiq oʻqish aksincha bolaning qiziqishi va ijodiy qobiliyatiga taʼsir qilmaydimi?",
+          "text_translation_ru": "Я понимаю чувства родителей, но не повредит ли чрезмерная учёба, наоборот, интересу и творческим способностям ребёнка?",
+          "text_translation_en": "I understand the parents' feelings, but won't excessive studying actually harm a child's interest and creativity?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d5-s8",
+          "text_original": "这个问题问得好。其实很多孩子并不是真的喜欢那些课外班，只是家长安排的。",
+          "pinyin": "Zhè ge wèntí wèn de hǎo. Qíshí hěn duō háizi bìng bú shì zhēn de xǐhuān nàxiē kèwài bān, zhǐ shì jiāzhǎng ānpái de.",
+          "text_translation": "Yaxshi savol berding. Aslida koʻp bolalar u toʻgaraklarni chindan ham yoqtirmaydi, ularni shunchaki ota-onasi belgilab qoʻygan.",
+          "text_translation_ru": "Хороший вопрос. На самом деле многим детям эти кружки вовсе не нравятся — их просто записали родители.",
+          "text_translation_en": "That's a good question. Actually, many children don't really like those after-school classes — their parents just arranged them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d5-s9",
+          "text_original": "那你觉得什么样的教育方式更健康？",
+          "pinyin": "Nà nǐ juéde shénmeyàng de jiàoyù fāngshì gèng jiànkāng?",
+          "text_translation": "Unda seningcha qanday taʼlim usuli sogʻlomroq?",
+          "text_translation_ru": "А какой, по-твоему, подход к образованию более здоровый?",
+          "text_translation_en": "So what kind of education approach do you think is healthier?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d5-s10",
+          "text_original": "我觉得应该给孩子足够的自由时间，让他们自己去发现兴趣。",
+          "pinyin": "Wǒ juéde yīnggāi gěi háizi zúgòu de zìyóu shíjiān, ràng tāmen zìjǐ qù fāxiàn xìngqù.",
+          "text_translation": "Menimcha, bolalarga yetarlicha erkin vaqt berib, oʻz qiziqishlarini oʻzlari topishiga imkon yaratish kerak.",
+          "text_translation_ru": "Я считаю, что детям нужно давать достаточно свободного времени, чтобы они сами находили свои интересы.",
+          "text_translation_en": "I think we should give children enough free time and let them discover their own interests.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d5-s11",
+          "text_original": "但如果完全不安排，又怕孩子落后。家长真的很矛盾。",
+          "pinyin": "Dàn rúguǒ wánquán bù ānpái, yòu pà háizi luòhòu. Jiāzhǎng zhēn de hěn máodùn.",
+          "text_translation": "Lekin agar umuman rejalashtirilmasa, bola ortda qolishidan qoʻrqasan. Ota-onalar haqiqatan ham ikki oʻt orasida qoladi.",
+          "text_translation_ru": "Но если совсем ничего не планировать, то боишься, что ребёнок отстанет. Родители и правда в противоречии.",
+          "text_translation_en": "But if you don't arrange anything at all, you're afraid the child will fall behind. Parents really are torn.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d5-s12",
+          "text_original": "我认为关键在于平衡。既要有学习，也要有玩耍和休息。",
+          "pinyin": "Wǒ rènwéi guānjiàn zàiyú pínghéng. Jì yào yǒu xuéxí, yě yào yǒu wánshuǎ hé xiūxi.",
+          "text_translation": "Menimcha, asosiy narsa muvozanatda. Ham oʻqish, ham oʻyin va dam olish boʻlishi kerak.",
+          "text_translation_ru": "Я думаю, главное — это баланс. Должна быть и учёба, и игры, и отдых.",
+          "text_translation_en": "I believe the key is balance. There should be both study and play and rest.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d5-s13",
+          "text_original": "可惜很多家长做不到这一点。",
+          "pinyin": "Kěxí hěn duō jiāzhǎng zuò bú dào zhè yì diǎn.",
+          "text_translation": "Afsuski, koʻp ota-onalar buni uddalay olmaydi.",
+          "text_translation_ru": "К сожалению, многие родители этого не могут добиться.",
+          "text_translation_en": "Unfortunately, many parents can't achieve this.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d5-s14",
+          "text_original": "确实。所以我希望未来的教育能更重视孩子的全面发展。",
+          "pinyin": "Quèshí. Suǒyǐ wǒ xīwàng wèilái de jiàoyù néng gèng zhòngshì háizi de quánmiàn fāzhǎn.",
+          "text_translation": "Rostdan ham. Shuning uchun men kelajakdagi taʼlim bolaning har tomonlama rivojlanishiga koʻproq eʼtibor berishini umid qilaman.",
+          "text_translation_ru": "Действительно. Поэтому я надеюсь, что будущее образование будет больше ценить всестороннее развитие ребёнка.",
+          "text_translation_en": "It really is. So I hope future education will place more importance on the all-round development of children.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

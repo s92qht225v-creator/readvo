@@ -1,0 +1,181 @@
+{
+  "id": "hsk5-dialogue6",
+  "slug": "interpersonal-relationships",
+  "title": "人际关系",
+  "pinyin": "Rénjì guānxi",
+  "titleTranslation": "Shaxslararo munosabatlar",
+  "titleTranslation_ru": "Межличностные отношения",
+  "titleTranslation_en": "Interpersonal Relationships",
+  "level": 5,
+  "tag": "muloqot",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "合得来",
+    "具体",
+    "随意",
+    "注重",
+    "细节",
+    "冲突",
+    "数据",
+    "补救",
+    "头疼",
+    "沟通",
+    "严格",
+    "分配",
+    "职责",
+    "流程",
+    "磨合",
+    "漫长",
+    "适应",
+    "目标",
+    "一致",
+    "共同点",
+    "耐心",
+    "改善"
+  ],
+  "sections": [
+    {
+      "id": "h5d6-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d6-s1",
+          "text_original": "你最近好像不太开心，是不是跟同事之间出了什么问题？",
+          "pinyin": "Nǐ zuìjìn hǎoxiàng bú tài kāixīn, shì bú shì gēn tóngshì zhījiān chū le shénme wèntí?",
+          "text_translation": "Yaqinda unchalik xursand emasga o'xshaysan, hamkasblaring bilan biror muammo chiqdimi?",
+          "text_translation_ru": "В последнее время ты как будто не очень весёлый — наверное, что-то случилось между тобой и коллегами?",
+          "text_translation_en": "You don't seem very happy lately — has something gone wrong between you and your coworkers?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d6-s2",
+          "text_original": "确实有点。我跟一个同事合作一个项目，但他的做事方式跟我不太合得来。",
+          "pinyin": "Quèshí yǒu diǎn. Wǒ gēn yí ge tóngshì hézuò yí ge xiàngmù, dàn tā de zuòshì fāngshì gēn wǒ bú tài hé de lái.",
+          "text_translation": "Rostdan ham biroz shunday. Bir hamkasbim bilan loyihada birga ishlayapman, lekin uning ish uslubi men bilan unchalik mos kelmaydi.",
+          "text_translation_ru": "И правда немного. Я работаю над проектом вместе с одним коллегой, но его манера вести дела со мной не очень совместима.",
+          "text_translation_en": "It really is a bit so. I'm working on a project with a coworker, but his way of doing things doesn't quite get along with mine.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d6-s3",
+          "text_original": "具体怎么回事？",
+          "pinyin": "Jùtǐ zěnme huí shì?",
+          "text_translation": "Aniqrog'i, gap nimada?",
+          "text_translation_ru": "А конкретно — в чём дело?",
+          "text_translation_en": "What exactly is going on?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d6-s4",
+          "text_original": "他做事比较随意，不太注重细节。而我习惯提前计划，喜欢把每件事都安排好。",
+          "pinyin": "Tā zuòshì bǐjiào suíyì, bú tài zhùzhòng xìjié. Ér wǒ xíguàn tíqián jìhuà, xǐhuān bǎ měi jiàn shì dōu ānpái hǎo.",
+          "text_translation": "U ishni ancha erkin qiladi, mayda-chuydalarga e'tibor bermaydi. Men esa oldindan reja tuzishga o'rganganman, har bir ishni puxta tartibga solishni yoqtiraman.",
+          "text_translation_ru": "Он работает довольно небрежно, не очень обращает внимание на детали. А я привык планировать заранее и люблю, чтобы каждое дело было хорошо организовано.",
+          "text_translation_en": "He does things rather casually and doesn't pay much attention to details. I, on the other hand, am used to planning ahead and like to have everything well arranged.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d6-s5",
+          "text_original": "那你们之间有没有发生过直接冲突？",
+          "pinyin": "Nà nǐmen zhījiān yǒu méiyǒu fāshēng guo zhíjiē chōngtū?",
+          "text_translation": "Unda oralaringizda to'g'ridan-to'g'ri janjal bo'lganmi?",
+          "text_translation_ru": "А между вами случались прямые конфликты?",
+          "text_translation_en": "So has there been any direct conflict between you two?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d6-s6",
+          "text_original": "有过几次。上次他因为忘记检查数据，导致报告出了问题，我只能加班补救。",
+          "pinyin": "Yǒu guo jǐ cì. Shàng cì tā yīnwèi wàngjì jiǎnchá shùjù, dǎozhì bàogào chū le wèntí, wǒ zhǐ néng jiābān bǔjiù.",
+          "text_translation": "Bir necha marta bo'lgan. O'tgan safar u ma'lumotlarni tekshirishni unutgani uchun hisobotda xato chiqdi, men esa qo'shimcha ishlab uni tuzatishga majbur bo'ldim.",
+          "text_translation_ru": "Несколько раз случалось. В прошлый раз он забыл проверить данные, из-за чего в отчёте возникла ошибка, и мне пришлось задержаться, чтобы всё исправить.",
+          "text_translation_en": "A few times. Last time he forgot to check the data, which caused a problem in the report, and I had to work overtime to fix it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d6-s7",
+          "text_original": "这种情况确实让人头疼。你试过跟他好好沟通吗？",
+          "pinyin": "Zhè zhǒng qíngkuàng quèshí ràng rén tóuténg. Nǐ shì guo gēn tā hǎohǎo gōutōng ma?",
+          "text_translation": "Bunday vaziyat rostdan ham bosh og'ritadi. U bilan yaxshilab gaplashib ko'rganmiding?",
+          "text_translation_ru": "Такая ситуация действительно доставляет головную боль. Ты пробовал нормально с ним поговорить?",
+          "text_translation_en": "This kind of situation really is a headache. Have you tried communicating with him properly?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d6-s8",
+          "text_original": "试过，但他总觉得我太严格，说我要求太高。",
+          "pinyin": "Shì guo, dàn tā zǒng juéde wǒ tài yángé, shuō wǒ yāoqiú tài gāo.",
+          "text_translation": "Gaplashganman, lekin u doim meni juda talabchan deb hisoblaydi, talablarim juda yuqori deydi.",
+          "text_translation_ru": "Пробовал, но он всё время считает, что я слишком строгий, и говорит, что у меня завышенные требования.",
+          "text_translation_en": "I have, but he always thinks I'm too strict and says my demands are too high.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d6-s9",
+          "text_original": "那你们的工作分配合理吗？每个人负责的部分清楚吗？",
+          "pinyin": "Nà nǐmen de gōngzuò fēnpèi hélǐ ma? Měi ge rén fùzé de bùfen qīngchu ma?",
+          "text_translation": "Unda ish taqsimotingiz oqilonami? Har kim qaysi qismga javobgarligi aniqmi?",
+          "text_translation_ru": "А распределение работы у вас разумное? Понятно, за какую часть отвечает каждый?",
+          "text_translation_en": "So is the division of work between you reasonable? Is it clear which part each person is responsible for?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d6-s10",
+          "text_original": "一开始不太清楚，后来我重新整理了分工表，明确了各自的职责。",
+          "pinyin": "Yì kāishǐ bú tài qīngchu, hòulái wǒ chóngxīn zhěnglǐ le fēngōng biǎo, míngquè le gèzì de zhízé.",
+          "text_translation": "Boshida unchalik aniq emas edi, keyin men ish taqsimoti jadvalini qaytadan tartibga solib, har birimizning vazifalarimizni aniqlab oldim.",
+          "text_translation_ru": "Сначала было не очень понятно, потом я заново упорядочил таблицу распределения задач и чётко определил обязанности каждого.",
+          "text_translation_en": "At first it wasn't very clear, but later I reorganized the task-division chart and clarified each person's responsibilities.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d6-s11",
+          "text_original": "这个方法不错。有时候问题不在于人，而在于流程不清晰。",
+          "pinyin": "Zhè ge fāngfǎ búcuò. Yǒu shíhou wèntí bú zàiyú rén, ér zàiyú liúchéng bù qīngxī.",
+          "text_translation": "Bu usul yaxshi. Ba'zan muammo odamda emas, balki jarayon noaniqligida bo'ladi.",
+          "text_translation_ru": "Это хороший подход. Иногда проблема не в людях, а в том, что процесс нечёткий.",
+          "text_translation_en": "That's a good approach. Sometimes the problem isn't the people but an unclear process.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d6-s12",
+          "text_original": "对。不过磨合过程还是比我想象中漫长。",
+          "pinyin": "Duì. Búguò móhé guòchéng háishì bǐ wǒ xiǎngxiàng zhōng màncháng.",
+          "text_translation": "To'g'ri. Ammo bir-birimizga ko'nikish jarayoni men o'ylaganimdan ham uzoqroq cho'zilyapti.",
+          "text_translation_ru": "Верно. Но процесс притирки всё же оказался дольше, чем я представлял.",
+          "text_translation_en": "Right. But the process of adjusting to each other is still longer than I imagined.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d6-s13",
+          "text_original": "慢慢来，合作总是需要时间去适应的。只要大家目标一致，总能找到共同点。",
+          "pinyin": "Mànmàn lái, hézuò zǒng shì xūyào shíjiān qù shìyìng de. Zhǐyào dàjiā mùbiāo yízhì, zǒng néng zhǎodào gòngtóng diǎn.",
+          "text_translation": "Shoshilma, hamkorlik har doim moslashish uchun vaqt talab qiladi. Hammaning maqsadi bir xil bo'lsa, doim umumiy nuqta topish mumkin.",
+          "text_translation_ru": "Не спеши, сотрудничеству всегда нужно время, чтобы притереться. Если у всех общая цель, всегда можно найти точки соприкосновения.",
+          "text_translation_en": "Take it slow — cooperation always needs time to adjust. As long as everyone shares the same goal, you can always find common ground.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d6-s14",
+          "text_original": "希望如此。最近他也开始按时完成任务了，算是进步吧。",
+          "pinyin": "Xīwàng rúcǐ. Zuìjìn tā yě kāishǐ ànshí wánchéng rènwu le, suàn shì jìnbù ba.",
+          "text_translation": "Umid shunday. Yaqinda u ham vazifalarni o'z vaqtida bajara boshladi, buni rivojlanish deyish mumkin.",
+          "text_translation_ru": "Надеюсь, что так. В последнее время он тоже начал выполнять задачи вовремя — можно считать это прогрессом.",
+          "text_translation_en": "I hope so. Lately he's also started completing tasks on time — that counts as progress, I suppose.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d6-s15",
+          "text_original": "那挺好的。有时候只要多一点点耐心，关系就会慢慢改善。",
+          "pinyin": "Nà tǐng hǎo de. Yǒu shíhou zhǐyào duō yì diǎndiǎn nàixīn, guānxi jiù huì mànmàn gǎishàn.",
+          "text_translation": "Bu juda yaxshi. Ba'zan ozgina sabr ko'proq bo'lsa, munosabatlar asta-sekin yaxshilanadi.",
+          "text_translation_ru": "Это очень хорошо. Иногда достаточно чуть больше терпения, и отношения постепенно улучшаются.",
+          "text_translation_en": "That's great. Sometimes just a little more patience is enough, and the relationship will gradually improve.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

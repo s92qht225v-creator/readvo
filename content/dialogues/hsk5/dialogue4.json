@@ -1,0 +1,169 @@
+{
+  "id": "hsk5-dialogue4",
+  "slug": "social-media",
+  "title": "社交媒体",
+  "pinyin": "Shèjiāo méitǐ",
+  "titleTranslation": "Ijtimoiy tarmoqlar",
+  "titleTranslation_ru": "Социальные сети",
+  "titleTranslation_en": "Social Media",
+  "level": 5,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "朋友圈",
+    "上瘾",
+    "翻",
+    "社交媒体",
+    "坦白说",
+    "反而",
+    "内容",
+    "真实",
+    "展示",
+    "烦恼",
+    "看待",
+    "晒",
+    "心态",
+    "焦虑",
+    "控制",
+    "平静",
+    "偶尔",
+    "远离",
+    "迷失"
+  ],
+  "sections": [
+    {
+      "id": "h5d4-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d4-s1",
+          "text_original": "我看你每天都要刷好几次朋友圈，是不是有点上瘾了？",
+          "pinyin": "Wǒ kàn nǐ měitiān dōu yào shuā hǎojǐ cì péngyouquān, shì bú shì yǒu diǎn shàngyǐn le?",
+          "text_translation": "Qarasam, har kuni bir necha marta do'stlar lentasini ko'rib chiqyapsan, biroz o'rganib qolmadingmi?",
+          "text_translation_ru": "Я смотрю, ты каждый день по нескольку раз листаешь ленту друзей — не подсел ли ты немного?",
+          "text_translation_en": "I see you scroll through your friends' feed several times a day — aren't you getting a bit addicted?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d4-s2",
+          "text_original": "还好吧，我就是习惯没事的时候翻一翻，看看朋友们在做什么。",
+          "pinyin": "Hái hǎo ba, wǒ jiùshì xíguàn méishì de shíhou fān yì fān, kàn kan péngyoumen zài zuò shénme.",
+          "text_translation": "Yomon emas, shunchaki bo'sh paytlarimda varaqlab, do'stlarim nima qilayotganini ko'rishga odatlanganman.",
+          "text_translation_ru": "Да нормально, просто привык на досуге пролистывать и смотреть, чем заняты друзья.",
+          "text_translation_en": "It's fine, I'm just used to flipping through it when I have nothing to do, to see what my friends are up to.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d4-s3",
+          "text_original": "你有没有觉得花太多时间在社交媒体上了？",
+          "pinyin": "Nǐ yǒu méiyǒu juéde huā tài duō shíjiān zài shèjiāo méitǐ shàng le?",
+          "text_translation": "Ijtimoiy tarmoqlarga juda ko'p vaqt sarflayotganingni his qilmaysanmi?",
+          "text_translation_ru": "А ты не замечал, что тратишь слишком много времени на социальные сети?",
+          "text_translation_en": "Don't you feel like you spend too much time on social media?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d4-s4",
+          "text_original": "坦白说，确实有一些。有时候本来只想看五分钟，结果一刷就一个小时过去了。",
+          "pinyin": "Tǎnbái shuō, quèshí yǒu yì xiē. Yǒu shíhou běnlái zhǐ xiǎng kàn wǔ fēnzhōng, jiéguǒ yì shuā jiù yí ge xiǎoshí guòqù le.",
+          "text_translation": "Rostini aytsam, haqiqatan ham biroz. Ba'zan atigi besh daqiqa ko'rmoqchi bo'laman-u, varaqlay boshlashim bilan bir soat o'tib ketadi.",
+          "text_translation_ru": "Честно говоря, есть такое. Иногда хочу посмотреть всего пять минут, а в итоге пролистаю — и час прошёл.",
+          "text_translation_en": "Honestly, there really is some of that. Sometimes I mean to look for just five minutes, but once I start scrolling, an hour goes by.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d4-s5",
+          "text_original": "我也是！而且我觉得朋友圈里很多内容并不是真实的，大家都在展示最好的一面。",
+          "pinyin": "Wǒ yě shì! Érqiě wǒ juéde péngyouquān lǐ hěn duō nèiróng bìng bú shì zhēnshí de, dàjiā dōu zài zhǎnshì zuì hǎo de yí miàn.",
+          "text_translation": "Men ham! Bundan tashqari, do'stlar lentasidagi ko'p kontent haqiqiy emasdek tuyuladi, hamma faqat o'zining eng yaxshi tomonini ko'rsatadi.",
+          "text_translation_ru": "Я тоже! К тому же мне кажется, что многое в ленте друзей не настоящее — все показывают только свою лучшую сторону.",
+          "text_translation_en": "Me too! And I feel like a lot of the content in the feed isn't real — everyone is just showing their best side.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d4-s6",
+          "text_original": "确实。很多人只发高兴的事，很少分享生活中的烦恼。",
+          "pinyin": "Quèshí. Hěn duō rén zhǐ fā gāoxìng de shì, hěn shǎo fēnxiǎng shēnghuó zhōng de fánnǎo.",
+          "text_translation": "Rost. Ko'p odamlar faqat quvonchli narsalarni joylaydi, hayotdagi tashvishlarni esa kamdan-kam baham ko'radi.",
+          "text_translation_ru": "Действительно. Многие выкладывают только радостные моменты и редко делятся жизненными переживаниями.",
+          "text_translation_en": "True. Many people only post happy things and rarely share the troubles in their lives.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d4-s7",
+          "text_original": "那你怎么看待社交媒体上别人晒生活这件事？",
+          "pinyin": "Nà nǐ zěnme kàndài shèjiāo méitǐ shàng biérén shài shēnghuó zhè jiàn shì?",
+          "text_translation": "Unda ijtimoiy tarmoqlarda boshqalarning hayotini namoyish qilishiga qanday qaraysan?",
+          "text_translation_ru": "А как ты относишься к тому, что в соцсетях люди выставляют свою жизнь напоказ?",
+          "text_translation_en": "So how do you view the way people show off their lives on social media?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d4-s8",
+          "text_original": "我觉得可以看看，但不必太认真。别人的生活再好，也跟自己没关系。",
+          "pinyin": "Wǒ juéde kěyǐ kàn kan, dàn bú bì tài rènzhēn. Biérén de shēnghuó zài hǎo, yě gēn zìjǐ méi guānxi.",
+          "text_translation": "Menimcha, ko'rsa bo'ladi, lekin uni jiddiy qabul qilish shart emas. Boshqalarning hayoti qanchalik yaxshi bo'lmasin, o'zingga aloqasi yo'q.",
+          "text_translation_ru": "По-моему, посмотреть можно, но не стоит принимать это слишком всерьёз. Какой бы хорошей ни была чужая жизнь, к тебе она отношения не имеет.",
+          "text_translation_en": "I think it's fine to look, but there's no need to take it too seriously. No matter how good someone else's life is, it has nothing to do with you.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d4-s9",
+          "text_original": "你这个心态很好。很多人都因为刷朋友圈而产生焦虑。",
+          "pinyin": "Nǐ zhè ge xīntài hěn hǎo. Hěn duō rén dōu yīnwèi shuā péngyouquān ér chǎnshēng jiāolǜ.",
+          "text_translation": "Sening bu munosabating juda yaxshi. Ko'p odamlar do'stlar lentasini varaqlagani sababli xavotirga tushadi.",
+          "text_translation_ru": "У тебя очень здоровое отношение. Многие испытывают тревогу именно из-за того, что листают ленту друзей.",
+          "text_translation_en": "That's a really good attitude. A lot of people become anxious because of scrolling through their friends' feed.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d4-s10",
+          "text_original": "对啊，我觉得社交媒体只是工具，不应该让它控制自己的生活。",
+          "pinyin": "Duì a, wǒ juéde shèjiāo méitǐ zhǐ shì gōngjù, bù yīnggāi ràng tā kòngzhì zìjǐ de shēnghuó.",
+          "text_translation": "Ha, menimcha, ijtimoiy tarmoqlar shunchaki vosita, uni o'z hayotingni nazorat qilishiga yo'l qo'ymaslik kerak.",
+          "text_translation_ru": "Да, я считаю, что соцсети — это всего лишь инструмент, нельзя позволять им управлять твоей жизнью.",
+          "text_translation_en": "Exactly, I think social media is just a tool — you shouldn't let it control your life.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d4-s11",
+          "text_original": "那你有没有试过关掉几天朋友圈？",
+          "pinyin": "Nà nǐ yǒu méiyǒu shì guo guāndiào jǐ tiān péngyouquān?",
+          "text_translation": "Unda bir necha kun do'stlar lentasini o'chirib qo'yib ko'rganmiding?",
+          "text_translation_ru": "А ты пробовал отключить ленту друзей на несколько дней?",
+          "text_translation_en": "So have you ever tried turning off your friends' feed for a few days?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d4-s12",
+          "text_original": "试过。前几天我不看朋友圈，发现时间多了很多，心情也更平静了。",
+          "pinyin": "Shì guo. Qián jǐ tiān wǒ bú kàn péngyouquān, fāxiàn shíjiān duō le hěn duō, xīnqíng yě gèng píngjìng le.",
+          "text_translation": "Sinab ko'rganman. So'nggi bir necha kun do'stlar lentasini ko'rmadim va vaqtim ancha ko'payganini, kayfiyatim ham xotirjamroq bo'lganini sezdim.",
+          "text_translation_ru": "Пробовал. Последние несколько дней я не заглядывал в ленту друзей и обнаружил, что времени стало гораздо больше, а на душе спокойнее.",
+          "text_translation_en": "I have. The past few days I didn't check the feed, and I found I had a lot more time, and my mood was calmer too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d4-s13",
+          "text_original": "看来确实值得偶尔远离一下社交媒体。",
+          "pinyin": "Kànlái quèshí zhídé ǒu'ěr yuǎnlí yí xià shèjiāo méitǐ.",
+          "text_translation": "Ko'rinishidan, vaqti-vaqti bilan ijtimoiy tarmoqlardan uzoqlashish chindan ham arziydi.",
+          "text_translation_ru": "Похоже, действительно стоит время от времени отдаляться от социальных сетей.",
+          "text_translation_en": "It seems it really is worth stepping away from social media now and then.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d4-s14",
+          "text_original": "对。合理使用才是关键，既能保持联系，又不会迷失自己。",
+          "pinyin": "Duì. Hélǐ shǐyòng cái shì guānjiàn, jì néng bǎochí liánxì, yòu bú huì míshī zìjǐ.",
+          "text_translation": "To'g'ri. Asosiysi — undan oqilona foydalanish, shunda ham aloqani saqlab qolasan, ham o'zingni yo'qotmaysan.",
+          "text_translation_ru": "Да. Главное — пользоваться разумно: так и связь сохранишь, и себя не потеряешь.",
+          "text_translation_en": "Right. The key is using it sensibly — that way you can stay connected without losing yourself.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
