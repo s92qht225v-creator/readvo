@@ -1,0 +1,179 @@
+{
+  "id": "hsk3-dialogue22",
+  "slug": "buying-shoes-online",
+  "title": "网络购物",
+  "pinyin": "Wǎngluò gòuwù",
+  "titleTranslation": "Internet orqali xarid",
+  "titleTranslation_ru": "Покупки в интернете",
+  "titleTranslation_en": "Online Shopping",
+  "level": 3,
+  "tag": "xaridlar",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "网站",
+    "试穿",
+    "尺码",
+    "建议",
+    "退换",
+    "邮费",
+    "运动鞋",
+    "原价",
+    "收到",
+    "质量",
+    "链接"
+  ],
+  "sections": [
+    {
+      "id": "d22-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d22-s1",
+          "text_original": "你又在看手机，买什么呢？",
+          "pinyin": "Nǐ yòu zài kàn shǒujī, mǎi shénme ne?",
+          "text_translation": "Yana telefonga qarab o'tiribsan, nima sotib olyapsan?",
+          "text_translation_ru": "Ты опять в телефоне — что покупаешь?",
+          "text_translation_en": "You're on your phone again — what are you buying?",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s2",
+          "text_original": "我在看购物网站，想买一双新鞋。",
+          "pinyin": "Wǒ zài kàn gòuwù wǎngzhàn, xiǎng mǎi yì shuāng xīn xié.",
+          "text_translation": "Xarid saytini ko'ryapman, bitta yangi poyabzal olmoqchiman.",
+          "text_translation_ru": "Смотрю торговый сайт, хочу купить новую пару обуви.",
+          "text_translation_en": "I'm browsing a shopping website — I want to buy a new pair of shoes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s3",
+          "text_original": "你怎么不在商店买？",
+          "pinyin": "Nǐ zěnme bú zài shāngdiàn mǎi?",
+          "text_translation": "Nega do'kondan olmaysan?",
+          "text_translation_ru": "Почему ты не покупаешь в магазине?",
+          "text_translation_en": "Why don't you buy them in a store?",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s4",
+          "text_original": "商店的鞋太贵了，网上便宜很多。",
+          "pinyin": "Shāngdiàn de xié tài guì le, wǎngshàng piányi hěn duō.",
+          "text_translation": "Do'kondagi poyabzal juda qimmat, internetda ancha arzon.",
+          "text_translation_ru": "В магазине обувь слишком дорогая, в интернете намного дешевле.",
+          "text_translation_en": "Shoes in the store are too expensive — online is much cheaper.",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s5",
+          "text_original": "你能试穿吗？",
+          "pinyin": "Nǐ néng shìchuān ma?",
+          "text_translation": "Kiyib ko'ra olasanmi?",
+          "text_translation_ru": "А примерить можешь?",
+          "text_translation_en": "Can you try them on?",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s6",
+          "text_original": "不能。但是可以看别人的评价和尺码建议。",
+          "pinyin": "Bùnéng. Dànshì kěyǐ kàn biérén de píngjià hé chǐmǎ jiànyì.",
+          "text_translation": "Yo'q. Lekin boshqalarning sharhlari va o'lcham bo'yicha maslahatlarini ko'rsam bo'ladi.",
+          "text_translation_ru": "Нет. Но можно посмотреть отзывы других и советы по размеру.",
+          "text_translation_en": "No. But I can read other people's reviews and size advice.",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s7",
+          "text_original": "万一不合脚怎么办？",
+          "pinyin": "Wànyī bù hé jiǎo zěnme bàn?",
+          "text_translation": "Birdan oyog'ingga to'g'ri kelmasa nima qilasan?",
+          "text_translation_ru": "А если вдруг не подойдут по ноге?",
+          "text_translation_en": "What if they don't fit your feet?",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s8",
+          "text_original": "可以退换，很多商家都包邮费。",
+          "pinyin": "Kěyǐ tuìhuàn, hěn duō shāngjiā dōu bāo yóufèi.",
+          "text_translation": "Qaytarib almashtirsa bo'ladi, ko'p sotuvchilar yetkazib berish haqini o'z zimmasiga oladi.",
+          "text_translation_ru": "Можно вернуть и обменять, многие продавцы берут доставку на себя.",
+          "text_translation_en": "You can return and exchange them, and many sellers cover the shipping fee.",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s9",
+          "text_original": "那还不错。你选好了吗？",
+          "pinyin": "Nà hái búcuò. Nǐ xuǎn hǎo le ma?",
+          "text_translation": "Unda yomon emas ekan. Tanlab bo'ldingmi?",
+          "text_translation_ru": "Тогда неплохо. Ты уже выбрал?",
+          "text_translation_en": "That's not bad then. Have you chosen?",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s10",
+          "text_original": "选了一双黑色的运动鞋，评价很好。",
+          "pinyin": "Xuǎn le yì shuāng hēisè de yùndòngxié, píngjià hěn hǎo.",
+          "text_translation": "Bitta qora rangli krossovka tanladim, sharhlari juda yaxshi.",
+          "text_translation_ru": "Выбрал чёрные кроссовки, отзывы очень хорошие.",
+          "text_translation_en": "I chose a pair of black sneakers — the reviews are great.",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s11",
+          "text_original": "多少钱？",
+          "pinyin": "Duōshao qián?",
+          "text_translation": "Qancha turadi?",
+          "text_translation_ru": "Сколько стоят?",
+          "text_translation_en": "How much are they?",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s12",
+          "text_original": "原价四百多，现在打折，只要两百五。",
+          "pinyin": "Yuánjià sìbǎi duō, xiànzài dǎzhé, zhǐyào liǎngbǎi wǔ.",
+          "text_translation": "Asl narxi to'rt yuzdan oshadi, hozir chegirmada, atigi ikki yuz ellik.",
+          "text_translation_ru": "Изначальная цена — больше четырёхсот, сейчас со скидкой всего двести пятьдесят.",
+          "text_translation_en": "The original price was over four hundred; now they're on sale for just two hundred fifty.",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s13",
+          "text_original": "那确实便宜！你什么时候能收到？",
+          "pinyin": "Nà quèshí piányi! Nǐ shénme shíhou néng shōudào?",
+          "text_translation": "Bu rostdan ham arzon ekan! Qachon yetib oladi?",
+          "text_translation_ru": "Это и правда дёшево! Когда сможешь получить?",
+          "text_translation_en": "That really is cheap! When will you get them?",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s14",
+          "text_original": "明天就能到，我选的快递很快。",
+          "pinyin": "Míngtiān jiù néng dào, wǒ xuǎn de kuàidì hěn kuài.",
+          "text_translation": "Ertaga yetib keladi, men tanlagan kuryer juda tez.",
+          "text_translation_ru": "Уже завтра придут, я выбрал быструю доставку.",
+          "text_translation_en": "They'll arrive tomorrow — the courier I chose is fast.",
+          "speaker": "B"
+        },
+        {
+          "id": "d22-s15",
+          "text_original": "到了让我看看，我也想买一双。",
+          "pinyin": "Dào le ràng wǒ kàn kan, wǒ yě xiǎng mǎi yì shuāng.",
+          "text_translation": "Yetib kelsa menga ham ko'rsat, men ham bitta olmoqchiman.",
+          "text_translation_ru": "Когда придут, дай посмотреть — я тоже хочу купить пару.",
+          "text_translation_en": "When they arrive, let me see them — I want to buy a pair too.",
+          "speaker": "A"
+        },
+        {
+          "id": "d22-s16",
+          "text_original": "好。如果质量好，我把链接发给你。",
+          "pinyin": "Hǎo. Rúguǒ zhìliàng hǎo, wǒ bǎ liànjiē fā gěi nǐ.",
+          "text_translation": "Yaxshi. Sifati yaxshi bo'lsa, havolasini senga yuboraman.",
+          "text_translation_ru": "Хорошо. Если качество хорошее, отправлю тебе ссылку.",
+          "text_translation_en": "Okay. If the quality is good, I'll send you the link.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
