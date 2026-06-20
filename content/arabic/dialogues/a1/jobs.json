@@ -1,0 +1,70 @@
+{
+  "id": "jobs",
+  "level": "a1",
+  "title": "مَا عَمَلُكَ؟",
+  "translit": "Mā ʿamaluka?",
+  "titleTranslation_uz": "Kasbing nima?",
+  "titleTranslation_ru": "Кем ты работаешь?",
+  "titleTranslation_en": "What's Your Job?",
+  "vocab": [
+    { "ar": "عَمَل", "translit": "ʿamal", "uz": "ish, kasb", "ru": "работа", "en": "work, job" },
+    { "ar": "مَا عَمَلُكَ؟", "translit": "Mā ʿamaluka?", "uz": "Kasbing nima?", "ru": "Кем ты работаешь?", "en": "What's your job?" },
+    { "ar": "يَا أَخِي", "translit": "Yā akhī", "uz": "birodarim", "ru": "брат мой", "en": "my brother" },
+    { "ar": "مُتَرْجِم", "translit": "mutarjim", "uz": "tarjimon", "ru": "переводчик", "en": "interpreter, translator" },
+    { "ar": "مَاذَا تَعْمَلُ؟", "translit": "Māḏā taʿmalu?", "uz": "Nima ish qilasan?", "ru": "Чем ты занимаешься?", "en": "What do you do?" },
+    { "ar": "مُعَلِّم", "translit": "muʿallim", "uz": "oʻqituvchi", "ru": "учитель", "en": "teacher" },
+    { "ar": "مَدْرَسَة", "translit": "madrasa", "uz": "maktab", "ru": "школа", "en": "school" },
+    { "ar": "جَمِيل", "translit": "jamīl", "uz": "chiroyli, goʻzal", "ru": "красивый", "en": "beautiful, nice" }
+  ],
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "ar_m": "مَا عَمَلُكَ، يَا أَخِي؟",
+      "translit_m": "Mā ʿamaluka, yā akhī?",
+      "ar_f": "مَا عَمَلُكِ، يَا أُخْتِي؟",
+      "translit_f": "Mā ʿamaluki, yā ukhtī?",
+      "text_translation_uz": "Kasbing nima, birodarim?",
+      "text_translation_ru": "Кем ты работаешь, брат?",
+      "text_translation_en": "What's your job, my brother?",
+      "text_translation_uz_f": "Kasbing nima, singlim?",
+      "text_translation_ru_f": "Кем ты работаешь, сестра?",
+      "text_translation_en_f": "What's your job, my sister?"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "ar_m": "أَنَا مُتَرْجِمٌ. وَأَنْتَ، مَاذَا تَعْمَلُ؟",
+      "translit_m": "Anā mutarjimun. Wa anta, māḏā taʿmalu?",
+      "ar_f": "أَنَا مُتَرْجِمَةٌ. وَأَنْتِ، مَاذَا تَعْمَلِينَ؟",
+      "translit_f": "Anā mutarjimatun. Wa anti, māḏā taʿmalīna?",
+      "text_translation_uz": "Men tarjimonman. Sen-chi, nima ish qilasan?",
+      "text_translation_ru": "Я переводчик. А ты, чем занимаешься?",
+      "text_translation_en": "I'm an interpreter. And you, what do you do?",
+      "text_translation_ru_f": "Я переводчица. А ты, чем занимаешься?"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "ar_m": "أَنَا مُعَلِّمٌ فِي مَدْرَسَةٍ.",
+      "translit_m": "Anā muʿallimun fī madrasatin.",
+      "ar_f": "أَنَا مُعَلِّمَةٌ فِي مَدْرَسَةٍ.",
+      "translit_f": "Anā muʿallimatun fī madrasatin.",
+      "text_translation_uz": "Men maktabda oʻqituvchiman.",
+      "text_translation_ru": "Я учитель в школе.",
+      "text_translation_en": "I'm a teacher in a school.",
+      "text_translation_ru_f": "Я учительница в школе."
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "ar_m": "هَذَا عَمَلٌ جَمِيلٌ جِدًّا!",
+      "translit_m": "Hāḏā ʿamalun jamīlun jiddan!",
+      "ar_f": "هَذَا عَمَلٌ جَمِيلٌ جِدًّا!",
+      "translit_f": "Hāḏā ʿamalun jamīlun jiddan!",
+      "text_translation_uz": "Bu juda chiroyli kasb!",
+      "text_translation_ru": "Это очень красивая работа!",
+      "text_translation_en": "That's a very nice job!"
+    }
+  ]
+}
