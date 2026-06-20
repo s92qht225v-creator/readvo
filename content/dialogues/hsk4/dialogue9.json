@@ -1,0 +1,165 @@
+{
+  "id": "hsk4-dialogue9",
+  "slug": "home-renovation",
+  "title": "装修",
+  "pinyin": "Zhuāngxiū",
+  "titleTranslation": "Ta'mir",
+  "titleTranslation_ru": "Ремонт",
+  "titleTranslation_en": "Renovation",
+  "level": 4,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "好久不见",
+    "装修",
+    "恭喜",
+    "装修公司",
+    "设计",
+    "风格",
+    "为主",
+    "打通",
+    "显得",
+    "空间",
+    "费用",
+    "预算",
+    "材料费",
+    "人工费",
+    "合理"
+  ],
+  "sections": [
+    {
+      "id": "d9-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d9-s1",
+          "text_original": "好久不见！你最近在忙什么？",
+          "pinyin": "Hǎojiǔ bú jiàn! Nǐ zuìjìn zài máng shénme?",
+          "text_translation": "Ko'rishmaganimizga ancha bo'ldi! Yaqinda nima bilan bandsan?",
+          "text_translation_ru": "Давно не виделись! Чем ты сейчас занят?",
+          "text_translation_en": "Long time no see! What have you been busy with lately?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d9-s2",
+          "text_original": "我刚买了房子，最近在忙装修。",
+          "pinyin": "Wǒ gāng mǎi le fángzi, zuìjìn zài máng zhuāngxiū.",
+          "text_translation": "Yaqinda uy sotib oldim, hozir ta'mir bilan bandman.",
+          "text_translation_ru": "Я недавно купил квартиру и сейчас занимаюсь ремонтом.",
+          "text_translation_en": "I just bought a house, and lately I've been busy with the renovation.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d9-s3",
+          "text_original": "恭喜你！装修大概要多久？",
+          "pinyin": "Gōngxǐ nǐ! Zhuāngxiū dàgài yào duō jiǔ?",
+          "text_translation": "Tabriklayman! Ta'mir taxminan qancha vaqt oladi?",
+          "text_translation_ru": "Поздравляю! Сколько примерно займёт ремонт?",
+          "text_translation_en": "Congratulations! About how long will the renovation take?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d9-s4",
+          "text_original": "差不多两个月吧，现在刚刚开始。",
+          "pinyin": "Chàbuduō liǎng ge yuè ba, xiànzài gānggāng kāishǐ.",
+          "text_translation": "Taxminan ikki oycha, hozirgina boshladim.",
+          "text_translation_ru": "Примерно два месяца, сейчас только начал.",
+          "text_translation_en": "About two months — I've only just started.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d9-s5",
+          "text_original": "你找装修公司了吗？",
+          "pinyin": "Nǐ zhǎo zhuāngxiū gōngsī le ma?",
+          "text_translation": "Ta'mirlash kompaniyasi topdingmi?",
+          "text_translation_ru": "Ты нашёл ремонтную компанию?",
+          "text_translation_en": "Have you found a renovation company?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d9-s6",
+          "text_original": "找了。朋友推荐了一家，价格和设计都比较满意。",
+          "pinyin": "Zhǎo le. Péngyou tuījiàn le yì jiā, jiàgé hé shèjì dōu bǐjiào mǎnyì.",
+          "text_translation": "Topdim. Do'stim bittasini tavsiya qildi, narxi ham, dizayni ham ancha ko'ngildagidek.",
+          "text_translation_ru": "Нашёл. Друг порекомендовал одну, и цена, и дизайн меня вполне устраивают.",
+          "text_translation_en": "I have. A friend recommended one — I'm fairly happy with both the price and the design.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d9-s7",
+          "text_original": "你准备怎么装修？",
+          "pinyin": "Nǐ zhǔnbèi zěnme zhuāngxiū?",
+          "text_translation": "Qanday ta'mirlamoqchisan?",
+          "text_translation_ru": "Как ты планируешь делать ремонт?",
+          "text_translation_en": "How do you plan to do the renovation?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d9-s8",
+          "text_original": "我喜欢简单的风格，颜色以白色和灰色为主。",
+          "pinyin": "Wǒ xǐhuān jiǎndān de fēnggé, yánsè yǐ báisè hé huīsè wéi zhǔ.",
+          "text_translation": "Men sodda uslubni yoqtiraman, ranglar asosan oq va kulrang bo'ladi.",
+          "text_translation_ru": "Мне нравится простой стиль, цвета в основном белый и серый.",
+          "text_translation_en": "I like a simple style, with mainly white and gray colors.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d9-s9",
+          "text_original": "那看起来会很干净、很舒服。",
+          "pinyin": "Nà kàn qǐlái huì hěn gānjìng, hěn shūfu.",
+          "text_translation": "Unda juda toza va qulay ko'rinadi.",
+          "text_translation_ru": "Тогда будет выглядеть очень чисто и уютно.",
+          "text_translation_en": "That'll look very clean and comfortable.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d9-s10",
+          "text_original": "对。我打算把客厅和厨房打通，显得空间大一些。",
+          "pinyin": "Duì. Wǒ dǎsuàn bǎ kètīng hé chúfáng dǎtōng, xiǎnde kōngjiān dà yì xiē.",
+          "text_translation": "To'g'ri. Mehmonxona bilan oshxonani birlashtirmoqchiman, shunda joy kengroq ko'rinadi.",
+          "text_translation_ru": "Да. Я собираюсь объединить гостиную и кухню, чтобы пространство казалось больше.",
+          "text_translation_en": "Right. I plan to knock through the living room and kitchen to make the space look bigger.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d9-s11",
+          "text_original": "那费用贵吗？",
+          "pinyin": "Nà fèiyòng guì ma?",
+          "text_translation": "Unda xarajati qimmatmi?",
+          "text_translation_ru": "А расходы большие?",
+          "text_translation_en": "Is it expensive then?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d9-s12",
+          "text_original": "预算大概十万左右，包括材料费和人工费。",
+          "pinyin": "Yùsuàn dàgài shí wàn zuǒyòu, bāokuò cáiliào fèi hé réngōng fèi.",
+          "text_translation": "Byudjet taxminan o'n ming yuancha, material va ish haqi xarajatlarini qo'shib.",
+          "text_translation_ru": "Бюджет примерно сто тысяч юаней, включая стоимость материалов и работы.",
+          "text_translation_en": "The budget is about a hundred thousand yuan, including material and labor costs.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d9-s13",
+          "text_original": "这个价格还挺合理的。装修完以后请我去看看。",
+          "pinyin": "Zhè ge jiàgé hái tǐng hélǐ de. Zhuāngxiū wán yǐhòu qǐng wǒ qù kàn kan.",
+          "text_translation": "Bu narx ancha o'rinli ekan. Ta'mir tugagach meni ham ko'rgani taklif qil.",
+          "text_translation_ru": "Цена вполне разумная. Когда закончишь ремонт, пригласи меня посмотреть.",
+          "text_translation_en": "That price is quite reasonable. Once the renovation's done, invite me over to take a look.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d9-s14",
+          "text_original": "一定！到时候请你来我的新家吃饭。",
+          "pinyin": "Yídìng! Dàoshíhou qǐng nǐ lái wǒ de xīn jiā chī fàn.",
+          "text_translation": "Albatta! O'shanda seni yangi uyimga ovqatga taklif qilaman.",
+          "text_translation_ru": "Обязательно! Тогда приглашу тебя в свой новый дом на ужин.",
+          "text_translation_en": "Definitely! I'll invite you to my new home for a meal then.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
