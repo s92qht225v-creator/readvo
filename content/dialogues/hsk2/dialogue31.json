@@ -1,0 +1,105 @@
+{
+  "id": "hsk2-dialogue31",
+  "slug": "being-late",
+  "title": "迟到",
+  "pinyin": "Chídào",
+  "titleTranslation": "Kechikish",
+  "titleTranslation_ru": "Опоздание",
+  "titleTranslation_en": "Being Late",
+  "level": 2,
+  "tag": "kundalik",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "迟到",
+    "才来",
+    "对不起",
+    "睡过头",
+    "平时",
+    "特别",
+    "忘记",
+    "怪不得",
+    "闹钟"
+  ],
+  "sections": [
+    {
+      "id": "d31-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d31-s1",
+          "text_original": "你怎么才来？我们等了你半个小时了。",
+          "pinyin": "Nǐ zěnme cái lái? Wǒmen děng le nǐ bàn ge xiǎoshí le.",
+          "text_translation": "Nega endi kelyapsan? Seni yarim soat kutdik.",
+          "text_translation_ru": "Почему ты только пришёл? Мы ждали тебя полчаса.",
+          "text_translation_en": "Why are you only getting here now? We waited half an hour for you.",
+          "speaker": "A"
+        },
+        {
+          "id": "d31-s2",
+          "text_original": "对不起！我早上睡过头了。",
+          "pinyin": "Duìbuqǐ! Wǒ zǎoshang shuì guò tóu le.",
+          "text_translation": "Kechirasan! Ertalab uxlab qolibman.",
+          "text_translation_ru": "Извини! Я утром проспал.",
+          "text_translation_en": "Sorry! I overslept this morning.",
+          "speaker": "B"
+        },
+        {
+          "id": "d31-s3",
+          "text_original": "你平时不是七点就起床吗？",
+          "pinyin": "Nǐ píngshí bú shì qī diǎn jiù qǐchuáng ma?",
+          "text_translation": "Sen odatda yettida turmaysanmi?",
+          "text_translation_ru": "Ты же обычно встаёшь в семь?",
+          "text_translation_en": "Don't you usually get up at seven?",
+          "speaker": "A"
+        },
+        {
+          "id": "d31-s4",
+          "text_original": "对，但是昨天晚上睡得特别晚。",
+          "pinyin": "Duì, dànshì zuótiān wǎnshang shuì de tèbié wǎn.",
+          "text_translation": "Ha, lekin kecha juda kech uxladim.",
+          "text_translation_ru": "Да, но вчера вечером лёг спать очень поздно.",
+          "text_translation_en": "Right, but last night I went to bed really late.",
+          "speaker": "B"
+        },
+        {
+          "id": "d31-s5",
+          "text_original": "你几点睡的？",
+          "pinyin": "Nǐ jǐ diǎn shuì de?",
+          "text_translation": "Soat nechada uxlading?",
+          "text_translation_ru": "Во сколько ты лёг?",
+          "text_translation_en": "What time did you go to sleep?",
+          "speaker": "A"
+        },
+        {
+          "id": "d31-s6",
+          "text_original": "两点多。在看书，忘记时间了。",
+          "pinyin": "Liǎng diǎn duō. Zài kàn shū, wàngjì shíjiān le.",
+          "text_translation": "Ikkidan oshganda. Kitob o'qib, vaqtni unutib qo'yibman.",
+          "text_translation_ru": "В начале третьего. Читал книгу и забыл о времени.",
+          "text_translation_en": "A bit past two. I was reading and lost track of time.",
+          "speaker": "B"
+        },
+        {
+          "id": "d31-s7",
+          "text_original": "怪不得你迟到了。下次定个闹钟吧。",
+          "pinyin": "Guàibùdé nǐ chídào le. Xià cì dìng ge nàozhōng ba.",
+          "text_translation": "Shuning uchun kechikkan ekansan. Keyingi safar budilnik qo'yib qo'y.",
+          "text_translation_ru": "Неудивительно, что ты опоздал. В следующий раз поставь будильник.",
+          "text_translation_en": "No wonder you were late. Next time, set an alarm.",
+          "speaker": "A"
+        },
+        {
+          "id": "d31-s8",
+          "text_original": "我定了，但是没听见。以后早点睡。",
+          "pinyin": "Wǒ dìng le, dànshì méi tīngjiàn. Yǐhòu zǎo diǎn shuì.",
+          "text_translation": "Qo'ygandim, lekin eshitmabman. Bundan keyin erta uxlayman.",
+          "text_translation_ru": "Я ставил, но не услышал. Впредь буду ложиться пораньше.",
+          "text_translation_en": "I did, but I didn't hear it. I'll go to bed earlier from now on.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
