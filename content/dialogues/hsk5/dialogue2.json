@@ -1,0 +1,165 @@
+{
+  "id": "hsk5-dialogue2",
+  "slug": "workplace-stress",
+  "title": "职场压力",
+  "pinyin": "Zhíchǎng yālì",
+  "titleTranslation": "Ish joyidagi stress",
+  "titleTranslation_ru": "Стресс на работе",
+  "titleTranslation_en": "Workplace Stress",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "疲惫",
+    "确实",
+    "项目",
+    "邮件",
+    "沟通",
+    "实际",
+    "情况",
+    "适当",
+    "调整",
+    "节奏",
+    "心态",
+    "基础",
+    "长期",
+    "冥想",
+    "养成"
+  ],
+  "sections": [
+    {
+      "id": "h5d2-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d2-s1",
+          "text_original": "你最近看起来总是很疲惫，是不是工作太忙了？",
+          "pinyin": "Nǐ zuìjìn kàn qǐlái zǒng shì hěn píbèi, shì bú shì gōngzuò tài máng le?",
+          "text_translation": "Yaqinda doim charchagandek ko'rinasan, ishing juda ko'paydimi?",
+          "text_translation_ru": "Ты в последнее время всё время выглядишь измотанным — наверное, слишком много работы?",
+          "text_translation_en": "You've looked exhausted all the time lately — is work too busy?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d2-s2",
+          "text_original": "确实。最近公司接了一个新项目，我每天都要加班到很晚。",
+          "pinyin": "Quèshí. Zuìjìn gōngsī jiē le yí ge xīn xiàngmù, wǒ měitiān dōu yào jiābān dào hěn wǎn.",
+          "text_translation": "Rostdan ham. Yaqinda kompaniya yangi loyiha oldi, har kuni kechgacha qo'shimcha ishlashga to'g'ri kelyapti.",
+          "text_translation_ru": "Действительно. Недавно компания взяла новый проект, и мне каждый день приходится задерживаться допоздна.",
+          "text_translation_en": "It really is. Our company recently took on a new project, and I have to work overtime late every day.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d2-s3",
+          "text_original": "那你周末也不休息吗？",
+          "pinyin": "Nà nǐ zhōumò yě bù xiūxi ma?",
+          "text_translation": "Unda dam olish kunlari ham dam olmaysanmi?",
+          "text_translation_ru": "А по выходным ты тоже не отдыхаешь?",
+          "text_translation_en": "So you don't rest on weekends either?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d2-s4",
+          "text_original": "周末也得处理一些工作邮件，感觉完全没有自己的时间。",
+          "pinyin": "Zhōumò yě děi chǔlǐ yì xiē gōngzuò yóujiàn, gǎnjué wánquán méiyǒu zìjǐ de shíjiān.",
+          "text_translation": "Dam olish kunlari ham bir nechta ish xatlarini ko'rib chiqishim kerak, o'zimga vaqt umuman qolmayotgandek tuyuladi.",
+          "text_translation_ru": "По выходным тоже приходится разбирать рабочие письма — ощущение, что совсем нет времени на себя.",
+          "text_translation_en": "On weekends I still have to deal with some work emails — it feels like I have no time for myself at all.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d2-s5",
+          "text_original": "长期这样下去对身体不好。你有没有想过跟领导谈谈？",
+          "pinyin": "Chángqī zhèyàng xiàqù duì shēntǐ bù hǎo. Nǐ yǒu méiyǒu xiǎng guo gēn lǐngdǎo tán tan?",
+          "text_translation": "Uzoq vaqt shunday davom etsa salomatlik uchun yomon. Rahbaring bilan gaplashishni o'ylab ko'rganmiding?",
+          "text_translation_ru": "Если так будет долго продолжаться, это вредно для здоровья. Ты не думал поговорить с руководителем?",
+          "text_translation_en": "Keeping this up long-term is bad for your health. Have you thought about talking to your manager?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d2-s6",
+          "text_original": "想过，但是又担心领导会觉得我能力不够。",
+          "pinyin": "Xiǎng guo, dànshì yòu dānxīn lǐngdǎo huì juéde wǒ nénglì bú gòu.",
+          "text_translation": "O'ylaganman, lekin rahbar meni qobiliyatim yetishmaydi deb o'ylashidan xavotirdaman.",
+          "text_translation_ru": "Думал, но боюсь, что руководитель решит, будто мне не хватает способностей.",
+          "text_translation_en": "I have, but I'm also worried the manager will think I'm not capable enough.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d2-s7",
+          "text_original": "我觉得你不必太过担心。沟通很重要，领导可能并不清楚你的实际情况。",
+          "pinyin": "Wǒ juéde nǐ bú bì tài guò dānxīn. Gōutōng hěn zhòngyào, lǐngdǎo kěnéng bìng bù qīngchu nǐ de shíjì qíngkuàng.",
+          "text_translation": "Menimcha bunchalik xavotirlanishing shart emas. Muloqot juda muhim, rahbar sening haqiqiy ahvolingni bilmasligi mumkin.",
+          "text_translation_ru": "По-моему, тебе не стоит так сильно переживать. Общение очень важно — руководитель, возможно, просто не в курсе твоей реальной ситуации.",
+          "text_translation_en": "I don't think you need to worry too much. Communication matters — the manager may not actually be aware of your real situation.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d2-s8",
+          "text_original": "你说得有道理。我打算下周找个合适的时间跟他聊一聊。",
+          "pinyin": "Nǐ shuō de yǒu dàoli. Wǒ dǎsuàn xià zhōu zhǎo ge héshì de shíjiān gēn tā liáo yì liáo.",
+          "text_translation": "Gaping mantiqli. Keyingi hafta mos vaqt topib, u bilan gaplashib olmoqchiman.",
+          "text_translation_ru": "Ты прав. На следующей неделе планирую найти подходящее время и поговорить с ним.",
+          "text_translation_en": "You have a point. I plan to find a good time next week and have a chat with him.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d2-s9",
+          "text_original": "另外，你也可以考虑一些放松的方式，比如运动或者冥想。",
+          "pinyin": "Lìngwài, nǐ yě kěyǐ kǎolǜ yì xiē fàngsōng de fāngshì, bǐrú yùndòng huòzhě míngxiǎng.",
+          "text_translation": "Bundan tashqari, dam olish usullarini ham o'ylab ko'rsang bo'ladi, masalan sport yoki meditatsiya.",
+          "text_translation_ru": "Кроме того, можешь подумать о способах расслабления — например, спорт или медитация.",
+          "text_translation_en": "Also, you could consider some ways to relax, like exercise or meditation.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d2-s10",
+          "text_original": "我试过去健身房，但是坚持不了几天就又忙起来了。",
+          "pinyin": "Wǒ shì guo qù jiànshēnfáng, dànshì jiānchí bù liǎo jǐ tiān jiù yòu máng qǐlái le.",
+          "text_translation": "Sport zaliga borib ko'rganman, lekin bir necha kun ham davom ettira olmay, yana ishga ko'milib ketdim.",
+          "text_translation_ru": "Я пробовал ходить в спортзал, но не продержался и нескольких дней — снова закрутился в делах.",
+          "text_translation_en": "I tried going to the gym, but I couldn't keep it up for more than a few days before I got busy again.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d2-s11",
+          "text_original": "那你可以从每天散步十分钟开始，慢慢养成习惯。",
+          "pinyin": "Nà nǐ kěyǐ cóng měitiān sànbù shí fēnzhōng kāishǐ, mànmàn yǎngchéng xíguàn.",
+          "text_translation": "Unda har kuni o'n daqiqa piyoda yurishdan boshlab, asta-sekin odat hosil qilsang bo'ladi.",
+          "text_translation_ru": "Тогда можешь начать с десятиминутной прогулки каждый день и постепенно выработать привычку.",
+          "text_translation_en": "Then you could start with a ten-minute walk every day and gradually build the habit.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d2-s12",
+          "text_original": "这个建议不错。生活不能只有工作，我也该适当调整一下节奏。",
+          "pinyin": "Zhè ge jiànyì búcuò. Shēnghuó bùnéng zhǐyǒu gōngzuò, wǒ yě gāi shìdàng tiáozhěng yí xià jiézòu.",
+          "text_translation": "Bu maslahat yaxshi. Hayot faqat ishdan iborat bo'lmasligi kerak, men ham sur'atimni me'yorida moslab olishim lozim.",
+          "text_translation_ru": "Хороший совет. Жизнь не может состоять только из работы — мне тоже стоит немного скорректировать свой ритм.",
+          "text_translation_en": "That's good advice. Life can't be only about work — I should adjust my pace appropriately too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d2-s13",
+          "text_original": "对，健康的身体和良好的心态才是长期发展的基础。",
+          "pinyin": "Duì, jiànkāng de shēntǐ hé liánghǎo de xīntài cái shì chángqī fāzhǎn de jīchǔ.",
+          "text_translation": "To'g'ri, sog'lom tana va yaxshi ruhiy holat uzoq muddatli rivojlanishning asosidir.",
+          "text_translation_ru": "Да, здоровое тело и хороший настрой — вот основа долгосрочного развития.",
+          "text_translation_en": "Right — a healthy body and a good mindset are the foundation of long-term growth.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d2-s14",
+          "text_original": "谢谢你的建议，我感觉轻松了一些。",
+          "pinyin": "Xièxie nǐ de jiànyì, wǒ gǎnjué qīngsōng le yì xiē.",
+          "text_translation": "Maslahating uchun rahmat, o'zimni biroz yengil his qilyapman.",
+          "text_translation_ru": "Спасибо за совет, мне стало немного легче.",
+          "text_translation_en": "Thanks for the advice — I feel a bit more relaxed now.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
