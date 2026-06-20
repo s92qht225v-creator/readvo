@@ -94,3 +94,6 @@
 .theme-ar .dr-flip__meaning { color: #1A5236; }
 .theme-ar .dr-flip__audio { background: #e9f5ee; color: var(--color-accent, #2E8B57); }
 .theme-ar .dr-flip__audio-spinner { border-color: #cfe9da; border-top-color: var(--color-accent, #2E8B57); }
+
+/* Font-size pill on the LEFT for Arabic (Chinese/karaoke keep it on the right). */
+.theme-ar .dr-font-controls { left: 16px; right: auto; }
