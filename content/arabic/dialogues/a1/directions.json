@@ -1,0 +1,55 @@
+{
+  "id": "directions",
+  "level": "a1",
+  "title": "أَيْنَ الْحَمَّامُ؟",
+  "translit": "Ayna al-ḥammām?",
+  "titleTranslation_uz": "Hojatxona qayerda?",
+  "titleTranslation_ru": "Где туалет?",
+  "titleTranslation_en": "Where Is the Bathroom?",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "ar_m": "لَوْ سَمَحْتَ، أَيْنَ الْحَمَّامُ؟",
+      "translit_m": "Law samaḥta, ayna al-ḥammām?",
+      "ar_f": "لَوْ سَمَحْتِ، أَيْنَ الْحَمَّامُ؟",
+      "translit_f": "Law samaḥti, ayna al-ḥammām?",
+      "text_translation_uz": "Kechirasiz, hojatxona qayerda?",
+      "text_translation_ru": "Извините, где туалет?",
+      "text_translation_en": "Excuse me, where is the bathroom?"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "ar_m": "الْحَمَّامُ هُنَاكَ عَلَى الْيَسَارِ.",
+      "translit_m": "Al-ḥammām hunāka ʿalā al-yasār.",
+      "ar_f": "الْحَمَّامُ هُنَاكَ عَلَى الْيَسَارِ.",
+      "translit_f": "Al-ḥammām hunāka ʿalā al-yasār.",
+      "text_translation_uz": "Hojatxona o'sha yerda, chap tomonda.",
+      "text_translation_ru": "Туалет вон там, слева.",
+      "text_translation_en": "The bathroom is over there, on the left."
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "ar_m": "شُكْرًا جَزِيلًا لَكَ!",
+      "translit_m": "Shukran jazīlan laka!",
+      "ar_f": "شُكْرًا جَزِيلًا لَكِ!",
+      "translit_f": "Shukran jazīlan laki!",
+      "text_translation_uz": "Katta rahmat!",
+      "text_translation_ru": "Большое спасибо!",
+      "text_translation_en": "Thank you very much!"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "ar_m": "عَفْوًا! مَعَ السَّلَامَةِ.",
+      "translit_m": "ʿAfwan! Maʿa as-salāmah.",
+      "ar_f": "عَفْوًا! مَعَ السَّلَامَةِ.",
+      "translit_f": "ʿAfwan! Maʿa as-salāmah.",
+      "text_translation_uz": "Arzimaydi! Xayr.",
+      "text_translation_ru": "Пожалуйста! До свидания.",
+      "text_translation_en": "You're welcome! Goodbye."
+    }
+  ]
+}
