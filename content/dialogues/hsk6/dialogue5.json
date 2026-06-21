@@ -1,0 +1,174 @@
+{
+  "id": "hsk6-dialogue5",
+  "slug": "consumption-downgrading",
+  "title": "消费降级",
+  "pinyin": "Xiāofèi jiàngjí",
+  "titleTranslation": "Iste'molni pasaytirish",
+  "titleTranslation_ru": "Снижение уровня потребления",
+  "titleTranslation_en": "Consumption Downgrading",
+  "level": 6,
+  "tag": "pul",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "反常",
+    "大手大脚",
+    "精打细算",
+    "裁员",
+    "开销",
+    "押金",
+    "凑合",
+    "消费降级",
+    "戒",
+    "划算",
+    "品质",
+    "面子",
+    "负债",
+    "得不偿失",
+    "成长"
+  ],
+  "sections": [
+    {
+      "id": "h6d5-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d5-s1",
+          "text_original": "你最近怎么不点外卖了？天天自己带饭，这也太反常了。",
+          "pinyin": "Nǐ zuìjìn zěnme bù diǎn wàimài le? Tiāntiān zìjǐ dài fàn, zhè yě tài fǎncháng le.",
+          "text_translation": "Yaqinda nega tashqaridan ovqat buyurtirmayapsan? Har kuni o'zing ovqat olib kelasan, bu juda g'ayrioddiy-ku.",
+          "text_translation_ru": "Почему ты в последнее время не заказываешь доставку? Каждый день носишь еду с собой — это как-то ненормально.",
+          "text_translation_en": "Why have you stopped ordering takeout lately? Bringing your own lunch every day — that's quite out of character.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d5-s2",
+          "text_original": "算了一笔账，点外卖一个月要花两千多，自己做饭能省一半。现在经济形势不好，能省则省。",
+          "pinyin": "Suàn le yī bǐ zhàng, diǎn wàimài yī ge yuè yào huā liǎngqiān duō, zìjǐ zuò fàn néng shěng yī bàn. Xiànzài jīngjì xíngshì bù hǎo, néng shěng zé shěng.",
+          "text_translation": "Hisob-kitob qildim, tashqaridan ovqat buyurtirsam oyiga ikki mingdan ortiq ketadi, o'zim pishirsam yarmini tejayman. Hozir iqtisodiy vaziyat yaxshi emas, tejasa bo'lganini tejayman.",
+          "text_translation_ru": "Подсчитал: на доставку уходит больше двух тысяч в месяц, а если готовить самому, можно сэкономить половину. Сейчас экономическая обстановка плохая, экономлю где можно.",
+          "text_translation_en": "I did the math — ordering takeout costs over two thousand a month, but cooking myself saves half. The economy is bad right now, so I save wherever I can.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d5-s3",
+          "text_original": "你以前可是花钱大手大脚的，怎么突然变得这么精打细算了？",
+          "pinyin": "Nǐ yǐqián kě shì huā qián dàshǒu dàjiǎo de, zěnme tūrán biàn de zhème jīngdǎ xìsuàn le?",
+          "text_translation": "Sen avval pulni ayamasdan sarflardim-ku, nega to'satdan bunchalik tejamkor bo'lib qolding?",
+          "text_translation_ru": "Раньше ты ведь тратил деньги направо и налево — как ты вдруг стал таким экономным?",
+          "text_translation_en": "You used to spend money so freely — how did you suddenly become so frugal?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d5-s4",
+          "text_original": "还不是因为去年被裁员了。虽然现在找到了新工作，但工资比之前少了百分之二十。不敢再乱花钱了。",
+          "pinyin": "Hái bú shì yīnwèi qùnián bèi cáiyuán le. Suīrán xiànzài zhǎodào le xīn gōngzuò, dàn gōngzī bǐ zhīqián shǎo le bǎi fēn zhī èrshí. Bù gǎn zài luàn huā qián le.",
+          "text_translation": "Hammasi o'tgan yili ishdan qisqartirilganim uchun-da. Hozir yangi ish topgan bo'lsam ham, maosh avvalgidan yigirma foiz kam. Endi pulni o'ylamasdan sarflashga jur'at qilmayman.",
+          "text_translation_ru": "Да всё из-за того, что в прошлом году попал под сокращение. Хоть сейчас и нашёл новую работу, но зарплата на двадцать процентов меньше прежней. Больше не решаюсь тратить деньги как попало.",
+          "text_translation_en": "It's all because I got laid off last year. Although I've found a new job now, the salary is twenty percent lower than before. I don't dare spend money carelessly anymore.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d5-s5",
+          "text_original": "你现在每个月大概开销多少？",
+          "pinyin": "Nǐ xiànzài měi ge yuè dàgài kāixiāo duōshao?",
+          "text_translation": "Hozir oyiga taxminan qancha xarajating bor?",
+          "text_translation_ru": "А сколько примерно у тебя сейчас расходов в месяц?",
+          "text_translation_en": "About how much do you spend a month now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d5-s6",
+          "text_original": "房租还是大头，占了百分之四十。吃饭控制在两千以内，加上交通和日用品，一个月大概五千左右。",
+          "pinyin": "Fángzū háishì dàtóu, zhàn le bǎi fēn zhī sìshí. Chīfàn kòngzhì zài liǎngqiān yǐnèi, jiā shàng jiāotōng hé rìyòngpǐn, yī ge yuè dàgài wǔqiān zuǒyòu.",
+          "text_translation": "Ijara baribir eng katta qism, qirq foizni egallaydi. Ovqatni ikki ming ichida ushlab turaman, transport va kundalik buyumlarni qo'shsam, oyiga taxminan besh ming atrofida.",
+          "text_translation_ru": "Аренда по-прежнему основная статья — сорок процентов. Питание держу в пределах двух тысяч, плюс транспорт и предметы быта — в месяц выходит около пяти тысяч.",
+          "text_translation_en": "Rent is still the biggest part, taking up forty percent. I keep food under two thousand, and with transport and daily necessities, it's about five thousand a month.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d5-s7",
+          "text_original": "那你有没有考虑换个更便宜的房子？",
+          "pinyin": "Nà nǐ yǒu méiyǒu kǎolǜ huàn ge gèng piányi de fángzi?",
+          "text_translation": "Unda arzonroq uyga ko'chishni o'ylab ko'rganmiding?",
+          "text_translation_ru": "А ты не думал переехать в жильё подешевле?",
+          "text_translation_en": "So have you considered moving to a cheaper place?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d5-s8",
+          "text_original": "想换，但搬家成本太高了。中介费、押金、搬家费加起来又是一大笔。还是先凑合着住吧。",
+          "pinyin": "Xiǎng huàn, dàn bānjiā chéngběn tài gāo le. Zhōngjiè fèi, yājīn, bānjiā fèi jiā qǐlái yòu shì yī dà bǐ. Háishì xiān còuhe zhe zhù ba.",
+          "text_translation": "Ko'chgim keladi, lekin ko'chish xarajati juda baland. Vositachi haqi, garov puli, ko'chish puli qo'shilsa yana katta summa bo'ladi. Hozircha shu yerda amallab turaman.",
+          "text_translation_ru": "Хочется переехать, но затраты на переезд слишком высокие. Комиссия агенту, залог, плата за переезд — в сумме опять немалые деньги. Пока поживу так, обхожусь как есть.",
+          "text_translation_en": "I'd like to, but moving costs are too high. The agent's fee, deposit, and moving fee add up to another big sum. I'll just make do where I am for now.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d5-s9",
+          "text_original": "很多人都说现在是「消费降级」时代，连星巴克都不怎么去了。",
+          "pinyin": "Hěnduō rén dōu shuō xiànzài shì 'xiāofèi jiàngjí' shídài, lián Xīngbākè dōu bù zěnme qù le.",
+          "text_translation": "Ko'p odam hozir «iste'molni pasaytirish» davri deydi, hatto Starbaksga ham unchalik bormay qo'yishdi.",
+          "text_translation_ru": "Многие говорят, что сейчас эпоха «снижения потребления» — даже в Starbucks почти перестали ходить.",
+          "text_translation_en": "Many people say it's now the era of \"consumption downgrading\" — they hardly even go to Starbucks anymore.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d5-s10",
+          "text_original": "我现在连奶茶都戒了，二十五块一杯，太不划算了。",
+          "pinyin": "Wǒ xiànzài lián nǎichá dōu jiè le, èrshíwǔ kuài yī bēi, tài bù huásuàn le.",
+          "text_translation": "Men hozir sutli choyni ham tashladim, bir stakani yigirma besh yuan, juda foydasiz.",
+          "text_translation_ru": "Я теперь даже от молочного чая отказался — двадцать пять юаней за стакан, совсем невыгодно.",
+          "text_translation_en": "I've even given up bubble tea now — twenty-five yuan a cup, it's just not worth it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d5-s11",
+          "text_original": "有人说消费降级就是生活品质下降，你怎么看？",
+          "pinyin": "Yǒurén shuō xiāofèi jiàngjí jiùshì shēnghuó pǐnzhí xiàjiàng, nǐ zěnme kàn?",
+          "text_translation": "Ba'zilar iste'molni pasaytirish — bu hayot sifatining pasayishi deydi, sen qanday qaraysan?",
+          "text_translation_ru": "Некоторые говорят, что снижение потребления — это и есть падение качества жизни. Как ты считаешь?",
+          "text_translation_en": "Some say consumption downgrading means a drop in quality of life — what do you think?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d5-s12",
+          "text_original": "我觉得不一定。以前花钱买的是面子，现在花钱买的是实用。心态变了，品质未必下降。",
+          "pinyin": "Wǒ juéde bù yīdìng. Yǐqián huā qián mǎi de shì miànzi, xiànzài huā qián mǎi de shì shíyòng. Xīntài biàn le, pǐnzhí wèibì xiàjiàng.",
+          "text_translation": "Menimcha shart emas. Avval pulni or-nomus uchun sarflardim, hozir foydalilik uchun sarflayman. Kayfiyat o'zgardi, sifat shart emas pasayishi.",
+          "text_translation_ru": "По-моему, не обязательно. Раньше я тратил деньги ради престижа, а теперь — ради практичности. Изменился настрой, и качество вовсе не обязательно падает.",
+          "text_translation_en": "I don't think so necessarily. Before, I spent money for face; now I spend it for usefulness. My mindset changed, and quality doesn't necessarily drop.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d5-s13",
+          "text_original": "你这个想法挺清醒的。很多人为了面子负债，其实得不偿失。",
+          "pinyin": "Nǐ zhè ge xiǎngfǎ tǐng qīngxǐng de. Hěnduō rén wèile miànzi fùzhài, qíshí débùchángshī.",
+          "text_translation": "Bu fikring ancha hushyor. Ko'p odam or-nomus uchun qarzga botadi, aslida foydadan ziyoni ko'p.",
+          "text_translation_ru": "Это очень трезвая мысль. Многие влезают в долги ради престижа, но это, по сути, того не стоит.",
+          "text_translation_en": "That's a pretty clear-headed view. Many people go into debt for the sake of face, but it's really not worth it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d5-s14",
+          "text_original": "以前的我可能就是那种人。现在反而觉得轻松了，不用再跟别人比来比去。",
+          "pinyin": "Yǐqián de wǒ kěnéng jiùshì nà zhǒng rén. Xiànzài fǎn'ér juéde qīngsōng le, búyòng zài gēn biérén bǐ lái bǐ qù.",
+          "text_translation": "Avvalgi men, ehtimol, aynan o'sha turdagi odam edim. Hozir aksincha o'zimni yengil his qilyapman, endi boshqalar bilan solishtiraverishim shart emas.",
+          "text_translation_ru": "Раньше я, наверное, был именно таким человеком. А сейчас, наоборот, чувствую себя свободнее — не нужно больше постоянно сравнивать себя с другими.",
+          "text_translation_en": "I was probably exactly that kind of person before. Now I actually feel more at ease — I don't have to keep comparing myself with others.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d5-s15",
+          "text_original": "消费降级也算是一种成长吧。",
+          "pinyin": "Xiāofèi jiàngjí yě suàn shì yì zhǒng chéngzhǎng ba.",
+          "text_translation": "Iste'molni pasaytirish ham bir o'sish hisoblanadi-da.",
+          "text_translation_ru": "Снижение потребления тоже можно считать своего рода ростом.",
+          "text_translation_en": "Consumption downgrading is a kind of growth too, I suppose.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
