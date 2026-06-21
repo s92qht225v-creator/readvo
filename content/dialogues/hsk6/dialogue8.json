@@ -1,0 +1,156 @@
+{
+  "id": "hsk6-dialogue8",
+  "slug": "education-reform",
+  "title": "教育改革",
+  "pinyin": "Jiàoyù gǎigé",
+  "titleTranslation": "Ta'lim islohoti",
+  "titleTranslation_ru": "Реформа образования",
+  "titleTranslation_en": "Education Reform",
+  "level": 6,
+  "tag": "ta'lim",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "出台",
+    "减负",
+    "排名",
+    "初衷",
+    "表面功夫",
+    "背地里",
+    "剧场效应",
+    "形象",
+    "抢跑",
+    "评价体系",
+    "多元化",
+    "录取",
+    "适应期",
+    "灌输",
+    "终身学习"
+  ],
+  "sections": [
+    {
+      "id": "h6d8-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d8-s1",
+          "text_original": "你看到新闻了吗？教育部又出台了新的减负政策，禁止学校公布考试成绩和排名。",
+          "pinyin": "Nǐ kàn dào xīnwén le ma? Jiàoyùbù yòu chūtái le xīn de jiǎnfù zhèngcè, jìnzhǐ xuéxiào gōngbù kǎoshì chéngjī hé páimíng.",
+          "text_translation": "Yangilikni ko'rdingmi? Ta'lim vazirligi yana yangi yukni kamaytirish siyosatini chiqaribdi, maktablarga imtihon baholari va reytingni e'lon qilishni taqiqlabdi.",
+          "text_translation_ru": "Ты видел новость? Министерство образования снова приняло новую политику по снижению нагрузки, запретив школам публиковать оценки за экзамены и рейтинги.",
+          "text_translation_en": "Did you see the news? The Ministry of Education has introduced another burden-reduction policy, banning schools from publishing exam scores and rankings.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d8-s2",
+          "text_original": "看到了。政策初衷是好的，但我觉得治标不治本。只要中考、高考的压力还在，减负就只能是表面功夫。",
+          "pinyin": "Kàn dào le. Zhèngcè chūzhōng shì hǎo de, dàn wǒ juéde zhìbiāo bú zhìběn. Zhǐyào zhōngkǎo, gāokǎo de yālì hái zài, jiǎnfù jiù zhǐ néng shì biǎomiàn gōngfu.",
+          "text_translation": "Ko'rdim. Siyosatning dastlabki niyati yaxshi, lekin menimcha bu kasallikni emas, alomatni davolaydi. O'rta maktab va oliygohga kirish imtihonlarining bosimi turar ekan, yukni kamaytirish faqat ko'rsatuv uchun qilingan ish bo'lib qoladi.",
+          "text_translation_ru": "Видел. Замысел политики хороший, но, по-моему, это лечит симптом, а не причину. Пока сохраняется давление экзаменов в старшую школу и вуз, снижение нагрузки останется лишь показухой.",
+          "text_translation_en": "I did. The policy's intentions are good, but I think it treats the symptom, not the root. As long as the pressure of the high school and college entrance exams remains, burden reduction can only be superficial.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d8-s3",
+          "text_original": "我也这么认为。很多家长嘴上支持减负，背地里还是给孩子报各种补习班。",
+          "pinyin": "Wǒ yě zhème rènwéi. Hěnduō jiāzhǎng zuǐ shàng zhīchí jiǎnfù, bèidì lǐ háishì gěi háizi bào gè zhǒng bǔxí bān.",
+          "text_translation": "Men ham shunday hisoblayman. Ko'p ota-ona og'zida yukni kamaytirishni qo'llab-quvvatlaydi, ortidan esa baribir bolasini turli o'quv kurslariga yozdiradi.",
+          "text_translation_ru": "Я тоже так считаю. Многие родители на словах поддерживают снижение нагрузки, а за спиной всё равно записывают детей на всякие репетиторские курсы.",
+          "text_translation_en": "I think so too. Many parents verbally support burden reduction, but behind the scenes they still sign their kids up for all kinds of tutoring classes.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d8-s4",
+          "text_original": "这就是典型的「剧场效应」——前排的人站起来了，后排的人也不得不站起来。",
+          "pinyin": "Zhè jiùshì diǎnxíng de 'jùchǎng xiàoyìng' —— qiánpái de rén zhàn qǐlái le, hòupái de rén yě bùdébù zhàn qǐlái.",
+          "text_translation": "Bu aynan tipik «teatr effekti» — oldingi qatordagilar o'rnidan tursa, orqadagilar ham turishga majbur bo'ladi.",
+          "text_translation_ru": "Это и есть классический «эффект театра»: люди в первом ряду встали, и тем, кто сзади, тоже приходится вставать.",
+          "text_translation_en": "This is a classic case of the \"theater effect\" — when the people in the front rows stand up, those in the back have no choice but to stand up too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d8-s5",
+          "text_original": "你说得太形象了。大家都在抢跑，最后谁也得不到真正的休息。",
+          "pinyin": "Nǐ shuō de tài xíngxiàng le. Dàjiā dōu zài qiǎngpǎo, zuìhòu shuí yě dé bú dào zhēnzhèng de xiūxi.",
+          "text_translation": "Juda obrazli aytding. Hamma muddatidan oldin yugurib ketyapti, oxiri hech kim chinakam dam ololmaydi.",
+          "text_translation_ru": "Ты очень образно сказал. Все берут фальстарт, и в итоге никто не получает настоящего отдыха.",
+          "text_translation_en": "You put it so vividly. Everyone is jumping the gun, and in the end no one gets any real rest.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d8-s6",
+          "text_original": "实际上，教育改革的难点在于评价体系。如果只靠一两次考试决定命运，那竞争就不可能真正减少。",
+          "pinyin": "Shíjì shàng, jiàoyù gǎigé de nándiǎn zàiyú píngjià tǐxì. Rúguǒ zhǐ kào yī liǎng cì kǎoshì juédìng mìngyùn, nà jìngzhēng jiù bù kěnéng zhēnzhèng jiǎnshǎo.",
+          "text_translation": "Aslida ta'lim islohotining qiyin joyi baholash tizimida. Agar taqdir faqat bir-ikki imtihonga bog'liq bo'lsa, raqobat chinakamiga kamayishi mumkin emas.",
+          "text_translation_ru": "На самом деле сложность реформы образования — в системе оценивания. Если судьбу решают лишь один-два экзамена, конкуренцию по-настоящему сократить невозможно.",
+          "text_translation_en": "Actually, the difficulty of education reform lies in the evaluation system. If one or two exams alone decide your fate, then competition can't truly be reduced.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d8-s7",
+          "text_original": "有些地方已经开始探索多元化的录取方式，不再只看分数。",
+          "pinyin": "Yǒuxiē dìfang yǐjīng kāishǐ tànsuǒ duōyuán huà de lùqǔ fāngshì, bú zài zhǐ kàn fēnshù.",
+          "text_translation": "Ba'zi joylar allaqachon xilma-xil qabul usullarini izlay boshlagan, endi faqat ballarga qaramaydi.",
+          "text_translation_ru": "Кое-где уже начали искать более разнообразные способы зачисления, не ориентируясь только на баллы.",
+          "text_translation_en": "Some places have already started exploring more diversified admission methods, no longer looking only at scores.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d8-s8",
+          "text_original": "那是好现象。但改变需要时间，家长和学生都需要适应期。",
+          "pinyin": "Nà shì hǎo xiànxiàng. Dàn gǎibiàn xūyào shíjiān, jiāzhǎng hé xuéshēng dōu xūyào shìyìng qī.",
+          "text_translation": "Bu yaxshi hodisa. Lekin o'zgarish vaqt talab qiladi, ota-onaga ham, o'quvchiga ham moslashuv davri kerak.",
+          "text_translation_ru": "Это хорошее явление. Но перемены требуют времени, и родителям, и ученикам нужен период адаптации.",
+          "text_translation_en": "That's a good sign. But change takes time, and both parents and students need an adaptation period.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d8-s9",
+          "text_original": "你觉得什么样的教育才是理想的教育？",
+          "pinyin": "Nǐ juéde shénmeyàng de jiàoyù cái shì lǐxiǎng de jiàoyù?",
+          "text_translation": "Seningcha qanday ta'lim ideal ta'lim hisoblanadi?",
+          "text_translation_ru": "Как ты считаешь, какое образование можно назвать идеальным?",
+          "text_translation_en": "What kind of education do you think is ideal education?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d8-s10",
+          "text_original": "我觉得教育不应该只是知识的灌输，而是培养独立思考能力和终身学习的习惯。",
+          "pinyin": "Wǒ juéde jiàoyù bù yīnggāi zhǐ shì zhīshi de guànshū, ér shì péiyǎng dúlì sīkǎo nénglì hé zhōngshēn xuéxí de xíguàn.",
+          "text_translation": "Menimcha ta'lim faqat bilim singdirish bo'lmasligi kerak, balki mustaqil fikrlash qobiliyati va umrbod o'rganish odatini tarbiyalashi lozim.",
+          "text_translation_ru": "По-моему, образование должно быть не просто вдалбливанием знаний, а воспитанием способности самостоятельно мыслить и привычки учиться всю жизнь.",
+          "text_translation_en": "I think education shouldn't just be the instilling of knowledge, but the cultivation of independent thinking and the habit of lifelong learning.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d8-s11",
+          "text_original": "这个理想很美好，但在当前的竞争环境下很难实现。",
+          "pinyin": "Zhè ge lǐxiǎng hěn měihǎo, dàn zài dāngqián de jìngzhēng huánjìng xià hěn nán shíxiàn.",
+          "text_translation": "Bu orzu juda go'zal, lekin hozirgi raqobat muhitida amalga oshirish juda qiyin.",
+          "text_translation_ru": "Этот идеал прекрасен, но в нынешней конкурентной среде его очень трудно осуществить.",
+          "text_translation_en": "That ideal is wonderful, but it's very hard to achieve in the current competitive environment.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d8-s12",
+          "text_original": "我明白。但如果连方向都不对，走得再快也到不了想去的地方。",
+          "pinyin": "Wǒ míngbai. Dàn rúguǒ lián fāngxiàng dōu bú duì, zǒu de zài kuài yě dào bù liǎo xiǎng qù de dìfang.",
+          "text_translation": "Tushunaman. Lekin agar yo'nalishning o'zi noto'g'ri bo'lsa, qanchalik tez yursang ham bormoqchi bo'lgan joyingga yeta olmaysan.",
+          "text_translation_ru": "Понимаю. Но если даже направление неверное, то, как быстро ни иди, до желаемого места не доберёшься.",
+          "text_translation_en": "I understand. But if even the direction is wrong, then no matter how fast you go, you won't reach where you want to be.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d8-s13",
+          "text_original": "这句话说得好。教育改革虽然漫长，但方向对了，总会慢慢接近目标。",
+          "pinyin": "Zhè jù huà shuō de hǎo. Jiàoyù gǎigé suīrán màncháng, dàn fāngxiàng duì le, zǒng huì mànmàn jiējìn mùbiāo.",
+          "text_translation": "Bu gap juda yaxshi aytildi. Ta'lim islohoti uzoq davom etsa-da, yo'nalish to'g'ri bo'lsa, asta-sekin maqsadga yaqinlashib boradi.",
+          "text_translation_ru": "Хорошо сказано. Реформа образования хоть и долгая, но при верном направлении мы постепенно будем приближаться к цели.",
+          "text_translation_en": "Well said. Education reform may be long, but if the direction is right, we'll gradually get closer to the goal.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
