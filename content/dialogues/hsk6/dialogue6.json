@@ -1,0 +1,200 @@
+{
+  "id": "hsk6-dialogue6",
+  "slug": "workplace-involution",
+  "title": "职场内卷",
+  "pinyin": "Zhíchǎng nèijuǎn",
+  "titleTranslation": "Ish joyidagi izdan chiqaruvchi raqobat",
+  "titleTranslation_ru": "Гонка на изнурение на работе",
+  "titleTranslation_en": "Workplace Involution",
+  "level": 6,
+  "tag": "ish",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "内卷",
+    "饱和",
+    "淘汰",
+    "产出",
+    "恶性循环",
+    "效仿",
+    "无用功",
+    "压抑",
+    "激励",
+    "扭曲",
+    "吃不消",
+    "倦怠感",
+    "消耗",
+    "双重"
+  ],
+  "sections": [
+    {
+      "id": "h6d6-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d6-s1",
+          "text_original": "你最近怎么又加班？这都第几周了？",
+          "pinyin": "Nǐ zuìjìn zěnme yòu jiābān? Zhè dōu dì jǐ zhōu le?",
+          "text_translation": "Yaqinda nega yana qo'shimcha ishlayapsan? Bu necha haftadan beri davom etyapti?",
+          "text_translation_ru": "Почему ты в последнее время снова задерживаешься? Это уже которая неделя?",
+          "text_translation_en": "Why are you working overtime again lately? How many weeks has it been now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d6-s2",
+          "text_original": "别提了，现在公司大家都在卷，我如果不加班，显得我工作不饱和。",
+          "pinyin": "Bié tí le, xiànzài gōngsī dàjiā dōu zài juǎn, wǒ rúguǒ bù jiābān, xiǎnde wǒ gōngzuò bù bǎohé.",
+          "text_translation": "Aytmang-da, hozir kompaniyada hamma raqobatga berilgan, men qo'shimcha ishlamasam, ishim to'la band emasdek ko'rinaman.",
+          "text_translation_ru": "И не говори, сейчас в компании все втянуты в гонку: если я не задержусь, будет казаться, что я недогружен работой.",
+          "text_translation_en": "Don't even mention it — everyone at the company is in the rat race now. If I don't work overtime, it looks like my workload isn't full.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d6-s3",
+          "text_original": "什么叫「卷」？我最近老听人说这个词。",
+          "pinyin": "Shénme jiào 'juǎn'? Wǒ zuìjìn lǎo tīng rén shuō zhè ge cí.",
+          "text_translation": "«Juǎn» nima degani? Yaqinda bu so'zni odamlardan tez-tez eshityapman.",
+          "text_translation_ru": "Что значит «гонка» (卷)? Я в последнее время часто слышу это слово.",
+          "text_translation_en": "What does \"involution\" (卷) mean? I keep hearing people use this word lately.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d6-s4",
+          "text_original": "就是内部竞争越来越激烈，大家为了不被淘汰，不断加大投入，但整体产出并没有真正提高。",
+          "pinyin": "Jiùshì nèibù jìngzhēng yuè lái yuè jīliè, dàjiā wèile bú bèi táotài, búduàn jiādà tóurù, dàn zhěngtǐ chǎnchū bìng méiyǒu zhēnzhèng tígāo.",
+          "text_translation": "Ya'ni ichki raqobat tobora keskinlashyapti, hamma saralanib chiqib ketmaslik uchun mehnatini doimiy oshiradi, lekin umumiy natija aslida ko'tarilmaydi.",
+          "text_translation_ru": "Это когда внутренняя конкуренция становится всё острее: все, чтобы не вылететь, постоянно вкладывают больше сил, но общий результат на самом деле не растёт.",
+          "text_translation_en": "It's when internal competition gets more and more intense — everyone keeps investing more to avoid being eliminated, but overall output doesn't actually improve.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d6-s5",
+          "text_original": "这不就是恶性循环吗？",
+          "pinyin": "Zhè bú jiùshì èxìng xúnhuán ma?",
+          "text_translation": "Bu yopiq, yomon doira-ku?",
+          "text_translation_ru": "Так это же порочный круг?",
+          "text_translation_en": "Isn't that just a vicious cycle?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d6-s6",
+          "text_original": "对。我们部门最近来了个新人，天天主动加班到十点，领导特别欣赏他。其他人也开始效仿，现在七点走都觉得不好意思。",
+          "pinyin": "Duì. Wǒmen bùmén zuìjìn lái le ge xīnrén, tiāntiān zhǔdòng jiābān dào shí diǎn, lǐngdǎo tèbié xīnshǎng tā. Qítā rén yě kāishǐ xiàofǎng, xiànzài qī diǎn zǒu dōu juéde bù hǎoyìsi.",
+          "text_translation": "To'g'ri. Bo'limimizga yaqinda yangi xodim keldi, har kuni o'z tashabbusi bilan kechki o'ngacha ishlaydi, rahbar uni juda yoqtiradi. Boshqalar ham unga taqlid qila boshladi, hozir yettida ketishga ham uyalasan.",
+          "text_translation_ru": "Да. К нам в отдел недавно пришёл новенький, каждый день по своей инициативе сидит до десяти, и руководитель его особенно ценит. Остальные тоже начали подражать, и теперь даже уйти в семь как-то неловко.",
+          "text_translation_en": "Right. A newcomer recently joined our department who voluntarily works until ten every day, and the boss particularly admires him. Others started to follow suit, and now leaving at seven feels embarrassing.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d6-s7",
+          "text_original": "这种竞争方式很不健康。加班时间长不等于效率高。",
+          "pinyin": "Zhè zhǒng jìngzhēng fāngshì hěn bú jiànkāng. Jiābān shíjiān cháng bù děngyú xiàolǜ gāo.",
+          "text_translation": "Bunday raqobat usuli juda nosog'lom. Qo'shimcha ish vaqti uzunligi samaradorlik yuqori degani emas.",
+          "text_translation_ru": "Такой способ конкуренции очень нездоровый. Долгие переработки не равны высокой эффективности.",
+          "text_translation_en": "This kind of competition is very unhealthy. Long overtime hours don't equal high efficiency.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d6-s8",
+          "text_original": "你说得对，但领导在乎的是态度，不是效率。谁走得晚，谁就显得更努力。",
+          "pinyin": "Nǐ shuō de duì, dàn lǐngdǎo zàihu de shì tàidu, bú shì xiàolǜ. Shuí zǒu de wǎn, shuí jiù xiǎnde gèng nǔlì.",
+          "text_translation": "To'g'ri aytasan, lekin rahbar e'tibor beradigani munosabat, samaradorlik emas. Kim kech ketsa, o'sha ko'proq tirishqoq ko'rinadi.",
+          "text_translation_ru": "Ты прав, но руководителя волнует отношение, а не эффективность. Кто уходит позже, тот и выглядит более старательным.",
+          "text_translation_en": "You're right, but what the boss cares about is attitude, not efficiency. Whoever leaves later seems more hardworking.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d6-s9",
+          "text_original": "这不是逼着大家做无用功吗？",
+          "pinyin": "Zhè bú shì bī zhe dàjiā zuò wúyòng gōng ma?",
+          "text_translation": "Bu hammani behuda ish qilishga majburlash emasmi?",
+          "text_translation_ru": "Так это же заставляет всех делать бесполезную работу?",
+          "text_translation_en": "Isn't that forcing everyone to do wasted work?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d6-s10",
+          "text_original": "就是这样。我现在每天明明没事做，也得坐在那儿装忙。这种氛围让人特别压抑。",
+          "pinyin": "Jiùshì zhèyàng. Wǒ xiànzài měitiān míngmíng méi shì zuò, yě děi zuò zài nàr zhuāng máng. Zhè zhǒng fēnwéi ràng rén tèbié yāyì.",
+          "text_translation": "Aynan shunday. Hozir har kuni aniq qiladigan ishim bo'lmasa ham, o'sha yerda o'tirib band bo'lib ko'rsataman. Bunday muhit odamni juda ezadi.",
+          "text_translation_ru": "Вот именно. Теперь, хотя у меня явно нет дел, я всё равно сижу там и делаю вид, что занят. Такая атмосфера очень угнетает.",
+          "text_translation_en": "Exactly. Now even when I clearly have nothing to do, I still have to sit there pretending to be busy. This atmosphere is really oppressive.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d6-s11",
+          "text_original": "你有没有考虑过跟领导反映一下？",
+          "pinyin": "Nǐ yǒu méiyǒu kǎolǜ guo gēn lǐngdǎo fǎnyìng yí xià?",
+          "text_translation": "Rahbarga bu haqda gapirib ko'rishni o'ylab ko'rganmiding?",
+          "text_translation_ru": "Ты не думал сообщить об этом руководителю?",
+          "text_translation_en": "Have you thought about raising this with your boss?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d6-s12",
+          "text_original": "反映过，但领导说这是公司文化，大家应该互相激励。",
+          "pinyin": "Fǎnyìng guo, dàn lǐngdǎo shuō zhè shì gōngsī wénhuà, dàjiā yīnggāi hùxiāng jīlì.",
+          "text_translation": "Aytdim, lekin rahbar bu kompaniya madaniyati, hamma bir-birini rag'batlantirishi kerak dedi.",
+          "text_translation_ru": "Сообщал, но руководитель сказал, что это корпоративная культура и все должны мотивировать друг друга.",
+          "text_translation_en": "I did, but the boss said it's the company culture and that everyone should motivate each other.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d6-s13",
+          "text_original": "这种文化太扭曲了。长期下去，员工身体吃不消，也会产生倦怠感。",
+          "pinyin": "Zhè zhǒng wénhuà tài niǔqū le. Chángqī xiàqù, yuángōng shēntǐ chī bù xiāo, yě huì chǎnshēng juàndài gǎn.",
+          "text_translation": "Bunday madaniyat juda buzilgan. Uzoq davom etsa, xodimning tanasi ko'tara olmaydi, kuyish hissi ham paydo bo'ladi.",
+          "text_translation_ru": "Такая культура слишком искажена. В долгосрочной перспективе организм сотрудника не выдержит, и возникнет выгорание.",
+          "text_translation_en": "This kind of culture is too distorted. In the long run, employees' bodies can't take it, and burnout sets in.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d6-s14",
+          "text_original": "我现在已经在看别的机会了。与其在这里消耗生命，不如换个环境。",
+          "pinyin": "Wǒ xiànzài yǐjīng zài kàn bié de jīhuì le. Yǔqí zài zhèlǐ xiāohào shēngmìng, bùrú huàn ge huánjìng.",
+          "text_translation": "Men hozir allaqachon boshqa imkoniyatlarni ko'rib yuribman. Bu yerda umrni sarflagandan ko'ra, muhitni o'zgartirgan yaxshi.",
+          "text_translation_ru": "Я уже присматриваю другие варианты. Чем растрачивать здесь жизнь, лучше сменить обстановку.",
+          "text_translation_en": "I'm already looking at other opportunities. Rather than wasting my life here, it's better to change my environment.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d6-s15",
+          "text_original": "你有目标了吗？",
+          "pinyin": "Nǐ yǒu mùbiāo le ma?",
+          "text_translation": "Aniq maqsading bormi?",
+          "text_translation_ru": "У тебя уже есть цель на примете?",
+          "text_translation_en": "Do you have a target in mind?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d6-s16",
+          "text_original": "正在面试几家外企，听说那边更注重效率，不鼓励无效加班。",
+          "pinyin": "Zhèngzài miànshì jǐ jiā wàiqǐ, tīngshuō nàbiān gèng zhùzhòng xiàolǜ, bù gǔlì wúxiào jiābān.",
+          "text_translation": "Bir nechta xorijiy kompaniyada suhbatdan o'tyapman, u yer samaradorlikka ko'proq e'tibor beradi, samarasiz qo'shimcha ishni rag'batlantirmaydi deb eshitdim.",
+          "text_translation_ru": "Сейчас прохожу собеседования в нескольких иностранных компаниях; говорят, там больше ценят эффективность и не поощряют бесполезные переработки.",
+          "text_translation_en": "I'm interviewing at a few foreign companies — I heard they focus more on efficiency and don't encourage ineffective overtime.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d6-s17",
+          "text_original": "希望你能顺利跳出去。内卷真的是对身心的双重消耗。",
+          "pinyin": "Xīwàng nǐ néng shùnlì tiào chūqù. Nèijuǎn zhēn de shì duì shēnxīn de shuāngchóng xiāohào.",
+          "text_translation": "Bemalol bu yerdan chiqib ketishingni umid qilaman. Bu izdan chiqaruvchi raqobat rostdan tana va ruhni ikki tomonlama sarflaydi.",
+          "text_translation_ru": "Надеюсь, у тебя получится благополучно вырваться. Эта гонка на изнурение — действительно двойная нагрузка на тело и психику.",
+          "text_translation_en": "I hope you can break out of it smoothly. Involution really is a double drain on both body and mind.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d6-s18",
+          "text_original": "谢谢。我也希望尽快结束这种状态。",
+          "pinyin": "Xièxie. Wǒ yě xīwàng jǐnkuài jiéshù zhè zhǒng zhuàngtài.",
+          "text_translation": "Rahmat. Men ham bu holatni tezroq tugatishni umid qilaman.",
+          "text_translation_ru": "Спасибо. Я тоже надеюсь поскорее покончить с этим состоянием.",
+          "text_translation_en": "Thanks. I also hope to end this state as soon as possible.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
