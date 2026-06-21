@@ -1,0 +1,187 @@
+{
+  "id": "hsk6-dialogue11",
+  "slug": "decluttering",
+  "title": "断舍离",
+  "pinyin": "Duàn shě lí",
+  "titleTranslation": "Ortiqchadan voz kechish",
+  "titleTranslation_ru": "Расхламление",
+  "titleTranslation_en": "Decluttering",
+  "level": 6,
+  "tag": "hayot",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "断舍离",
+    "二手",
+    "执行",
+    "清理",
+    "概念",
+    "断绝",
+    "多余",
+    "物品",
+    "执念",
+    "脱离",
+    "极简主义",
+    "吊牌",
+    "化妆品",
+    "配件",
+    "冲动消费",
+    "慈善机构",
+    "觉悟",
+    "抽屉",
+    "内心"
+  ],
+  "sections": [
+    {
+      "id": "h6d11-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d11-s1",
+          "text_original": "你最近在忙什么？我看你朋友圈在卖二手东西。",
+          "pinyin": "Nǐ zuìjìn zài máng shénme? Wǒ kàn nǐ péngyouquān zài mài èrshǒu dōngxi.",
+          "text_translation": "Yaqinda nima bilan bandsan? Do'stlar davrangda ishlatilgan narsalar sotayotganingni ko'rdim.",
+          "text_translation_ru": "Чем ты занят в последнее время? Я вижу, ты в ленте продаёшь вещи с рук.",
+          "text_translation_en": "What have you been busy with lately? I see you're selling second-hand things in your feed.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d11-s2",
+          "text_original": "我在执行一个「断舍离」计划，把家里不需要的东西清理掉。不清理不知道，一清理吓一跳，家里竟然堆了那么多用不上的东西。",
+          "pinyin": "Wǒ zài zhíxíng yí ge 'duàn shě lí' jìhuà, bǎ jiā lǐ bù xūyào de dōngxi qīnglǐ diào. Bù qīnglǐ bù zhīdào, yī qīnglǐ xià yī tiào, jiā lǐ jìngrán duī le nàme duō yòng bù shàng de dōngxi.",
+          "text_translation": "Men «ortiqchadan voz kechish» rejasini amalga oshiryapman, uydagi keraksiz narsalarni tozalayapman. Tozalamasang bilmaysan, tozalasang hayratga tushasan — uyda shuncha ko'p ishlatilmaydigan narsa to'planib qolibdi.",
+          "text_translation_ru": "Я выполняю план «расхламления» — избавляюсь от ненужных вещей в доме. Пока не разберёшь — не знаешь, а как начнёшь разбирать — ужасаешься: дома накопилось столько вещей, которыми не пользуешься.",
+          "text_translation_en": "I'm carrying out a \"decluttering\" plan, clearing out the things at home I don't need. You don't realize until you start — and once you do, you get a shock at how much unused stuff has piled up at home.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d11-s3",
+          "text_original": "「断舍离」是什么意思？我好像听过，但不太了解。",
+          "pinyin": "'Duàn shě lí' shì shénme yìsi? Wǒ hǎoxiàng tīng guo, dàn bú tài liǎojiě.",
+          "text_translation": "«Duàn shě lí» nima degani? Eshitganga o'xshayman, lekin unchalik bilmayman.",
+          "text_translation_ru": "Что значит «дуань шэ ли» (расхламление)? Вроде слышал, но не очень понимаю.",
+          "text_translation_en": "What does \"duan she li\" (decluttering) mean? I think I've heard of it, but I don't really get it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d11-s4",
+          "text_original": "这是日本作家山下英子提出的一个概念，「断」是断绝不需要的东西，「舍」是舍弃多余的物品，「离」是脱离对物品的执念。",
+          "pinyin": "Zhè shì Rìběn zuòjiā Shānxià Yīngzǐ tíchū de yí ge gàiniàn, 'duàn' shì duànjué bù xūyào de dōngxi, 'shě' shì shěqì duōyú de wùpǐn, 'lí' shì tuōlí duì wùpǐn de zhíniàn.",
+          "text_translation": "Bu yapon yozuvchisi Yamashita Hideko taklif qilgan tushuncha: «duàn» — keraksiz narsalarni kirita olmaslik, «shě» — ortiqcha buyumlardan voz kechish, «lí» — buyumlarga bo'lgan ruhiy bog'lanishdan xalos bo'lish.",
+          "text_translation_ru": "Это концепция, предложенная японской писательницей Хидэко Ямасита: «дуань» — отрезать ненужные вещи, «шэ» — избавляться от лишних предметов, «ли» — освобождаться от привязанности к вещам.",
+          "text_translation_en": "It's a concept proposed by the Japanese author Hideko Yamashita: \"duan\" is cutting off things you don't need, \"she\" is discarding surplus items, and \"li\" is breaking away from your attachment to objects.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d11-s5",
+          "text_original": "听起来有点像极简主义的生活方式。",
+          "pinyin": "Tīng qǐlái yǒu diǎn xiàng jíjiǎn zhǔyì de shēnghuó fāngshì.",
+          "text_translation": "Minimalizm turmush tarziga biroz o'xshab eshitiladi.",
+          "text_translation_ru": "Звучит немного похоже на минималистичный образ жизни.",
+          "text_translation_en": "It sounds a bit like a minimalist lifestyle.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d11-s6",
+          "text_original": "对，不完全一样但方向差不多。不是说要过苦日子，而是只保留真正需要和喜欢的东西。",
+          "pinyin": "Duì, bù wánquán yíyàng dàn fāngxiàng chàbuduō. Bú shì shuō yào guò kǔ rìzi, ér shì zhǐ bǎoliú zhēnzhèng xūyào hé xǐhuān de dōngxi.",
+          "text_translation": "To'g'ri, butunlay bir xil emas, lekin yo'nalishi o'xshash. Qiyin hayot kechirish kerak degani emas, balki faqat chinakam kerakli va yoqadigan narsalarni saqlab qolish.",
+          "text_translation_ru": "Да, не совсем одно и то же, но направление похожее. Речь не о том, чтобы жить в лишениях, а о том, чтобы оставлять только действительно нужные и любимые вещи.",
+          "text_translation_en": "Right, not exactly the same but a similar direction. It's not about living an austere life, but about keeping only the things you truly need and love.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d11-s7",
+          "text_original": "那你清理出什么东西了？",
+          "pinyin": "Nà nǐ qīnglǐ chū shénme dōngxi le?",
+          "text_translation": "Unda qanday narsalarni tozalab chiqarding?",
+          "text_translation_ru": "И что же ты вычистил?",
+          "text_translation_en": "So what things did you clear out?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d11-s8",
+          "text_original": "光是衣服就收拾出三大袋，很多买回来就穿过一两次，有些甚至吊牌都没剪。还有一些过期化妆品、积灰的电器配件。",
+          "pinyin": "Guāng shì yīfu jiù shōushi chū sān dà dài, hěnduō mǎi huílái jiù chuān guo yī liǎng cì, yǒuxiē shènzhì diàopái dōu méi jiǎn. Hái yǒu yì xiē guòqī huàzhuāngpǐn, jīhuī de diànqì pèijiàn.",
+          "text_translation": "Faqat kiyimning o'zidan uchta katta xalta yig'ildi, ko'pini olib kelib bir-ikki marta kiygan xolos, ba'zilarining hatto yorlig'i ham kesilmagan. Yana ba'zi muddati o'tgan kosmetika, chang bosgan texnika ehtiyot qismlari ham bor.",
+          "text_translation_ru": "Одной только одежды набралось три больших пакета: многое после покупки надевал раз-другой, а с некоторых вещей даже бирки не срезаны. Ещё была просроченная косметика и запылившиеся комплектующие для техники.",
+          "text_translation_en": "Just the clothes alone filled three big bags — a lot I'd worn only once or twice after buying, and some still had the tags on. There was also some expired cosmetics and dust-covered electronics accessories.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d11-s9",
+          "text_original": "听起来跟我差不多，我也有一堆买了就后悔的东西。",
+          "pinyin": "Tīng qǐlái gēn wǒ chàbuduō, wǒ yě yǒu yì duī mǎi le jiù hòuhuǐ de dōngxi.",
+          "text_translation": "Menikiga o'xshab eshitiladi, menda ham olib pushaymon bo'lgan bir uyum narsa bor.",
+          "text_translation_ru": "Звучит как у меня — у меня тоже куча вещей, о покупке которых я пожалел.",
+          "text_translation_en": "Sounds just like me — I also have a pile of things I regretted buying.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d11-s10",
+          "text_original": "所以我现在给自己定了个规矩：买东西之前先问自己三个问题——我真的需要吗？我有类似的吗？不买会怎么样？",
+          "pinyin": "Suǒyǐ wǒ xiànzài gěi zìjǐ dìng le ge guījǔ: mǎi dōngxi zhīqián xiān wèn zìjǐ sān ge wèntí — wǒ zhēn de xūyào ma? Wǒ yǒu lèisì de ma? Bù mǎi huì zěnmeyàng?",
+          "text_translation": "Shuning uchun hozir o'zimga bir qoida qo'ydim: biror narsa olishdan oldin o'zimga uchta savol beraman — rostdan kerakmi? Menda shunga o'xshashi bormi? Olmasam nima bo'ladi?",
+          "text_translation_ru": "Поэтому я теперь установил себе правило: перед покупкой задаю себе три вопроса — мне это действительно нужно? Есть ли у меня что-то похожее? Что будет, если не куплю?",
+          "text_translation_en": "So now I've set myself a rule: before buying something, ask myself three questions — Do I really need it? Do I have something similar? What happens if I don't buy it?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d11-s11",
+          "text_original": "这个方法不错，能减少冲动消费。那清出来的东西你怎么处理的？",
+          "pinyin": "Zhè ge fāngfǎ búcuò, néng jiǎnshǎo chōngdòng xiāofèi. Nà qīng chūlái de dōngxi nǐ zěnme chǔlǐ de?",
+          "text_translation": "Bu usul yaxshi, hisga berilib qilinadigan xaridni kamaytiradi. Unda tozalab chiqargan narsalaringni qanday hal qilding?",
+          "text_translation_ru": "Хороший метод, помогает сократить импульсивные покупки. А с тем, что вычистил, ты как поступил?",
+          "text_translation_en": "That's a good method — it can reduce impulse buying. So what did you do with the things you cleared out?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d11-s12",
+          "text_original": "能用的就在二手平台卖掉，卖不掉的捐给慈善机构，实在不行的就扔掉。",
+          "pinyin": "Néng yòng de jiù zài èrshǒu píngtái mài diào, mài bù diào de juān gěi císhàn jīgòu, shízài bù xíng de jiù rēng diào.",
+          "text_translation": "Ishlatsa bo'ladiganini ikkilamchi platformada sotaman, sotilmaganini xayriya tashkilotiga beraman, mutlaqo yaramaganini tashlab yuboraman.",
+          "text_translation_ru": "Что годное — продаю на площадке для подержанных вещей, что не продаётся — жертвую в благотворительную организацию, а совсем негодное — выбрасываю.",
+          "text_translation_en": "Whatever's usable I sell on a second-hand platform, what won't sell I donate to a charity, and what's truly no good I throw away.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d11-s13",
+          "text_original": "扔掉不觉得可惜吗？",
+          "pinyin": "Rēng diào bù juéde kěxī ma?",
+          "text_translation": "Tashlab yuborish achinarli emasmi?",
+          "text_translation_ru": "А выбрасывать не жалко?",
+          "text_translation_en": "Don't you feel it's a pity to throw things away?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d11-s14",
+          "text_original": "一开始会，但后来想通了：留着不用才是真正的浪费。让它们去需要的人那里，反而更有意义。",
+          "pinyin": "Yī kāishǐ huì, dàn hòulái xiǎngtōng le: liú zhe bù yòng cái shì zhēnzhèng de làngfèi. Ràng tāmen qù xūyào de rén nàli, fǎn'ér gèng yǒu yìyì.",
+          "text_translation": "Boshida achinardim, lekin keyin tushunib yetdim: saqlab qo'yib ishlatmaslik aslida chinakam isrof. Ularni muhtoj odamlarga berish aksincha mazmunliroq.",
+          "text_translation_ru": "Сначала было жаль, но потом я понял: держать и не пользоваться — вот настоящее расточительство. Отдать их тем, кому они нужны, наоборот, осмысленнее.",
+          "text_translation_en": "At first yes, but later I came to terms with it: keeping things unused is the real waste. Letting them go to people who need them is actually more meaningful.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d11-s15",
+          "text_original": "你这觉悟很高啊！我现在也开始觉得家里东西太多让人心烦。",
+          "pinyin": "Nǐ zhè juéwù hěn gāo a! Wǒ xiànzài yě kāishǐ juéde jiā lǐ dōngxi tài duō ràng rén xīnfán.",
+          "text_translation": "Sening ong darajang juda baland-ku! Men ham hozir uydagi narsalar juda ko'p bo'lib, asabni buzayotganini his qila boshladim.",
+          "text_translation_ru": "Какая у тебя высокая осознанность! Я тоже теперь начинаю чувствовать, что слишком много вещей дома действует на нервы.",
+          "text_translation_en": "You've reached quite a level of awareness! I'm also starting to feel that having too much stuff at home is irritating.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d11-s16",
+          "text_original": "你可以先从一个小抽屉开始，慢慢来。断舍离不只是清理物品，其实也是在整理自己的内心。",
+          "pinyin": "Nǐ kěyǐ xiān cóng yí ge xiǎo chōuti kāishǐ, mànmàn lái. Duàn shě lí bù zhǐ shì qīnglǐ wùpǐn, qíshí yě shì zài zhěnglǐ zìjǐ de nèixīn.",
+          "text_translation": "Avval bitta kichik tortmadan boshlasang bo'ladi, shoshmasdan. Ortiqchadan voz kechish faqat buyumlarni tozalash emas, aslida o'z ichki dunyongni tartibga solishdir.",
+          "text_translation_ru": "Можешь начать с одного маленького ящика, не спеша. Расхламление — это не только уборка вещей, но и наведение порядка в собственной душе.",
+          "text_translation_en": "You can start with one small drawer and take it slow. Decluttering isn't just clearing out objects — it's actually tidying up your inner self too.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
