@@ -1,0 +1,136 @@
+{
+  "id": "hsk6-dialogue3",
+  "slug": "intergenerational-conflict",
+  "title": "代际冲突",
+  "pinyin": "Dàijì chōngtū",
+  "titleTranslation": "Avlodlararo nizo",
+  "titleTranslation_ru": "Конфликт поколений",
+  "titleTranslation_en": "Intergenerational Conflict",
+  "level": 6,
+  "tag": "oila",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "代际",
+    "创业",
+    "形势",
+    "评估",
+    "缺口",
+    "时机",
+    "初创公司",
+    "自我实现",
+    "理想主义",
+    "撞南墙",
+    "走弯路",
+    "啃老",
+    "填窟窿"
+  ],
+  "sections": [
+    {
+      "id": "h6d3-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d3-s1",
+          "text_original": "爸，我跟您商量件事。我打算辞职去创业。",
+          "pinyin": "Bà, wǒ gēn nín shāngliang jiàn shì. Wǒ dǎsuàn cízhí qù chuàngyè.",
+          "text_translation": "Dada, men siz bilan bir narsani maslahatlashmoqchiman. Ishdan ketib, o'z biznesimni ochmoqchiman.",
+          "text_translation_ru": "Пап, мне нужно с вами кое-что обсудить. Я собираюсь уволиться и открыть своё дело.",
+          "text_translation_en": "Dad, I want to talk something over with you. I'm planning to quit my job and start a business.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d3-s2",
+          "text_original": "你疯了？好好的工作不干，创什么业？现在经济形势这么不稳定，你这不是拿未来开玩笑吗？",
+          "pinyin": "Nǐ fēng le? Hǎohao de gōngzuò bú gàn, chuàng shénme yè? Xiànzài jīngjì xíngshì zhème bù wěndìng, nǐ zhè bú shì ná wèilái kāi wánxiào ma?",
+          "text_translation": "Aqldan ozdingmi? Yaxshigina ishni tashlab, qanaqa biznes ochasan? Hozir iqtisodiy vaziyat shunchalik beqaror, bu kelajaging bilan o'ynashganing emasmi?",
+          "text_translation_ru": "Ты с ума сошёл? Бросаешь хорошую работу — какое ещё своё дело? Сейчас экономическая обстановка такая нестабильная, это же ты со своим будущим шутки шутишь!",
+          "text_translation_en": "Are you crazy? Quitting a perfectly good job to start what business? The economy is so unstable right now — aren't you gambling with your future?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d3-s3",
+          "text_original": "我已经认真评估过了。现在这个行业有缺口，我有技术也有资源，再不行动就错过时机了。",
+          "pinyin": "Wǒ yǐjīng rènzhēn pínggū guo le. Xiànzài zhè ge hángyè yǒu quēkǒu, wǒ yǒu jìshù yě yǒu zīyuán, zài bù xíngdòng jiù cuòguò shíjī le.",
+          "text_translation": "Men allaqachon jiddiy baholab chiqdim. Hozir bu sohada bo'shliq bor, menda texnologiya ham, resurs ham bor, harakat qilmasam qulay paytni o'tkazib yuboraman.",
+          "text_translation_ru": "Я уже всё серьёзно оценил. Сейчас в этой отрасли есть ниша, у меня есть и технологии, и ресурсы — если не действовать, упущу момент.",
+          "text_translation_en": "I've already evaluated it seriously. There's a gap in this industry right now, I have both the technology and the resources — if I don't act, I'll miss the window.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d3-s4",
+          "text_original": "你知道创业失败率有多高吗？百分之九十的初创公司撑不过三年。你凭什么觉得自己能成功？",
+          "pinyin": "Nǐ zhīdào chuàngyè shībài lǜ yǒu duō gāo ma? Bǎi fēn zhī jiǔshí de chūchuàng gōngsī chēng bú guò sān nián. Nǐ píng shénme juéde zìjǐ néng chénggōng?",
+          "text_translation": "Biznesning muvaffaqiyatsizlik darajasi qanchalik yuqoriligini bilasanmi? Startaplarning to'qson foizi uch yilga ham chidamaydi. Sen nimaga tayanib o'zingni muvaffaqiyatga erishaman deb o'ylaysan?",
+          "text_translation_ru": "Ты знаешь, насколько высок процент провалов в бизнесе? Девяносто процентов стартапов не выдерживают и трёх лет. С чего ты взял, что у тебя получится?",
+          "text_translation_en": "Do you know how high the failure rate for startups is? Ninety percent of startups don't survive three years. What makes you think you'll succeed?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d3-s5",
+          "text_original": "我当然知道风险很大，但不能因为害怕失败就放弃尝试。您那一代人追求稳定，我们这一代人更看重自我实现。",
+          "pinyin": "Wǒ dāngrán zhīdào fēngxiǎn hěn dà, dàn bùnéng yīnwèi hàipà shībài jiù fàngqì chángshì. Nín nà yí dài rén zhuīqiú wěndìng, wǒmen zhè yí dài rén gèng kànzhòng zìwǒ shíxiàn.",
+          "text_translation": "Xavf katta ekanini, albatta, bilaman, lekin muvaffaqiyatsizlikdan qo'rqib urinishdan voz kechib bo'lmaydi. Sizning avlodingiz barqarorlikka intildi, bizning avlodimiz o'zini namoyon qilishni ko'proq qadrlaydi.",
+          "text_translation_ru": "Я, конечно, понимаю, что риск большой, но нельзя из страха перед неудачей отказываться от попытки. Ваше поколение стремилось к стабильности, а наше поколение больше ценит самореализацию.",
+          "text_translation_en": "Of course I know the risk is big, but I can't give up trying just because I'm afraid of failing. Your generation pursued stability; our generation values self-actualization more.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d3-s6",
+          "text_original": "你们年轻人就是理想主义。什么自我实现？等撞了南墙就知道后悔了。",
+          "pinyin": "Nǐmen niánqīng rén jiùshì lǐxiǎng zhǔyì. Shénme zìwǒ shíxiàn? Děng zhuàng le nán qiáng jiù zhīdào hòuhuǐ le.",
+          "text_translation": "Sizlar, yoshlar, shunchaki idealistsizlar. Qanaqa o'zini namoyon qilish? Devorga urilganingdan keyin pushaymon bo'lganingni bilasan.",
+          "text_translation_ru": "Вы, молодёжь, сплошные идеалисты. Какая ещё самореализация? Вот ударишься о стену — тогда и пожалеешь.",
+          "text_translation_en": "You young people are just idealists. What self-actualization? Once you hit a brick wall, then you'll know to regret it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d3-s7",
+          "text_original": "爸，您能不能信任我一次？我都快三十了，您总不能管我一辈子吧？",
+          "pinyin": "Bà, nín néng bùnéng xìnrèn wǒ yí cì? Wǒ dōu kuài sānshí le, nín zǒng bùnéng guǎn wǒ yí bèizi ba?",
+          "text_translation": "Dada, menga bir marta ishonsangiz bo'lmaydimi? Men o'ttizga yaqinlashib qoldim, axir umrbod meni boshqarmaysiz-ku?",
+          "text_translation_ru": "Пап, вы можете хоть раз мне доверять? Мне уже почти тридцать, не будете же вы опекать меня всю жизнь?",
+          "text_translation_en": "Dad, can't you trust me just once? I'm almost thirty — you can't keep controlling me my whole life, can you?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d3-s8",
+          "text_original": "我不是要管你，我是怕你走弯路。现在的年轻人动不动就辞职创业，结果把积蓄赔光，最后还是回来啃老。",
+          "pinyin": "Wǒ bú shì yào guǎn nǐ, wǒ shì pà nǐ zǒu wānlù. Xiànzài de niánqīng rén dòngbudòng jiù cízhí chuàngyè, jiéguǒ bǎ jīxù péi guāng, zuìhòu háishì huílái kěnlǎo.",
+          "text_translation": "Men seni boshqarmoqchi emasman, egri yo'ldan ketishingdan qo'rqaman. Hozirgi yoshlar tez-tez ishni tashlab biznes ochadi, oqibatda jamg'armasini boy berib, oxiri yana qaytib ota-ona hisobidan yashaydi.",
+          "text_translation_ru": "Я не хочу тобой командовать, я боюсь, что ты пойдёшь окольным путём. Нынешняя молодёжь чуть что — увольняется и открывает дело, в итоге спускает все сбережения и в конце концов возвращается сидеть на шее у родителей.",
+          "text_translation_en": "I'm not trying to control you — I'm afraid you'll take the wrong path. Young people these days quit and start businesses at the drop of a hat, end up losing all their savings, and in the end come back to live off their parents.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d3-s9",
+          "text_original": "我向您保证，不会拿所有积蓄去赌。我已经准备了Plan B，就算失败了也能很快找到工作。",
+          "pinyin": "Wǒ xiàng nín bǎozhèng, bú huì ná suǒyǒu jīxù qù dǔ. Wǒ yǐjīng zhǔnbèi le Plan B, jiùsuàn shībài le yě néng hěn kuài zhǎodào gōngzuò.",
+          "text_translation": "Sizga va'da beraman, butun jamg'armani tikib qimor o'ynamayman. Men allaqachon zaxira reja (Plan B) tayyorlab qo'ydim, muvaffaqiyatsiz bo'lsam ham tez orada ish topa olaman.",
+          "text_translation_ru": "Я вам обещаю, что не поставлю на кон все сбережения. Я уже подготовил запасной план (Plan B): даже если потерплю неудачу, смогу быстро найти работу.",
+          "text_translation_en": "I promise you, I won't gamble all my savings. I've already prepared a Plan B — even if it fails, I can find a job quickly.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d3-s10",
+          "text_original": "唉，我说不过你。你想试就试吧，但我丑话说在前头，别指望我帮你填窟窿。",
+          "pinyin": "Āi, wǒ shuō bú guò nǐ. Nǐ xiǎng shì jiù shì ba, dàn wǒ chǒuhuà shuō zài qiántou, bié zhǐwàng wǒ bāng nǐ tián kūlong.",
+          "text_translation": "Eh, seni gapda yenga olmadim. Sinab ko'rmoqchi bo'lsang, sinab ko'r, lekin oldindan ochig'ini aytib qo'yay: zararingni qoplashda mendan yordam kutma.",
+          "text_translation_ru": "Эх, тебя не переспоришь. Хочешь попробовать — пробуй, но скажу сразу начистоту: не рассчитывай, что я буду покрывать твои убытки.",
+          "text_translation_en": "Ugh, I can't out-argue you. If you want to try, then try, but let me say the unpleasant part up front: don't count on me to cover your losses.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d3-s11",
+          "text_original": "谢谢爸！我不会让您失望的。等我做出成绩来，您就明白了。",
+          "pinyin": "Xièxie bà! Wǒ bú huì ràng nín shīwàng de. Děng wǒ zuò chū chéngjī lái, nín jiù míngbai le.",
+          "text_translation": "Rahmat, dada! Sizni umidsizlikka tushirmayman. Natija ko'rsatganimda, siz tushunib yetasiz.",
+          "text_translation_ru": "Спасибо, пап! Я вас не подведу. Когда добьюсь результатов, вы поймёте.",
+          "text_translation_en": "Thanks, Dad! I won't let you down. When I have results to show, you'll understand.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
