@@ -12,14 +12,26 @@ export function normPy(py: string): string {
 /** All glossary rows, cached until the `glossary` tag is revalidated. */
 export const getGlossary = unstable_cache(
   async (): Promise<GlossaryEntry[]> => {
-    const { data, error } = await getSupabaseAdmin()
-      .from('glossary')
-      .select('zh, py, uz, ru, en, hsk');
-    // Throw (don't return []) so unstable_cache does NOT cache a transient failure —
-    // otherwise one Supabase hiccup would persist an empty glossary for the whole
-    // tag lifetime. Callers (resolveDialogueVocab) catch this and fall back.
-    if (error) throw new Error(`[glossary] load failed: ${error.message}`);
-    return data ?? [];
+    // PostgREST caps a single response at 1000 rows by default. The glossary has
+    // grown past that, so page through it explicitly — otherwise rows beyond 1000
+    // (the most recently added words) silently drop and their dialogues lose vocab.
+    const PAGE = 1000;
+    const all: GlossaryEntry[] = [];
+    for (let from = 0; ; from += PAGE) {
+      const { data, error } = await getSupabaseAdmin()
+        .from('glossary')
+        .select('zh, py, uz, ru, en, hsk')
+        .order('id', { ascending: true })
+        .range(from, from + PAGE - 1);
+      // Throw (don't return []) so unstable_cache does NOT cache a transient failure —
+      // otherwise one Supabase hiccup would persist an empty glossary for the whole
+      // tag lifetime. Callers (resolveDialogueVocab) catch this and fall back.
+      if (error) throw new Error(`[glossary] load failed: ${error.message}`);
+      if (!data?.length) break;
+      all.push(...data);
+      if (data.length < PAGE) break;
+    }
+    return all;
   },
   ['glossary-all'],
   { tags: ['glossary'] },
