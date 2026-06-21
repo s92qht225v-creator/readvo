@@ -1,0 +1,189 @@
+{
+  "id": "hsk6-dialogue16",
+  "slug": "urbanization",
+  "title": "城市化",
+  "pinyin": "Chéngshìhuà",
+  "titleTranslation": "Urbanizatsiya",
+  "titleTranslation_ru": "Урбанизация",
+  "titleTranslation_en": "Urbanization",
+  "level": 6,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "拆迁",
+    "新城建设",
+    "舍不得",
+    "邻里",
+    "陌生",
+    "自在",
+    "重建",
+    "街坊",
+    "不可逆转",
+    "趋势",
+    "角度",
+    "感情",
+    "补偿",
+    "亏",
+    "宁愿",
+    "核心",
+    "矛盾",
+    "忽略",
+    "归属感",
+    "人文关怀",
+    "增长"
+  ],
+  "sections": [
+    {
+      "id": "h6d16-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d16-s1",
+          "text_original": "你老家那边的村子听说要拆迁了？",
+          "pinyin": "Nǐ lǎojiā nàbiān de cūnzi tīngshuō yào chāiqiān le?",
+          "text_translation": "Eshitishimcha, sening qishlog'ingdagi qishloq buzib ko'chirilarmish, shu rostmi?",
+          "text_translation_ru": "Я слышал, твою деревню на родине собираются сносить и переселять?",
+          "text_translation_en": "I heard the village back in your hometown is going to be demolished and relocated?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d16-s2",
+          "text_original": "对，政府说要搞新城建设，整个村子都要搬走。村里很多老人不愿意走，但也没什么办法。",
+          "pinyin": "Duì, zhèngfǔ shuō yào gǎo xīnchéng jiànshè, zhěng ge cūnzi dōu yào bānzǒu. Cūn lǐ hěnduō lǎorén bú yuànyì zǒu, dàn yě méi shénme bànfǎ.",
+          "text_translation": "Ha, hukumat yangi shahar qurilishini boshlamoqchi, butun qishloq ko'chib ketishi kerak. Qishloqdagi ko'p qariyalar ketishni istamaydi, lekin iloji ham yo'q.",
+          "text_translation_ru": "Да, власти говорят, что будут строить новый город, и вся деревня должна переехать. Многие старики в деревне не хотят уезжать, но другого выхода нет.",
+          "text_translation_en": "Yes, the government says it's going to build a new city, and the whole village has to move out. Many elderly people in the village don't want to leave, but there's nothing to be done.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d16-s3",
+          "text_original": "老人不愿意走是因为舍不得老房子吧？",
+          "pinyin": "Lǎorén bú yuànyì zǒu shì yīnwèi shěbude lǎo fángzi ba?",
+          "text_translation": "Qariyalar ketishni istamasligi eski uydan ko'ngli uzilmaganidan bo'lsa kerak?",
+          "text_translation_ru": "Старики не хотят уезжать, потому что им жаль расставаться со старым домом?",
+          "text_translation_en": "The elderly don't want to leave because they can't bear to part with their old houses, right?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d16-s4",
+          "text_original": "主要是习惯了这里的生活。他们在村里住了一辈子，邻里之间都认识，搬到陌生的地方会觉得不自在。",
+          "pinyin": "Zhǔyào shì xíguàn le zhèlǐ de shēnghuó. Tāmen zài cūn lǐ zhù le yí bèizi, línlǐ zhījiān dōu rènshi, bān dào mòshēng de dìfang huì juéde bú zìzài.",
+          "text_translation": "Asosan bu yerdagi hayotga o'rganib qolishgan. Ular qishloqda butun umr yashagan, qo'ni-qo'shnilarning hammasi bir-birini taniydi, notanish joyga ko'chib borsa o'zini noqulay his qiladi.",
+          "text_translation_ru": "Главным образом они привыкли к здешней жизни. Они прожили в деревне всю жизнь, все соседи знакомы между собой, а переехав в незнакомое место, будут чувствовать себя не в своей тарелке.",
+          "text_translation_en": "Mainly they're used to life here. They've lived in the village their whole lives, all the neighbors know each other, and moving to an unfamiliar place would make them feel uneasy.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d16-s5",
+          "text_original": "这确实是拆迁过程中很现实的问题。房子拆了可以再盖，但人际关系和社区氛围很难重建。",
+          "pinyin": "Zhè quèshí shì chāiqiān guòchéng zhōng hěn xiànshí de wèntí. Fángzi chāi le kěyǐ zài gài, dàn rénjì guānxi hé shèqū fēnwéi hěn nán chóngjiàn.",
+          "text_translation": "Bu chindan ham ko'chirish jarayonidagi juda real muammo. Uy buzilsa qaytadan qurish mumkin, lekin inson munosabatlari va mahalla muhitini qayta tiklash juda qiyin.",
+          "text_translation_ru": "Это действительно очень реальная проблема при сносе. Дом снесли — можно построить заново, но человеческие отношения и атмосферу сообщества восстановить очень трудно.",
+          "text_translation_en": "That really is a very real problem in the relocation process. A demolished house can be rebuilt, but human relationships and the community atmosphere are very hard to rebuild.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d16-s6",
+          "text_original": "我上次回去，村里的老人都聚在一起叹气，说以后可能再也见不到这些老街坊了。",
+          "pinyin": "Wǒ shàng cì huíqù, cūn lǐ de lǎorén dōu jù zài yìqǐ tànqì, shuō yǐhòu kěnéng zài yě jiàn bú dào zhèxiē lǎo jiēfang le.",
+          "text_translation": "O'tgan safar qaytganimda, qishloqdagi qariyalar to'planib xo'rsinishar, bundan keyin bu eski qo'shnilarni boshqa ko'rmasligimiz mumkin deyishardi.",
+          "text_translation_ru": "В прошлый раз, когда я вернулся, деревенские старики собрались вместе и вздыхали, говоря, что, возможно, больше никогда не увидят этих старых соседей.",
+          "text_translation_en": "Last time I went back, the village elders all gathered and sighed, saying they might never see these old neighbors again.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d16-s7",
+          "text_original": "这种情感我能理解。但城市化是一个不可逆转的趋势，城市能提供更好的教育、医疗和就业机会。",
+          "pinyin": "Zhè zhǒng qínggǎn wǒ néng lǐjiě. Dàn chéngshìhuà shì yí ge bùkě nìzhuǎn de qūshì, chéngshì néng tígōng gèng hǎo de jiàoyù, yīliáo hé jiùyè jīhuì.",
+          "text_translation": "Bu his-tuyg'uni tushunaman. Lekin urbanizatsiya qaytarib bo'lmaydigan tendentsiya, shahar yaxshiroq ta'lim, tibbiyot va ish o'rinlarini bera oladi.",
+          "text_translation_ru": "Эти чувства я понимаю. Но урбанизация — необратимая тенденция, город может дать лучшее образование, медицину и возможности для трудоустройства.",
+          "text_translation_en": "I can understand that feeling. But urbanization is an irreversible trend, and cities can provide better education, healthcare, and job opportunities.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d16-s8",
+          "text_original": "从理性的角度讲，我同意你的看法。城市化的确能提高整体生活水平。但从感情上来说，看到老家一点点消失，心里很不是滋味。",
+          "pinyin": "Cóng lǐxìng de jiǎodù jiǎng, wǒ tóngyì nǐ de kànfǎ. Chéngshìhuà de què néng tígāo zhěngtǐ shēnghuó shuǐpíng. Dàn cóng gǎnqíng shàng lái shuō, kàn dào lǎojiā yì diǎndiǎn xiāoshī, xīnli hěn bú shì zīwèi.",
+          "text_translation": "Aql nuqtai nazaridan men sening fikringga qo'shilaman. Urbanizatsiya haqiqatan ham umumiy turmush darajasini oshiradi. Lekin his-tuyg'u jihatidan, ona yurtning asta-sekin yo'qolib borishini ko'rish ko'ngilga juda og'ir botadi.",
+          "text_translation_ru": "С рациональной точки зрения я согласен с тобой. Урбанизация действительно повышает общий уровень жизни. Но с эмоциональной стороны — видеть, как родные места понемногу исчезают, очень тяжело на душе.",
+          "text_translation_en": "From a rational standpoint, I agree with you. Urbanization really does raise the overall standard of living. But emotionally, seeing my hometown disappear bit by bit leaves a bitter feeling.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d16-s9",
+          "text_original": "你们村拆迁以后，你们家能拿到多少补偿？",
+          "pinyin": "Nǐmen cūn chāiqiān yǐhòu, nǐmen jiā néng ná dào duōshao bǔcháng?",
+          "text_translation": "Qishloqlaring ko'chirilgandan keyin, oilang qancha kompensatsiya oladi?",
+          "text_translation_ru": "После сноса вашей деревни сколько компенсации сможет получить ваша семья?",
+          "text_translation_en": "After your village is demolished, how much compensation will your family get?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d16-s10",
+          "text_original": "补偿方案是按面积算的，一套老房子能换两套新房子，另外还有一笔现金。从经济上讲不算亏。",
+          "pinyin": "Bǔcháng fāng'àn shì àn miànjī suàn de, yí tào lǎo fángzi néng huàn liǎng tào xīn fángzi, lìngwài hái yǒu yī bǐ xiànjīn. Cóng jīngjì shàng jiǎng bú suàn kuī.",
+          "text_translation": "Kompensatsiya rejasi maydonga qarab hisoblanadi, bitta eski uy evaziga ikkita yangi uy berishadi, ustiga bir oz naqd pul ham. Iqtisodiy jihatdan zarar emas.",
+          "text_translation_ru": "Схема компенсации рассчитывается по площади: за один старый дом дают две новые квартиры, плюс ещё некоторая сумма наличными. С экономической точки зрения это не убыток.",
+          "text_translation_en": "The compensation plan is calculated by area — one old house can be exchanged for two new ones, plus a sum of cash. Economically speaking it's not a loss.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d16-s11",
+          "text_original": "那听起来还不错，至少经济上得到了补偿。",
+          "pinyin": "Nà tīng qǐlái hái búcuò, zhìshǎo jīngjì shàng dédào le bǔcháng.",
+          "text_translation": "Unda yaxshi-ku, hech bo'lmasa iqtisodiy jihatdan kompensatsiya olibsizlar.",
+          "text_translation_ru": "Тогда звучит неплохо, по крайней мере экономически вы получили компенсацию.",
+          "text_translation_en": "That sounds pretty good then — at least you got compensated economically.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d16-s12",
+          "text_original": "钱是拿到了，但根没了。很多老人说，他们宁愿不要钱，也想留在原来的地方。",
+          "pinyin": "Qián shì ná dào le, dàn gēn méi le. Hěnduō lǎorén shuō, tāmen nìngyuàn bú yào qián, yě xiǎng liú zài yuánlái de dìfang.",
+          "text_translation": "Pul olindi, lekin ildiz yo'qoldi. Ko'p qariyalar pul olmaslikka rozi, faqat avvalgi joyida qolishni istaymiz deyishadi.",
+          "text_translation_ru": "Деньги-то получили, но корни исчезли. Многие старики говорят, что предпочли бы вовсе не брать денег, лишь бы остаться на прежнем месте.",
+          "text_translation_en": "We got the money, but our roots are gone. Many elderly say they'd rather not have the money and just stay in their old place.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d16-s13",
+          "text_original": "你说到了城市化的核心矛盾——发展速度太快，忽略了人的感受。",
+          "pinyin": "Nǐ shuō dào le chéngshìhuà de héxīn máodùn —— fāzhǎn sùdù tài kuài, hūlüè le rén de gǎnshòu.",
+          "text_translation": "Sen urbanizatsiyaning asosiy ziddiyatini aytding — rivojlanish sur'ati juda tez, insonning his-tuyg'usi e'tiborsiz qoldirilgan.",
+          "text_translation_ru": "Ты затронул ключевое противоречие урбанизации — скорость развития слишком высока, и чувства людей оказываются забыты.",
+          "text_translation_en": "You've put your finger on the core contradiction of urbanization — development moves too fast and overlooks people's feelings.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d16-s14",
+          "text_original": "是啊。城市化的目的是让人们生活得更好，但如果在这个过程中失去了归属感，那发展的意义又在哪里呢？",
+          "pinyin": "Shì a. Chéngshìhuà de mùdì shì ràng rénmen shēnghuó de gèng hǎo, dàn rúguǒ zài zhè ge guòchéng zhōng shīqù le guīshǔ gǎn, nà fāzhǎn de yìyì yòu zài nǎli ne?",
+          "text_translation": "Ha. Urbanizatsiyaning maqsadi odamlarning yaxshiroq yashashi, lekin agar shu jarayonda mansublik hissi yo'qolsa, rivojlanishning ma'nosi qayerda qoladi?",
+          "text_translation_ru": "Да. Цель урбанизации — чтобы люди жили лучше, но если в этом процессе теряется чувство принадлежности, то в чём же тогда смысл развития?",
+          "text_translation_en": "Right. The goal of urbanization is to let people live better, but if a sense of belonging is lost in the process, then where is the meaning of development?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d16-s15",
+          "text_original": "这确实值得反思。或许未来的城市发展应该更注重人文关怀，而不是只看GDP的增长。",
+          "pinyin": "Zhè quèshí zhídé fǎnsī. Huòxǔ wèilái de chéngshì fāzhǎn yīnggāi gèng zhùzhòng rénwén guānhuái, ér bú shì zhǐ kàn GDP de zēngzhǎng.",
+          "text_translation": "Bu chindan ham mulohaza yuritishga arziydi. Ehtimol kelajakdagi shahar rivoji faqat YaIM o'sishiga emas, balki insonparvarlik g'amxo'rligiga ko'proq e'tibor berishi kerakdir.",
+          "text_translation_ru": "Это действительно стоит обдумать. Возможно, будущее развитие городов должно больше уделять внимания гуманистической заботе, а не только росту ВВП.",
+          "text_translation_en": "That really is worth reflecting on. Perhaps future urban development should pay more attention to humanistic care, rather than just looking at GDP growth.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d16-s16",
+          "text_original": "希望有一天，城市的发展能和人的情感找到更好的平衡。",
+          "pinyin": "Xīwàng yǒu yì tiān, chéngshì de fāzhǎn néng hé rén de qínggǎn zhǎodào gèng hǎo de pínghéng.",
+          "text_translation": "Umid qilamanki, bir kun kelib shahar rivoji bilan insonning his-tuyg'usi o'rtasida yaxshiroq muvozanat topiladi.",
+          "text_translation_ru": "Надеюсь, однажды развитие городов и чувства людей смогут найти лучший баланс.",
+          "text_translation_en": "I hope that one day, urban development can find a better balance with people's emotions.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
