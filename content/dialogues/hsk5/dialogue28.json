@@ -1,0 +1,169 @@
+{
+  "id": "hsk5-dialogue28",
+  "slug": "workplace-gender-equality",
+  "title": "职场性别平等",
+  "pinyin": "Zhíchǎng xìngbié píngděng",
+  "titleTranslation": "Ish joyida gender tengligi",
+  "titleTranslation_ru": "Гендерное равенство на работе",
+  "titleTranslation_en": "Gender Equality in the Workplace",
+  "level": 5,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "应聘",
+    "现象",
+    "困惑",
+    "传统观念",
+    "出色",
+    "领导力",
+    "执行力",
+    "障碍",
+    "婚育",
+    "落后",
+    "承担",
+    "责任",
+    "专注",
+    "企业",
+    "现实",
+    "平等",
+    "有色眼镜",
+    "高层职位",
+    "明确"
+  ],
+  "sections": [
+    {
+      "id": "h5d28-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d28-s1",
+          "text_original": "你最近工作怎么样？听说你们部门在招人？",
+          "pinyin": "Nǐ zuìjìn gōngzuò zěnmeyàng? Tīngshuō nǐmen bùmén zài zhāo rén?",
+          "text_translation": "Yaqinda ishing qanday? Bo'limingiz odam yollayapti deb eshitdim?",
+          "text_translation_ru": "Как у тебя дела на работе? Слышал, ваш отдел набирает людей?",
+          "text_translation_en": "How's work lately? I heard your department is hiring?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d28-s2",
+          "text_original": "对，面试了几个人。但有一个现象让我挺困惑的，来应聘的女性明显比男性少。",
+          "pinyin": "Duì, miànshì le jǐ ge rén. Dàn yǒu yí ge xiànxiàng ràng wǒ tǐng kùnhuò de, lái yìngpìn de nǚxìng míngxiǎn bǐ nánxìng shǎo.",
+          "text_translation": "Ha, bir nechta odam bilan suhbatlashdim. Lekin bir holat meni ancha hayron qoldirdi — ishga ariza beruvchi ayollar erkaklardan sezilarli darajada kam.",
+          "text_translation_ru": "Да, провёл собеседования с несколькими. Но одно явление меня озадачило: женщин, претендующих на вакансию, заметно меньше, чем мужчин.",
+          "text_translation_en": "Yes, I interviewed a few people. But one thing puzzled me — clearly fewer women applied than men.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d28-s3",
+          "text_original": "这可能跟行业的传统观念有关。很多人觉得某些岗位更适合男性。",
+          "pinyin": "Zhè kěnéng gēn hángyè de chuántǒng guānniàn yǒuguān. Hěnduō rén juéde mǒuxiē gǎngwèi gèng shìhé nánxìng.",
+          "text_translation": "Bu soha bilan bog'liq an'anaviy qarashlarga aloqador bo'lishi mumkin. Ko'pchilik ba'zi lavozimlar erkaklarga ko'proq mos deb hisoblaydi.",
+          "text_translation_ru": "Это, возможно, связано с традиционными представлениями в отрасли. Многие считают, что некоторые должности больше подходят мужчинам.",
+          "text_translation_en": "This may be related to traditional mindsets in the industry. Many people feel certain positions are more suited to men.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d28-s4",
+          "text_original": "但我觉得能力不应该分性别。我们部门之前有几个女性员工做得非常出色。",
+          "pinyin": "Dàn wǒ juéde nénglì bù yīnggāi fēn xìngbié. Wǒmen bùmén zhīqián yǒu jǐ ge nǚxìng yuángōng zuò de fēicháng chūsè.",
+          "text_translation": "Lekin menimcha qobiliyatni jinsga ajratmaslik kerak. Bo'limimizda ilgari bir nechta ayol xodim juda a'lo ishlagan.",
+          "text_translation_ru": "Но я считаю, что способности не должны делиться по полу. В нашем отделе раньше несколько сотрудниц работали превосходно.",
+          "text_translation_en": "But I think ability shouldn't be divided by gender. Our department previously had several female employees who did an outstanding job.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d28-s5",
+          "text_original": "我完全同意。很多女性在职场上同样有很强的领导力和执行力。",
+          "pinyin": "Wǒ wánquán tóngyì. Hěnduō nǚxìng zài zhíchǎng shàng tóngyàng yǒu hěn qiáng de lǐngdǎolì hé zhíxínglì.",
+          "text_translation": "To'liq qo'shilaman. Ko'p ayollar ish joyida xuddi shunday kuchli yetakchilik va ijro qobiliyatiga ega.",
+          "text_translation_ru": "Полностью согласен. У многих женщин на работе такие же сильные лидерские качества и исполнительность.",
+          "text_translation_en": "I completely agree. Many women have equally strong leadership and execution ability in the workplace.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d28-s6",
+          "text_original": "可惜的是，女性在升职过程中往往面临更多的障碍。",
+          "pinyin": "Kěxí de shì, nǚxìng zài shēngzhí guòchéng zhōng wǎngwǎng miànlín gèng duō de zhàng'ài.",
+          "text_translation": "Afsuski, ayollar lavozimda ko'tarilish jarayonida ko'pincha ko'proq to'siqlarga duch keladi.",
+          "text_translation_ru": "К сожалению, женщины в процессе повышения часто сталкиваются с бо́льшим числом препятствий.",
+          "text_translation_en": "Unfortunately, women often face more obstacles in the promotion process.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d28-s7",
+          "text_original": "对，比如婚育问题。很多公司担心女员工结婚生子后会影响工作。",
+          "pinyin": "Duì, bǐrú hūnyù wèntí. Hěnduō gōngsī dānxīn nǚ yuángōng jiéhūn shēng zǐ hòu huì yǐngxiǎng gōngzuò.",
+          "text_translation": "To'g'ri, masalan nikoh va farzand masalasi. Ko'p kompaniya ayol xodim turmush qurib, farzandli bo'lgach ishga ta'sir qiladi deb xavotirlanadi.",
+          "text_translation_ru": "Да, например вопрос брака и детей. Многие компании боятся, что после замужества и рождения ребёнка это повлияет на работу сотрудницы.",
+          "text_translation_en": "Right, like the issue of marriage and children. Many companies worry that female employees' work will be affected after they marry and have kids.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d28-s8",
+          "text_original": "这个观念太落后了。现在很多男性也会承担家庭责任，女性也可以专注于事业。",
+          "pinyin": "Zhè ge guānniàn tài luòhòu le. Xiànzài hěnduō nánxìng yě huì chéngdān jiātíng zérèn, nǚxìng yě kěyǐ zhuānzhù yú shìyè.",
+          "text_translation": "Bu qarash juda eskirgan. Hozir ko'p erkaklar ham oilaviy mas'uliyatni zimmasiga oladi, ayollar ham kasbiga e'tibor qarata oladi.",
+          "text_translation_ru": "Это представление слишком устарело. Сейчас многие мужчины тоже берут на себя семейные обязанности, а женщины могут сосредоточиться на карьере.",
+          "text_translation_en": "That mindset is too outdated. Nowadays many men also take on family responsibilities, and women can focus on their careers.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d28-s9",
+          "text_original": "你说的对。我觉得企业应该更注重能力，而不是性别。",
+          "pinyin": "Nǐ shuō de duì. Wǒ juéde qǐyè yīnggāi gèng zhùzhòng nénglì, ér bú shì xìngbié.",
+          "text_translation": "To'g'ri aytasan. Menimcha korxona jinsga emas, qobiliyatga ko'proq e'tibor berishi kerak.",
+          "text_translation_ru": "Ты прав. Я считаю, что компаниям нужно больше ценить способности, а не пол.",
+          "text_translation_en": "You're right. I think enterprises should focus more on ability rather than gender.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d28-s10",
+          "text_original": "可惜现实中真正做到这一点的公司并不多。",
+          "pinyin": "Kěxí xiànshí zhōng zhēnzhèng zuò dào zhè yì diǎn de gōngsī bìng bù duō.",
+          "text_translation": "Afsuski, amalda buni haqiqatan amalga oshiradigan kompaniyalar unchalik ko'p emas.",
+          "text_translation_ru": "Жаль, что в реальности компаний, которые действительно этого достигают, не так много.",
+          "text_translation_en": "Sadly, in reality not many companies truly achieve this.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d28-s11",
+          "text_original": "所以现在的职场性别平等还有很长的路要走。",
+          "pinyin": "Suǒyǐ xiànzài de zhíchǎng xìngbié píngděng hái yǒu hěn cháng de lù yào zǒu.",
+          "text_translation": "Shuning uchun hozirgi ish joyidagi gender tengligi hali uzoq yo'lni bosib o'tishi kerak.",
+          "text_translation_ru": "Поэтому гендерному равенству на работе сейчас ещё предстоит пройти долгий путь.",
+          "text_translation_en": "So workplace gender equality still has a long way to go.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d28-s12",
+          "text_original": "对。我们每个人都可以从小事做起，比如在招聘时完全凭能力选择，不带有色眼镜。",
+          "pinyin": "Duì. Wǒmen měi ge rén dōu kěyǐ cóng xiǎoshì zuò qǐ, bǐrú zài zhāopìn shí wánquán píng nénglì xuǎnzé, bú dài yǒusè yǎnjìng.",
+          "text_translation": "To'g'ri. Har birimiz kichik ishlardan boshlasak bo'ladi, masalan ishga olishda butunlay qobiliyatga qarab tanlash, xolis bo'lmagan qarashsiz.",
+          "text_translation_ru": "Да. Каждый из нас может начать с малого — например, при найме выбирать исключительно по способностям, без предвзятости.",
+          "text_translation_en": "Right. Each of us can start with small things — for example, choosing purely on ability when hiring, without prejudice.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d28-s13",
+          "text_original": "这是很重要的一步。希望未来能看到更多女性在职场中担任高层职位。",
+          "pinyin": "Zhè shì hěn zhòngyào de yí bù. Xīwàng wèilái néng kàn dào gèng duō nǚxìng zài zhíchǎng zhōng dānrèn gāocéng zhíwèi.",
+          "text_translation": "Bu juda muhim qadam. Kelajakda ko'proq ayollarning ish joyida yuqori lavozimlarni egallaganini ko'rishni umid qilaman.",
+          "text_translation_ru": "Это очень важный шаг. Надеюсь, в будущем мы увидим больше женщин на руководящих должностях.",
+          "text_translation_en": "This is a very important step. I hope to see more women hold senior positions in the workplace in the future.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d28-s14",
+          "text_original": "我相信会慢慢改变的。社会的进步需要时间，但方向是明确的。",
+          "pinyin": "Wǒ xiāngxìn huì mànmàn gǎibiàn de. Shèhuì de jìnbù xūyào shíjiān, dàn fāngxiàng shì míngquè de.",
+          "text_translation": "Asta-sekin o'zgarishiga ishonaman. Jamiyat taraqqiyoti vaqt talab qiladi, lekin yo'nalish aniq.",
+          "text_translation_ru": "Я верю, что всё постепенно изменится. Прогресс общества требует времени, но направление ясно.",
+          "text_translation_en": "I believe it will gradually change. Social progress takes time, but the direction is clear.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
