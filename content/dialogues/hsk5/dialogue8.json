@@ -1,0 +1,232 @@
+{
+  "id": "hsk5-dialogue8",
+  "slug": "starting-a-business",
+  "title": "创业",
+  "pinyin": "Chuàngyè",
+  "titleTranslation": "Tadbirkorlikni boshlash",
+  "titleTranslation_ru": "Открытие своего дела",
+  "titleTranslation_en": "Starting a Business",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "辞职",
+    "创业",
+    "离职",
+    "合伙",
+    "业务",
+    "平台",
+    "竞争",
+    "激烈",
+    "初期",
+    "资金",
+    "人手",
+    "运营",
+    "推广",
+    "凑",
+    "小额贷款",
+    "反对",
+    "风险",
+    "态度",
+    "转变",
+    "勇气",
+    "信心",
+    "起步",
+    "同行",
+    "交流",
+    "客户",
+    "反馈",
+    "团队",
+    "扩大"
+  ],
+  "sections": [
+    {
+      "id": "h5d8-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d8-s1",
+          "text_original": "听说你辞职了？准备自己创业吗？",
+          "pinyin": "Tīngshuō nǐ cízhí le? Zhǔnbèi zìjǐ chuàngyè ma?",
+          "text_translation": "Ishdan ketibsan deb eshitdim? O'zing biznes ochmoqchimisan?",
+          "text_translation_ru": "Слышал, ты уволился? Собираешься открыть своё дело?",
+          "text_translation_en": "I heard you resigned? Are you planning to start your own business?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d8-s2",
+          "text_original": "对，我上个月刚离职，现在跟两个朋友合伙开了一家小公司。",
+          "pinyin": "Duì, wǒ shàng ge yuè gāng lízhí, xiànzài gēn liǎng ge péngyou héhuǒ kāi le yì jiā xiǎo gōngsī.",
+          "text_translation": "Ha, o'tgan oy endi ishdan ketdim, hozir ikki do'stim bilan sherikchilikda kichik kompaniya ochdik.",
+          "text_translation_ru": "Да, в прошлом месяце я как раз ушёл с работы, сейчас вместе с двумя друзьями открыл небольшую компанию.",
+          "text_translation_en": "Yeah, I just left my job last month, and now I've partnered with two friends to open a small company.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d8-s3",
+          "text_original": "你们做什么业务？",
+          "pinyin": "Nǐmen zuò shénme yèwù?",
+          "text_translation": "Qanday biznes bilan shug'ullanasizlar?",
+          "text_translation_ru": "Каким бизнесом вы занимаетесь?",
+          "text_translation_en": "What business are you in?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d8-s4",
+          "text_original": "主要做线上教育平台，帮学生找合适的老师。",
+          "pinyin": "Zhǔyào zuò xiànshàng jiàoyù píngtái, bāng xuéshēng zhǎo héshì de lǎoshī.",
+          "text_translation": "Asosan onlayn ta'lim platformasi qilamiz, o'quvchilarga mos o'qituvchi topishga yordam beramiz.",
+          "text_translation_ru": "В основном делаем онлайн-платформу образования, помогаем ученикам найти подходящего преподавателя.",
+          "text_translation_en": "Mainly an online education platform, helping students find suitable teachers.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d8-s5",
+          "text_original": "这个想法不错！现在线上教育确实很火。",
+          "pinyin": "Zhè ge xiǎngfǎ búcuò! Xiànzài xiànshàng jiàoyù quèshí hěn huǒ.",
+          "text_translation": "Bu g'oya zo'r ekan! Hozir onlayn ta'lim rostdan ham juda ommabop.",
+          "text_translation_ru": "Хорошая идея! Сейчас онлайн-образование действительно очень популярно.",
+          "text_translation_en": "That's a good idea! Online education is really popular right now.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d8-s6",
+          "text_original": "对，但竞争也特别激烈。我们得不断改进产品和服务。",
+          "pinyin": "Duì, dàn jìngzhēng yě tèbié jīliè. Wǒmen děi búduàn gǎijìn chǎnpǐn hé fúwù.",
+          "text_translation": "Ha, lekin raqobat ham juda keskin. Mahsulot va xizmatni doimiy ravishda yaxshilashimiz kerak.",
+          "text_translation_ru": "Да, но и конкуренция очень острая. Нам приходится постоянно улучшать продукт и сервис.",
+          "text_translation_en": "Yeah, but the competition is also really fierce. We have to keep improving our product and service.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d8-s7",
+          "text_original": "创业初期最大的困难是什么？",
+          "pinyin": "Chuàngyè chūqī zuì dà de kùnnan shì shénme?",
+          "text_translation": "Biznesni boshlash davrida eng katta qiyinchilik nima?",
+          "text_translation_ru": "Какая самая большая трудность на начальном этапе бизнеса?",
+          "text_translation_en": "What's the biggest difficulty in the early stage of starting a business?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d8-s8",
+          "text_original": "资金和人手都不够。我们三个人既要管运营，又要做推广，每天都忙到很晚。",
+          "pinyin": "Zījīn hé rénshǒu dōu bú gòu. Wǒmen sān ge rén jì yào guǎn yùnyíng, yòu yào zuò tuīguǎng, měitiān dōu máng dào hěn wǎn.",
+          "text_translation": "Mablag' ham, ishchi kuchi ham yetishmaydi. Uchovimiz ham faoliyatni boshqarishimiz, ham reklama qilishimiz kerak, har kuni kechgacha bandmiz.",
+          "text_translation_ru": "Не хватает ни средств, ни рабочих рук. Нам троим приходится и управлять операциями, и заниматься продвижением, каждый день работаем допоздна.",
+          "text_translation_en": "We lack both funds and manpower. The three of us have to manage operations and do promotion, and we're busy until late every day.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d8-s9",
+          "text_original": "那你们怎么解决资金问题？",
+          "pinyin": "Nà nǐmen zěnme jiějué zījīn wèntí?",
+          "text_translation": "Unda mablag' masalasini qanday hal qilyapsizlar?",
+          "text_translation_ru": "А как вы решаете вопрос с финансами?",
+          "text_translation_en": "So how do you solve the funding problem?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d8-s10",
+          "text_original": "我们几个自己凑了一些，还申请了一笔小额贷款。",
+          "pinyin": "Wǒmen jǐ ge zìjǐ còu le yì xiē, hái shēnqǐng le yì bǐ xiǎo'é dàikuǎn.",
+          "text_translation": "Bir nechtamiz o'zimiz biroz pul to'pladik, yana kichik kredit ham oldik.",
+          "text_translation_ru": "Мы сами скинулись понемногу, а ещё взяли небольшой кредит.",
+          "text_translation_en": "We pooled some money together ourselves and also applied for a small loan.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d8-s11",
+          "text_original": "家人支持你们吗？",
+          "pinyin": "Jiārén zhīchí nǐmen ma?",
+          "text_translation": "Oilang sizlarni qo'llab-quvvatlaydimi?",
+          "text_translation_ru": "Семья вас поддерживает?",
+          "text_translation_en": "Does your family support you?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d8-s12",
+          "text_original": "一开始挺反对的，觉得创业风险太大。后来看到我们认真在做，态度慢慢转变了。",
+          "pinyin": "Yī kāishǐ tǐng fǎnduì de, juéde chuàngyè fēngxiǎn tài dà. Hòulái kàn dào wǒmen rènzhēn zài zuò, tàidu mànmàn zhuǎnbiàn le.",
+          "text_translation": "Boshida ancha qarshi edilar, biznesning xavfi juda katta deb o'ylashardi. Keyin jiddiy ishlayotganimizni ko'rib, munosabati asta-sekin o'zgardi.",
+          "text_translation_ru": "Сначала они довольно сильно возражали, считали, что риск слишком велик. Потом, увидев, что мы серьёзно работаем, их отношение постепенно изменилось.",
+          "text_translation_en": "At first they were quite opposed, thinking the risk was too big. Later, seeing that we were working seriously, their attitude gradually changed.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d8-s13",
+          "text_original": "创业确实需要勇气。你们对自己有信心吗？",
+          "pinyin": "Chuàngyè quèshí xūyào yǒngqì. Nǐmen duì zìjǐ yǒu xìnxīn ma?",
+          "text_translation": "Biznes boshlash haqiqatan jasorat talab qiladi. O'zlaringizga ishonchingiz bormi?",
+          "text_translation_ru": "Открыть своё дело действительно требует смелости. Вы уверены в себе?",
+          "text_translation_en": "Starting a business really takes courage. Do you have confidence in yourselves?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d8-s14",
+          "text_original": "当然有。虽然起步难，但我相信只要坚持下去，总会看到结果。",
+          "pinyin": "Dāngrán yǒu. Suīrán qǐbù nán, dàn wǒ xiāngxìn zhǐyào jiānchí xiàqù, zǒng huì kàn dào jiéguǒ.",
+          "text_translation": "Albatta bor. Boshlash qiyin bo'lsa-da, davom ettiraversak, oxir-oqibat natijasini ko'ramiz deb ishonaman.",
+          "text_translation_ru": "Конечно. Хотя начинать трудно, я верю, что если продолжать, в итоге обязательно увидим результат.",
+          "text_translation_en": "Of course. Although starting out is hard, I believe that as long as we persist, we'll eventually see results.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d8-s15",
+          "text_original": "你这种心态很好。创业最重要的是坚持和学习。",
+          "pinyin": "Nǐ zhè zhǒng xīntài hěn hǎo. Chuàngyè zuì zhòngyào de shì jiānchí hé xuéxí.",
+          "text_translation": "Bunday kayfiyating juda yaxshi. Biznesda eng muhimi qat'iyat va o'rganish.",
+          "text_translation_ru": "У тебя очень хороший настрой. В бизнесе самое важное — упорство и обучение.",
+          "text_translation_en": "That mindset of yours is great. The most important things in business are persistence and learning.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d8-s16",
+          "text_original": "对。我现在每天都会抽时间学习行业知识，也会跟同行交流。",
+          "pinyin": "Duì. Wǒ xiànzài měitiān dōu huì chōu shíjiān xuéxí hángyè zhīshi, yě huì gēn tóngháng jiāoliú.",
+          "text_translation": "To'g'ri. Hozir har kuni vaqt ajratib soha bilimlarini o'rganaman, kasbdoshlar bilan ham fikr almashaman.",
+          "text_translation_ru": "Да. Сейчас я каждый день выделяю время на изучение знаний об отрасли и общаюсь с коллегами по цеху.",
+          "text_translation_en": "Right. Now I set aside time every day to learn industry knowledge and also exchange ideas with peers.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d8-s17",
+          "text_original": "有固定的客户了吗？",
+          "pinyin": "Yǒu gùdìng de kèhù le ma?",
+          "text_translation": "Doimiy mijozlaring bormi?",
+          "text_translation_ru": "У вас уже есть постоянные клиенты?",
+          "text_translation_en": "Do you have any regular customers yet?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d8-s18",
+          "text_original": "刚开始两个月，已经有了十几个用户，反馈还不错。",
+          "pinyin": "Gāng kāishǐ liǎng ge yuè, yǐjīng yǒu le shí jǐ ge yònghù, fǎnkuì hái búcuò.",
+          "text_translation": "Endigina ikki oy bo'ldi, allaqachon o'n nechta foydalanuvchimiz bor, fikr-mulohazalar ham yaxshi.",
+          "text_translation_ru": "Прошло всего два месяца, а уже больше десяти пользователей, и отзывы неплохие.",
+          "text_translation_en": "We've only just started two months ago, and already have over a dozen users — the feedback is pretty good.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d8-s19",
+          "text_original": "那是个好的开始！祝你们成功！",
+          "pinyin": "Nà shì ge hǎo de kāishǐ! Zhù nǐmen chénggōng!",
+          "text_translation": "Bu yaxshi boshlanish ekan! Sizlarga muvaffaqiyat tilayman!",
+          "text_translation_ru": "Это хорошее начало! Желаю вам успеха!",
+          "text_translation_en": "That's a good start! I wish you success!",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d8-s20",
+          "text_original": "谢谢！希望明年能把团队扩大到十个人。",
+          "pinyin": "Xièxie! Xīwàng míngnián néng bǎ tuánduì kuòdà dào shí ge rén.",
+          "text_translation": "Rahmat! Kelgusi yili jamoani o'n kishigacha kengaytira olishni umid qilaman.",
+          "text_translation_ru": "Спасибо! Надеюсь, в следующем году смогу расширить команду до десяти человек.",
+          "text_translation_en": "Thank you! I hope to expand the team to ten people next year.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
