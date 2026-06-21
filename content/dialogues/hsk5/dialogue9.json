@@ -1,0 +1,160 @@
+{
+  "id": "hsk5-dialogue9",
+  "slug": "mental-health",
+  "title": "心理健康",
+  "pinyin": "Xīnlǐ jiànkāng",
+  "titleTranslation": "Ruhiy salomatlik",
+  "titleTranslation_ru": "Психическое здоровье",
+  "titleTranslation_en": "Mental Health",
+  "level": 5,
+  "tag": "salomatlik",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "精神",
+    "压力",
+    "混乱",
+    "理解",
+    "感受",
+    "心理咨询师",
+    "程度",
+    "脆弱",
+    "寻求",
+    "表现",
+    "负责",
+    "情绪",
+    "低落",
+    "信号",
+    "深呼吸",
+    "强求",
+    "状态",
+    "调整",
+    "照顾"
+  ],
+  "sections": [
+    {
+      "id": "h5d9-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d9-s1",
+          "text_original": "你最近看起来总是没什么精神，是不是压力太大了？",
+          "pinyin": "Nǐ zuìjìn kàn qǐlái zǒng shì méi shénme jīngshen, shì bú shì yālì tài dà le?",
+          "text_translation": "Yaqinda doim charchagandek, ruhsiz ko'rinasan, bosim juda kuchli emasmi?",
+          "text_translation_ru": "Ты в последнее время всё время какой-то без сил — наверное, слишком большой стресс?",
+          "text_translation_en": "You've been looking listless lately — is the stress too much?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d9-s2",
+          "text_original": "可能吧。最近工作上的事情特别多，晚上也睡不好，总觉得心里很乱。",
+          "pinyin": "Kěnéng ba. Zuìjìn gōngzuò shàng de shìqing tèbié duō, wǎnshang yě shuì bù hǎo, zǒng juéde xīnli hěn luàn.",
+          "text_translation": "Balki shundaydir. Yaqinda ishda ishlar juda ko'p, kechalari ham yaxshi uxlay olmayman, doim ko'nglim notinch.",
+          "text_translation_ru": "Может быть. В последнее время на работе очень много дел, по ночам плохо сплю, и на душе всё время неспокойно.",
+          "text_translation_en": "Maybe. There's been a ton of work lately, I don't sleep well at night, and my mind always feels in a mess.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d9-s3",
+          "text_original": "你有没有试过跟别人聊一聊？有些事说出来会好一些。",
+          "pinyin": "Nǐ yǒu méiyǒu shì guo gēn biérén liáo yì liáo? Yǒuxiē shì shuō chūlái huì hǎo yì xiē.",
+          "text_translation": "Birovga gapirib ko'rganmiding? Ba'zi narsalarni aytib yuborsang yengilroq bo'ladi.",
+          "text_translation_ru": "А ты пробовал с кем-нибудь поговорить? Некоторые вещи, если их проговорить, становятся легче.",
+          "text_translation_en": "Have you tried talking to someone? Some things feel better once you say them out loud.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d9-s4",
+          "text_original": "我试过跟我爱人说，但感觉他不太能理解。他觉得我想太多了。",
+          "pinyin": "Wǒ shì guo gēn wǒ àirén shuō, dàn gǎnjué tā bú tài néng lǐjiě. Tā juéde wǒ xiǎng tài duō le.",
+          "text_translation": "Turmush o'rtog'imga aytib ko'rdim, lekin u meni unchalik tushunmayotgandek. U meni o'ylab ketganman deb hisoblaydi.",
+          "text_translation_ru": "Я пробовал рассказать супругу, но чувствую, что он не очень понимает. Считает, что я слишком много думаю.",
+          "text_translation_en": "I tried telling my spouse, but I feel he doesn't really get it. He thinks I overthink things.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d9-s5",
+          "text_original": "很多时候，身边的人确实难以完全理解我们的感受。你有没有考虑过找心理咨询师聊聊？",
+          "pinyin": "Hěn duō shíhou, shēnbiān de rén quèshí nányǐ wánquán lǐjiě wǒmen de gǎnshòu. Nǐ yǒu méiyǒu kǎolǜ guo zhǎo xīnlǐ zīxún shī liáo liao?",
+          "text_translation": "Ko'p hollarda atrofdagilar bizning his-tuyg'ularimizni to'liq tushunishi qiyin. Psixolog-maslahatchiga murojaat qilishni o'ylab ko'rganmiding?",
+          "text_translation_ru": "Часто окружающим действительно трудно полностью понять наши чувства. Ты не думал обратиться к психологу-консультанту?",
+          "text_translation_en": "A lot of the time, the people around us really can't fully understand our feelings. Have you considered seeing a counselor?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d9-s6",
+          "text_original": "我有想过，但又觉得还没到那个程度，怕别人觉得我太脆弱。",
+          "pinyin": "Wǒ yǒu xiǎng guo, dàn yòu juéde hái méi dào nà ge chéngdù, pà biérén juéde wǒ tài cuìruò.",
+          "text_translation": "O'ylaganman, lekin hali u darajaga yetmaganga o'xshaydi, odamlar meni juda zaif deb o'ylashidan qo'rqaman.",
+          "text_translation_ru": "Думал, но мне кажется, что до такого ещё не дошло, и боюсь, что другие сочтут меня слишком слабым.",
+          "text_translation_en": "I've thought about it, but I feel it hasn't gotten to that point yet, and I'm afraid people will think I'm too fragile.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d9-s7",
+          "text_original": "其实寻求帮助不是软弱的表现，反而是对自己负责。心理健康和身体健康一样重要。",
+          "pinyin": "Qíshí xúnqiú bāngzhù bú shì ruǎnruò de biǎoxiàn, fǎn'ér shì duì zìjǐ fùzé. Xīnlǐ jiànkāng hé shēntǐ jiànkāng yíyàng zhòngyào.",
+          "text_translation": "Aslida yordam so'rash zaiflik alomati emas, aksincha o'ziga javobgarlikdir. Ruhiy salomatlik jismoniy salomatlik kabi muhim.",
+          "text_translation_ru": "На самом деле просить помощи — не признак слабости, а наоборот, ответственность перед собой. Психическое здоровье так же важно, как и физическое.",
+          "text_translation_en": "Actually, seeking help isn't a sign of weakness — it's taking responsibility for yourself. Mental health is just as important as physical health.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d9-s8",
+          "text_original": "你说得有道理。我也觉得自己最近情绪很低落，做什么都提不起兴趣。",
+          "pinyin": "Nǐ shuō de yǒu dàoli. Wǒ yě juéde zìjǐ zuìjìn qíngxù hěn dīluò, zuò shénme dōu tí bù qǐ xìngqù.",
+          "text_translation": "Gaping mantiqli. Men ham yaqinda kayfiyatim juda tushkun, hech narsaga qiziqishim qolmadi.",
+          "text_translation_ru": "Ты прав. Я и сам в последнее время чувствую себя подавленно, ни к чему нет интереса.",
+          "text_translation_en": "You have a point. I also feel my mood has been really low lately — I can't get interested in anything.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d9-s9",
+          "text_original": "这可能是压力过大的一些信号。你可以试着每天给自己留半小时，做些放松的事情，比如听音乐或者深呼吸。",
+          "pinyin": "Zhè kěnéng shì yālì guò dà de yì xiē xìnhào. Nǐ kěyǐ shì zhe měitiān gěi zìjǐ liú bàn xiǎoshí, zuò xiē fàngsōng de shìqing, bǐrú tīng yīnyuè huòzhě shēnhūxī.",
+          "text_translation": "Bu haddan tashqari bosimning ba'zi belgilari bo'lishi mumkin. Har kuni o'zingga yarim soat ajratib, dam oladigan narsalar qilib ko'r, masalan musiqa tinglash yoki chuqur nafas olish.",
+          "text_translation_ru": "Это, возможно, признаки чрезмерного стресса. Попробуй каждый день оставлять себе полчаса на что-то расслабляющее — например, послушать музыку или подышать глубоко.",
+          "text_translation_en": "These may be signs of too much stress. Try leaving yourself half an hour each day to do something relaxing — like listening to music or deep breathing.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d9-s10",
+          "text_original": "我也试过跑步，刚开始确实感觉不错，但忙起来又坚持不下去。",
+          "pinyin": "Wǒ yě shì guo pǎobù, gāng kāishǐ quèshí gǎnjué búcuò, dàn máng qǐlái yòu jiānchí bú xiàqu.",
+          "text_translation": "Yugurib ham ko'rganman, boshida rostdan yaxshi tuyuldi, lekin band bo'lib qolsam yana davom ettira olmayman.",
+          "text_translation_ru": "Я и бегать пробовал, поначалу действительно было хорошо, но как только закручиваюсь в делах — не получается продолжать.",
+          "text_translation_en": "I tried running too — at first it really felt good, but once I get busy I can't keep it up.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d9-s11",
+          "text_original": "没关系，不用强求。关键是找到适合自己的方式，哪怕每天只做一点点也好。",
+          "pinyin": "Méi guānxi, búyòng qiángqiú. Guānjiàn shì zhǎodào shìhé zìjǐ de fāngshì, nǎpà měitiān zhǐ zuò yì diǎndiǎn yě hǎo.",
+          "text_translation": "Hechqisi yo'q, o'zingni majburlashing shart emas. Asosiysi o'zingga mos usulni topish, hatto har kuni ozgina qilsang ham yaxshi.",
+          "text_translation_ru": "Ничего страшного, не нужно себя заставлять. Главное — найти подходящий именно тебе способ, пусть даже каждый день понемногу.",
+          "text_translation_en": "It's okay, no need to force it. The key is finding what suits you, even if it's just a little each day.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d9-s12",
+          "text_original": "谢谢你的建议。我会试着调整一下自己的状态。",
+          "pinyin": "Xièxie nǐ de jiànyì. Wǒ huì shì zhe tiáozhěng yí xià zìjǐ de zhuàngtài.",
+          "text_translation": "Maslahating uchun rahmat. O'z holatimni biroz to'g'rilashga harakat qilaman.",
+          "text_translation_ru": "Спасибо за совет. Постараюсь немного скорректировать своё состояние.",
+          "text_translation_en": "Thanks for the advice. I'll try to adjust my state a bit.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d9-s13",
+          "text_original": "慢慢来，照顾好自己最重要。如果需要聊，随时找我。",
+          "pinyin": "Mànmàn lái, zhàogù hǎo zìjǐ zuì zhòngyào. Rúguǒ xūyào liáo, suíshí zhǎo wǒ.",
+          "text_translation": "Shoshmasdan, asta-sekin. O'zingni yaxshi asrash eng muhimi. Gaplashish kerak bo'lsa, istalgan vaqt menga murojaat qil.",
+          "text_translation_ru": "Не спеши, потихоньку. Самое важное — хорошо заботиться о себе. Если захочется поговорить, обращайся в любое время.",
+          "text_translation_en": "Take it slow — taking good care of yourself matters most. If you need to talk, reach out to me anytime.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

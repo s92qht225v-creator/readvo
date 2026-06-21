@@ -1,0 +1,186 @@
+{
+  "id": "hsk5-dialogue10",
+  "slug": "urban-life",
+  "title": "城市生活",
+  "pinyin": "Chéngshì shēnghuó",
+  "titleTranslation": "Shahar hayoti",
+  "titleTranslation_ru": "Городская жизнь",
+  "titleTranslation_en": "Urban Life",
+  "level": 5,
+  "tag": "hayot",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "市中心",
+    "交通",
+    "房价",
+    "物价",
+    "郊区",
+    "物业费",
+    "业余",
+    "小区",
+    "邻居",
+    "来往",
+    "串门",
+    "人情味儿",
+    "节奏",
+    "便捷",
+    "成本",
+    "疏离感",
+    "适应",
+    "抱怨"
+  ],
+  "sections": [
+    {
+      "id": "h5d10-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d10-s1",
+          "text_original": "听说你最近搬到市中心住了？感觉怎么样？",
+          "pinyin": "Tīngshuō nǐ zuìjìn bān dào shìzhōngxīn zhù le? Gǎnjué zěnmeyàng?",
+          "text_translation": "Yaqinda shahar markaziga ko'chib o'tibsan deb eshitdim? O'zingni qanday his qilyapsan?",
+          "text_translation_ru": "Слышал, ты недавно переехал жить в центр города? Как ощущения?",
+          "text_translation_en": "I heard you recently moved to the city center? How does it feel?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d10-s2",
+          "text_original": "有好有坏吧。交通确实方便了很多，上班只需要十五分钟，但房价和物价都比郊区贵不少。",
+          "pinyin": "Yǒu hǎo yǒu huài ba. Jiāotōng quèshí fāngbiàn le hěnduō, shàngbān zhǐ xūyào shíwǔ fēnzhōng, dàn fángjià hé wùjià dōu bǐ jiāoqū guì bùshǎo.",
+          "text_translation": "Ham yaxshi, ham yomon tomoni bor. Transport rostdan ancha qulay bo'ldi, ishga atigi o'n besh daqiqa ketadi, lekin uy narxi ham, narxlar ham chekkadagiga qaraganda ancha qimmat.",
+          "text_translation_ru": "И хорошо, и плохо. С транспортом и правда стало гораздо удобнее, до работы всего пятнадцать минут, но и жильё, и цены заметно дороже, чем в пригороде.",
+          "text_translation_en": "It's a mix. Transport is really much more convenient — only fifteen minutes to work — but housing and prices are a lot higher than in the suburbs.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d10-s3",
+          "text_original": "房租一个月大概多少？",
+          "pinyin": "Fángzū yí ge yuè dàgài duōshao?",
+          "text_translation": "Ijara bir oyga taxminan qancha?",
+          "text_translation_ru": "Сколько примерно аренда в месяц?",
+          "text_translation_en": "About how much is the rent a month?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d10-s4",
+          "text_original": "一个月六千块，不包括水电和物业费。",
+          "pinyin": "Yí ge yuè liùqiān kuài, bù bāokuò shuǐdiàn hé wùyè fèi.",
+          "text_translation": "Oyiga olti ming yuan, suv-elektr va kommunal to'lovni o'z ichiga olmaydi.",
+          "text_translation_ru": "Шесть тысяч в месяц, без воды, электричества и платы за обслуживание.",
+          "text_translation_en": "Six thousand yuan a month, not including water, electricity, and the management fee.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d10-s5",
+          "text_original": "这么贵！那你工资一大半都花在房子上了吧？",
+          "pinyin": "Zhème guì! Nà nǐ gōngzī yí dà bàn dōu huā zài fángzi shàng le ba?",
+          "text_translation": "Shunchalik qimmatmi! Unda maoshingning katta qismi uyga ketadi-ku?",
+          "text_translation_ru": "Так дорого! Тогда ведь больше половины зарплаты уходит на жильё?",
+          "text_translation_en": "That expensive! So more than half your salary goes on housing, doesn't it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d10-s6",
+          "text_original": "差不多。但我想节省上下班的时间，这样业余能做更多事情。",
+          "pinyin": "Chàbuduō. Dàn wǒ xiǎng jiéshěng shàngxiàbān de shíjiān, zhèyàng yèyú néng zuò gèng duō shìqing.",
+          "text_translation": "Taxminan shunday. Lekin men ishga borib-kelish vaqtini tejamoqchiman, shunda bo'sh vaqtimda ko'proq ish qila olaman.",
+          "text_translation_ru": "Почти. Но я хочу сэкономить время на дорогу, чтобы в свободное время успевать больше.",
+          "text_translation_en": "Pretty much. But I want to save commuting time, so I can do more in my spare time.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d10-s7",
+          "text_original": "这倒是。你们小区环境怎么样？",
+          "pinyin": "Zhè dàoshì. Nǐmen xiǎoqū huánjìng zěnmeyàng?",
+          "text_translation": "Bu to'g'ri. Turar-joy majmuangizning sharoiti qanday?",
+          "text_translation_ru": "Это да. А как обстановка в вашем жилом комплексе?",
+          "text_translation_en": "That's true. How's the environment in your residential complex?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d10-s8",
+          "text_original": "环境还不错，有个小花园和健身区，但是邻居之间很少来往。",
+          "pinyin": "Huánjìng hái búcuò, yǒu ge xiǎo huāyuán hé jiànshēn qū, dànshì línjū zhījiān hěn shǎo láiwǎng.",
+          "text_translation": "Sharoiti yomon emas, kichik bog' va sport maydonchasi bor, lekin qo'shnilar bir-biri bilan kam aloqa qiladi.",
+          "text_translation_ru": "Обстановка неплохая, есть маленький сад и спортивная зона, но соседи между собой почти не общаются.",
+          "text_translation_en": "The environment is decent — there's a small garden and a gym area — but the neighbors rarely interact.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d10-s9",
+          "text_original": "这也正常，城市里的人一般都比较忙，没时间串门。",
+          "pinyin": "Zhè yě zhèngcháng, chéngshì lǐ de rén yìbān dōu bǐjiào máng, méi shíjiān chuànmén.",
+          "text_translation": "Bu ham tabiiy, shahardagi odamlar odatda bandroq, qo'shninikiga borishga vaqti yo'q.",
+          "text_translation_ru": "Это нормально, городские люди обычно довольно занятые, нет времени ходить в гости.",
+          "text_translation_en": "That's normal — people in the city are usually pretty busy, with no time to drop in on each other.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d10-s10",
+          "text_original": "是啊。有时候觉得大城市虽然方便，但人情味儿淡了很多。",
+          "pinyin": "Shì a. Yǒu shíhou juéde dà chéngshì suīrán fāngbiàn, dàn rénqíngwèir dàn le hěnduō.",
+          "text_translation": "Ha. Ba'zan katta shahar qulay bo'lsa-da, insoniylik, samimiylik ancha kamayganini his qilaman.",
+          "text_translation_ru": "Да. Иногда чувствую, что хоть в большом городе и удобно, но душевности стало гораздо меньше.",
+          "text_translation_en": "Yeah. Sometimes I feel that although the big city is convenient, the human warmth has faded a lot.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d10-s11",
+          "text_original": "你会想搬回郊区或者老家吗？",
+          "pinyin": "Nǐ huì xiǎng bān huí jiāoqū huòzhě lǎojiā ma?",
+          "text_translation": "Chekkaga yoki ona yurtingga qaytib ko'chishni xohlaysanmi?",
+          "text_translation_ru": "Тебе не хочется переехать обратно в пригород или на родину?",
+          "text_translation_en": "Would you want to move back to the suburbs or your hometown?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d10-s12",
+          "text_original": "偶尔会想，但习惯了这边的生活节奏，回去反而觉得适应不了。",
+          "pinyin": "Ǒu'ěr huì xiǎng, dàn xíguàn le zhè biān de shēnghuó jiézòu, huíqù fǎn'ér juéde shìyìng bù liǎo.",
+          "text_translation": "Goho xohlayman, lekin bu yerdagi hayot sur'atiga o'rganib qolganman, qaytsam aksincha moslasha olmaydigandek tuyuladi.",
+          "text_translation_ru": "Иногда хочется, но я привык к здешнему ритму жизни, и, вернувшись, наоборот, чувствую, что не смогу приспособиться.",
+          "text_translation_en": "Occasionally, but I've gotten used to the pace of life here, and going back I'd actually feel I couldn't adapt.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d10-s13",
+          "text_original": "城市生活就是这样，很难放下便捷，但又要忍受高成本和疏离感。",
+          "pinyin": "Chéngshì shēnghuó jiùshì zhèyàng, hěn nán fàngxià biànjié, dàn yòu yào rěnshòu gāo chéngběn hé shūlí gǎn.",
+          "text_translation": "Shahar hayoti shunaqa, qulaylikdan voz kechish qiyin, lekin yuqori xarajat va begonalashuv hissini ham chidashga to'g'ri keladi.",
+          "text_translation_ru": "Городская жизнь такая и есть: трудно отказаться от удобства, но приходится мириться с высокими затратами и чувством отчуждения.",
+          "text_translation_en": "Urban life is like that — it's hard to give up the convenience, but you have to put up with high costs and a sense of alienation.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d10-s14",
+          "text_original": "对，所以我现在尽量平衡工作和生活，周末会去公园或者咖啡馆放松。",
+          "pinyin": "Duì, suǒyǐ wǒ xiànzài jǐnliàng pínghéng gōngzuò hé shēnghuó, zhōumò huì qù gōngyuán huòzhě kāfēiguǎn fàngsōng.",
+          "text_translation": "To'g'ri, shuning uchun hozir ish va hayotni imkon qadar muvozanatlashtirishga harakat qilaman, dam olish kunlari bog' yoki kafega borib dam olaman.",
+          "text_translation_ru": "Да, поэтому сейчас я стараюсь по возможности балансировать работу и жизнь, по выходным хожу в парк или кафе расслабиться.",
+          "text_translation_en": "Right, so now I try to balance work and life as much as I can — on weekends I go to a park or a café to relax.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d10-s15",
+          "text_original": "挺好的。在城市里找到适合自己的方式很重要。",
+          "pinyin": "Tǐng hǎo de. Zài chéngshì lǐ zhǎodào shìhé zìjǐ de fāngshì hěn zhòngyào.",
+          "text_translation": "Juda yaxshi. Shaharda o'zingga mos usulni topish juda muhim.",
+          "text_translation_ru": "Это здорово. В городе очень важно найти подходящий именно тебе способ жить.",
+          "text_translation_en": "That's great. Finding a way that suits you in the city is really important.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d10-s16",
+          "text_original": "是啊，总要学会适应环境，而不是抱怨环境。",
+          "pinyin": "Shì a, zǒng yào xuéhuì shìyìng huánjìng, ér búshì bàoyuàn huánjìng.",
+          "text_translation": "Ha, har doim muhitga moslashishni o'rganish kerak, undan shikoyat qilishni emas.",
+          "text_translation_ru": "Да, нужно учиться приспосабливаться к среде, а не жаловаться на неё.",
+          "text_translation_en": "Yeah, you always have to learn to adapt to your environment rather than complain about it.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
