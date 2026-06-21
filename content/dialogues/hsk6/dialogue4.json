@@ -1,0 +1,148 @@
+{
+  "id": "hsk6-dialogue4",
+  "slug": "social-media-vs-real-life",
+  "title": "社交媒体与真实生活",
+  "pinyin": "Shèjiāo méitǐ yǔ zhēnshí shēnghuó",
+  "titleTranslation": "Ijtimoiy tarmoq va haqiqiy hayot",
+  "titleTranslation_ru": "Соцсети и реальная жизнь",
+  "titleTranslation_en": "Social Media vs. Real Life",
+  "level": 6,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "摆拍",
+    "精心",
+    "修图",
+    "副作用",
+    "高光",
+    "低谷",
+    "抑郁",
+    "虚假",
+    "亲密感",
+    "加剧",
+    "孤独",
+    "规矩",
+    "回归",
+    "属性",
+    "主角",
+    "刻意"
+  ],
+  "sections": [
+    {
+      "id": "h6d4-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d4-s1",
+          "text_original": "我昨天刷朋友圈，看到你发的旅行照片了，拍得特别漂亮！是真的去了还是专门摆拍的？",
+          "pinyin": "Wǒ zuótiān shuā péngyouquān, kàn dào nǐ fā de lǚxíng zhàopiàn le, pāi de tèbié piàoliang! Shì zhēn de qù le háishì zhuānmén bǎipāi de?",
+          "text_translation": "Kecha do'stlar davrasini ko'rib, sen joylagan sayohat suratlaringni ko'rdim, juda chiroyli olibsan! Rostdan bordingmi yoki ataylab poza berib olganmiding?",
+          "text_translation_ru": "Вчера листал ленту и увидел твои фото из путешествия — снято очень красиво! Ты правда туда ездил или это специально постановочные кадры?",
+          "text_translation_en": "Yesterday I was scrolling my feed and saw the travel photos you posted — they look gorgeous! Did you actually go, or were they staged shots?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d4-s2",
+          "text_original": "大部分是真的，但我承认发朋友圈的照片确实精心修过。谁不想展示自己最好的一面呢？",
+          "pinyin": "Dà bùfen shì zhēn de, dàn wǒ chéngrèn fā péngyouquān de zhàopiàn quèshí jīngxīn xiū guo. Shuí bù xiǎng zhǎnshì zìjǐ zuì hǎo de yí miàn ne?",
+          "text_translation": "Ko'pchiligi rost, lekin tan olaman, davraga joylagan suratlarni rostdan puxta tahrirlaganman. Kim o'zining eng yaxshi tomonini ko'rsatishni xohlamaydi?",
+          "text_translation_ru": "Большая часть — правда, но признаю: фото, которые я выкладываю, действительно тщательно отретушированы. Кто не хочет показать себя с лучшей стороны?",
+          "text_translation_en": "Most of it is real, but I admit the photos I post are indeed carefully retouched. Who doesn't want to show their best side?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d4-s3",
+          "text_original": "这个我理解。不过有时候刷朋友圈久了，会忍不住跟别人比较，觉得自己的生活太普通了。",
+          "pinyin": "Zhè ge wǒ lǐjiě. Búguò yǒu shíhou shuā péngyouquān jiǔ le, huì rěnbúzhù gēn biérén bǐjiào, juéde zìjǐ de shēnghuó tài pǔtōng le.",
+          "text_translation": "Buni tushunaman. Lekin ba'zan do'stlar davrasini uzoq ko'rsang, beixtiyor o'zingni boshqalar bilan solishtirasan, o'z hayoting juda oddiydek tuyuladi.",
+          "text_translation_ru": "Это я понимаю. Но иногда, долго листая ленту, невольно начинаешь сравнивать себя с другими и кажется, что твоя жизнь слишком обычная.",
+          "text_translation_en": "I understand that. But sometimes after scrolling the feed for a while, you can't help comparing yourself to others and feel your own life is too ordinary.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d4-s4",
+          "text_original": "这恰恰是社交媒体的副作用。大家只展示高光时刻，很少有人分享低谷和烦恼。",
+          "pinyin": "Zhè qiàqià shì shèjiāo méitǐ de fùzuòyòng. Dàjiā zhǐ zhǎnshì gāoguāng shíkè, hěn shǎorén fēnxiǎng dīgǔ hé fánnǎo.",
+          "text_translation": "Bu aynan ijtimoiy tarmoqning nojo'ya ta'siri. Hamma faqat eng yorqin lahzalarni ko'rsatadi, tushkun davr va tashvishni kam odam baham ko'radi.",
+          "text_translation_ru": "Это как раз побочный эффект соцсетей. Все показывают только звёздные моменты, и мало кто делится спадами и переживаниями.",
+          "text_translation_en": "That's exactly the side effect of social media. Everyone only shows their highlight moments, and few people share their low points and worries.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d4-s5",
+          "text_original": "你说得对。我有个朋友，朋友圈看起来活得特别精彩，后来我才知道她那段时间其实很抑郁。",
+          "pinyin": "Nǐ shuō de duì. Wǒ yǒu ge péngyou, péngyouquān kàn qǐlái huó de tèbié jīngcǎi, hòulái wǒ cái zhīdào tā nà duàn shíjiān qíshí hěn yìyù.",
+          "text_translation": "To'g'ri aytasan. Bir do'stim bor, davrasida hayoti juda g'aroyib ko'rinardi, keyin bilsam, u o'sha paytda aslida juda tushkun holatda ekan.",
+          "text_translation_ru": "Ты прав. У меня есть подруга, у которой в ленте жизнь выглядела особенно яркой, а потом я узнал, что в тот период она на самом деле была в сильной депрессии.",
+          "text_translation_en": "You're right. I have a friend whose feed made her life look especially vibrant, and only later did I learn she was actually quite depressed during that time.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d4-s6",
+          "text_original": "这种现象太普遍了。社交媒体让人产生了虚假的亲密感，实际上却加剧了孤独。",
+          "pinyin": "Zhè zhǒng xiànxiàng tài pǔbiàn le. Shèjiāo méitǐ ràng rén chǎnshēng le xūjiǎ de qīnmì gǎn, shíjì shàng què jiājù le gūdú.",
+          "text_translation": "Bunday hodisa juda keng tarqalgan. Ijtimoiy tarmoq odamda soxta yaqinlik hissini uyg'otadi, aslida esa yolg'izlikni kuchaytiradi.",
+          "text_translation_ru": "Это явление слишком распространено. Соцсети создают у людей ложное чувство близости, а на деле лишь усиливают одиночество.",
+          "text_translation_en": "This phenomenon is far too common. Social media creates a false sense of intimacy, while in reality it intensifies loneliness.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d4-s7",
+          "text_original": "你觉得我们应该怎么平衡线上和线下的生活？",
+          "pinyin": "Nǐ juéde wǒmen yīnggāi zěnme pínghéng xiànshàng hé xiànxià de shēnghuó?",
+          "text_translation": "Seningcha biz onlayn va oflayn hayotni qanday muvozanatlashtirishimiz kerak?",
+          "text_translation_ru": "Как ты думаешь, как нам следует балансировать жизнь онлайн и офлайн?",
+          "text_translation_en": "How do you think we should balance our online and offline lives?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d4-s8",
+          "text_original": "我给自己定了个规矩：周末尽量少刷手机，多跟现实中的人面对面交流。",
+          "pinyin": "Wǒ gěi zìjǐ dìng le ge guījǔ: zhōumò jǐnliàng shǎo shuā shǒujī, duō gēn xiànshí zhōng de rén miànduìmiàn jiāoliú.",
+          "text_translation": "Men o'zimga bir qoida belgiladim: dam olish kunlari imkon qadar telefonni kam ko'rib, real hayotdagi odamlar bilan yuzma-yuz ko'proq muloqot qilish.",
+          "text_translation_ru": "Я установил себе правило: по выходным как можно меньше сидеть в телефоне и больше общаться с реальными людьми лицом к лицу.",
+          "text_translation_en": "I set myself a rule: on weekends, use my phone as little as possible and communicate face to face with real people more.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d4-s9",
+          "text_original": "这个习惯很好。我觉得社交媒体应该回归工具属性，而不是成为生活的主角。",
+          "pinyin": "Zhè ge xíguàn hěn hǎo. Wǒ juéde shèjiāo méitǐ yīnggāi huíguī gōngjù shǔxìng, ér bú shì chéngwéi shēnghuó de zhǔjué.",
+          "text_translation": "Bu odat juda yaxshi. Menimcha ijtimoiy tarmoq o'zining vosita xususiyatiga qaytishi kerak, hayotning bosh qahramoniga aylanmasligi lozim.",
+          "text_translation_ru": "Хорошая привычка. По-моему, соцсети должны вернуться к своей роли инструмента, а не становиться главным героем жизни.",
+          "text_translation_en": "That's a good habit. I think social media should return to being a tool, rather than becoming the main character of our lives.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d4-s10",
+          "text_original": "对。我最近开始记录真实的日常，不再刻意修图，反而觉得轻松了很多。",
+          "pinyin": "Duì. Wǒ zuìjìn kāishǐ jìlù zhēnshí de rìcháng, bú zài kèyì xiūtú, fǎn'ér juéde qīngsōng le hěnduō.",
+          "text_translation": "To'g'ri. Yaqinda haqiqiy kundalik hayotimni yozib bora boshladim, endi ataylab rasm tahrirlamayman, aksincha o'zimni ancha yengil his qilyapman.",
+          "text_translation_ru": "Да. В последнее время я начал фиксировать реальную повседневность, перестал намеренно ретушировать фото — и, наоборот, чувствую себя гораздо свободнее.",
+          "text_translation_en": "Right. Lately I've started documenting my real everyday life, no longer deliberately retouching photos — and I actually feel much more relaxed.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d4-s11",
+          "text_original": "这需要勇气。毕竟大家习惯了展示完美，突然变得真实反而需要适应。",
+          "pinyin": "Zhè xūyào yǒngqì. Bìjìng dàjiā xíguàn le zhǎnshì wánměi, tūrán biàn de zhēnshí fǎn'ér xūyào shìyìng.",
+          "text_translation": "Bu jasorat talab qiladi. Axir hamma benuqsonlikni ko'rsatishga o'rganib qolgan, to'satdan haqqoniy bo'lib qolish aksincha moslashishni talab qiladi.",
+          "text_translation_ru": "Для этого нужна смелость. Ведь все привыкли демонстрировать совершенство, и резко стать настоящим, наоборот, требует привыкания.",
+          "text_translation_en": "That takes courage. After all, everyone is used to displaying perfection, so suddenly becoming authentic actually takes some getting used to.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d4-s12",
+          "text_original": "说到底，生活是过给自己的，不是演给别人看的。",
+          "pinyin": "Shuō dào dǐ, shēnghuó shì guò gěi zìjǐ de, bú shì yǎn gěi biérén kàn de.",
+          "text_translation": "Oxir-oqibat, hayot o'zing uchun yashaladigan narsa, boshqalarga ko'rsatish uchun o'ynaladigan tomosha emas.",
+          "text_translation_ru": "В конце концов, жизнь проживают для себя, а не разыгрывают на показ для других.",
+          "text_translation_en": "At the end of the day, life is lived for yourself, not performed for others to watch.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
