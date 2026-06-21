@@ -1,0 +1,194 @@
+{
+  "id": "hsk6-dialogue40",
+  "slug": "gift-giving",
+  "title": "送礼物",
+  "pinyin": "Sòng lǐwù",
+  "titleTranslation": "Sovg'a berish",
+  "titleTranslation_ru": "Дарение подарков",
+  "titleTranslation_en": "Gift Giving",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "推选",
+    "集体",
+    "香水",
+    "保温杯",
+    "购物卡",
+    "私人",
+    "排除",
+    "凑",
+    "香薰蜡烛",
+    "纪念",
+    "支架",
+    "无线键盘",
+    "精致",
+    "套装",
+    "书签",
+    "简约",
+    "贺卡"
+  ],
+  "sections": [
+    {
+      "id": "h6d40-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d40-s1",
+          "text_original": "你这两天怎么老在网上逛？又在买东西？",
+          "pinyin": "Nǐ zhè liǎng tiān zěnme lǎo zài wǎngshàng guàng? Yòu zài mǎi dōngxi?",
+          "text_translation": "Bu kunlarda nega doim internetda aylanyapsan? Yana nimadir sotib olyapsanmi?",
+          "text_translation_ru": "Чего это ты последние дни всё время сидишь в интернете? Опять что-то покупаешь?",
+          "text_translation_en": "Why have you been browsing online so much these past couple of days? Buying something again?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d40-s2",
+          "text_original": "下周是小王的生日，办公室要集体送礼物。我被推选出来负责挑选。",
+          "pinyin": "Xià zhōu shì Xiǎo Wáng de shēngrì, bàngōngshì yào jítǐ sòng lǐwù. Wǒ bèi tuīxuǎn chūlái fùzé tiāoxuǎn.",
+          "text_translation": "Keyingi hafta Syao Vanning tug'ilgan kuni, ofis jamoa bo'lib sovg'a beryapti. Tanlash uchun meni saylab qo'yishdi.",
+          "text_translation_ru": "На следующей неделе день рождения Сяо Вана, офис коллективно дарит подарок. Меня выбрали ответственным за выбор.",
+          "text_translation_en": "Next week is Xiao Wang's birthday, and the office is giving a group gift. I was chosen to be in charge of picking it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d40-s3",
+          "text_original": "集体礼物确实难选。既要考虑预算，又要让大家满意。",
+          "pinyin": "Jítǐ lǐwù quèshí nán xuǎn. Jì yào kǎolǜ yùsuàn, yòu yào ràng dàjiā mǎnyì.",
+          "text_translation": "Jamoaviy sovg'ani tanlash chindan ham qiyin. Ham byudjetni hisobga olish, ham hammani rozi qilish kerak.",
+          "text_translation_ru": "Коллективный подарок действительно трудно выбрать. Нужно и о бюджете подумать, и чтобы все остались довольны.",
+          "text_translation_en": "A group gift really is hard to choose. You have to consider the budget and keep everyone happy.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d40-s4",
+          "text_original": "太难了！我已经问了十几个人，每个人给的建议都不一样。有人建议送香水，有人说送保温杯，还有人说要送购物卡。",
+          "pinyin": "Tài nán le! Wǒ yǐjīng wèn le shí jǐ ge rén, měi ge rén gěi de jiànyì dōu bù yīyàng. Yǒurén jiànyì sòng xiāngshuǐ, yǒurén shuō sòng bǎowēn bēi, hái yǒurén shuō yào sòng gòuwù kǎ.",
+          "text_translation": "Juda qiyin! Men allaqachon o'n necha kishidan so'radim, har kim har xil maslahat beradi. Kimdir atir berishni, kimdir termos stakan berishni, yana kimdir xarid kartasi berishni aytadi.",
+          "text_translation_ru": "Так трудно! Я уже спросил с десяток человек, и у каждого свой совет. Кто-то предлагает подарить духи, кто-то — термокружку, а кто-то говорит подарить подарочную карту.",
+          "text_translation_en": "It's so hard! I've already asked a dozen people, and everyone gives different advice. Some suggest perfume, some say a thermos, and others say a gift card.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d40-s5",
+          "text_original": "送香水确实太私人了，万一她不喜欢那个味道就尴尬了。",
+          "pinyin": "Sòng xiāngshuǐ quèshí tài sīrén le, wànyī tā bù xǐhuān nà ge wèidào jiù gāngà le.",
+          "text_translation": "Atir berish chindan ham juda shaxsiy, agar u o'sha hidni yoqtirmasa noqulay bo'ladi.",
+          "text_translation_ru": "Дарить духи и правда слишком личное: вдруг ей не понравится этот аромат — будет неловко.",
+          "text_translation_en": "Giving perfume really is too personal — if she doesn't like the scent it'll be awkward.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d40-s6",
+          "text_original": "所以我排除了香水。保温杯又太普通了，她桌上已经有一个了。",
+          "pinyin": "Suǒyǐ wǒ páichú le xiāngshuǐ. Bǎowēn bēi yòu tài pǔtōng le, tā zhuō shàng yǐjīng yǒu yí ge le.",
+          "text_translation": "Shuning uchun atirni chiqarib tashladim. Termos stakan esa juda oddiy, uning stolida allaqachon bittasi bor.",
+          "text_translation_ru": "Поэтому духи я исключил. А термокружка слишком банальна — у неё на столе уже есть одна.",
+          "text_translation_en": "So I ruled out perfume. A thermos is too ordinary — she already has one on her desk.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d40-s7",
+          "text_original": "那你们预算是多少？",
+          "pinyin": "Nà nǐmen yùsuàn shì duōshao?",
+          "text_translation": "Unda byudjetingiz qancha?",
+          "text_translation_ru": "А какой у вас бюджет?",
+          "text_translation_en": "So what's your budget?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d40-s8",
+          "text_original": "每人凑五十块，一共十个人，预算就是五百。",
+          "pinyin": "Měi rén còu wǔshí kuài, yígòng shí ge rén, yùsuàn jiùshì wǔbǎi.",
+          "text_translation": "Har kim ellik yuandan qo'shadi, jami o'n kishi, byudjet besh yuz bo'ladi.",
+          "text_translation_ru": "Каждый скидывается по пятьдесят юаней, всего десять человек, бюджет — пятьсот.",
+          "text_translation_en": "Everyone chips in fifty yuan, ten people in total, so the budget is five hundred.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d40-s9",
+          "text_original": "五百的话，可以买一套不错的香薰蜡烛，或者一束花加一个蛋糕。",
+          "pinyin": "Wǔbǎi dehuà, kěyǐ mǎi yī tào búcuò de xiāngxūn làzhú, huòzhě yī shù huā jiā yí ge dàngāo.",
+          "text_translation": "Besh yuzga yaxshigina xushbo'y shamlar to'plamini, yoki bir guldasta gulga qo'shib bitta tort olish mumkin.",
+          "text_translation_ru": "На пятьсот можно купить неплохой набор ароматических свечей или букет цветов с тортом.",
+          "text_translation_en": "With five hundred you could buy a nice set of scented candles, or a bouquet of flowers plus a cake.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d40-s10",
+          "text_original": "花和蛋糕太常规了，而且吃完就没了，没有纪念意义。",
+          "pinyin": "Huā hé dàngāo tài chángguī le, érqiě chī wán jiù méi le, méiyǒu jìniàn yìyì.",
+          "text_translation": "Gul va tort juda odatiy, qolaversa yeb bo'lgach tugaydi, yodgorlik ma'nosi yo'q.",
+          "text_translation_ru": "Цветы и торт слишком банальны, к тому же съел — и нет ничего, никакой памяти не остаётся.",
+          "text_translation_en": "Flowers and a cake are too conventional, and once they're eaten they're gone — no keepsake value.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d40-s11",
+          "text_original": "那你可以考虑送办公用品，比如一个好看的电脑支架或者无线键盘。她每天都要用的东西，实用又有心意。",
+          "pinyin": "Nà nǐ kěyǐ kǎolǜ sòng bàngōng yòngpǐn, bǐrú yí ge hǎokàn de diànnǎo zhījià huòzhě wúxiàn jiànpán. Tā měitiān dōu yào yòng de dōngxi, shíyòng yòu yǒu xīnyì.",
+          "text_translation": "Unda ofis buyumlari berishni o'ylab ko'rsang bo'ladi, masalan chiroyli kompyuter tirgagi yoki simsiz klaviatura. Har kuni ishlatadigan narsasi, ham foydali, ham samimiy.",
+          "text_translation_ru": "Тогда можешь подумать о канцелярских вещах, например, красивая подставка для ноутбука или беспроводная клавиатура. То, чем она пользуется каждый день, — и практично, и с душой.",
+          "text_translation_en": "Then you could consider office supplies, like a nice laptop stand or a wireless keyboard. Something she uses every day — practical and thoughtful.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d40-s12",
+          "text_original": "这个主意不错！我之前看到一款很精致的笔记本套装，带笔和书签，设计也很简约。她平时喜欢写字，应该会喜欢。",
+          "pinyin": "Zhè ge zhǔyi búcuò! Wǒ zhīqián kàn dào yī kuǎn hěn jīngzhì de bǐjìběn tàozhuāng, dài bǐ hé shūqiān, shèjì yě hěn jiǎnyuē. Tā píngshí xǐhuān xiě zì, yīnggāi huì xǐhuān.",
+          "text_translation": "Bu fikr yaxshi! Men avval juda nafis bir bloknot to'plamini ko'rgandim, ruchka va xatcho'p bilan, dizayni ham juda sodda. U odatda yozishni yoqtiradi, yoqsa kerak.",
+          "text_translation_ru": "Хорошая идея! Я раньше видел один очень изящный набор блокнотов — с ручкой и закладкой, дизайн тоже лаконичный. Она любит писать от руки, должно понравиться.",
+          "text_translation_en": "That's a good idea! I saw a really exquisite notebook set earlier, with a pen and a bookmark, and a minimalist design. She likes to write by hand, so she should like it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d40-s13",
+          "text_original": "听起来很适合她。价格多少？",
+          "pinyin": "Tīng qǐlái hěn shìhé tā. Jiàgé duōshao?",
+          "text_translation": "Unga juda mos kelyaptiganga o'xshaydi. Narxi qancha?",
+          "text_translation_ru": "Звучит, как будто ей очень подойдёт. А цена какая?",
+          "text_translation_en": "Sounds very suitable for her. How much is it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d40-s14",
+          "text_original": "四百多，刚好在预算范围内。剩下的钱可以再买一张贺卡，大家每人写一句话。",
+          "pinyin": "Sìbǎi duō, gānghǎo zài yùsuàn fànwéi nèi. Shèngxià de qián kěyǐ zài mǎi yī zhāng hèkǎ, dàjiā měi rén xiě yī jù huà.",
+          "text_translation": "To'rt yuzdan sal ko'p, aynan byudjet doirasida. Qolgan pulga yana bitta tabrik otkritkasi olib, hamma bittadan gap yozsa bo'ladi.",
+          "text_translation_ru": "Чуть больше четырёхсот, как раз в пределах бюджета. На оставшиеся деньги можно купить ещё поздравительную открытку, и каждый напишет по фразе.",
+          "text_translation_en": "A bit over four hundred, right within budget. With the leftover money we can buy a greeting card and everyone writes a line.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d40-s15",
+          "text_original": "这个方案很完美。既有物质价值，又有情感温度。",
+          "pinyin": "Zhè ge fāng'àn hěn wánměi. Jì yǒu wùzhì jiàzhí, yòu yǒu qínggǎn wēndù.",
+          "text_translation": "Bu reja juda mukammal. Ham moddiy qiymati bor, ham hissiy iliqligi.",
+          "text_translation_ru": "Этот вариант идеален. В нём есть и материальная ценность, и эмоциональное тепло.",
+          "text_translation_en": "This plan is perfect. It has both material value and emotional warmth.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d40-s16",
+          "text_original": "希望她会喜欢吧。送礼物这件事，选对了大家都开心，选错了真的很尴尬。",
+          "pinyin": "Xīwàng tā huì xǐhuān ba. Sòng lǐwù zhè jiàn shì, xuǎn duì le dàjiā dōu kāixīn, xuǎn cuò le zhēn de hěn gāngà.",
+          "text_translation": "Umid qilamanki, unga yoqadi. Sovg'a berish degani — to'g'ri tanlasang hamma xursand, noto'g'ri tanlasang chindan ham juda noqulay.",
+          "text_translation_ru": "Надеюсь, ей понравится. С подарками так: выберешь правильно — все рады, ошибёшься — действительно очень неловко.",
+          "text_translation_en": "I hope she'll like it. With gift-giving, if you pick right everyone's happy, but if you pick wrong it's really awkward.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d40-s17",
+          "text_original": "你已经做得很好了。毕竟心意比价格更重要。",
+          "pinyin": "Nǐ yǐjīng zuò de hěn hǎo le. Bìjìng xīnyì bǐ jiàgé gèng zhòngyào.",
+          "text_translation": "Sen allaqachon juda yaxshi qilding. Axir samimiyat narxdan muhimroq.",
+          "text_translation_ru": "Ты уже отлично справился. В конце концов, искренность важнее цены.",
+          "text_translation_en": "You've already done a great job. After all, the thought matters more than the price.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
