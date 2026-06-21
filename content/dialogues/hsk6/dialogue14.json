@@ -1,0 +1,173 @@
+{
+  "id": "hsk6-dialogue14",
+  "slug": "ai-bias-accountability",
+  "title": "人工智能与伦理",
+  "pinyin": "Réngōng zhìnéng yǔ lúnlǐ",
+  "titleTranslation": "Sun'iy intellekt va axloq",
+  "titleTranslation_ru": "Искусственный интеллект и этика",
+  "titleTranslation_en": "AI Bias & Accountability",
+  "level": 6,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "筛选",
+    "简历",
+    "淘汰",
+    "偏见",
+    "算法",
+    "歧视",
+    "误解",
+    "客观",
+    "训练",
+    "决策",
+    "界定",
+    "真空",
+    "归属",
+    "重大",
+    "辅助",
+    "干预",
+    "伦理",
+    "审查",
+    "补救",
+    "监管",
+    "法案",
+    "底线",
+    "反噬"
+  ],
+  "sections": [
+    {
+      "id": "h6d14-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d14-s1",
+          "text_original": "你最近看到那个新闻了吗？有公司用AI筛选简历，结果淘汰了很多女性候选人。",
+          "pinyin": "Nǐ zuìjìn kàn dào nà ge xīnwén le ma? Yǒu gōngsī yòng AI shāixuǎn jiǎnlì, jiéguǒ táotài le hěnduō nǚxìng hòuxuǎn rén.",
+          "text_translation": "Yaqinda o'sha yangilikni ko'rdingmi? Bir kompaniya AI yordamida rezyumelarni saralabdi, natijada ko'plab ayol nomzodlarni chetga chiqaribdi.",
+          "text_translation_ru": "Ты видел недавно ту новость? Одна компания отбирала резюме с помощью ИИ, и в итоге отсеяла множество кандидатов-женщин.",
+          "text_translation_en": "Did you see that news recently? A company used AI to screen resumes, and ended up eliminating a lot of female candidates.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d14-s2",
+          "text_original": "看到了。据说是因为AI学习了公司过去十年的招聘数据，而这些数据本身就带有性别偏见。",
+          "pinyin": "Kàn dào le. Jùshuō shì yīnwèi AI xuéxí le gōngsī guòqù shí nián de zhāopìn shùjù, ér zhèxiē shùjù běnshēn jiù dài yǒu xìngbié piānjiàn.",
+          "text_translation": "Ko'rdim. Aytishlaricha, AI kompaniyaning so'nggi o'n yillik ishga olish ma'lumotlaridan o'rgangan, bu ma'lumotlarning o'zida esa gender xurofoti bor ekan.",
+          "text_translation_ru": "Видел. Говорят, это потому, что ИИ обучался на данных о найме компании за последние десять лет, а в этих данных уже была заложена гендерная предвзятость.",
+          "text_translation_en": "I did. Apparently it's because the AI learned from the company's hiring data over the past ten years, and that data itself carried gender bias.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d14-s3",
+          "text_original": "这不就是「算法歧视」吗？AI学的是人类历史上的偏见，然后把这些偏见放大。",
+          "pinyin": "Zhè bú jiùshì 'suànfǎ qíshì' ma? AI xué de shì rénlèi lìshǐ shàng de piānjiàn, ránhòu bǎ zhèxiē piānjiàn fàngdà.",
+          "text_translation": "Bu «algoritmik kamsitish»ning o'zi-ku? AI insoniyat tarixidagi xurofotlarni o'rganadi, keyin esa o'sha xurofotlarni kuchaytiradi.",
+          "text_translation_ru": "Так это же «алгоритмическая дискриминация»? ИИ учится на предвзятостях из истории человечества, а потом эти предвзятости усиливает.",
+          "text_translation_en": "Isn't that just \"algorithmic discrimination\"? The AI learns humanity's historical biases, then amplifies them.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d14-s4",
+          "text_original": "更可怕的是，很多公司根本不知道自己的算法有问题。他们以为AI是客观的，不会出错。",
+          "pinyin": "Gèng kěpà de shì, hěnduō gōngsī gēnběn bù zhīdào zìjǐ de suànfǎ yǒu wèntí. Tāmen yǐwéi AI shì kèguān de, bú huì chūcuò.",
+          "text_translation": "Bundan ham qo'rqinchlisi, ko'p kompaniyalar o'z algoritmida muammo borligini umuman bilmaydi. Ular AI xolis, xato qilmaydi deb o'ylaydi.",
+          "text_translation_ru": "Ещё страшнее то, что многие компании вообще не знают, что с их алгоритмом что-то не так. Они думают, что ИИ объективен и не ошибается.",
+          "text_translation_en": "What's scarier is that many companies have no idea their algorithm is flawed. They assume AI is objective and won't make mistakes.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d14-s5",
+          "text_original": "这就是最大的误解。AI的「客观」取决于训练它的数据。如果数据有偏见，结论就不可能公平。",
+          "pinyin": "Zhè jiùshì zuì dà de wùjiě. AI de 'kèguān' qǔjué yú xùnliàn tā de shùjù. Rúguǒ shùjù yǒu piānjiàn, jiélùn jiù bù kěnéng gōngpíng.",
+          "text_translation": "Mana shu eng katta tushunmovchilik. AIning «xolisligi» uni o'rgatgan ma'lumotlarga bog'liq. Agar ma'lumotda xurofot bo'lsa, xulosa adolatli bo'lishi mumkin emas.",
+          "text_translation_ru": "Вот это и есть самое большое заблуждение. «Объективность» ИИ зависит от данных, на которых его обучали. Если в данных есть предвзятость, выводы не могут быть справедливыми.",
+          "text_translation_en": "That's the biggest misconception. AI's \"objectivity\" depends on the data it's trained on. If the data is biased, the conclusions can't possibly be fair.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d14-s6",
+          "text_original": "那谁来为AI的决策负责？如果AI犯了错，是开发者的责任，还是使用者的责任？",
+          "pinyin": "Nà shuí lái wèi AI de juécè fùzé? Rúguǒ AI fàn le cuò, shì kāifā zhě de zérèn, háishì shǐyòng zhě de zérèn?",
+          "text_translation": "Unda AIning qarorlari uchun kim javob beradi? Agar AI xato qilsa, bu ishlab chiquvchining aybimi yoki foydalanuvchiningmi?",
+          "text_translation_ru": "А кто отвечает за решения ИИ? Если ИИ ошибся, это ответственность разработчика или пользователя?",
+          "text_translation_en": "So who is responsible for the AI's decisions? If the AI makes a mistake, is it the developer's responsibility or the user's?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d14-s7",
+          "text_original": "目前法律上还没有明确的界定。这导致了一个「责任真空」——出了问题谁都说不清楚。",
+          "pinyin": "Mùqián fǎlǜ shàng hái méiyǒu míngquè de jièdìng. Zhè dǎozhì le yí ge 'zérèn zhēnkōng' — chū le wèntí shuí dōu shuō bù qīngchu.",
+          "text_translation": "Hozircha qonunda aniq belgilab qo'yilmagan. Bu «mas'uliyat bo'shlig'i»ni keltirib chiqaradi — muammo chiqsa, hech kim aniq ayta olmaydi.",
+          "text_translation_ru": "Сейчас в законе нет чёткого определения. Это порождает «вакуум ответственности» — когда что-то случается, никто не может толком объяснить.",
+          "text_translation_en": "At the moment there's no clear legal definition. This creates an \"accountability vacuum\" — when something goes wrong, no one can say for sure.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d14-s8",
+          "text_original": "我前两天看到一篇报道，说自动驾驶汽车出了事故，到底是司机负责还是汽车厂商负责？",
+          "pinyin": "Wǒ qián liǎng tiān kàn dào yì piān bàodào, shuō zìdòng jiàshǐ qìchē chū le shìgù, dàodǐ shì sījī fùzé háishì qìchē chǎngshāng fùzé?",
+          "text_translation": "Men ikki kun oldin bir maqola o'qidim, unda o'zi yuradigan avtomobil avariyaga uchrasa, oxir-oqibat haydovchi javob beradimi yoki avtomobil ishlab chiqaruvchimi, deyilgan.",
+          "text_translation_ru": "Я пару дней назад читал репортаж: если беспилотный автомобиль попадает в аварию, кто в итоге отвечает — водитель или автопроизводитель?",
+          "text_translation_en": "I read an article a couple of days ago: if a self-driving car has an accident, who is liable in the end — the driver or the carmaker?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d14-s9",
+          "text_original": "这就是AI伦理的核心问题之一——责任归属。人类能不能把重大决策完全交给机器？",
+          "pinyin": "Zhè jiùshì AI lúnlǐ de héxīn wèntí zhī yī — zérèn guīshǔ. Rénlèi néng bùnéng bǎ zhòngdà juécè wánquán jiāo gěi jīqì?",
+          "text_translation": "Bu AI axloqining asosiy masalalaridan biri — mas'uliyatning kimga tegishliligi. Inson muhim qarorlarni butunlay mashinaga topshira oladimi?",
+          "text_translation_ru": "Это один из ключевых вопросов этики ИИ — кому принадлежит ответственность. Может ли человек полностью передать важные решения машине?",
+          "text_translation_en": "That's one of the core questions of AI ethics — the attribution of responsibility. Can humans hand over major decisions entirely to machines?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d14-s10",
+          "text_original": "我觉得不能。AI可以做辅助决策，但最终的决定权应该掌握在人类手里。",
+          "pinyin": "Wǒ juéde bùnéng. AI kěyǐ zuò fǔzhù juécè, dàn zuìzhōng de juédìng quán yīnggāi zhǎngwò zài rénlèi shǒu lǐ.",
+          "text_translation": "Menimcha topshira olmaydi. AI yordamchi qaror chiqarishi mumkin, lekin yakuniy qaror huquqi inson qo'lida bo'lishi kerak.",
+          "text_translation_ru": "Думаю, нет. ИИ может помогать в принятии решений, но окончательное право решать должно оставаться в руках человека.",
+          "text_translation_en": "I don't think so. AI can assist in decision-making, but the final decision-making power should stay in human hands.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d14-s11",
+          "text_original": "同意。可是在实际操作中，很多AI决策已经自动执行了，人类根本来不及干预。",
+          "pinyin": "Tóngyì. Kěshì zài shíjì cāozuò zhōng, hěnduō AI juécè yǐjīng zìdòng zhíxíng le, rénlèi gēnběn lái bù jí gānyù.",
+          "text_translation": "Roziman. Lekin amalda ko'p AI qarorlari allaqachon avtomatik bajariladi, inson aralashishga umuman ulgurmaydi.",
+          "text_translation_ru": "Согласен. Но на практике многие решения ИИ уже выполняются автоматически, и человек просто не успевает вмешаться.",
+          "text_translation_en": "Agreed. But in actual practice, many AI decisions are already executed automatically, and humans have no time to intervene at all.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d14-s12",
+          "text_original": "这就意味着我们需要在技术开发阶段就加入伦理审查，而不是等出问题再补救。",
+          "pinyin": "Zhè jiù yìwèi zhe wǒmen xūyào zài jìshù kāifā jiēduàn jiù jiārù lúnlǐ shěnchá, ér bú shì děng chū wèntí zài bǔjiù.",
+          "text_translation": "Bu shuni anglatadiki, biz axloqiy tekshiruvni texnologiya ishlab chiqish bosqichidayoq kiritishimiz kerak, muammo chiqqach tuzatishni kutib o'tirmasdan.",
+          "text_translation_ru": "Это значит, что нам нужно вводить этическую экспертизу уже на этапе разработки технологии, а не латать дыры после того, как проблема возникла.",
+          "text_translation_en": "That means we need to build in ethical review at the technology-development stage, rather than waiting to patch things up after problems arise.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d14-s13",
+          "text_original": "听说欧盟已经在推动AI监管法案了，要求高风险AI系统必须通过安全评估。",
+          "pinyin": "Tīngshuō Ōuméng yǐjīng zài tuīdòng AI jiānguǎn fǎ'àn le, yāoqiú gāo fēngxiǎn AI xìtǒng bìxū tōngguò ānquán pínggū.",
+          "text_translation": "Eshitishimcha, Yevropa Ittifoqi AIni tartibga soluvchi qonun loyihasini allaqachon ilgari surmoqda, yuqori xavfli AI tizimlari xavfsizlik baholashidan o'tishini talab qilyapti.",
+          "text_translation_ru": "Слышал, ЕС уже продвигает законопроект о регулировании ИИ, требующий, чтобы ИИ-системы высокого риска обязательно проходили оценку безопасности.",
+          "text_translation_en": "I heard the EU is already pushing an AI regulation bill, requiring high-risk AI systems to pass a safety assessment.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d14-s14",
+          "text_original": "这是个好方向。技术发展不能没有底线，否则迟早会反噬人类。",
+          "pinyin": "Zhè shì ge hǎo fāngxiàng. Jìshù fāzhǎn bùnéng méiyǒu dǐxiàn, fǒuzé chízǎo huì fǎnshì rénlèi.",
+          "text_translation": "Bu yaxshi yo'nalish. Texnologiya rivoji qizil chiziqsiz bo'lmasligi kerak, aks holda u ertami-kechmi insoniyatga teskari zarba beradi.",
+          "text_translation_ru": "Это хорошее направление. У развития технологий не должно быть отсутствия пределов, иначе рано или поздно оно обернётся против человечества.",
+          "text_translation_en": "That's a good direction. Technological development can't be without a bottom line, otherwise sooner or later it will backfire on humanity.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
