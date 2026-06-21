@@ -1144,7 +1144,7 @@ body {
 .dr-dict__input {
   width: 100%;
   font-size: 22px;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: center;
   padding: 12px 14px;
   border: 2px solid #d7dbe0;
@@ -1152,6 +1152,13 @@ body {
   background: #fff;
   color: #1a1a1a;
   outline: none;
+  /* textarea: wrap long sentences, no manual resize, no horizontal scroll */
+  font-family: inherit;
+  resize: none;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  min-height: 88px;
+  display: block;
 }
 .dr-dict__input:focus { border-color: var(--color-accent, #dc2626); }
 .dr-dict__input--wrong { border-color: #ef4444; background: #fef2f2; }

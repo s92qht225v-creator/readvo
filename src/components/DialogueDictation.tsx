@@ -45,6 +45,15 @@ export function DialogueDictation({ lines, language, level = 1 }: { lines: Dicta
   const [results, setResults] = useState<boolean[]>([]); // first-try correct per line
   const [loadingAudio, setLoadingAudio] = useState(false);
 
+  // Auto-grow the typing textarea so the full (wrapped) sentence stays visible.
+  const inputRef = useRef<HTMLTextAreaElement | null>(null);
+  useEffect(() => {
+    const el = inputRef.current;
+    if (!el) return;
+    el.style.height = 'auto';
+    el.style.height = `${el.scrollHeight}px`;
+  }, [typed, mode, idx]);
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
     const a = new Audio();
@@ -282,14 +291,17 @@ export function DialogueDictation({ lines, language, level = 1 }: { lines: Dicta
         </>
       ) : (
         <>
-          {/* Typing input — learner types the line with a Chinese IME */}
+          {/* Typing input — learner types the line with a Chinese IME. A
+              textarea (not <input>) so long sentences wrap and stay fully
+              visible; Enter is left to the IME, submit is the Check button. */}
           <div className="dr-dict__type">
-            <input
+            <textarea
+              ref={inputRef}
               className={`dr-dict__input dr-dict__input--${status}`}
               value={typed}
               onChange={(e) => { setTyped(e.target.value); if (status === 'wrong') setStatus('idle'); }}
-              onKeyDown={(e) => { if (e.key === 'Enter') checkTyped(); }}
               disabled={done}
+              rows={2}
               placeholder={T(language, 'Eshitganingizni yozing…', 'Введите услышанное…', 'Type what you hear…')}
               lang="zh"
               autoComplete="off"
