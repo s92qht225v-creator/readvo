@@ -1,0 +1,143 @@
+{
+  "id": "hsk5-dialogue25",
+  "slug": "childrens-education",
+  "title": "子女教育",
+  "pinyin": "Zǐnǚ jiàoyù",
+  "titleTranslation": "Farzand tarbiyasi",
+  "titleTranslation_ru": "Воспитание детей",
+  "titleTranslation_en": "Children's Education",
+  "level": 5,
+  "tag": "oila",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "操心",
+    "中考",
+    "发挥",
+    "常见",
+    "盯着",
+    "关注",
+    "缓解",
+    "效率",
+    "调整",
+    "引导",
+    "代替"
+  ],
+  "sections": [
+    {
+      "id": "h5d25-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d25-s1",
+          "text_original": "最近怎么看你总是很累的样子？是不是工作太忙了？",
+          "pinyin": "Zuìjìn zěnme kàn nǐ zǒng shì hěn lèi de yàngzi? Shì bú shì gōngzuò tài máng le?",
+          "text_translation": "Yaqinda nega doim charchagandek ko'rinasan? Ish juda ko'paydimi?",
+          "text_translation_ru": "Почему ты в последнее время всё время выглядишь усталым? Слишком много работы?",
+          "text_translation_en": "Why have you been looking so tired lately? Is work too busy?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d25-s2",
+          "text_original": "工作还好，主要是操心孩子的学习。他马上要中考了，成绩一直不太稳定。",
+          "pinyin": "Gōngzuò hái hǎo, zhǔyào shì cāoxīn háizi de xuéxí. Tā mǎshàng yào zhōngkǎo le, chéngjī yìzhí bú tài wěndìng.",
+          "text_translation": "Ish yaxshi, asosan bolaning o'qishi haqida qayg'uraman. U yaqinda o'rta maktab imtihonini topshiradi, baholari hadeb beqaror.",
+          "text_translation_ru": "С работой нормально, в основном переживаю из-за учёбы ребёнка. Ему скоро сдавать экзамен в старшую школу, а оценки всё время нестабильны.",
+          "text_translation_en": "Work is fine — mostly I'm worried about my child's studies. He has his high school entrance exam soon, and his grades have been unsteady.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d25-s3",
+          "text_original": "孩子压力大，家长也压力大。你有没有跟他好好聊过？",
+          "pinyin": "Háizi yālì dà, jiāzhǎng yě yālì dà. Nǐ yǒu méiyǒu gēn tā hǎohao liáo guo?",
+          "text_translation": "Bolaga ham bosim katta, ota-onaga ham bosim katta. U bilan yaxshilab gaplashib ko'rganmiding?",
+          "text_translation_ru": "У ребёнка большое давление, и у родителей тоже. Ты с ним по-нормальному разговаривал?",
+          "text_translation_en": "The kid is under pressure, and so are the parents. Have you had a good talk with him?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d25-s4",
+          "text_original": "聊过，但他不太愿意多说。我就怕他心理压力太大，影响考试发挥。",
+          "pinyin": "Liáo guo, dàn tā bú tài yuànyì duō shuō. Wǒ jiù pà tā xīnlǐ yālì tài dà, yǐngxiǎng kǎoshì fāhuī.",
+          "text_translation": "Gaplashdim, lekin u ko'p gapirishni unchalik xohlamaydi. Ruhiy bosimi juda kuchli bo'lib, imtihondagi ko'rsatkichiga ta'sir qilishidan qo'rqaman.",
+          "text_translation_ru": "Разговаривал, но он не очень хочет много говорить. Я боюсь, что психологическое давление слишком велико и повлияет на то, как он сдаст экзамен.",
+          "text_translation_en": "I have, but he doesn't really want to talk much. I'm just afraid the mental pressure is too much and will affect how he performs on the exam.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d25-s5",
+          "text_original": "这种情况很常见。我觉得家长不能只盯着成绩，也要关注孩子的心理健康。",
+          "pinyin": "Zhè zhǒng qíngkuàng hěn chángjiàn. Wǒ juéde jiāzhǎng bùnéng zhǐ dīng zhe chéngjī, yě yào guānzhù háizi de xīnlǐ jiànkāng.",
+          "text_translation": "Bunday holat juda keng tarqalgan. Menimcha ota-ona faqat baholarga tikilib qolmasligi, bolaning ruhiy salomatligiga ham e'tibor berishi kerak.",
+          "text_translation_ru": "Такая ситуация очень распространена. По-моему, родители не должны зацикливаться только на оценках — нужно следить и за психическим здоровьем ребёнка.",
+          "text_translation_en": "This situation is very common. I think parents can't just fixate on grades — they also need to pay attention to the child's mental health.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d25-s6",
+          "text_original": "你说得对。我也想通了，成绩不是唯一的，重要的是他健康成长。",
+          "pinyin": "Nǐ shuō de duì. Wǒ yě xiǎngtōng le, chéngjī bú shì wéiyī de, zhòngyào de shì tā jiànkāng chéngzhǎng.",
+          "text_translation": "To'g'ri aytasan. Men ham tushunib yetdim, baho yagona narsa emas, muhimi uning sog'lom o'sishi.",
+          "text_translation_ru": "Ты прав. Я тоже это понял: оценки — не единственное, главное, чтобы он рос здоровым.",
+          "text_translation_en": "You're right. I've come to terms with it too — grades aren't everything; what matters is that he grows up healthy.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d25-s7",
+          "text_original": "那你有考虑过给他报一些兴趣班，缓解一下压力吗？",
+          "pinyin": "Nà nǐ yǒu kǎolǜ guo gěi tā bào yì xiē xìngqù bān, huǎnjiě yí xià yālì ma?",
+          "text_translation": "Unda bosimni yengillashtirish uchun unga biror qiziqish to'garagiga yozdirishni o'ylab ko'rganmiding?",
+          "text_translation_ru": "А ты не думал записать его в какие-нибудь кружки по интересам, чтобы снять напряжение?",
+          "text_translation_en": "So have you considered signing him up for some hobby classes to ease the pressure?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d25-s8",
+          "text_original": "他喜欢打篮球，我给他报了一个周末篮球班。运动能让他放松一些。",
+          "pinyin": "Tā xǐhuān dǎ lánqiú, wǒ gěi tā bào le yí ge zhōumò lánqiú bān. Yùndòng néng ràng tā fàngsōng yì xiē.",
+          "text_translation": "U basketbol o'ynashni yoqtiradi, men uni dam olish kunlari basketbol to'garagiga yozdirdim. Sport uni biroz bo'shashtiradi.",
+          "text_translation_ru": "Он любит играть в баскетбол, и я записал его на баскетбол по выходным. Спорт помогает ему немного расслабиться.",
+          "text_translation_en": "He likes basketball, so I signed him up for a weekend basketball class. Exercise helps him relax a bit.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d25-s9",
+          "text_original": "那就好。有时候换个环境，换个心情，学习效率反而会提高。",
+          "pinyin": "Nà jiù hǎo. Yǒu shíhou huàn ge huánjìng, huàn ge xīnqíng, xuéxí xiàolǜ fǎn'ér huì tígāo.",
+          "text_translation": "Bo'pti, yaxshi. Ba'zan muhitni, kayfiyatni o'zgartirsang, o'qish samaradorligi aksincha oshadi.",
+          "text_translation_ru": "Вот и хорошо. Иногда смена обстановки и настроения, наоборот, повышает эффективность учёбы.",
+          "text_translation_en": "That's good. Sometimes a change of environment and mood actually improves study efficiency.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d25-s10",
+          "text_original": "希望如此吧。我也在调整自己的心态，不再给他太多压力。",
+          "pinyin": "Xīwàng rúcǐ ba. Wǒ yě zài tiáozhěng zìjǐ de xīntài, bú zài gěi tā tài duō yālì.",
+          "text_translation": "Shunday bo'lsa kerak deb umid qilaman. Men ham o'z kayfiyatimni moslab, unga endi ortiqcha bosim bermayapman.",
+          "text_translation_ru": "Надеюсь, что так. Я и сам корректирую свой настрой и больше не давлю на него.",
+          "text_translation_en": "I hope so. I'm adjusting my own mindset too, and no longer putting too much pressure on him.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d25-s11",
+          "text_original": "孩子有自己的路要走，家长能做的是引导，不是代替。",
+          "pinyin": "Háizi yǒu zìjǐ de lù yào zǒu, jiāzhǎng néng zuò de shì yǐndǎo, bú shì dàitì.",
+          "text_translation": "Bolaning o'z yo'li bor, ota-ona qila oladigan narsa — yo'naltirish, o'rnini bosish emas.",
+          "text_translation_ru": "У ребёнка свой путь, и всё, что могут родители, — направлять, а не заменять.",
+          "text_translation_en": "A child has his own path to walk — what parents can do is guide, not replace.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d25-s12",
+          "text_original": "这句话说到我心里去了。谢谢你，跟你聊完心里舒服多了。",
+          "pinyin": "Zhè jù huà shuō dào wǒ xīnli qù le. Xièxie nǐ, gēn nǐ liáo wán xīnli shūfu duō le.",
+          "text_translation": "Bu gap yuragimga yetib bordi. Rahmat senga, sen bilan gaplashgach ko'nglim ancha yengil tortdi.",
+          "text_translation_ru": "Эти слова попали мне прямо в душу. Спасибо тебе, после разговора с тобой стало гораздо легче.",
+          "text_translation_en": "Those words really struck a chord with me. Thank you — I feel much better after talking with you.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
