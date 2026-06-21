@@ -1,0 +1,181 @@
+{
+  "id": "hsk5-dialogue35",
+  "slug": "housing-rental-crisis",
+  "title": "租房难",
+  "pinyin": "Zūfáng nán",
+  "titleTranslation": "Uy ijarasi muammosi",
+  "titleTranslation_ru": "Сложности с арендой жилья",
+  "titleTranslation_en": "The Housing Rental Crisis",
+  "level": 5,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "租房",
+    "市场",
+    "紧张",
+    "房东",
+    "预算",
+    "吃力",
+    "单间",
+    "合租",
+    "室友",
+    "运气",
+    "乱七八糟",
+    "性价比",
+    "通勤"
+  ],
+  "sections": [
+    {
+      "id": "h5d35-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d35-s1",
+          "text_original": "你最近不是说要搬家吗？找到合适的房子了吗？",
+          "pinyin": "Nǐ zuìjìn bú shì shuō yào bānjiā ma? Zhǎodào héshì de fángzi le ma?",
+          "text_translation": "Yaqinda ko'chmoqchiman demaganmiding? Mos uy topdingmi?",
+          "text_translation_ru": "Ты же недавно говорил, что переезжаешь? Нашёл подходящее жильё?",
+          "text_translation_en": "Weren't you saying you were going to move? Have you found a suitable place?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d35-s2",
+          "text_original": "别提了，找了快一个月了，还没找到满意的。不是太贵，就是太远。",
+          "pinyin": "Bié tí le, zhǎo le kuài yí ge yuè le, hái méi zhǎodào mǎnyì de. Bú shì tài guì, jiùshì tài yuǎn.",
+          "text_translation": "Aytmang-da, qariyb bir oydan beri qidiraman, hali ham ko'nglimga mosini topmadim. Yo juda qimmat, yo juda uzoq.",
+          "text_translation_ru": "И не говори, ищу уже почти месяц, а подходящего так и не нашёл. То слишком дорого, то слишком далеко.",
+          "text_translation_en": "Don't even mention it — I've been looking for almost a month and still haven't found anything good. It's either too expensive or too far.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d35-s3",
+          "text_original": "现在租房市场确实很紧张，价格涨得特别快。",
+          "pinyin": "Xiànzài zūfáng shìchǎng quèshí hěn jǐnzhāng, jiàgé zhǎng de tèbié kuài.",
+          "text_translation": "Hozir ijara bozori rostdan juda tig'iz, narxlar juda tez oshyapti.",
+          "text_translation_ru": "Сейчас рынок аренды действительно очень напряжённый, цены растут особенно быстро.",
+          "text_translation_en": "The rental market really is tight right now — prices are rising especially fast.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d35-s4",
+          "text_original": "对。我现在的房租从两千五涨到了三千二，房东还要继续涨。",
+          "pinyin": "Duì. Wǒ xiànzài de fángzū cóng liǎngqiān wǔ zhǎng dào le sānqiān èr, fángdōng hái yào jìxù zhǎng.",
+          "text_translation": "To'g'ri. Hozirgi ijaram ikki yarim mingdan uch ming ikki yuzga ko'tarildi, uy egasi yana oshirmoqchi.",
+          "text_translation_ru": "Да. Моя аренда выросла с двух тысяч пятисот до трёх тысяч двухсот, а хозяин хочет поднять ещё.",
+          "text_translation_en": "Right. My rent went from twenty-five hundred up to thirty-two hundred, and the landlord wants to raise it further.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d35-s5",
+          "text_original": "那你为什么不继续租？",
+          "pinyin": "Nà nǐ wèishénme bù jìxù zū?",
+          "text_translation": "Unda nega ijarani davom ettirmaysan?",
+          "text_translation_ru": "А почему ты не продолжишь снимать это жильё?",
+          "text_translation_en": "So why don't you keep renting it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d35-s6",
+          "text_original": "再涨就超过我的预算了。每个月房租就占工资的一半，实在太吃力。",
+          "pinyin": "Zài zhǎng jiù chāoguò wǒ de yùsuàn le. Měi ge yuè fángzū jiù zhàn gōngzī de yí bàn, shízài tài chīlì.",
+          "text_translation": "Yana oshsa byudjetimdan oshib ketadi. Har oy ijara maoshning yarmini egallaydi, rostdan juda og'ir.",
+          "text_translation_ru": "Если поднимут ещё, это превысит мой бюджет. Аренда каждый месяц съедает половину зарплаты — реально тяжело.",
+          "text_translation_en": "If it goes up more, it'll exceed my budget. The rent already takes half my salary every month — it's really a strain.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d35-s7",
+          "text_original": "那你现在看中的房子大概多少钱？",
+          "pinyin": "Nà nǐ xiànzài kàn zhòng de fángzi dàgài duōshao qián?",
+          "text_translation": "Unda hozir ko'nglingga o'tirgan uy taxminan qancha?",
+          "text_translation_ru": "А сколько примерно стоит жильё, которое тебе сейчас приглянулось?",
+          "text_translation_en": "So about how much is the place you've got your eye on now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d35-s8",
+          "text_original": "稍微好一点的单间都要三千以上，合租的话能便宜一些，但是又怕遇到不好的室友。",
+          "pinyin": "Shāowēi hǎo yì diǎn de dānjiān dōu yào sānqiān yǐshàng, hézū dehuà néng piányi yì xiē, dànshì yòu pà yùdào bù hǎo de shìyǒu.",
+          "text_translation": "Bir oz yaxshiroq yakka xona ham uch mingdan oshadi, birgalikda ijaraga olsa arzonroq bo'ladi, lekin yomon xonadoshga duch kelishdan qo'rqaman.",
+          "text_translation_ru": "Чуть приличная отдельная комната — уже больше трёх тысяч; если снимать совместно, выйдет дешевле, но боюсь нарваться на плохого соседа.",
+          "text_translation_en": "Even a slightly better single room costs over three thousand; sharing would be cheaper, but I'm afraid of ending up with a bad roommate.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d35-s9",
+          "text_original": "合租确实看运气。你之前跟人合租过吗？",
+          "pinyin": "Hézū quèshí kàn yùnqi. Nǐ zhīqián gēn rén hézū guo ma?",
+          "text_translation": "Birgalikda ijara rostdan omadga bog'liq. Avval birov bilan ijarada turganmiding?",
+          "text_translation_ru": "Совместная аренда и правда как повезёт. Ты раньше снимал жильё с кем-то?",
+          "text_translation_en": "Sharing really is a matter of luck. Have you shared a rental with someone before?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d35-s10",
+          "text_original": "合租过，遇到一个特别不爱干净的人，厨房和卫生间都弄得乱七八糟的。",
+          "pinyin": "Hézū guo, yùdào yí ge tèbié bú ài gānjìng de rén, chúfáng hé wèishēngjiān dōu nòng de luànqībāzāo de.",
+          "text_translation": "Turganman, ozodalikni umuman yoqtirmaydigan bir odamga duch keldim, oshxona ham, hojatxona ham ostin-ustun bo'lib yotardi.",
+          "text_translation_ru": "Снимал, и попался очень нечистоплотный человек — кухня и санузел были в полном бардаке.",
+          "text_translation_en": "I have, and I ran into someone really untidy — the kitchen and bathroom were always a complete mess.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d35-s11",
+          "text_original": "那确实让人头疼。你觉得租房最难的是什么？",
+          "pinyin": "Nà quèshí ràng rén tóuténg. Nǐ juéde zūfáng zuì nán de shì shénme?",
+          "text_translation": "Bu rostdan boshni og'ritadi. Seningcha uy ijaraga olishda eng qiyini nima?",
+          "text_translation_ru": "Это и правда головная боль. Как ты думаешь, что в аренде жилья самое сложное?",
+          "text_translation_en": "That really is a headache. What do you think is the hardest part of renting?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d35-s12",
+          "text_original": "最难的是性价比。交通方便的房子太贵，便宜的房子又离公司太远。",
+          "pinyin": "Zuì nán de shì xìngjiàbǐ. Jiāotōng fāngbiàn de fángzi tài guì, piányi de fángzi yòu lí gōngsī tài yuǎn.",
+          "text_translation": "Eng qiyini — narx-sifat nisbati. Transport qulay uylar juda qimmat, arzonlari esa ishxonadan juda uzoq.",
+          "text_translation_ru": "Самое трудное — соотношение цены и качества. Жильё с удобным транспортом слишком дорогое, а дешёвое — слишком далеко от работы.",
+          "text_translation_en": "The hardest part is the value for money. Places with convenient transport are too expensive, and cheap places are too far from work.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d35-s13",
+          "text_original": "你现在有什么打算？",
+          "pinyin": "Nǐ xiànzài yǒu shénme dǎsuàn?",
+          "text_translation": "Hozir qanday rejang bor?",
+          "text_translation_ru": "Какие у тебя сейчас планы?",
+          "text_translation_en": "What's your plan now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d35-s14",
+          "text_original": "我再找两周，如果还是找不到合适的，就考虑搬到离公司远一点但便宜的地方。",
+          "pinyin": "Wǒ zài zhǎo liǎng zhōu, rúguǒ háishì zhǎo bú dào héshì de, jiù kǎolǜ bān dào lí gōngsī yuǎn yì diǎn dàn piányi de dìfang.",
+          "text_translation": "Yana ikki hafta qidiraman, agar baribir mosini topa olmasam, ishxonadan biroz uzoqroq, lekin arzon joyga ko'chishni o'ylayman.",
+          "text_translation_ru": "Поищу ещё две недели, и если так и не найду подходящего, подумаю о переезде в место подальше от работы, но подешевле.",
+          "text_translation_en": "I'll look for another two weeks; if I still can't find anything suitable, I'll consider moving somewhere a bit farther from work but cheaper.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d35-s15",
+          "text_original": "那通勤时间不就变长了吗？",
+          "pinyin": "Nà tōngqín shíjiān bú jiù biàn cháng le ma?",
+          "text_translation": "Unda ishga qatnov vaqti uzayib ketmaydimi?",
+          "text_translation_ru": "Но тогда ведь время на дорогу до работы увеличится?",
+          "text_translation_en": "But then won't your commute get longer?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d35-s16",
+          "text_original": "没办法，总比把钱都花在房租上强。",
+          "pinyin": "Méi bànfǎ, zǒng bǐ bǎ qián dōu huā zài fángzū shàng qiáng.",
+          "text_translation": "Iloji yo'q, baribir hamma pulni ijaraga sarflashdan ko'ra yaxshiroq.",
+          "text_translation_ru": "Ничего не поделаешь — всё равно лучше, чем тратить все деньги на аренду.",
+          "text_translation_en": "Can't be helped — it still beats spending all my money on rent.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
