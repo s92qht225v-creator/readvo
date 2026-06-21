@@ -1,0 +1,208 @@
+{
+  "id": "hsk5-dialogue17",
+  "slug": "travel-culture",
+  "title": "旅行文化",
+  "pinyin": "Lǚxíng wénhuà",
+  "titleTranslation": "Sayohat madaniyati",
+  "titleTranslation_ru": "Культура путешествий",
+  "titleTranslation_en": "Travel Culture",
+  "level": 5,
+  "tag": "sayohat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "假期",
+    "人间仙境",
+    "流连忘返",
+    "自由行",
+    "跟团",
+    "节奏",
+    "体验",
+    "过桥米线",
+    "鲜花饼",
+    "野生菌",
+    "诱人",
+    "整理",
+    "收获",
+    "地区",
+    "差异",
+    "少数民族",
+    "村落",
+    "保留",
+    "习俗",
+    "意义",
+    "开阔眼界",
+    "珍惜"
+  ],
+  "sections": [
+    {
+      "id": "h5d17-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d17-s1",
+          "text_original": "你这次假期去了哪儿？看你朋友圈的照片好像很有意思。",
+          "pinyin": "Nǐ zhè cì jiàqī qù le nǎr? Kàn nǐ péngyouquān de zhàopiàn hǎoxiàng hěn yǒuyìsi.",
+          "text_translation": "Bu safargi ta'tilda qayerga bording? Do'stlar davrangdagi rasmlaringga qaraganda juda qiziqarliga o'xshaydi.",
+          "text_translation_ru": "Куда ты ездил в этот отпуск? По фотографиям в твоей ленте кажется, было очень интересно.",
+          "text_translation_en": "Where did you go this holiday? The photos in your feed looked really interesting.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d17-s2",
+          "text_original": "我去了云南，待了大概十天，走了昆明、大理和丽江。",
+          "pinyin": "Wǒ qù le Yúnnán, dāi le dàgài shí tiān, zǒu le Kūnmíng, Dàlǐ hé Lìjiāng.",
+          "text_translation": "Yunnanga bordim, taxminan o'n kun turdim, Kunmin, Dali va Lijiangni aylandim.",
+          "text_translation_ru": "Я ездил в Юньнань, пробыл около десяти дней, объехал Куньмин, Дали и Лицзян.",
+          "text_translation_en": "I went to Yunnan, stayed about ten days, and visited Kunming, Dali, and Lijiang.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d17-s3",
+          "text_original": "云南确实是个好地方，很多人都说那里是「人间仙境」。",
+          "pinyin": "Yúnnán quèshí shì ge hǎo dìfang, hěnduō rén dōu shuō nàli shì 'rénjiān xiānjìng'.",
+          "text_translation": "Yunnan rostdan ajoyib joy, ko'p odam u yerni «yer yuzidagi jannat» deydi.",
+          "text_translation_ru": "Юньнань и правда прекрасное место, многие называют его «земным раем».",
+          "text_translation_en": "Yunnan really is a great place — many people call it an \"earthly paradise.\"",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d17-s4",
+          "text_original": "真的特别美！尤其是大理的洱海和丽江的古城，让人流连忘返。",
+          "pinyin": "Zhēn de tèbié měi! Yóuqí shì Dàlǐ de Ěrhǎi hé Lìjiāng de gǔchéng, ràng rén liúlián wàngfǎn.",
+          "text_translation": "Rostdan juda go'zal! Ayniqsa Dalidagi Erhai ko'li va Lijiangdagi qadimiy shahar, odamni maftun qilib ketgisini keltirmaydi.",
+          "text_translation_ru": "Действительно невероятно красиво! Особенно озеро Эрхай в Дали и старый город в Лицзяне — невозможно оторваться.",
+          "text_translation_en": "It really is beautiful! Especially Erhai Lake in Dali and the old town of Lijiang — you don't want to leave.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d17-s5",
+          "text_original": "你这次是自由行还是跟团？",
+          "pinyin": "Nǐ zhè cì shì zìyóu xíng háishì gēntuán?",
+          "text_translation": "Bu safar mustaqil sayohat qildingmi yoki turga qo'shildingmi?",
+          "text_translation_ru": "Ты в этот раз путешествовал сам или с тургруппой?",
+          "text_translation_en": "Did you travel independently this time or with a tour group?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d17-s6",
+          "text_original": "自由行。我觉得跟团太赶了，而且很多购物点浪费时间。",
+          "pinyin": "Zìyóu xíng. Wǒ juéde gēntuán tài gǎn le, érqiě hěnduō gòuwù diǎn làngfèi shíjiān.",
+          "text_translation": "Mustaqil sayohat. Menimcha turga qo'shilsang juda shoshilinch bo'ladi, ustiga ko'p xarid joylari vaqtni behuda sarflaydi.",
+          "text_translation_ru": "Сам. По-моему, с группой слишком спешно, да и куча торговых точек впустую тратит время.",
+          "text_translation_en": "Independently. I think group tours are too rushed, and a lot of shopping stops waste time.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d17-s7",
+          "text_original": "我也更喜欢自由行，可以按自己的节奏走。",
+          "pinyin": "Wǒ yě gèng xǐhuān zìyóu xíng, kěyǐ àn zìjǐ de jiézòu zǒu.",
+          "text_translation": "Men ham mustaqil sayohatni ko'proq yoqtiraman, o'z sur'atingda harakatlanasan.",
+          "text_translation_ru": "Я тоже больше люблю самостоятельные поездки — можно двигаться в своём ритме.",
+          "text_translation_en": "I prefer independent travel too — you can go at your own pace.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d17-s8",
+          "text_original": "对。而且能在当地多待几天，慢慢体验当地的生活。",
+          "pinyin": "Duì. Érqiě néng zài dāngdì duō dāi jǐ tiān, mànmàn tǐyàn dāngdì de shēnghuó.",
+          "text_translation": "To'g'ri. Qolaversa o'sha yerda bir necha kun ko'proq turib, mahalliy hayotni asta-sekin his qilsang bo'ladi.",
+          "text_translation_ru": "Да. К тому же можно задержаться на месте на несколько дней и не спеша прочувствовать местную жизнь.",
+          "text_translation_en": "Right. And you can stay a few more days in a place and slowly experience local life.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d17-s9",
+          "text_original": "你在那边有没有吃到什么特别的食物？",
+          "pinyin": "Nǐ zài nàbiān yǒu méiyǒu chī dào shénme tèbié de shíwù?",
+          "text_translation": "U yerda biron o'ziga xos taom yeb ko'rdingmi?",
+          "text_translation_ru": "Ты там пробовал какую-нибудь особенную еду?",
+          "text_translation_en": "Did you eat anything special over there?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d17-s10",
+          "text_original": "吃了很多当地特色，比如过桥米线、鲜花饼和野生菌火锅。",
+          "pinyin": "Chī le hěnduō dāngdì tèsè, bǐrú guòqiáo mǐxiàn, xiānhuā bǐng hé yěshēng jùn huǒguō.",
+          "text_translation": "Ko'p mahalliy taomlarni yedim, masalan «ko'prik osha» guruch ugrasi, gul kulchasi va yovvoyi qo'ziqorinli huoguo.",
+          "text_translation_ru": "Попробовал много местных деликатесов, например рисовую лапшу «через мост», цветочное печенье и хого с дикими грибами.",
+          "text_translation_en": "I ate a lot of local specialties, like cross-bridge rice noodles, flower cakes, and wild mushroom hot pot.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d17-s11",
+          "text_original": "听起来太诱人了！你有拍美食照片吗？",
+          "pinyin": "Tīng qǐlái tài yòurén le! Nǐ yǒu pāi měishí zhàopiàn ma?",
+          "text_translation": "Juda ishtahani ochadigan eshitiladi! Taom rasmlarini olganmiding?",
+          "text_translation_ru": "Звучит очень аппетитно! Ты фотографировал еду?",
+          "text_translation_en": "That sounds so tempting! Did you take food photos?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d17-s12",
+          "text_original": "拍了好多，等我整理好发给你看看。",
+          "pinyin": "Pāi le hǎoduō, děng wǒ zhěnglǐ hǎo fā gěi nǐ kàn kan.",
+          "text_translation": "Ko'p oldim, saralab bo'lganimdan keyin senga yuboraman, ko'rasan.",
+          "text_translation_ru": "Наснимал много, как разберу — отправлю тебе посмотреть.",
+          "text_translation_en": "I took loads — once I've sorted them I'll send them for you to see.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d17-s13",
+          "text_original": "你这次旅行最大的收获是什么？",
+          "pinyin": "Nǐ zhè cì lǚxíng zuì dà de shōuhuò shì shénme?",
+          "text_translation": "Bu safargi sayohatdan eng katta yutug'ing nima bo'ldi?",
+          "text_translation_ru": "Что стало для тебя самым большим приобретением в этой поездке?",
+          "text_translation_en": "What was the biggest takeaway from this trip?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d17-s14",
+          "text_original": "我觉得是感受到了不同地区的文化差异。同样是中国人，但生活习惯和语言差很远。",
+          "pinyin": "Wǒ juéde shì gǎnshòu dào le bùtóng dìqū de wénhuà chāyì. Tóngyàng shì Zhōngguó rén, dàn shēnghuó xíguàn hé yǔyán chà hěn yuǎn.",
+          "text_translation": "Menimcha turli hududlardagi madaniy farqlarni his qilganim. Bir xil xitoylik bo'lsa-da, turmush odatlari va tili juda farq qiladi.",
+          "text_translation_ru": "Думаю, это то, что я прочувствовал культурные различия разных регионов. Все китайцы, но образ жизни и язык очень разнятся.",
+          "text_translation_en": "I think it was sensing the cultural differences between regions. They're all Chinese, yet their lifestyles and language differ a lot.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d17-s15",
+          "text_original": "确实，云南的少数民族文化特别丰富。",
+          "pinyin": "Quèshí, Yúnnán de shǎoshù mínzú wénhuà tèbié fēngfù.",
+          "text_translation": "Rostdan, Yunnanning ozchilik millatlar madaniyati nihoyatda boy.",
+          "text_translation_ru": "Действительно, культура национальных меньшинств Юньнани особенно богата.",
+          "text_translation_en": "Indeed, Yunnan's ethnic minority cultures are especially rich.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d17-s16",
+          "text_original": "对，我还去了几个少数民族村落，看到他们保留了很多传统习俗。",
+          "pinyin": "Duì, wǒ hái qù le jǐ ge shǎoshù mínzú cūnluò, kàn dào tāmen bǎoliú le hěnduō chuántǒng xísú.",
+          "text_translation": "To'g'ri, men yana bir nechta ozchilik millat qishloqlariga ham bordim, ular ko'p an'anaviy urf-odatlarni saqlab qolganini ko'rdim.",
+          "text_translation_ru": "Да, я ещё побывал в нескольких деревнях нацменьшинств и увидел, что они сохранили много традиционных обычаев.",
+          "text_translation_en": "Yes, I also visited a few ethnic minority villages and saw that they've preserved many traditional customs.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d17-s17",
+          "text_original": "旅行的意义大概就在于此吧。",
+          "pinyin": "Lǚxíng de yìyì dàgài jiù zàiyú cǐ ba.",
+          "text_translation": "Sayohatning ma'nosi, ehtimol, aynan shunda-da.",
+          "text_translation_ru": "Наверное, в этом и заключается смысл путешествий.",
+          "text_translation_en": "The meaning of travel probably lies exactly in this.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d17-s18",
+          "text_original": "没错。每次旅行都能让自己更开阔眼界，也更懂得珍惜身边的一切。",
+          "pinyin": "Méi cuò. Měi cì lǚxíng dōu néng ràng zìjǐ gèng kāikuò yǎnjiè, yě gèng dǒngde zhēnxī shēnbiān de yíqiè.",
+          "text_translation": "To'g'ri. Har safargi sayohat dunyoqarashni kengaytiradi, atrofdagi hamma narsani qadrlashni ham ko'proq o'rgatadi.",
+          "text_translation_ru": "Верно. Каждое путешествие расширяет кругозор и учит больше ценить всё, что вокруг тебя.",
+          "text_translation_en": "Exactly. Every trip broadens your horizons and helps you cherish everything around you more.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

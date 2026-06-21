@@ -1,0 +1,202 @@
+{
+  "id": "hsk5-dialogue16",
+  "slug": "lifelong-learning",
+  "title": "终身学习",
+  "pinyin": "Zhōngshēn xuéxí",
+  "titleTranslation": "Umrbod o'rganish",
+  "titleTranslation_ru": "Обучение длиною в жизнь",
+  "titleTranslation_en": "Lifelong Learning",
+  "level": 5,
+  "tag": "ta'lim",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "编程",
+    "淘汰",
+    "语法",
+    "逻辑",
+    "思维",
+    "培养",
+    "代码",
+    "抽出时间",
+    "三分钟热度",
+    "放弃",
+    "目标",
+    "项目",
+    "动力",
+    "开发",
+    "沟通",
+    "顺畅",
+    "口语",
+    "机会",
+    "乐趣",
+    "退休",
+    "老年大学",
+    "艺术",
+    "丰富",
+    "晚年",
+    "终身"
+  ],
+  "sections": [
+    {
+      "id": "h5d16-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d16-s1",
+          "text_original": "听说你最近在学编程？都这个年纪了，怎么想起学这个？",
+          "pinyin": "Tīngshuō nǐ zuìjìn zài xué biānchéng? Dōu zhè ge niánjì le, zěnme xiǎng qǐ xué zhè ge?",
+          "text_translation": "Yaqinda dasturlash o'rganyapsan deb eshitdim? Shu yoshda nega buni o'rganishni o'ylab qolding?",
+          "text_translation_ru": "Слышал, ты недавно учишь программирование? В таком возрасте — как тебе вообще пришло в голову этим заняться?",
+          "text_translation_en": "I heard you've been learning programming lately? At your age, what made you decide to study this?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d16-s2",
+          "text_original": "因为觉得现在科技发展太快，不学点新东西很容易被淘汰。",
+          "pinyin": "Yīnwèi juéde xiànzài kējì fāzhǎn tài kuài, bù xué diǎn xīn dōngxi hěn róngyì bèi táotài.",
+          "text_translation": "Chunki hozir texnologiya juda tez rivojlanyapti, biror yangi narsa o'rganmasang osongina saralanib chiqib ketasan.",
+          "text_translation_ru": "Потому что технологии сейчас развиваются слишком быстро — не учишь ничего нового, легко окажешься за бортом.",
+          "text_translation_en": "Because technology develops so fast now that if you don't learn something new, it's easy to get left behind.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d16-s3",
+          "text_original": "那你学得怎么样？编程难吗？",
+          "pinyin": "Nà nǐ xué de zěnmeyàng? Biānchéng nán ma?",
+          "text_translation": "Unda o'rganishing qanday ketyapti? Dasturlash qiyinmi?",
+          "text_translation_ru": "И как у тебя идёт учёба? Программирование сложное?",
+          "text_translation_en": "So how's it going? Is programming hard?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d16-s4",
+          "text_original": "刚开始确实挺难的，语法和逻辑思维都需要重新培养。但现在坚持了几个月，慢慢能看懂一些代码了。",
+          "pinyin": "Gāng kāishǐ quèshí tǐng nán de, yǔfǎ hé luóji sīwéi dōu xūyào chóngxīn péiyǎng. Dàn xiànzài jiānchí le jǐ ge yuè, mànmàn néng kàn dǒng yì xiē dàimǎ le.",
+          "text_translation": "Boshida rostdan ancha qiyin edi, grammatika ham, mantiqiy fikrlash ham qaytadan rivojlantirishni talab qiladi. Lekin endi bir necha oy davom ettirib, asta-sekin ba'zi kodlarni tushunadigan bo'ldim.",
+          "text_translation_ru": "Сначала действительно было трудно: и синтаксис, и логическое мышление приходится заново развивать. Но теперь, продержавшись несколько месяцев, я постепенно начал понимать часть кода.",
+          "text_translation_en": "At first it really was hard — both the syntax and logical thinking needed to be developed from scratch. But after sticking with it for a few months, I can gradually read some code now.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d16-s5",
+          "text_original": "你平时怎么安排学习时间？",
+          "pinyin": "Nǐ píngshí zěnme ānpái xuéxí shíjiān?",
+          "text_translation": "Odatda o'qish vaqtini qanday tashkil qilasan?",
+          "text_translation_ru": "А как ты обычно распределяешь время на учёбу?",
+          "text_translation_en": "How do you usually arrange your study time?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d16-s6",
+          "text_original": "我每天下班后抽出大概一小时来看课和写练习，周末会多一些。",
+          "pinyin": "Wǒ měitiān xiàbān hòu chōuchū dàgài yī xiǎoshí lái kàn kè hé xiě liànxí, zhōumò huì duō yì xiē.",
+          "text_translation": "Har kuni ishdan keyin taxminan bir soat ajratib darslarni ko'raman va mashq yozaman, dam olish kunlari ko'proq bo'ladi.",
+          "text_translation_ru": "Каждый день после работы я выделяю примерно час, чтобы смотреть уроки и писать упражнения, а по выходным побольше.",
+          "text_translation_en": "Every day after work I set aside about an hour to watch lessons and do exercises, and a bit more on weekends.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d16-s7",
+          "text_original": "能坚持下来真不容易。很多人都是三分钟热度。",
+          "pinyin": "Néng jiānchí xiàlái zhēn bù róngyì. Hěnduō rén dōu shì sān fēnzhōng rèdù.",
+          "text_translation": "Davom ettira olish rostdan oson emas. Ko'p odamning qiziqishi qisqa muddatli bo'ladi.",
+          "text_translation_ru": "Удержаться — это действительно непросто. У многих хватает запала на три минуты.",
+          "text_translation_en": "Being able to keep it up really isn't easy. A lot of people only have short-lived enthusiasm.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d16-s8",
+          "text_original": "确实。我刚开始也想放弃，但后来给自己定了个小目标，每个月完成一个项目，这样就有动力了。",
+          "pinyin": "Quèshí. Wǒ gāng kāishǐ yě xiǎng fàngqì, dàn hòulái gěi zìjǐ dìng le ge xiǎo mùbiāo, měi ge yuè wánchéng yī ge xiàngmù, zhèyàng jiù yǒu dònglì le.",
+          "text_translation": "To'g'ri. Men ham boshida voz kechmoqchi bo'ldim, lekin keyin o'zimga kichik maqsad qo'ydim — har oy bitta loyihani tugatish, shunda turtki paydo bo'ldi.",
+          "text_translation_ru": "Действительно. Поначалу я тоже хотел бросить, но потом поставил себе небольшую цель — каждый месяц завершать один проект, и так появилась мотивация.",
+          "text_translation_en": "True. At first I wanted to give up too, but then I set myself a small goal — finishing one project a month — and that gave me motivation.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d16-s9",
+          "text_original": "你觉得学习编程对你的工作有帮助吗？",
+          "pinyin": "Nǐ juéde xuéxí biānchéng duì nǐ de gōngzuò yǒu bāngzhù ma?",
+          "text_translation": "Seningcha dasturlashni o'rganish ishingga yordam beradimi?",
+          "text_translation_ru": "Как ты думаешь, помогает ли изучение программирования твоей работе?",
+          "text_translation_en": "Do you think learning programming helps your work?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d16-s10",
+          "text_original": "有帮助。虽然我不是做开发的，但学了这个以后，跟技术同事沟通顺畅多了。",
+          "pinyin": "Yǒu bāngzhù. Suīrán wǒ bú shì zuò kāifā de, dàn xué le zhè ge yǐhòu, gēn jìshù tóngshì gōutōng shùnchàng duō le.",
+          "text_translation": "Yordam beradi. Garchi men dasturchi bo'lmasam ham, buni o'rgangach, texnik hamkasblar bilan muloqotim ancha ravon bo'ldi.",
+          "text_translation_ru": "Помогает. Хотя я не разработчик, но после того как я этому научился, общение с техническими коллегами стало гораздо более гладким.",
+          "text_translation_en": "It does. Although I'm not a developer, after learning this, communicating with my technical colleagues has become much smoother.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d16-s11",
+          "text_original": "那你除了编程，还想学别的吗？",
+          "pinyin": "Nà nǐ chúle biānchéng, hái xiǎng xué bié de ma?",
+          "text_translation": "Unda dasturlashdan tashqari yana boshqa narsa o'rganmoqchimisan?",
+          "text_translation_ru": "А кроме программирования, ты хочешь учить что-то ещё?",
+          "text_translation_en": "So besides programming, do you want to learn anything else?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d16-s12",
+          "text_original": "还想学英语，尤其是口语。以后如果有机会出国，也能用得上。",
+          "pinyin": "Hái xiǎng xué Yīngyǔ, yóuqí shì kǒuyǔ. Yǐhòu rúguǒ yǒu jīhuì chūguó, yě néng yòng de shàng.",
+          "text_translation": "Yana ingliz tilini, ayniqsa og'zaki nutqni o'rganmoqchiman. Kelajakda chet elga chiqish imkoniyati bo'lsa, asqotadi.",
+          "text_translation_ru": "Ещё хочу учить английский, особенно разговорный. Если в будущем будет возможность поехать за границу, пригодится.",
+          "text_translation_en": "I also want to learn English, especially speaking. If I get the chance to go abroad in the future, it'll come in handy.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d16-s13",
+          "text_original": "活到老学到老，你这个态度值得学习。",
+          "pinyin": "Huó dào lǎo xué dào lǎo, nǐ zhè ge tàidù zhídé xuéxí.",
+          "text_translation": "Umr bo'yi o'rgan — sening bu munosabating o'rganishga arziydi.",
+          "text_translation_ru": "Век живи — век учись; твой подход достоин подражания.",
+          "text_translation_en": "Live and learn — your attitude is worth emulating.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d16-s14",
+          "text_original": "我觉得学习本身就是一种乐趣，不是为了别人，而是为了让自己不断进步。",
+          "pinyin": "Wǒ juéde xuéxí běnshēn jiùshì yì zhǒng lèqù, bú shì wèile biérén, ér shì wèile ràng zìjǐ búduàn jìnbù.",
+          "text_translation": "Menimcha o'rganishning o'zi bir zavq, birov uchun emas, balki o'zimni doimiy rivojlantirish uchun.",
+          "text_translation_ru": "По-моему, учёба сама по себе — это удовольствие, не ради других, а чтобы постоянно совершенствоваться.",
+          "text_translation_en": "I think learning itself is a pleasure — not for others, but to keep improving myself.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d16-s15",
+          "text_original": "那你现在对退休以后有什么计划吗？",
+          "pinyin": "Nà nǐ xiànzài duì tuìxiū yǐhòu yǒu shénme jìhuà ma?",
+          "text_translation": "Unda hozir nafaqaga chiqqaningdan keyin uchun biror rejang bormi?",
+          "text_translation_ru": "А есть ли у тебя сейчас какие-то планы на жизнь после выхода на пенсию?",
+          "text_translation_en": "So do you have any plans for after you retire?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d16-s16",
+          "text_original": "我想退休后去读个老年大学，学点历史或者艺术，丰富晚年生活。",
+          "pinyin": "Wǒ xiǎng tuìxiū hòu qù dú ge lǎonián dàxué, xué diǎn lìshǐ huòzhě yìshù, fēngfù wǎnnián shēnghuó.",
+          "text_translation": "Nafaqaga chiqqach keksalar universitetiga o'qishga borib, biroz tarix yoki san'at o'rganib, keksalik hayotimni boyitmoqchiman.",
+          "text_translation_ru": "После выхода на пенсию хочу пойти в университет для пожилых, поучить немного историю или искусство, чтобы обогатить жизнь в старости.",
+          "text_translation_en": "After retiring I want to attend a senior university, study a bit of history or art, and enrich my later years.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d16-s17",
+          "text_original": "这个想法很棒！终身学习真的能让生活更有意义。",
+          "pinyin": "Zhè ge xiǎngfǎ hěn bàng! Zhōngshēn xuéxí zhēn de néng ràng shēnghuó gèng yǒu yìyì.",
+          "text_translation": "Bu fikr juda zo'r! Umrbod o'rganish hayotni rostdan yanada mazmunli qila oladi.",
+          "text_translation_ru": "Отличная идея! Обучение длиною в жизнь действительно делает жизнь более осмысленной.",
+          "text_translation_en": "That's a wonderful idea! Lifelong learning really can make life more meaningful.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
