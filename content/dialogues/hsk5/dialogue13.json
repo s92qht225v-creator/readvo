@@ -1,0 +1,207 @@
+{
+  "id": "hsk5-dialogue13",
+  "slug": "health-management",
+  "title": "健康管理",
+  "pinyin": "Jiànkāng guǎnlǐ",
+  "titleTranslation": "Sog'liqni boshqarish",
+  "titleTranslation_ru": "Управление здоровьем",
+  "titleTranslation_en": "Health Management",
+  "level": 5,
+  "tag": "salomatlik",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "气色",
+    "血压",
+    "调整",
+    "饮食",
+    "重口味",
+    "摄入",
+    "有氧运动",
+    "力量训练",
+    "科学",
+    "复查",
+    "正常",
+    "体重",
+    "精力",
+    "记录",
+    "数据",
+    "步数",
+    "心率",
+    "睡眠质量",
+    "状况",
+    "重视",
+    "财富"
+  ],
+  "sections": [
+    {
+      "id": "h5d13-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d13-s1",
+          "text_original": "你最近气色好多了，是不是开始注意身体了？",
+          "pinyin": "Nǐ zuìjìn qìsè hǎo duō le, shì bú shì kāishǐ zhùyì shēntǐ le?",
+          "text_translation": "Yaqinda rang-ro'ying ancha yaxshilanibdi, salomatligingga e'tibor bera boshladingmi?",
+          "text_translation_ru": "Ты в последнее время выглядишь гораздо лучше — наверное, начал следить за здоровьем?",
+          "text_translation_en": "You've been looking much healthier lately — have you started paying attention to your health?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d13-s2",
+          "text_original": "对，去年体检发现血压有点高，医生建议我调整生活方式。",
+          "pinyin": "Duì, qùnián tǐjiǎn fāxiàn xuèyā yǒu diǎn gāo, yīshēng jiànyì wǒ tiáozhěng shēnghuó fāngshì.",
+          "text_translation": "Ha, o'tgan yili tibbiy ko'rikda qon bosimim biroz baland ekani aniqlandi, shifokor turmush tarzimni o'zgartirishni maslahat berdi.",
+          "text_translation_ru": "Да, в прошлом году на медосмотре обнаружили, что давление немного повышено, и врач посоветовал изменить образ жизни.",
+          "text_translation_en": "Yeah, last year a check-up found my blood pressure was a bit high, and the doctor advised me to adjust my lifestyle.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d13-s3",
+          "text_original": "那你都做了哪些改变？",
+          "pinyin": "Nà nǐ dōu zuò le nǎxiē gǎibiàn?",
+          "text_translation": "Unda qanday o'zgarishlar qilding?",
+          "text_translation_ru": "И какие же изменения ты внёс?",
+          "text_translation_en": "So what changes have you made?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d13-s4",
+          "text_original": "首先是饮食。以前我特别喜欢吃重口味的，现在开始控制盐和油的摄入。",
+          "pinyin": "Shǒuxiān shì yǐnshí. Yǐqián wǒ tèbié xǐhuān chī zhòng kǒuwèi de, xiànzài kāishǐ kòngzhì yán hé yóu de shèrù.",
+          "text_translation": "Avvalo ovqatlanish. Ilgari kuchli (sho'r-achchiq) taomlarni juda yoqtirardim, endi tuz va yog' iste'molini cheklay boshladim.",
+          "text_translation_ru": "Прежде всего питание. Раньше я очень любил еду с насыщенным вкусом, а теперь начал контролировать потребление соли и жира.",
+          "text_translation_en": "First is diet. I used to love strongly flavored food, but now I've started controlling my salt and oil intake.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d13-s5",
+          "text_original": "改变饮食习惯确实不容易。你有没有运动？",
+          "pinyin": "Gǎibiàn yǐnshí xíguàn quèshí bù róngyì. Nǐ yǒu méiyǒu yùndòng?",
+          "text_translation": "Ovqatlanish odatini o'zgartirish rostdan oson emas. Sport bilan shug'ullanasanmi?",
+          "text_translation_ru": "Менять пищевые привычки действительно непросто. А ты занимаешься спортом?",
+          "text_translation_en": "Changing eating habits really isn't easy. Do you exercise?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d13-s6",
+          "text_original": "有。我现在每周去三次健身房，主要做有氧运动和力量训练。",
+          "pinyin": "Yǒu. Wǒ xiànzài měi zhōu qù sān cì jiànshēnfáng, zhǔyào zuò yǒuyǎng yùndòng hé lìliàng xùnliàn.",
+          "text_translation": "Ha. Hozir haftasiga uch marta sport zaliga boraman, asosan aerobik mashq va kuch mashqlarini qilaman.",
+          "text_translation_ru": "Да. Сейчас я три раза в неделю хожу в спортзал, в основном делаю кардио и силовые тренировки.",
+          "text_translation_en": "Yes. Now I go to the gym three times a week, mainly doing aerobic exercise and strength training.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d13-s7",
+          "text_original": "听起来挺科学的。那你坚持了多久了？",
+          "pinyin": "Tīng qǐlái tǐng kēxué de. Nà nǐ jiānchí le duō jiǔ le?",
+          "text_translation": "Ancha ilmiy yondashuvga o'xshaydi. Qancha vaqtdan beri davom ettiryapsan?",
+          "text_translation_ru": "Звучит довольно научно. И как давно ты этим занимаешься?",
+          "text_translation_en": "That sounds pretty scientific. So how long have you kept it up?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d13-s8",
+          "text_original": "差不多半年了。刚开始确实很难坚持，后来慢慢变成了习惯。",
+          "pinyin": "Chàbuduō bàn nián le. Gāng kāishǐ quèshí hěn nán jiānchí, hòulái mànmàn biàn chéng le xíguàn.",
+          "text_translation": "Taxminan yarim yil bo'ldi. Boshida davom ettirish rostdan qiyin edi, keyin asta-sekin odatga aylandi.",
+          "text_translation_ru": "Почти полгода. Поначалу действительно было трудно держаться, но потом постепенно это вошло в привычку.",
+          "text_translation_en": "About half a year. At first it really was hard to stick with, but gradually it became a habit.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d13-s9",
+          "text_original": "效果怎么样？血压降下来了吗？",
+          "pinyin": "Xiàoguǒ zěnmeyàng? Xuèyā jiàng xiàlái le ma?",
+          "text_translation": "Natija qanday? Qon bosiming tushdimi?",
+          "text_translation_ru": "А результат какой? Давление снизилось?",
+          "text_translation_en": "How are the results? Has your blood pressure come down?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d13-s10",
+          "text_original": "上个月复查，血压基本正常了，体重也减了五公斤。",
+          "pinyin": "Shàng ge yuè fùchá, xuèyā jīběn zhèngcháng le, tǐzhòng yě jiǎn le wǔ gōngjīn.",
+          "text_translation": "O'tgan oy qayta tekshiruvda qon bosimim deyarli normaga keldi, vaznim ham besh kilo kamaydi.",
+          "text_translation_ru": "В прошлом месяце на повторном осмотре давление в основном нормализовалось, и вес снизился на пять килограммов.",
+          "text_translation_en": "At last month's follow-up, my blood pressure was basically normal, and I'd lost five kilograms too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d13-s11",
+          "text_original": "太厉害了！看来生活方式对健康影响真的很大。",
+          "pinyin": "Tài lìhai le! Kànlái shēnghuó fāngshì duì jiànkāng yǐngxiǎng zhēn de hěn dà.",
+          "text_translation": "Juda zo'r! Ko'rinishidan turmush tarzi salomatlikka rostdan katta ta'sir qilarkan.",
+          "text_translation_ru": "Здорово! Похоже, образ жизни действительно сильно влияет на здоровье.",
+          "text_translation_en": "That's impressive! It seems lifestyle really does have a big impact on health.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d13-s12",
+          "text_original": "对，我也明显感觉到精力比以前好了很多。",
+          "pinyin": "Duì, wǒ yě míngxiǎn gǎnjué dào jīnglì bǐ yǐqián hǎo le hěnduō.",
+          "text_translation": "Ha, men ham kuch-g'ayratim avvalgidan ancha yaxshilanganini sezilarli his qilyapman.",
+          "text_translation_ru": "Да, я и сам явно чувствую, что энергии стало гораздо больше, чем раньше.",
+          "text_translation_en": "Yeah, I can clearly feel that my energy is much better than before.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d13-s13",
+          "text_original": "你有没有用健康类App来记录数据？",
+          "pinyin": "Nǐ yǒu méiyǒu yòng jiànkāng lèi App lái jìlù shùjù?",
+          "text_translation": "Ma'lumotlarni yozib borish uchun salomatlikka oid ilovadan foydalanasanmi?",
+          "text_translation_ru": "А ты используешь приложение для здоровья, чтобы записывать данные?",
+          "text_translation_en": "Do you use a health app to record your data?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d13-s14",
+          "text_original": "用了一个，可以记录每天的步数、心率和睡眠质量。",
+          "pinyin": "Yòng le yí ge, kěyǐ jìlù měitiān de bùshù, xīnlǜ hé shuìmián zhìliàng.",
+          "text_translation": "Bittasidan foydalanyapman, har kunlik qadamlar soni, yurak urishi va uyqu sifatini yozib boradi.",
+          "text_translation_ru": "Использую одно — оно записывает ежедневное количество шагов, пульс и качество сна.",
+          "text_translation_en": "I use one — it can record my daily step count, heart rate, and sleep quality.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d13-s15",
+          "text_original": "那这些数据对你有什么帮助？",
+          "pinyin": "Nà zhèxiē shùjù duì nǐ yǒu shénme bāngzhù?",
+          "text_translation": "Unda bu ma'lumotlar senga qanday yordam beradi?",
+          "text_translation_ru": "И чем тебе помогают эти данные?",
+          "text_translation_en": "So how do these data help you?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d13-s16",
+          "text_original": "能让我更清楚地了解自己的身体状况，也知道哪些方面需要改进。",
+          "pinyin": "Néng ràng wǒ gèng qīngchu de liǎojiě zìjǐ de shēntǐ zhuàngkuàng, yě zhīdào nǎxiē fāngmiàn xūyào gǎijìn.",
+          "text_translation": "O'z tanam holatini aniqroq tushunishimga, qaysi tomonlarni yaxshilash kerakligini bilishimga yordam beradi.",
+          "text_translation_ru": "Они помогают мне яснее понимать состояние своего тела и знать, что нужно улучшить.",
+          "text_translation_en": "They let me understand my body's condition more clearly and know which areas need improvement.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d13-s17",
+          "text_original": "看来你是真的开始重视健康了。",
+          "pinyin": "Kànlái nǐ shì zhēn de kāishǐ zhòngshì jiànkāng le.",
+          "text_translation": "Ko'rinishidan sen rostdan salomatlikni qadrlay boshlabsan.",
+          "text_translation_ru": "Похоже, ты и правда начал серьёзно относиться к здоровью.",
+          "text_translation_en": "It seems you've really started to take your health seriously.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d13-s18",
+          "text_original": "年纪大了，不得不注意了。健康才是最大的财富。",
+          "pinyin": "Niánjì dà le, bùdébù zhùyì le. Jiànkāng cái shì zuì dà de cáifù.",
+          "text_translation": "Yosh ulg'ayyapti, e'tibor bermaslikning iloji yo'q. Salomatlik eng katta boylik-da.",
+          "text_translation_ru": "Возраст уже не тот, приходится следить. Здоровье — вот самое большое богатство.",
+          "text_translation_en": "I'm getting older, so I have no choice but to be careful. Health is the greatest wealth.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

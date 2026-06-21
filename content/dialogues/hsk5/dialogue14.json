@@ -1,0 +1,206 @@
+{
+  "id": "hsk5-dialogue14",
+  "slug": "financial-planning",
+  "title": "理财观念",
+  "pinyin": "Lǐcái guānniàn",
+  "titleTranslation": "Moliyaviy rejalashtirish",
+  "titleTranslation_ru": "Финансовое планирование",
+  "titleTranslation_en": "Financial Planning",
+  "level": 5,
+  "tag": "pul",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "理财",
+    "规划",
+    "储蓄",
+    "投资",
+    "分配",
+    "比例",
+    "占",
+    "基金",
+    "风险",
+    "定投",
+    "通货膨胀",
+    "概念",
+    "保险",
+    "医疗险",
+    "意外险",
+    "以防万一",
+    "意识",
+    "吃亏",
+    "提升",
+    "财务自由"
+  ],
+  "sections": [
+    {
+      "id": "h5d14-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d14-s1",
+          "text_original": "你工作这么多年了，有没有开始考虑理财的事情？",
+          "pinyin": "Nǐ gōngzuò zhème duō nián le, yǒu méiyǒu kāishǐ kǎolǜ lǐcái de shìqing?",
+          "text_translation": "Shuncha yil ishlading, moliyani boshqarish haqida o'ylay boshladingmi?",
+          "text_translation_ru": "Ты работаешь уже столько лет — начал задумываться об управлении финансами?",
+          "text_translation_en": "You've been working for so many years — have you started thinking about managing your money?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d14-s2",
+          "text_original": "其实我前几年都没怎么管钱，工资花完就算了。今年才意识到需要好好规划。",
+          "pinyin": "Qíshí wǒ qián jǐ nián dōu méi zěnme guǎn qián, gōngzī huā wán jiù suàn le. Jīnnián cái yìshi dào xūyào hǎohao guīhuà.",
+          "text_translation": "Aslida oldingi bir necha yil pulni unchalik boshqarmasdim, maoshni sarflab bo'lsam bo'ldi edi. Bu yili endi yaxshilab rejalashtirish kerakligini angladim.",
+          "text_translation_ru": "Честно говоря, последние несколько лет я особо не управлял деньгами — потратил зарплату, и ладно. Только в этом году осознал, что нужно как следует планировать.",
+          "text_translation_en": "Honestly, the past few years I didn't really manage my money — once the salary was spent, that was it. Only this year did I realize I need to plan properly.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d14-s3",
+          "text_original": "那你现在是怎么规划的？",
+          "pinyin": "Nà nǐ xiànzài shì zěnme guīhuà de?",
+          "text_translation": "Unda hozir qanday rejalashtiryapsan?",
+          "text_translation_ru": "И как ты теперь планируешь?",
+          "text_translation_en": "So how do you plan now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d14-s4",
+          "text_original": "我每个月会把工资分成几部分：生活费、储蓄、投资和学习。",
+          "pinyin": "Wǒ měi ge yuè huì bǎ gōngzī fēn chéng jǐ bùfen: shēnghuó fèi, chǔxù, tóuzī hé xuéxí.",
+          "text_translation": "Har oy maoshni bir necha qismga bo'laman: yashash xarajati, jamg'arma, investitsiya va o'qish.",
+          "text_translation_ru": "Каждый месяц я делю зарплату на несколько частей: расходы на жизнь, сбережения, инвестиции и обучение.",
+          "text_translation_en": "Every month I split my salary into several parts: living expenses, savings, investment, and learning.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d14-s5",
+          "text_original": "这个分配比例大概是多少？",
+          "pinyin": "Zhè ge fēnpèi bǐlì dàgài shì duōshao?",
+          "text_translation": "Bu taqsimlash nisbati taxminan qancha?",
+          "text_translation_ru": "А какое примерно соотношение в этом распределении?",
+          "text_translation_en": "About what's the ratio of this allocation?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d14-s6",
+          "text_original": "生活费占一半，储蓄占百分之三十，投资和学习各占百分之十。",
+          "pinyin": "Shēnghuó fèi zhàn yí bàn, chǔxù zhàn bǎi fēn zhī sānshí, tóuzī hé xuéxí gè zhàn bǎi fēn zhī shí.",
+          "text_translation": "Yashash xarajati yarmini, jamg'arma o'ttiz foizni, investitsiya va o'qish o'n foizdan egallaydi.",
+          "text_translation_ru": "Расходы на жизнь — половина, сбережения — тридцать процентов, инвестиции и обучение — по десять процентов.",
+          "text_translation_en": "Living expenses take half, savings thirty percent, and investment and learning ten percent each.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d14-s7",
+          "text_original": "你还投资了？都投资什么了？",
+          "pinyin": "Nǐ hái tóuzī le? Dōu tóuzī shénme le?",
+          "text_translation": "Investitsiya ham qilyapsanmi? Nimaga sarmoya kiritding?",
+          "text_translation_ru": "Ты ещё и инвестируешь? Во что вкладываешь?",
+          "text_translation_en": "You invest too? What have you invested in?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d14-s8",
+          "text_original": "我买了一些基金，风险比较低的那种。每个月定投几百块，不求赚很多，主要是对抗通货膨胀。",
+          "pinyin": "Wǒ mǎi le yì xiē jījīn, fēngxiǎn bǐjiào dī de nà zhǒng. Měi ge yuè dìngtóu jǐ bǎi kuài, bù qiú zhuàn hěn duō, zhǔyào shì duìkàng tōnghuò péngzhàng.",
+          "text_translation": "Bir nechta fond oldim, xavfi pastrog'idan. Har oy bir necha yuz yuan muntazam qo'shaman, ko'p foyda ko'rishni ko'zlamayman, asosan inflyatsiyaga qarshi turish uchun.",
+          "text_translation_ru": "Я купил несколько фондов, из тех, что с относительно низким риском. Каждый месяц регулярно вкладываю по нескольку сотен, не гонюсь за большой прибылью — в основном чтобы противостоять инфляции.",
+          "text_translation_en": "I bought some funds, the lower-risk kind. Every month I regularly put in a few hundred yuan — not hoping to earn a lot, mainly to fight inflation.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d14-s9",
+          "text_original": "那你对基金了解多少？",
+          "pinyin": "Nà nǐ duì jījīn liǎojiě duōshao?",
+          "text_translation": "Fondlar haqida qancha bilasan?",
+          "text_translation_ru": "А насколько хорошо ты разбираешься в фондах?",
+          "text_translation_en": "So how much do you know about funds?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d14-s10",
+          "text_original": "刚开始的时候什么都不懂，后来看了一些书和视频，慢慢有了概念。现在还在学习中。",
+          "pinyin": "Gāng kāishǐ de shíhou shénme dōu bù dǒng, hòulái kàn le yì xiē shū hé shìpín, mànmàn yǒu le gàiniàn. Xiànzài hái zài xuéxí zhōng.",
+          "text_translation": "Boshida hech narsani tushunmasdim, keyin bir nechta kitob va video ko'rib, asta-sekin tushunchaga ega bo'ldim. Hozir hali ham o'rganyapman.",
+          "text_translation_ru": "Сначала я вообще ничего не понимал, потом почитал книги, посмотрел видео и постепенно сложилось представление. Сейчас всё ещё учусь.",
+          "text_translation_en": "At first I didn't understand anything, but later I read some books and watched videos and gradually got the concept. I'm still learning now.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d14-s11",
+          "text_original": "你买保险了吗？",
+          "pinyin": "Nǐ mǎi bǎoxiǎn le ma?",
+          "text_translation": "Sug'urta oldingmi?",
+          "text_translation_ru": "А страховку ты оформил?",
+          "text_translation_en": "Have you bought insurance?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d14-s12",
+          "text_original": "买了。医疗险和意外险都买了，以防万一。",
+          "pinyin": "Mǎi le. Yīliáo xiǎn hé yìwài xiǎn dōu mǎi le, yǐfáng wànyī.",
+          "text_translation": "Oldim. Tibbiy sug'urta va baxtsiz hodisa sug'urtasini ham oldim, har ehtimolga qarshi.",
+          "text_translation_ru": "Оформил. И медицинскую, и страховку от несчастных случаев — на всякий случай.",
+          "text_translation_en": "I did. I got both health insurance and accident insurance, just in case.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d14-s13",
+          "text_original": "看来你的理财意识还挺强的。很多人工作好几年都没这个意识。",
+          "pinyin": "Kànlái nǐ de lǐcái yìshi hái tǐng qiáng de. Hěn duō rén gōngzuò hǎo jǐ nián dōu méi zhè ge yìshi.",
+          "text_translation": "Ko'rinishidan moliyaviy ongliliging ancha kuchli ekan. Ko'p odam bir necha yil ishlasa ham bunday onglilikka ega bo'lmaydi.",
+          "text_translation_ru": "Похоже, у тебя довольно развитое финансовое мышление. Многие работают по нескольку лет, а такого осознания у них нет.",
+          "text_translation_en": "It seems your financial awareness is quite strong. Many people work for years without this awareness.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d14-s14",
+          "text_original": "其实也是因为以前吃过亏，花钱没计划，遇到急事的时候才发现没钱。",
+          "pinyin": "Qíshí yě shì yīnwèi yǐqián chī guo kuī, huā qián méi jìhuà, yùdào jíshì de shíhou cái fāxiàn méi qián.",
+          "text_translation": "Aslida bu avval ziyon ko'rganim uchun ham, pulni rejasiz sarflardim, shoshilinch ish chiqqanda endi pulim yo'qligini bilardim.",
+          "text_translation_ru": "На самом деле это потому, что я раньше обжёгся: тратил деньги без плана, а когда случалось что-то срочное, оказывалось, что денег нет.",
+          "text_translation_en": "Actually it's also because I got burned before — I spent without a plan, and when something urgent came up I'd find I had no money.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d14-s15",
+          "text_original": "那你的学习那百分之十主要用来做什么？",
+          "pinyin": "Nà nǐ de xuéxí nà bǎi fēn zhī shí zhǔyào yòng lái zuò shénme?",
+          "text_translation": "Unda o'qishga ajratgan o'sha o'n foizni asosan nimaga ishlatasan?",
+          "text_translation_ru": "А те десять процентов на обучение ты на что в основном тратишь?",
+          "text_translation_en": "So what do you mainly use that ten percent for learning on?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d14-s16",
+          "text_original": "买书、报名课程、参加行业活动。我觉得提升自己是最好的投资。",
+          "pinyin": "Mǎi shū, bàomíng kèchéng, cānjiā hángyè huódòng. Wǒ juéde tíshēng zìjǐ shì zuì hǎo de tóuzī.",
+          "text_translation": "Kitob olish, kurslarga yozilish, soha tadbirlarida qatnashish. Menimcha o'zingni rivojlantirish eng yaxshi investitsiya.",
+          "text_translation_ru": "Покупаю книги, записываюсь на курсы, участвую в отраслевых мероприятиях. По-моему, вкладываться в себя — лучшая инвестиция.",
+          "text_translation_en": "Buying books, signing up for courses, attending industry events. I think improving yourself is the best investment.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d14-s17",
+          "text_original": "你说得太对了！能力提升了，赚钱的机会自然就多了。",
+          "pinyin": "Nǐ shuō de tài duì le! Nénglì tíshēng le, zhuàn qián de jīhuì zìrán jiù duō le.",
+          "text_translation": "Juda to'g'ri aytasan! Qobiliyat oshsa, pul topish imkoniyatlari ham tabiiy ravishda ko'payadi.",
+          "text_translation_ru": "Ты абсолютно прав! Когда растут способности, возможностей заработать естественно становится больше.",
+          "text_translation_en": "You're so right! When your ability grows, opportunities to earn naturally increase.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d14-s18",
+          "text_original": "对，所以学习和储蓄一样重要。希望五年后我能实现财务自由。",
+          "pinyin": "Duì, suǒyǐ xuéxí hé chǔxù yíyàng zhòngyào. Xīwàng wǔ nián hòu wǒ néng shíxiàn cáiwù zìyóu.",
+          "text_translation": "To'g'ri, shuning uchun o'qish ham jamg'arma kabi muhim. Besh yildan keyin moliyaviy erkinlikka erishishni umid qilaman.",
+          "text_translation_ru": "Да, поэтому обучение так же важно, как и сбережения. Надеюсь, через пять лет смогу достичь финансовой свободы.",
+          "text_translation_en": "Right, so learning is just as important as saving. I hope to achieve financial freedom in five years.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

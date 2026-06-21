@@ -1,0 +1,228 @@
+{
+  "id": "hsk5-dialogue15",
+  "slug": "food-culture",
+  "title": "饮食文化",
+  "pinyin": "Yǐnshí wénhuà",
+  "titleTranslation": "Oshxona madaniyati",
+  "titleTranslation_ru": "Культура питания",
+  "titleTranslation_en": "Food Culture",
+  "level": 5,
+  "tag": "ovqat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "研究",
+    "外卖",
+    "拿手菜",
+    "家常菜",
+    "红烧肉",
+    "火候",
+    "调料",
+    "搭配",
+    "秘诀",
+    "上色",
+    "慢炖",
+    "菜谱",
+    "发挥",
+    "口味",
+    "区别",
+    "注重",
+    "讲究",
+    "食材",
+    "丰富",
+    "变化多端",
+    "魅力",
+    "川菜",
+    "过瘾",
+    "厨艺"
+  ],
+  "sections": [
+    {
+      "id": "h5d15-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d15-s1",
+          "text_original": "你最近怎么开始研究做饭了？以前不是总点外卖吗？",
+          "pinyin": "Nǐ zuìjìn zěnme kāishǐ yánjiū zuò fàn le? Yǐqián bú shì zǒng diǎn wàimài ma?",
+          "text_translation": "Yaqinda nega ovqat pishirishni o'rgana boshlading? Avval doim tashqaridan ovqat buyurtirmasmiding?",
+          "text_translation_ru": "Почему ты в последнее время начал осваивать готовку? Раньше же ты всё время заказывал еду на дом?",
+          "text_translation_en": "Why have you started getting into cooking lately? Didn't you always order takeout before?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d15-s2",
+          "text_original": "因为外卖吃多了觉得不健康，而且自己想学几道拿手菜。",
+          "pinyin": "Yīnwèi wàimài chī duō le juéde bú jiànkāng, érqiě zìjǐ xiǎng xué jǐ dào náshǒu cài.",
+          "text_translation": "Chunki tashqi ovqatni ko'p yeb sog'lom emasligini his qildim, qolaversa o'zim bir nechta zo'r taomni o'rganmoqchiman.",
+          "text_translation_ru": "Потому что от частой доставки чувствую, что это вредно, и к тому же хочу сам научиться готовить пару коронных блюд.",
+          "text_translation_en": "Because eating too much takeout felt unhealthy, and I also wanted to learn a few signature dishes myself.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d15-s3",
+          "text_original": "那你都学了哪些菜？",
+          "pinyin": "Nà nǐ dōu xué le nǎxiē cài?",
+          "text_translation": "Unda qanday taomlarni o'rganding?",
+          "text_translation_ru": "И какие блюда ты освоил?",
+          "text_translation_en": "So which dishes have you learned?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d15-s4",
+          "text_original": "主要是家常菜，比如红烧肉、西红柿炒鸡蛋，还有几个汤。",
+          "pinyin": "Zhǔyào shì jiācháng cài, bǐrú hóngshāo ròu, xīhóngshì chǎo jīdàn, hái yǒu jǐ ge tāng.",
+          "text_translation": "Asosan uy taomlari, masalan qizil dimlangan go'sht, pomidor bilan qovurilgan tuxum, yana bir nechta sho'rva.",
+          "text_translation_ru": "В основном домашние блюда, например тушёная свинина, помидоры с яичницей и несколько супов.",
+          "text_translation_en": "Mostly home-style dishes, like braised pork, tomato with scrambled eggs, and a few soups.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d15-s5",
+          "text_original": "红烧肉不容易做啊！你做得怎么样？",
+          "pinyin": "Hóngshāo ròu bù róngyì zuò a! Nǐ zuò de zěnmeyàng?",
+          "text_translation": "Qizil dimlangan go'sht oson pishmaydi-ku! Sen qanday qilyapsan?",
+          "text_translation_ru": "Тушёная свинина — это непросто! И как у тебя получается?",
+          "text_translation_en": "Braised pork isn't easy to make! How does yours turn out?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d15-s6",
+          "text_original": "失败了好几次，后来慢慢掌握了火候和调料的搭配。现在味道还不错。",
+          "pinyin": "Shībài le hǎo jǐ cì, hòulái mànmàn zhǎngwò le huǒhòu hé tiáoliào de dāpèi. Xiànzài wèidào hái búcuò.",
+          "text_translation": "Bir necha marta urinishim bekorga ketdi, keyin asta-sekin olov darajasi va ziravorlar uyg'unligini o'zlashtirdim. Hozir ta'mi yomon emas.",
+          "text_translation_ru": "Несколько раз не получалось, но потом постепенно освоил степень нагрева и сочетание приправ. Теперь вкус неплохой.",
+          "text_translation_en": "I failed several times, but gradually mastered the heat control and seasoning combinations. Now the taste is pretty good.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d15-s7",
+          "text_original": "能分享一下你的秘诀吗？",
+          "pinyin": "Néng fēnxiǎng yí xià nǐ de mìjué ma?",
+          "text_translation": "Siringni baham ko'ra olasanmi?",
+          "text_translation_ru": "Можешь поделиться своим секретом?",
+          "text_translation_en": "Can you share your secret?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d15-s8",
+          "text_original": "关键是要用冰糖上色，然后小火慢炖，时间不能太短。",
+          "pinyin": "Guānjiàn shì yào yòng bīngtáng shàngsè, ránhòu xiǎohuǒ màn dùn, shíjiān bùnéng tài duǎn.",
+          "text_translation": "Asosiysi muz qand bilan rang berish, keyin past olovda sekin dimlash, vaqti juda qisqa bo'lmasligi kerak.",
+          "text_translation_ru": "Главное — придать цвет леденцовым сахаром, потом тушить на слабом огне, и время не должно быть слишком коротким.",
+          "text_translation_en": "The key is to use rock sugar for color, then simmer slowly over low heat — the time can't be too short.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d15-s9",
+          "text_original": "听起来挺专业的！你平时会看菜谱还是自己发挥？",
+          "pinyin": "Tīng qǐlái tǐng zhuānyè de! Nǐ píngshí huì kàn càipǔ háishì zìjǐ fāhuī?",
+          "text_translation": "Ancha professional eshitiladi! Odatda retseptga qaraysanmi yoki o'zing erkin ijod qilasanmi?",
+          "text_translation_ru": "Звучит довольно профессионально! Ты обычно смотришь рецепт или импровизируешь?",
+          "text_translation_en": "That sounds pretty professional! Do you usually follow a recipe or improvise?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d15-s10",
+          "text_original": "一开始看菜谱，做多了以后就根据自己的口味调整了。",
+          "pinyin": "Yì kāishǐ kàn càipǔ, zuò duō le yǐhòu jiù gēnjù zìjǐ de kǒuwèi tiáozhěng le.",
+          "text_translation": "Boshida retseptga qarayman, ko'p pishirgandan keyin o'z ta'bimga qarab moslab olaman.",
+          "text_translation_ru": "Сначала смотрю рецепт, а наготовившись, уже подстраиваю под свой вкус.",
+          "text_translation_en": "At first I follow a recipe, and after cooking it a lot I adjust it to my own taste.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d15-s11",
+          "text_original": "那你觉得中餐和西餐最大的区别是什么？",
+          "pinyin": "Nà nǐ juéde zhōngcān hé xīcān zuì dà de qūbié shì shénme?",
+          "text_translation": "Unda seningcha Xitoy taomlari bilan G'arb taomlarining eng katta farqi nima?",
+          "text_translation_ru": "А как ты думаешь, в чём главное различие между китайской и западной кухней?",
+          "text_translation_en": "So what do you think is the biggest difference between Chinese and Western food?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d15-s12",
+          "text_original": "我觉得中餐更注重火候和调料的搭配，西餐则更讲究食材本身的味道。",
+          "pinyin": "Wǒ juéde zhōngcān gèng zhùzhòng huǒhòu hé tiáoliào de dāpèi, xīcān zé gèng jiǎngjiu shícái běnshēn de wèidào.",
+          "text_translation": "Menimcha Xitoy taomi olov darajasi va ziravorlar uyg'unligiga ko'proq e'tibor beradi, G'arb taomi esa mahsulotning o'z ta'miga ko'proq ahamiyat beradi.",
+          "text_translation_ru": "По-моему, китайская кухня больше уделяет внимания нагреву и сочетанию приправ, а западная — больше ценит вкус самих продуктов.",
+          "text_translation_en": "I think Chinese food focuses more on heat control and seasoning combinations, while Western food is more particular about the flavor of the ingredients themselves.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d15-s13",
+          "text_original": "你更喜欢哪种？",
+          "pinyin": "Nǐ gèng xǐhuān nǎ zhǒng?",
+          "text_translation": "Sen qaysi birini ko'proq yoqtirasan?",
+          "text_translation_ru": "А какую ты больше любишь?",
+          "text_translation_en": "Which do you prefer?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d15-s14",
+          "text_original": "我更喜欢中餐，因为口味丰富，选择也多。但偶尔也会吃西餐换换口味。",
+          "pinyin": "Wǒ gèng xǐhuān zhōngcān, yīnwèi kǒuwèi fēngfù, xuǎnzé yě duō. Dàn ǒu'ěr yě huì chī xīcān huàn huan kǒuwèi.",
+          "text_translation": "Men Xitoy taomini ko'proq yoqtiraman, chunki ta'mi boy, tanlovi ham ko'p. Lekin goho ta'm almashtirish uchun G'arb taomini ham yeyman.",
+          "text_translation_ru": "Я больше люблю китайскую кухню, потому что вкусы богатые и выбор большой. Но иногда ем и западную, чтобы сменить вкус.",
+          "text_translation_en": "I prefer Chinese food, because the flavors are rich and there's a lot of choice. But occasionally I eat Western food for a change.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d15-s15",
+          "text_original": "我也觉得中餐变化多端，同样的食材可以做出完全不同的菜。",
+          "pinyin": "Wǒ yě juéde zhōngcān biànhuà duōduān, tóngyàng de shícái kěyǐ zuò chū wánquán bùtóng de cài.",
+          "text_translation": "Men ham Xitoy taomi nihoyatda rang-barang deb o'ylayman, bir xil mahsulotdan butunlay boshqacha taom tayyorlasa bo'ladi.",
+          "text_translation_ru": "Я тоже считаю, что китайская кухня очень разнообразна — из одних и тех же продуктов можно приготовить совершенно разные блюда.",
+          "text_translation_en": "I also think Chinese food is endlessly varied — the same ingredients can make completely different dishes.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d15-s16",
+          "text_original": "对，这就是中餐的魅力所在。",
+          "pinyin": "Duì, zhè jiù shì zhōngcān de mèilì suǒzài.",
+          "text_translation": "To'g'ri, aynan shu Xitoy taomining jozibasi.",
+          "text_translation_ru": "Да, именно в этом и заключается очарование китайской кухни.",
+          "text_translation_en": "Right, that's exactly where the charm of Chinese food lies.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d15-s17",
+          "text_original": "那你以后还打算学什么菜？",
+          "pinyin": "Nà nǐ yǐhòu hái dǎsuàn xué shénme cài?",
+          "text_translation": "Unda kelajakda yana qanday taom o'rganmoqchisan?",
+          "text_translation_ru": "А какие блюда ты собираешься освоить дальше?",
+          "text_translation_en": "So what dishes do you plan to learn next?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d15-s18",
+          "text_original": "我想学几道川菜，比如水煮鱼和麻婆豆腐，虽然辣，但很过瘾。",
+          "pinyin": "Wǒ xiǎng xué jǐ dào chuāncài, bǐrú shuǐzhǔ yú hé mápó dòufu, suīrán là, dàn hěn guòyǐn.",
+          "text_translation": "Bir nechta Sichuan taomini o'rganmoqchiman, masalan suvda qaynatilgan baliq va mapo tofu, achchiq bo'lsa-da, juda maza qiladi.",
+          "text_translation_ru": "Хочу научиться готовить пару сычуаньских блюд, например рыбу в кипящем масле и мапо тофу — хоть и остро, но очень в кайф.",
+          "text_translation_en": "I want to learn a few Sichuan dishes, like boiled fish and mapo tofu — spicy, but really satisfying.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d15-s19",
+          "text_original": "那你的厨艺会越来越好的！到时候我可要尝尝。",
+          "pinyin": "Nà nǐ de chúyì huì yuè lái yuè hǎo de! Dàoshíhou wǒ kě yào cháng cháng.",
+          "text_translation": "Unda oshpazlik mahorating tobora yaxshilanadi! O'shanda men albatta tatib ko'rishim kerak.",
+          "text_translation_ru": "Тогда твоё кулинарное мастерство будет всё лучше! Вот тогда я непременно попробую.",
+          "text_translation_en": "Then your cooking will keep getting better! I'll definitely have to taste it then.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d15-s20",
+          "text_original": "没问题！等我学会了请你来家里吃饭。",
+          "pinyin": "Méi wèntí! Děng wǒ xuéhuì le qǐng nǐ lái jiā lǐ chī fàn.",
+          "text_translation": "Muammo yo'q! O'rganib olsam, seni uyga ovqatga taklif qilaman.",
+          "text_translation_ru": "Без проблем! Как научусь, приглашу тебя к себе домой поесть.",
+          "text_translation_en": "No problem! Once I've learned, I'll invite you over for a meal.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
