@@ -1,0 +1,139 @@
+{
+  "id": "hsk5-dialogue27",
+  "slug": "ai-ethics",
+  "title": "人工智能伦理",
+  "pinyin": "Réngōng zhìnéng lúnlǐ",
+  "titleTranslation": "Sun'iy intellekt etikasi",
+  "titleTranslation_ru": "Этика искусственного интеллекта",
+  "titleTranslation_en": "AI Ethics",
+  "level": 5,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "输入",
+    "生成",
+    "神奇",
+    "不安",
+    "创造力",
+    "取代",
+    "担忧",
+    "灵感",
+    "情感",
+    "自我意识",
+    "模仿",
+    "版权",
+    "争议",
+    "矛盾",
+    "伴随",
+    "合理利用"
+  ],
+  "sections": [
+    {
+      "id": "h5d27-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d27-s1",
+          "text_original": "你听说了吗？最近有个AI绘画软件很火，只要输入几个词就能生成画。",
+          "pinyin": "Nǐ tīngshuō le ma? Zuìjìn yǒu ge AI huìhuà ruǎnjiàn hěn huǒ, zhǐyào shūrù jǐ ge cí jiù néng shēngchéng huà.",
+          "text_translation": "Eshitdingmi? Yaqinda bitta AI rasm chizish dasturi juda ommabop, bir necha so'z kiritsang bo'ldi, rasm hosil qiladi.",
+          "text_translation_ru": "Ты слышал? В последнее время очень популярна одна программа для рисования на ИИ — достаточно ввести несколько слов, и она генерирует картину.",
+          "text_translation_en": "Have you heard? There's an AI drawing app that's really popular lately — you just input a few words and it generates a picture.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d27-s2",
+          "text_original": "听说了。我还试了一下，确实很神奇，但用多了心里有种不安的感觉。",
+          "pinyin": "Tīngshuō le. Wǒ hái shì le yí xià, quèshí hěn shénqí, dàn yòng duō le xīnli yǒu zhǒng bù'ān de gǎnjué.",
+          "text_translation": "Eshitdim. Sinab ham ko'rdim, rostdan ajoyib, lekin ko'p ishlatsang ko'nglingda qandaydir bezovta his paydo bo'ladi.",
+          "text_translation_ru": "Слышал. Я даже попробовал — действительно удивительно, но когда пользуешься часто, появляется какое-то тревожное чувство.",
+          "text_translation_en": "I have. I even tried it — it really is amazing, but using it a lot gives me a sense of unease.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d27-s3",
+          "text_original": "不安？为什么？",
+          "pinyin": "Bù'ān? Wèishénme?",
+          "text_translation": "Bezovtami? Nega?",
+          "text_translation_ru": "Тревожное? Почему?",
+          "text_translation_en": "Unease? Why?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d27-s4",
+          "text_original": "如果AI什么都能做，那人类的创造力算什么？画家、作家会不会有一天被AI取代？",
+          "pinyin": "Rúguǒ AI shénme dōu néng zuò, nà rénlèi de chuàngzàolì suàn shénme? Huàjiā, zuòjiā huì bú huì yǒu yì tiān bèi AI qǔdài?",
+          "text_translation": "Agar AI hamma narsani qila olsa, unda insonning ijodkorligi nimaga arziydi? Rassom, yozuvchilar bir kun kelib AI o'rnini bosadimi?",
+          "text_translation_ru": "Если ИИ может всё, то чего стоит человеческое творчество? Не заменит ли однажды ИИ художников и писателей?",
+          "text_translation_en": "If AI can do everything, then what is human creativity worth? Will painters and writers one day be replaced by AI?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d27-s5",
+          "text_original": "我理解你的担忧。但AI只是工具，它可以把好的想法变得更好，但不太可能替代人类的灵感和情感。",
+          "pinyin": "Wǒ lǐjiě nǐ de dānyōu. Dàn AI zhǐ shì gōngjù, tā kěyǐ bǎ hǎo de xiǎngfǎ biàn de gèng hǎo, dàn bú tài kěnéng tìdài rénlèi de línggǎn hé qínggǎn.",
+          "text_translation": "Xavotiringni tushunaman. Lekin AI shunchaki vosita, u yaxshi g'oyani yanada yaxshilashi mumkin, ammo insonning ilhomi va his-tuyg'usining o'rnini bosishi dargumon.",
+          "text_translation_ru": "Я понимаю твоё беспокойство. Но ИИ — лишь инструмент: он может сделать хорошую идею ещё лучше, но вряд ли заменит человеческое вдохновение и чувства.",
+          "text_translation_en": "I understand your worry. But AI is just a tool — it can make good ideas better, but it's unlikely to replace human inspiration and emotion.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d27-s6",
+          "text_original": "那你觉得AI会不会有一天拥有自我意识？",
+          "pinyin": "Nà nǐ juéde AI huì bú huì yǒu yì tiān yōngyǒu zìwǒ yìshi?",
+          "text_translation": "Unda seningcha AI bir kun kelib o'zlik ongiga ega bo'ladimi?",
+          "text_translation_ru": "А как ты думаешь, обретёт ли ИИ когда-нибудь самосознание?",
+          "text_translation_en": "So do you think AI will one day have self-awareness?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d27-s7",
+          "text_original": "目前来看还远得很。现在的AI只是模仿人类的语言和图像，并没有真正的理解能力。",
+          "pinyin": "Mùqián lái kàn hái yuǎn de hěn. Xiànzài de AI zhǐ shì mófǎng rénlèi de yǔyán hé túxiàng, bìng méiyǒu zhēnzhèng de lǐjiě nénglì.",
+          "text_translation": "Hozircha bunga juda uzoq. Hozirgi AI faqat insonning tili va tasvirlariga taqlid qiladi, haqiqiy tushunish qobiliyati yo'q.",
+          "text_translation_ru": "Пока что до этого очень далеко. Нынешний ИИ лишь имитирует человеческий язык и изображения, и у него нет настоящей способности понимать.",
+          "text_translation_en": "For now that's still very far off. Today's AI only imitates human language and images — it has no genuine understanding.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d27-s8",
+          "text_original": "那AI创作出来的作品，版权应该归谁？是输入指令的人，还是开发AI的公司？",
+          "pinyin": "Nà AI chuàngzuò chūlái de zuòpǐn, bǎnquán yīnggāi guī shuí? Shì shūrù zhǐlìng de rén, háishì kāifā AI de gōngsī?",
+          "text_translation": "Unda AI yaratgan asarning mualliflik huquqi kimga tegishli bo'lishi kerak? Buyruq kiritgan odamgami yoki AIni ishlab chiqqan kompaniyagami?",
+          "text_translation_ru": "А кому должно принадлежать авторское право на произведение, созданное ИИ? Человеку, который ввёл команду, или компании, разработавшей ИИ?",
+          "text_translation_en": "So who should own the copyright to works created by AI? The person who input the prompt, or the company that developed the AI?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d27-s9",
+          "text_original": "这个问题确实引发了很多法律争议。目前还没有明确的规定。",
+          "pinyin": "Zhè ge wèntí quèshí yǐnfā le hěnduō fǎlǜ zhēngyì. Mùqián hái méiyǒu míngquè de guīdìng.",
+          "text_translation": "Bu masala rostdan ko'plab huquqiy bahslarni keltirib chiqardi. Hozircha aniq qoida yo'q.",
+          "text_translation_ru": "Этот вопрос действительно вызвал много юридических споров. Пока чётких правил нет.",
+          "text_translation_en": "This question really has sparked a lot of legal controversy. There are no clear rules yet.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d27-s10",
+          "text_original": "所以我对AI的态度很矛盾，一方面觉得很方便，另一方面又担心它的影响。",
+          "pinyin": "Suǒyǐ wǒ duì AI de tàidù hěn máodùn, yì fāngmiàn juéde hěn fāngbiàn, lìng yì fāngmiàn yòu dānxīn tā de yǐngxiǎng.",
+          "text_translation": "Shuning uchun AIga munosabatim juda ziddiyatli, bir tomondan qulay deb o'ylayman, ikkinchi tomondan uning ta'siridan xavotirlanaman.",
+          "text_translation_ru": "Поэтому моё отношение к ИИ очень противоречивое: с одной стороны, удобно, а с другой — переживаю из-за его влияния.",
+          "text_translation_en": "So my attitude toward AI is very conflicted — on one hand it's convenient, on the other I worry about its impact.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d27-s11",
+          "text_original": "这种心态很正常。技术的发展总是伴随着新的挑战，关键是如何合理利用。",
+          "pinyin": "Zhè zhǒng xīntài hěn zhèngcháng. Jìshù de fāzhǎn zǒng shì bànsuí zhe xīn de tiǎozhàn, guānjiàn shì rúhé hélǐ lìyòng.",
+          "text_translation": "Bunday kayfiyat juda normal. Texnologiya rivoji doim yangi sinovlar bilan birga keladi, asosiysi uni qanday oqilona ishlatishda.",
+          "text_translation_ru": "Такой настрой вполне нормален. Развитие технологий всегда сопровождается новыми вызовами; главное — как разумно их использовать.",
+          "text_translation_en": "That mindset is normal. Technological development always comes with new challenges — the key is how to use it sensibly.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
