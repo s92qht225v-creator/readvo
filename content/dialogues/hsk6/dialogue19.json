@@ -1,0 +1,167 @@
+{
+  "id": "hsk6-dialogue19",
+  "slug": "messy-desk",
+  "title": "杂乱的办公桌",
+  "pinyin": "Záluàn de bàngōngzhuō",
+  "titleTranslation": "Tartibsiz ish stoli",
+  "titleTranslation_ru": "Захламлённый стол",
+  "titleTranslation_en": "The Messy Desk",
+  "level": 6,
+  "tag": "ish joyi",
+  "dateAdded": "2026-06-22",
+  "vocab": ["杂乱","办公桌","便利贴","借口","效率","计算","估计","整齐","有序","心理负担","大扫除","专注力","见证","一言为定"],
+  "sections": [
+    {
+      "id": "h6d19-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d19-s1",
+          "text_original": "你过来看看我的办公桌，是不是太乱了？我自己都看不下去了。",
+          "pinyin": "Nǐ guòlái kàn kan wǒ de bàngōngzhuō, shì bú shì tài luàn le? Wǒ zìjǐ dōu kàn bú xiàqù le.",
+          "text_translation": "Bu yoqqa kelib mening ish stolimga qara, juda tartibsiz emasmi? Hatto o'zim ham qarab tura olmayman.",
+          "text_translation_ru": "Подойди-ка, посмотри на мой рабочий стол, разве он не слишком захламлён? Я и сам уже смотреть на него не могу.",
+          "text_translation_en": "Come over and take a look at my desk, isn't it way too messy? Even I can't stand looking at it anymore.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d19-s2",
+          "text_original": "确实有点乱。杯子、文件、充电线、零食……上面还贴着几张便利贴。这怎么工作啊？",
+          "pinyin": "Quèshí yǒu diǎn luàn. Bēizi, wénjiàn, chōngdiàn xiàn, língshí ... shàngmiàn hái tiē zhe jǐ zhāng biànlìtiē. Zhè zěnme gōngzuò a?",
+          "text_translation": "Haqiqatan ham birozgina tartibsiz. Stakan, hujjatlar, zaryadlash simi, gazak... ustiga yana bir nechta yopishqoq qog'oz ham yopishtirilgan. Bunday holatda qanday ishlaysan?",
+          "text_translation_ru": "Действительно немного беспорядочно. Чашка, документы, зарядный провод, перекусы... сверху ещё налеплено несколько стикеров. Как тут вообще работать?",
+          "text_translation_en": "It really is a bit messy. A cup, documents, a charging cable, snacks... and there are even a few sticky notes stuck on top. How can you work like this?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d19-s3",
+          "text_original": "我其实也想整理，但每次都觉得没时间。而且别人都说，乱乱的办公桌说明这个人有创造力。",
+          "pinyin": "Wǒ qíshí yě xiǎng zhěnglǐ, dàn měi cì dōu juéde méi shíjiān. Érqiě biérén dōu shuō, luàn luàn de bàngōngzhuō shuōmíng zhè ge rén yǒu chuàngzàolì.",
+          "text_translation": "Aslida men ham tartibga keltirmoqchiman, lekin har safar vaqt yo'qdek tuyuladi. Qolaversa, hamma aytadiki, tartibsiz ish stoli o'sha odamning ijodkorligini bildiradi.",
+          "text_translation_ru": "На самом деле я тоже хочу навести порядок, но каждый раз кажется, что нет времени. К тому же все говорят, что захламлённый стол означает, что человек креативный.",
+          "text_translation_en": "Actually I want to tidy up too, but every time it feels like I don't have the time. Besides, everyone says a messy desk means the person is creative.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d19-s4",
+          "text_original": "那都是借口。一个干净的桌子能帮你提高效率。你知道有多少时间浪费在找东西上吗？",
+          "pinyin": "Nà dōu shì jièkǒu. Yí ge gānjìng de zhuōzi néng bāng nǐ tígāo xiàolǜ. Nǐ zhīdào yǒu duōshao shíjiān làngfèi zài zhǎo dōngxi shàng ma?",
+          "text_translation": "Bularning hammasi bahona. Toza stol senga samaradorlikni oshirishga yordam beradi. Narsa qidirishga qancha vaqt behuda ketishini bilasanmi?",
+          "text_translation_ru": "Это всё отговорки. Чистый стол помогает повысить эффективность. Ты знаешь, сколько времени уходит впустую на поиски вещей?",
+          "text_translation_en": "Those are all excuses. A clean desk helps you boost your efficiency. Do you know how much time gets wasted looking for things?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d19-s5",
+          "text_original": "还真没计算过，可能每天至少十几分钟吧。",
+          "pinyin": "Hái zhēn méi jìsuàn guo, kěnéng měitiān zhìshǎo shí jǐ fēnzhōng ba.",
+          "text_translation": "Rostdan ham hisoblab ko'rmaganman, ehtimol har kuni kamida o'n necha daqiqadir.",
+          "text_translation_ru": "И правда никогда не подсчитывал, наверное, каждый день минимум минут десять с лишним.",
+          "text_translation_en": "I really never calculated it, probably at least ten-something minutes a day.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d19-s6",
+          "text_original": "不止。我估计你每次找文件、找笔、找充电线，至少花两三分钟。一天找七八次，一小时就没了。",
+          "pinyin": "Bù zhǐ. Wǒ gūjì nǐ měi cì zhǎo wénjiàn, zhǎo bǐ, zhǎo chōngdiàn xiàn, zhìshǎo huā liǎng sān fēnzhōng. Yì tiān zhǎo qī bā cì, yì xiǎoshí jiù méi le.",
+          "text_translation": "Bundan ko'p. Menimcha, har safar hujjat qidirganingda, ruchka qidirganingda, zaryad simi qidirganingda kamida ikki-uch daqiqa sarflaysan. Kuniga yetti-sakkiz marta qidirsang, bir soat shunchaki yo'qoladi.",
+          "text_translation_ru": "Больше. По моим прикидкам, каждый раз, когда ты ищешь документ, ручку, зарядный провод, ты тратишь как минимум две-три минуты. Семь-восемь раз за день — и целый час пропал.",
+          "text_translation_en": "More than that. I estimate that every time you look for a document, a pen, or a charging cable, you spend at least two or three minutes. Search seven or eight times a day, and a whole hour is gone.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d19-s7",
+          "text_original": "你这么一说，好像真的挺浪费的。但整理完以后，会不会过几天又乱了？",
+          "pinyin": "Nǐ zhème yī shuō, hǎoxiàng zhēn de tǐng làngfèi de. Dàn zhěnglǐ wán yǐhòu, huì bú huì guò jǐ tiān yòu luàn le?",
+          "text_translation": "Sen shunday deganingda, haqiqatan ham juda behuda ketayotgandek tuyuladi. Lekin tartibga keltirganimdan keyin, bir necha kundan so'ng yana tartibsiz bo'lib qolmaydimi?",
+          "text_translation_ru": "Когда ты так говоришь, и правда кажется, что это сильно расточительно. Но после того как я приберусь, разве через несколько дней снова не станет беспорядок?",
+          "text_translation_en": "When you put it that way, it really does seem quite wasteful. But after I tidy up, won't it just get messy again in a few days?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d19-s8",
+          "text_original": "那说明你没有养成习惯。每天下班前花五分钟简单收拾一下，就能保持整洁。",
+          "pinyin": "Nà shuōmíng nǐ méiyǒu yǎngchéng xíguàn. Měitiān xiàbān qián huā wǔ fēnzhōng jiǎndān shōushi yí xià, jiù néng bǎochí zhěngjié.",
+          "text_translation": "Bu sen odat hosil qilmaganingni bildiradi. Har kuni ishdan oldin besh daqiqa sarflab oddiygina yig'ishtirsang, tozalikni saqlay olasan.",
+          "text_translation_ru": "Это значит, что ты не выработал привычку. Если каждый день перед уходом с работы потратить пять минут на простую уборку, можно поддерживать порядок.",
+          "text_translation_en": "That means you haven't developed the habit. If you spend five minutes tidying up a little before leaving work each day, you can keep it neat.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d19-s9",
+          "text_original": "我有个同事，桌子比我这个还乱，但他工作效率很高。这怎么解释？",
+          "pinyin": "Wǒ yǒu ge tóngshì, zhuōzi bǐ wǒ zhè ge hái luàn, dàn tā gōngzuò xiàolǜ hěn gāo. Zhè zěnme jiěshì?",
+          "text_translation": "Mening bir hamkasbim bor, uning stoli meningkidan ham tartibsizroq, lekin uning ish samaradorligi juda yuqori. Buni qanday tushuntirasan?",
+          "text_translation_ru": "У меня есть коллега, у него стол ещё более захламлён, чем мой, но его эффективность работы очень высокая. Как это объяснить?",
+          "text_translation_en": "I have a colleague whose desk is even messier than mine, but his work efficiency is very high. How do you explain that?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d19-s10",
+          "text_original": "那是因为他心里清楚东西在哪。但他的混乱是一种有序的混乱。你的呢？估计你自己都不知道东西放在哪吧。",
+          "pinyin": "Nà shì yīnwèi tā xīnli qīngchu dōngxi zài nǎ. Dàn tā de hùnluàn shì yì zhǒng yǒuxù de hùnluàn. Nǐ de ne? Gūjì nǐ zìjǐ dōu bù zhīdào dōngxi fàng zài nǎ ba.",
+          "text_translation": "Buning sababi u narsalar qayerdaligini ko'nglida aniq biladi. Lekin uning betartibligi tartibli betartiblikning bir turi. Seniki-chi? Menimcha, narsalar qayerga qo'yilganini hatto o'zing ham bilmaysan.",
+          "text_translation_ru": "Это потому что он точно знает, где что лежит. Но его беспорядок — это упорядоченный беспорядок. А твой? Думаю, ты и сам не знаешь, куда что положил.",
+          "text_translation_en": "That's because he clearly knows in his mind where everything is. But his mess is a kind of orderly mess. What about yours? I'd guess you yourself don't even know where you put things.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d19-s11",
+          "text_original": "你猜对了。有时候我找一份文件，要找半天，最后发现原来就在我手边。",
+          "pinyin": "Nǐ cāi duì le. Yǒu shíhou wǒ zhǎo yí fèn wénjiàn, yào zhǎo bàntiān, zuìhòu fāxiàn yuánlái jiù zài wǒ shǒubiān.",
+          "text_translation": "To'g'ri topding. Ba'zan men bitta hujjatni juda uzoq qidiraman, oxir-oqibat u aslida qo'limning yonida turganini bilib qolaman.",
+          "text_translation_ru": "Ты угадал. Иногда я ищу один документ полдня, а в итоге обнаруживаю, что он, оказывается, прямо у меня под рукой.",
+          "text_translation_en": "You guessed right. Sometimes I look for one document for ages, and in the end I find out it was right next to my hand all along.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d19-s12",
+          "text_original": "这就是典型的有意识的混乱。其实不只是浪费时间，杂乱的环境还会让你分心，增加心理负担。",
+          "pinyin": "Zhè jiùshì diǎnxíng de yǒu yìshi de hùnluàn. Qíshí bù zhǐ shì làngfèi shíjiān, záluàn de huánjìng hái huì ràng nǐ fēnxīn, zēngjiā xīnlǐ fùdān.",
+          "text_translation": "Mana bu odatdagi ongli betartiblik. Aslida bu nafaqat vaqtni behuda sarflaydi, balki tartibsiz muhit seni chalg'itadi va ruhiy yukni oshiradi.",
+          "text_translation_ru": "Вот это типичный осознанный беспорядок. На самом деле это не только трата времени — захламлённая обстановка ещё и отвлекает тебя и увеличивает психологическую нагрузку.",
+          "text_translation_en": "This is exactly the typical conscious mess. Actually it's not just a waste of time — a messy environment also distracts you and increases your mental burden.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d19-s13",
+          "text_original": "你这么一说，我决定今天下班前大扫除一次，把不需要的东西都扔掉。",
+          "pinyin": "Nǐ zhème yī shuō, wǒ juédìng jīntiān xiàbān qián dà sǎochú yí cì, bǎ bù xūyào de dōngxi dōu rēng diào.",
+          "text_translation": "Sen shunday deganingdan keyin, men bugun ishdan oldin bir marta katta tozalash o'tkazishga, keraksiz narsalarning hammasini tashlab yuborishga qaror qildim.",
+          "text_translation_ru": "После твоих слов я решил сегодня перед уходом с работы устроить большую уборку и выбросить все ненужные вещи.",
+          "text_translation_en": "Now that you say it, I've decided to do a big clean-up before leaving work today and throw away all the things I don't need.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d19-s14",
+          "text_original": "这还差不多。记住，办公桌不只是放东西的地方，它是你工作的工具。干净整齐的桌面对专注力很有帮助。",
+          "pinyin": "Zhè hái chàbuduō. Jìzhu, bàngōngzhuō bù zhǐ shì fàng dōngxi de dìfang, tā shì nǐ gōngzuò de gōngjù. Gānjìng zhěngqí de zhuōmiàn duì zhuānzhù lì hěn yǒu bāngzhù.",
+          "text_translation": "Mana endi to'g'ri bo'ldi. Yodingda tut, ish stoli faqat narsa qo'yadigan joy emas, u sening ishlash quroling. Toza va tartibli stol yuzasi diqqatni jamlashga juda yordam beradi.",
+          "text_translation_ru": "Вот это уже более-менее. Запомни, рабочий стол — это не просто место для вещей, это инструмент твоей работы. Чистая и аккуратная поверхность стола очень помогает концентрации.",
+          "text_translation_en": "That's more like it. Remember, a desk isn't just a place to put things — it's a tool for your work. A clean and tidy desktop really helps your focus.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d19-s15",
+          "text_original": "好，从今天开始，我每天下班前都会清理桌面。你给我做个见证。",
+          "pinyin": "Hǎo, cóng jīntiān kāishǐ, wǒ měitiān xiàbān qián dōu huì qīnglǐ zhuōmiàn. Nǐ gěi wǒ zuò ge jiànzhèng.",
+          "text_translation": "Mayli, bugundan boshlab men har kuni ishdan oldin stol yuzasini tozalayman. Sen menga guvoh bo'l.",
+          "text_translation_ru": "Хорошо, начиная с сегодняшнего дня я буду каждый день перед уходом с работы убирать стол. Будь мне свидетелем.",
+          "text_translation_en": "Alright, starting today I'll clean up my desk before leaving work every day. You be my witness.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d19-s16",
+          "text_original": "没问题。下个月我再来看，如果还是这么乱，我就请你喝咖啡。",
+          "pinyin": "Méi wèntí. Xià ge yuè wǒ zài lái kàn, rúguǒ háishì zhème luàn, wǒ jiù qǐng nǐ hē kāfēi.",
+          "text_translation": "Muammo yo'q. Keyingi oy yana kelib ko'raman, agar hali ham shuncha tartibsiz bo'lsa, men seni kofega taklif qilaman.",
+          "text_translation_ru": "Без проблем. В следующем месяце я снова приду посмотреть, и если будет всё так же беспорядочно, я угощу тебя кофе.",
+          "text_translation_en": "No problem. Next month I'll come and check again, and if it's still this messy, I'll treat you to a coffee.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

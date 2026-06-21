@@ -1,0 +1,176 @@
+{
+  "id": "hsk6-dialogue18",
+  "slug": "dealing-with-a-bad-boss",
+  "title": "坏上司",
+  "pinyin": "Huài shàngsi",
+  "titleTranslation": "Yomon rahbar",
+  "titleTranslation_ru": "Плохой начальник",
+  "titleTranslation_en": "Bad Bosses",
+  "level": 6,
+  "tag": "ish joyi",
+  "dateAdded": "2026-06-22",
+  "vocab": ["唉声叹气","烦心","插手","过目","微观管理","控制欲","下属","上任","逼疯","应付","请示","字体","自主性","布置","打压","报复","权威","环节","核心业务","事半功倍","怀疑人生","两手准备"],
+  "sections": [
+    {
+      "id": "h6d18-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d18-s1",
+          "text_original": "你最近怎么老是唉声叹气的？工作上又遇到什么烦心事了？",
+          "pinyin": "Nǐ zuìjìn zěnme lǎo shì āishēng tànqì de? Gōngzuò shàng yòu yùdào shénme fánxīn shì le?",
+          "text_translation": "Nega so'nggi paytlarda doim uf tortib yuribsan? Ishda yana qandaydir tashvishli narsaga duch keldingmi?",
+          "text_translation_ru": "Почему ты в последнее время всё время вздыхаешь? Снова столкнулся с какой-то неприятностью на работе?",
+          "text_translation_en": "Why have you been sighing all the time lately? Did you run into some troubling matter at work again?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d18-s2",
+          "text_original": "别提了，我们新来的主管简直让人受不了。什么事情都要插手，连发邮件都得先发给他过目。",
+          "pinyin": "Bié tí le, wǒmen xīn lái de zhǔguǎn jiǎnzhí ràng rén shòu bù liǎo. Shénme shìqing dōu yào chāshǒu, lián fā yóujiàn dōu děi xiān fā gěi tā guòmù.",
+          "text_translation": "Gapirmasang ham bo'ladi, yangi kelgan boshlig'imiz rostdan ham chidab bo'lmas darajada. Hamma ishga aralashadi, hatto elektron xat yuborishda ham avval unga ko'rib chiqishi uchun yuborish kerak.",
+          "text_translation_ru": "Не говори, наш новый руководитель просто невыносим. Во всё лезет, даже письма надо сначала отправлять ему на просмотр.",
+          "text_translation_en": "Don't even mention it, our new supervisor is simply unbearable. He has to meddle in everything; even sending an email, you have to send it to him to review first.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d18-s3",
+          "text_original": "这就是典型的微观管理。有些领导就是控制欲特别强，不相信下属的能力。",
+          "pinyin": "Zhè jiùshì diǎnxíng de wēiguān guǎnlǐ. Yǒuxiē lǐngdǎo jiùshì kòngzhì yù tèbié qiáng, bù xiāngxìn xiàshǔ de nénglì.",
+          "text_translation": "Bu aynan tipik mikromenejment. Ba'zi rahbarlarda nazorat qilish ishtiyoqi juda kuchli bo'ladi, ular qo'l ostidagilarning qobiliyatiga ishonmaydi.",
+          "text_translation_ru": "Это и есть типичный микроменеджмент. У некоторых руководителей особенно сильна тяга к контролю, они не верят в способности подчинённых.",
+          "text_translation_en": "This is exactly typical micromanagement. Some leaders just have an especially strong desire for control and don't trust their subordinates' abilities.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d18-s4",
+          "text_original": "我知道他是新官上任，想证明自己。但这样搞下去，大家都快被逼疯了。每天的工作不是做事，而是应付他的各种要求。",
+          "pinyin": "Wǒ zhīdào tā shì xīn guān shàngrèn, xiǎng zhèngmíng zìjǐ. Dàn zhèyàng gǎo xiàqù, dàjiā dōu kuài bèi bī fēng le. Měitiān de gōngzuò bú shì zuò shì, ér shì yìngfu tā de gè zhǒng yāoqiú.",
+          "text_translation": "Bilaman, u yangi tayinlangan rahbar, o'zini isbotlamoqchi. Lekin shu tarzda davom etsa, hammani aqldan ozdiradigan darajaga olib keladi. Har kungi ish — ish qilish emas, balki uning turli talablariga ko'nikishdan iborat.",
+          "text_translation_ru": "Я понимаю, он только заступил на должность и хочет проявить себя. Но если так продолжать, все скоро сойдут с ума. Каждодневная работа — это не дело делать, а угождать его разнообразным требованиям.",
+          "text_translation_en": "I know he's newly appointed and wants to prove himself. But if it goes on like this, everyone will be driven crazy. The daily work isn't about getting things done, but about coping with his various demands.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d18-s5",
+          "text_original": "他具体怎么个管法？",
+          "pinyin": "Tā jùtǐ zěnme ge guǎnfǎ?",
+          "text_translation": "U aniq qanday boshqaradi?",
+          "text_translation_ru": "А как именно он управляет?",
+          "text_translation_en": "How exactly does he manage?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d18-s6",
+          "text_original": "要求我们每半小时汇报一次进度，每个决定都要先请示他，连PPT的字体和颜色他都要亲自改。",
+          "pinyin": "Yāoqiú wǒmen měi bàn xiǎoshí huìbào yí cì jìndù, měi ge juédìng dōu yào xiān qǐngshì tā, lián PPT de zìtǐ hé yánsè tā dōu yào qīnzì gǎi.",
+          "text_translation": "Bizdan har yarim soatda bir marta jarayon haqida hisobot berishni talab qiladi, har bir qarorni avval undan so'rab olish kerak, hatto PPT shrifti va rangini ham o'zi shaxsan o'zgartiradi.",
+          "text_translation_ru": "Требует, чтобы мы каждые полчаса отчитывались о прогрессе, каждое решение надо сначала согласовывать с ним, даже шрифт и цвет в презентации он сам лично меняет.",
+          "text_translation_en": "He requires us to report progress every half hour, every decision has to be cleared with him first, and even the font and color of the PPT he changes himself.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d18-s7",
+          "text_original": "这也太夸张了。这样不仅浪费他自己的时间，也让你们失去了自主性。",
+          "pinyin": "Zhè yě tài kuāzhāng le. Zhèyàng bùjǐn làngfèi tā zìjǐ de shíjiān, yě ràng nǐmen shīqù le zìzhǔ xìng.",
+          "text_translation": "Bu juda haddan oshib ketgan. Bu nafaqat uning o'z vaqtini behuda sarflaydi, balki sizlarni mustaqillikdan ham mahrum qiladi.",
+          "text_translation_ru": "Это уже слишком. Так он не только тратит впустую своё время, но и лишает вас самостоятельности.",
+          "text_translation_en": "That's way too much. This not only wastes his own time but also makes you lose your autonomy.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d18-s8",
+          "text_original": "最难受的是，他经常下班前突然布置任务，要求第二天一早完成。搞得大家经常加班到很晚。",
+          "pinyin": "Zuì nánshòu de shì, tā jīngcháng xiàbān qián tūrán bùzhì rènwu, yāoqiú dì-èr tiān yī zǎo wánchéng. Gǎo de dàjiā jīngcháng jiābān dào hěn wǎn.",
+          "text_translation": "Eng yomoni shuki, u ko'pincha ish tugashidan oldin to'satdan vazifa beradi va ertasi kuni erta tongda bajarishni talab qiladi. Buning natijasida hamma tez-tez kech tungacha qo'shimcha ishlaydi.",
+          "text_translation_ru": "Хуже всего то, что он часто перед концом рабочего дня внезапно даёт задание и требует выполнить его к раннему утру следующего дня. Из-за этого все часто работают сверхурочно допоздна.",
+          "text_translation_en": "The hardest part is that he often suddenly assigns tasks right before the end of the workday and demands they be finished early the next morning. This makes everyone frequently work overtime until very late.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d18-s9",
+          "text_original": "你们有没有人跟HR反映过这个情况？",
+          "pinyin": "Nǐmen yǒu méiyǒu rén gēn HR fǎnyìng guo zhè ge qíngkuàng?",
+          "text_translation": "Sizlardan kimdir bu vaziyatni HR ga yetkazganmi?",
+          "text_translation_ru": "Кто-нибудь из вас сообщал об этой ситуации в отдел кадров?",
+          "text_translation_en": "Has anyone among you reported this situation to HR?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d18-s10",
+          "text_original": "有人私下聊过，但HR也管不了领导。而且大家都不敢公开说，怕被打压报复。",
+          "pinyin": "Yǒurén sīxià liáo guo, dàn HR yě guǎn bù liǎo lǐngdǎo. Érqiě dàjiā dōu bù gǎn gōngkāi shuō, pà bèi dǎyā bàofù.",
+          "text_translation": "Kimdir maxfiy ravishda gaplashgan, lekin HR ham rahbarni nazorat qila olmaydi. Bundan tashqari, hamma ochiq aytishga jur'at qilolmaydi, ezilib, qasos olinishidan qo'rqadi.",
+          "text_translation_ru": "Кое-кто говорил об этом в частном порядке, но отдел кадров тоже не может повлиять на руководителя. К тому же никто не решается сказать открыто, боясь притеснений и мести.",
+          "text_translation_en": "Some people have talked about it privately, but HR can't control the leadership either. Besides, nobody dares to say it openly, afraid of being suppressed and retaliated against.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d18-s11",
+          "text_original": "你打算一直忍下去吗？长期在这样的环境下工作，身心都会受不了的。",
+          "pinyin": "Nǐ dǎsuàn yìzhí rěn xiàqù ma? Chángqī zài zhèyàng de huánjìng xià gōngzuò, shēnxīn dōu huì shòu bù liǎo de.",
+          "text_translation": "Doim shunday chidab yuraverishni rejalashtiryapsanmi? Bunday muhitda uzoq vaqt ishlasang, jismoniy va ruhiy jihatdan chidab bo'lmaydi.",
+          "text_translation_ru": "Ты собираешься всё время терпеть? Если долго работать в такой обстановке, ни тело, ни психика этого не выдержат.",
+          "text_translation_en": "Are you planning to keep enduring it? Working in such an environment for a long time, both your body and mind won't be able to bear it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d18-s12",
+          "text_original": "我已经开始更新简历了，准备看看其他机会。不过走之前，我想试着跟他谈一次，把话说开。",
+          "pinyin": "Wǒ yǐjīng kāishǐ gēngxīn jiǎnlì le, zhǔnbèi kàn kan qítā jīhuì. Búguò zǒu zhīqián, wǒ xiǎng shì zhe gēn tā tán yí cì, bǎ huà shuō kāi.",
+          "text_translation": "Men allaqachon rezyumemni yangilashni boshladim, boshqa imkoniyatlarni ko'rib chiqmoqchiman. Lekin ketishdan oldin, u bilan bir marta gaplashib, hammasini ochiqchasiga aytib qo'ymoqchiman.",
+          "text_translation_ru": "Я уже начал обновлять резюме, собираюсь поискать другие возможности. Но прежде чем уйти, я хочу попробовать поговорить с ним один раз и всё откровенно высказать.",
+          "text_translation_en": "I've already started updating my resume and plan to look at other opportunities. But before I leave, I want to try talking with him once and clear the air.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d18-s13",
+          "text_original": "谈的时候要注意方式，别让他觉得你在挑战他的权威。你可以从影响工作效率的角度出发，而不是直接批评他的管理方式。",
+          "pinyin": "Tán de shíhou yào zhùyì fāngshì, bié ràng tā juéde nǐ zài tiǎozhàn tā de quánwēi. Nǐ kěyǐ cóng yǐngxiǎng gōngzuò xiàolǜ de jiǎodù chūfā, ér bú shì zhíjiē pīpíng tā de guǎnlǐ fāngshì.",
+          "text_translation": "Gaplashganda usulga e'tibor ber, uning obro'siga qarshi chiqayotgandek tuyulmasin. Sen ish samaradorligiga ta'sir qilish nuqtai nazaridan boshlashing mumkin, uning boshqaruv uslubini to'g'ridan-to'g'ri tanqid qilish o'rniga.",
+          "text_translation_ru": "Когда будешь говорить, обрати внимание на манеру, не дай ему почувствовать, что ты бросаешь вызов его авторитету. Ты можешь зайти со стороны влияния на эффективность работы, а не напрямую критиковать его стиль управления.",
+          "text_translation_en": "When you talk, pay attention to the approach; don't let him feel that you're challenging his authority. You can start from the angle of how it affects work efficiency, rather than directly criticizing his management style.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d18-s14",
+          "text_original": "比如说，你可以说「如果减少一些汇报的环节，我们可以把更多精力放在核心业务上」，而不是说「你这样管我们太累了」。",
+          "pinyin": "Bǐrú shuō, nǐ kěyǐ shuō 'rúguǒ jiǎnshǎo yì xiē huìbào de huánjié, wǒmen kěyǐ bǎ gèng duō jīnglì fàng zài héxīn yèwù shàng', ér bú shì shuō 'nǐ zhèyàng guǎn wǒmen tài lèi le'.",
+          "text_translation": "Masalan, sen «agar hisobot berish bosqichlaridan ba'zilarini qisqartirsak, biz ko'proq kuchni asosiy ishlarga sarflashimiz mumkin» deb aytishing mumkin, «sen bizni shunday boshqarsang, juda charchatyapsan» deyish o'rniga.",
+          "text_translation_ru": "Например, ты можешь сказать «если сократить некоторые этапы отчётности, мы сможем направить больше сил на основные задачи», а не «ты так нами управляешь, что мы слишком устаём».",
+          "text_translation_en": "For example, you could say, 「If we reduce some of the reporting steps, we can put more energy into the core business」, rather than saying 「Managing us this way is exhausting」.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d18-s15",
+          "text_original": "你说得很有道理。我得学着用他听得进去的方式说话，不然说了也白说。",
+          "pinyin": "Nǐ shuō de hěn yǒu dàoli. Wǒ děi xué zhe yòng tā tīng de jìnqù de fāngshì shuōhuà, bùrán shuō le yě bái shuō.",
+          "text_translation": "Sen juda to'g'ri aytding. Men u qabul qila oladigan tarzda gapirishni o'rganishim kerak, aks holda aytganim ham behuda bo'ladi.",
+          "text_translation_ru": "Ты прав. Мне надо научиться говорить так, чтобы он мог это воспринять, иначе сказанное окажется напрасным.",
+          "text_translation_en": "You make a lot of sense. I have to learn to speak in a way he can take in, otherwise saying it would be a waste.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d18-s16",
+          "text_original": "如果谈了之后还是没有改善，那跳槽就是最明智的选择。好的领导能让工作事半功倍，坏的领导会让你怀疑人生。",
+          "pinyin": "Rúguǒ tán le zhīhòu háishì méiyǒu gǎishàn, nà tiàocáo jiùshì zuì míngzhì de xuǎnzé. Hǎo de lǐngdǎo néng ràng gōngzuò shì bàn gōng bèi, huài de lǐngdǎo huì ràng nǐ huáiyí rénshēng.",
+          "text_translation": "Agar gaplashgandan keyin ham yaxshilanish bo'lmasa, ishni almashtirish eng oqilona tanlov bo'ladi. Yaxshi rahbar ishni kam kuch bilan ikki barobar samarali qila oladi, yomon rahbar esa seni hayotdan shubhalanishga majbur qiladi.",
+          "text_translation_ru": "Если после разговора всё равно не будет улучшений, то сменить работу — самый разумный выбор. Хороший руководитель позволяет добиваться вдвое большего меньшими усилиями, а плохой заставит тебя усомниться в жизни.",
+          "text_translation_en": "If there's still no improvement after the talk, then changing jobs is the wisest choice. A good leader can make your work achieve twice the result with half the effort, while a bad leader will make you question your life.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d18-s17",
+          "text_original": "说得好。反正我已经做好了两手准备，谈得成就继续，谈不成就走人。",
+          "pinyin": "Shuō de hǎo. Fǎnzhèng wǒ yǐjīng zuò hǎo le liǎng shǒu zhǔnbèi, tán dé chéng jiù jìxù, tán bù chéng jiù zǒu rén.",
+          "text_translation": "Yaxshi aytding. Baribir men ikki tomonlama tayyorgarlik ko'rib qo'ydim — gaplashuv muvaffaqiyatli bo'lsa davom etaman, bo'lmasa ketaman.",
+          "text_translation_ru": "Хорошо сказано. В любом случае я уже подготовился к двум вариантам: если разговор удастся — останусь, если нет — уйду.",
+          "text_translation_en": "Well said. In any case, I've already prepared for both outcomes: if the talk succeeds, I'll stay; if it doesn't, I'll leave.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

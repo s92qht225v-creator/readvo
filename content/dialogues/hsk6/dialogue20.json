@@ -1,0 +1,167 @@
+{
+  "id": "hsk6-dialogue20",
+  "slug": "lunch-dilemmas",
+  "title": "午餐难题",
+  "pinyin": "Wǔcān nántí",
+  "titleTranslation": "Tushlik muammosi",
+  "titleTranslation_ru": "Дилемма обеда",
+  "titleTranslation_en": "Lunch Dilemmas",
+  "level": 6,
+  "tag": "ish joyi",
+  "dateAdded": "2026-06-22",
+  "vocab": ["发愁","随便","沙拉","照顾","羡慕","纠结","抽签","轮流","川菜馆","尴尬","组队","乐趣","缓和","不愉快","得不偿失","禁忌","载体"],
+  "sections": [
+    {
+      "id": "h6d20-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d20-s1",
+          "text_original": "又到午饭时间了。今天吃什么？",
+          "pinyin": "Yòu dào wǔfàn shíjiān le. Jīntiān chī shénme?",
+          "text_translation": "Yana tushlik vaqti bo'ldi. Bugun nima yeymiz?",
+          "text_translation_ru": "Снова настало время обеда. Что сегодня едим?",
+          "text_translation_en": "It's lunchtime again. What shall we eat today?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d20-s2",
+          "text_original": "别提了，我每天都在为这个问题发愁。我们部门十几个人，每次问「吃什么」，没人能给出答案。",
+          "pinyin": "Bié tí le, wǒ měitiān dōu zài wèi zhè ge wèntí fāchóu. Wǒmen bùmén shí jǐ ge rén, měi cì wèn 'chī shénme', méi rén néng gěi chū dá'àn.",
+          "text_translation": "Gapirma ham, men har kuni shu masala uchun bosh qotiraman. Bizning bo'limimizda o'n necha kishi bor, har safar «nima yeymiz» deb so'rasak, hech kim javob bera olmaydi.",
+          "text_translation_ru": "И не говори, я каждый день мучаюсь из-за этого вопроса. В нашем отделе больше десяти человек, и каждый раз, когда спрашиваешь «что есть», никто не может дать ответ.",
+          "text_translation_en": "Don't even mention it, I worry about this every day. There are over ten people in our department, and every time someone asks \"what to eat,\" no one can give an answer.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d20-s3",
+          "text_original": "我们办公室也一样。大家都说「随便」，但真的随便点个外卖，又有人不满意。",
+          "pinyin": "Wǒmen bàngōngshì yě yíyàng. Dàjiā dōu shuō 'suíbiàn', dàn zhēn de suíbiàn diǎn ge wàimài, yòu yǒu rén bù mǎnyì.",
+          "text_translation": "Bizning ofisimizda ham xuddi shunday. Hamma «farqi yo'q» deydi, lekin chindan ham bemalol biror ovqat buyurtma qilsang, yana kimdir norozi bo'ladi.",
+          "text_translation_ru": "У нас в офисе то же самое. Все говорят «всё равно», но если действительно просто закажешь еду навынос, кто-нибудь снова окажется недоволен.",
+          "text_translation_en": "Our office is the same. Everyone says \"anything goes,\" but if you really just order any takeout, someone ends up unhappy.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d20-s4",
+          "text_original": "对，有人不吃辣，有人不吃肉，有人正在减肥，有人只吃沙拉……每次都要照顾所有人的需求，真的太累了。",
+          "pinyin": "Duì, yǒu rén bù chī là, yǒu rén bù chī ròu, yǒu rén zhèngzài jiǎnféi, yǒu rén zhǐ chī shālā ... měi cì dōu yào zhàogù suǒyǒu rén de xūqiú, zhēn de tài lèi le.",
+          "text_translation": "Ha, kimdir achchiq yemaydi, kimdir go'sht yemaydi, kimdir ozish bilan ovora, kimdir faqat salat yeydi... har safar hammaning ehtiyojini hisobga olish kerak, chindan ham juda charchatadi.",
+          "text_translation_ru": "Да, кто-то не ест острое, кто-то не ест мясо, кто-то худеет, кто-то ест только салат... каждый раз приходится учитывать потребности всех, это и правда очень утомительно.",
+          "text_translation_en": "Right, some don't eat spicy food, some don't eat meat, some are dieting, some only eat salad... having to accommodate everyone's needs every time is really exhausting.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d20-s5",
+          "text_original": "这种时候就特别羡慕那些带饭的同事，不用纠结每天吃什么。",
+          "pinyin": "Zhè zhǒng shíhou jiù tèbié xiànmù nàxiē dài fàn de tóngshì, búyòng jiūjié měitiān chī shénme.",
+          "text_translation": "Shunday paytda o'zi bilan ovqat olib keladigan hamkasblarga juda havasim keladi, har kuni nima yeyish haqida bosh qotirishlari shart emas.",
+          "text_translation_ru": "В такие моменты особенно завидуешь тем коллегам, кто приносит еду с собой, им не нужно каждый день ломать голову над тем, что есть.",
+          "text_translation_en": "At times like these, I really envy those colleagues who bring their own food and don't have to agonize over what to eat every day.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d20-s6",
+          "text_original": "我以前也带过饭，但坚持了一周就放弃了。晚上回家还要准备第二天的饭菜，太麻烦了。",
+          "pinyin": "Wǒ yǐqián yě dài guo fàn, dàn jiānchí le yī zhōu jiù fàngqì le. Wǎnshang huí jiā hái yào zhǔnbèi dì-èr tiān de fàncài, tài máfan le.",
+          "text_translation": "Men ham ilgari ovqat olib kelganman, lekin bir hafta chidab keyin voz kechdim. Kechqurun uyga qaytib, ertangi kun uchun ovqat tayyorlash kerak edi, juda ovora qiladi.",
+          "text_translation_ru": "Я раньше тоже приносил еду с собой, но продержался всего неделю и бросил. Вечером возвращаешься домой и ещё нужно готовить еду на следующий день, слишком хлопотно.",
+          "text_translation_en": "I used to bring my own food too, but I gave up after just a week. Coming home in the evening and still having to prepare the next day's meal was too much trouble.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d20-s7",
+          "text_original": "我们部门现在有个规矩：每周一抽签，决定这周去哪吃。大家轮流选地方，不用每天纠结。",
+          "pinyin": "Wǒmen bùmén xiànzài yǒu ge guījǔ: měi zhōu yī chōuqiān, juédìng zhè zhōu qù nǎr chī. Dàjiā lúnliú xuǎn dìfang, búyòng měitiān jiūjié.",
+          "text_translation": "Bizning bo'limimizda hozir bir qoida bor: har dushanba kuni qur'a tashlanadi, shu hafta qayerga ovqatga borishni hal qiladi. Hamma navbatma-navbat joy tanlaydi, har kuni bosh qotirish shart emas.",
+          "text_translation_ru": "У нас в отделе теперь есть правило: каждый понедельник тянем жребий, чтобы решить, куда пойдём есть на этой неделе. Все по очереди выбирают место, не нужно каждый день ломать голову.",
+          "text_translation_en": "Our department now has a rule: every Monday we draw lots to decide where to eat that week. Everyone takes turns choosing the place, so there's no need to agonize over it daily.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d20-s8",
+          "text_original": "这个办法好！这样每个人都能选到自己喜欢的地方，也避免了争论。",
+          "pinyin": "Zhè ge bànfǎ hǎo! Zhèyàng měi ge rén dōu néng xuǎn dào zìjǐ xǐhuān de dìfang, yě bìmiǎn le zhēnglùn.",
+          "text_translation": "Bu usul yaxshi! Bunday qilib har bir kishi o'zi yoqtirgan joyni tanlay oladi, bahslashishning ham oldi olinadi.",
+          "text_translation_ru": "Этот способ хорош! Так каждый сможет выбрать место, которое ему нравится, и заодно избежать споров.",
+          "text_translation_en": "That's a good method! This way everyone gets to choose a place they like, and it also avoids arguments.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d20-s9",
+          "text_original": "但还是会有人不满意。上周轮到小王选，他选了一家川菜馆，两个不能吃辣的同事直接去吃便利店了。",
+          "pinyin": "Dàn háishì huì yǒu rén bù mǎnyì. Shàng zhōu lún dào Xiǎo Wáng xuǎn, tā xuǎn le yī jiā chuāncài guǎn, liǎng ge bùnéng chī là de tóngshì zhíjiē qù chī biànlìdiàn le.",
+          "text_translation": "Lekin baribir kimdir norozi bo'ladi. O'tgan hafta tanlash navbati Syao Vangga keldi, u bir Sichuan oshxonasini tanladi, achchiq yeya olmaydigan ikki hamkasb to'g'ridan-to'g'ri do'konga ovqatga ketib qolishdi.",
+          "text_translation_ru": "Но всё равно кто-нибудь останется недоволен. На прошлой неделе очередь выбирать дошла до Сяо Вана, он выбрал сычуаньский ресторан, и двое коллег, которые не едят острое, просто пошли есть в магазин у дома.",
+          "text_translation_en": "But there's still always someone who's unhappy. Last week it was Xiao Wang's turn to choose, and he picked a Sichuan restaurant, so two colleagues who can't eat spicy food just went to eat at the convenience store.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d20-s10",
+          "text_original": "哈哈，这也太尴尬了。不过确实很难让所有人都满意。",
+          "pinyin": "Hāhā, zhè yě tài gāngà le. Búguò quèshí hěn nán ràng suǒyǒu rén dōu mǎnyì.",
+          "text_translation": "Haha, bu juda noqulay holat-ku. Lekin chindan ham hammani rozi qilish juda qiyin.",
+          "text_translation_ru": "Ха-ха, это уж слишком неловко. Но и правда очень трудно угодить всем.",
+          "text_translation_en": "Haha, that's so awkward. But it really is hard to satisfy everyone.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d20-s11",
+          "text_original": "有时候大家会分成几波，喜欢吃的跟喜欢吃的组队，这样就不会有冲突。",
+          "pinyin": "Yǒu shíhou dàjiā huì fēn chéng jǐ bō, xǐhuān chī de gēn xǐhuān chī de zǔduì, zhèyàng jiù bú huì yǒu chōngtū.",
+          "text_translation": "Ba'zan hamma bir necha guruhga bo'linadi, bir xil ovqatni yoqtiradiganlar o'zaro birlashadi, shunda hech qanday ziddiyat bo'lmaydi.",
+          "text_translation_ru": "Иногда все разбиваются на несколько групп, те, кому нравится одна еда, объединяются вместе, и так никаких конфликтов не возникает.",
+          "text_translation_en": "Sometimes everyone splits into a few groups, with those who like the same food teaming up, so there's no conflict.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d20-s12",
+          "text_original": "但这样又少了集体吃饭的乐趣。我觉得午饭不只是吃饭，也是同事之间交流感情的时间。",
+          "pinyin": "Dàn zhèyàng yòu shǎo le jítǐ chī fàn de lèqù. Wǒ juéde wǔfàn bù zhǐ shì chī fàn, yě shì tóngshì zhījiān jiāoliú gǎnqíng de shíjiān.",
+          "text_translation": "Lekin bunday qilsa, jamoa bo'lib ovqatlanishning zavqi yo'qoladi. Menimcha, tushlik shunchaki ovqatlanish emas, balki hamkasblar o'rtasida muloqot qilish vaqti hamdir.",
+          "text_translation_ru": "Но так теряется удовольствие от совместного обеда. Я считаю, что обед — это не просто приём пищи, но и время для общения между коллегами.",
+          "text_translation_en": "But that takes away the fun of eating together as a group. I think lunch isn't just about eating, it's also a time for colleagues to bond.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d20-s13",
+          "text_original": "对。吃饭的时候聊聊工作以外的事情，能缓和同事关系。但如果因为吃饭闹得不愉快，就得不偿失了。",
+          "pinyin": "Duì. Chī fàn de shíhou liáo liao gōngzuò yǐwài de shìqing, néng huǎnhé tóngshì guānxi. Dàn rúguǒ yīnwèi chī fàn nào de bù yúkuài, jiù débùchángshī le.",
+          "text_translation": "To'g'ri. Ovqatlanayotganda ish bilan bog'liq bo'lmagan narsalar haqida suhbatlashish hamkasblar o'rtasidagi munosabatlarni yumshatadi. Lekin agar ovqat tufayli noxush vaziyat kelib chiqsa, ziyon foydadan ortib ketadi.",
+          "text_translation_ru": "Верно. Когда за едой болтаешь о вещах помимо работы, это смягчает отношения между коллегами. Но если из-за еды дело доходит до неприятностей, то овчинка выделки не стоит.",
+          "text_translation_en": "Right. Chatting about things outside of work during a meal can ease relationships between colleagues. But if a meal leads to unpleasantness, then it's not worth it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d20-s14",
+          "text_original": "所以我最近开始尝试一个新的解决方案：轮流做决定，但每个人都要提前一天说好自己的禁忌，这样选地方的人有心理准备。",
+          "pinyin": "Suǒyǐ wǒ zuìjìn kāishǐ chángshì yí ge xīn de jiějué fāng'àn: lúnliú zuò juédìng, dàn měi ge rén dōu yào tíqián yì tiān shuō hǎo zìjǐ de jìnjì, zhèyàng xuǎn dìfang de rén yǒu xīnlǐ zhǔnbèi.",
+          "text_translation": "Shuning uchun men yaqinda yangi bir yechimni sinab ko'ra boshladim: navbatma-navbat qaror qabul qilinadi, lekin har bir kishi bir kun oldin o'zining taqiqlarini aytib qo'yishi kerak, shunda joy tanlaydigan odam ruhan tayyor bo'ladi.",
+          "text_translation_ru": "Поэтому я недавно начал пробовать новое решение: решения принимаем по очереди, но каждый должен за день заранее сообщить о своих ограничениях, так что у того, кто выбирает место, есть психологическая готовность.",
+          "text_translation_en": "So recently I started trying a new solution: we take turns making the decision, but everyone has to state their restrictions a day in advance, so the person choosing the place is mentally prepared.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d20-s15",
+          "text_original": "这个主意不错。吃饭本应该是放松的事情，别让选择吃什么变成一种负担。",
+          "pinyin": "Zhè ge zhǔyi búcuò. Chī fàn běn yīnggāi shì fàngsōng de shìqing, bié ràng xuǎnzé chī shénme biàn chéng yì zhǒng fùdān.",
+          "text_translation": "Bu fikr yomon emas. Ovqatlanish aslida dam olish bo'lishi kerak, nima yeyishni tanlashni yukka aylantirib qo'ymaslik kerak.",
+          "text_translation_ru": "Это неплохая идея. Еда изначально должна быть чем-то расслабляющим, не стоит превращать выбор того, что есть, в обузу.",
+          "text_translation_en": "That's a good idea. Eating is supposed to be relaxing, so we shouldn't let choosing what to eat become a burden.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d20-s16",
+          "text_original": "是啊。毕竟食物只是载体，一起吃饭的人才是最重要的。",
+          "pinyin": "Shì a. Bìjìng shíwù zhǐ shì zàitǐ, yìqǐ chī fàn de rén cái shì zuì zhòngyào de.",
+          "text_translation": "Ha. Axir ovqat shunchaki vosita, birga ovqatlanadigan odamlar eng muhimi.",
+          "text_translation_ru": "Да. В конце концов, еда — всего лишь носитель, а самое важное — это люди, с которыми ты ешь.",
+          "text_translation_en": "Yeah. After all, food is just a vehicle; the people you eat with are what matter most.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

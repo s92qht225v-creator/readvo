@@ -1,0 +1,185 @@
+{
+  "id": "hsk6-dialogue22",
+  "slug": "phone-addiction",
+  "title": "手机成瘾",
+  "pinyin": "Shǒujī chéngyǐn",
+  "titleTranslation": "Telefonga qaramlik",
+  "titleTranslation_ru": "Зависимость от телефона",
+  "titleTranslation_en": "Phone Addiction",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["成瘾", "狡猾", "故意", "上瘾", "焦虑", "床头", "响铃", "模式", "下定决心", "屏幕使用时间", "窗帘", "典范", "养成"],
+  "sections": [
+    {
+      "id": "h6d22-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d22-s1",
+          "text_original": "你每天醒来第一件事是什么？",
+          "pinyin": "Nǐ měitiān xǐnglái dì-yī jiàn shì shì shénme?",
+          "text_translation": "Har kuni uyg'onganingda birinchi qiladigan ishing nima?",
+          "text_translation_ru": "Что ты делаешь каждый день первым делом, когда просыпаешься?",
+          "text_translation_en": "What's the first thing you do every day when you wake up?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d22-s2",
+          "text_original": "摸手机。眼睛还没完全睁开，手就已经伸过去了。",
+          "pinyin": "Mō shǒujī. Yǎnjing hái méi wánquán zhēngkāi, shǒu jiù yǐjīng shēn guòqù le.",
+          "text_translation": "Telefonni paypaslayman. Ko'zlarim hali to'liq ochilmasdan, qo'lim allaqachon unga uzanib bo'lgan bo'ladi.",
+          "text_translation_ru": "Тянусь к телефону. Глаза ещё толком не открылись, а рука уже потянулась к нему.",
+          "text_translation_en": "I reach for my phone. My eyes aren't even fully open yet, but my hand has already reached over to it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d22-s3",
+          "text_original": "我也是。明明知道刚醒的时候不应该看手机，但就是控制不住。",
+          "pinyin": "Wǒ yě shì. Míngmíng zhīdào gāng xǐng de shíhou bù yīnggāi kàn shǒujī, dàn jiùshì kòngzhì bú zhù.",
+          "text_translation": "Men ham. Endigina uyg'ongan paytda telefonga qaramaslik kerakligini aniq bilaman-u, lekin o'zimni tuta olmayman.",
+          "text_translation_ru": "Я тоже. Прекрасно знаю, что сразу после пробуждения не стоит смотреть в телефон, но просто не могу себя сдержать.",
+          "text_translation_en": "Me too. I know perfectly well that I shouldn't look at my phone right after waking up, but I just can't control myself.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d22-s4",
+          "text_original": "这不是我们的问题，是那些App设计得太狡猾了。它们就是故意让你上瘾的。",
+          "pinyin": "Zhè bú shì wǒmen de wèntí, shì nàxiē App shèjì de tài jiǎohuá le. Tāmen jiùshì gùyì ràng nǐ shàngyǐn de.",
+          "text_translation": "Bu bizning aybimiz emas, o'sha ilovalar juda ayyorlik bilan ishlab chiqilgan. Ular ataylab seni o'ziga qaram qiladi.",
+          "text_translation_ru": "Это не наша вина, это те приложения слишком хитро спроектированы. Они специально вызывают у тебя зависимость.",
+          "text_translation_en": "It's not our fault, those apps are designed too cunningly. They deliberately make you addicted.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d22-s5",
+          "text_original": "没错。我现在每天早上本来打算只看五分钟，结果常常半个小时过去了还躺在床上。",
+          "pinyin": "Méi cuò. Wǒ xiànzài měitiān zǎoshang běnlái dǎsuàn zhǐ kàn wǔ fēnzhōng, jiéguǒ chángcháng bàn ge xiǎoshí guòqù le hái tǎng zài chuáng shàng.",
+          "text_translation": "To'g'ri. Hozir har kuni ertalab atigi besh daqiqa qarayman deb mo'ljallayman-u, oqibatda ko'pincha yarim soat o'tib ketsa ham hali ham karavotda yotgan bo'laman.",
+          "text_translation_ru": "Точно. Сейчас каждое утро я собираюсь посмотреть всего пять минут, а в итоге часто проходит полчаса, а я всё ещё лежу в постели.",
+          "text_translation_en": "Exactly. Now every morning I plan to look for just five minutes, but it often ends up that half an hour has passed and I'm still lying in bed.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d22-s6",
+          "text_original": "我也是！而且看完以后脑子像被塞满了信息，一天的开始就变得很焦虑。",
+          "pinyin": "Wǒ yě shì! Érqiě kàn wán yǐhòu nǎozi xiàng bèi sāi mǎn le xìnxī, yì tiān de kāishǐ jiù biàn de hěn jiāolǜ.",
+          "text_translation": "Men ham! Bundan tashqari, qarab bo'lganimdan keyin miyam go'yo axborot bilan to'lib ketgandek bo'ladi va kunning boshlanishi juda tashvishli bo'lib qoladi.",
+          "text_translation_ru": "Я тоже! И ещё после просмотра голова словно набита информацией, и начало дня становится очень тревожным.",
+          "text_translation_en": "Me too! And after I'm done looking, my head feels like it's been crammed full of information, and the start of the day becomes very anxious.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d22-s7",
+          "text_original": "我有个朋友，她把手机放在客厅充电，床头放一个传统闹钟。她说这样睡眠质量提高了很多。",
+          "pinyin": "Wǒ yǒu ge péngyou, tā bǎ shǒujī fàng zài kètīng chōngdiàn, chuángtóu fàng yí ge chuántǒng nàozhōng. Tā shuō zhèyàng shuìmián zhìliàng tígāo le hěnduō.",
+          "text_translation": "Mening bir do'stim bor, u telefonini mehmonxonada quvvatlash uchun qoldiradi, karavot boshiga esa oddiy budilnik qo'yadi. U shunday qilib uyqu sifati ancha yaxshilanganini aytadi.",
+          "text_translation_ru": "У меня есть подруга, она ставит телефон заряжаться в гостиной, а у изголовья кровати кладёт обычный будильник. Она говорит, что так качество сна сильно улучшилось.",
+          "text_translation_en": "I have a friend who puts her phone to charge in the living room and keeps a traditional alarm clock by her bed. She says her sleep quality has improved a lot this way.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d22-s8",
+          "text_original": "这个主意真好，但我做不到。万一晚上有人有急事联系我怎么办？",
+          "pinyin": "Zhè ge zhǔyi zhēn hǎo, dàn wǒ zuò bú dào. Wànyī wǎnshang yǒu rén yǒu jíshì liánxì wǒ zěnme bàn?",
+          "text_translation": "Bu fikr juda yaxshi, lekin men buni qila olmayman. Birdan kechqurun kimdir shoshilinch ish bilan men bilan bog'lansa nima qilaman?",
+          "text_translation_ru": "Идея и правда хорошая, но я так не смогу. А вдруг ночью кто-то по срочному делу свяжется со мной, что тогда?",
+          "text_translation_en": "That's a really good idea, but I can't do it. What if someone contacts me at night about something urgent?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d22-s9",
+          "text_original": "你想想看，真有什么急事，别人会打电话，而不是发微信。你完全可以睡前把手机调成响铃模式放在客厅。",
+          "pinyin": "Nǐ xiǎng xiang kàn, zhēn yǒu shénme jíshì, biérén huì dǎ diànhuà, ér bú shì fā Wēixìn. Nǐ wánquán kěyǐ shuìqián bǎ shǒujī tiáo chéng xiǎnglíng móshì fàng zài kètīng.",
+          "text_translation": "O'ylab ko'r-chi, agar haqiqatan shoshilinch ish bo'lsa, odamlar WeChat orqali xabar yozish o'rniga qo'ng'iroq qiladi. Sen uxlashdan oldin telefonni jiringlash rejimiga qo'yib, mehmonxonaga qoldirsang bemalol bo'ladi.",
+          "text_translation_ru": "Подумай сам: если действительно что-то срочное, люди позвонят, а не напишут в WeChat. Ты вполне можешь перед сном поставить телефон в режим звонка и оставить его в гостиной.",
+          "text_translation_en": "Think about it: if it's truly urgent, people will call, not send a WeChat message. You could easily set your phone to ring mode before bed and leave it in the living room.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d22-s10",
+          "text_original": "道理我都懂，但就是没法下定决心。感觉手机像身体的一部分了。",
+          "pinyin": "Dàolǐ wǒ dōu dǒng, dàn jiùshì méi fǎ xià dìng juéxīn. Gǎnjué shǒujī xiàng shēntǐ de yí bùfen le.",
+          "text_translation": "Mantiqini hammasini tushunaman, lekin shunchaki qat'iy qaror qila olmayman. Telefon go'yo tanamning bir qismidek bo'lib qolgan.",
+          "text_translation_ru": "Все доводы я понимаю, но просто не могу решиться. Кажется, что телефон стал частью тела.",
+          "text_translation_en": "I understand all the reasoning, but I just can't make up my mind. It feels like the phone has become a part of my body.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d22-s11",
+          "text_original": "我最近试了一个办法：设置屏幕使用时间，限制某些App在早上八点前不能打开。",
+          "pinyin": "Wǒ zuìjìn shì le yí ge bànfǎ: shèzhì píngmù shǐyòng shíjiān, xiànzhì mǒuxiē App zài zǎoshang bā diǎn qián bùnéng dǎkāi.",
+          "text_translation": "Yaqinda men bir usulni sinab ko'rdim: ekrandan foydalanish vaqtini sozlab, ayrim ilovalarni ertalab soat sakkizgacha ochib bo'lmaydigan qilib cheklab qo'ydim.",
+          "text_translation_ru": "Недавно я попробовал один способ: настроил экранное время и ограничил некоторые приложения так, чтобы их нельзя было открыть до восьми утра.",
+          "text_translation_en": "Recently I tried a method: I set up screen time and restricted certain apps so they can't be opened before eight in the morning.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d22-s12",
+          "text_original": "有效果吗？",
+          "pinyin": "Yǒu xiàoguǒ ma?",
+          "text_translation": "Foydasi bo'ldimi?",
+          "text_translation_ru": "А это помогло?",
+          "text_translation_en": "Did it work?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d22-s13",
+          "text_original": "刚开始很不习惯，总想去点，后来慢慢就好了。现在起床后我会先喝杯水、拉开窗帘，再做早餐。做完这些才会看手机。",
+          "pinyin": "Gāng kāishǐ hěn bù xíguàn, zǒng xiǎng qù diǎn, hòulái mànmàn jiù hǎo le. Xiànzài qǐchuáng hòu wǒ huì xiān hē bēi shuǐ, lākāi chuānglián, zài zuò zǎocān. Zuò wán zhèxiē cái huì kàn shǒujī.",
+          "text_translation": "Avvaliga juda ko'nikmagandim, doim bosgim kelardi, keyin asta-sekin yaxshi bo'lib ketdi. Hozir o'rnimdan turganimdan keyin avval bir stakan suv ichaman, pardalarni ochaman, so'ng nonushta tayyorlayman. Shularning hammasini qilib bo'lgandan keyingina telefonga qarayman.",
+          "text_translation_ru": "Сначала было очень непривычно, всё время хотелось нажать, но потом постепенно стало легче. Теперь, встав с постели, я сначала выпиваю стакан воды, раздвигаю шторы, потом готовлю завтрак. Только сделав всё это, я смотрю в телефон.",
+          "text_translation_en": "At first it was really hard to get used to, I kept wanting to tap on it, but later it gradually got better. Now after getting up I first drink a glass of water, open the curtains, then make breakfast. Only after doing all this do I look at my phone.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d22-s14",
+          "text_original": "你这简直就是健康生活的典范啊！我得向你学习。",
+          "pinyin": "Nǐ zhè jiǎnzhí jiùshì jiànkāng shēnghuó de diǎnfàn a! Wǒ děi xiàng nǐ xuéxí.",
+          "text_translation": "Sen-ku sog'lom turmushning haqiqiy namunasi ekansan! Men sendan o'rganishim kerak.",
+          "text_translation_ru": "Да ты просто образец здорового образа жизни! Мне нужно у тебя учиться.",
+          "text_translation_en": "You're simply a model of a healthy lifestyle! I have to learn from you.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d22-s15",
+          "text_original": "其实没那么难。关键是意识到问题，然后从小改变开始。每天醒来先做三件事再碰手机，习惯就慢慢养成了。",
+          "pinyin": "Qíshí méi nàme nán. Guānjiàn shì yìshi dào wèntí, ránhòu cóng xiǎo gǎibiàn kāishǐ. Měitiān xǐnglái xiān zuò sān jiàn shì zài pèng shǒujī, xíguàn jiù mànmàn yǎngchéng le.",
+          "text_translation": "Aslida unchalik qiyin emas. Eng muhimi muammoni anglab yetish, keyin esa kichik o'zgarishlardan boshlash. Har kuni uyg'onganingda telefonga tegishdan oldin avval uchta ishni qilsang, odat asta-sekin shakllanib boradi.",
+          "text_translation_ru": "На самом деле это не так уж сложно. Главное — осознать проблему, а потом начать с маленьких изменений. Если каждый день после пробуждения сначала делать три дела, а уже потом браться за телефон, то привычка постепенно сформируется.",
+          "text_translation_en": "Actually it's not that hard. The key is to recognize the problem, and then start with small changes. If every day when you wake up you first do three things before touching your phone, the habit will gradually form.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d22-s16",
+          "text_original": "从明天开始，我也试试看。至少把手机放在离床远一点的地方。",
+          "pinyin": "Cóng míngtiān kāishǐ, wǒ yě shì shì kàn. Zhìshǎo bǎ shǒujī fàng zài lí chuáng yuǎn yì diǎn de dìfang.",
+          "text_translation": "Ertangidan boshlab men ham sinab ko'raman. Hech bo'lmaganda telefonni karavotdan birozroq uzoqroq joyga qo'yaman.",
+          "text_translation_ru": "С завтрашнего дня я тоже попробую. По крайней мере, буду класть телефон чуть подальше от кровати.",
+          "text_translation_en": "Starting tomorrow, I'll give it a try too. At least I'll put my phone somewhere a bit farther from the bed.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d22-s17",
+          "text_original": "加油！少看手机不会让你错过什么，反而会让你多得到什么。",
+          "pinyin": "Jiāyóu! Shǎo kàn shǒujī bú huì ràng nǐ cuòguò shénme, fǎn'ér huì ràng nǐ duō dédào shénme.",
+          "text_translation": "Omad! Telefonga kam qarash seni biror narsadan mahrum qilmaydi, aksincha, ko'proq narsaga ega bo'lishingga yordam beradi.",
+          "text_translation_ru": "Удачи! Если меньше смотреть в телефон, ты ничего не упустишь, наоборот, приобретёшь больше.",
+          "text_translation_en": "Good luck! Looking at your phone less won't make you miss out on anything; on the contrary, it'll let you gain more.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d22-s18",
+          "text_original": "你说得太对了。从今天起，我要做手机的主人，而不是它的奴隶。",
+          "pinyin": "Nǐ shuō de tài duì le. Cóng jīntiān qǐ, wǒ yào zuò shǒujī de zhǔrén, ér bú shì tā de núlì.",
+          "text_translation": "Sen juda to'g'ri aytding. Bugundan boshlab men telefonning quli emas, balki uning egasi bo'lmoqchiman.",
+          "text_translation_ru": "Ты абсолютно прав. С сегодняшнего дня я хочу быть хозяином телефона, а не его рабом.",
+          "text_translation_en": "You're absolutely right. From today on, I want to be the master of my phone, not its slave.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

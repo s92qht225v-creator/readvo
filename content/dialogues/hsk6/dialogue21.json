@@ -1,0 +1,185 @@
+{
+  "id": "hsk6-dialogue21",
+  "slug": "unnecessary-meetings",
+  "title": "不必要的会议",
+  "pinyin": "Bù bìyào de huìyì",
+  "titleTranslation": "Keraksiz yig'ilishlar",
+  "titleTranslation_ru": "Ненужные совещания",
+  "titleTranslation_en": "Unnecessary Meetings",
+  "level": 6,
+  "tag": "ish joyi",
+  "dateAdded": "2026-06-22",
+  "vocab": ["原定","崩溃","毫无关系","废话","全程","会议纪要","无会议日","严格执行","标准","砍掉","权威","根深蒂固","企业文化","低效","远程","书面意见","损耗","治标不治本","保命"],
+  "sections": [
+    {
+      "id": "h6d21-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d21-s1",
+          "text_original": "你今天下午不是说要开会吗？怎么这么早就回来了？",
+          "pinyin": "Nǐ jīntiān xiàwǔ bú shì shuō yào kāihuì ma? Zěnme zhème zǎo jiù huílái le?",
+          "text_translation": "Bugun tushdan keyin yig'ilish bo'ladi demaganmiding? Nega bunchalik erta qaytib kelding?",
+          "text_translation_ru": "Ты разве не говорил, что сегодня днём будет совещание? Почему так рано вернулся?",
+          "text_translation_en": "Didn't you say there was a meeting this afternoon? How come you're back so early?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d21-s2",
+          "text_original": "别提了，原定两个小时的会议，开了十分钟就结束了。我进去一看，就三个人，其他人都在忙别的。",
+          "pinyin": "Bié tí le, yuándìng liǎng ge xiǎoshí de huìyì, kāi le shí fēnzhōng jiù jiéshù le. Wǒ jìnqù yī kàn, jiù sān ge rén, qítā rén dōu zài máng bié de.",
+          "text_translation": "Gapirma ham, dastlab ikki soatga rejalashtirilgan yig'ilish o'n daqiqada tugadi. Ichkariga kirib qarasam, atigi uch kishi, qolganlari hammasi boshqa ish bilan band edi.",
+          "text_translation_ru": "Не говори, изначально совещание было запланировано на два часа, а закончилось через десять минут. Я зашёл, смотрю — всего три человека, остальные заняты другими делами.",
+          "text_translation_en": "Don't even get me started. The meeting was originally scheduled for two hours, but it ended after ten minutes. I walked in and saw just three people; everyone else was busy with other things.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d21-s3",
+          "text_original": "又是那种「本可以发邮件」的会议？",
+          "pinyin": "Yòu shì nà zhǒng 'běn kěyǐ fā yóujiàn' de huìyì?",
+          "text_translation": "Yana o'sha xil 「elektron xat bilan ham bo'lardi」 degan yig'ilishmi?",
+          "text_translation_ru": "Опять то самое совещание из разряда «можно было обойтись письмом»?",
+          "text_translation_en": "Another one of those 'this could have been an email' meetings?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d21-s4",
+          "text_original": "对！我们公司每周都有好几次这种会。会议上讨论的东西，明明可以用一封邮件说清楚，非要拉大家坐在一起浪费时间。",
+          "pinyin": "Duì! Wǒmen gōngsī měi zhōu dōu yǒu hǎo jǐ cì zhè zhǒng huì. Huìyì shàng tǎolùn de dōngxi, míngmíng kěyǐ yòng yì fēng yóujiàn shuō qīngchu, fēi yào lā dàjiā zuò zài yìqǐ làngfèi shíjiān.",
+          "text_translation": "Aynan! Bizning kompaniyada har hafta shunday yig'ilish bir necha marta bo'ladi. Yig'ilishda muhokama qilinadigan narsalarni bemalol bitta elektron xat bilan tushuntirsa bo'ladi-yu, baribir hammani bir joyga yig'ib vaqtni behuda sarflashga majbur qilishadi.",
+          "text_translation_ru": "Именно! У нас в компании каждую неделю несколько таких совещаний. То, что обсуждают на собрании, явно можно было бы изложить в одном письме, но обязательно нужно собрать всех вместе и впустую тратить время.",
+          "text_translation_en": "Exactly! Our company has several of these meetings every week. The things discussed at the meeting could clearly be explained in a single email, yet they insist on dragging everyone together and wasting time.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d21-s5",
+          "text_original": "这种会确实让人崩溃。我算过，每周至少花六小时在会议室里，其中一半时间跟我毫无关系。",
+          "pinyin": "Zhè zhǒng huì quèshí ràng rén bēngkuì. Wǒ suàn guo, měi zhōu zhìshǎo huā liù xiǎoshí zài huìyì shì lǐ, qízhōng yí bàn shíjiān gēn wǒ háo wú guānxi.",
+          "text_translation": "Bunday yig'ilishlar haqiqatan ham odamni asabini buzadi. Hisoblab ko'rdim, har hafta kamida olti soatni yig'ilishlar xonasida o'tkazaman, shuning yarmi menga umuman aloqasi yo'q.",
+          "text_translation_ru": "Такие совещания и правда доводят до отчаяния. Я подсчитал — каждую неделю я провожу минимум шесть часов в переговорной, и половина этого времени вообще ко мне не относится.",
+          "text_translation_en": "These meetings really drive you crazy. I worked it out: I spend at least six hours a week in the meeting room, and half of that time has nothing to do with me at all.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d21-s6",
+          "text_original": "关键是，被邀请参加会的人也不好意思不去，担心错过了重要信息。但去了以后发现大部分都是废话。",
+          "pinyin": "Guānjiàn shì, bèi yāoqǐng cānjiā huì de rén yě bù hǎoyìsi bú qù, dānxīn cuòguò le zhòngyào xìnxī. Dàn qù le yǐhòu fāxiàn dà bùfen dōu shì fèihuà.",
+          "text_translation": "Asosiysi shundaki, yig'ilishga taklif qilingan odam ham bormaslikka uyaladi, muhim ma'lumotni o'tkazib yuborishdan xavotirlanadi. Lekin borib qarasa, ko'pchiligi quruq gap ekan.",
+          "text_translation_ru": "Главное в том, что приглашённому на совещание неловко не пойти — он боится упустить важную информацию. Но придя, обнаруживает, что большая часть — пустая болтовня.",
+          "text_translation_en": "The thing is, the person invited to the meeting is too embarrassed to skip it, afraid of missing important information. But once they go, they find that most of it is just nonsense.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d21-s7",
+          "text_original": "这种现象我们公司也有。我上周参加了一个会，三十多个人，全程只有领导在讲话，其他人都在刷手机。",
+          "pinyin": "Zhè zhǒng xiànxiàng wǒmen gōngsī yě yǒu. Wǒ shàng zhōu cānjiā le yí ge huì, sānshí duō ge rén, quánchéng zhǐ yǒu lǐngdǎo zài jiǎnghuà, qítā rén dōu zài shuā shǒujī.",
+          "text_translation": "Bunday holat bizning kompaniyada ham bor. O'tgan hafta bir yig'ilishda qatnashdim, o'ttiztadan ortiq odam bor edi, butun davomida faqat rahbar gapirdi, qolganlari hammasi telefon kovlab o'tirdi.",
+          "text_translation_ru": "Такое явление есть и в нашей компании. На прошлой неделе я был на совещании, человек тридцать с лишним, и всё время говорил только начальник, а остальные сидели в телефонах.",
+          "text_translation_en": "We have this phenomenon at our company too. Last week I attended a meeting with over thirty people, and the whole time only the boss was talking while everyone else was scrolling on their phones.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d21-s8",
+          "text_original": "那还不如把会议纪要发给大家呢。省下来的时间可以做更有价值的事情。",
+          "pinyin": "Nà hái bùrú bǎ huìyì jìyào fā gěi dàjiā ne. Shěng xiàlái de shíjiān kěyǐ zuò gèng yǒu jiàzhí de shìqing.",
+          "text_translation": "Unday bo'lsa, yig'ilish bayonnomasini hammaga yuborib qo'ygan ma'qul edi. Tejalgan vaqtda ko'proq qadrli ishlar qilsa bo'lardi.",
+          "text_translation_ru": "Тогда уж лучше разослать всем протокол собрания. На сэкономленное время можно было бы заняться более ценными делами.",
+          "text_translation_en": "In that case, it'd be better to just send everyone the meeting minutes. The time saved could be used for more valuable things.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d21-s9",
+          "text_original": "我听说有些公司已经实行了「无会议日」，每周固定一天不开会，让大家专心工作。",
+          "pinyin": "Wǒ tīngshuō yǒuxiē gōngsī yǐjīng shíxíng le 'wú huìyì rì', měi zhōu gùdìng yì tiān bù kāihuì, ràng dàjiā zhuānxīn gōngzuò.",
+          "text_translation": "Eshitishimcha, ba'zi kompaniyalar allaqachon 「yig'ilishsiz kun」ni joriy qilishibdi, har hafta belgilangan bir kunda yig'ilish o'tkazmasdan, hammaga diqqat bilan ishlash imkonini berishibdi.",
+          "text_translation_ru": "Я слышал, что некоторые компании уже ввели «день без совещаний» — раз в неделю в определённый день не проводят собраний, чтобы все могли сосредоточиться на работе.",
+          "text_translation_en": "I've heard that some companies have already introduced a 'no-meeting day' — one fixed day each week with no meetings, so everyone can focus on their work.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d21-s10",
+          "text_original": "这个做法很好。我觉得开会前应该先问几个问题：这个会必须要开吗？能发邮件解决吗？能15分钟结束吗？",
+          "pinyin": "Zhè ge zuòfǎ hěn hǎo. Wǒ juéde kāihuì qián yīnggāi xiān wèn jǐ ge wèntí: zhè ge huì bìxū yào kāi ma? Néng fā yóujiàn jiějué ma? Néng 15 fēnzhōng jiéshù ma?",
+          "text_translation": "Bu usul juda yaxshi. Menimcha, yig'ilishdan oldin avval bir nechta savol berish kerak: bu yig'ilishni o'tkazish shartmi? Elektron xat bilan hal qilib bo'ladimi? 15 daqiqada tugatsa bo'ladimi?",
+          "text_translation_ru": "Это хороший подход. Я думаю, перед совещанием стоит сначала задать несколько вопросов: обязательно ли проводить это собрание? Можно ли решить вопрос письмом? Можно ли уложиться в 15 минут?",
+          "text_translation_en": "That's a great approach. I think before holding a meeting you should first ask a few questions: Is this meeting really necessary? Can it be resolved with an email? Can it be wrapped up in 15 minutes?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d21-s11",
+          "text_original": "如果能严格执行这个标准，至少能砍掉百分之七十的会议。",
+          "pinyin": "Rúguǒ néng yángé zhíxíng zhè ge biāozhǔn, zhìshǎo néng kǎn diào bǎi fēn zhī qīshí de huìyì.",
+          "text_translation": "Agar bu mezonni qat'iy bajarish mumkin bo'lsa, kamida yetmish foiz yig'ilishni qisqartirsa bo'lardi.",
+          "text_translation_ru": "Если строго придерживаться этого стандарта, можно сократить как минимум семьдесят процентов совещаний.",
+          "text_translation_en": "If this standard were strictly enforced, at least seventy percent of meetings could be cut.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d21-s12",
+          "text_original": "但问题是，很多领导习惯了用会议来展示自己的权威，而不是真正为了解决问题。",
+          "pinyin": "Dàn wèntí shì, hěnduō lǐngdǎo xíguàn le yòng huìyì lái zhǎnshì zìjǐ de quánwēi, ér bú shì zhēnzhèng wèile jiějué wèntí.",
+          "text_translation": "Lekin muammo shundaki, ko'p rahbarlar yig'ilishni muammoni hal qilish uchun emas, balki o'z hokimiyatini namoyish qilish uchun ishlatishga o'rganib qolishgan.",
+          "text_translation_ru": "Но проблема в том, что многие руководители привыкли использовать совещания, чтобы продемонстрировать свою власть, а не действительно решить проблему.",
+          "text_translation_en": "But the problem is that many bosses have gotten used to using meetings to show off their authority, rather than to genuinely solve problems.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d21-s13",
+          "text_original": "这就是根深蒂固的企业文化问题。除非从上到下改变观念，否则这种低效会议会一直存在。",
+          "pinyin": "Zhè jiùshì gēnshēndìgù de qǐyè wénhuà wèntí. Chúfēi cóng shàng dào xià gǎibiàn guānniàn, fǒuzé zhè zhǒng dīxiào huìyì huì yìzhí cúnzài.",
+          "text_translation": "Bu aynan chuqur ildiz otgan korporativ madaniyat muammosi. Yuqoridan pastgacha qarashlar o'zgartirilmasa, bunday samarasiz yig'ilishlar doimo mavjud bo'lib qolaveradi.",
+          "text_translation_ru": "Это как раз глубоко укоренившаяся проблема корпоративной культуры. Пока сверху донизу не изменятся взгляды, такие неэффективные совещания будут существовать постоянно.",
+          "text_translation_en": "This is precisely a deeply rooted corporate culture problem. Unless mindsets change from top to bottom, these inefficient meetings will keep existing.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d21-s14",
+          "text_original": "所以我现在的策略是：能远程参加的就不去现场，能提供书面意见就不发言。尽量减少自己在会议中的时间损耗。",
+          "pinyin": "Suǒyǐ wǒ xiànzài de cèlüè shì: néng yuǎnchéng cānjiā de jiù bú qù xiànchǎng, néng tígōng shūmiàn yìjiàn jiù bù fāyán. Jǐnliàng jiǎnshǎo zìjǐ zài huìyì zhōng de shíjiān sǔnhào.",
+          "text_translation": "Shuning uchun hozirgi strategiyam shunday: masofadan qatnashish mumkin bo'lsa, joyiga bormayman, yozma fikr bildirish mumkin bo'lsa, gapirmayman. Yig'ilishda o'z vaqtimning behuda sarflanishini iloji boricha kamaytiraman.",
+          "text_translation_ru": "Поэтому моя нынешняя стратегия такая: если можно участвовать удалённо — не иду лично, если можно дать письменное мнение — не выступаю. Стараюсь максимально сократить потери своего времени на совещаниях.",
+          "text_translation_en": "So my current strategy is this: if I can join remotely, I don't go in person; if I can provide written comments, I don't speak up. I try to minimize the loss of my own time in meetings as much as possible.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d21-s15",
+          "text_original": "这个办法聪明。但这只是治标不治本，最根本的还是改变会议文化。",
+          "pinyin": "Zhè ge bànfǎ cōngming. Dàn zhè zhǐ shì zhìbiāo bú zhìběn, zuì gēnběn de háishì gǎibiàn huìyì wénhuà.",
+          "text_translation": "Bu usul aqlli. Lekin bu faqat oqibatni davolaydi-yu, ildizini emas, eng tub yechim baribir yig'ilish madaniyatini o'zgartirishdir.",
+          "text_translation_ru": "Это умный приём. Но это лишь лечение симптомов, а не причины; самое главное — всё-таки изменить культуру совещаний.",
+          "text_translation_en": "That's a clever method. But it only treats the symptoms, not the root cause; the most fundamental thing is still to change the meeting culture.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d21-s16",
+          "text_original": "说得对，但改变文化比改变习惯难多了。至少我现在能保命。",
+          "pinyin": "Shuō de duì, dàn gǎibiàn wénhuà bǐ gǎibiàn xíguàn nán duō le. Zhìshǎo wǒ xiànzài néng bǎomìng.",
+          "text_translation": "To'g'ri aytasan, lekin madaniyatni o'zgartirish odatni o'zgartirishdan ancha qiyin. Hech bo'lmaganda hozir o'zimni saqlab qola olaman.",
+          "text_translation_ru": "Верно говоришь, но изменить культуру намного труднее, чем изменить привычку. По крайней мере сейчас я могу спасти себя.",
+          "text_translation_en": "You're right, but changing the culture is much harder than changing a habit. At least for now I can save my own skin.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d21-s17",
+          "text_original": "也对。先照顾好自己，再想办法影响别人。",
+          "pinyin": "Yě duì. Xiān zhàogù hǎo zìjǐ, zài xiǎng bànfǎ yǐngxiǎng biérén.",
+          "text_translation": "To'g'ri ham. Avval o'zingni asra, keyin boshqalarga ta'sir qilish yo'lini o'ylab ko'r.",
+          "text_translation_ru": "Тоже верно. Сначала позаботься о себе, а потом думай, как повлиять на других.",
+          "text_translation_en": "True enough. First take care of yourself, then figure out how to influence others.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d21-s18",
+          "text_original": "希望有一天，开会能真正变成解决问题的工具，而不是浪费时间的形式。",
+          "pinyin": "Xīwàng yǒu yì tiān, kāihuì néng zhēnzhèng biàn chéng jiějué wèntí de gōngjù, ér bú shì làngfèi shíjiān de xíngshì.",
+          "text_translation": "Umid qilamanki, bir kun kelib yig'ilish vaqtni behuda sarflaydigan rasmiyatchilik emas, balki haqiqatan muammoni hal qiladigan vositaga aylanadi.",
+          "text_translation_ru": "Надеюсь, однажды совещания действительно станут инструментом решения проблем, а не формальностью, на которую впустую тратят время.",
+          "text_translation_en": "I hope that one day meetings will truly become a tool for solving problems, rather than a time-wasting formality.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "id": "hsk6-dialogue17",
+  "slug": "office-gossip",
+  "title": "办公室八卦",
+  "pinyin": "Bàngōngshì bāguà",
+  "titleTranslation": "Ofis g'iybatlari",
+  "titleTranslation_ru": "Офисные сплетни",
+  "titleTranslation_en": "Office Gossip",
+  "level": 6,
+  "tag": "ish joyi",
+  "dateAdded": "2026-06-22",
+  "vocab": ["八卦","离职","挖走","靠谱","当事人","随口","质疑","晋升","造谣","利益往来","调查","澄清","职业生涯","根源","透明","渠道","畅通","谣言","生存空间","知趣","对质","坦诚"],
+  "sections": [
+    {
+      "id": "h6d17-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d17-s1",
+          "text_original": "你听说了吗？市场部的小张好像要离职了。",
+          "pinyin": "Nǐ tīngshuō le ma? Shìchǎng bù de Xiǎo Zhāng hǎoxiàng yào lízhí le.",
+          "text_translation": "Eshitdingmi? Marketing bo'limidagi Syao Jan ishdan ketmoqchiga o'xshaydi.",
+          "text_translation_ru": "Ты слышал? Сяо Чжан из отдела маркетинга, кажется, собирается уволиться.",
+          "text_translation_en": "Did you hear? Xiao Zhang from the marketing department seems to be about to quit.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d17-s2",
+          "text_original": "又是谁说的？上周还有人说他被挖走了呢，结果人家不是还在好好上班吗？",
+          "pinyin": "Yòu shì shuí shuō de? Shàng zhōu hái yǒu rén shuō tā bèi wā zǒu le ne, jiéguǒ rénjiā bú shì hái zài hǎohao shàngbān ma?",
+          "text_translation": "Yana kim aytdi? O'tgan hafta kimdir uni boshqa joyga ishga olib ketishdi deb aytgandi, oxir-oqibat u hali ham bemalol ishlab yuribdi-ku?",
+          "text_translation_ru": "Опять кто-то сказал? На прошлой неделе кто-то говорил, что его переманили, а в итоге он же по-прежнему спокойно работает, разве нет?",
+          "text_translation_en": "Who said that this time? Last week someone said he'd been poached, but in the end isn't he still working away just fine?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d17-s3",
+          "text_original": "这次不一样，听说他已经跟领导提了，只是还没正式通知。",
+          "pinyin": "Zhè cì bù yíyàng, tīngshuō tā yǐjīng gēn lǐngdǎo tí le, zhǐshì hái méi zhèngshì tōngzhī.",
+          "text_translation": "Bu safar boshqacha, aytishlaricha, u allaqachon rahbarga aytibdi, faqat hali rasmiy e'lon qilinmagan.",
+          "text_translation_ru": "На этот раз по-другому, говорят, он уже сообщил начальству, просто ещё нет официального уведомления.",
+          "text_translation_en": "This time it's different, I heard he's already brought it up with the boss, it's just that there's no official notice yet.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d17-s4",
+          "text_original": "我觉得这些消息还是不靠谱。小张上周刚负责一个新项目，如果真要离职，领导怎么可能把重要项目交给他？",
+          "pinyin": "Wǒ juéde zhèxiē xiāoxi háishì bú kàopǔ. Xiǎo Zhāng shàng zhōu gāng fùzé yí ge xīn xiàngmù, rúguǒ zhēn yào lízhí, lǐngdǎo zěnme kěnéng bǎ zhòngyào xiàngmù jiāo gěi tā?",
+          "text_translation": "Menimcha, bu xabarlar baribir ishonchli emas. Syao Jan o'tgan hafta endigina yangi loyihaga mas'ul bo'ldi, agar u rostdan ham ishdan ketmoqchi bo'lsa, rahbar muhim loyihani unga qanday qilib topshiradi?",
+          "text_translation_ru": "Я думаю, эти слухи всё-таки недостоверны. Сяо Чжан только на прошлой неделе стал отвечать за новый проект, если бы он действительно собирался уволиться, как бы начальник доверил ему важный проект?",
+          "text_translation_en": "I think these rumors are still unreliable. Xiao Zhang just took charge of a new project last week — if he really wanted to quit, how could the boss hand an important project to him?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d17-s5",
+          "text_original": "你说得也有道理。但不管真假，这种消息传出去对当事人影响不好。",
+          "pinyin": "Nǐ shuō de yě yǒu dàoli. Dàn bùguǎn zhēnjiǎ, zhè zhǒng xiāoxi chuán chūqù duì dāngshì rén yǐngxiǎng bù hǎo.",
+          "text_translation": "Sen ham mantiqli gapiryapsan. Lekin rost yo qolib, bunday xabarlarning tarqalishi tegishli odamga yomon ta'sir qiladi.",
+          "text_translation_ru": "В твоих словах тоже есть смысл. Но независимо от того, правда это или нет, распространение таких слухов плохо влияет на самого человека.",
+          "text_translation_en": "What you say makes sense too. But whether it's true or not, spreading this kind of news is bad for the person involved.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d17-s6",
+          "text_original": "办公室八卦最可怕的就是这一点。传的人可能只是随口一说，但被传的人可能因此受到领导质疑，甚至影响晋升。",
+          "pinyin": "Bàngōngshì bāguà zuì kěpà de jiùshì zhè yì diǎn. Chuán de rén kěnéng zhǐshì suíkǒu yì shuō, dàn bèi chuán de rén kěnéng yīncǐ shòudào lǐngdǎo zhìyí, shènzhì yǐngxiǎng jìnshēng.",
+          "text_translation": "Ofis g'iybatlarining eng dahshatli tomoni ham aynan shu. Tarqatgan odam shunchaki og'zaki aytib qo'ygan bo'lishi mumkin, lekin haqida gapirilgan odam buning sababli rahbar tomonidan shubha ostiga olinishi, hatto lavozimda ko'tarilishiga ham ta'sir qilishi mumkin.",
+          "text_translation_ru": "Самое страшное в офисных сплетнях — именно это. Тот, кто распускает слух, мог сказать его просто мимоходом, но человек, о котором говорят, из-за этого может попасть под сомнение начальства и даже это повлияет на его повышение.",
+          "text_translation_en": "That's exactly the scariest thing about office gossip. The person spreading it may have just said it offhand, but the person it's about may end up doubted by the boss because of it, and it can even affect their promotion.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d17-s7",
+          "text_original": "我前一家公司就有个同事，被人造谣说跟客户有利益往来，结果被调查了好几个月。最后虽然澄清了，但职业生涯还是受到了影响。",
+          "pinyin": "Wǒ qián yì jiā gōngsī jiù yǒu ge tóngshì, bèi rén zàoyáo shuō gēn kèhù yǒu lìyì wǎnglái, jiéguǒ bèi diàochá le hǎo jǐ ge yuè. Zuìhòu suīrán chéngqīng le, dàn zhíyè shēngyá háishì shòudào le yǐngxiǎng.",
+          "text_translation": "Mening oldingi kompaniyamda bir hamkasbim bor edi, kimdir uni mijoz bilan manfaat aloqasi bor deb tuhmat qildi, oqibatda u bir necha oy tekshiruv ostida bo'ldi. Oxiri gunohi yo'qligi isbotlangan bo'lsa-da, kasbiy faoliyatiga baribir ta'sir yetdi.",
+          "text_translation_ru": "В моей прошлой компании был один коллега, про которого распустили клевету, будто у него есть денежные связи с клиентом, в итоге его проверяли несколько месяцев. В конце концов, хотя всё прояснилось, но на его карьеру это всё равно повлияло.",
+          "text_translation_en": "At my previous company there was a colleague who was falsely accused of having shady dealings with a client, and as a result he was investigated for several months. In the end, although he was cleared, his career was still affected.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d17-s8",
+          "text_original": "这种事儿真的太害人了。我觉得办公室八卦的根源在于信息不透明。大家不知道真实情况，就喜欢猜测和编故事。",
+          "pinyin": "Zhè zhǒng shìr zhēn de tài hàirén le. Wǒ juéde bàngōngshì bāguà de gēnyuán zàiyú xìnxī bù tòumíng. Dàjiā bù zhīdào zhēnshí qíngkuàng, jiù xǐhuān cāicè hé biān gùshi.",
+          "text_translation": "Bunday narsalar rostdan ham odamga juda zarar keltiradi. Menimcha, ofis g'iybatlarining ildizi axborotning shaffof emasligida. Hamma haqiqiy ahvolni bilmaganidan, taxmin qilishni va hikoya to'qishni yaxshi ko'radi.",
+          "text_translation_ru": "Такие вещи действительно очень вредят людям. Я думаю, корень офисных сплетен — в непрозрачности информации. Когда люди не знают реального положения дел, они любят домысливать и сочинять истории.",
+          "text_translation_en": "This kind of thing really harms people. I think the root of office gossip lies in the lack of transparency of information. When people don't know the real situation, they like to speculate and make up stories.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d17-s9",
+          "text_original": "所以管理者应该保持沟通渠道的畅通，及时分享重要信息，减少谣言的生存空间。",
+          "pinyin": "Suǒyǐ guǎnlǐ zhě yīnggāi bǎochí gōutōng qúdào de chàngtōng, jíshí fēnxiǎng zhòngyào xìnxī, jiǎnshǎo yáoyán de shēngcún kōngjiān.",
+          "text_translation": "Shuning uchun rahbarlar muloqot kanallarini ochiq saqlashlari, muhim axborotni o'z vaqtida bo'lishishlari va mish-mishlarning yashash maydonini kamaytirishlari kerak.",
+          "text_translation_ru": "Поэтому руководители должны поддерживать каналы общения открытыми, вовремя делиться важной информацией и сокращать пространство для существования слухов.",
+          "text_translation_en": "So managers should keep communication channels open, share important information in a timely manner, and reduce the room for rumors to survive.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d17-s10",
+          "text_original": "如果遇到别人传八卦，你会怎么做？",
+          "pinyin": "Rúguǒ yùdào biérén chuán bāguà, nǐ huì zěnme zuò?",
+          "text_translation": "Agar boshqalar g'iybat tarqatayotganiga duch kelsang, sen nima qilasan?",
+          "text_translation_ru": "Если ты столкнёшься с тем, что другие распускают сплетни, как ты поступишь?",
+          "text_translation_en": "If you come across others spreading gossip, what would you do?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d17-s11",
+          "text_original": "一般我会说「这个我不清楚，还是等官方通知吧」。既不参与传播，也能让对方知趣。",
+          "pinyin": "Yìbān wǒ huì shuō 'zhè ge wǒ bù qīngchu, háishì děng guānfāng tōngzhī ba'. Jì bù cānyù chuánbō, yě néng ràng duìfāng zhīqù.",
+          "text_translation": "Odatda men «buni men aniq bilmayman, baribir rasmiy e'lonni kutgan yaxshi» deyman. Tarqatishda ham qatnashmayman, qarshi tomonni ham odob saqlashga undayman.",
+          "text_translation_ru": "Обычно я говорю: «Этого я точно не знаю, лучше подождать официального уведомления». И в распространении не участвую, и собеседнику даю понять, что пора остановиться.",
+          "text_translation_en": "Usually I say, \"I'm not sure about this, let's just wait for the official notice.\" That way I neither take part in spreading it, nor do I let the other person carry on.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d17-s12",
+          "text_original": "你这个做法很好。不传谣、不信谣，是对同事最基本的尊重。",
+          "pinyin": "Nǐ zhè ge zuòfǎ hěn hǎo. Bù chuán yáo, bú xìn yáo, shì duì tóngshì zuì jīběn de zūnzhòng.",
+          "text_translation": "Sening bu usuling juda yaxshi. Mish-mish tarqatmaslik, mish-mishga ishonmaslik — hamkasblarga bo'lgan eng asosiy hurmatdir.",
+          "text_translation_ru": "Этот твой подход очень хорош. Не распускать слухи и не верить слухам — это самое базовое уважение к коллегам.",
+          "text_translation_en": "That approach of yours is very good. Not spreading rumors and not believing rumors is the most basic respect for your colleagues.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d17-s13",
+          "text_original": "另外，如果听到关于自己的谣言，最好当面跟当事人对质，而不是在背后生气。",
+          "pinyin": "Lìngwài, rúguǒ tīng dào guānyú zìjǐ de yáoyán, zuì hǎo dāngmiàn gēn dāngshì rén duìzhì, ér bú shì zài bèihòu shēngqì.",
+          "text_translation": "Bundan tashqari, agar o'zing haqingda mish-mish eshitsang, orqavarotdan jahl qilgandan ko'ra, tegishli odam bilan yuzma-yuz hisob-kitob qilgan ma'qul.",
+          "text_translation_ru": "Кроме того, если ты услышал слух о себе, лучше всего объясниться с тем, кого это касается, лицом к лицу, а не злиться за спиной.",
+          "text_translation_en": "Besides, if you hear a rumor about yourself, it's best to confront the person involved face to face, rather than getting angry behind their back.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d17-s14",
+          "text_original": "对，直接沟通能最快地解决问题，避免误会加深。",
+          "pinyin": "Duì, zhíjiē gōutōng néng zuì kuài de jiějué wèntí, bìmiǎn wùhuì jiāshēn.",
+          "text_translation": "Ha, to'g'ridan-to'g'ri muloqot muammoni eng tez hal qiladi va tushunmovchilikning chuqurlashishining oldini oladi.",
+          "text_translation_ru": "Да, прямое общение позволяет быстрее всего решить проблему и избежать углубления недопонимания.",
+          "text_translation_en": "Right, direct communication can solve the problem the fastest and prevent misunderstandings from deepening.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d17-s15",
+          "text_original": "说到底，办公室是一个大家一起工作的地方，少一些猜测，多一些坦诚，大家都会轻松很多。",
+          "pinyin": "Shuō dào dǐ, bàngōngshì shì yí ge dàjiā yìqǐ gōngzuò de dìfang, shǎo yì xiē cāicè, duō yì xiē tǎnchéng, dàjiā dōu huì qīngsōng hěnduō.",
+          "text_translation": "Oxir-oqibat, ofis — hamma birga ishlaydigan joy, taxminlar kamroq, samimiylik ko'proq bo'lsa, hammaga ancha yengil bo'ladi.",
+          "text_translation_ru": "В конечном счёте, офис — это место, где все работают вместе; меньше домыслов, больше искренности — и всем будет гораздо легче.",
+          "text_translation_en": "When it comes down to it, the office is a place where everyone works together; with a little less speculation and a little more honesty, everyone will feel much more at ease.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d17-s16",
+          "text_original": "没错。一个健康的职场环境，需要每个人共同维护。",
+          "pinyin": "Méi cuò. Yí ge jiànkāng de zhíchǎng huánjìng, xūyào měi ge rén gòngtóng wéihù.",
+          "text_translation": "To'g'ri. Sog'lom ish muhitini har bir kishi birgalikda asrashi kerak.",
+          "text_translation_ru": "Верно. Здоровую рабочую среду должен совместно поддерживать каждый.",
+          "text_translation_en": "Exactly. A healthy workplace environment needs everyone to maintain it together.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
