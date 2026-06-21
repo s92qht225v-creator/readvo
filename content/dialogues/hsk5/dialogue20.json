@@ -1,0 +1,189 @@
+{
+  "id": "hsk5-dialogue20",
+  "slug": "generation-gap",
+  "title": "代沟",
+  "pinyin": "Dàigōu",
+  "titleTranslation": "Avlodlar tafovuti",
+  "titleTranslation_ru": "Разрыв поколений",
+  "titleTranslation_en": "Generation Gap",
+  "level": 5,
+  "tag": "oila",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "心事重重",
+    "吵架",
+    "分歧",
+    "辞职",
+    "稳定",
+    "自由职业",
+    "后悔",
+    "挑战性",
+    "自我实现",
+    "冲动",
+    "保守",
+    "代沟",
+    "典型",
+    "价值观",
+    "反思",
+    "否定",
+    "分析",
+    "利弊",
+    "心平气和",
+    "拉近距离",
+    "放手"
+  ],
+  "sections": [
+    {
+      "id": "h5d20-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d20-s1",
+          "text_original": "你最近怎么看起来心事重重？是不是家里有什么事？",
+          "pinyin": "Nǐ zuìjìn zěnme kàn qǐlái xīnshì chóngchóng? Shì bú shì jiā lǐ yǒu shénme shì?",
+          "text_translation": "Yaqinda nega tashvishga botgandek ko'rinasan? Uyda biror gap bo'ldimi?",
+          "text_translation_ru": "Почему ты в последнее время выглядишь таким озабоченным? Дома что-то случилось?",
+          "text_translation_en": "Why have you been looking so weighed down with worries lately? Is something going on at home?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d20-s2",
+          "text_original": "我跟我儿子最近吵了一架，心里一直不太舒服。",
+          "pinyin": "Wǒ gēn wǒ érzi zuìjìn chǎo le yí jià, xīnli yìzhí bú tài shūfu.",
+          "text_translation": "Yaqinda o'g'lim bilan janjallashib qoldim, ko'nglim hadeb g'ash bo'lyapti.",
+          "text_translation_ru": "Я недавно поссорился с сыном, и на душе всё время неспокойно.",
+          "text_translation_en": "I recently had an argument with my son, and I've been feeling uneasy ever since.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d20-s3",
+          "text_original": "为什么吵架？年轻人跟父母有分歧很正常。",
+          "pinyin": "Wèishénme chǎojià? Niánqīng rén gēn fùmǔ yǒu fēnqí hěn zhèngcháng.",
+          "text_translation": "Nega janjallashdingiz? Yoshlar bilan ota-onalar o'rtasida kelishmovchilik bo'lishi normal.",
+          "text_translation_ru": "Из-за чего поссорились? Разногласия между молодёжью и родителями — это нормально.",
+          "text_translation_en": "Why did you argue? It's normal for young people to have differences with their parents.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d20-s4",
+          "text_original": "他想辞掉稳定的工作，去做什么自由职业。我觉得太不稳定了，担心他将来后悔。",
+          "pinyin": "Tā xiǎng cídiào wěndìng de gōngzuò, qù zuò shénme zìyóu zhíyè. Wǒ juéde tài bù wěndìng le, dānxīn tā jiānglái hòuhuǐ.",
+          "text_translation": "U barqaror ishini tashlab, qandaydir erkin kasb bilan shug'ullanmoqchi. Menimcha bu juda beqaror, kelajakda afsuslanishidan xavotirdaman.",
+          "text_translation_ru": "Он хочет уйти со стабильной работы и заняться каким-то фрилансом. По-моему, это слишком ненадёжно, и я боюсь, что в будущем он пожалеет.",
+          "text_translation_en": "He wants to quit his stable job and do some kind of freelancing. I think it's too unstable, and I'm worried he'll regret it later.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d20-s5",
+          "text_original": "你儿子多大了？他为什么想换工作？",
+          "pinyin": "Nǐ érzi duō dà le? Tā wèishénme xiǎng huàn gōngzuò?",
+          "text_translation": "O'g'ling necha yoshda? Nega ish almashtirmoqchi?",
+          "text_translation_ru": "Сколько лет твоему сыну? Почему он хочет сменить работу?",
+          "text_translation_en": "How old is your son? Why does he want to change jobs?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d20-s6",
+          "text_original": "二十五岁。他说现在的工作太无聊，没有挑战性，想去做自己喜欢的事情。",
+          "pinyin": "Èrshíwǔ suì. Tā shuō xiànzài de gōngzuò tài wúliáo, méiyǒu tiǎozhànxìng, xiǎng qù zuò zìjǐ xǐhuān de shìqing.",
+          "text_translation": "Yigirma besh yoshda. Hozirgi ishi juda zerikarli, sinov yo'q, o'zi yoqtirgan ish bilan shug'ullanmoqchi ekan.",
+          "text_translation_ru": "Двадцать пять. Он говорит, что нынешняя работа слишком скучная, без вызова, и хочет заниматься тем, что ему нравится.",
+          "text_translation_en": "Twenty-five. He says his current job is too boring and unchallenging, and he wants to do something he loves.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d20-s7",
+          "text_original": "我能理解你的担心，但也能理解你儿子的想法。年轻人确实更追求自我实现。",
+          "pinyin": "Wǒ néng lǐjiě nǐ de dānxīn, dàn yě néng lǐjiě nǐ érzi de xiǎngfǎ. Niánqīng rén quèshí gèng zhuīqiú zìwǒ shíxiàn.",
+          "text_translation": "Xavotiringni tushunaman, lekin o'g'lingning fikrini ham tushunaman. Yoshlar rostdan o'zini namoyon qilishga ko'proq intiladi.",
+          "text_translation_ru": "Я понимаю твоё беспокойство, но понимаю и мысли твоего сына. Молодёжь действительно больше стремится к самореализации.",
+          "text_translation_en": "I understand your worry, but I also understand your son's thinking. Young people really do seek self-actualization more.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d20-s8",
+          "text_original": "我也不是完全反对他追求梦想，只是觉得应该考虑清楚，不能太冲动。",
+          "pinyin": "Wǒ yě bú shì wánquán fǎnduì tā zhuīqiú mèngxiǎng, zhǐshì juéde yīnggāi kǎolǜ qīngchu, bùnéng tài chōngdòng.",
+          "text_translation": "Men ham uning orzusini quvishiga butunlay qarshi emasman, faqat yaxshilab o'ylab ko'rishi kerak, juda shoshqaloqlik qilmasligi kerak deb o'ylayman.",
+          "text_translation_ru": "Я ведь не полностью против того, чтобы он шёл за мечтой, просто считаю, что нужно всё хорошо обдумать, нельзя действовать слишком импульсивно.",
+          "text_translation_en": "I'm not entirely against him chasing his dream — I just think he should think it through and not be too impulsive.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d20-s9",
+          "text_original": "你跟他沟通过你的想法吗？",
+          "pinyin": "Nǐ gēn tā gōutōng guo nǐ de xiǎngfǎ ma?",
+          "text_translation": "Fikrlaringni u bilan gaplashib ko'rganmiding?",
+          "text_translation_ru": "Ты обсуждал с ним свои мысли?",
+          "text_translation_en": "Have you communicated your thoughts to him?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d20-s10",
+          "text_original": "沟通了，但他觉得我不理解他，说我思想太保守。",
+          "pinyin": "Gōutōng le, dàn tā juéde wǒ bù lǐjiě tā, shuō wǒ sīxiǎng tài bǎoshǒu.",
+          "text_translation": "Gaplashdim, lekin u meni tushunmaydi deb o'ylaydi, fikrlashim juda konservativ deydi.",
+          "text_translation_ru": "Обсуждал, но он считает, что я его не понимаю, и говорит, что мои взгляды слишком консервативны.",
+          "text_translation_en": "I did, but he feels I don't understand him and says my thinking is too conservative.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d20-s11",
+          "text_original": "这就是典型的代沟问题。两代人的成长环境不同，价值观自然也有差异。",
+          "pinyin": "Zhè jiùshì diǎnxíng de dàigōu wèntí. Liǎng dài rén de chéngzhǎng huánjìng bùtóng, jiàzhíguān zìrán yě yǒu chāyì.",
+          "text_translation": "Bu aynan tipik avlodlar tafovuti muammosi. Ikki avlodning o'sgan muhiti har xil, qadriyatlarida ham tabiiy ravishda farq bo'ladi.",
+          "text_translation_ru": "Это типичная проблема разрыва поколений. Среда, в которой росли два поколения, разная, и ценности, естественно, тоже отличаются.",
+          "text_translation_en": "This is a classic generation-gap issue. The two generations grew up in different environments, so naturally their values differ too.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d20-s12",
+          "text_original": "你说得对。我也在反思自己，是不是管得太多了。",
+          "pinyin": "Nǐ shuō de duì. Wǒ yě zài fǎnsī zìjǐ, shì bú shì guǎn de tài duō le.",
+          "text_translation": "To'g'ri aytasan. Men ham o'zimni mulohaza qilyapman, balki haddan ortiq aralashayotgandirman.",
+          "text_translation_ru": "Ты прав. Я тоже задумываюсь — не слишком ли много я его контролирую.",
+          "text_translation_en": "You're right. I've been reflecting on myself too — whether I'm controlling too much.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d20-s13",
+          "text_original": "我觉得你可以试着换个方式跟他沟通。不要直接否定他的想法，而是帮他分析利弊。",
+          "pinyin": "Wǒ juéde nǐ kěyǐ shì zhe huàn ge fāngshì gēn tā gōutōng. Búyào zhíjiē fǒudìng tā de xiǎngfǎ, ér shì bāng tā fēnxī lìbì.",
+          "text_translation": "Menimcha u bilan boshqacha usulda gaplashib ko'rsang bo'ladi. Fikrini to'g'ridan-to'g'ri rad etma, balki unga foyda-zararini tahlil qilishga yordam ber.",
+          "text_translation_ru": "Думаю, ты можешь попробовать общаться с ним по-другому. Не отвергай его идею напрямую, а помоги ему разобрать плюсы и минусы.",
+          "text_translation_en": "I think you could try a different way of communicating with him. Don't reject his idea outright — help him weigh the pros and cons.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d20-s14",
+          "text_original": "你说得很有道理。我打算找个时间，心平气和地跟他再聊一次。",
+          "pinyin": "Nǐ shuō de hěn yǒu dàoli. Wǒ dǎsuàn zhǎo ge shíjiān, xīn píng qì hé de gēn tā zài liáo yí cì.",
+          "text_translation": "Gaping juda mantiqli. Vaqt topib, xotirjamlik bilan u bilan yana bir bor gaplashmoqchiman.",
+          "text_translation_ru": "Ты говоришь очень разумно. Я планирую найти время и спокойно поговорить с ним ещё раз.",
+          "text_translation_en": "What you say makes a lot of sense. I plan to find a time and have another talk with him calmly.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d20-s15",
+          "text_original": "还有，你可以试着了解一下他现在感兴趣的事情，也许能拉近距离。",
+          "pinyin": "Hái yǒu, nǐ kěyǐ shì zhe liǎojiě yí xià tā xiànzài gǎn xìngqù de shìqing, yěxǔ néng lājìn jùlí.",
+          "text_translation": "Yana, uning hozir qiziqayotgan narsalarini bilib olishga harakat qilsang, ehtimol masofangiz qisqaradi.",
+          "text_translation_ru": "И ещё, ты можешь попробовать узнать, что его сейчас интересует — возможно, это поможет вам сблизиться.",
+          "text_translation_en": "Also, you could try to learn about what he's interested in now — it might help close the distance between you.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d20-s16",
+          "text_original": "好，我会试试。毕竟孩子大了，我也该学会放手。",
+          "pinyin": "Hǎo, wǒ huì shì shi. Bìjìng háizi dà le, wǒ yě gāi xuéhuì fàngshǒu.",
+          "text_translation": "Mayli, sinab ko'raman. Axir bola katta bo'ldi, men ham qo'yib yuborishni o'rganishim kerak.",
+          "text_translation_ru": "Хорошо, попробую. В конце концов, ребёнок вырос, и мне тоже пора научиться отпускать.",
+          "text_translation_en": "Okay, I'll try. After all, the child has grown up, and I should learn to let go too.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

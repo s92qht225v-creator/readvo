@@ -1,0 +1,203 @@
+{
+  "id": "hsk5-dialogue21",
+  "slug": "spending-habits",
+  "title": "消费观念",
+  "pinyin": "Xiāofèi guānniàn",
+  "titleTranslation": "Pul sarflash odatlari",
+  "titleTranslation_ru": "Привычки в тратах",
+  "titleTranslation_en": "Spending Habits",
+  "level": 5,
+  "tag": "pul",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "省钱",
+    "屏幕",
+    "裂",
+    "误会",
+    "冲动",
+    "记账",
+    "收入",
+    "支出",
+    "大头",
+    "其次",
+    "开支",
+    "意外",
+    "饮料",
+    "习惯",
+    "苦日子",
+    "提升",
+    "质量"
+  ],
+  "sections": [
+    {
+      "id": "h5d21-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d21-s1",
+          "text_original": "你最近不是说要省钱吗？怎么又买了新手机？",
+          "pinyin": "Nǐ zuìjìn bú shì shuō yào shěng qián ma? Zěnme yòu mǎi le xīn shǒujī?",
+          "text_translation": "Yaqinda pul tejayman demaganmiding? Nega yana yangi telefon olding?",
+          "text_translation_ru": "Ты же недавно говорил, что хочешь экономить? Как же ты опять купил новый телефон?",
+          "text_translation_en": "Didn't you say you wanted to save money? How come you bought a new phone again?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d21-s2",
+          "text_original": "这部手机是给父母买的，他们的旧手机用了好几年了，屏幕都裂了。",
+          "pinyin": "Zhè bù shǒujī shì gěi fùmǔ mǎi de, tāmen de jiù shǒujī yòng le hǎo jǐ nián le, píngmù dōu liè le.",
+          "text_translation": "Bu telefonni ota-onamga oldim, ularning eski telefoni bir necha yil ishlatilgan, ekrani ham yorilib ketgan.",
+          "text_translation_ru": "Этот телефон я купил родителям, их старый прослужил несколько лет, и экран уже треснул.",
+          "text_translation_en": "I bought this phone for my parents — their old one had been used for years and the screen was cracked.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d21-s3",
+          "text_original": "哦，那我误会了。给父母花钱确实值得。",
+          "pinyin": "Ó, nà wǒ wùhuì le. Gěi fùmǔ huā qián quèshí zhídé.",
+          "text_translation": "Voy, unda men noto'g'ri tushunibman. Ota-onaga pul sarflash rostdan arziydi.",
+          "text_translation_ru": "А, тогда я не так понял. На родителей деньги тратить действительно стоит.",
+          "text_translation_en": "Oh, then I misunderstood. Spending money on your parents really is worth it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d21-s4",
+          "text_original": "不过你说得对，我最近确实在控制消费，能省的地方尽量省。",
+          "pinyin": "Búguò nǐ shuō de duì, wǒ zuìjìn quèshí zài kòngzhì xiāofèi, néng shěng de dìfang jǐnliàng shěng.",
+          "text_translation": "Lekin to'g'ri aytasan, men yaqinda rostdan xarajatni nazorat qilyapman, tejasa bo'ladigan joyda imkon qadar tejayman.",
+          "text_translation_ru": "Но ты прав, я в последнее время действительно контролирую траты — где можно сэкономить, экономлю по максимуму.",
+          "text_translation_en": "But you're right — I really have been controlling my spending lately, saving wherever I can.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d21-s5",
+          "text_original": "你是怎么控制消费的？我也想学学。",
+          "pinyin": "Nǐ shì zěnme kòngzhì xiāofèi de? Wǒ yě xiǎng xué xue.",
+          "text_translation": "Xarajatni qanday nazorat qilasan? Men ham o'rganib olmoqchiman.",
+          "text_translation_ru": "А как ты контролируешь траты? Я тоже хочу поучиться.",
+          "text_translation_en": "How do you control your spending? I'd like to learn too.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d21-s6",
+          "text_original": "我给自己定了一个简单的规则：想买东西之前先等三天。三天后如果还想要，再考虑买。",
+          "pinyin": "Wǒ gěi zìjǐ dìng le yí ge jiǎndān de guīzé: xiǎng mǎi dōngxi zhīqián xiān děng sān tiān. Sān tiān hòu rúguǒ hái xiǎng yào, zài kǎolǜ mǎi.",
+          "text_translation": "O'zimga oddiy qoida qo'ydim: biror narsa olishdan oldin avval uch kun kutaman. Uch kundan keyin hali ham xohlasam, keyin olishni o'ylab ko'raman.",
+          "text_translation_ru": "Я установил себе простое правило: прежде чем что-то купить, жду три дня. Если через три дня всё ещё хочется, тогда думаю о покупке.",
+          "text_translation_en": "I set myself a simple rule: before buying something, wait three days. If I still want it after three days, then I consider buying it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d21-s7",
+          "text_original": "这办法有用吗？",
+          "pinyin": "Zhè bànfǎ yǒuyòng ma?",
+          "text_translation": "Bu usul foyda beradimi?",
+          "text_translation_ru": "А этот способ работает?",
+          "text_translation_en": "Does that method work?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d21-s8",
+          "text_original": "很有用。很多一时冲动想买的东西，过几天就没那么想要了。",
+          "pinyin": "Hěn yǒuyòng. Hěnduō yìshí chōngdòng xiǎng mǎi de dōngxi, guò jǐ tiān jiù méi nàme xiǎng yào le.",
+          "text_translation": "Juda foydali. Bir lahzalik hisga berilib olmoqchi bo'lgan ko'p narsani, bir necha kun o'tgach, unchalik xohlamay qolasan.",
+          "text_translation_ru": "Очень помогает. Многое, что хочется купить под влиянием импульса, через несколько дней уже не так и нужно.",
+          "text_translation_en": "Very useful. A lot of things you want to buy on impulse, after a few days you don't want as much anymore.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d21-s9",
+          "text_original": "这个习惯挺好的。你还用了什么方法？",
+          "pinyin": "Zhè ge xíguàn tǐng hǎo de. Nǐ hái yòng le shénme fāngfǎ?",
+          "text_translation": "Bu odat juda yaxshi. Yana qanday usul ishlatding?",
+          "text_translation_ru": "Хорошая привычка. А какие ещё методы ты используешь?",
+          "text_translation_en": "That's a good habit. What other methods have you used?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d21-s10",
+          "text_original": "我开始记账，把每月的收入和支出都记录下来。",
+          "pinyin": "Wǒ kāishǐ jìzhàng, bǎ měi yuè de shōurù hé zhīchū dōu jìlù xiàlái.",
+          "text_translation": "Hisob yuritishni boshladim, har oylik daromad va xarajatni yozib boraman.",
+          "text_translation_ru": "Я начал вести учёт — записываю весь ежемесячный доход и расходы.",
+          "text_translation_en": "I started keeping accounts, recording all my monthly income and expenses.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d21-s11",
+          "text_original": "那你一个月大概花多少钱？",
+          "pinyin": "Nà nǐ yí ge yuè dàgài huā duōshao qián?",
+          "text_translation": "Unda bir oyda taxminan qancha pul sarflaysan?",
+          "text_translation_ru": "И сколько примерно ты тратишь в месяц?",
+          "text_translation_en": "So about how much do you spend a month?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d21-s12",
+          "text_original": "房租是大头，占了差不多一半。其次是吃饭和交通，剩下的都是不必要的开支。",
+          "pinyin": "Fángzū shì dà tóu, zhàn le chàbuduō yí bàn. Qícì shì chīfàn hé jiāotōng, shèngxià de dōu shì bú bìyào de kāizhī.",
+          "text_translation": "Ijara eng katta qism, deyarli yarmini egallaydi. Undan keyin ovqat va transport, qolgani esa keraksiz xarajatlar.",
+          "text_translation_ru": "Аренда — основная часть, занимает почти половину. Дальше еда и транспорт, а остальное — ненужные траты.",
+          "text_translation_en": "Rent is the biggest part, taking up about half. Next is food and transport, and the rest is all unnecessary spending.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d21-s13",
+          "text_original": "那你有没有发现什么让你意外的开支？",
+          "pinyin": "Nà nǐ yǒu méiyǒu fāxiàn shénme ràng nǐ yìwài de kāizhī?",
+          "text_translation": "Unda seni hayratga solgan biror xarajatni aniqladingmi?",
+          "text_translation_ru": "А ты обнаружил какие-нибудь траты, которые тебя удивили?",
+          "text_translation_en": "Have you found any spending that surprised you?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d21-s14",
+          "text_original": "有的。上个月我算了算，买饮料和咖啡居然花了五百多。从那以后我尽量自己带水。",
+          "pinyin": "Yǒu de. Shàng ge yuè wǒ suàn le suàn, mǎi yǐnliào hé kāfēi jūrán huā le wǔbǎi duō. Cóng nà yǐhòu wǒ jǐnliàng zìjǐ dài shuǐ.",
+          "text_translation": "Bor. O'tgan oy hisoblab ko'rsam, ichimlik va qahvaga shartakam besh yuzdan ortiq sarflabman. O'shandan keyin imkon qadar o'zim suv olib yuraman.",
+          "text_translation_ru": "Есть. В прошлом месяце я подсчитал — на напитки и кофе ушло аж больше пятисот. С тех пор я по возможности ношу воду с собой.",
+          "text_translation_en": "Yes. Last month I added it up, and I'd actually spent over five hundred on drinks and coffee. Since then I try to bring my own water.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d21-s15",
+          "text_original": "五百多确实不少！看来养成好的消费习惯真的能省很多钱。",
+          "pinyin": "Wǔbǎi duō quèshí bùshǎo! Kànlái yǎngchéng hǎo de xiāofèi xíguàn zhēn de néng shěng hěnduō qián.",
+          "text_translation": "Besh yuzdan ortiq rostdan kam emas! Ko'rinishidan yaxshi xarajat odatini shakllantirish rostdan ko'p pul tejarkan.",
+          "text_translation_ru": "Больше пятисот — это и правда немало! Похоже, хорошие привычки в тратах действительно позволяют сэкономить много денег.",
+          "text_translation_en": "Over five hundred really is a lot! It seems building good spending habits really can save a lot of money.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d21-s16",
+          "text_original": "对。省钱不是要过苦日子，而是让钱花在更值得的地方。",
+          "pinyin": "Duì. Shěng qián bú shì yào guò kǔ rìzi, ér shì ràng qián huā zài gèng zhídé de dìfang.",
+          "text_translation": "To'g'ri. Pul tejash qiyin hayot kechirish degani emas, balki pulni ko'proq arziydigan joyga sarflash.",
+          "text_translation_ru": "Да. Экономить — не значит жить в нужде, а тратить деньги на то, что больше того стоит.",
+          "text_translation_en": "Right. Saving money doesn't mean living a hard life — it means spending money on more worthwhile things.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d21-s17",
+          "text_original": "我同意。消费观念的改变确实能提升生活质量。",
+          "pinyin": "Wǒ tóngyì. Xiāofèi guānniàn de gǎibiàn quèshí néng tíshēng shēnghuó zhìliàng.",
+          "text_translation": "Roziman. Iste'mol qarashlarini o'zgartirish rostdan hayot sifatini oshira oladi.",
+          "text_translation_ru": "Согласен. Изменение взглядов на потребление действительно может повысить качество жизни.",
+          "text_translation_en": "I agree. Changing your spending mindset really can improve your quality of life.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d21-s18",
+          "text_original": "没错。钱是工具，不是目标。学会合理消费，生活才能更轻松。",
+          "pinyin": "Méi cuò. Qián shì gōngjù, bú shì mùbiāo. Xuéhuì hélǐ xiāofèi, shēnghuó cáinéng gèng qīngsōng.",
+          "text_translation": "To'g'ri. Pul vosita, maqsad emas. Oqilona iste'mol qilishni o'rgansang, hayot yengilroq kechadi.",
+          "text_translation_ru": "Именно. Деньги — это инструмент, а не цель. Научишься тратить разумно — и жизнь станет легче.",
+          "text_translation_en": "Exactly. Money is a tool, not a goal. Learn to spend sensibly, and life becomes easier.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
