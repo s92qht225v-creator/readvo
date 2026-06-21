@@ -1,0 +1,217 @@
+{
+  "id": "hsk5-dialogue40",
+  "slug": "business-negotiations",
+  "title": "商业谈判",
+  "pinyin": "Shāngyè tánpàn",
+  "titleTranslation": "Biznes muzokaralari",
+  "titleTranslation_ru": "Деловые переговоры",
+  "titleTranslation_en": "Business Negotiations",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "谈判",
+    "客户",
+    "僵持",
+    "各退一步",
+    "达成协议",
+    "报价",
+    "拒绝",
+    "让步",
+    "策略",
+    "数据",
+    "订单",
+    "单价",
+    "平衡点",
+    "突发情况",
+    "交货周期",
+    "加急费",
+    "核心需求",
+    "折中",
+    "行情",
+    "底气",
+    "应变能力",
+    "总结"
+  ],
+  "sections": [
+    {
+      "id": "h5d40-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d40-s1",
+          "text_original": "听说你昨天跟客户谈判了？结果怎么样？",
+          "pinyin": "Tīngshuō nǐ zuótiān gēn kèhù tánpàn le? Jiéguǒ zěnmeyàng?",
+          "text_translation": "Kecha mijoz bilan muzokara qilibsan deb eshitdim? Natija qanday bo'ldi?",
+          "text_translation_ru": "Слышал, ты вчера вёл переговоры с клиентом? Как результат?",
+          "text_translation_en": "I heard you negotiated with a client yesterday? How did it turn out?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d40-s2",
+          "text_original": "还算顺利，但过程很不容易。双方在价格上僵持了很久，最后各退了一步才达成协议。",
+          "pinyin": "Hái suàn shùnlì, dàn guòchéng hěn bù róngyì. Shuāngfāng zài jiàgé shàng jiāngchí le hěn jiǔ, zuìhòu gè tuì le yí bù cái dáchéng xiéyì.",
+          "text_translation": "Ancha yaxshi o'tdi, lekin jarayoni oson bo'lmadi. Ikki tomon narx ustida uzoq tortishib turdi, oxiri har biri bir qadam yon bosib, endi kelishuvga erishdik.",
+          "text_translation_ru": "В целом удачно, но процесс был непростой. Обе стороны долго не могли договориться по цене, и в итоге, уступив по шагу, мы достигли соглашения.",
+          "text_translation_en": "Fairly smooth, but the process wasn't easy. Both sides were deadlocked on price for a long time, and only after each side made a concession did we reach an agreement.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d40-s3",
+          "text_original": "对方一开始开价多少？",
+          "pinyin": "Duìfāng yì kāishǐ kāijià duōshao?",
+          "text_translation": "Qarshi tomon boshida qancha narx aytdi?",
+          "text_translation_ru": "Сколько другая сторона запросила в начале?",
+          "text_translation_en": "What price did the other side open with?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d40-s4",
+          "text_original": "他们报价比我们的预算高了百分之二十，我直接拒绝了。后来他们降到百分之十，我们还是觉得偏高。",
+          "pinyin": "Tāmen bàojià bǐ wǒmen de yùsuàn gāo le bǎi fēn zhī èrshí, wǒ zhíjiē jùjué le. Hòulái tāmen jiàng dào bǎi fēn zhī shí, wǒmen háishì juéde piān gāo.",
+          "text_translation": "Ularning narxi bizning byudjetdan yigirma foiz baland edi, men to'g'ridan-to'g'ri rad etdim. Keyin ular o'n foizga tushirdi, biz baribir balandroq deb hisobladik.",
+          "text_translation_ru": "Их цена была на двадцать процентов выше нашего бюджета, и я сразу отказался. Потом они снизили до десяти процентов, но мы всё равно считали это завышенным.",
+          "text_translation_en": "Their quote was twenty percent above our budget, so I refused outright. Then they dropped to ten percent, but we still felt it was on the high side.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d40-s5",
+          "text_original": "那你们是怎么让对方让步的？",
+          "pinyin": "Nà nǐmen shì zěnme ràng duìfāng ràngbù de?",
+          "text_translation": "Unda qarshi tomonni qanday yon berishga undadingiz?",
+          "text_translation_ru": "И как же вы заставили другую сторону уступить?",
+          "text_translation_en": "So how did you get the other side to concede?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d40-s6",
+          "text_original": "我们准备了一份详细的市场分析报告，用数据证明他们价格不合理。同时我们也表示可以增加订单数量，以此来降低单价。",
+          "pinyin": "Wǒmen zhǔnbèi le yí fèn xiángxì de shìchǎng fēnxī bàogào, yòng shùjù zhèngmíng tāmen jiàgé bù hélǐ. Tóngshí wǒmen yě biǎoshì kěyǐ zēngjiā dìngdān shùliàng, yǐ cǐ lái jiàngdī dānjià.",
+          "text_translation": "Biz batafsil bozor tahlili hisobotini tayyorladik, ma'lumotlar bilan ularning narxi o'rinsizligini isbotladik. Shu bilan birga buyurtma miqdorini oshirishimiz mumkinligini bildirib, shu yo'l bilan dona narxini tushirdik.",
+          "text_translation_ru": "Мы подготовили подробный отчёт об анализе рынка и с помощью данных доказали, что их цена необоснованна. Одновременно мы дали понять, что можем увеличить объём заказа, чтобы тем самым снизить цену за единицу.",
+          "text_translation_en": "We prepared a detailed market analysis report and used data to prove their price was unreasonable. At the same time, we indicated we could increase the order quantity to bring down the unit price.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d40-s7",
+          "text_original": "这个策略很高明。用数据说话比单纯争论有效多了。",
+          "pinyin": "Zhè ge cèlüè hěn gāomíng. Yòng shùjù shuōhuà bǐ dānchún zhēnglùn yǒuxiào duō le.",
+          "text_translation": "Bu strategiya juda aqlli. Ma'lumotlar bilan gapirish shunchaki bahslashishdan ancha samarali.",
+          "text_translation_ru": "Это очень умная стратегия. Говорить языком данных гораздо эффективнее, чем просто спорить.",
+          "text_translation_en": "That's a clever strategy. Letting the data speak is far more effective than simply arguing.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d40-s8",
+          "text_original": "没错。谈判不是吵架，而是找到双方都能接受的平衡点。",
+          "pinyin": "Méi cuò. Tánpàn bú shì chǎojià, ér shì zhǎodào shuāngfāng dōu néng jiēshòu de pínghéng diǎn.",
+          "text_translation": "To'g'ri. Muzokara — janjal emas, balki ikki tomon ham qabul qila oladigan muvozanat nuqtasini topish.",
+          "text_translation_ru": "Именно. Переговоры — это не ссора, а поиск точки равновесия, приемлемой для обеих сторон.",
+          "text_translation_en": "Exactly. Negotiation isn't arguing — it's finding a balance point both sides can accept.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d40-s9",
+          "text_original": "你们在谈判中有没有遇到什么突发情况？",
+          "pinyin": "Nǐmen zài tánpàn zhōng yǒu méiyǒu yùdào shénme tūfā qíngkuàng?",
+          "text_translation": "Muzokara davomida biror kutilmagan vaziyatga duch keldingizmi?",
+          "text_translation_ru": "Сталкивались ли вы во время переговоров с какой-нибудь внезапной ситуацией?",
+          "text_translation_en": "Did you run into any sudden situations during the negotiation?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d40-s10",
+          "text_original": "有。对方突然提出要缩短交货周期，这给我们增加了很大压力。",
+          "pinyin": "Yǒu. Duìfāng tūrán tíchū yào suōduǎn jiāohuò zhōuqī, zhè gěi wǒmen zēngjiā le hěn dà yālì.",
+          "text_translation": "Bor. Qarshi tomon to'satdan yetkazib berish muddatini qisqartirishni taklif qildi, bu bizga katta bosim qo'shdi.",
+          "text_translation_ru": "Да. Другая сторона внезапно предложила сократить срок поставки, и это создало для нас большое давление.",
+          "text_translation_en": "Yes. The other side suddenly demanded a shorter delivery cycle, which put a lot of pressure on us.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d40-s11",
+          "text_original": "那你们怎么应对的？",
+          "pinyin": "Nà nǐmen zěnme yìngduì de?",
+          "text_translation": "Unda buni qanday hal qildingiz?",
+          "text_translation_ru": "И как вы на это отреагировали?",
+          "text_translation_en": "So how did you handle it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d40-s12",
+          "text_original": "我们当场评估了生产能力和物流成本，告诉他们提前一周可以，但需要加收加急费。",
+          "pinyin": "Wǒmen dāngchǎng pínggū le shēngchǎn nénglì hé wùliú chéngběn, gàosu tāmen tíqián yì zhōu kěyǐ, dàn xūyào jiā shōu jiājí fèi.",
+          "text_translation": "Biz o'sha joyda ishlab chiqarish quvvati va logistika xarajatini baholadik, ularga bir hafta oldinroq bo'lishi mumkin, lekin tezkor to'lov qo'shilishini aytdik.",
+          "text_translation_ru": "Мы на месте оценили производственные возможности и логистические затраты и сказали им, что на неделю раньше возможно, но потребуется доплата за срочность.",
+          "text_translation_en": "We assessed our production capacity and logistics costs on the spot and told them a week earlier was possible, but it would require an extra rush fee.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d40-s13",
+          "text_original": "对方接受了吗？",
+          "pinyin": "Duìfāng jiēshòu le ma?",
+          "text_translation": "Qarshi tomon roziligini berdimi?",
+          "text_translation_ru": "Другая сторона согласилась?",
+          "text_translation_en": "Did they accept?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d40-s14",
+          "text_original": "他们犹豫了一下，最后还是同意了。因为他们确实急需这批货。",
+          "pinyin": "Tāmen yóuyù le yí xià, zuìhòu háishì tóngyì le. Yīnwèi tāmen quèshí jíxū zhè pī huò.",
+          "text_translation": "Ular biroz ikkilanishdi, oxiri baribir rozi bo'lishdi. Chunki bu mahsulot ularga rostdan zudlik bilan kerak edi.",
+          "text_translation_ru": "Они немного поколебались, но в итоге всё же согласились. Потому что эта партия товара им действительно была срочно нужна.",
+          "text_translation_en": "They hesitated a bit, but in the end agreed — because they really did urgently need this batch of goods.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d40-s15",
+          "text_original": "看来谈判的关键在于找到对方的核心需求。",
+          "pinyin": "Kànlái tánpàn de guānjiàn zàiyú zhǎodào duìfāng de héxīn xūqiú.",
+          "text_translation": "Ko'rinishidan muzokaraning kaliti qarshi tomonning asosiy ehtiyojini topishda ekan.",
+          "text_translation_ru": "Похоже, ключ переговоров — в том, чтобы найти ключевую потребность другой стороны.",
+          "text_translation_en": "It seems the key to negotiation lies in finding the other side's core need.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d40-s16",
+          "text_original": "对。只要了解对方真正想要什么，就容易找到折中的方案。",
+          "pinyin": "Duì. Zhǐyào liǎojiě duìfāng zhēnzhèng xiǎng yào shénme, jiù róngyì zhǎodào zhézhōng de fāng'àn.",
+          "text_translation": "To'g'ri. Qarshi tomon aslida nimani xohlashini bilib olsang, murosa yo'lini topish oson bo'ladi.",
+          "text_translation_ru": "Да. Стоит понять, чего на самом деле хочет другая сторона, и компромиссное решение найти легко.",
+          "text_translation_en": "Right. As long as you understand what the other side really wants, it's easy to find a compromise.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d40-s17",
+          "text_original": "你觉得这次谈判成功最重要的因素是什么？",
+          "pinyin": "Nǐ juéde zhè cì tánpàn chénggōng zuì zhòngyào de yīnsù shì shénme?",
+          "text_translation": "Seningcha bu muzokara muvaffaqiyatining eng muhim omili nima?",
+          "text_translation_ru": "Как ты думаешь, какой фактор был самым важным для успеха этих переговоров?",
+          "text_translation_en": "What do you think was the most important factor in this negotiation's success?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d40-s18",
+          "text_original": "充分的准备和灵活的应变能力。如果没有提前了解市场行情，我们就没有底气跟他们谈价格。",
+          "pinyin": "Chōngfèn de zhǔnbèi hé línghuó de yìngbiàn nénglì. Rúguǒ méiyǒu tíqián liǎojiě shìchǎng hángqíng, wǒmen jiù méiyǒu dǐqì gēn tāmen tán jiàgé.",
+          "text_translation": "To'liq tayyorgarlik va moslashuvchan vaziyatga moslashish qobiliyati. Agar bozor holatini oldindan bilmaganimizda, ular bilan narx haqida gaplashishga ishonchimiz bo'lmasdi.",
+          "text_translation_ru": "Тщательная подготовка и гибкая способность приспосабливаться. Если бы мы заранее не изучили рыночную конъюнктуру, у нас не было бы уверенности обсуждать с ними цену.",
+          "text_translation_en": "Thorough preparation and flexible adaptability. If we hadn't researched the market conditions in advance, we wouldn't have had the confidence to negotiate price with them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d40-s19",
+          "text_original": "谈判确实是一门艺术。这次的经验值得好好总结。",
+          "pinyin": "Tánpàn quèshí shì yì mén yìshù. Zhè cì de jīngyàn zhídé hǎohao zǒngjié.",
+          "text_translation": "Muzokara rostdan bir san'at. Bu safargi tajribani yaxshilab xulosalashga arziydi.",
+          "text_translation_ru": "Переговоры — это действительно искусство. Этот опыт стоит как следует обобщить.",
+          "text_translation_en": "Negotiation really is an art. This experience is worth summarizing well.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

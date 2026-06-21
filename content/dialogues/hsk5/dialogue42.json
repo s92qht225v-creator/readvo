@@ -1,0 +1,208 @@
+{
+  "id": "hsk5-dialogue42",
+  "slug": "information-overload",
+  "title": "信息过载",
+  "pinyin": "Xìnxī guòzài",
+  "titleTranslation": "Axborot ortiqchaligi",
+  "titleTranslation_ru": "Информационная перегрузка",
+  "titleTranslation_en": "Information Overload",
+  "level": 5,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "心不在焉",
+    "焦虑",
+    "夸张",
+    "错过",
+    "信息过载",
+    "包围",
+    "处理",
+    "专注",
+    "注意力",
+    "分散",
+    "设限",
+    "固定",
+    "有意义",
+    "无意义",
+    "筛选",
+    "来源",
+    "可靠",
+    "媒体",
+    "噪音",
+    "缓解",
+    "主人",
+    "牵着走"
+  ],
+  "sections": [
+    {
+      "id": "h5d42-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d42-s1",
+          "text_original": "你最近怎么总是看起来心不在焉的？是不是有什么心事？",
+          "pinyin": "Nǐ zuìjìn zěnme zǒng shì kàn qǐlái xīn bù zài yān de? Shì bú shì yǒu shénme xīnshì?",
+          "text_translation": "Yaqinda nega doim parishonxotirdek ko'rinasan? Biror tashvishing bormi?",
+          "text_translation_ru": "Почему ты в последнее время всё время выглядишь рассеянным? Тебя что-то тревожит?",
+          "text_translation_en": "Why have you been looking so absent-minded lately? Is something on your mind?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d42-s2",
+          "text_original": "说实话，我最近感觉特别焦虑。每天打开手机都是各种新闻，好的坏的都有，根本停不下来。",
+          "pinyin": "Shuō shíhuà, wǒ zuìjìn gǎnjué tèbié jiāolǜ. Měitiān dǎkāi shǒujī dōu shì gè zhǒng xīnwén, hǎo de huài de dōu yǒu, gēnběn tíng bù xiàlái.",
+          "text_translation": "Rostini aytsam, yaqinda o'zimni juda xavotirli his qilyapman. Har kuni telefonni ochsam turli xil yangiliklar, yaxshisi ham, yomoni ham bor, umuman to'xtata olmayman.",
+          "text_translation_ru": "Честно говоря, в последнее время я чувствую сильную тревогу. Каждый день открываю телефон — всякие новости, и хорошие, и плохие, и совсем не могу остановиться.",
+          "text_translation_en": "Honestly, I've felt really anxious lately. Every day I open my phone and it's all kinds of news, good and bad — I just can't stop.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d42-s3",
+          "text_original": "我也有同感。感觉现在信息太多了，刷不完，越看越累。",
+          "pinyin": "Wǒ yě yǒu tónggǎn. Gǎnjué xiànzài xìnxī tài duō le, shuā bù wán, yuè kàn yuè lèi.",
+          "text_translation": "Men ham shunday his qilaman. Hozir axborot juda ko'p, oxiri kelmaydi, qaragan sari charchaysan.",
+          "text_translation_ru": "У меня то же самое. Кажется, сейчас слишком много информации, её не пролистать до конца, и чем больше смотришь, тем сильнее устаёшь.",
+          "text_translation_en": "I feel the same. There's just too much information now — you can't scroll through it all, and the more you read the more tired you get.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d42-s4",
+          "text_original": "而且很多新闻标题很夸张，点进去一看其实没什么内容。但是不看又怕错过什么重要消息。",
+          "pinyin": "Érqiě hěnduō xīnwén biāotí hěn kuāzhāng, diǎn jìnqù yī kàn qíshí méi shénme nèiróng. Dànshì bù kàn yòu pà cuòguò shénme zhòngyào xiāoxi.",
+          "text_translation": "Qolaversa ko'p yangilik sarlavhasi juda bo'rttirilgan, bosib kirsang aslida hech qanday mazmun yo'q. Lekin ko'rmasam biror muhim xabarni o'tkazib yuborishdan qo'rqaman.",
+          "text_translation_ru": "К тому же многие заголовки новостей преувеличены — зайдёшь почитать, а там, по сути, ничего нет. Но и не смотреть боюсь — вдруг пропущу что-то важное.",
+          "text_translation_en": "And a lot of news headlines are exaggerated — you click in and there's actually no real content. But if I don't look, I'm afraid I'll miss some important news.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d42-s5",
+          "text_original": "这就是典型的「信息过载」。每天被大量信息包围，大脑根本处理不过来。",
+          "pinyin": "Zhè jiùshì diǎnxíng de 'xìnxī guòzài'. Měitiān bèi dàliàng xìnxī bāowéi, dànǎo gēnběn chǔlǐ bú guòlái.",
+          "text_translation": "Mana bu tipik «axborot ortiqchaligi». Har kuni ko'p miqdordagi axborot qurshovida, miya uni umuman qayta ishlab ulgurmaydi.",
+          "text_translation_ru": "Это и есть классическая «информационная перегрузка». Каждый день тебя окружает огромный поток информации, и мозг просто не успевает её обрабатывать.",
+          "text_translation_en": "This is a classic case of \"information overload.\" Every day you're surrounded by a huge amount of information, and your brain simply can't process it all.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d42-s6",
+          "text_original": "我发现自己现在很难专注做一件事，老是忍不住想看手机。",
+          "pinyin": "Wǒ fāxiàn zìjǐ xiànzài hěn nán zhuānzhù zuò yí jiàn shì, lǎoshi rěnbúzhù xiǎng kàn shǒujī.",
+          "text_translation": "O'zimda sezdimki, hozir bitta ishga diqqatimni jamlash juda qiyin, hadeb o'zimni tiya olmay telefon ko'rgim keladi.",
+          "text_translation_ru": "Я заметил, что мне теперь очень трудно сосредоточиться на одном деле — всё время не могу удержаться, чтобы не глянуть в телефон.",
+          "text_translation_en": "I've noticed it's now very hard for me to focus on one thing — I keep feeling the urge to check my phone.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d42-s7",
+          "text_original": "这也是信息过载带来的副作用。人的注意力是有限的，被分散以后效率就会降低。",
+          "pinyin": "Zhè yě shì xìnxī guòzài dài lái de fùzuòyòng. Rén de zhùyìlì shì yǒuxiàn de, bèi fēnsàn yǐhòu xiàolǜ jiù huì jiàngdī.",
+          "text_translation": "Bu ham axborot ortiqchaligi keltirgan nojo'ya ta'sir. Insonning diqqati cheklangan, chalg'igandan keyin samaradorlik pasayadi.",
+          "text_translation_ru": "Это тоже побочный эффект информационной перегрузки. Внимание человека ограничено, и, будучи рассеянным, эффективность снижается.",
+          "text_translation_en": "That's also a side effect of information overload. Human attention is limited, and once it's scattered, efficiency drops.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d42-s8",
+          "text_original": "那你有什么好办法来应对这种情况吗？",
+          "pinyin": "Nà nǐ yǒu shénme hǎo bànfǎ lái yìngduì zhè zhǒng qíngkuàng ma?",
+          "text_translation": "Unda bu holatga qarshi biror yaxshi usuling bormi?",
+          "text_translation_ru": "А у тебя есть какой-нибудь хороший способ справляться с этим?",
+          "text_translation_en": "So do you have any good way to deal with this?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d42-s9",
+          "text_original": "我开始给自己设限了。每天只在固定的时间段看新闻，比如早上半小时和晚上半小时。",
+          "pinyin": "Wǒ kāishǐ gěi zìjǐ shè xiàn le. Měitiān zhǐ zài gùdìng de shíjiān duàn kàn xīnwén, bǐrú zǎoshang bàn xiǎoshí hé wǎnshang bàn xiǎoshí.",
+          "text_translation": "Men o'zimga cheklov qo'ya boshladim. Har kuni faqat belgilangan vaqt oralig'ida yangilik ko'raman, masalan ertalab yarim soat va kechqurun yarim soat.",
+          "text_translation_ru": "Я начал устанавливать себе ограничения. Каждый день читаю новости только в фиксированные промежутки времени — например, полчаса утром и полчаса вечером.",
+          "text_translation_en": "I've started setting limits for myself. I only read news in fixed time slots each day — like half an hour in the morning and half an hour in the evening.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d42-s10",
+          "text_original": "这个办法有效吗？",
+          "pinyin": "Zhè ge bànfǎ yǒuxiào ma?",
+          "text_translation": "Bu usul foyda beradimi?",
+          "text_translation_ru": "А этот способ работает?",
+          "text_translation_en": "Does that method work?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d42-s11",
+          "text_original": "一开始有点难，坚持了一周以后，感觉焦虑明显减少了。而且不看手机的时候，可以做更多有意义的事。",
+          "pinyin": "Yī kāishǐ yǒu diǎn nán, jiānchí le yì zhōu yǐhòu, gǎnjué jiāolǜ míngxiǎn jiǎnshǎo le. Érqiě bù kàn shǒujī de shíhou, kěyǐ zuò gèng duō yǒu yìyì de shì.",
+          "text_translation": "Boshida biroz qiyin, bir hafta davom ettirgach, xavotir sezilarli kamayganini his qildim. Qolaversa telefonga qaramaganda ko'proq mazmunli ish qilsa bo'ladi.",
+          "text_translation_ru": "Сначала было немного трудно, но после недели постоянства тревога заметно уменьшилась. К тому же, когда не смотришь в телефон, можно заняться более осмысленными делами.",
+          "text_translation_en": "At first it was a bit hard, but after sticking with it for a week, my anxiety noticeably decreased. And when I'm not on my phone, I can do more meaningful things.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d42-s12",
+          "text_original": "你说得对。我也该试试，把手机放远一点，减少无意义的刷屏。",
+          "pinyin": "Nǐ shuō de duì. Wǒ yě gāi shì shi, bǎ shǒujī fàng yuǎn yì diǎn, jiǎnshǎo wú yìyì de shuā píng.",
+          "text_translation": "To'g'ri aytasan. Men ham sinab ko'rishim kerak, telefonni biroz uzoqroq qo'yib, bema'ni ekran titkilashni kamaytirishim kerak.",
+          "text_translation_ru": "Ты прав. Мне тоже стоит попробовать: отложить телефон подальше и поменьше бессмысленно листать экран.",
+          "text_translation_en": "You're right. I should try it too — put my phone farther away and cut down on mindless scrolling.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d42-s13",
+          "text_original": "另外，我还会筛选信息来源，只关注几个可靠的媒体，减少噪音。",
+          "pinyin": "Lìngwài, wǒ hái huì shāixuǎn xìnxī láiyuán, zhǐ guānzhù jǐ ge kěkào de méitǐ, jiǎnshǎo zàoyīn.",
+          "text_translation": "Bundan tashqari, men axborot manbalarini ham saralayman, faqat bir nechta ishonchli OAVni kuzataman, shovqinni kamaytiraman.",
+          "text_translation_ru": "Кроме того, я ещё фильтрую источники информации: слежу только за несколькими надёжными СМИ, уменьшая шум.",
+          "text_translation_en": "Also, I filter my information sources — I only follow a few reliable media outlets to reduce the noise.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d42-s14",
+          "text_original": "这个建议很好。很多焦虑其实来自于看了太多没有价值的内容。",
+          "pinyin": "Zhè ge jiànyì hěn hǎo. Hěnduō jiāolǜ qíshí láizì yú kàn le tài duō méiyǒu jiàzhí de nèiróng.",
+          "text_translation": "Bu maslahat juda yaxshi. Ko'p xavotir aslida juda ko'p qiymatsiz mazmun ko'rishdan kelib chiqadi.",
+          "text_translation_ru": "Хороший совет. Многие тревоги на самом деле возникают из-за того, что мы смотрим слишком много бесполезного контента.",
+          "text_translation_en": "That's a good suggestion. A lot of anxiety actually comes from consuming too much worthless content.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d42-s15",
+          "text_original": "还有，我发现去户外走走，或者做运动，也能有效缓解信息带来的压力。",
+          "pinyin": "Hái yǒu, wǒ fāxiàn qù hùwài zǒu zǒu, huòzhě zuò yùndòng, yě néng yǒuxiào huǎnjiě xìnxī dài lái de yālì.",
+          "text_translation": "Yana, men payqadimki, tashqariga chiqib sayr qilish yoki sport bilan shug'ullanish ham axborot keltirgan bosimni samarali yengillashtiradi.",
+          "text_translation_ru": "Ещё я заметил, что прогулки на улице или занятия спортом тоже эффективно снимают давление, вызванное информацией.",
+          "text_translation_en": "Also, I've found that going for a walk outdoors or exercising can effectively relieve the stress that information brings.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d42-s16",
+          "text_original": "我也感觉到，周末不带手机出门，整个人都会轻松很多。",
+          "pinyin": "Wǒ yě gǎnjué dào, zhōumò bú dài shǒujī chūmén, zhěng ge rén dōu huì qīngsōng hěnduō.",
+          "text_translation": "Men ham his qildim, dam olish kunlari telefonsiz tashqariga chiqsam, butun vujudim ancha yengil tortadi.",
+          "text_translation_ru": "Я тоже почувствовал: если на выходных выйти из дома без телефона, на душе становится гораздо легче.",
+          "text_translation_en": "I've felt it too — going out on weekends without my phone makes me feel a lot more relaxed.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d42-s17",
+          "text_original": "其实信息本身不是问题，问题在于我们如何管理它。",
+          "pinyin": "Qíshí xìnxī běnshēn bú shì wèntí, wèntí zàiyú wǒmen rúhé guǎnlǐ tā.",
+          "text_translation": "Aslida axborotning o'zi muammo emas, muammo uni qanday boshqarishimizda.",
+          "text_translation_ru": "На самом деле информация сама по себе — не проблема, проблема в том, как мы ею управляем.",
+          "text_translation_en": "Actually, information itself isn't the problem — the problem is how we manage it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d42-s18",
+          "text_original": "对，学会做信息的主人，而不是被信息牵着走。",
+          "pinyin": "Duì, xuéhuì zuò xìnxī de zhǔrén, ér bú shì bèi xìnxī qiān zhe zǒu.",
+          "text_translation": "To'g'ri, axborotning egasi bo'lishni o'rganish kerak, uning yetagida ketmaslik kerak.",
+          "text_translation_ru": "Да, нужно научиться быть хозяином информации, а не идти у неё на поводу.",
+          "text_translation_en": "Right — learn to be the master of information, rather than being led around by it.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

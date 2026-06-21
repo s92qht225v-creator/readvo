@@ -1,0 +1,202 @@
+{
+  "id": "hsk5-dialogue43",
+  "slug": "remote-work",
+  "title": "远程办公",
+  "pinyin": "Yuǎnchéng bàngōng",
+  "titleTranslation": "Masofadan ishlash",
+  "titleTranslation_ru": "Удалённая работа",
+  "titleTranslation_en": "Remote Work",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "远程办公",
+    "模糊",
+    "界限",
+    "通勤",
+    "吸引人",
+    "高峰",
+    "灵活",
+    "临时",
+    "头脑风暴",
+    "气氛",
+    "混合",
+    "趋势",
+    "性格",
+    "自律",
+    "监督",
+    "效率"
+  ],
+  "sections": [
+    {
+      "id": "h5d43-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d43-s1",
+          "text_original": "听说你们公司现在可以远程办公了？你选择在家上班吗？",
+          "pinyin": "Tīngshuō nǐmen gōngsī xiànzài kěyǐ yuǎnchéng bàngōng le? Nǐ xuǎnzé zài jiā shàngbān ma?",
+          "text_translation": "Kompaniyangiz hozir masofadan ishlash imkonini beribdi deb eshitdim? Sen uyda ishlashni tanladingmi?",
+          "text_translation_ru": "Слышал, в вашей компании теперь можно работать удалённо? Ты выбрал работать из дома?",
+          "text_translation_en": "I heard your company now allows remote work? Did you choose to work from home?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d43-s2",
+          "text_original": "对，我每周有三天在家工作，两天去办公室。刚开始还挺不习惯的。",
+          "pinyin": "Duì, wǒ měi zhōu yǒu sān tiān zài jiā gōngzuò, liǎng tiān qù bàngōngshì. Gāng kāishǐ hái tǐng bù xíguàn de.",
+          "text_translation": "Ha, haftasiga uch kun uyda ishlayman, ikki kun ofisga boraman. Boshida ancha o'rganmagandim.",
+          "text_translation_ru": "Да, три дня в неделю работаю из дома, два дня хожу в офис. Поначалу было довольно непривычно.",
+          "text_translation_en": "Yeah, I work from home three days a week and go to the office two days. At first it was quite unfamiliar.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d43-s3",
+          "text_original": "哪里不习惯？我觉得在家工作应该很舒服啊。",
+          "pinyin": "Nǎli bù xíguàn? Wǒ juéde zài jiā gōngzuò yīnggāi hěn shūfu a.",
+          "text_translation": "Nimasiga o'rganmagansan? Menimcha uyda ishlash juda qulay bo'lsa kerak.",
+          "text_translation_ru": "А что непривычного? По-моему, работать дома должно быть очень комфортно.",
+          "text_translation_en": "What was unfamiliar? I'd think working from home would be very comfortable.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d43-s4",
+          "text_original": "方便是方便，但问题也不少。在家容易分心，一会儿想看电视，一会儿想吃东西。",
+          "pinyin": "Fāngbiàn shì fāngbiàn, dàn wèntí yě bùshǎo. Zài jiā róngyì fēnxīn, yīhuǐr xiǎng kàn diànshì, yīhuǐr xiǎng chī dōngxi.",
+          "text_translation": "Qulay bo'lishiga qulay, lekin muammosi ham ko'p. Uyda tez chalg'iysan, bir zumda televizor ko'rging keladi, bir zumda biror narsa yegisi keladi.",
+          "text_translation_ru": "Удобно-то удобно, но и проблем немало. Дома легко отвлечься: то телевизор хочется посмотреть, то что-нибудь съесть.",
+          "text_translation_en": "Convenient it is, but there are plenty of problems. At home it's easy to get distracted — one moment you want to watch TV, the next you want to eat something.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d43-s5",
+          "text_original": "那确实。没有同事在旁边，工作氛围会差一些。",
+          "pinyin": "Nà quèshí. Méiyǒu tóngshì zài pángbiān, gōngzuò fēnwéi huì chà yì xiē.",
+          "text_translation": "Bu to'g'ri. Yoningda hamkasb bo'lmasa, ish muhiti biroz susayadi.",
+          "text_translation_ru": "Это да. Когда рядом нет коллег, рабочая атмосфера хуже.",
+          "text_translation_en": "True. Without colleagues around, the work atmosphere is a bit worse.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d43-s6",
+          "text_original": "对。而且工作和生活的界限变得模糊了，有时候吃完晚饭还在回复邮件。",
+          "pinyin": "Duì. Érqiě gōngzuò hé shēnghuó de jièxiàn biàn de móhu le, yǒu shíhou chī wán wǎnfàn hái zài huífù yóujiàn.",
+          "text_translation": "To'g'ri. Qolaversa ish bilan hayot o'rtasidagi chegara noaniq bo'lib qoldi, ba'zan kechki ovqatni yeb bo'lib ham hali xat javob qaytaryapman.",
+          "text_translation_ru": "Да. К тому же граница между работой и жизнью размылась — иногда уже поужинал, а всё ещё отвечаешь на письма.",
+          "text_translation_en": "Right. And the boundary between work and life has become blurred — sometimes I've finished dinner and I'm still replying to emails.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d43-s7",
+          "text_original": "这确实是个问题。那远程办公有什么好处吗？",
+          "pinyin": "Zhè quèshí shì ge wèntí. Nà yuǎnchéng bàngōng yǒu shénme hǎochù ma?",
+          "text_translation": "Bu rostdan muammo. Unda masofadan ishlashning qanday foydasi bor?",
+          "text_translation_ru": "Это и правда проблема. А какие плюсы у удалённой работы?",
+          "text_translation_en": "That really is a problem. So are there any benefits to remote work?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d43-s8",
+          "text_original": "好处也不少。省去了通勤时间，每天能多睡一个小时，也不用挤地铁了。",
+          "pinyin": "Hǎochù yě bùshǎo. Shěng qù le tōngqín shíjiān, měitiān néng duō shuì yí ge xiǎoshí, yě búyòng jǐ dìtiě le.",
+          "text_translation": "Foydasi ham ko'p. Ishga qatnov vaqtini tejaydi, har kuni bir soat ko'proq uxlaysan, metroda tiqilishish ham shart emas.",
+          "text_translation_ru": "Плюсов тоже немало. Экономится время на дорогу, можно каждый день спать на час дольше, и не нужно толкаться в метро.",
+          "text_translation_en": "There are plenty of benefits too. It saves commuting time — I can sleep an hour more each day and don't have to squeeze onto the subway.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d43-s9",
+          "text_original": "那确实很吸引人。我也讨厌早晚高峰的通勤。",
+          "pinyin": "Nà quèshí hěn xīyǐn rén. Wǒ yě tǎoyàn zǎowǎn gāofēng de tōngqín.",
+          "text_translation": "Bu rostdan jozibali. Men ham ertalab-kechqurun gavjum vaqtdagi qatnovni yomon ko'raman.",
+          "text_translation_ru": "Это и правда заманчиво. Я тоже терпеть не могу дорогу в часы пик утром и вечером.",
+          "text_translation_en": "That really is appealing. I hate the rush-hour commute too.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d43-s10",
+          "text_original": "而且工作时间更灵活，如果家里有事，可以临时调整。",
+          "pinyin": "Érqiě gōngzuò shíjiān gèng línghuó, rúguǒ jiā lǐ yǒu shì, kěyǐ línshí tiáozhěng.",
+          "text_translation": "Qolaversa ish vaqti moslashuvchanroq, uyda biror ish chiqsa, shu zahoti moslab olsa bo'ladi.",
+          "text_translation_ru": "К тому же рабочее время более гибкое: если дома что-то случается, можно скорректировать график на ходу.",
+          "text_translation_en": "And the work hours are more flexible — if something comes up at home, you can adjust on the spot.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d43-s11",
+          "text_original": "那你觉得远程办公对团队合作有影响吗？",
+          "pinyin": "Nà nǐ juéde yuǎnchéng bàngōng duì tuánduì hézuò yǒu yǐngxiǎng ma?",
+          "text_translation": "Unda seningcha masofadan ishlash jamoaviy hamkorlikka ta'sir qiladimi?",
+          "text_translation_ru": "А как ты думаешь, влияет ли удалённая работа на командную работу?",
+          "text_translation_en": "So do you think remote work affects teamwork?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d43-s12",
+          "text_original": "有一定影响。有些需要头脑风暴的事情，面对面讨论更有效率。线上开会总觉得差了点气氛。",
+          "pinyin": "Yǒu yídìng yǐngxiǎng. Yǒuxiē xūyào tóunǎo fēngbào de shìqing, miànduìmiàn tǎolùn gèng yǒu xiàolǜ. Xiànshàng kāihuì zǒng juéde chà le diǎn qìfēn.",
+          "text_translation": "Ma'lum darajada ta'sir qiladi. Aqliy hujum talab qiladigan ba'zi ishlarda yuzma-yuz muhokama samaraliroq. Onlayn yig'ilishda hadeb biroz muhit yetishmaydigandek tuyuladi.",
+          "text_translation_ru": "Определённое влияние есть. В некоторых делах, где нужен мозговой штурм, обсуждение лицом к лицу эффективнее. На онлайн-совещаниях всё время не хватает какой-то атмосферы.",
+          "text_translation_en": "It does have some impact. For things that need brainstorming, face-to-face discussion is more efficient. Online meetings always feel like they lack a bit of atmosphere.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d43-s13",
+          "text_original": "我听说很多公司现在采用混合办公模式，你觉得怎么样？",
+          "pinyin": "Wǒ tīngshuō hěnduō gōngsī xiànzài cǎiyòng hùnhé bàngōng móshì, nǐ juéde zěnmeyàng?",
+          "text_translation": "Ko'p kompaniya hozir aralash ish modelini qo'llayapti deb eshitdim, seningcha qanday?",
+          "text_translation_ru": "Я слышал, многие компании сейчас применяют гибридный формат работы. Как ты к этому относишься?",
+          "text_translation_en": "I heard many companies now use a hybrid work model — what do you think of it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d43-s14",
+          "text_original": "我觉得混合办公是未来的趋势。既能享受远程的灵活，又能保持面对面的交流。",
+          "pinyin": "Wǒ juéde hùnhé bàngōng shì wèilái de qūshì. Jì néng xiǎngshòu yuǎnchéng de línghuó, yòu néng bǎochí miànduìmiàn de jiāoliú.",
+          "text_translation": "Menimcha aralash ish kelajakning tendentsiyasi. Ham masofadan ishlashning moslashuvchanligidan zavqlanasan, ham yuzma-yuz muloqotni saqlab qolasan.",
+          "text_translation_ru": "Думаю, гибридная работа — это тренд будущего. Можно и наслаждаться гибкостью удалёнки, и сохранять личное общение.",
+          "text_translation_en": "I think hybrid work is the trend of the future. You get to enjoy the flexibility of remote work while keeping face-to-face communication.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d43-s15",
+          "text_original": "那你建议我也申请远程办公吗？",
+          "pinyin": "Nà nǐ jiànyì wǒ yě shēnqǐng yuǎnchéng bàngōng ma?",
+          "text_translation": "Unda menga ham masofadan ishlashga ariza berishni maslahat berasanmi?",
+          "text_translation_ru": "Тогда ты советуешь и мне подать заявку на удалёнку?",
+          "text_translation_en": "So would you advise me to apply for remote work too?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d43-s16",
+          "text_original": "这要看你的性格和工作习惯。如果你自律能力强，远程办公会很适合你。但如果需要别人监督才有效率，那还是去办公室比较好。",
+          "pinyin": "Zhè yào kàn nǐ de xìnggé hé gōngzuò xíguàn. Rúguǒ nǐ zìlǜ nénglì qiáng, yuǎnchéng bàngōng huì hěn shìhé nǐ. Dàn rúguǒ xūyào biérén jiāndū cái yǒu xiàolǜ, nà háishì qù bàngōngshì bǐjiào hǎo.",
+          "text_translation": "Bu sening fe'l-atvoring va ish odatingga bog'liq. Agar o'z-o'zini intizomga solish qobiliyating kuchli bo'lsa, masofadan ishlash senga juda mos. Lekin samarali bo'lish uchun birovning nazorati kerak bo'lsa, baribir ofisga borgan ma'qul.",
+          "text_translation_ru": "Это зависит от твоего характера и рабочих привычек. Если у тебя сильная самодисциплина, удалёнка тебе очень подойдёт. Но если для эффективности нужен чей-то контроль, тогда лучше ходить в офис.",
+          "text_translation_en": "That depends on your personality and work habits. If your self-discipline is strong, remote work will suit you well. But if you need someone to supervise you to be productive, then going to the office is better.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d43-s17",
+          "text_original": "你说得对。我决定先试一个月看看效果。",
+          "pinyin": "Nǐ shuō de duì. Wǒ juédìng xiān shì yí ge yuè kàn kan xiàoguǒ.",
+          "text_translation": "To'g'ri aytasan. Avval bir oy sinab, natijasini ko'rishga qaror qildim.",
+          "text_translation_ru": "Ты прав. Я решил сначала попробовать месяц и посмотреть на результат.",
+          "text_translation_en": "You're right. I've decided to try it for a month first and see how it goes.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d43-s18",
+          "text_original": "祝你顺利！有什么问题随时问我。",
+          "pinyin": "Zhù nǐ shùnlì! Yǒu shénme wèntí suíshí wèn wǒ.",
+          "text_translation": "Omad! Biror savol bo'lsa, istalgan vaqt mendan so'ra.",
+          "text_translation_ru": "Удачи! Если будут вопросы, обращайся в любое время.",
+          "text_translation_en": "Good luck! If you have any questions, ask me anytime.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

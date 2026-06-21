@@ -1,0 +1,234 @@
+{
+  "id": "hsk5-dialogue41",
+  "slug": "online-reviews",
+  "title": "在线评论",
+  "pinyin": "Zàixiàn pínglùn",
+  "titleTranslation": "Onlayn sharhlar",
+  "titleTranslation_ru": "Онлайн-отзывы",
+  "titleTranslation_en": "Online Reviews",
+  "level": 5,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "在线评论",
+    "两极分化",
+    "反馈",
+    "恶意差评",
+    "竞争",
+    "竞争对手",
+    "分辨",
+    "忽略",
+    "警惕",
+    "笼统",
+    "参考价值",
+    "可信度",
+    "口碑",
+    "补偿",
+    "诚意",
+    "敷衍",
+    "光顾",
+    "促进",
+    "双刃剑",
+    "受益",
+    "理性"
+  ],
+  "sections": [
+    {
+      "id": "h5d41-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d41-s1",
+          "text_original": "你最近不是说要找一家餐厅请朋友吃饭吗？选好了吗？",
+          "pinyin": "Nǐ zuìjìn bú shì shuō yào zhǎo yì jiā cāntīng qǐng péngyou chī fàn ma? Xuǎn hǎo le ma?",
+          "text_translation": "Yaqinda do'stlaringni ovqatga taklif qilish uchun restoran qidiraman demaganmiding? Tanlab oldingmi?",
+          "text_translation_ru": "Ты же недавно говорил, что ищешь ресторан, чтобы угостить друзей? Выбрал?",
+          "text_translation_en": "Weren't you saying you wanted to find a restaurant to treat your friends? Have you picked one?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d41-s2",
+          "text_original": "还没定。我在网上看了好多家，但是评论两极分化太严重了。",
+          "pinyin": "Hái méi dìng. Wǒ zài wǎngshàng kàn le hǎoduō jiā, dànshì pínglùn liǎng jí fēnhuà tài yánzhòng le.",
+          "text_translation": "Hali hal qilmadim. Internetdan ko'p joyni ko'rdim, lekin sharhlar juda qattiq ikki qutbga bo'lingan.",
+          "text_translation_ru": "Ещё не решил. Я посмотрел в интернете много заведений, но отзывы слишком сильно поляризованы.",
+          "text_translation_en": "Not yet. I looked at a lot of places online, but the reviews are too polarized.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d41-s3",
+          "text_original": "什么意思？",
+          "pinyin": "Shénme yìsi?",
+          "text_translation": "Qanaqasiga?",
+          "text_translation_ru": "В смысле?",
+          "text_translation_en": "What do you mean?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d41-s4",
+          "text_original": "就是有人打五星，说特别好；有人打一星，说特别差。完全不知道信谁。",
+          "pinyin": "Jiùshì yǒurén dǎ wǔ xīng, shuō tèbié hǎo; yǒurén dǎ yī xīng, shuō tèbié chà. Wánquán bù zhīdào xìn shuí.",
+          "text_translation": "Ya'ni kimdir besh yulduz qo'yib juda zo'r deydi; kimdir bir yulduz qo'yib juda yomon deydi. Kimga ishonishni umuman bilmaysan.",
+          "text_translation_ru": "То есть кто-то ставит пять звёзд и пишет, что очень хорошо; кто-то ставит одну звезду и пишет, что очень плохо. Совершенно непонятно, кому верить.",
+          "text_translation_en": "Some people give five stars and say it's amazing; others give one star and say it's terrible. You have no idea who to believe.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d41-s5",
+          "text_original": "这种现象很常见。有些是真实反馈，有些可能是同行恶意差评。",
+          "pinyin": "Zhè zhǒng xiànxiàng hěn chángjiàn. Yǒuxiē shì zhēnshí fǎnkuì, yǒuxiē kěnéng shì tóngháng èyì chàpíng.",
+          "text_translation": "Bunday hodisa juda keng tarqalgan. Ba'zilari haqiqiy fikr-mulohaza, ba'zilari esa kasbdoshlarning qasddan qo'ygan yomon sharhi bo'lishi mumkin.",
+          "text_translation_ru": "Это явление очень распространено. Некоторые отзывы — реальная обратная связь, а некоторые, возможно, злонамеренные негативные отзывы конкурентов.",
+          "text_translation_en": "This phenomenon is very common. Some are genuine feedback, and some may be malicious bad reviews from competitors.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d41-s6",
+          "text_original": "真的会有人恶意差评吗？",
+          "pinyin": "Zhēn de huì yǒu rén èyì chàpíng ma?",
+          "text_translation": "Rostdan ham qasddan yomon sharh qoldiradiganlar bormi?",
+          "text_translation_ru": "Неужели правда кто-то пишет злонамеренные плохие отзывы?",
+          "text_translation_en": "Do people really leave malicious bad reviews?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d41-s7",
+          "text_original": "会的。有些商家为了竞争，会雇人给自己的竞争对手刷差评。",
+          "pinyin": "Huì de. Yǒuxiē shāngjiā wèile jìngzhēng, huì gù rén gěi zìjǐ de jìngzhēng duìshǒu shuā chàpíng.",
+          "text_translation": "Qoldiradi. Ba'zi sotuvchilar raqobat uchun odam yollab, raqobatchilariga yomon sharh yog'diradi.",
+          "text_translation_ru": "Пишут. Некоторые продавцы ради конкуренции нанимают людей, чтобы накручивать плохие отзывы своим конкурентам.",
+          "text_translation_en": "They do. Some businesses, for the sake of competition, hire people to flood their competitors with bad reviews.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d41-s8",
+          "text_original": "那作为消费者，我们该怎么分辨真假呢？",
+          "pinyin": "Nà zuòwéi xiāofèi zhě, wǒmen gāi zěnme fēnbiàn zhēnjiǎ ne?",
+          "text_translation": "Unda iste'molchi sifatida biz rost-yolg'onini qanday farqlashimiz kerak?",
+          "text_translation_ru": "Тогда как нам, потребителям, отличать правду от лжи?",
+          "text_translation_en": "So as consumers, how should we tell the real from the fake?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d41-s9",
+          "text_original": "首先看评论的数量。如果只有一两个差评，可以忽略。但如果差评比例很高，就要警惕了。",
+          "pinyin": "Shǒuxiān kàn pínglùn de shùliàng. Rúguǒ zhǐ yǒu yī liǎng ge chàpíng, kěyǐ hūlüè. Dàn rúguǒ chàpíng bǐlì hěn gāo, jiù yào jǐngtì le.",
+          "text_translation": "Avvalo sharhlar soniga qara. Agar bor-yo'g'i bir-ikkita yomon sharh bo'lsa, e'tibor bermasa ham bo'ladi. Lekin yomon sharhlar ulushi katta bo'lsa, ehtiyot bo'lish kerak.",
+          "text_translation_ru": "Сначала посмотри на количество отзывов. Если плохих всего один-два, можно проигнорировать. Но если доля плохих отзывов высокая, стоит насторожиться.",
+          "text_translation_en": "First, look at the number of reviews. If there are only one or two bad ones, you can ignore them. But if the proportion of bad reviews is high, you should be wary.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d41-s10",
+          "text_original": "那评价的内容呢？怎么看？",
+          "pinyin": "Nà píngjià de nèiróng ne? Zěnme kàn?",
+          "text_translation": "Unda sharhning mazmuni-chi? Qanday baholash kerak?",
+          "text_translation_ru": "А содержание отзывов? Как его оценивать?",
+          "text_translation_en": "And the content of the reviews? How do you judge that?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d41-s11",
+          "text_original": "具体的内容很重要。如果差评只写「不好吃」「服务差」这种笼统的话，可能没什么参考价值。但如果写得很具体，比如「等了一个小时才上菜」「菜是凉的」，那可信度就高一些。",
+          "pinyin": "Jùtǐ de nèiróng hěn zhòngyào. Rúguǒ chàpíng zhǐ xiě 'bù hǎochī' 'fúwù chà' zhè zhǒng lǒngtǒng dehuà, kěnéng méi shénme cānkǎo jiàzhí. Dàn rúguǒ xiě de hěn jùtǐ, bǐrú 'děng le yí ge xiǎoshí cái shàng cài' 'cài shì liáng de', nà kěxìn dù jiù gāo yì xiē.",
+          "text_translation": "Aniq mazmuni juda muhim. Agar yomon sharhda faqat «mazasiz», «xizmati yomon» degan umumiy gaplar bo'lsa, foydali qiymati bo'lmasligi mumkin. Lekin juda aniq yozilgan bo'lsa, masalan «bir soat kutib endi ovqat keldi», «ovqat sovuq edi», unda ishonchliligi yuqoriroq.",
+          "text_translation_ru": "Конкретность содержания очень важна. Если в плохом отзыве только общие фразы вроде «невкусно», «плохое обслуживание», то справочной ценности в нём мало. Но если написано конкретно, например «ждали час, пока принесут еду», «блюдо было холодным», то достоверность выше.",
+          "text_translation_en": "The specifics matter a lot. If a bad review only says vague things like \"tastes bad\" or \"poor service,\" it may have little reference value. But if it's specific — like \"waited an hour before the food came\" or \"the dish was cold\" — then its credibility is higher.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d41-s12",
+          "text_original": "有道理。那商家看到差评一般怎么处理？",
+          "pinyin": "Yǒu dàoli. Nà shāngjiā kàn dào chàpíng yìbān zěnme chǔlǐ?",
+          "text_translation": "Mantiqli. Unda sotuvchilar yomon sharhni ko'rganda odatda qanday yo'l tutadi?",
+          "text_translation_ru": "Логично. А как продавцы обычно реагируют, увидев плохой отзыв?",
+          "text_translation_en": "That makes sense. So how do businesses usually handle bad reviews?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d41-s13",
+          "text_original": "口碑好的商家会主动回复，道歉并解释原因，甚至提供补偿。这种态度会让人觉得他们有诚意。",
+          "pinyin": "Kǒubēi hǎo de shāngjiā huì zhǔdòng huífù, dàoqiàn bìng jiěshì yuányīn, shènzhì tígōng bǔcháng. Zhè zhǒng tàidù huì ràng rén juéde tāmen yǒu chéngyì.",
+          "text_translation": "Obro'si yaxshi sotuvchilar o'zlari javob beradi, uzr so'rab sababini tushuntiradi, hatto tovon ham taklif qiladi. Bunday munosabat ularda chin niyat borligini his qildiradi.",
+          "text_translation_ru": "Продавцы с хорошей репутацией сами отвечают, извиняются и объясняют причину, даже предлагают компенсацию. Такое отношение создаёт ощущение их искренности.",
+          "text_translation_en": "Businesses with a good reputation will proactively reply, apologize and explain the reason, and even offer compensation. This attitude makes people feel they're sincere.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d41-s14",
+          "text_original": "那如果商家不回复或者回复很敷衍呢？",
+          "pinyin": "Nà rúguǒ shāngjiā bù huífù huòzhě huífù hěn fūyǎn ne?",
+          "text_translation": "Unda sotuvchi javob bermasa yoki yuzaki javob bersa-chi?",
+          "text_translation_ru": "А если продавец не отвечает или отвечает формально?",
+          "text_translation_en": "And what if the business doesn't reply, or replies in a perfunctory way?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d41-s15",
+          "text_original": "那说明他们不在乎客户的感受。这种商家我一般不会光顾第二次。",
+          "pinyin": "Nà shuōmíng tāmen bú zàihu kèhù de gǎnshòu. Zhè zhǒng shāngjiā wǒ yìbān bú huì guānggù dì-èr cì.",
+          "text_translation": "Unda bu ular mijozning his-tuyg'usiga parvo qilmasligini bildiradi. Bunday sotuvchiga men odatda ikkinchi marta bormayman.",
+          "text_translation_ru": "Это значит, что им безразличны чувства клиентов. К таким продавцам я обычно второй раз не захожу.",
+          "text_translation_en": "That shows they don't care about customers' feelings. I usually won't patronize that kind of business a second time.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d41-s16",
+          "text_original": "你平时买东西会写评论吗？",
+          "pinyin": "Nǐ píngshí mǎi dōngxi huì xiě pínglùn ma?",
+          "text_translation": "Odatda biror narsa olganingda sharh yozasanmi?",
+          "text_translation_ru": "Ты обычно пишешь отзывы, когда что-то покупаешь?",
+          "text_translation_en": "Do you usually write reviews when you buy things?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d41-s17",
+          "text_original": "如果体验特别好或者特别差，我会写。一般的体验就懒得写了。",
+          "pinyin": "Rúguǒ tǐyàn tèbié hǎo huòzhě tèbié chà, wǒ huì xiě. Yìbān de tǐyàn jiù lǎn de xiě le.",
+          "text_translation": "Agar tajriba juda yaxshi yoki juda yomon bo'lsa, yozaman. Oddiy tajriba bo'lsa, yozishga erinaman.",
+          "text_translation_ru": "Если впечатление особенно хорошее или особенно плохое, я пишу. А при обычном впечатлении лень писать.",
+          "text_translation_en": "If the experience is especially good or especially bad, I'll write one. For an average experience I can't be bothered.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d41-s18",
+          "text_original": "我觉得消费者应该多写真实的评价，这样才能帮助其他人做决定。",
+          "pinyin": "Wǒ juéde xiāofèi zhě yīnggāi duō xiě zhēnshí de píngjià, zhèyàng cáinéng bāngzhù qítā rén zuò juédìng.",
+          "text_translation": "Menimcha iste'molchilar ko'proq haqqoniy sharh yozishi kerak, shundagina boshqalarga qaror qabul qilishda yordam beradi.",
+          "text_translation_ru": "По-моему, потребителям стоит чаще писать правдивые отзывы — только так можно помочь другим принять решение.",
+          "text_translation_en": "I think consumers should write more honest reviews — that's how you help others make decisions.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d41-s19",
+          "text_original": "我同意。真实的评价对商家也是促进，他们为了好评会不断提高服务质量。",
+          "pinyin": "Wǒ tóngyì. Zhēnshí de píngjià duì shāngjiā yě shì cùjìn, tāmen wèile hǎopíng huì búduàn tígāo fúwù zhìliàng.",
+          "text_translation": "Roziman. Haqqoniy sharh sotuvchilar uchun ham turtki, ular yaxshi sharh uchun xizmat sifatini doimiy oshiradi.",
+          "text_translation_ru": "Согласен. Правдивые отзывы стимулируют и продавцов: ради хороших отзывов они постоянно повышают качество обслуживания.",
+          "text_translation_en": "I agree. Honest reviews also push businesses — for the sake of good reviews, they keep improving their service quality.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d41-s20",
+          "text_original": "所以在线评论是一把双刃剑，用得好是动力，用得不好会变成恶意工具。",
+          "pinyin": "Suǒyǐ zàixiàn pínglùn shì yì bǎ shuāngrèn jiàn, yòng de hǎo shì dònglì, yòng de bù hǎo huì biàn chéng èyì gōngjù.",
+          "text_translation": "Shuning uchun onlayn sharh ikki tig'li qilich, yaxshi ishlatilsa turtki, yomon ishlatilsa qasddan zarar yetkazish vositasiga aylanadi.",
+          "text_translation_ru": "Поэтому онлайн-отзывы — палка о двух концах: при правильном использовании это стимул, при неправильном — превращаются в орудие злого умысла.",
+          "text_translation_en": "So online reviews are a double-edged sword — used well they're a motivator, used badly they become a malicious tool.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d41-s21",
+          "text_original": "说到底，最终受益的还是理性的消费者。",
+          "pinyin": "Shuō dào dǐ, zuìzhōng shòuyì de háishì lǐxìng de xiāofèi zhě.",
+          "text_translation": "Oxir-oqibat, baribir eng ko'p foyda ko'radigan — oqilona iste'molchi.",
+          "text_translation_ru": "В конечном счёте больше всего выигрывает всё-таки рациональный потребитель.",
+          "text_translation_en": "In the end, the ones who ultimately benefit are still the rational consumers.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
