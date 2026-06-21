@@ -1,0 +1,225 @@
+{
+  "id": "hsk5-dialogue23",
+  "slug": "career-planning",
+  "title": "职业规划",
+  "pinyin": "Zhíyè guīhuà",
+  "titleTranslation": "Kasbiy rejalashtirish",
+  "titleTranslation_ru": "Планирование карьеры",
+  "titleTranslation_en": "Career Planning",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "职业规划",
+    "方向",
+    "岗位",
+    "项目管理",
+    "领域",
+    "前景",
+    "大局观",
+    "风险控制",
+    "协调",
+    "差距",
+    "不足",
+    "周期",
+    "弥补",
+    "短板",
+    "证书",
+    "转岗",
+    "氛围",
+    "技能",
+    "盲目",
+    "随意",
+    "成熟"
+  ],
+  "sections": [
+    {
+      "id": "h5d23-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d23-s1",
+          "text_original": "你最近怎么老是加班？工作很忙吗？",
+          "pinyin": "Nǐ zuìjìn zěnme lǎoshi jiābān? Gōngzuò hěn máng ma?",
+          "text_translation": "Yaqinda nega doim qo'shimcha ishlaysan? Ish juda ko'pmi?",
+          "text_translation_ru": "Почему ты в последнее время постоянно задерживаешься? Много работы?",
+          "text_translation_en": "Why have you been working overtime all the time lately? Is work very busy?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d23-s2",
+          "text_original": "确实有点忙，不过我不是单纯在忙工作，我在考虑以后的职业方向。",
+          "pinyin": "Quèshí yǒu diǎn máng, búguò wǒ bú shì dānchún zài máng gōngzuò, wǒ zài kǎolǜ yǐhòu de zhíyè fāngxiàng.",
+          "text_translation": "Rostdan biroz bandman, lekin men shunchaki ish bilan band emasman, kelajakdagi kasbiy yo'nalishimni o'ylab yuribman.",
+          "text_translation_ru": "Действительно немного занят, но я не просто занят работой — я обдумываю своё будущее карьерное направление.",
+          "text_translation_en": "I am a bit busy, but I'm not just busy with work — I'm thinking about my future career direction.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d23-s3",
+          "text_original": "你打算换工作吗？",
+          "pinyin": "Nǐ dǎsuàn huàn gōngzuò ma?",
+          "text_translation": "Ish almashtirmoqchimisan?",
+          "text_translation_ru": "Ты собираешься менять работу?",
+          "text_translation_en": "Are you planning to change jobs?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d23-s4",
+          "text_original": "暂时还没决定。但我觉得在现在的岗位上待了五年，发展空间越来越小了。",
+          "pinyin": "Zànshí hái méi juédìng. Dàn wǒ juéde zài xiànzài de gǎngwèi shàng dāi le wǔ nián, fāzhǎn kōngjiān yuè lái yuè xiǎo le.",
+          "text_translation": "Hozircha hal qilmadim. Lekin hozirgi lavozimda besh yil ishladim, rivojlanish imkoni tobora qisqarib boryapti.",
+          "text_translation_ru": "Пока ещё не решил. Но я чувствую, что, проработав на нынешней должности пять лет, пространство для роста становится всё меньше.",
+          "text_translation_en": "I haven't decided yet. But I feel that after five years in my current position, the room for growth is getting smaller and smaller.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d23-s5",
+          "text_original": "那你有没有想过往哪个方向走？",
+          "pinyin": "Nà nǐ yǒu méiyǒu xiǎng guo wǎng nǎ ge fāngxiàng zǒu?",
+          "text_translation": "Unda qaysi yo'nalishga borishni o'ylab ko'rganmiding?",
+          "text_translation_ru": "А ты думал, в каком направлении двигаться?",
+          "text_translation_en": "So have you thought about which direction to take?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d23-s6",
+          "text_original": "我想过转到项目管理方向。我觉得这个领域比较有前景，而且能发挥我的沟通能力。",
+          "pinyin": "Wǒ xiǎng guo zhuǎn dào xiàngmù guǎnlǐ fāngxiàng. Wǒ juéde zhè ge lǐngyù bǐjiào yǒu qiánjǐng, érqiě néng fāhuī wǒ de gōutōng nénglì.",
+          "text_translation": "Loyiha boshqaruvi yo'nalishiga o'tishni o'ylaganman. Menimcha bu soha ancha istiqbolli, qolaversa muloqot qobiliyatimni namoyon qila olaman.",
+          "text_translation_ru": "Я думал перейти в управление проектами. По-моему, эта сфера довольно перспективна, к тому же там я смогу проявить свои коммуникативные навыки.",
+          "text_translation_en": "I've thought about moving into project management. I think this field has good prospects, and it would let me use my communication skills.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d23-s7",
+          "text_original": "项目管理确实是个好方向。你了解过这个岗位需要什么能力吗？",
+          "pinyin": "Xiàngmù guǎnlǐ quèshí shì ge hǎo fāngxiàng. Nǐ liǎojiě guo zhè ge gǎngwèi xūyào shénme nénglì ma?",
+          "text_translation": "Loyiha boshqaruvi rostdan yaxshi yo'nalish. Bu lavozim qanday qobiliyat talab qilishini bilib ko'rganmiding?",
+          "text_translation_ru": "Управление проектами и правда хорошее направление. Ты узнавал, какие навыки нужны для этой должности?",
+          "text_translation_en": "Project management really is a good direction. Have you looked into what skills this position requires?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d23-s8",
+          "text_original": "了解了一些，除了沟通能力，还需要有大局观、风险控制意识和团队协调能力。",
+          "pinyin": "Liǎojiě le yì xiē, chúle gōutōng nénglì, hái xūyào yǒu dàjúguān, fēngxiǎn kòngzhì yìshi hé tuánduì xiétiáo nénglì.",
+          "text_translation": "Biroz bilib oldim, muloqot qobiliyatidan tashqari, keng qarash, xavfni nazorat qilish ongi va jamoani muvofiqlashtirish qobiliyati ham kerak.",
+          "text_translation_ru": "Кое-что узнал: кроме навыков общения, нужны видение общей картины, понимание контроля рисков и умение координировать команду.",
+          "text_translation_en": "I've learned a bit — besides communication, you also need a big-picture view, risk-control awareness, and the ability to coordinate a team.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d23-s9",
+          "text_original": "那你目前的差距在哪里？",
+          "pinyin": "Nà nǐ mùqián de chājù zài nǎli?",
+          "text_translation": "Unda hozirgi tafovuting qayerda?",
+          "text_translation_ru": "А в чём сейчас твой пробел?",
+          "text_translation_en": "So where's your current gap?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d23-s10",
+          "text_original": "主要是项目管理经验不足。我在现在的公司没有太多机会接触完整的项目周期。",
+          "pinyin": "Zhǔyào shì xiàngmù guǎnlǐ jīngyàn bùzú. Wǒ zài xiànzài de gōngsī méiyǒu tài duō jīhuì jiēchù wánzhěng de xiàngmù zhōuqī.",
+          "text_translation": "Asosan loyiha boshqaruvi tajribasi yetishmaydi. Hozirgi kompaniyada to'liq loyiha siklini ko'rish imkoni unchalik ko'p emas.",
+          "text_translation_ru": "В основном не хватает опыта управления проектами. В нынешней компании у меня немного возможностей соприкоснуться с полным циклом проекта.",
+          "text_translation_en": "Mainly a lack of project management experience. At my current company I don't have many chances to work through a complete project cycle.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d23-s11",
+          "text_original": "那你打算怎么弥补这个短板？",
+          "pinyin": "Nà nǐ dǎsuàn zěnme míbǔ zhè ge duǎnbǎn?",
+          "text_translation": "Unda bu zaif tomonni qanday to'ldirmoqchisan?",
+          "text_translation_ru": "И как ты собираешься восполнить этот пробел?",
+          "text_translation_en": "So how do you plan to make up for this weakness?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d23-s12",
+          "text_original": "我打算先考一个项目管理的证书，同时在现在的岗位上主动争取参与项目的机会。",
+          "pinyin": "Wǒ dǎsuàn xiān kǎo yí ge xiàngmù guǎnlǐ de zhèngshū, tóngshí zài xiànzài de gǎngwèi shàng zhǔdòng zhēngqǔ cānyù xiàngmù de jīhuì.",
+          "text_translation": "Avval loyiha boshqaruvi bo'yicha sertifikat olmoqchiman, shu bilan birga hozirgi lavozimda loyihalarda qatnashish imkoniyatini o'zim faol talab qilmoqchiman.",
+          "text_translation_ru": "Сначала планирую сдать на сертификат по управлению проектами, а параллельно на нынешней должности активно добиваться возможности участвовать в проектах.",
+          "text_translation_en": "I plan to first get a project management certificate, and at the same time proactively seek opportunities to join projects in my current role.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d23-s13",
+          "text_original": "你有具体的时间规划吗？",
+          "pinyin": "Nǐ yǒu jùtǐ de shíjiān guīhuà ma?",
+          "text_translation": "Aniq vaqt rejang bormi?",
+          "text_translation_ru": "У тебя есть конкретный план по времени?",
+          "text_translation_en": "Do you have a specific timeline?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d23-s14",
+          "text_original": "大概一年时间准备考证，半年时间积累经验，然后考虑跳槽或者内部转岗。",
+          "pinyin": "Dàgài yì nián shíjiān zhǔnbèi kǎozhèng, bàn nián shíjiān jīlěi jīngyàn, ránhòu kǎolǜ tiàocáo huòzhě nèibù zhuǎngǎng.",
+          "text_translation": "Taxminan bir yil sertifikat imtihoniga tayyorgarlik, yarim yil tajriba to'plash, keyin ish almashtirish yoki ichki lavozim o'zgartirishni o'ylash.",
+          "text_translation_ru": "Примерно год на подготовку к сертификации, полгода на накопление опыта, а потом подумать о смене работы или внутреннем переводе.",
+          "text_translation_en": "About a year to prepare for the certification, half a year to accumulate experience, then consider switching jobs or transferring internally.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d23-s15",
+          "text_original": "这个计划挺清晰的。你觉得现在的工作能支持你实现这个计划吗？",
+          "pinyin": "Zhè ge jìhuà tǐng qīngxī de. Nǐ juéde xiànzài de gōngzuò néng zhīchí nǐ shíxiàn zhè ge jìhuà ma?",
+          "text_translation": "Bu reja ancha aniq. Seningcha hozirgi ishing bu rejani amalga oshirishga yordam bera oladimi?",
+          "text_translation_ru": "Этот план довольно чёткий. Как думаешь, нынешняя работа поможет тебе его осуществить?",
+          "text_translation_en": "That plan is pretty clear. Do you think your current job can support you in carrying it out?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d23-s16",
+          "text_original": "现在的公司氛围还不错，领导也支持员工学习新技能。我打算一边工作一边准备。",
+          "pinyin": "Xiànzài de gōngsī fēnwéi hái búcuò, lǐngdǎo yě zhīchí yuángōng xuéxí xīn jìnéng. Wǒ dǎsuàn yìbiān gōngzuò yìbiān zhǔnbèi.",
+          "text_translation": "Hozirgi kompaniyaning muhiti yomon emas, rahbar ham xodimlarning yangi ko'nikma o'rganishini qo'llab-quvvatlaydi. Ishlab turib, shu bilan birga tayyorgarlik ko'rmoqchiman.",
+          "text_translation_ru": "Атмосфера в нынешней компании неплохая, руководитель тоже поддерживает обучение сотрудников новым навыкам. Я планирую работать и параллельно готовиться.",
+          "text_translation_en": "The atmosphere at my current company is good, and the boss supports employees learning new skills. I plan to prepare while still working.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d23-s17",
+          "text_original": "那挺好的。你对自己的职业规划挺理性的，不盲目跳槽。",
+          "pinyin": "Nà tǐng hǎo de. Nǐ duì zìjǐ de zhíyè guīhuà tǐng lǐxìng de, bù mángmù tiàocáo.",
+          "text_translation": "Bu juda yaxshi. Kasbiy rejalashtirishingda ancha oqilonasan, ko'r-ko'rona ish almashtirmaysan.",
+          "text_translation_ru": "Это здорово. Ты довольно рационально подходишь к планированию карьеры, не меняешь работу вслепую.",
+          "text_translation_en": "That's good. You're quite rational about your career planning — not jumping jobs blindly.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d23-s18",
+          "text_original": "我以前吃过亏，换工作太随意，结果浪费了不少时间。",
+          "pinyin": "Wǒ yǐqián chī guo kuī, huàn gōngzuò tài suíyì, jiéguǒ làngfèi le bùshǎo shíjiān.",
+          "text_translation": "Men avval ziyon ko'rganman, ishni juda o'ylamasdan almashtirardim, oqibatda ancha vaqtni behuda sarfladim.",
+          "text_translation_ru": "Я раньше обжёгся: менял работу слишком легкомысленно, и в итоге потерял немало времени.",
+          "text_translation_en": "I got burned before — I changed jobs too casually and ended up wasting a lot of time.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d23-s19",
+          "text_original": "那你现在的规划更成熟了。祝你顺利！",
+          "pinyin": "Nà nǐ xiànzài de guīhuà gèng chéngshú le. Zhù nǐ shùnlì!",
+          "text_translation": "Unda hozirgi rejang ancha yetuk bo'libdi. Omad tilayman!",
+          "text_translation_ru": "Тогда твой нынешний план более зрелый. Желаю удачи!",
+          "text_translation_en": "Then your current plan is more mature. Good luck!",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d23-s20",
+          "text_original": "谢谢！希望一年后能实现这个目标。",
+          "pinyin": "Xièxie! Xīwàng yì nián hòu néng shíxiàn zhè ge mùbiāo.",
+          "text_translation": "Rahmat! Bir yildan keyin bu maqsadga erishishni umid qilaman.",
+          "text_translation_ru": "Спасибо! Надеюсь, через год смогу достичь этой цели.",
+          "text_translation_en": "Thank you! I hope to achieve this goal in a year.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

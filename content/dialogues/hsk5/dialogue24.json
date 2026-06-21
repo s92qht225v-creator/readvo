@@ -1,0 +1,195 @@
+{
+  "id": "hsk5-dialogue24",
+  "slug": "technology-ethics",
+  "title": "科技伦理",
+  "pinyin": "Kējì lúnlǐ",
+  "titleTranslation": "Texnologiya etikasi",
+  "titleTranslation_ru": "Этика технологий",
+  "titleTranslation_en": "Technology Ethics",
+  "level": 5,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "人脸识别",
+    "争议",
+    "侵犯",
+    "隐私",
+    "广泛",
+    "领域",
+    "罪犯",
+    "用途",
+    "法律",
+    "道德",
+    "大数据",
+    "收集",
+    "用户",
+    "知情同意",
+    "条款",
+    "责任",
+    "利润",
+    "资本",
+    "监管",
+    "约束",
+    "授权",
+    "权限",
+    "清理",
+    "缓存",
+    "不可阻挡",
+    "伦理",
+    "平衡"
+  ],
+  "sections": [
+    {
+      "id": "h5d24-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d24-s1",
+          "text_original": "你最近有没有看那个关于人脸识别的新闻？",
+          "pinyin": "Nǐ zuìjìn yǒu méiyǒu kàn nà ge guānyú rénliǎn shíbié de xīnwén?",
+          "text_translation": "Yaqinda yuzni aniqlash haqidagi o'sha yangilikni ko'rdingmi?",
+          "text_translation_ru": "Ты в последнее время видел ту новость про распознавание лиц?",
+          "text_translation_en": "Have you seen that news about facial recognition recently?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d24-s2",
+          "text_original": "看了，争议很大。有人说方便，有人说侵犯隐私。",
+          "pinyin": "Kàn le, zhēngyì hěn dà. Yǒurén shuō fāngbiàn, yǒurén shuō qīnfàn yǐnsī.",
+          "text_translation": "Ko'rdim, bahsi katta. Ba'zilar qulay deydi, ba'zilar shaxsiy hayotni buzadi deydi.",
+          "text_translation_ru": "Видел, споров много. Одни говорят, что удобно, другие — что нарушает приватность.",
+          "text_translation_en": "I did — it's very controversial. Some say it's convenient, others say it violates privacy.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d24-s3",
+          "text_original": "你觉得人脸识别技术应该被广泛使用吗？",
+          "pinyin": "Nǐ juéde rénliǎn shíbié jìshù yīnggāi bèi guǎngfàn shǐyòng ma?",
+          "text_translation": "Seningcha yuzni aniqlash texnologiyasi keng qo'llanilishi kerakmi?",
+          "text_translation_ru": "Как ты думаешь, должна ли технология распознавания лиц широко использоваться?",
+          "text_translation_en": "Do you think facial recognition technology should be widely used?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d24-s4",
+          "text_original": "我觉得要看具体情况。在公共安全领域，比如抓罪犯，我觉得有必要。但商业用途就不好说了。",
+          "pinyin": "Wǒ juéde yào kàn jùtǐ qíngkuàng. Zài gōnggòng ānquán lǐngyù, bǐrú zhuā zuìfàn, wǒ juéde yǒu bìyào. Dàn shāngyè yòngtú jiù bù hǎo shuō le.",
+          "text_translation": "Menimcha aniq vaziyatga qarab. Jamoat xavfsizligi sohasida, masalan jinoyatchini ushlashda, kerak deb o'ylayman. Lekin tijoriy maqsadda foydalanish — bahsli.",
+          "text_translation_ru": "Думаю, смотря по ситуации. В сфере общественной безопасности, например для поимки преступников, я считаю это необходимым. А вот коммерческое применение — вопрос спорный.",
+          "text_translation_en": "I think it depends on the situation. In public safety, like catching criminals, I think it's necessary. But commercial use is harder to say.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d24-s5",
+          "text_original": "我同意。现在的科技发展太快，法律和道德常常跟不上。",
+          "pinyin": "Wǒ tóngyì. Xiànzài de kējì fāzhǎn tài kuài, fǎlǜ hé dàodé chángcháng gēn bú shàng.",
+          "text_translation": "Roziman. Hozir texnologiya juda tez rivojlanyapti, qonun va axloq ko'pincha ulgurmaydi.",
+          "text_translation_ru": "Согласен. Сейчас технологии развиваются слишком быстро, и закон с моралью часто не поспевают.",
+          "text_translation_en": "I agree. Technology develops so fast now that laws and ethics often can't keep up.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d24-s6",
+          "text_original": "对。比如大数据和人工智能，收集用户信息的时候，很多人都不知道自己被收集了什么。",
+          "pinyin": "Duì. Bǐrú dà shùjù hé réngōng zhìnéng, shōují yònghù xìnxī de shíhou, hěnduō rén dōu bù zhīdào zìjǐ bèi shōují le shénme.",
+          "text_translation": "To'g'ri. Masalan katta ma'lumotlar va sun'iy intellekt foydalanuvchi ma'lumotini yig'ganda, ko'p odam o'zidan nima yig'ilganini bilmaydi.",
+          "text_translation_ru": "Да. Например, большие данные и искусственный интеллект собирают информацию о пользователях, и многие даже не знают, что именно о них собрали.",
+          "text_translation_en": "Right. For example, with big data and AI collecting user information, many people don't even know what's being collected about them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d24-s7",
+          "text_original": "这涉及到知情同意的问题。很多用户在使用软件时都会点「同意」，但根本没看条款。",
+          "pinyin": "Zhè shèjí dào zhīqíng tóngyì de wèntí. Hěnduō yònghù zài shǐyòng ruǎnjiàn shí dōu huì diǎn 'tóngyì', dàn gēnběn méi kàn tiáokuǎn.",
+          "text_translation": "Bu ongli rozilik masalasiga taalluqli. Ko'p foydalanuvchi dasturdan foydalanayotganda «roziman»ni bosadi, lekin shartlarni umuman o'qimaydi.",
+          "text_translation_ru": "Это касается вопроса информированного согласия. Многие пользователи при использовании приложения нажимают «согласен», но условия вообще не читают.",
+          "text_translation_en": "This involves the issue of informed consent. Many users click \"agree\" when using software, but never read the terms at all.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d24-s8",
+          "text_original": "是的。那些条款又长又复杂，普通人根本读不完。",
+          "pinyin": "Shì de. Nàxiē tiáokuǎn yòu cháng yòu fùzá, pǔtōng rén gēnběn dú bù wán.",
+          "text_translation": "Ha. O'sha shartlar ham uzun, ham murakkab, oddiy odam umuman o'qib tugata olmaydi.",
+          "text_translation_ru": "Да. Эти условия и длинные, и сложные, обычный человек их просто не дочитает.",
+          "text_translation_en": "Yes. Those terms are long and complicated — an ordinary person simply can't finish reading them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d24-s9",
+          "text_original": "那你觉得科技公司应该承担更多责任吗？",
+          "pinyin": "Nà nǐ juéde kējì gōngsī yīnggāi chéngdān gèng duō zérèn ma?",
+          "text_translation": "Unda seningcha texnologiya kompaniyalari ko'proq mas'uliyat olishi kerakmi?",
+          "text_translation_ru": "А как ты думаешь, должны ли технологические компании нести больше ответственности?",
+          "text_translation_en": "So do you think tech companies should bear more responsibility?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d24-s10",
+          "text_original": "当然。科技公司不能只追求利润，也要考虑社会影响。",
+          "pinyin": "Dāngrán. Kējì gōngsī bùnéng zhǐ zhuīqiú lìrùn, yě yào kǎolǜ shèhuì yǐngxiǎng.",
+          "text_translation": "Albatta. Texnologiya kompaniyalari faqat foyda quvmasligi, ijtimoiy ta'sirni ham hisobga olishi kerak.",
+          "text_translation_ru": "Конечно. Технологические компании не должны гнаться только за прибылью — нужно учитывать и влияние на общество.",
+          "text_translation_en": "Of course. Tech companies can't just chase profit — they also have to consider their social impact.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d24-s11",
+          "text_original": "可是在资本的压力下，很多公司往往会选择利益优先。",
+          "pinyin": "Kěshì zài zīběn de yālì xià, hěnduō gōngsī wǎngwǎng huì xuǎnzé lìyì yōuxiān.",
+          "text_translation": "Lekin kapital bosimi ostida ko'p kompaniya ko'pincha manfaatni birinchi o'ringa qo'yadi.",
+          "text_translation_ru": "Но под давлением капитала многие компании часто выбирают приоритет выгоды.",
+          "text_translation_en": "But under the pressure of capital, many companies tend to put profit first.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d24-s12",
+          "text_original": "这也是现实问题。所以除了靠企业自觉，还需要政府的监管和法律约束。",
+          "pinyin": "Zhè yě shì xiànshí wèntí. Suǒyǐ chúle kào qǐyè zìjué, hái xūyào zhèngfǔ de jiānguǎn hé fǎlǜ yuēshù.",
+          "text_translation": "Bu ham real muammo. Shuning uchun korxonalarning o'z ongiga tayanishdan tashqari, hukumat nazorati va qonun cheklovi ham kerak.",
+          "text_translation_ru": "Это тоже реальная проблема. Поэтому, помимо сознательности компаний, нужны государственный надзор и правовые ограничения.",
+          "text_translation_en": "This is a real problem too. So besides relying on companies' conscience, we also need government supervision and legal constraints.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d24-s13",
+          "text_original": "你觉得个人应该怎么保护自己的隐私？",
+          "pinyin": "Nǐ juéde gèrén yīnggāi zěnme bǎohù zìjǐ de yǐnsī?",
+          "text_translation": "Seningcha shaxs o'z maxfiyligini qanday himoya qilishi kerak?",
+          "text_translation_ru": "Как ты думаешь, как человеку защищать свою приватность?",
+          "text_translation_en": "How do you think individuals should protect their privacy?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d24-s14",
+          "text_original": "首先，不要随便授权不必要的权限。其次，定期清理上网记录和缓存。",
+          "pinyin": "Shǒuxiān, búyào suíbiàn shòuquán bù bìyào de quánxiàn. Qícì, dìngqī qīnglǐ shàngwǎng jìlù hé huǎncún.",
+          "text_translation": "Avvalo, keraksiz ruxsatlarni o'ylamasdan bermaslik. Ikkinchidan, internet tarixi va keshni muntazam tozalash.",
+          "text_translation_ru": "Во-первых, не давать без разбора ненужные разрешения. Во-вторых, регулярно чистить историю посещений и кэш.",
+          "text_translation_en": "First, don't casually grant unnecessary permissions. Second, regularly clear your browsing history and cache.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d24-s15",
+          "text_original": "这些建议很实用。科技本身没有对错，关键看人怎么用。",
+          "pinyin": "Zhèxiē jiànyì hěn shíyòng. Kējì běnshēn méiyǒu duìcuò, guānjiàn kàn rén zěnme yòng.",
+          "text_translation": "Bu maslahatlar juda foydali. Texnologiyaning o'zi yaxshi yoki yomon emas, asosiysi odam uni qanday ishlatishida.",
+          "text_translation_ru": "Эти советы очень практичны. Сами по себе технологии не хороши и не плохи — главное, как человек их использует.",
+          "text_translation_en": "These suggestions are very practical. Technology itself is neither right nor wrong — what matters is how people use it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d24-s16",
+          "text_original": "没错。技术发展不可阻挡，但我们需要在效率和伦理之间找到平衡。",
+          "pinyin": "Méi cuò. Jìshù fāzhǎn bùkě zǔdǎng, dàn wǒmen xūyào zài xiàolǜ hé lúnlǐ zhījiān zhǎodào pínghéng.",
+          "text_translation": "To'g'ri. Texnologiya rivojini to'xtatib bo'lmaydi, lekin biz samaradorlik va axloq o'rtasida muvozanat topishimiz kerak.",
+          "text_translation_ru": "Именно. Развитие технологий не остановить, но нам нужно найти баланс между эффективностью и этикой.",
+          "text_translation_en": "Exactly. Technological development is unstoppable, but we need to find a balance between efficiency and ethics.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

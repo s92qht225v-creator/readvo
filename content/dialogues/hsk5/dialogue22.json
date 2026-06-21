@@ -1,0 +1,177 @@
+{
+  "id": "hsk5-dialogue22",
+  "slug": "consumerism",
+  "title": "消费主义",
+  "pinyin": "Xiāofèizhǔyì",
+  "titleTranslation": "Iste'molchilik",
+  "titleTranslation_ru": "Консьюмеризм",
+  "titleTranslation_en": "Consumerism",
+  "level": 5,
+  "tag": "pul",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "消费主义",
+    "忍不住",
+    "制造",
+    "需求",
+    "意识",
+    "明显",
+    "广告",
+    "焦虑",
+    "满足感",
+    "短暂",
+    "延迟满足",
+    "购物车",
+    "动作",
+    "本质",
+    "过度",
+    "理性",
+    "警惕",
+    "陷阱"
+  ],
+  "sections": [
+    {
+      "id": "h5d22-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d22-s1",
+          "text_original": "你最近怎么又开始买买买了？我记得你上个月才说要控制消费。",
+          "pinyin": "Nǐ zuìjìn zěnme yòu kāishǐ mǎi mǎi mǎi le? Wǒ jìde nǐ shàng ge yuè cái shuō yào kòngzhì xiāofèi.",
+          "text_translation": "Yaqinda nega yana xarid qila boshlading? O'tgan oy endi xarajatni nazorat qilaman degandiyding-ku.",
+          "text_translation_ru": "Почему ты в последнее время снова ударился в покупки? Я помню, ты в прошлом месяце только говорил, что хочешь контролировать траты.",
+          "text_translation_en": "Why have you started shopping nonstop again lately? I remember you only said last month you wanted to control your spending.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d22-s2",
+          "text_original": "我知道，但最近商场都在打折，忍不住就想买点东西。",
+          "pinyin": "Wǒ zhīdào, dàn zuìjìn shāngchǎng dōu zài dǎzhé, rěnbúzhù jiù xiǎng mǎi diǎn dōngxi.",
+          "text_translation": "Bilaman, lekin yaqinda do'konlar chegirma qilyapti, o'zimni tiya olmay biror narsa olgim keladi.",
+          "text_translation_ru": "Знаю, но в последнее время в магазинах скидки, и я не могу удержаться, чтобы что-нибудь не купить.",
+          "text_translation_en": "I know, but the malls have all been having sales lately, and I can't resist wanting to buy something.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d22-s3",
+          "text_original": "你有没有发现，现在很多消费都是被商家制造的需求？",
+          "pinyin": "Nǐ yǒu méiyǒu fāxiàn, xiànzài hěnduō xiāofèi dōu shì bèi shāngjiā zhìzào de xūqiú?",
+          "text_translation": "Sezdingmi, hozir ko'p iste'mol sotuvchilar tomonidan yaratilgan ehtiyoj?",
+          "text_translation_ru": "Ты замечал, что многие сегодняшние траты — это спрос, искусственно созданный продавцами?",
+          "text_translation_en": "Have you noticed that a lot of spending these days is demand manufactured by sellers?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d22-s4",
+          "text_original": "你这么说我也意识到了。有时候明明不需要，看了广告以后就觉得非买不可。",
+          "pinyin": "Nǐ zhème shuō wǒ yě yìshi dào le. Yǒu shíhou míngmíng bù xūyào, kàn le guǎnggào yǐhòu jiù juéde fēi mǎi bù kě.",
+          "text_translation": "Shunday deganingda men ham angladim. Ba'zan aniq kerak bo'lmasa-da, reklamani ko'rgach, olmasam bo'lmaydigandek tuyuladi.",
+          "text_translation_ru": "Когда ты так говоришь, я тоже это осознаю. Иногда явно не нужно, но после рекламы кажется, что не купить нельзя.",
+          "text_translation_en": "Now that you mention it, I realize it too. Sometimes I clearly don't need it, but after seeing the ad I feel I have to buy it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d22-s5",
+          "text_original": "这其实就是消费主义对人的影响。商家通过广告制造焦虑，让你觉得拥有某样东西才能幸福。",
+          "pinyin": "Zhè qíshí jiùshì xiāofèizhǔyì duì rén de yǐngxiǎng. Shāngjiā tōngguò guǎnggào zhìzào jiāolǜ, ràng nǐ juéde yōngyǒu mǒu yàng dōngxi cáinéng xìngfú.",
+          "text_translation": "Bu aslida iste'molchilikning insonga ta'siri. Sotuvchilar reklama orqali xavotir uyg'otadi, biror narsaga ega bo'lsanggina baxtli bo'lasandek his qildiradi.",
+          "text_translation_ru": "Это, по сути, и есть влияние консьюмеризма на человека. Продавцы через рекламу создают тревогу, заставляя думать, что счастье возможно лишь обладая какой-то вещью.",
+          "text_translation_en": "This is actually the effect of consumerism on people. Sellers create anxiety through ads, making you feel you can only be happy by owning a certain thing.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d22-s6",
+          "text_original": "你说得对。我经常买完东西以后，反而没有想象中的满足感。",
+          "pinyin": "Nǐ shuō de duì. Wǒ jīngcháng mǎi wán dōngxi yǐhòu, fǎn'ér méiyǒu xiǎngxiàng zhōng de mǎnzú gǎn.",
+          "text_translation": "To'g'ri aytasan. Men ko'pincha biror narsa olib bo'lgach, aksincha tasavvur qilgancha qoniqish hissini sezmayman.",
+          "text_translation_ru": "Ты прав. Я часто после покупки, наоборот, не чувствую того удовлетворения, которое представлял.",
+          "text_translation_en": "You're right. I often don't feel the satisfaction I imagined after buying something — quite the opposite.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d22-s7",
+          "text_original": "这种现象很普遍。消费带来的快乐往往是短暂的，过几天就会觉得那东西其实没那么重要。",
+          "pinyin": "Zhè zhǒng xiànxiàng hěn pǔbiàn. Xiāofèi dài lái de kuàilè wǎngwǎng shì duǎnzàn de, guò jǐ tiān jiù huì juéde nà dōngxi qíshí méi nàme zhòngyào.",
+          "text_translation": "Bunday hodisa juda keng tarqalgan. Iste'mol keltiradigan quvonch ko'pincha qisqa, bir necha kun o'tgach o'sha narsa aslida unchalik muhim emasligini his qilasan.",
+          "text_translation_ru": "Это явление очень распространено. Радость от покупок часто кратковременна — через несколько дней понимаешь, что вещь, в общем-то, не так уж и важна.",
+          "text_translation_en": "This phenomenon is very common. The joy spending brings is often short-lived — after a few days you feel that thing actually wasn't that important.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d22-s8",
+          "text_original": "那我该怎么改变这种习惯呢？",
+          "pinyin": "Nà wǒ gāi zěnme gǎibiàn zhè zhǒng xíguàn ne?",
+          "text_translation": "Unda men bu odatni qanday o'zgartirishim kerak?",
+          "text_translation_ru": "И как же мне изменить эту привычку?",
+          "text_translation_en": "So how should I change this habit?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d22-s9",
+          "text_original": "你可以试试「延迟满足」。想买的东西先放购物车里，过一周再看自己是不是真的想要。",
+          "pinyin": "Nǐ kěyǐ shì shì 'yánchí mǎnzú'. Xiǎng mǎi de dōngxi xiān fàng gòuwù chē lǐ, guò yì zhōu zài kàn zìjǐ shì bú shì zhēn de xiǎng yào.",
+          "text_translation": "«Kechiktirilgan qoniqish»ni sinab ko'rsang bo'ladi. Olmoqchi bo'lgan narsangni avval savatchaga sol, bir hafta o'tgach rostdan xohlayotganingni qarab ko'r.",
+          "text_translation_ru": "Можешь попробовать «отложенное вознаграждение». То, что хочешь купить, сначала положи в корзину, а через неделю посмотри, действительно ли ты этого хочешь.",
+          "text_translation_en": "You could try \"delayed gratification.\" Put what you want to buy in the cart first, then after a week check whether you really want it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d22-s10",
+          "text_original": "这个办法听起来不错。我上次就是把一件衣服放了半个月，后来就没兴趣了。",
+          "pinyin": "Zhè ge bànfǎ tīng qǐlái búcuò. Wǒ shàng cì jiùshì bǎ yí jiàn yīfu fàng le bàn ge yuè, hòulái jiù méi xìngqù le.",
+          "text_translation": "Bu usul yaxshi eshitiladi. Men o'tgan safar bitta kiyimni yarim oy qoldirib qo'ydim, keyin qiziqishim qolmadi.",
+          "text_translation_ru": "Этот способ звучит неплохо. В прошлый раз я как раз оставил одну вещь на полмесяца, а потом интерес и пропал.",
+          "text_translation_en": "That method sounds good. Last time I left a piece of clothing for half a month, and then I lost interest.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d22-s11",
+          "text_original": "对吧？很多时候我们只是享受「买」这个动作，而不是真正需要那个东西。",
+          "pinyin": "Duì ba? Hěnduō shíhou wǒmen zhǐshì xiǎngshòu 'mǎi' zhè ge dòngzuò, ér bú shì zhēnzhèng xūyào nà ge dōngxi.",
+          "text_translation": "Shundaymi? Ko'p hollarda biz faqat «sotib olish» harakatidan zavqlanamiz, o'sha narsaga haqiqatan muhtoj bo'lganimizdan emas.",
+          "text_translation_ru": "Вот именно. Часто мы просто наслаждаемся самим действием «покупки», а не по-настоящему нуждаемся в той вещи.",
+          "text_translation_en": "Right? A lot of the time we just enjoy the act of \"buying,\" not actually needing the thing.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d22-s12",
+          "text_original": "那我以后买东西前先问自己三个问题：我真的需要吗？我有类似的东西吗？不买会怎样？",
+          "pinyin": "Nà wǒ yǐhòu mǎi dōngxi qián xiān wèn zìjǐ sān ge wèntí: Wǒ zhēn de xūyào ma? Wǒ yǒu lèisì de dōngxi ma? Bù mǎi huì zěnyàng?",
+          "text_translation": "Unda men bundan keyin biror narsa olishdan oldin o'zimga uchta savol beraman: rostdan kerakmi? Menda shunga o'xshashi bormi? Olmasam nima bo'ladi?",
+          "text_translation_ru": "Тогда впредь перед покупкой я буду задавать себе три вопроса: мне это действительно нужно? Есть ли у меня что-то похожее? Что будет, если не куплю?",
+          "text_translation_en": "Then from now on, before buying something, I'll ask myself three questions: Do I really need it? Do I have something similar? What happens if I don't buy it?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d22-s13",
+          "text_original": "这三个问题很实用。消费主义的本质就是让人过度消费，保持理性很重要。",
+          "pinyin": "Zhè sān ge wèntí hěn shíyòng. Xiāofèizhǔyì de běnzhí jiùshì ràng rén guòdù xiāofèi, bǎochí lǐxìng hěn zhòngyào.",
+          "text_translation": "Bu uchta savol juda foydali. Iste'molchilikning mohiyati — insonni haddan ortiq sarflashga undash, shuning uchun oqilonalikni saqlash juda muhim.",
+          "text_translation_ru": "Эти три вопроса очень практичны. Суть консьюмеризма в том, чтобы заставить человека потреблять чрезмерно, поэтому важно сохранять рациональность.",
+          "text_translation_en": "Those three questions are very practical. The essence of consumerism is to make people over-consume, so staying rational is important.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d22-s14",
+          "text_original": "看来我不仅要注意消费观念，还要警惕消费陷阱。",
+          "pinyin": "Kànlái wǒ bùjǐn yào zhùyì xiāofèi guānniàn, hái yào jǐngtì xiāofèi xiànjǐng.",
+          "text_translation": "Ko'rinishidan men nafaqat iste'mol qarashlariga e'tibor berishim, balki iste'mol tuzoqlaridan ham hushyor bo'lishim kerak.",
+          "text_translation_ru": "Похоже, мне нужно не только следить за своим отношением к тратам, но и остерегаться потребительских ловушек.",
+          "text_translation_en": "It seems I need to not only watch my spending mindset, but also be vigilant about consumer traps.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d22-s15",
+          "text_original": "对。消费本身不是问题，关键是不要让消费控制你，而是你控制消费。",
+          "pinyin": "Duì. Xiāofèi běnshēn bú shì wèntí, guānjiàn shì búyào ràng xiāofèi kòngzhì nǐ, ér shì nǐ kòngzhì xiāofèi.",
+          "text_translation": "To'g'ri. Iste'molning o'zi muammo emas, asosiysi iste'mol seni boshqarmasligi, balki sen iste'molni boshqarishing.",
+          "text_translation_ru": "Да. Само потребление — не проблема, главное — не позволять тратам управлять тобой, а самому управлять тратами.",
+          "text_translation_en": "Right. Spending itself isn't the problem — the key is not to let spending control you, but for you to control spending.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
