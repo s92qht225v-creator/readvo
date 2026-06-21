@@ -1,0 +1,173 @@
+{
+  "id": "hsk5-dialogue7",
+  "slug": "technology-and-life",
+  "title": "科技与生活",
+  "pinyin": "Kējì yǔ shēnghuó",
+  "titleTranslation": "Texnologiya va hayot",
+  "titleTranslation_ru": "Технологии и жизнь",
+  "titleTranslation_en": "Technology and Life",
+  "level": 5,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-19",
+  "vocab": [
+    "智能",
+    "监测",
+    "心跳",
+    "睡眠",
+    "分析",
+    "数据",
+    "科技",
+    "功能",
+    "电器",
+    "远程",
+    "控制",
+    "音箱",
+    "播放",
+    "便利",
+    "过度",
+    "依赖",
+    "退化",
+    "导航",
+    "工具",
+    "距离",
+    "刻意",
+    "客厅",
+    "焦虑"
+  ],
+  "sections": [
+    {
+      "id": "h5d7-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d7-s1",
+          "text_original": "你最近是不是又换了一款智能手表？看起来比之前那个高级多了。",
+          "pinyin": "Nǐ zuìjìn shì bú shì yòu huàn le yī kuǎn zhìnéng shǒubiǎo? Kàn qǐlái bǐ zhīqián nà gè gāojí duō le.",
+          "text_translation": "Yaqinda yana yangi smart-soat olmadingmi? Avvalgisidan ancha zo'rga o'xshaydi.",
+          "text_translation_ru": "Ты, кажется, снова сменил умные часы? Выглядят гораздо круче прежних.",
+          "text_translation_en": "Did you switch to a new smartwatch again? It looks much more advanced than the previous one.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d7-s2",
+          "text_original": "对，这款不仅可以监测心跳和睡眠，还能分析我的运动数据。",
+          "pinyin": "Duì, zhè kuǎn bùjǐn kěyǐ jiāncè xīntiào hé shuìmián, hái néng fēnxī wǒ de yùndòng shùjù.",
+          "text_translation": "Ha, bu model nafaqat yurak urishi va uyquni kuzatadi, balki sport ma'lumotlarimni ham tahlil qiladi.",
+          "text_translation_ru": "Да, эта модель не только отслеживает пульс и сон, но и анализирует мои спортивные данные.",
+          "text_translation_en": "Yeah, this one can not only monitor heart rate and sleep, but also analyze my exercise data.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d7-s3",
+          "text_original": "科技发展确实快，十年前我们根本想象不到手表能有这么多功能。",
+          "pinyin": "Kējì fāzhǎn quèshí kuài, shí nián qián wǒmen gēnběn xiǎngxiàng bù dào shǒubiǎo néng yǒu zhème duō gōngnéng.",
+          "text_translation": "Texnologiya rostdan ham tez rivojlanyapti, o'n yil oldin soatda bunchalik ko'p funksiya bo'lishini umuman tasavvur qila olmasdik.",
+          "text_translation_ru": "Технологии и правда развиваются быстро — десять лет назад мы и представить не могли, что у часов будет столько функций.",
+          "text_translation_en": "Technology really is developing fast — ten years ago we couldn't have imagined a watch having so many functions.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d7-s4",
+          "text_original": "是啊。现在连家里的电器都能连上手机，远程控制了。",
+          "pinyin": "Shì a. Xiànzài lián jiā lǐ de diànqì dōu néng lián shàng shǒujī, yuǎnchéng kòngzhì le.",
+          "text_translation": "Ha-da. Hozir hatto uydagi maishiy texnika ham telefonga ulanib, masofadan boshqariladi.",
+          "text_translation_ru": "Да. Сейчас даже домашнюю технику можно подключить к телефону и управлять ею удалённо.",
+          "text_translation_en": "Right. Now even the appliances at home can connect to your phone and be controlled remotely.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d7-s5",
+          "text_original": "我也买了智能音箱，只要说句话就能播放音乐或者查天气。",
+          "pinyin": "Wǒ yě mǎi le zhìnéng yīnxiāng, zhǐyào shuō jù huà jiù néng bōfàng yīnyuè huòzhě chá tiānqì.",
+          "text_translation": "Men ham aqlli kolonka oldim, bir og'iz so'z aytsang bo'ldi, musiqa qo'yadi yoki ob-havoni aytadi.",
+          "text_translation_ru": "Я тоже купил умную колонку — достаточно сказать слово, и она включит музыку или подскажет погоду.",
+          "text_translation_en": "I bought a smart speaker too — you just say a word and it can play music or check the weather.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d7-s6",
+          "text_original": "这些技术确实给生活带来了不少便利，但我有时候也担心过度依赖。",
+          "pinyin": "Zhèxiē jìshù quèshí gěi shēnghuó dài lái le bùshǎo biànlì, dàn wǒ yǒu shíhou yě dānxīn guòdù yīlài.",
+          "text_translation": "Bu texnologiyalar hayotga ko'p qulayliklar olib keldi, lekin ba'zan haddan tashqari qaram bo'lib qolishdan xavotirlanaman.",
+          "text_translation_ru": "Эти технологии действительно принесли в жизнь немало удобств, но иногда я переживаю из-за чрезмерной зависимости.",
+          "text_translation_en": "These technologies really have brought a lot of convenience to life, but sometimes I worry about over-relying on them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d7-s7",
+          "text_original": "我理解你的想法。方便是好事，但如果什么都靠科技，人的能力可能会退化。",
+          "pinyin": "Wǒ lǐjiě nǐ de xiǎngfǎ. Fāngbiàn shì hǎoshì, dàn rúguǒ shénme dōu kào kējì, rén de nénglì kěnéng huì tuìhuà.",
+          "text_translation": "Fikringni tushunaman. Qulaylik yaxshi narsa, lekin hamma narsada texnologiyaga tayansak, insonning qobiliyati zaiflashishi mumkin.",
+          "text_translation_ru": "Понимаю твою мысль. Удобство — это хорошо, но если во всём полагаться на технику, способности человека могут ослабевать.",
+          "text_translation_en": "I understand your point. Convenience is a good thing, but if we rely on technology for everything, human abilities may degenerate.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d7-s8",
+          "text_original": "对。比如现在很多人都用导航，结果出门不认路了。",
+          "pinyin": "Duì. Bǐrú xiànzài hěnduō rén dōu yòng dǎoháng, jiéguǒ chūmén bú rèn lù le.",
+          "text_translation": "To'g'ri. Masalan, hozir ko'p odam navigatsiyadan foydalanadi, oqibatda tashqariga chiqsa yo'lni tanimay qoladi.",
+          "text_translation_ru": "Да. Например, сейчас многие пользуются навигатором, а в итоге, выйдя из дома, не ориентируются в дороге.",
+          "text_translation_en": "Right. For example, many people use navigation now, and as a result they don't know the way when they go out.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d7-s9",
+          "text_original": "这确实是个问题。科技应该是工具，而不能反过来控制我们。",
+          "pinyin": "Zhè quèshí shì ge wèntí. Kējì yīnggāi shì gōngjù, ér bùnéng fǎn guò lái kòngzhì wǒmen.",
+          "text_translation": "Bu haqiqatan muammo. Texnologiya vosita bo'lishi kerak, aksincha bizni boshqarmasligi lozim.",
+          "text_translation_ru": "Это действительно проблема. Технологии должны быть инструментом, а не управлять нами наоборот.",
+          "text_translation_en": "That really is a problem. Technology should be a tool, and shouldn't control us in return.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d7-s10",
+          "text_original": "完全同意。我觉得未来我们得学会跟科技保持适当距离。",
+          "pinyin": "Wánquán tóngyì. Wǒ juéde wèilái wǒmen déi xuéhuì gēn kējì bǎochí shìdàng jùlí.",
+          "text_translation": "To'liq qo'shilaman. Menimcha kelajakda biz texnologiya bilan me'yoriy masofa saqlashni o'rganishimiz kerak.",
+          "text_translation_ru": "Полностью согласен. Думаю, в будущем нам нужно научиться держать с технологиями подходящую дистанцию.",
+          "text_translation_en": "I completely agree. I think in the future we need to learn to keep an appropriate distance from technology.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d7-s11",
+          "text_original": "那你现在会刻意减少看手机的时间吗？",
+          "pinyin": "Nà nǐ xiànzài huì kèyì jiǎnshǎo kàn shǒujī de shíjiān ma?",
+          "text_translation": "Unda hozir telefonga qarash vaqtini ataylab kamaytirasanmi?",
+          "text_translation_ru": "А ты сейчас намеренно сокращаешь время, проведённое в телефоне?",
+          "text_translation_en": "So do you deliberately cut down on your phone time now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d7-s12",
+          "text_original": "会。我现在每天睡前一小时把手机放客厅，不带上床。",
+          "pinyin": "Huì. Wǒ xiànzài měitiān shuìqián yī xiǎoshí bǎ shǒujī fàng kètīng, bú dài shàng chuáng.",
+          "text_translation": "Ha. Hozir har kuni uxlashdan bir soat oldin telefonni mehmonxonaga qo'yaman, karavotga olib ketmayman.",
+          "text_translation_ru": "Да. Теперь каждый день за час до сна я оставляю телефон в гостиной и не беру его в постель.",
+          "text_translation_en": "I do. Now, an hour before bed every day, I leave my phone in the living room and don't take it to bed.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d7-s13",
+          "text_original": "这是个好习惯。我回去也试试。",
+          "pinyin": "Zhè shì ge hǎo xíguàn. Wǒ huíqù yě shì shi.",
+          "text_translation": "Bu yaxshi odat. Men ham uyga borib sinab ko'raman.",
+          "text_translation_ru": "Это хорошая привычка. Я тоже попробую, когда вернусь.",
+          "text_translation_en": "That's a good habit. I'll try it too when I get home.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d7-s14",
+          "text_original": "科技应该让生活更美好，而不是让人更焦虑。",
+          "pinyin": "Kējì yīnggāi ràng shēnghuó gèng měihǎo, ér bùshì ràng rén gèng jiāolǜ.",
+          "text_translation": "Texnologiya hayotni go'zalroq qilishi kerak, insonni ko'proq xavotirga solishi emas.",
+          "text_translation_ru": "Технологии должны делать жизнь лучше, а не вызывать у людей больше тревоги.",
+          "text_translation_en": "Technology should make life better, not make people more anxious.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
