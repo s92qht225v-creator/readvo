@@ -1,0 +1,161 @@
+{
+  "id": "hsk6-dialogue7",
+  "slug": "reproductive-anxiety",
+  "title": "生育焦虑",
+  "pinyin": "Shēngyù jiāolǜ",
+  "titleTranslation": "Farzand ko'rish tashvishi",
+  "titleTranslation_ru": "Тревога из-за деторождения",
+  "titleTranslation_en": "Reproductive Anxiety",
+  "level": 6,
+  "tag": "oila",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "生育",
+    "念叨",
+    "老一辈",
+    "必经",
+    "阶段",
+    "粗略",
+    "封顶",
+    "勉强",
+    "停滞",
+    "托育",
+    "摊牌"
+  ],
+  "sections": [
+    {
+      "id": "h6d7-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d7-s1",
+          "text_original": "你妈又催你结婚生小孩了？我看你最近接电话脸色都不太对。",
+          "pinyin": "Nǐ mā yòu cuī nǐ jiéhūn shēng xiǎohái le? Wǒ kàn nǐ zuìjìn jiē diànhuà liǎnsè dōu bú tài duì.",
+          "text_translation": "Onang yana seni turmush qurib, bola ko'rishga undadimi? Yaqinda qo'ng'iroqqa javob berganingda yuzing bir xil emasdek ko'rinadi.",
+          "text_translation_ru": "Мама опять торопит тебя жениться и завести детей? Я смотрю, у тебя в последнее время лицо меняется, когда отвечаешь на звонок.",
+          "text_translation_en": "Is your mom pushing you to marry and have kids again? I've noticed your face changes when you take calls lately.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d7-s2",
+          "text_original": "别提了。上周回家吃饭，饭还没吃完就开始念叨，说谁家的孩子都会走路了，我连对象都没有。",
+          "pinyin": "Bié tí le. Shàng zhōu huí jiā chīfàn, fàn hái méi chī wán jiù kāishǐ niàndao, shuō shuí jiā de háizi dōu huì zǒulù le, wǒ lián duìxiàng dōu méiyǒu.",
+          "text_translation": "Aytmang-da. O'tgan hafta uyga ovqatga borgandim, ovqatni yeb bo'lmasimdan ming'irlay boshladi, falonchining bolasi yura boshlabdi-yu, menda esa hatto yor ham yo'q dedi.",
+          "text_translation_ru": "И не говори. На прошлой неделе пришёл домой поесть — не успел доесть, как она начала зудеть: мол, у таких-то дети уже ходят, а у меня даже пары нет.",
+          "text_translation_en": "Don't even mention it. Last week I went home for dinner, and before I'd even finished eating she started nagging — saying so-and-so's kid can already walk, while I don't even have a partner.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d7-s3",
+          "text_original": "老一辈人想法不一样，他们觉得结婚生子是人生必经的阶段。",
+          "pinyin": "Lǎo yī bèi rén xiǎngfǎ bù yíyàng, tāmen juéde jiéhūn shēngzǐ shì rénshēng bìjīng de jiēduàn.",
+          "text_translation": "Katta avlodning fikri boshqacha, ular turmush qurib farzand ko'rish hayotning muqarrar bosib o'tiladigan bosqichi deb hisoblaydi.",
+          "text_translation_ru": "У старшего поколения другое мышление: они считают, что брак и рождение детей — обязательный этап жизни.",
+          "text_translation_en": "The older generation thinks differently — they see marriage and having children as an inevitable stage of life.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d7-s4",
+          "text_original": "不是我不愿意，是现在养孩子的成本实在太高了。从出生到上学，教育、医疗、兴趣班，哪个不是钱？",
+          "pinyin": "Bú shì wǒ bú yuànyì, shì xiànzài yǎng háizi de chéngběn shízài tài gāo le. Cóng chūshēng dào shàngxué, jiàoyù, yīliáo, xìngqù bān, nǎ ge bú shì qián?",
+          "text_translation": "Men xohlamayotganim emas, hozir bola boqish xarajati rostdan juda baland. Tug'ilishidan maktabga borishigacha — ta'lim, tibbiyot, to'garaklar, qaysi biri pul emas?",
+          "text_translation_ru": "Дело не в том, что я не хочу — просто растить ребёнка сейчас обходится слишком дорого. От рождения до школы: образование, медицина, кружки — что из этого не стоит денег?",
+          "text_translation_en": "It's not that I don't want to — it's that raising a child now is just too expensive. From birth to school: education, healthcare, hobby classes — which of those isn't money?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d7-s5",
+          "text_original": "你算过养一个孩子大概要花多少钱吗？",
+          "pinyin": "Nǐ suàn guo yǎng yí ge háizi dàgài yào huā duōshao qián ma?",
+          "text_translation": "Bitta bolani boqish taxminan qancha pul talab qilishini hisoblab ko'rganmiding?",
+          "text_translation_ru": "Ты подсчитывал, сколько примерно стоит вырастить одного ребёнка?",
+          "text_translation_en": "Have you calculated roughly how much it costs to raise one child?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d7-s6",
+          "text_original": "粗略算过。从出生到大学毕业，少说也得几十万，上不封顶。我和我对象两个人的工资加起来，勉强够自己花。哪敢要孩子？",
+          "pinyin": "Cūlüè suàn guo. Cóng chūshēng dào dàxué bìyè, shǎo shuō yě děi jǐ shí wàn, shàng bù fēngdǐng. Wǒ hé wǒ duìxiàng liǎng ge rén de gōngzī jiā qǐlái, miǎnqiǎng gòu zìjǐ huā. Nǎ gǎn yào háizi?",
+          "text_translation": "Taxminan hisobladim. Tug'ilishidan universitetni bitirgunigacha, eng kami bir necha yuz ming, yuqori chegarasi yo'q. Men va yorimning maoshini qo'shsang, zo'rg'a o'zimizga yetadi. Qayoqdan bola ko'rishga jur'at qilamiz?",
+          "text_translation_ru": "Прикинул примерно. От рождения до окончания вуза — самое меньшее несколько сотен тысяч, и верхнего предела нет. Зарплаты наши с партнёром вместе едва хватает на самих себя. Куда уж тут заводить ребёнка?",
+          "text_translation_en": "I've roughly calculated. From birth to graduating university, at the very least it's several hundred thousand, with no ceiling. My partner's and my salaries combined barely cover ourselves. How could we dare to have a child?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d7-s7",
+          "text_original": "除了经济压力，你是不是还担心别的问题？",
+          "pinyin": "Chúle jīngjì yālì, nǐ shì bú shì hái dānxīn bié de wèntí?",
+          "text_translation": "Iqtisodiy bosimdan tashqari, yana boshqa narsadan ham xavotirlanyapsanmi?",
+          "text_translation_ru": "Кроме финансового давления, ты ещё из-за чего-то переживаешь?",
+          "text_translation_en": "Besides financial pressure, are you also worried about other things?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d7-s8",
+          "text_original": "主要是时间精力不够。我现在每天通勤就要三个小时，回到家累得只想躺着。要有了孩子，谁来带？",
+          "pinyin": "Zhǔyào shì shíjiān jīnglì bú gòu. Wǒ xiànzài měitiān tōngqín jiù yào sān ge xiǎoshí, huí dào jiā lèi de zhǐ xiǎng tǎng zhe. Yào yǒu le háizi, shuí lái dài?",
+          "text_translation": "Asosan vaqt va kuch-quvvat yetishmaydi. Hozir har kuni ishga borib-kelishga uch soat ketadi, uyga kelsam shunchalik charchaymanki, faqat yotgim keladi. Bola bo'lsa, kim qaraydi?",
+          "text_translation_ru": "В основном не хватает времени и сил. Сейчас на дорогу до работы и обратно у меня уходит три часа, прихожу домой настолько уставший, что хочется только лежать. Появись ребёнок — кто будет с ним сидеть?",
+          "text_translation_en": "Mainly there's not enough time and energy. My commute alone takes three hours a day; I get home so exhausted I just want to lie down. If we had a child, who'd look after it?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d7-s9",
+          "text_original": "你对象是怎么想的？",
+          "pinyin": "Nǐ duìxiàng shì zěnme xiǎng de?",
+          "text_translation": "Yoring qanday o'ylaydi?",
+          "text_translation_ru": "А что думает твоя половинка?",
+          "text_translation_en": "What does your partner think?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d7-s10",
+          "text_original": "她比我还焦虑。她说身边好几个朋友生完孩子以后职业发展都停滞了，她不想放弃现在的事业。",
+          "pinyin": "Tā bǐ wǒ hái jiāolǜ. Tā shuō shēnbiān hǎojǐ ge péngyou shēng wán háizi yǐhòu zhíyè fāzhǎn dōu tíngzhì le, tā bù xiǎng fàngqì xiànzài de shìyè.",
+          "text_translation": "U mendan ham ko'proq xavotirda. Atrofidagi bir nechta do'sti bola tug'gandan keyin kasbiy rivoji to'xtab qolgan, u hozirgi faoliyatidan voz kechishni xohlamaydi deydi.",
+          "text_translation_ru": "Она переживает ещё больше меня. Говорит, что у нескольких её подруг после рождения ребёнка карьера застопорилась, и она не хочет бросать своё нынешнее дело.",
+          "text_translation_en": "She's even more anxious than I am. She says several of her friends' careers stagnated after having kids, and she doesn't want to give up her current career.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d7-s11",
+          "text_original": "说到底，生育已经不只是个人选择，而是一个复杂的社会问题。",
+          "pinyin": "Shuō dào dǐ, shēngyù yǐjīng bù zhǐ shì gèrén xuǎnzé, ér shì yí ge fùzá de shèhuì wèntí.",
+          "text_translation": "Oxir-oqibat, farzand ko'rish endi shunchaki shaxsiy tanlov emas, balki murakkab ijtimoiy muammo.",
+          "text_translation_ru": "В конце концов, деторождение — это уже не только личный выбор, а сложная социальная проблема.",
+          "text_translation_en": "Ultimately, having children is no longer just a personal choice but a complex social issue.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d7-s12",
+          "text_original": "对。如果政府能在托育、教育、住房方面提供更多支持，可能年轻人会更愿意生。",
+          "pinyin": "Duì. Rúguǒ zhèngfǔ néng zài tuōyù, jiàoyù, zhùfáng fāngmiàn tígōng gèng duō zhīchí, kěnéng niánqīng rén huì gèng yuànyì shēng.",
+          "text_translation": "To'g'ri. Agar hukumat bolalarni parvarish qilish, ta'lim va uy-joy borasida ko'proq ko'mak bersa, ehtimol yoshlar farzand ko'rishga ko'proq tayyor bo'lardi.",
+          "text_translation_ru": "Да. Если бы государство оказывало больше поддержки в сфере ухода за детьми, образования и жилья, молодёжь, возможно, охотнее заводила бы детей.",
+          "text_translation_en": "Right. If the government provided more support for childcare, education, and housing, young people might be more willing to have children.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d7-s13",
+          "text_original": "你现在打算怎么办？继续拖着还是跟家里摊牌？",
+          "pinyin": "Nǐ xiànzài dǎsuàn zěnme bàn? Jìxù tuō zhe háishì gēn jiā lǐ tānpái?",
+          "text_translation": "Hozir nima qilmoqchisan? Cho'zaverasanmi yoki oilang bilan ochiq gaplashasanmi?",
+          "text_translation_ru": "И что ты теперь собираешься делать? Будешь тянуть дальше или выложишь всё начистоту перед семьёй?",
+          "text_translation_en": "What are you going to do now? Keep putting it off, or lay your cards on the table with your family?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d7-s14",
+          "text_original": "我准备找个机会跟爸妈好好聊聊，把现实情况说明白。他们理解最好，不理解我也没办法。",
+          "pinyin": "Wǒ zhǔnbèi zhǎo ge jīhuì gēn bà mā hǎohao liáo liáo, bǎ xiànshí qíngkuàng shuō míngbai. Tāmen lǐjiě zuì hǎo, bù lǐjiě wǒ yě méi bànfǎ.",
+          "text_translation": "Imkon topib, ota-onam bilan yaxshilab gaplashib, real ahvolni tushuntirmoqchiman. Tushunsa eng yaxshisi, tushunmasa qo'limdan boshqa narsa kelmaydi.",
+          "text_translation_ru": "Я собираюсь найти момент и как следует поговорить с родителями, объяснить им реальную ситуацию. Поймут — отлично, не поймут — что поделать.",
+          "text_translation_en": "I'm going to find a chance to have a proper talk with my parents and explain the real situation. If they understand, great; if not, there's nothing I can do.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
