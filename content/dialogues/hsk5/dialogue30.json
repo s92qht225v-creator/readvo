@@ -1,0 +1,167 @@
+{
+  "id": "hsk5-dialogue30",
+  "slug": "online-privacy",
+  "title": "网络隐私",
+  "pinyin": "Wǎngluò yǐnsī",
+  "titleTranslation": "Internetdagi maxfiylik",
+  "titleTranslation_ru": "Конфиденциальность в интернете",
+  "titleTranslation_en": "Online Privacy",
+  "level": 5,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "奇怪",
+    "推销",
+    "泄露",
+    "注册",
+    "收集",
+    "偷偷",
+    "读取",
+    "通讯录",
+    "相册",
+    "权限",
+    "显然",
+    "不合理",
+    "补救",
+    "更改",
+    "密切",
+    "异常",
+    "掉以轻心"
+  ],
+  "sections": [
+    {
+      "id": "h5d30-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d30-s1",
+          "text_original": "你最近有没有收到过奇怪的电话或者短信？",
+          "pinyin": "Nǐ zuìjìn yǒu méiyǒu shōudào guo qíguài de diànhuà huòzhě duǎnxìn?",
+          "text_translation": "Yaqinda g'alati qo'ng'iroq yoki SMS olganmiding?",
+          "text_translation_ru": "Тебе в последнее время не приходили странные звонки или сообщения?",
+          "text_translation_en": "Have you received any strange calls or texts recently?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d30-s2",
+          "text_original": "有啊！前几天我接了一个电话，对方竟然知道我的名字和住址，还要推销什么理财产品。",
+          "pinyin": "Yǒu a! Qián jǐ tiān wǒ jiē le yí ge diànhuà, duìfāng jìngrán zhīdào wǒ de míngzì hé zhùzhǐ, hái yào tuīxiāo shénme lǐcái chǎnpǐn.",
+          "text_translation": "Bor-da! Bir necha kun oldin bir qo'ng'iroqqa javob berdim, narigi tomon hayratlanarli tarzda mening ismim va manzilimni bilarkan, ustiga qandaydir investitsiya mahsulotini sotmoqchi bo'ldi.",
+          "text_translation_ru": "Были! На днях я ответил на звонок, а собеседник, представь, знал моё имя и адрес, да ещё и пытался впарить какой-то инвестиционный продукт.",
+          "text_translation_en": "Yes! A few days ago I answered a call, and the other person actually knew my name and address, and was trying to sell me some financial product.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d30-s3",
+          "text_original": "那太可怕了！这说明你的个人信息可能已经泄露了。",
+          "pinyin": "Nà tài kěpà le! Zhè shuōmíng nǐ de gèrén xìnxī kěnéng yǐjīng xièlòu le.",
+          "text_translation": "Bu juda qo'rqinchli! Bu shaxsiy ma'lumoting allaqachon sizib chiqqan bo'lishi mumkinligini bildiradi.",
+          "text_translation_ru": "Это ужасно! Это значит, что твои личные данные, возможно, уже утекли.",
+          "text_translation_en": "That's terrifying! It means your personal information may have already been leaked.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d30-s4",
+          "text_original": "我也这么觉得。回想起来，我平时确实在很多网站上注册过账号，可能信息被卖了。",
+          "pinyin": "Wǒ yě zhème juéde. Huíxiǎng qǐlái, wǒ píngshí quèshí zài hěnduō wǎngzhàn shàng zhùcè guo zhànghào, kěnéng xìnxī bèi mài le.",
+          "text_translation": "Men ham shunday o'ylayman. Esimga olsam, men odatda rostdan ko'plab saytlarda hisob ochganman, ehtimol ma'lumotim sotib yuborilgandir.",
+          "text_translation_ru": "Я тоже так думаю. Если вспомнить, я и правда регистрировал аккаунты на множестве сайтов — возможно, данные продали.",
+          "text_translation_en": "I think so too. Thinking back, I really have registered accounts on a lot of websites — maybe my info was sold.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d30-s5",
+          "text_original": "现在很多APP都会收集用户信息，有些还会偷偷读取通讯录和相册。",
+          "pinyin": "Xiànzài hěnduō APP dōu huì shōují yònghù xìnxī, yǒuxiē hái huì tōutōu dúqǔ tōngxùnlù hé xiàngcè.",
+          "text_translation": "Hozir ko'p ilova foydalanuvchi ma'lumotini to'playdi, ba'zilari hatto yashirincha kontaktlar ro'yxati va rasm albomini o'qib oladi.",
+          "text_translation_ru": "Сейчас многие приложения собирают данные пользователей, а некоторые ещё и тайком считывают список контактов и фотоальбом.",
+          "text_translation_en": "Many apps now collect user information, and some even secretly read your contacts and photo album.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d30-s6",
+          "text_original": "那该怎么办？总不能不用手机吧？",
+          "pinyin": "Nà gāi zěnme bàn? Zǒng bùnéng búyòng shǒujī ba?",
+          "text_translation": "Unda nima qilish kerak? Telefonni umuman ishlatmaslikning iloji yo'q-ku?",
+          "text_translation_ru": "И что же делать? Не отказываться же совсем от телефона?",
+          "text_translation_en": "So what should I do? I can't just stop using my phone, can I?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d30-s7",
+          "text_original": "我觉得可以从几个方面入手。首先，下载APP的时候注意看权限，不必要的权限不要给。",
+          "pinyin": "Wǒ juéde kěyǐ cóng jǐ ge fāngmiàn rùshǒu. Shǒuxiān, xiàzài APP de shíhou zhùyì kàn quánxiàn, bù bìyào de quánxiàn búyào gěi.",
+          "text_translation": "Menimcha bir nechta tomondan boshlasa bo'ladi. Avvalo, ilova yuklayotganda ruxsatlarga e'tibor ber, keraksiz ruxsatlarni berma.",
+          "text_translation_ru": "Думаю, можно начать с нескольких сторон. Во-первых, при установке приложения обращай внимание на разрешения и не давай ненужные.",
+          "text_translation_en": "I think you can start from a few angles. First, when downloading an app, pay attention to the permissions and don't grant unnecessary ones.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d30-s8",
+          "text_original": "具体哪些权限是不必要的？",
+          "pinyin": "Jùtǐ nǎxiē quánxiàn shì bú bìyào de?",
+          "text_translation": "Aniq qaysi ruxsatlar keraksiz?",
+          "text_translation_ru": "А какие конкретно разрешения являются ненужными?",
+          "text_translation_en": "Which permissions specifically are unnecessary?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d30-s9",
+          "text_original": "比如一个手电筒APP，却要求访问你的通讯录，这显然不合理。",
+          "pinyin": "Bǐrú yí ge shǒudiàntǒng APP, què yāoqiú fǎngwèn nǐ de tōngxùnlù, zhè xiǎnrán bù hélǐ.",
+          "text_translation": "Masalan, bitta fonarik ilovasi sening kontaktlar ro'yxatingga kirishni so'rasa, bu shubhasiz mantiqsiz.",
+          "text_translation_ru": "Например, приложение-фонарик, которое требует доступ к твоим контактам, — это явно необоснованно.",
+          "text_translation_en": "For example, a flashlight app that asks to access your contacts — that's obviously unreasonable.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d30-s10",
+          "text_original": "原来如此。我以前从来没注意过这些。",
+          "pinyin": "Yuánlái rúcǐ. Wǒ yǐqián cónglái méi zhùyì guo zhèxiē.",
+          "text_translation": "Mana qanaqa ekan. Men avval bularga hech qachon e'tibor bermaganman.",
+          "text_translation_ru": "Вот оно что. Раньше я никогда не обращал на это внимания.",
+          "text_translation_en": "I see. I never paid attention to these things before.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d30-s11",
+          "text_original": "另外，不要随便在不明网站上填写个人信息。不同的账号最好用不同的密码。",
+          "pinyin": "Lìngwài, búyào suíbiàn zài bùmíng wǎngzhàn shàng tiánxiě gèrén xìnxī. Bùtóng de zhànghào zuì hǎo yòng bùtóng de mìmǎ.",
+          "text_translation": "Bundan tashqari, noma'lum saytlarga shaxsiy ma'lumotni o'ylamasdan kiritma. Har xil hisoblar uchun har xil parol ishlatgan ma'qul.",
+          "text_translation_ru": "Кроме того, не вводи как попало личные данные на непонятных сайтах. Для разных аккаунтов лучше использовать разные пароли.",
+          "text_translation_en": "Also, don't casually fill in personal information on unfamiliar websites. It's best to use different passwords for different accounts.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d30-s12",
+          "text_original": "那如果信息已经被泄露了，能做什么补救吗？",
+          "pinyin": "Nà rúguǒ xìnxī yǐjīng bèi xièlòu le, néng zuò shénme bǔjiù ma?",
+          "text_translation": "Unda agar ma'lumot allaqachon sizib chiqqan bo'lsa, qandaydir chora ko'rsa bo'ladimi?",
+          "text_translation_ru": "А если данные уже утекли, можно что-то предпринять, чтобы исправить?",
+          "text_translation_en": "And if the information has already been leaked, is there anything I can do to remedy it?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d30-s13",
+          "text_original": "可以立刻更改相关账号的密码，密切注意银行账户是否有异常。",
+          "pinyin": "Kěyǐ lìkè gēnggǎi xiāngguān zhànghào de mìmǎ, mìqiè zhùyì yínháng zhànghù shìfǒu yǒu yìcháng.",
+          "text_translation": "Tegishli hisoblarning parolini darhol o'zgartirsang bo'ladi, bank hisobida nojo'yalik bor-yo'qligini diqqat bilan kuzat.",
+          "text_translation_ru": "Можно немедленно сменить пароли соответствующих аккаунтов и внимательно следить, нет ли отклонений на банковском счёте.",
+          "text_translation_en": "You can immediately change the passwords of the relevant accounts and closely watch whether there's anything abnormal with your bank account.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d30-s14",
+          "text_original": "你说得对。看来保护隐私这件事不能掉以轻心。",
+          "pinyin": "Nǐ shuō de duì. Kànlái bǎohù yǐnsī zhè jiàn shì bùnéng diàoyǐqīngxīn.",
+          "text_translation": "To'g'ri aytasan. Ko'rinishidan maxfiylikni himoya qilish masalasida beparvolik qilib bo'lmaydi.",
+          "text_translation_ru": "Ты прав. Похоже, к защите конфиденциальности нельзя относиться беспечно.",
+          "text_translation_en": "You're right. It seems protecting your privacy isn't something you can let your guard down about.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
