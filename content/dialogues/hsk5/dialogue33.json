@@ -1,0 +1,163 @@
+{
+  "id": "hsk5-dialogue33",
+  "slug": "ai-and-employment",
+  "title": "人工智能与就业",
+  "pinyin": "Réngōng zhìnéng yǔ jiùyè",
+  "titleTranslation": "Sun'iy intellekt va bandlik",
+  "titleTranslation_ru": "Искусственный интеллект и занятость",
+  "titleTranslation_en": "AI and Employment",
+  "level": 5,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "引进",
+    "系统",
+    "取代",
+    "局限性",
+    "已有",
+    "创造性",
+    "判断",
+    "转岗",
+    "替代",
+    "协作",
+    "软实力",
+    "过时",
+    "平稳"
+  ],
+  "sections": [
+    {
+      "id": "h5d33-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d33-s1",
+          "text_original": "你最近好像心事重重，是不是担心工作的事情？",
+          "pinyin": "Nǐ zuìjìn hǎoxiàng xīnshì chóngchóng, shì bú shì dānxīn gōngzuò de shìqing?",
+          "text_translation": "Yaqinda tashvishga botgandek ko'rinasan, ish haqida xavotirlanyapsanmi?",
+          "text_translation_ru": "Ты в последнее время вроде чем-то озабочен — переживаешь из-за работы?",
+          "text_translation_en": "You seem weighed down with worries lately — are you worried about work?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d33-s2",
+          "text_original": "对。我听说公司准备引进一套AI系统，很多人工岗位可能会被取代。",
+          "pinyin": "Duì. Wǒ tīngshuō gōngsī zhǔnbèi yǐnjìn yí tào AI xìtǒng, hěnduō réngōng gǎngwèi kěnéng huì bèi qǔdài.",
+          "text_translation": "Ha. Kompaniya bitta AI tizimini joriy etmoqchi deb eshitdim, ko'p qo'l mehnati lavozimi o'rnini bosishi mumkin.",
+          "text_translation_ru": "Да. Я слышал, что компания собирается внедрить систему ИИ, и многие рабочие места могут быть заменены.",
+          "text_translation_en": "Yeah. I heard the company is going to bring in an AI system, and many manual positions might be replaced.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d33-s3",
+          "text_original": "你担心自己的工作受到影响？",
+          "pinyin": "Nǐ dānxīn zìjǐ de gōngzuò shòudào yǐngxiǎng?",
+          "text_translation": "O'z ishingga ta'sir qilishidan xavotirlanyapsanmi?",
+          "text_translation_ru": "Ты боишься, что это затронет твою работу?",
+          "text_translation_en": "You're worried your own job will be affected?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d33-s4",
+          "text_original": "说不担心是假的。我做的是数据分析，AI确实比人快得多。",
+          "pinyin": "Shuō bù dānxīn shì jiǎ de. Wǒ zuò de shì shùjù fēnxī, AI quèshí bǐ rén kuài de duō.",
+          "text_translation": "Xavotirlanmayman desam yolg'on bo'ladi. Men ma'lumotlar tahlili bilan shug'ullanaman, AI rostdan odamdan ancha tez.",
+          "text_translation_ru": "Сказать, что не переживаю, было бы неправдой. Я занимаюсь анализом данных, а ИИ действительно намного быстрее человека.",
+          "text_translation_en": "It'd be a lie to say I'm not worried. I do data analysis, and AI really is much faster than a human.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d33-s5",
+          "text_original": "但AI也有局限性，它只能处理已有的数据，很难做出创造性的判断。",
+          "pinyin": "Dàn AI yě yǒu júxiànxìng, tā zhǐ néng chǔlǐ yǐyǒu de shùjù, hěn nán zuò chū chuàngzàoxìng de pànduàn.",
+          "text_translation": "Lekin AIning ham cheklanganligi bor, u faqat mavjud ma'lumotni qayta ishlay oladi, ijodiy xulosaga kelishi qiyin.",
+          "text_translation_ru": "Но у ИИ тоже есть ограничения: он может обрабатывать только имеющиеся данные, и ему трудно делать творческие суждения.",
+          "text_translation_en": "But AI has its limitations too — it can only process existing data and struggles to make creative judgments.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d33-s6",
+          "text_original": "这倒是。我也在考虑转岗，学习一些AI难以替代的技能。",
+          "pinyin": "Zhè dàoshì. Wǒ yě zài kǎolǜ zhuǎngǎng, xuéxí yì xiē AI nányǐ tìdài de jìnéng.",
+          "text_translation": "Bu to'g'ri. Men ham boshqa lavozimga o'tishni, AI o'rnini bosishi qiyin bo'lgan ko'nikmalarni o'rganishni o'ylayapman.",
+          "text_translation_ru": "Это верно. Я тоже подумываю о переводе на другую должность и об освоении навыков, которые ИИ трудно заменить.",
+          "text_translation_en": "That's true. I'm also considering switching roles and learning skills that AI can't easily replace.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d33-s7",
+          "text_original": "哪些技能你觉得AI难以替代？",
+          "pinyin": "Nǎxiē jìnéng nǐ juéde AI nányǐ tìdài?",
+          "text_translation": "Seningcha AI qaysi ko'nikmalarning o'rnini bosishi qiyin?",
+          "text_translation_ru": "Какие навыки, по-твоему, ИИ трудно заменить?",
+          "text_translation_en": "Which skills do you think AI can't easily replace?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d33-s8",
+          "text_original": "比如沟通能力、团队协作能力和情感理解能力。这些都是机器做不到的。",
+          "pinyin": "Bǐrú gōutōng nénglì, tuánduì xiézuò nénglì hé qínggǎn lǐjiě nénglì. Zhèxiē dōu shì jīqì zuò bú dào de.",
+          "text_translation": "Masalan muloqot qobiliyati, jamoaviy hamkorlik qobiliyati va his-tuyg'uni tushunish qobiliyati. Bularning hammasini mashina qila olmaydi.",
+          "text_translation_ru": "Например, навыки общения, умение работать в команде и способность понимать эмоции. Всё это машине не под силу.",
+          "text_translation_en": "Like communication skills, teamwork, and the ability to understand emotions. These are all things machines can't do.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d33-s9",
+          "text_original": "你说得对。未来职场可能不再是人和人竞争，而是人和AI协作。",
+          "pinyin": "Nǐ shuō de duì. Wèilái zhíchǎng kěnéng bú zài shì rén hé rén jìngzhēng, ér shì rén hé AI xiézuò.",
+          "text_translation": "To'g'ri aytasan. Kelajakdagi ish joyi balki odam bilan odam raqobati emas, balki odam bilan AI hamkorligi bo'lar.",
+          "text_translation_ru": "Ты прав. В будущем работа, возможно, будет не конкуренцией между людьми, а сотрудничеством человека и ИИ.",
+          "text_translation_en": "You're right. The future workplace may no longer be person-versus-person competition, but person-and-AI collaboration.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d33-s10",
+          "text_original": "我也这么认为。所以现在开始学习如何与AI合作很重要。",
+          "pinyin": "Wǒ yě zhème rènwéi. Suǒyǐ xiànzài kāishǐ xuéxí rúhé yǔ AI hézuò hěn zhòngyào.",
+          "text_translation": "Men ham shunday hisoblayman. Shuning uchun hozirdan AI bilan qanday ishlashni o'rganish juda muhim.",
+          "text_translation_ru": "Я тоже так считаю. Поэтому начать учиться тому, как сотрудничать с ИИ, сейчас очень важно.",
+          "text_translation_en": "I think so too. So starting to learn how to work with AI now is important.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d33-s11",
+          "text_original": "那你有没有具体的学习计划？",
+          "pinyin": "Nà nǐ yǒu méiyǒu jùtǐ de xuéxí jìhuà?",
+          "text_translation": "Unda aniq o'qish rejang bormi?",
+          "text_translation_ru": "А у тебя есть конкретный план обучения?",
+          "text_translation_en": "So do you have a specific study plan?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d33-s12",
+          "text_original": "我正在学习AI的基础知识，了解它的优缺点。同时也加强自己的软实力。",
+          "pinyin": "Wǒ zhèngzài xuéxí AI de jīchǔ zhīshi, liǎojiě tā de yōu quēdiǎn. Tóngshí yě jiāqiáng zìjǐ de ruǎn shílì.",
+          "text_translation": "Men hozir AIning asosiy bilimlarini o'rganyapman, uning yaxshi va kamchilik tomonlarini bilib olyapman. Shu bilan birga shaxsiy ko'nikmalarimni ham mustahkamlayapman.",
+          "text_translation_ru": "Я сейчас изучаю основы ИИ, разбираюсь в его плюсах и минусах. Одновременно укрепляю свои гибкие навыки.",
+          "text_translation_en": "I'm currently learning the basics of AI and understanding its pros and cons. At the same time I'm strengthening my soft skills.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d33-s13",
+          "text_original": "软实力确实很重要。沟通和领导能力在任何时代都不会过时。",
+          "pinyin": "Ruǎn shílì quèshí hěn zhòngyào. Gōutōng hé lǐngdǎo nénglì zài rènhé shídài dōu bú huì guòshí.",
+          "text_translation": "Shaxsiy ko'nikmalar rostdan juda muhim. Muloqot va yetakchilik qobiliyati har qanday davrda ham eskirmaydi.",
+          "text_translation_ru": "Гибкие навыки действительно очень важны. Умение общаться и руководить не устаревает ни в какую эпоху.",
+          "text_translation_en": "Soft skills really are important. Communication and leadership never go out of date in any era.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d33-s14",
+          "text_original": "所以我心态还算平稳，不害怕被取代，而是想办法让自己变得更有价值。",
+          "pinyin": "Suǒyǐ wǒ xīntài hái suàn píngwěn, bú hàipà bèi qǔdài, ér shì xiǎng bànfǎ ràng zìjǐ biàn de gèng yǒu jiàzhí.",
+          "text_translation": "Shuning uchun kayfiyatim hali ancha barqaror, o'rnimni bosishidan qo'rqmayman, balki o'zimni yanada qadrli qilishning yo'lini o'ylayapman.",
+          "text_translation_ru": "Поэтому мой настрой довольно устойчивый: я не боюсь, что меня заменят, а ищу способ сделать себя более ценным.",
+          "text_translation_en": "So my mindset is fairly steady — I'm not afraid of being replaced, but rather looking for ways to make myself more valuable.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
