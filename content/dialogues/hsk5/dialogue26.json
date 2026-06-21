@@ -1,0 +1,166 @@
+{
+  "id": "hsk5-dialogue26",
+  "slug": "urban-development",
+  "title": "城市发展",
+  "pinyin": "Chéngshì fāzhǎn",
+  "titleTranslation": "Shahar rivoji",
+  "titleTranslation_ru": "Развитие города",
+  "titleTranslation_en": "Urban Development",
+  "level": 5,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "拆",
+    "高楼",
+    "人情味",
+    "老街",
+    "商业街",
+    "热闹",
+    "记忆",
+    "矛盾",
+    "把握",
+    "保留",
+    "价值",
+    "吸引力",
+    "基础",
+    "设施",
+    "兼顾",
+    "决策者"
+  ],
+  "sections": [
+    {
+      "id": "h5d26-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d26-s1",
+          "text_original": "你最近回老家了吗？听说那边变化很大。",
+          "pinyin": "Nǐ zuìjìn huí lǎojiā le ma? Tīngshuō nàbiān biànhuà hěn dà.",
+          "text_translation": "Yaqinda ona yurtingga bordingmi? U yer juda o'zgaribdi deb eshitdim.",
+          "text_translation_ru": "Ты недавно ездил на родину? Говорят, там сильно всё изменилось.",
+          "text_translation_en": "Did you go back to your hometown recently? I heard it's changed a lot there.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d26-s2",
+          "text_original": "上个月回去了一趟，确实变化不小。以前的老房子都拆了，建了很多高楼和商场。",
+          "pinyin": "Shàng ge yuè huíqù le yí tàng, quèshí biànhuà bù xiǎo. Yǐqián de lǎo fángzi dōu chāi le, jiàn le hěnduō gāolóu hé shāngchǎng.",
+          "text_translation": "O'tgan oy bir borib keldim, rostdan o'zgarish kichik emas. Avvalgi eski uylar buzib tashlangan, ko'plab baland binolar va savdo majmualari qurilgan.",
+          "text_translation_ru": "В прошлом месяце съездил, и правда изменения немалые. Старые дома снесли, понастроили много высоток и торговых центров.",
+          "text_translation_en": "I went back once last month, and the changes really are big. The old houses were all demolished, and lots of high-rises and malls were built.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d26-s3",
+          "text_original": "这种变化你觉得是好还是不好？",
+          "pinyin": "Zhè zhǒng biànhuà nǐ juéde shì hǎo háishì bù hǎo?",
+          "text_translation": "Bunday o'zgarishni yaxshi deb o'ylaysanmi yoki yomon?",
+          "text_translation_ru": "Как ты думаешь, такие изменения — это хорошо или плохо?",
+          "text_translation_en": "Do you think this kind of change is good or bad?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d26-s4",
+          "text_original": "有好有坏吧。城市变漂亮了，生活更方便了，但也少了很多以前的记忆和人情味。",
+          "pinyin": "Yǒu hǎo yǒu huài ba. Chéngshì biàn piàoliang le, shēnghuó gèng fāngbiàn le, dàn yě shǎo le hěnduō yǐqián de jìyì hé rénqíngwèi.",
+          "text_translation": "Ham yaxshi, ham yomon tomoni bor. Shahar chiroyliroq bo'ldi, hayot qulayroq bo'ldi, lekin avvalgi ko'p xotira va samimiylik ham kamaydi.",
+          "text_translation_ru": "И хорошо, и плохо. Город стал красивее, жизнь удобнее, но вместе с тем ушло много прежних воспоминаний и душевности.",
+          "text_translation_en": "It's a mix. The city has become prettier and life is more convenient, but a lot of the old memories and human warmth are gone too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d26-s5",
+          "text_original": "我明白你的感受。旧的东西拆了，新的东西虽然好，但总觉得少了点什么。",
+          "pinyin": "Wǒ míngbai nǐ de gǎnshòu. Jiù de dōngxi chāi le, xīn de dōngxi suīrán hǎo, dàn zǒng juéde shǎo le diǎn shénme.",
+          "text_translation": "His-tuyg'ungni tushunaman. Eski narsalar buzildi, yangisi yaxshi bo'lsa-da, hadeb nimadir yetishmayotgandek tuyuladi.",
+          "text_translation_ru": "Я понимаю твои чувства. Старое снесли, новое хоть и хорошо, но всё время кажется, что чего-то не хватает.",
+          "text_translation_en": "I understand how you feel. The old things were torn down, and although the new things are nice, it always feels like something's missing.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d26-s6",
+          "text_original": "对。比如我以前常去的那条老街，现在变成了商业街，虽然很热闹，但已经不是我记忆中的样子了。",
+          "pinyin": "Duì. Bǐrú wǒ yǐqián cháng qù de nà tiáo lǎo jiē, xiànzài biàn chéng le shāngyè jiē, suīrán hěn rènao, dàn yǐjīng bú shì wǒ jìyì zhōng de yàngzi le.",
+          "text_translation": "To'g'ri. Masalan men avval tez-tez boradigan o'sha eski ko'cha endi savdo ko'chasiga aylangan, garchi juda gavjum bo'lsa-da, xotiramdagidek emas.",
+          "text_translation_ru": "Да. Например, та старая улица, куда я раньше часто ходил, теперь стала торговой — хоть и оживлённая, но это уже не та, что в моих воспоминаниях.",
+          "text_translation_en": "Right. For example, that old street I used to go to often has become a commercial street — it's lively, but it's no longer the way I remember it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d26-s7",
+          "text_original": "城市发展总是要面对这样的矛盾。发展与保护之间的平衡很难把握。",
+          "pinyin": "Chéngshì fāzhǎn zǒng shì yào miànduì zhèyàng de máodùn. Fāzhǎn yǔ bǎohù zhījiān de pínghéng hěn nán bǎwò.",
+          "text_translation": "Shahar rivoji doim shunday ziddiyatga duch keladi. Rivojlanish va saqlash o'rtasidagi muvozanatni ushlab qolish juda qiyin.",
+          "text_translation_ru": "Развитие города всегда сталкивается с таким противоречием. Баланс между развитием и сохранением очень трудно удержать.",
+          "text_translation_en": "Urban development always has to face this kind of contradiction. The balance between development and preservation is hard to strike.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d26-s8",
+          "text_original": "是啊。我觉得城市在发展的同时，也应该保留一些有历史价值的地方。",
+          "pinyin": "Shì a. Wǒ juéde chéngshì zài fāzhǎn de tóngshí, yě yīnggāi bǎoliú yì xiē yǒu lìshǐ jiàzhí de dìfang.",
+          "text_translation": "Ha. Menimcha shahar rivojlanish bilan birga, tarixiy qadrga ega ba'zi joylarni ham saqlab qolishi kerak.",
+          "text_translation_ru": "Да. По-моему, развиваясь, город должен в то же время сохранять некоторые места, имеющие историческую ценность.",
+          "text_translation_en": "Yeah. I think while a city develops, it should also preserve some places of historical value.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d26-s9",
+          "text_original": "我同意。很多人去一个城市，看的不是高楼，而是它的文化和历史。",
+          "pinyin": "Wǒ tóngyì. Hěnduō rén qù yí ge chéngshì, kàn de bú shì gāolóu, ér shì tā de wénhuà hé lìshǐ.",
+          "text_translation": "Roziman. Ko'p odam biror shaharga borganda, baland binolarni emas, balki uning madaniyati va tarixini ko'radi.",
+          "text_translation_ru": "Согласен. Многие, приезжая в город, смотрят не на высотки, а на его культуру и историю.",
+          "text_translation_en": "I agree. When many people visit a city, what they look at isn't the high-rises but its culture and history.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d26-s10",
+          "text_original": "对。像西安和南京，它们保留了古城墙和建筑，反而更有吸引力。",
+          "pinyin": "Duì. Xiàng Xī'ān hé Nánjīng, tāmen bǎoliú le gǔ chéngqiáng hé jiànzhú, fǎn'ér gèng yǒu xīyǐnlì.",
+          "text_translation": "To'g'ri. Si'an va Nankin kabi, ular qadimiy shahar devorlari va binolarni saqlab qolgani uchun aksincha ko'proq jozibali.",
+          "text_translation_ru": "Да. Например, Сиань и Нанкин сохранили древние городские стены и здания — и потому они, наоборот, привлекательнее.",
+          "text_translation_en": "Right. Cities like Xi'an and Nanjing preserved their ancient walls and architecture, which actually makes them more appealing.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d26-s11",
+          "text_original": "你希望你的老家未来怎么发展？",
+          "pinyin": "Nǐ xīwàng nǐ de lǎojiā wèilái zěnme fāzhǎn?",
+          "text_translation": "Ona yurting kelajakda qanday rivojlanishini xohlaysan?",
+          "text_translation_ru": "Каким ты хочешь видеть развитие своей родины в будущем?",
+          "text_translation_en": "How do you hope your hometown will develop in the future?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d26-s12",
+          "text_original": "我希望能在保持原有特色的基础上，适当改善基础设施。",
+          "pinyin": "Wǒ xīwàng néng zài bǎochí yuányǒu tèsè de jīchǔ shàng, shìdàng gǎishàn jīchǔ shèshī.",
+          "text_translation": "Asl o'ziga xosligini saqlagan holda, infratuzilmani me'yorida yaxshilashni umid qilaman.",
+          "text_translation_ru": "Я надеюсь, что, сохраняя изначальный колорит, можно будет разумно улучшить инфраструктуру.",
+          "text_translation_en": "I hope it can appropriately improve its infrastructure while keeping its original character.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d26-s13",
+          "text_original": "这个想法很好。保留特色和改善生活其实可以兼顾。",
+          "pinyin": "Zhè ge xiǎngfǎ hěn hǎo. Bǎoliú tèsè hé gǎishàn shēnghuó qíshí kěyǐ jiāngù.",
+          "text_translation": "Bu fikr juda yaxshi. O'ziga xoslikni saqlash va hayotni yaxshilash aslida birga olib borilishi mumkin.",
+          "text_translation_ru": "Хорошая мысль. Сохранение колорита и улучшение жизни на самом деле можно совместить.",
+          "text_translation_en": "That's a good idea. Preserving character and improving life can actually be balanced together.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d26-s14",
+          "text_original": "希望决策者也能这样想吧。",
+          "pinyin": "Xīwàng juécè zhě yě néng zhèyàng xiǎng ba.",
+          "text_translation": "Qaror qabul qiluvchilar ham shunday o'ylasa, deb umid qilaman.",
+          "text_translation_ru": "Будем надеяться, что и те, кто принимает решения, думают так же.",
+          "text_translation_en": "I just hope the decision-makers think this way too.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
