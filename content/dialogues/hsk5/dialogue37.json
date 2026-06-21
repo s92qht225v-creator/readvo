@@ -1,0 +1,241 @@
+{
+  "id": "hsk5-dialogue37",
+  "slug": "studying-abroad",
+  "title": "留学",
+  "pinyin": "Liúxué",
+  "titleTranslation": "Chet elda o'qish",
+  "titleTranslation_ru": "Учёба за границей",
+  "titleTranslation_en": "Studying Abroad",
+  "level": 5,
+  "tag": "ta'lim",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "留学",
+    "专业",
+    "理念",
+    "理由",
+    "详细",
+    "雅思",
+    "推荐信",
+    "个人陈述",
+    "成绩单",
+    "材料",
+    "动机",
+    "初稿",
+    "融入",
+    "结交",
+    "障碍",
+    "沟通",
+    "适应",
+    "硕士",
+    "博士"
+  ],
+  "sections": [
+    {
+      "id": "h5d37-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d37-s1",
+          "text_original": "听说你打算明年出国留学？真的假的？",
+          "pinyin": "Tīngshuō nǐ dǎsuàn míngnián chūguó liúxué? Zhēn de jiǎ de?",
+          "text_translation": "Kelgusi yili chet elga o'qishga ketmoqchisan deb eshitdim? Rostmi?",
+          "text_translation_ru": "Слышал, ты собираешься в следующем году учиться за границей? Правда?",
+          "text_translation_en": "I heard you're planning to study abroad next year? Is that true?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s2",
+          "text_original": "真的，我已经开始准备了。申请了英国的几所大学。",
+          "pinyin": "Zhēn de, wǒ yǐjīng kāishǐ zhǔnbèi le. Shēnqǐng le Yīngguó de jǐ suǒ dàxué.",
+          "text_translation": "Rost, allaqachon tayyorgarlik ko'ra boshladim. Angliyaning bir nechta universitetiga ariza topshirdim.",
+          "text_translation_ru": "Правда, я уже начал готовиться. Подал документы в несколько университетов Великобритании.",
+          "text_translation_en": "It's true, I've already started preparing. I've applied to a few universities in the UK.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d37-s3",
+          "text_original": "你学的什么专业？",
+          "pinyin": "Nǐ xué de shénme zhuānyè?",
+          "text_translation": "Qaysi mutaxassislik bo'yicha o'qiysan?",
+          "text_translation_ru": "По какой специальности ты учишься?",
+          "text_translation_en": "What's your major?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s4",
+          "text_original": "教育学。我一直对教育领域很感兴趣，想去国外看看不同的教育理念。",
+          "pinyin": "Jiàoyù xué. Wǒ yìzhí duì jiàoyù lǐngyù hěn gǎn xìngqù, xiǎng qù guówài kàn kan bùtóng de jiàoyù lǐniàn.",
+          "text_translation": "Pedagogika. Men doim ta'lim sohasiga qiziqaman, chet elga borib boshqacha ta'lim konsepsiyalarini ko'rmoqchiman.",
+          "text_translation_ru": "Педагогика. Меня всегда интересовала сфера образования, и я хочу за границей посмотреть на разные образовательные концепции.",
+          "text_translation_en": "Education. I've always been interested in the field of education, and I want to go abroad to see different educational philosophies.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d37-s5",
+          "text_original": "你爸妈支持你吗？",
+          "pinyin": "Nǐ bà mā zhīchí nǐ ma?",
+          "text_translation": "Ota-onang qo'llab-quvvatlaydimi?",
+          "text_translation_ru": "Родители тебя поддерживают?",
+          "text_translation_en": "Do your parents support you?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s6",
+          "text_original": "一开始他们挺担心的，觉得离家太远，怕我一个人照顾不好自己。",
+          "pinyin": "Yī kāishǐ tāmen tǐng dānxīn de, juéde lí jiā tài yuǎn, pà wǒ yí ge rén zhàogù bù hǎo zìjǐ.",
+          "text_translation": "Boshida ular ancha xavotirlanishdi, uydan juda uzoq deb o'ylab, yolg'iz o'zimni eplay olmasligimdan qo'rqishdi.",
+          "text_translation_ru": "Сначала они довольно сильно переживали — считали, что это слишком далеко от дома, и боялись, что я один не смогу за собой ухаживать.",
+          "text_translation_en": "At first they were quite worried — they felt it was too far from home and feared I couldn't take care of myself alone.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d37-s7",
+          "text_original": "那后来怎么改变他们想法的？",
+          "pinyin": "Nà hòulái zěnme gǎibiàn tāmen xiǎngfǎ de?",
+          "text_translation": "Unda keyin ularning fikrini qanday o'zgartirding?",
+          "text_translation_ru": "И как же ты потом изменил их мнение?",
+          "text_translation_en": "So how did you end up changing their minds?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s8",
+          "text_original": "我跟他们认真谈了几次，把我为什么想去留学的理由详细说了。他们也看到我很认真地在准备，就慢慢接受了。",
+          "pinyin": "Wǒ gēn tāmen rènzhēn tán le jǐ cì, bǎ wǒ wèishénme xiǎng qù liúxué de lǐyóu xiángxì shuō le. Tāmen yě kàn dào wǒ hěn rènzhēn de zài zhǔnbèi, jiù mànmàn jiēshòu le.",
+          "text_translation": "Ular bilan bir necha bor jiddiy gaplashdim, nega chet elga o'qishga bormoqchiligimning sabablarini batafsil aytib berdim. Ular jiddiy tayyorgarlik ko'rayotganimni ko'rib, asta-sekin qabul qilishdi.",
+          "text_translation_ru": "Я несколько раз серьёзно поговорил с ними, подробно объяснил причины, почему хочу учиться за границей. Они увидели, что я серьёзно готовлюсь, и постепенно смирились.",
+          "text_translation_en": "I had a few serious talks with them and explained in detail my reasons for wanting to study abroad. They also saw I was preparing seriously, and gradually came to accept it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d37-s9",
+          "text_original": "申请过程复杂吗？",
+          "pinyin": "Shēnqǐng guòchéng fùzá ma?",
+          "text_translation": "Ariza topshirish jarayoni murakkabmi?",
+          "text_translation_ru": "Процесс подачи документов сложный?",
+          "text_translation_en": "Is the application process complicated?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s10",
+          "text_original": "挺复杂的。要准备雅思成绩、推荐信、个人陈述，还有大学成绩单。",
+          "pinyin": "Tǐng fùzá de. Yào zhǔnbèi Yǎsī chéngjī, tuījiàn xìn, gèrén chénshù, hái yǒu dàxué chéngjì dān.",
+          "text_translation": "Ancha murakkab. IELTS natijasi, tavsiyanoma, shaxsiy bayonot, yana universitet baholar varaqasini tayyorlash kerak.",
+          "text_translation_ru": "Довольно сложный. Нужно подготовить результаты IELTS, рекомендательные письма, личное эссе и выписку оценок из вуза.",
+          "text_translation_en": "Quite complicated. You have to prepare IELTS scores, recommendation letters, a personal statement, and your university transcript.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d37-s11",
+          "text_original": "这些材料里面你觉得哪一项最难？",
+          "pinyin": "Zhèxiē cáiliào lǐmiàn nǐ juéde nǎ yī xiàng zuì nán?",
+          "text_translation": "Bu hujjatlar ichida seningcha qaysi biri eng qiyin?",
+          "text_translation_ru": "Среди этих документов какой, по-твоему, самый сложный?",
+          "text_translation_en": "Among these documents, which one do you think is the hardest?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s12",
+          "text_original": "个人陈述最难，因为要在有限的字数里表达清楚自己的动机和优势。",
+          "pinyin": "Gèrén chénshù zuì nán, yīnwèi yào zài yǒuxiàn de zìshù lǐ biǎodá qīngchu zìjǐ de dòngjī hé yōushì.",
+          "text_translation": "Shaxsiy bayonot eng qiyin, chunki cheklangan so'z hajmida o'z motivlaring va ustunliklaringni aniq ifodalash kerak.",
+          "text_translation_ru": "Личное эссе самое трудное, потому что в ограниченном количестве слов нужно ясно изложить свою мотивацию и сильные стороны.",
+          "text_translation_en": "The personal statement is the hardest, because you have to clearly express your motivation and strengths within a limited word count.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d37-s13",
+          "text_original": "那你现在准备到什么程度了？",
+          "pinyin": "Nà nǐ xiànzài zhǔnbèi dào shénme chéngdù le?",
+          "text_translation": "Unda hozir qay darajada tayyorlanding?",
+          "text_translation_ru": "А насколько ты сейчас подготовился?",
+          "text_translation_en": "So how far along are you with your preparation now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s14",
+          "text_original": "雅思已经考完了，成绩还不错。推荐信也找老师写好了，现在在写个人陈述的初稿。",
+          "pinyin": "Yǎsī yǐjīng kǎo wán le, chéngjī hái búcuò. Tuījiàn xìn yě zhǎo lǎoshī xiě hǎo le, xiànzài zài xiě gèrén chénshù de chūgǎo.",
+          "text_translation": "IELTSni allaqachon topshirdim, natija yomon emas. Tavsiyanomani ham o'qituvchidan yozdirib oldim, hozir shaxsiy bayonotning qoralamasini yozyapman.",
+          "text_translation_ru": "IELTS я уже сдал, результат неплохой. Рекомендательное письмо тоже попросил написать преподавателя, а сейчас пишу черновик личного эссе.",
+          "text_translation_en": "I've already finished the IELTS, and the score is decent. I've also had a teacher write my recommendation letter, and now I'm working on the first draft of my personal statement.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d37-s15",
+          "text_original": "你对未来的留学生活有什么期待吗？",
+          "pinyin": "Nǐ duì wèilái de liúxué shēnghuó yǒu shénme qīdài ma?",
+          "text_translation": "Kelajakdagi chet eldagi o'qish hayotidan qanday umidlaring bor?",
+          "text_translation_ru": "Чего ты ждёшь от будущей жизни на учёбе за границей?",
+          "text_translation_en": "What are you looking forward to about your future life studying abroad?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s16",
+          "text_original": "我希望能够融入当地的文化，结交不同国家的朋友，同时也能更深入地学习专业知识。",
+          "pinyin": "Wǒ xīwàng nénggòu róngrù dāngdì de wénhuà, jiéjiāo bùtóng guójiā de péngyou, tóngshí yě néng gèng shēnrù de xuéxí zhuānyè zhīshi.",
+          "text_translation": "Mahalliy madaniyatga singib ketishni, turli mamlakatlardan do'st orttirishni, shu bilan birga mutaxassislik bilimlarini chuqurroq o'rganishni umid qilaman.",
+          "text_translation_ru": "Я надеюсь влиться в местную культуру, завести друзей из разных стран и при этом глубже изучить профессиональные знания.",
+          "text_translation_en": "I hope to integrate into the local culture, make friends from different countries, and at the same time study my field more deeply.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d37-s17",
+          "text_original": "你不担心语言障碍吗？",
+          "pinyin": "Nǐ bù dānxīn yǔyán zhàng'ài ma?",
+          "text_translation": "Til to'sig'idan xavotirlanmaysanmi?",
+          "text_translation_ru": "Ты не переживаешь из-за языкового барьера?",
+          "text_translation_en": "Aren't you worried about the language barrier?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s18",
+          "text_original": "有一点担心，但我已经在提前练习口语了。到了那边，多开口交流，应该会慢慢适应的。",
+          "pinyin": "Yǒu yì diǎn dānxīn, dàn wǒ yǐjīng zài tíqián liànxí kǒuyǔ le. Dào le nàbiān, duō kāikǒu jiāoliú, yīnggāi huì mànmàn shìyìng de.",
+          "text_translation": "Biroz xavotirlanaman, lekin og'zaki nutqni oldindan mashq qila boshladim. U yerga borib, ko'proq gaplashib muloqot qilsam, asta-sekin moslashib ketsam kerak.",
+          "text_translation_ru": "Немного переживаю, но я уже заранее тренирую разговорную речь. Приехав туда, если буду больше говорить и общаться, постепенно привыкну.",
+          "text_translation_en": "A little worried, but I've already started practicing speaking in advance. Once I'm there, if I speak up and communicate more, I should gradually adapt.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d37-s19",
+          "text_original": "你准备去多久？",
+          "pinyin": "Nǐ zhǔnbèi qù duō jiǔ?",
+          "text_translation": "Qancha muddatga borishni mo'ljallayapsan?",
+          "text_translation_ru": "На сколько ты собираешься поехать?",
+          "text_translation_en": "How long are you planning to go for?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s20",
+          "text_original": "硕士项目是一年，如果适应得好，可能会考虑继续读博士。",
+          "pinyin": "Shuòshì xiàngmù shì yì nián, rúguǒ shìyìng de hǎo, kěnéng huì kǎolǜ jìxù dú bóshì.",
+          "text_translation": "Magistratura dasturi bir yil, agar yaxshi moslashsam, doktoranturada davom etishni o'ylab ko'rishim mumkin.",
+          "text_translation_ru": "Магистерская программа — один год; если хорошо адаптируюсь, возможно, подумаю о продолжении на докторантуре.",
+          "text_translation_en": "The master's program is one year; if I adapt well, I might consider going on to a doctorate.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d37-s21",
+          "text_original": "那你真的很有勇气。祝你申请顺利！",
+          "pinyin": "Nà nǐ zhēn de hěn yǒu yǒngqì. Zhù nǐ shēnqǐng shùnlì!",
+          "text_translation": "Sen rostdan juda jasoratlisan. Arizang muvaffaqiyatli bo'lsin!",
+          "text_translation_ru": "Ты и правда очень смелый. Удачи с поступлением!",
+          "text_translation_en": "You really are brave. Good luck with your application!",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d37-s22",
+          "text_original": "谢谢！希望一切顺利。",
+          "pinyin": "Xièxie! Xīwàng yíqiè shùnlì.",
+          "text_translation": "Rahmat! Hammasi yaxshi bo'lsin deb umid qilaman.",
+          "text_translation_ru": "Спасибо! Надеюсь, всё пройдёт гладко.",
+          "text_translation_en": "Thank you! I hope everything goes smoothly.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

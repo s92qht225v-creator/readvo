@@ -1,0 +1,159 @@
+{
+  "id": "hsk5-dialogue39",
+  "slug": "online-vs-offline-learning",
+  "title": "传统学习与在线学习",
+  "pinyin": "Chuántǒng xuéxí yǔ zàixiàn xuéxí",
+  "titleTranslation": "An'anaviy va onlayn o'qish",
+  "titleTranslation_ru": "Традиционное и онлайн-обучение",
+  "titleTranslation_en": "Traditional vs. Online Learning",
+  "level": 5,
+  "tag": "ta'lim",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "线上",
+    "线下",
+    "课程",
+    "灵活",
+    "分心",
+    "回放",
+    "反复",
+    "当面",
+    "指导",
+    "互动性",
+    "自律",
+    "自觉",
+    "冷清",
+    "接触",
+    "优秀",
+    "比拟",
+    "模式",
+    "优劣"
+  ],
+  "sections": [
+    {
+      "id": "h5d39-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d39-s1",
+          "text_original": "我最近报了一个线上英语课程，不用出门就能上课，特别方便。",
+          "pinyin": "Wǒ zuìjìn bào le yí ge xiànshàng Yīngyǔ kèchéng, búyòng chūmén jiù néng shàngkè, tèbié fāngbiàn.",
+          "text_translation": "Yaqinda bitta onlayn ingliz tili kursiga yozildim, uydan chiqmasdan dars o'tsa bo'ladi, juda qulay.",
+          "text_translation_ru": "Я недавно записался на онлайн-курс английского — можно учиться, не выходя из дома, очень удобно.",
+          "text_translation_en": "I recently signed up for an online English course — you can attend class without leaving home, which is super convenient.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d39-s2",
+          "text_original": "我也尝试过线上学习，但总觉得没有线下课程效果好。",
+          "pinyin": "Wǒ yě chángshì guo xiànshàng xuéxí, dàn zǒng juéde méiyǒu xiànxià kèchéng xiàoguǒ hǎo.",
+          "text_translation": "Men ham onlayn o'qishni sinab ko'rganman, lekin hadeb oflayn kursdek samarali emasdek tuyuladi.",
+          "text_translation_ru": "Я тоже пробовал онлайн-обучение, но мне всё время кажется, что эффект хуже, чем от очных занятий.",
+          "text_translation_en": "I've tried online learning too, but I always feel it's not as effective as offline courses.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d39-s3",
+          "text_original": "为什么？我觉得线上学习可以随时随地开始，时间很灵活。",
+          "pinyin": "Wèishénme? Wǒ juéde xiànshàng xuéxí kěyǐ suíshí suídì kāishǐ, shíjiān hěn línghuó.",
+          "text_translation": "Nega? Menimcha onlayn o'qishni istalgan vaqt va joyda boshlasa bo'ladi, vaqti juda moslashuvchan.",
+          "text_translation_ru": "Почему? По-моему, онлайн-обучение можно начать в любое время и в любом месте, график очень гибкий.",
+          "text_translation_en": "Why? I think online learning can start anytime, anywhere — the schedule is very flexible.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d39-s4",
+          "text_original": "灵活是优点，但缺点也很明显。我在家上课容易分心，经常想刷手机或者做别的。",
+          "pinyin": "Línghuó shì yōudiǎn, dàn quēdiǎn yě hěn míngxiǎn. Wǒ zài jiā shàngkè róngyì fēnxīn, jīngcháng xiǎng shuā shǒujī huòzhě zuò bié de.",
+          "text_translation": "Moslashuvchanlik afzallik, lekin kamchiligi ham yaqqol. Uyda dars o'tsam tez chalg'iyman, ko'pincha telefon titkilash yoki boshqa ish qilgim keladi.",
+          "text_translation_ru": "Гибкость — это плюс, но и минусы очевидны. Дома на занятиях я легко отвлекаюсь, часто хочется полистать телефон или заняться чем-то другим.",
+          "text_translation_en": "Flexibility is an advantage, but the drawbacks are obvious too. Studying at home I get distracted easily — I often want to scroll my phone or do something else.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d39-s5",
+          "text_original": "这个我也体会过。不过线上课程可以回放，听不懂的地方可以反复看。",
+          "pinyin": "Zhè ge wǒ yě tǐhuì guo. Búguò xiànshàng kèchéng kěyǐ huífàng, tīng bù dǒng de dìfang kěyǐ fǎnfù kàn.",
+          "text_translation": "Buni men ham boshdan kechirganman. Lekin onlayn kursni qayta ko'rsa bo'ladi, tushunmagan joyni qayta-qayta ko'rish mumkin.",
+          "text_translation_ru": "Это я тоже испытывал. Но онлайн-курс можно пересматривать: непонятные места можно смотреть многократно.",
+          "text_translation_en": "I've experienced that too. But online courses can be replayed — you can rewatch the parts you didn't understand over and over.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d39-s6",
+          "text_original": "确实，这是线下课程做不到的。但线下课堂有老师当面指导，互动性更强。",
+          "pinyin": "Quèshí, zhè shì xiànxià kèchéng zuò bú dào de. Dàn xiànxià kètáng yǒu lǎoshī dāngmiàn zhǐdǎo, hùdòngxìng gèng qiáng.",
+          "text_translation": "Rostdan, buni oflayn kurs qila olmaydi. Lekin oflayn darsda o'qituvchi yuzma-yuz yo'l-yo'riq beradi, interaktivlik kuchliroq.",
+          "text_translation_ru": "Действительно, этого очные курсы не могут. Но в очной аудитории преподаватель наставляет лично, и интерактивность выше.",
+          "text_translation_en": "True, that's something offline courses can't do. But in an offline classroom the teacher guides you in person, and the interactivity is stronger.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d39-s7",
+          "text_original": "你觉得哪一种学习方式更适合自律的人？",
+          "pinyin": "Nǐ juéde nǎ yī zhǒng xuéxí fāngshì gèng shìhé zìlǜ de rén?",
+          "text_translation": "Seningcha qaysi o'qish usuli o'z-o'zini intizomga sola oladigan odamga ko'proq mos?",
+          "text_translation_ru": "Как ты думаешь, какой способ обучения больше подходит дисциплинированным людям?",
+          "text_translation_en": "Which learning method do you think suits self-disciplined people better?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d39-s8",
+          "text_original": "自律的人当然更适合线上学习，因为没有老师盯着，全凭自觉。",
+          "pinyin": "Zìlǜ de rén dāngrán gèng shìhé xiànshàng xuéxí, yīnwèi méiyǒu lǎoshī dīng zhe, quán píng zìjué.",
+          "text_translation": "O'z-o'zini intizomga sola oladigan odamga, albatta, onlayn o'qish ko'proq mos, chunki o'qituvchi tikilib turmaydi, hammasi o'zining ongiga bog'liq.",
+          "text_translation_ru": "Дисциплинированным людям, конечно, больше подходит онлайн-обучение, ведь над тобой нет учителя — всё держится на сознательности.",
+          "text_translation_en": "Self-disciplined people are of course better suited to online learning, because there's no teacher watching — it all relies on self-motivation.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d39-s9",
+          "text_original": "那你觉得学生之间的互动呢？线上和线下有什么不同？",
+          "pinyin": "Nà nǐ juéde xuéshēng zhījiān de hùdòng ne? Xiànshàng hé xiànxià yǒu shénme bùtóng?",
+          "text_translation": "Unda o'quvchilar o'rtasidagi muloqot-chi? Onlayn bilan oflaynning qanday farqi bor?",
+          "text_translation_ru": "А как насчёт взаимодействия между студентами? Чем отличаются онлайн и офлайн?",
+          "text_translation_en": "What about interaction between students? How do online and offline differ?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d39-s10",
+          "text_original": "线下课堂同学之间可以面对面交流，分组讨论也更自然。线上就比较冷清，大家只是对着屏幕。",
+          "pinyin": "Xiànxià kètáng tóngxué zhījiān kěyǐ miànduìmiàn jiāoliú, fēnzǔ tǎolùn yě gèng zìrán. Xiànshàng jiù bǐjiào lěngqīng, dàjiā zhǐ shì duì zhe píngmù.",
+          "text_translation": "Oflayn darsda sinfdoshlar yuzma-yuz muloqot qila oladi, guruhga bo'linib muhokama qilish ham tabiiyroq. Onlayn esa ancha jonsiz, hamma faqat ekranga qarab o'tiradi.",
+          "text_translation_ru": "В очной аудитории однокурсники могут общаться лицом к лицу, и групповые обсуждения проходят естественнее. Онлайн же довольно безжизненно — все просто смотрят в экран.",
+          "text_translation_en": "In an offline classroom, classmates can talk face to face, and group discussions feel more natural. Online is rather lifeless — everyone is just staring at a screen.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d39-s11",
+          "text_original": "但我觉得线上也有优势，比如可以接触到全球各地的优秀老师。",
+          "pinyin": "Dàn wǒ juéde xiànshàng yě yǒu yōushì, bǐrú kěyǐ jiēchù dào quánqiú gèdì de yōuxiù lǎoshī.",
+          "text_translation": "Lekin menimcha onlaynning ham ustunligi bor, masalan dunyoning turli burchaklaridagi a'lo o'qituvchilar bilan tanishish mumkin.",
+          "text_translation_ru": "Но я считаю, что у онлайна тоже есть преимущества — например, можно получить доступ к отличным преподавателям со всего мира.",
+          "text_translation_en": "But I think online has advantages too — for example, you can access excellent teachers from all over the world.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d39-s12",
+          "text_original": "这确实是线下课堂无法比拟的。我觉得未来会是线上线下结合的趋势。",
+          "pinyin": "Zhè quèshí shì xiànxià kètáng wúfǎ bǐnǐ de. Wǒ juéde wèilái huì shì xiànshàng xiànxià jiéhé de qūshì.",
+          "text_translation": "Buni oflayn dars rostdan tenglasha olmaydi. Menimcha kelajakda onlayn va oflaynni birlashtirish tendentsiyasi bo'ladi.",
+          "text_translation_ru": "С этим очная аудитория действительно не может сравниться. Я думаю, будущее — за тенденцией сочетания онлайн и офлайн.",
+          "text_translation_en": "That really is something an offline classroom can't compare with. I think the future will be a trend of combining online and offline.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d39-s13",
+          "text_original": "我同意。两种模式各有优劣，关键看学习者的需求和习惯。",
+          "pinyin": "Wǒ tóngyì. Liǎng zhǒng móshì gè yǒu yōuliè, guānjiàn kàn xuéxí zhě de xūqiú hé xíguàn.",
+          "text_translation": "Roziman. Ikkala modelning ham o'z yaxshi va yomon tomonlari bor, asosiysi o'quvchining ehtiyoji va odatiga bog'liq.",
+          "text_translation_ru": "Согласен. У обеих моделей есть свои плюсы и минусы, главное — потребности и привычки самого учащегося.",
+          "text_translation_en": "I agree. Both models have their pros and cons — it mainly depends on the learner's needs and habits.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

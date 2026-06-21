@@ -1,0 +1,244 @@
+{
+  "id": "hsk5-dialogue36",
+  "slug": "electric-cars",
+  "title": "电动汽车",
+  "pinyin": "Diàndòng qìchē",
+  "titleTranslation": "Elektromobillar",
+  "titleTranslation_ru": "Электромобили",
+  "titleTranslation_en": "Electric Cars",
+  "level": 5,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "提车",
+    "油车",
+    "续航",
+    "长途",
+    "充电站",
+    "快充",
+    "慢充",
+    "地下车库",
+    "充电桩",
+    "物业",
+    "电工",
+    "落地价",
+    "保险",
+    "税费",
+    "成本",
+    "限行",
+    "普及",
+    "取代",
+    "趋势",
+    "成熟",
+    "缩水",
+    "通病"
+  ],
+  "sections": [
+    {
+      "id": "h5d36-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d36-s1",
+          "text_original": "听说你最近换车了？买了一辆电动车？",
+          "pinyin": "Tīngshuō nǐ zuìjìn huàn chē le? Mǎi le yí liàng diàndòng chē?",
+          "text_translation": "Yaqinda mashinangni almashtiribsan deb eshitdim? Elektromobil oldingmi?",
+          "text_translation_ru": "Слышал, ты недавно сменил машину? Купил электромобиль?",
+          "text_translation_en": "I heard you changed cars recently? You bought an electric car?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s2",
+          "text_original": "对，刚提车两周。考虑了很久，最后还是决定买电车。",
+          "pinyin": "Duì, gāng tí chē liǎng zhōu. Kǎolǜ le hěn jiǔ, zuìhòu háishì juédìng mǎi diàn chē.",
+          "text_translation": "Ha, endi mashinani olib ketganimga ikki hafta bo'ldi. Uzoq o'ylab, oxir-oqibat baribir elektromobil olishga qaror qildim.",
+          "text_translation_ru": "Да, забрал машину всего две недели назад. Долго думал и в итоге всё же решил купить электромобиль.",
+          "text_translation_en": "Yeah, I just picked it up two weeks ago. I deliberated for a long time and finally decided to buy an EV.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d36-s3",
+          "text_original": "你为什么选择电车而不是油车？",
+          "pinyin": "Nǐ wèishénme xuǎnzé diàn chē ér bú shì yóu chē?",
+          "text_translation": "Nega benzinli emas, elektromobilni tanlading?",
+          "text_translation_ru": "Почему ты выбрал электромобиль, а не бензиновую машину?",
+          "text_translation_en": "Why did you choose an EV instead of a gasoline car?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s4",
+          "text_original": "主要是为了省钱。平时上下班开，充电比加油便宜太多了。",
+          "pinyin": "Zhǔyào shì wèile shěng qián. Píngshí shàngxiàbān kāi, chōngdiàn bǐ jiāyóu piányi tài duō le.",
+          "text_translation": "Asosan pul tejash uchun. Odatda ishga borib-kelishda haydayman, quvvatlash benzin quyishdan ancha arzon.",
+          "text_translation_ru": "В основном ради экономии. Езжу обычно на работу и обратно, а зарядка намного дешевле бензина.",
+          "text_translation_en": "Mainly to save money. I drive it to and from work, and charging is much cheaper than refueling.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d36-s5",
+          "text_original": "听说电车续航是个问题，你有遇到过吗？",
+          "pinyin": "Tīngshuō diàn chē xùháng shì ge wèntí, nǐ yǒu yùdào guo ma?",
+          "text_translation": "Elektromobilning bir zaryadda yurish masofasi muammo deb eshitdim, sen bunga duch keldingmi?",
+          "text_translation_ru": "Говорят, у электромобилей запас хода — это проблема. Ты с этим сталкивался?",
+          "text_translation_en": "I heard range is a problem with EVs — have you run into that?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s6",
+          "text_original": "目前还好。我买的这款续航有四百多公里，市区开完全够用。",
+          "pinyin": "Mùqián hái hǎo. Wǒ mǎi de zhè kuǎn xùháng yǒu sìbǎi duō gōnglǐ, shìqū kāi wánquán gòu yòng.",
+          "text_translation": "Hozircha yaxshi. Men olgan bu modelning yurish masofasi to'rt yuz kilometrdan ortiq, shahar ichida haydashga to'liq yetadi.",
+          "text_translation_ru": "Пока нормально. У модели, которую я купил, запас хода больше четырёхсот километров, для города вполне хватает.",
+          "text_translation_en": "So far it's fine. The model I bought has a range of over four hundred kilometers, which is plenty for city driving.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d36-s7",
+          "text_original": "那如果跑长途呢？",
+          "pinyin": "Nà rúguǒ pǎo chángtú ne?",
+          "text_translation": "Unda uzoq masofaga yursang-chi?",
+          "text_translation_ru": "А если ехать на дальние расстояния?",
+          "text_translation_en": "And what about long-distance trips?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s8",
+          "text_original": "跑长途的话充电会比较麻烦，需要提前规划好充电站的位置。",
+          "pinyin": "Pǎo chángtú dehuà chōngdiàn huì bǐjiào máfan, xūyào tíqián guīhuà hǎo chōngdiàn zhàn de wèizhi.",
+          "text_translation": "Uzoq masofaga yursang quvvatlash ancha ovoragarchilik, quvvatlash stansiyalari joyini oldindan rejalashtirib qo'yish kerak.",
+          "text_translation_ru": "Если ехать далеко, с зарядкой довольно хлопотно — нужно заранее планировать расположение зарядных станций.",
+          "text_translation_en": "For long trips, charging is more of a hassle — you have to plan out where the charging stations are in advance.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d36-s9",
+          "text_original": "充电快吗？",
+          "pinyin": "Chōngdiàn kuài ma?",
+          "text_translation": "Quvvatlash tezmi?",
+          "text_translation_ru": "А заряжается быстро?",
+          "text_translation_en": "Is charging fast?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s10",
+          "text_original": "快充大概四十分钟能充到百分之八十，慢充要一整个晚上。",
+          "pinyin": "Kuài chōng dàgài sìshí fēnzhōng néng chōng dào bǎi fēn zhī bāshí, màn chōng yào yì zhěng ge wǎnshang.",
+          "text_translation": "Tez quvvatlash taxminan qirq daqiqada sakson foizgacha to'ladi, sekin quvvatlash bir kechani oladi.",
+          "text_translation_ru": "Быстрая зарядка примерно за сорок минут заряжает до восьмидесяти процентов, а медленная — на всю ночь.",
+          "text_translation_en": "Fast charging gets it to about eighty percent in forty minutes; slow charging takes a whole night.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d36-s11",
+          "text_original": "那你平时怎么充电？",
+          "pinyin": "Nà nǐ píngshí zěnme chōngdiàn?",
+          "text_translation": "Unda odatda qanday quvvatlaysan?",
+          "text_translation_ru": "А как ты обычно заряжаешь?",
+          "text_translation_en": "So how do you usually charge it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s12",
+          "text_original": "我在小区地下车库装了一个充电桩，晚上插上，第二天早上就充满了。",
+          "pinyin": "Wǒ zài xiǎoqū dìxià chēkù zhuāng le yí ge chōngdiàn zhuāng, wǎnshang chā shàng, dì'èr tiān zǎoshang jiù chōng mǎn le.",
+          "text_translation": "Turar-joy majmuasining yer osti avtoturargohiga bitta zaryad ustuni o'rnatdim, kechasi ulab qo'yaman, ertasi ertalab to'lib bo'ladi.",
+          "text_translation_ru": "Я установил зарядную станцию в подземном гараже своего двора: вечером подключаю, и к утру следующего дня она уже заряжена.",
+          "text_translation_en": "I installed a charging pile in my complex's underground garage — I plug it in at night, and by the next morning it's fully charged.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d36-s13",
+          "text_original": "安装充电桩麻烦吗？",
+          "pinyin": "Ānzhuāng chōngdiàn zhuāng máfan ma?",
+          "text_translation": "Zaryad ustunini o'rnatish ovoragarchilikmi?",
+          "text_translation_ru": "А устанавливать зарядную станцию хлопотно?",
+          "text_translation_en": "Was installing the charging pile a hassle?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s14",
+          "text_original": "有点麻烦，要跟物业申请，还得找电工拉线。但装好以后就方便了。",
+          "pinyin": "Yǒu diǎn máfan, yào gēn wùyè shēnqǐng, hái děi zhǎo diàngōng lā xiàn. Dàn zhuāng hǎo yǐhòu jiù fāngbiàn le.",
+          "text_translation": "Biroz ovoragarchilik, boshqaruv kompaniyasidan ruxsat olish, ustiga elektrik topib sim tortish kerak. Lekin o'rnatib bo'lgach qulay bo'ladi.",
+          "text_translation_ru": "Немного хлопотно: нужно подать заявку в управляющую компанию и найти электрика, чтобы протянуть провод. Но после установки уже удобно.",
+          "text_translation_en": "A bit of a hassle — you have to apply to the property management and find an electrician to run the wiring. But once it's installed it's convenient.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d36-s15",
+          "text_original": "那你这辆车落地花了多少钱？",
+          "pinyin": "Nà nǐ zhè liàng chē luòdì huā le duōshao qián?",
+          "text_translation": "Unda bu mashinaning barcha to'lovlari bilan jami qancha turdi?",
+          "text_translation_ru": "А во сколько тебе обошлась эта машина «под ключ»?",
+          "text_translation_en": "So how much did this car cost you all-in?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s16",
+          "text_original": "车价十八万，加上保险和税费，一共二十万出头。",
+          "pinyin": "Chē jià shíbā wàn, jiā shàng bǎoxiǎn hé shuìfèi, yígòng èrshí wàn chū tóu.",
+          "text_translation": "Mashina narxi o'n sakkiz ming, sug'urta va soliqlarni qo'shsang, jami yigirma mingdan sal oshadi.",
+          "text_translation_ru": "Цена машины сто восемьдесят тысяч, плюс страховка и налоги — в сумме чуть больше двухсот тысяч.",
+          "text_translation_en": "The car was 180,000, plus insurance and taxes — just over 200,000 in total.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d36-s17",
+          "text_original": "那确实不便宜。你觉得电车最大的优势是什么？",
+          "pinyin": "Nà quèshí bù piányi. Nǐ juéde diàn chē zuì dà de yōushì shì shénme?",
+          "text_translation": "Bu rostdan arzon emas. Seningcha elektromobilning eng katta ustunligi nima?",
+          "text_translation_ru": "Это и правда недёшево. Как ты думаешь, в чём главное преимущество электромобиля?",
+          "text_translation_en": "That really isn't cheap. What do you think is the biggest advantage of an EV?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s18",
+          "text_original": "用车成本低，安静，加速也快。而且现在很多城市不限行，非常方便。",
+          "pinyin": "Yòng chē chéngběn dī, ānjìng, jiāsù yě kuài. Érqiě xiànzài hěnduō chéngshì bù xiànxíng, fēicháng fāngbiàn.",
+          "text_translation": "Foydalanish xarajati past, tinch, tezlanishi ham tez. Qolaversa hozir ko'p shaharlarda harakat cheklovi yo'q, juda qulay.",
+          "text_translation_ru": "Низкая стоимость эксплуатации, тихий ход, быстрый разгон. К тому же сейчас во многих городах на них не распространяются ограничения движения — очень удобно.",
+          "text_translation_en": "Low running costs, quiet, and quick acceleration. Plus many cities now exempt them from driving restrictions, which is very convenient.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d36-s19",
+          "text_original": "那以后如果充电桩越来越普及，电车可能会取代油车吧。",
+          "pinyin": "Nà yǐhòu rúguǒ chōngdiàn zhuāng yuè lái yuè pǔjí, diàn chē kěnéng huì qǔdài yóu chē ba.",
+          "text_translation": "Unda kelajakda zaryad ustunlari tobora keng tarqalsa, elektromobil benzinli mashina o'rnini bosar.",
+          "text_translation_ru": "Тогда в будущем, если зарядные станции будут всё более распространены, электромобили, возможно, вытеснят бензиновые.",
+          "text_translation_en": "So in the future, if charging piles become more widespread, EVs might replace gasoline cars.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s20",
+          "text_original": "大趋势是这样的。不过现在油车技术很成熟，电车还有不少需要改进的地方。",
+          "pinyin": "Dà qūshì shì zhèyàng de. Búguò xiànzài yóu chē jìshù hěn chéngshú, diàn chē hái yǒu bùshǎo xūyào gǎijìn de dìfang.",
+          "text_translation": "Umumiy tendentsiya shunday. Lekin hozir benzinli mashina texnologiyasi juda yetuk, elektromobilda hali yaxshilash kerak bo'lgan ko'p joy bor.",
+          "text_translation_ru": "Общая тенденция такова. Но сейчас технологии бензиновых машин очень зрелые, а у электромобилей ещё немало мест, требующих доработки.",
+          "text_translation_en": "That's the big trend. But gasoline-car technology is very mature now, and EVs still have quite a few things that need improving.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d36-s21",
+          "text_original": "那你开了一段时间，觉得有什么不满意的地方吗？",
+          "pinyin": "Nà nǐ kāi le yí duàn shíjiān, juéde yǒu shénme bù mǎnyì de dìfang ma?",
+          "text_translation": "Unda bir muddat haydab, biror norozi bo'lgan joying bormi?",
+          "text_translation_ru": "А поездив какое-то время, ты нашёл что-то, чем недоволен?",
+          "text_translation_en": "After driving it for a while, is there anything you're not satisfied with?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d36-s22",
+          "text_original": "冬天续航会缩水，这是目前电车的通病。其他方面都还挺满意的。",
+          "pinyin": "Dōngtiān xùháng huì suōshuǐ, zhè shì mùqián diàn chē de tōngbìng. Qítā fāngmiàn dōu hái tǐng mǎnyì de.",
+          "text_translation": "Qishda yurish masofasi qisqaradi, bu hozirgi elektromobillarning umumiy nuqsoni. Boshqa jihatlardan ancha roziman.",
+          "text_translation_ru": "Зимой запас хода сокращается — это общий недостаток нынешних электромобилей. Остальным я вполне доволен.",
+          "text_translation_en": "In winter the range shrinks — that's a common problem with EVs right now. With everything else I'm quite satisfied.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

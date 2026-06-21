@@ -1,0 +1,188 @@
+{
+  "id": "hsk5-dialogue38",
+  "slug": "e-commerce",
+  "title": "电子商务",
+  "pinyin": "Diànzǐ shāngwù",
+  "titleTranslation": "Elektron tijorat",
+  "titleTranslation_ru": "Электронная коммерция",
+  "titleTranslation_en": "E-commerce",
+  "level": 5,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "实体店",
+    "电商",
+    "冲击",
+    "转型",
+    "结合",
+    "模式",
+    "体验式消费",
+    "销售额",
+    "格局",
+    "垄断",
+    "仓储",
+    "直播带货",
+    "感染力",
+    "限时优惠",
+    "兴起",
+    "双刃剑",
+    "透明",
+    "挤压",
+    "生存空间",
+    "多元化"
+  ],
+  "sections": [
+    {
+      "id": "h5d38-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d38-s1",
+          "text_original": "你有没有发现，现在街上的实体店越来越少了？",
+          "pinyin": "Nǐ yǒu méiyǒu fāxiàn, xiànzài jiē shàng de shítǐ diàn yuè lái yuè shǎo le?",
+          "text_translation": "Sezdingmi, hozir ko'chadagi oddiy do'konlar tobora kamayyapti?",
+          "text_translation_ru": "Ты замечал, что обычных магазинов на улицах становится всё меньше?",
+          "text_translation_en": "Have you noticed that there are fewer and fewer physical stores on the streets now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d38-s2",
+          "text_original": "确实。我上周想去买双鞋，发现以前常去的那家店关门了。",
+          "pinyin": "Quèshí. Wǒ shàng zhōu xiǎng qù mǎi shuāng xié, fāxiàn yǐqián cháng qù de nà jiā diàn guānmén le.",
+          "text_translation": "Rostdan. O'tgan hafta poyabzal olmoqchi bo'ldim, avval tez-tez boradigan o'sha do'kon yopilibdi.",
+          "text_translation_ru": "Действительно. На прошлой неделе хотел купить туфли и обнаружил, что магазин, куда раньше часто ходил, закрылся.",
+          "text_translation_en": "True. Last week I wanted to buy a pair of shoes and found that the store I used to go to had closed down.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d38-s3",
+          "text_original": "这就是电商带来的冲击。现在大家都习惯在网上买东西，实体店的生意越来越难做。",
+          "pinyin": "Zhè jiùshì diànshāng dài lái de chōngjī. Xiànzài dàjiā dōu xíguàn zài wǎngshàng mǎi dōngxi, shítǐ diàn de shēngyi yuè lái yuè nán zuò.",
+          "text_translation": "Mana bu elektron tijorat keltirgan zarba. Hozir hamma internetdan xarid qilishga o'rgangan, oddiy do'konlarning ishi tobora qiyinlashyapti.",
+          "text_translation_ru": "Это и есть удар, который нанесла электронная коммерция. Сейчас все привыкли покупать в интернете, и обычным магазинам всё труднее вести дела.",
+          "text_translation_en": "This is the impact brought by e-commerce. Everyone is used to buying online now, and physical stores find business harder and harder.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d38-s4",
+          "text_original": "但我觉得有些东西还是去实体店买更放心，比如衣服和鞋子，要试穿才行。",
+          "pinyin": "Dàn wǒ juéde yǒuxiē dōngxi háishì qù shítǐ diàn mǎi gèng fàngxīn, bǐrú yīfu hé xiézi, yào shìchuān cái xíng.",
+          "text_translation": "Lekin menimcha ba'zi narsalarni baribir oddiy do'kondan olgan ko'ngilga tinchroq, masalan kiyim va poyabzal, kiyib ko'rish kerak.",
+          "text_translation_ru": "Но я считаю, что некоторые вещи всё же спокойнее покупать в обычном магазине, например одежду и обувь — их нужно примерить.",
+          "text_translation_en": "But I think some things are more reassuring to buy in a physical store — like clothes and shoes, you have to try them on.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d38-s5",
+          "text_original": "是啊，所以现在很多实体店也在转型，线上线下结合的模式越来越流行。",
+          "pinyin": "Shì a, suǒyǐ xiànzài hěnduō shítǐ diàn yě zài zhuǎnxíng, xiànshàng xiànxià jiéhé de móshì yuè lái yuè liúxíng.",
+          "text_translation": "Ha, shuning uchun hozir ko'p oddiy do'kon ham qayta o'zgaryapti, onlayn va oflayn birlashtirilgan model tobora ommabop bo'lyapti.",
+          "text_translation_ru": "Да, поэтому сейчас многие обычные магазины тоже трансформируются, и модель сочетания онлайн и офлайн становится всё популярнее.",
+          "text_translation_en": "Yeah, so many physical stores are transforming now, and the online-offline combined model is getting more and more popular.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d38-s6",
+          "text_original": "我注意到一些服装品牌，可以在店里试穿，然后在网上下单，价格还更便宜。",
+          "pinyin": "Wǒ zhùyì dào yì xiē fúzhuāng pǐnpái, kěyǐ zài diàn lǐ shìchuān, ránhòu zài wǎngshàng xiàdān, jiàgé hái gèng piányi.",
+          "text_translation": "Ba'zi kiyim brendlarini payqadim, do'konda kiyib ko'rib, keyin internetdan buyurtma qilsa bo'ladi, narxi ham arzonroq.",
+          "text_translation_ru": "Я заметил, что у некоторых брендов одежды можно примерить в магазине, а потом заказать онлайн, и цена при этом ниже.",
+          "text_translation_en": "I've noticed some clothing brands where you can try things on in the store and then order online, and it's even cheaper.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d38-s7",
+          "text_original": "这就是「体验式消费」吧。顾客享受了服务的体验，商家也保住了销售额。",
+          "pinyin": "Zhè jiùshì 'tǐyàn shì xiāofèi' ba. Gùkè xiǎngshòu le fúwù de tǐyàn, shāngjiā yě bǎo zhù le xiāoshòu'é.",
+          "text_translation": "Mana bu «tajribaviy iste'mol»-da. Mijoz xizmat tajribasidan zavqlanadi, sotuvchi ham savdo hajmini saqlab qoladi.",
+          "text_translation_ru": "Это, наверное, и есть «потребление через впечатления». Клиент получает удовольствие от сервиса, а продавец сохраняет объём продаж.",
+          "text_translation_en": "This must be \"experiential consumption.\" Customers enjoy the service experience, and merchants keep their sales volume.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d38-s8",
+          "text_original": "电商确实改变了零售业的格局。小店铺很难竞争，大平台却越来越垄断。",
+          "pinyin": "Diànshāng quèshí gǎibiàn le língshòu yè de géjú. Xiǎo diànpù hěn nán jìngzhēng, dà píngtái què yuè lái yuè lǒngduàn.",
+          "text_translation": "Elektron tijorat rostdan chakana savdo manzarasini o'zgartirdi. Kichik do'konchalar raqobatlasha olmaydi, yirik platformalar esa tobora monopollashyapti.",
+          "text_translation_ru": "Электронная коммерция действительно изменила расстановку сил в розничной торговле. Маленьким лавкам трудно конкурировать, а крупные платформы всё больше монополизируют рынок.",
+          "text_translation_en": "E-commerce really has changed the landscape of retail. Small shops can hardly compete, while big platforms increasingly monopolize.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d38-s9",
+          "text_original": "这种趋势让很多人开始担心，以后街上的店铺会不会只剩下餐饮和理发店这些服务业了？",
+          "pinyin": "Zhè zhǒng qūshì ràng hěnduō rén kāishǐ dānxīn, yǐhòu jiē shàng de diànpù huì bú huì zhǐ shèng xià cānyǐn hé lǐfà diàn zhèxiē fúwù yè le?",
+          "text_translation": "Bunday tendentsiya ko'p odamni xavotirga sola boshladi: kelajakda ko'chadagi do'konlardan faqat ovqatlanish va sartaroshxona kabi xizmat ko'rsatish sohalari qolib ketmaydimi?",
+          "text_translation_ru": "Эта тенденция начала многих беспокоить: не останутся ли в будущем на улицах только заведения сферы услуг — общепит и парикмахерские?",
+          "text_translation_en": "This trend has made many people worry: will the only shops left on the streets be service businesses like restaurants and barbershops?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d38-s10",
+          "text_original": "很有可能。不过电商也创造了新的就业机会，比如快递、仓储和直播带货。",
+          "pinyin": "Hěn yǒu kěnéng. Búguò diànshāng yě chuàngzào le xīn de jiùyè jīhuì, bǐrú kuàidì, cāngchǔ hé zhíbò dàihuò.",
+          "text_translation": "Juda ehtimol. Lekin elektron tijorat yangi ish o'rinlarini ham yaratdi, masalan kuryerlik, omborxona va jonli efirda sotuv.",
+          "text_translation_ru": "Вполне возможно. Но электронная коммерция создала и новые рабочие места — например, доставка, складирование и продажи в прямом эфире.",
+          "text_translation_en": "Very possibly. But e-commerce has also created new jobs — like delivery, warehousing, and livestream selling.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d38-s11",
+          "text_original": "直播带货确实很火。我有一次看直播，忍不住就下单了。",
+          "pinyin": "Zhíbò dàihuò quèshí hěn huǒ. Wǒ yǒu yī cì kàn zhíbò, rěnbúzhù jiù xiàdān le.",
+          "text_translation": "Jonli efirda sotuv rostdan juda ommabop. Bir marta jonli efir ko'rib, o'zimni tiya olmay buyurtma berib yubordim.",
+          "text_translation_ru": "Продажи в прямом эфире и правда очень популярны. Я однажды смотрел трансляцию и не удержался — оформил заказ.",
+          "text_translation_en": "Livestream selling really is hot. Once I was watching a livestream and couldn't resist placing an order.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d38-s12",
+          "text_original": "我也是。主播的介绍很有感染力，加上限时优惠，真的很冲动。",
+          "pinyin": "Wǒ yě shì. Zhǔbō de jièshào hěn yǒu gǎnrǎnlì, jiā shàng xiànshí yōuhuì, zhēn de hěn chōngdòng.",
+          "text_translation": "Men ham. Boshlovchining tanishtirishi juda ta'sirli, ustiga cheklangan vaqtli chegirma qo'shilsa, rostdan o'ylamasdan olib qo'yasan.",
+          "text_translation_ru": "Я тоже. Подача ведущего очень заразительна, плюс акция на ограниченное время — действительно покупаешь импульсивно.",
+          "text_translation_en": "Me too. The host's pitch is really infectious, and combined with the limited-time offer, you really do buy on impulse.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d38-s13",
+          "text_original": "你觉得电商的兴起是好事还是坏事？",
+          "pinyin": "Nǐ juéde diànshāng de xīngqǐ shì hǎoshì háishì huài shì?",
+          "text_translation": "Seningcha elektron tijoratning paydo bo'lishi yaxshimi yoki yomonmi?",
+          "text_translation_ru": "Как ты думаешь, подъём электронной коммерции — это хорошо или плохо?",
+          "text_translation_en": "Do you think the rise of e-commerce is a good thing or a bad thing?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d38-s14",
+          "text_original": "我觉得是双刃剑。一方面方便了生活，价格也透明了；另一方面却挤压了实体店的生存空间。",
+          "pinyin": "Wǒ juéde shì shuāngrènjiàn. Yì fāngmiàn fāngbiàn le shēnghuó, jiàgé yě tòumíng le; lìng yì fāngmiàn què jǐyā le shítǐ diàn de shēngcún kōngjiān.",
+          "text_translation": "Menimcha bu ikki tomonlama narsa. Bir tomondan hayotni qulaylashtirdi, narxlar ham shaffof bo'ldi; ikkinchi tomondan oddiy do'konlarning yashash maydonini siqib qo'ydi.",
+          "text_translation_ru": "По-моему, это палка о двух концах. С одной стороны, она облегчила жизнь, и цены стали прозрачными; с другой — вытеснила обычные магазины, сузив их пространство для существования.",
+          "text_translation_en": "I think it's a double-edged sword. On one hand it makes life convenient and prices transparent; on the other it squeezes the survival space of physical stores.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d38-s15",
+          "text_original": "我同意。关键是如何在便利和公平之间找到平衡。",
+          "pinyin": "Wǒ tóngyì. Guānjiàn shì rúhé zài biànlì hé gōngpíng zhījiān zhǎodào pínghéng.",
+          "text_translation": "Roziman. Asosiysi qulaylik va adolat o'rtasida qanday muvozanat topishda.",
+          "text_translation_ru": "Согласен. Главное — как найти баланс между удобством и справедливостью.",
+          "text_translation_en": "I agree. The key is how to find a balance between convenience and fairness.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d38-s16",
+          "text_original": "希望未来的零售业能更加多元化，线上和线下都能找到各自的位置。",
+          "pinyin": "Xīwàng wèilái de língshòu yè néng gèng jiā duōyuánhuà, xiànshàng hé xiànxià dōu néng zhǎodào gèzì de wèizhi.",
+          "text_translation": "Kelajakdagi chakana savdo yanada xilma-xil bo'lib, onlayn ham, oflayn ham o'z o'rnini topsa, deb umid qilaman.",
+          "text_translation_ru": "Надеюсь, в будущем розничная торговля станет более разнообразной, и онлайн, и офлайн смогут найти своё место.",
+          "text_translation_en": "I hope future retail can become more diversified, with both online and offline finding their own place.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
