@@ -1,0 +1,199 @@
+{
+  "id": "hsk5-dialogue34",
+  "slug": "elderly-care-pressure",
+  "title": "养老压力",
+  "pinyin": "Yǎnglǎo yālì",
+  "titleTranslation": "Keksalarni boqish yuki",
+  "titleTranslation_ru": "Бремя ухода за пожилыми",
+  "titleTranslation_en": "Pressure of Elderly Care",
+  "level": 5,
+  "tag": "oila",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "愁眉苦脸",
+    "养老",
+    "老家",
+    "保姆",
+    "护工",
+    "待遇",
+    "开销",
+    "精力",
+    "独生子女",
+    "责任",
+    "折中",
+    "上门护理",
+    "合理"
+  ],
+  "sections": [
+    {
+      "id": "h5d34-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d34-s1",
+          "text_original": "你最近怎么总是愁眉苦脸的？是不是家里有什么事？",
+          "pinyin": "Nǐ zuìjìn zěnme zǒng shì chóuméi kǔliǎn de? Shì bú shì jiā lǐ yǒu shénme shì?",
+          "text_translation": "Yaqinda nega doim qovog'ing soliq, tashvishli ko'rinasan? Uyda biror gap bo'ldimi?",
+          "text_translation_ru": "Почему ты в последнее время всё время такой хмурый? Дома что-то случилось?",
+          "text_translation_en": "Why have you been looking so worried lately? Is something going on at home?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d34-s2",
+          "text_original": "我爸妈年纪大了，身体越来越差。我最近在考虑怎么安排他们的养老问题。",
+          "pinyin": "Wǒ bà mā niánjì dà le, shēntǐ yuè lái yuè chà. Wǒ zuìjìn zài kǎolǜ zěnme ānpái tāmen de yǎnglǎo wèntí.",
+          "text_translation": "Ota-onam yoshi ulg'aydi, sog'lig'i tobora yomonlashyapti. Yaqinda ularning keksalik ta'minoti masalasini qanday tashkil qilishni o'ylab yuribman.",
+          "text_translation_ru": "Мои родители постарели, со здоровьем всё хуже. Я в последнее время думаю, как организовать уход за ними в старости.",
+          "text_translation_en": "My parents have gotten older and their health is getting worse. Lately I've been thinking about how to arrange their elderly care.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d34-s3",
+          "text_original": "他们现在在哪儿住？",
+          "pinyin": "Tāmen xiànzài zài nǎr zhù?",
+          "text_translation": "Ular hozir qayerda yashaydi?",
+          "text_translation_ru": "Где они сейчас живут?",
+          "text_translation_en": "Where do they live now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d34-s4",
+          "text_original": "在老家，离我这儿三百多公里。每次他们生病，我都得请假赶回去。",
+          "pinyin": "Zài lǎojiā, lí wǒ zhèr sānbǎi duō gōnglǐ. Měi cì tāmen shēngbìng, wǒ dōu děi qǐngjià gǎn huíqù.",
+          "text_translation": "Ona yurtda, men turgan joydan uch yuz kilometrdan ortiq uzoqda. Har safar ular kasal bo'lganda, men ish so'rab shoshilib qaytishim kerak.",
+          "text_translation_ru": "На родине, в трёхстах с лишним километрах от меня. Каждый раз, когда они болеют, мне приходится отпрашиваться и срочно ехать обратно.",
+          "text_translation_en": "In my hometown, over three hundred kilometers from here. Every time they get sick, I have to take leave and rush back.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d34-s5",
+          "text_original": "这样确实不方便。你有没有考虑过接他们过来住？",
+          "pinyin": "Zhèyàng quèshí bù fāngbiàn. Nǐ yǒu méiyǒu kǎolǜ guo jiē tāmen guòlái zhù?",
+          "text_translation": "Bunday rostdan noqulay. Ularni o'z oldingga olib kelib yashashni o'ylab ko'rganmiding?",
+          "text_translation_ru": "Это и правда неудобно. Ты не думал перевезти их к себе?",
+          "text_translation_en": "That really is inconvenient. Have you considered having them move in with you?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d34-s6",
+          "text_original": "想过，但是他们在老家生活了几十年，亲戚朋友都在那边，不愿意搬。",
+          "pinyin": "Xiǎng guo, dànshì tāmen zài lǎojiā shēnghuó le jǐ shí nián, qīnqi péngyou dōu zài nàbiān, bù yuànyì bān.",
+          "text_translation": "O'ylaganman, lekin ular ona yurtda o'nlab yil yashagan, qarindosh-urug', do'stlari hammasi o'sha yerda, ko'chishni xohlashmaydi.",
+          "text_translation_ru": "Думал, но они прожили на родине несколько десятков лет, все родственники и друзья там, и они не хотят переезжать.",
+          "text_translation_en": "I have, but they've lived in their hometown for decades — all their relatives and friends are there, and they don't want to move.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d34-s7",
+          "text_original": "那确实是个难题。你们有没有找过保姆或者护工？",
+          "pinyin": "Nà quèshí shì ge nántí. Nǐmen yǒu méiyǒu zhǎo guo bǎomǔ huòzhě hùgōng?",
+          "text_translation": "Bu rostdan mushkul masala. Enaga yoki parvarishchi topib ko'rganmidingiz?",
+          "text_translation_ru": "Это действительно сложная задача. Вы пробовали найти няню или сиделку?",
+          "text_translation_en": "That really is a tough problem. Have you tried finding a nanny or a caregiver?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d34-s8",
+          "text_original": "找过，但老家那边不好找，待遇不高，没人愿意干。",
+          "pinyin": "Zhǎo guo, dàn lǎojiā nàbiān bù hǎo zhǎo, dàiyù bù gāo, méi rén yuànyì gàn.",
+          "text_translation": "Topib ko'rdim, lekin ona yurt tomonda topish qiyin, haqi past, hech kim ishlashni xohlamaydi.",
+          "text_translation_ru": "Пробовали, но на родине трудно найти: оплата низкая, и никто не хочет браться.",
+          "text_translation_en": "I have, but it's hard to find one back home — the pay is low, and no one wants to do it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d34-s9",
+          "text_original": "那你现在的压力主要是经济上的还是时间上的？",
+          "pinyin": "Nà nǐ xiànzài de yālì zhǔyào shì jīngjì shàng de háishì shíjiān shàng de?",
+          "text_translation": "Unda hozirgi bosiming asosan moliyaviymi yoki vaqt jihatidanmi?",
+          "text_translation_ru": "А твоё нынешнее давление в основном финансовое или связано со временем?",
+          "text_translation_en": "So is your pressure now mainly financial or time-related?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d34-s10",
+          "text_original": "两个都有。每个月给他们生活费、医药费，加起来是一笔不小的开销。加上来回跑的时间和精力，真的很累。",
+          "pinyin": "Liǎng ge dōu yǒu. Měi ge yuè gěi tāmen shēnghuó fèi, yīyào fèi, jiā qǐlái shì yī bǐ bù xiǎo de kāixiāo. Jiā shàng láihuí pǎo de shíjiān hé jīnglì, zhēn de hěn lèi.",
+          "text_translation": "Ikkalasi ham. Har oy ularga yashash xarajati, dori-darmon puli beraman, qo'shsang anchagina xarajat bo'ladi. Ustiga borib-kelishga ketadigan vaqt va kuch-quvvat, rostdan juda charchataman.",
+          "text_translation_ru": "И то, и другое. Каждый месяц даю им деньги на жизнь и на лекарства — в сумме немалые расходы. Плюс время и силы на дорогу туда-обратно — я правда очень устаю.",
+          "text_translation_en": "Both. Every month I give them living and medical expenses, which add up to a sizeable cost. On top of that, the time and energy of traveling back and forth — I'm really exhausted.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d34-s11",
+          "text_original": "我完全理解。养老问题对独生子女来说压力更大。",
+          "pinyin": "Wǒ wánquán lǐjiě. Yǎnglǎo wèntí duì dúshēng zǐnǚ lái shuō yālì gèng dà.",
+          "text_translation": "To'liq tushunaman. Keksalik ta'minoti masalasi yolg'iz farzand uchun yanada og'ir.",
+          "text_translation_ru": "Я полностью понимаю. Для единственного ребёнка бремя ухода за пожилыми ещё тяжелее.",
+          "text_translation_en": "I completely understand. Elderly care is even more stressful for an only child.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d34-s12",
+          "text_original": "是啊，我就是独生子。所有责任都落在我一个人身上，有时候真的感觉喘不过气来。",
+          "pinyin": "Shì a, wǒ jiùshì dúshēng zǐ. Suǒyǒu zérèn dōu luò zài wǒ yí ge rén shēnshang, yǒu shíhou zhēn de gǎnjué chuǎn bú guò qì lái.",
+          "text_translation": "Ha, men yolg'iz o'g'ilman. Hamma mas'uliyat yolg'iz menga tushadi, ba'zan rostdan nafas ololmayotgandek his qilaman.",
+          "text_translation_ru": "Да, я единственный сын. Вся ответственность лежит на мне одном, и иногда я правда чувствую, что задыхаюсь.",
+          "text_translation_en": "Yeah, I'm an only child. All the responsibility falls on me alone, and sometimes I really feel like I can't breathe.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d34-s13",
+          "text_original": "你有没有想过和父母好好谈一次，看看有没有折中的方案？",
+          "pinyin": "Nǐ yǒu méiyǒu xiǎng guo hé fùmǔ hǎohao tán yī cì, kàn kan yǒu méiyǒu zhézhōng de fāng'àn?",
+          "text_translation": "Ota-onang bilan bir bor yaxshilab gaplashib, murosa yo'li bor-yo'qligini ko'rishni o'ylab ko'rganmiding?",
+          "text_translation_ru": "Ты не думал хорошенько поговорить с родителями и посмотреть, нет ли компромиссного варианта?",
+          "text_translation_en": "Have you thought about having a proper talk with your parents to see if there's a compromise?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d34-s14",
+          "text_original": "谈过几次，他们还是不想离开老家。我只能尽量多抽时间回去看他们。",
+          "pinyin": "Tán guo jǐ cì, tāmen háishì bù xiǎng líkāi lǎojiā. Wǒ zhǐ néng jǐnliàng duō chōu shíjiān huíqù kàn tāmen.",
+          "text_translation": "Bir necha bor gaplashdim, ular baribir ona yurtni tark etishni xohlamaydi. Men faqat imkon qadar ko'proq vaqt ajratib, borib ularni ko'rib turaman.",
+          "text_translation_ru": "Разговаривали несколько раз, они всё равно не хотят уезжать с родины. Мне остаётся только по возможности чаще выбираться навестить их.",
+          "text_translation_en": "We've talked a few times, but they still don't want to leave home. All I can do is make as much time as possible to go back and see them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d34-s15",
+          "text_original": "那你能做的是尽量保持联系，定期回去，同时也可以利用社区的一些养老服务。",
+          "pinyin": "Nà nǐ néng zuò de shì jǐnliàng bǎochí liánxì, dìngqī huíqù, tóngshí yě kěyǐ lìyòng shèqū de yì xiē yǎnglǎo fúwù.",
+          "text_translation": "Unda sen qila oladigan narsa — imkon qadar aloqada bo'lish, muntazam borib turish, shu bilan birga mahalladagi ba'zi keksalarga xizmat ko'rsatish xizmatlaridan foydalanish.",
+          "text_translation_ru": "Тогда всё, что ты можешь, — как можно больше поддерживать связь, регулярно навещать, а заодно пользоваться некоторыми услугами по уходу за пожилыми в их районе.",
+          "text_translation_en": "Then what you can do is keep in touch as much as possible, visit regularly, and at the same time make use of some community elderly-care services.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d34-s16",
+          "text_original": "对，我最近也了解了一些，有些社区有上门护理服务，价格也还合理。",
+          "pinyin": "Duì, wǒ zuìjìn yě liǎojiě le yì xiē, yǒuxiē shèqū yǒu shàngmén hùlǐ fúwù, jiàgé yě hái hélǐ.",
+          "text_translation": "To'g'ri, yaqinda men ham biroz bilib oldim, ba'zi mahallalarda uyga kelib parvarish qilish xizmati bor, narxi ham o'rinli ekan.",
+          "text_translation_ru": "Да, я недавно тоже кое-что узнал: в некоторых районах есть услуга ухода на дому, и цена вполне разумная.",
+          "text_translation_en": "Right, I've looked into it a bit recently — some communities offer home-care services, and the price is reasonable too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d34-s17",
+          "text_original": "那挺好的。养老问题急不来，一步一步解决吧。",
+          "pinyin": "Nà tǐng hǎo de. Yǎnglǎo wèntí jí bù lái, yī bù yī bù jiějué ba.",
+          "text_translation": "Bu juda yaxshi. Keksalik ta'minoti masalasini shoshilib bo'lmaydi, qadam-baqadam hal qilaver.",
+          "text_translation_ru": "Это здорово. Вопрос ухода за пожилыми не поторопишь — решай его шаг за шагом.",
+          "text_translation_en": "That's good. Elderly care can't be rushed — solve it step by step.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d34-s18",
+          "text_original": "嗯，也只能这样了。",
+          "pinyin": "Ēn, yě zhǐ néng zhèyàng le.",
+          "text_translation": "Ha, boshqa iloj ham yo'q.",
+          "text_translation_ru": "Да, ничего другого и не остаётся.",
+          "text_translation_en": "Yeah, there's nothing else I can do.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
