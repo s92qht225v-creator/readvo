@@ -1,0 +1,186 @@
+{
+  "id": "hsk5-dialogue11",
+  "slug": "workplace-competition",
+  "title": "职场竞争",
+  "pinyin": "Zhíchǎng jìngzhēng",
+  "titleTranslation": "Ish joyidagi raqobat",
+  "titleTranslation_ru": "Конкуренция на работе",
+  "titleTranslation_en": "Workplace Competition",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "部门",
+    "晋升",
+    "名额",
+    "争取",
+    "符合",
+    "优势",
+    "流程",
+    "熟悉",
+    "反馈",
+    "学历",
+    "丰富",
+    "尴尬",
+    "主动",
+    "充分",
+    "综合",
+    "业绩",
+    "贡献",
+    "成长"
+  ],
+  "sections": [
+    {
+      "id": "h5d11-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d11-s1",
+          "text_original": "听说你们部门最近有个晋升名额，你打算争取吗？",
+          "pinyin": "Tīngshuō nǐmen bùmén zuìjìn yǒu ge jìnshēng míng'é, nǐ dǎsuàn zhēngqǔ ma?",
+          "text_translation": "Bo'limingizda yaqinda lavozimga ko'tarilish uchun bitta o'rin bor deb eshitdim, sen unga intilmoqchimisan?",
+          "text_translation_ru": "Слышал, у вас в отделе недавно появилось место для повышения — ты собираешься за него бороться?",
+          "text_translation_en": "I heard your department has a promotion slot open — are you going to go for it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d11-s2",
+          "text_original": "我在考虑，但竞争挺激烈的，好几个同事都符合条件。",
+          "pinyin": "Wǒ zài kǎolǜ, dàn jìngzhēng tǐng jīliè de, hǎojǐ ge tóngshì dōu fúhé tiáojiàn.",
+          "text_translation": "O'ylab ko'ryapman, lekin raqobat ancha keskin, bir nechta hamkasbim shartlarga mos keladi.",
+          "text_translation_ru": "Я думаю об этом, но конкуренция довольно острая — сразу несколько коллег подходят по требованиям.",
+          "text_translation_en": "I'm considering it, but the competition is pretty fierce — several colleagues meet the requirements.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d11-s3",
+          "text_original": "你觉得你最大的优势是什么？",
+          "pinyin": "Nǐ juéde nǐ zuì dà de yōushì shì shénme?",
+          "text_translation": "Sening eng katta ustunliging nima deb o'ylaysan?",
+          "text_translation_ru": "Как ты думаешь, в чём твоё самое большое преимущество?",
+          "text_translation_en": "What do you think your biggest advantage is?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d11-s4",
+          "text_original": "我在公司工作了五年，对业务流程比较熟悉，而且客户反馈一直不错。",
+          "pinyin": "Wǒ zài gōngsī gōngzuò le wǔ nián, duì yèwù liúchéng bǐjiào shúxī, érqiě kèhù fǎnkuì yìzhí búcuò.",
+          "text_translation": "Kompaniyada besh yil ishladim, ish jarayonlarini ancha yaxshi bilaman, ustiga-ustak mijozlar fikri ham doimo yaxshi.",
+          "text_translation_ru": "Я работаю в компании пять лет, хорошо знаком с рабочими процессами, к тому же отзывы клиентов всё время хорошие.",
+          "text_translation_en": "I've worked at the company for five years, I'm fairly familiar with the workflow, and customer feedback has always been good.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d11-s5",
+          "text_original": "那其他同事呢？他们有什么优势？",
+          "pinyin": "Nà qítā tóngshì ne? Tāmen yǒu shénme yōushì?",
+          "text_translation": "Boshqa hamkasblar-chi? Ularning qanday ustunligi bor?",
+          "text_translation_ru": "А другие коллеги? Какие у них преимущества?",
+          "text_translation_en": "What about the other colleagues? What advantages do they have?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d11-s6",
+          "text_original": "有个同事学历比我高，还有一个在公司的时间比我长，经验更丰富。",
+          "pinyin": "Yǒu ge tóngshì xuélì bǐ wǒ gāo, hái yǒu yí ge zài gōngsī de shíjiān bǐ wǒ cháng, jīngyàn gèng fēngfù.",
+          "text_translation": "Bir hamkasbimning ma'lumoti mendan yuqori, yana bittasi kompaniyada mendan ko'proq ishlagan, tajribasi boyroq.",
+          "text_translation_ru": "У одного коллеги образование выше моего, а ещё один работает в компании дольше меня, у него богаче опыт.",
+          "text_translation_en": "One colleague has a higher education level than me, and another has been at the company longer, with richer experience.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d11-s7",
+          "text_original": "那你怎么看待这次机会？",
+          "pinyin": "Nà nǐ zěnme kàndài zhè cì jīhuì?",
+          "text_translation": "Unda bu imkoniyatga qanday qaraysan?",
+          "text_translation_ru": "А как ты сам смотришь на эту возможность?",
+          "text_translation_en": "So how do you view this opportunity?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d11-s8",
+          "text_original": "我挺想争取的，但也担心如果没选上会很尴尬。",
+          "pinyin": "Wǒ tǐng xiǎng zhēngqǔ de, dàn yě dānxīn rúguǒ méi xuǎn shàng huì hěn gāngà.",
+          "text_translation": "Juda intilgim keladi, lekin tanlanmay qolsam noqulay bo'lishidan ham xavotirdaman.",
+          "text_translation_ru": "Мне очень хочется побороться, но я боюсь, что будет неловко, если меня не выберут.",
+          "text_translation_en": "I really want to go for it, but I'm also worried it'll be awkward if I don't get picked.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d11-s9",
+          "text_original": "我能理解你的感受。但如果你不主动争取，机会可能就直接给别人了。",
+          "pinyin": "Wǒ néng lǐjiě nǐ de gǎnshòu. Dàn rúguǒ nǐ bú zhǔdòng zhēngqǔ, jīhuì kěnéng jiù zhíjiē gěi biérén le.",
+          "text_translation": "His-tuyg'ungni tushunaman. Lekin o'zing tashabbus ko'rsatib intilmasang, imkoniyat to'g'ridan-to'g'ri boshqaga berilishi mumkin.",
+          "text_translation_ru": "Я понимаю твои чувства. Но если ты не проявишь инициативу, возможность могут просто отдать другому.",
+          "text_translation_en": "I understand how you feel. But if you don't actively go for it, the opportunity might just go straight to someone else.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d11-s10",
+          "text_original": "你说得对。我已经准备好了一份工作报告，打算明天跟领导谈谈。",
+          "pinyin": "Nǐ shuō de duì. Wǒ yǐjīng zhǔnbèi hǎo le yí fèn gōngzuò bàogào, dǎsuàn míngtiān gēn lǐngdǎo tán tan.",
+          "text_translation": "To'g'ri aytasan. Ish hisobotini allaqachon tayyorlab qo'ydim, ertaga rahbar bilan gaplashmoqchiman.",
+          "text_translation_ru": "Ты прав. Я уже подготовил рабочий отчёт и собираюсь завтра поговорить с руководителем.",
+          "text_translation_en": "You're right. I've already prepared a work report and plan to talk to my manager tomorrow.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d11-s11",
+          "text_original": "准备充分是好事。你觉得领导会更看重什么？",
+          "pinyin": "Zhǔnbèi chōngfèn shì hǎoshì. Nǐ juéde lǐngdǎo huì gèng kànzhòng shénme?",
+          "text_translation": "To'liq tayyorgarlik yaxshi narsa. Rahbaring nimaga ko'proq e'tibor beradi deb o'ylaysan?",
+          "text_translation_ru": "Хорошо, что ты основательно подготовился. Как думаешь, чему руководитель придаёт больше значения?",
+          "text_translation_en": "Being well-prepared is a good thing. What do you think the manager will value most?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d11-s12",
+          "text_original": "应该是综合能力吧，包括业绩、态度和团队合作。",
+          "pinyin": "Yīnggāi shì zònghé nénglì ba, bāokuò yèjì, tàidu hé tuánduì hézuò.",
+          "text_translation": "Ehtimol kompleks qobiliyatdir, jumladan ish natijalari, munosabat va jamoaviy ish.",
+          "text_translation_ru": "Наверное, комплексные способности — включая результаты работы, отношение и умение работать в команде.",
+          "text_translation_en": "Probably overall ability — including performance, attitude, and teamwork.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d11-s13",
+          "text_original": "那你一定要在谈话中突出你的团队贡献，不仅仅是个人成绩。",
+          "pinyin": "Nà nǐ yídìng yào zài tánhuà zhōng tūchū nǐ de tuánduì gòngxiàn, bù jǐnjǐn shì gèrén chéngjì.",
+          "text_translation": "Unda suhbatda jamoaga qo'shgan hissangni albatta ta'kidlashing kerak, faqat shaxsiy yutuqlaringni emas.",
+          "text_translation_ru": "Тогда в разговоре обязательно подчеркни свой вклад в команду, а не только личные достижения.",
+          "text_translation_en": "Then in the conversation you must highlight your contribution to the team, not just your individual achievements.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d11-s14",
+          "text_original": "好建议。我会注意这一点。",
+          "pinyin": "Hǎo jiànyì. Wǒ huì zhùyì zhè yì diǎn.",
+          "text_translation": "Yaxshi maslahat. Bunga e'tibor beraman.",
+          "text_translation_ru": "Хороший совет. Я учту это.",
+          "text_translation_en": "Good advice. I'll keep that in mind.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d11-s15",
+          "text_original": "祝你好运！不管结果如何，主动争取本身就是一种成长。",
+          "pinyin": "Zhù nǐ hǎoyùn! Bùguǎn jiéguǒ rúhé, zhǔdòng zhēngqǔ běnshēn jiùshì yì zhǒng chéngzhǎng.",
+          "text_translation": "Omad tilayman! Natija qanday bo'lishidan qat'i nazar, tashabbus ko'rsatib intilishning o'zi bir o'sishdir.",
+          "text_translation_ru": "Удачи! Каким бы ни был результат, сама готовность активно бороться — это уже рост.",
+          "text_translation_en": "Good luck! Whatever the outcome, actively striving for it is itself a kind of growth.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d11-s16",
+          "text_original": "谢谢你！你说得很有道理，我也这么想。",
+          "pinyin": "Xièxie nǐ! Nǐ shuō de hěn yǒu dàoli, wǒ yě zhème xiǎng.",
+          "text_translation": "Rahmat! Gaping juda mantiqli, men ham shunday o'ylayman.",
+          "text_translation_ru": "Спасибо! Ты говоришь очень разумно, я тоже так думаю.",
+          "text_translation_en": "Thank you! What you said makes a lot of sense — I think so too.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

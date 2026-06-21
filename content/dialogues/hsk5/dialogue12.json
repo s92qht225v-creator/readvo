@@ -1,0 +1,195 @@
+{
+  "id": "hsk5-dialogue12",
+  "slug": "environmental-protection",
+  "title": "环保",
+  "pinyin": "Huánbǎo",
+  "titleTranslation": "Atrof-muhitni muhofaza qilish",
+  "titleTranslation_ru": "Охрана окружающей среды",
+  "titleTranslation_en": "Environmental Protection",
+  "level": 5,
+  "tag": "tabiat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "购物袋",
+    "塑料袋",
+    "在意",
+    "污染",
+    "纪录片",
+    "震撼",
+    "垃圾",
+    "海洋生物",
+    "伤害",
+    "严重",
+    "瓶装水",
+    "水杯",
+    "垃圾分类",
+    "推广",
+    "嫌麻烦",
+    "意识",
+    "改善",
+    "共享单车",
+    "政府",
+    "限制",
+    "新能源车",
+    "政策",
+    "社会",
+    "力量",
+    "有限",
+    "行动",
+    "积累"
+  ],
+  "sections": [
+    {
+      "id": "h5d12-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d12-s1",
+          "text_original": "你最近怎么开始自己带购物袋了？以前不是总用塑料袋吗？",
+          "pinyin": "Nǐ zuìjìn zěnme kāishǐ zìjǐ dài gòuwùdài le? Yǐqián bú shì zǒng yòng sùliàodài ma?",
+          "text_translation": "Yaqinda nega o'zing xarid sumkasi olib yura boshlading? Avval doim plastik paket ishlatmasmiding?",
+          "text_translation_ru": "Почему ты в последнее время стал носить с собой сумку для покупок? Раньше же ты всё время пользовался пакетами?",
+          "text_translation_en": "Why have you started bringing your own shopping bag lately? Didn't you always use plastic bags before?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d12-s2",
+          "text_original": "我以前没太在意，后来看了一些关于塑料污染的纪录片，觉得很震撼，就想改变一下习惯。",
+          "pinyin": "Wǒ yǐqián méi tài zàiyì, hòulái kàn le yì xiē guānyú sùliào wūrǎn de jìlùpiàn, juéde hěn zhènhàn, jiù xiǎng gǎibiàn yí xià xíguàn.",
+          "text_translation": "Avval unchalik e'tibor bermasdim, keyin plastik ifloslanish haqidagi bir nechta hujjatli filmni ko'rib, juda hayratga tushdim va odatimni o'zgartirmoqchi bo'ldim.",
+          "text_translation_ru": "Раньше я не особо обращал внимание, но потом посмотрел несколько документальных фильмов о пластиковом загрязнении, был потрясён и захотел изменить привычку.",
+          "text_translation_en": "I didn't pay much attention before, but then I watched some documentaries about plastic pollution, found them shocking, and wanted to change my habits.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d12-s3",
+          "text_original": "确实，塑料垃圾对海洋生物的伤害太严重了。",
+          "pinyin": "Quèshí, sùliào lājī duì hǎiyáng shēngwù de shānghài tài yánzhòng le.",
+          "text_translation": "Rostdan ham, plastik chiqindilarning dengiz jonzotlariga zarari juda jiddiy.",
+          "text_translation_ru": "Действительно, вред пластикового мусора для морских обитателей слишком серьёзный.",
+          "text_translation_en": "Indeed, the harm plastic waste does to marine life is far too serious.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d12-s4",
+          "text_original": "对，所以我现在不仅自己带购物袋，还尽量少买瓶装水，出门自带水杯。",
+          "pinyin": "Duì, suǒyǐ wǒ xiànzài bùjǐn zìjǐ dài gòuwùdài, hái jǐnliàng shǎo mǎi píngzhuāng shuǐ, chūmén zìdài shuǐbēi.",
+          "text_translation": "Ha, shuning uchun hozir nafaqat o'zim xarid sumkasi olib yuraman, balki imkon qadar kam shishadagi suv olaman, tashqariga chiqsam o'z suv idishimni olib chiqaman.",
+          "text_translation_ru": "Да, поэтому теперь я не только ношу свою сумку, но и стараюсь меньше покупать воду в бутылках, а из дома беру свой стакан.",
+          "text_translation_en": "Right, so now I not only bring my own shopping bag, I also try to buy less bottled water and carry my own cup when I go out.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d12-s5",
+          "text_original": "这个习惯很好！我以前也试着减少塑料使用，但有时候确实不太方便。",
+          "pinyin": "Zhè ge xíguàn hěn hǎo! Wǒ yǐqián yě shì zhe jiǎnshǎo sùliào shǐyòng, dàn yǒu shíhou quèshí bú tài fāngbiàn.",
+          "text_translation": "Bu odat juda yaxshi! Men ham avval plastik ishlatishni kamaytirishga harakat qilganman, lekin ba'zan rostdan unchalik qulay emas.",
+          "text_translation_ru": "Хорошая привычка! Я тоже раньше пытался меньше использовать пластик, но иногда это и правда не очень удобно.",
+          "text_translation_en": "That's a great habit! I used to try to cut down on plastic too, but sometimes it really isn't very convenient.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d12-s6",
+          "text_original": "我明白。刚开始我也不太习惯，但坚持一段时间后就自然了。",
+          "pinyin": "Wǒ míngbai. Gāng kāishǐ wǒ yě bú tài xíguàn, dàn jiānchí yí duàn shíjiān hòu jiù zìrán le.",
+          "text_translation": "Tushunaman. Boshida men ham unchalik o'rganmagandim, lekin bir muddat davom ettirgach, tabiiy bo'lib qoldi.",
+          "text_translation_ru": "Понимаю. Поначалу мне тоже было непривычно, но после того как я какое-то время продержался, это стало естественным.",
+          "text_translation_en": "I get it. At first I wasn't used to it either, but after sticking with it for a while it became natural.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d12-s7",
+          "text_original": "除了减少塑料，你还做了什么环保的事情？",
+          "pinyin": "Chúle jiǎnshǎo sùliào, nǐ hái zuò le shénme huánbǎo de shìqing?",
+          "text_translation": "Plastikni kamaytirishdan tashqari, yana qanday ekologik ishlar qilding?",
+          "text_translation_ru": "Кроме сокращения пластика, что ещё экологичного ты делаешь?",
+          "text_translation_en": "Besides cutting down on plastic, what other eco-friendly things have you done?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d12-s8",
+          "text_original": "我开始把垃圾分类，比如纸盒、塑料瓶和厨余垃圾分开扔。",
+          "pinyin": "Wǒ kāishǐ bǎ lājī fēnlèi, bǐrú zhǐhé, sùliàopíng hé chúyú lājī fēnkāi rēng.",
+          "text_translation": "Chiqindini saralashni boshladim, masalan qog'oz quti, plastik shisha va oziq-ovqat chiqindisini alohida tashlayman.",
+          "text_translation_ru": "Я начал сортировать мусор — например, картонные коробки, пластиковые бутылки и пищевые отходы выбрасываю раздельно.",
+          "text_translation_en": "I started sorting my trash — for example, throwing out cardboard boxes, plastic bottles, and food waste separately.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d12-s9",
+          "text_original": "这个我们小区也在推广，但很多人还是嫌麻烦。",
+          "pinyin": "Zhè ge wǒmen xiǎoqū yě zài tuīguǎng, dàn hěnduō rén háishì xián máfan.",
+          "text_translation": "Buni bizning turar-joy majmuamizda ham targ'ib qilishyapti, lekin ko'pchilik baribir uni ovoragarchilik deb biladi.",
+          "text_translation_ru": "У нас в районе это тоже продвигают, но многие всё равно считают это хлопотным.",
+          "text_translation_en": "Our neighborhood is promoting this too, but a lot of people still find it a hassle.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d12-s10",
+          "text_original": "习惯问题吧。我觉得只要大家都有意识，环境就会慢慢改善。",
+          "pinyin": "Xíguàn wèntí ba. Wǒ juéde zhǐyào dàjiā dōu yǒu yìshi, huánjìng jiù huì mànmàn gǎishàn.",
+          "text_translation": "Odat masalasi-da. Menimcha hamma ongli bo'lsa, atrof-muhit asta-sekin yaxshilanadi.",
+          "text_translation_ru": "Это вопрос привычки. Думаю, если у всех будет осознанность, окружающая среда постепенно улучшится.",
+          "text_translation_en": "It's a matter of habit. I think as long as everyone is aware, the environment will gradually improve.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d12-s11",
+          "text_original": "你说得对。我最近也开始骑共享单车上班，既环保又能锻炼身体。",
+          "pinyin": "Nǐ shuō de duì. Wǒ zuìjìn yě kāishǐ qí gòngxiǎng dānchē shàngbān, jì huánbǎo yòu néng duànliàn shēntǐ.",
+          "text_translation": "To'g'ri aytasan. Men ham yaqinda ishga umumiy velosipedda bora boshladim, ham ekologik, ham tana chiniqadi.",
+          "text_translation_ru": "Ты прав. Я тоже недавно стал ездить на работу на велосипеде проката — и экологично, и для тела полезно.",
+          "text_translation_en": "You're right. I've also started riding a shared bike to work lately — it's eco-friendly and good exercise.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d12-s12",
+          "text_original": "那太好了！如果更多人愿意改变，环境保护就不难了。",
+          "pinyin": "Nà tài hǎo le! Rúguǒ gèng duō rén yuànyì gǎibiàn, huánjìng bǎohù jiù bù nán le.",
+          "text_translation": "Bu juda yaxshi! Agar ko'proq odam o'zgarishni xohlasa, atrof-muhitni muhofaza qilish qiyin bo'lmaydi.",
+          "text_translation_ru": "Это здорово! Если больше людей захотят меняться, охрана окружающей среды станет несложной.",
+          "text_translation_en": "That's great! If more people are willing to change, protecting the environment won't be hard.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d12-s13",
+          "text_original": "你觉得政府在这方面做得够吗？",
+          "pinyin": "Nǐ juéde zhèngfǔ zài zhè fāngmiàn zuò de gòu ma?",
+          "text_translation": "Seningcha hukumat bu borada yetarli ish qilyaptimi?",
+          "text_translation_ru": "Как ты думаешь, правительство в этом направлении делает достаточно?",
+          "text_translation_en": "Do you think the government is doing enough in this area?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d12-s14",
+          "text_original": "比以前进步不少，比如限制塑料袋和推广新能源车。但还需要更多教育和政策支持。",
+          "pinyin": "Bǐ yǐqián jìnbù bùshǎo, bǐrú xiànzhì sùliàodài hé tuīguǎng xīn néngyuán chē. Dàn hái xūyào gèng duō jiàoyù hé zhèngcè zhīchí.",
+          "text_translation": "Avvalgiga qaraganda ancha rivojlandi, masalan plastik paketni cheklash va elektromobilni targ'ib qilish. Lekin hali ko'proq ta'lim va siyosat ko'magi kerak.",
+          "text_translation_ru": "По сравнению с прошлым прогресс немалый — например, ограничение пакетов и продвижение электромобилей. Но нужно ещё больше просвещения и поддержки на уровне политики.",
+          "text_translation_en": "There's been a lot of progress compared to before — like restricting plastic bags and promoting new energy vehicles. But it still needs more education and policy support.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d12-s15",
+          "text_original": "确实，环保需要全社会的努力，单靠个人力量还是有限的。",
+          "pinyin": "Quèshí, huánbǎo xūyào quán shèhuì de nǔlì, dān kào gèrén lìliang háishì yǒuxiàn de.",
+          "text_translation": "Rostdan, atrof-muhitni muhofaza qilish butun jamiyatning sa'y-harakatini talab qiladi, faqat shaxsiy kuchga tayanish baribir cheklangan.",
+          "text_translation_ru": "Действительно, охрана природы требует усилий всего общества — полагаться только на силы одного человека всё же ограниченно.",
+          "text_translation_en": "Indeed, environmental protection needs the effort of all of society — relying on individual strength alone is still limited.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d12-s16",
+          "text_original": "对，但只要每个人开始行动，就能积累成巨大的改变。",
+          "pinyin": "Duì, dàn zhǐyào měi ge rén kāishǐ xíngdòng, jiù néng jīlěi chéng jùdà de gǎibiàn.",
+          "text_translation": "To'g'ri, lekin har bir kishi harakatni boshlasa, ulkan o'zgarishga jamlanishi mumkin.",
+          "text_translation_ru": "Да, но если каждый начнёт действовать, это может накопиться в огромные перемены.",
+          "text_translation_en": "Right, but as long as everyone starts acting, it can add up to enormous change.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
