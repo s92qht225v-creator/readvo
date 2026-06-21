@@ -1,0 +1,180 @@
+{
+  "id": "hsk6-dialogue9",
+  "slug": "food-safety",
+  "title": "食品安全",
+  "pinyin": "Shípǐn ānquán",
+  "titleTranslation": "Oziq-ovqat xavfsizligi",
+  "titleTranslation_ru": "Безопасность продуктов питания",
+  "titleTranslation_en": "Food Safety",
+  "level": 6,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "调查报道",
+    "达标",
+    "地沟油",
+    "过期肉",
+    "添加剂",
+    "超标",
+    "潜移默化",
+    "配料表",
+    "一律",
+    "有机",
+    "认证",
+    "农产品",
+    "踏实",
+    "农药",
+    "化学肥料",
+    "屡禁不止",
+    "罚款",
+    "链条",
+    "覆盖",
+    "警惕",
+    "加工食品"
+  ],
+  "sections": [
+    {
+      "id": "h6d9-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d9-s1",
+          "text_original": "你最近怎么总自己做饭？以前不是挺喜欢点外卖的吗？",
+          "pinyin": "Nǐ zuìjìn zěnme zǒng zìjǐ zuò fàn? Yǐqián bú shì tǐng xǐhuān diǎn wàimài de ma?",
+          "text_translation": "Yaqinda nega doim o'zing ovqat pishirasan? Avval tashqaridan ovqat buyurtirishni juda yoqtirmasmiding?",
+          "text_translation_ru": "Почему ты в последнее время всё время готовишь сам? Раньше же ты любил заказывать доставку?",
+          "text_translation_en": "Why have you been cooking for yourself all the time lately? Didn't you used to love ordering takeout?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d9-s2",
+          "text_original": "前阵子看了一个食品安全调查报道，把我吓到了。很多外卖的卫生条件根本不达标，用的油和食材也很可疑。",
+          "pinyin": "Qián zhènzi kàn le yí ge shípǐn ānquán diàochá bàodào, bǎ wǒ xià dào le. Hěnduō wàimài de wèishēng tiáojiàn gēnběn bù dábiāo, yòng de yóu hé shícái yě hěn kěyí.",
+          "text_translation": "Yaqinda oziq-ovqat xavfsizligi bo'yicha bir surishtiruv reportajini ko'rib, qo'rqib ketdim. Ko'p tashqi ovqatning sanitariya sharoiti umuman me'yorga yetmaydi, ishlatadigan yog'i va masolligi ham juda shubhali.",
+          "text_translation_ru": "Недавно посмотрел одно журналистское расследование о безопасности продуктов и испугался. У многих доставок санитарные условия совсем не соответствуют норме, а масло и продукты, которые они используют, очень подозрительные.",
+          "text_translation_en": "A while ago I watched an investigative report on food safety and it scared me. Many takeout places' hygiene conditions don't meet standards at all, and the oil and ingredients they use are very suspicious.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d9-s3",
+          "text_original": "我也看到过类似的新闻，地沟油、过期肉、添加剂超标，确实让人不放心。",
+          "pinyin": "Wǒ yě kàn dào guo lèisì de xīnwén, dìgōuyóu, guòqī ròu, tiānjiājì chāobiāo, quèshí ràng rén bú fàngxīn.",
+          "text_translation": "Men ham shunga o'xshash yangiliklarni ko'rganman — «ariq yog'i», muddati o'tgan go'sht, me'yordan oshgan qo'shimchalar, rostdan odamni xotirjam qoldirmaydi.",
+          "text_translation_ru": "Я тоже видел похожие новости: «канализационное масло», просроченное мясо, превышение норм по добавкам — действительно тревожно.",
+          "text_translation_en": "I've seen similar news too — gutter oil, expired meat, additives over the limit — it really is worrying.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d9-s4",
+          "text_original": "更可怕的是，有些问题不是吃一次就能发现的。长期摄入有害物质，对身体的影响是潜移默化的。",
+          "pinyin": "Gèng kěpà de shì, yǒuxiē wèntí bú shì chī yí cì jiù néng fāxiàn de. Chángqī shèrù yǒuhài wùzhì, duì shēntǐ de yǐngxiǎng shì qiányí mòhuà de.",
+          "text_translation": "Yana qo'rqinchlirog'i, ba'zi muammolarni bir marta yeb bilib bo'lmaydi. Uzoq vaqt zararli moddalarni iste'mol qilish tanaga sezdirmay, asta-sekin ta'sir qiladi.",
+          "text_translation_ru": "Ещё страшнее то, что некоторые проблемы нельзя обнаружить, поев один раз. Длительное потребление вредных веществ влияет на организм незаметно и постепенно.",
+          "text_translation_en": "What's even scarier is that some problems can't be detected from eating just once. Long-term intake of harmful substances affects the body imperceptibly.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d9-s5",
+          "text_original": "我现在买东西都会仔细看配料表，添加剂太多的一律不买。",
+          "pinyin": "Wǒ xiànzài mǎi dōngxi dōu huì zǐxì kàn pèiliào biǎo, tiānjiājì tài duō de yīlǜ bù mǎi.",
+          "text_translation": "Men hozir biror narsa olganda tarkib ro'yxatini diqqat bilan o'qiyman, qo'shimchasi juda ko'pini istisnosiz olmayman.",
+          "text_translation_ru": "Я теперь, покупая что-либо, внимательно читаю список ингредиентов — то, где слишком много добавок, не беру вообще.",
+          "text_translation_en": "Now whenever I buy something I carefully read the ingredient list — anything with too many additives I won't buy, no exceptions.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d9-s6",
+          "text_original": "你这个习惯很好。我还会优先选择有有机认证的农产品，虽然贵一些，但心里踏实。",
+          "pinyin": "Nǐ zhè ge xíguàn hěn hǎo. Wǒ hái huì yōuxiān xuǎnzé yǒu yǒujī rènzhèng de nóngchǎnpǐn, suīrán guì yì xiē, dàn xīnli tāshi.",
+          "text_translation": "Bu odating juda yaxshi. Men yana avvalo organik sertifikatga ega qishloq xo'jaligi mahsulotlarini tanlayman, biroz qimmat bo'lsa-da, ko'ngil xotirjam.",
+          "text_translation_ru": "Хорошая привычка. Я ещё в первую очередь выбираю сельхозпродукцию с органической сертификацией: хоть и подороже, но на душе спокойнее.",
+          "text_translation_en": "That's a good habit. I also prioritize agricultural products with organic certification — they're a bit more expensive, but it puts my mind at ease.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d9-s7",
+          "text_original": "有机食品真的比普通食品安全吗？还是只是心理作用？",
+          "pinyin": "Yǒujī shípǐn zhēn de bǐ pǔtōng shípǐn ānquán ma? Háishì zhǐ shì xīnlǐ zuòyòng?",
+          "text_translation": "Organik oziq-ovqat rostdan oddiy oziq-ovqatdan xavfsizroqmi? Yoki bu shunchaki ruhiy ta'sirmi?",
+          "text_translation_ru": "Органические продукты действительно безопаснее обычных, или это просто самовнушение?",
+          "text_translation_en": "Are organic foods really safer than ordinary foods, or is it just a psychological effect?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d9-s8",
+          "text_original": "不完全保证，但至少可以减少农药和化学肥料的摄入。食品安全问题太多，能避免一点是一点。",
+          "pinyin": "Bù wánquán bǎozhèng, dàn zhìshǎo kěyǐ jiǎnshǎo nóngyào hé huàxué féiliào de shèrù. Shípǐn ānquán wèntí tài duō, néng bìmiǎn yì diǎn shì yì diǎn.",
+          "text_translation": "To'liq kafolat emas, lekin hech bo'lmaganda pestitsid va kimyoviy o'g'it iste'molini kamaytirsa bo'ladi. Oziq-ovqat xavfsizligi muammosi juda ko'p, qancha oldini olsang, shuncha yaxshi.",
+          "text_translation_ru": "Полной гарантии нет, но по крайней мере можно сократить потребление пестицидов и химических удобрений. Проблем с безопасностью продуктов слишком много, и чем больше получится избежать, тем лучше.",
+          "text_translation_en": "It's not a complete guarantee, but at least it can reduce intake of pesticides and chemical fertilizers. There are too many food safety problems — whatever you can avoid is worth avoiding.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d9-s9",
+          "text_original": "你觉得食品安全问题为什么总是屡禁不止？",
+          "pinyin": "Nǐ juéde shípǐn ānquán wèntí wèishénme zǒng shì lǚ jìn bù zhǐ?",
+          "text_translation": "Seningcha oziq-ovqat xavfsizligi muammosi nega qancha taqiqlansa ham to'xtamaydi?",
+          "text_translation_ru": "Как ты думаешь, почему проблемы с безопасностью продуктов, сколько ни запрещай, всё равно не прекращаются?",
+          "text_translation_en": "Why do you think food safety problems keep happening no matter how often they're banned?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d9-s10",
+          "text_original": "根本原因是违法成本太低。很多商家被罚一次，赚回来的利润远远超过罚款。",
+          "pinyin": "Gēnběn yuányīn shì wéifǎ chéngběn tài dī. Hěnduō shāngjiā bèi fá yī cì, zhuàn huílái de lìrùn yuǎn yuǎn chāoguò fákuǎn.",
+          "text_translation": "Asosiy sabab — qonunbuzarlik narxi juda past. Ko'p sotuvchi bir marta jarima to'lasa ham, qaytarib topadigan foydasi jarimadan ancha ko'p.",
+          "text_translation_ru": "Корень проблемы в том, что цена нарушения закона слишком низкая. Многие продавцы, заплатив штраф один раз, зарабатывают прибыль, которая намного превышает сам штраф.",
+          "text_translation_en": "The root cause is that the cost of breaking the law is too low. Many businesses get fined once, but the profit they earn back far exceeds the fine.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d9-s11",
+          "text_original": "那监管部门难道不知道吗？",
+          "pinyin": "Nà jiānguǎn bùmén nándào bù zhīdào ma?",
+          "text_translation": "Nahotki nazorat organlari buni bilmasa?",
+          "text_translation_ru": "Неужели надзорные органы об этом не знают?",
+          "text_translation_en": "Don't the regulatory authorities know about this?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d9-s12",
+          "text_original": "知道，但监管力量有限。食品行业链条太长，从生产到加工到销售，监管根本覆盖不过来。",
+          "pinyin": "Zhīdào, dàn jiānguǎn lìliàng yǒuxiàn. Shípǐn hángyè liàntiáo tài cháng, cóng shēngchǎn dào jiāgōng dào xiāoshòu, jiānguǎn gēnběn fùgài bú guòlái.",
+          "text_translation": "Bilishadi, lekin nazorat kuchi cheklangan. Oziq-ovqat sohasining zanjiri juda uzun — ishlab chiqarishdan qayta ishlashga, undan sotuvga qadar, nazorat umuman qamrab ulgurmaydi.",
+          "text_translation_ru": "Знают, но возможности надзора ограничены. Цепочка пищевой отрасли слишком длинная: от производства до переработки и продажи — надзор просто не успевает её охватить.",
+          "text_translation_en": "They do, but regulatory resources are limited. The food industry chain is too long — from production to processing to sales, regulation simply can't cover it all.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d9-s13",
+          "text_original": "看来食品安全问题确实需要全社会共同努力。消费者也要提高警惕。",
+          "pinyin": "Kànlái shípǐn ānquán wèntí quèshí xūyào quán shèhuì gòngtóng nǔlì. Xiāofèi zhě yě yào tígāo jǐngtì.",
+          "text_translation": "Ko'rinishidan oziq-ovqat xavfsizligi muammosi rostdan butun jamiyatning birgalikdagi sa'y-harakatini talab qiladi. Iste'molchilar ham hushyorligini oshirishi kerak.",
+          "text_translation_ru": "Похоже, проблема безопасности продуктов действительно требует совместных усилий всего общества. И потребителям нужно быть бдительнее.",
+          "text_translation_en": "It seems food safety really requires the joint effort of all of society. Consumers also need to be more vigilant.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d9-s14",
+          "text_original": "对。我现在的原则是，能吃自己做的就尽量不买外面的加工食品。",
+          "pinyin": "Duì. Wǒ xiànzài de yuánzé shì, néng chī zìjǐ zuò de jiù jǐnliàng bù mǎi wàimiàn de jiāgōng shípǐn.",
+          "text_translation": "To'g'ri. Hozir mening tamoyilim: o'zim pishirganni yeyish imkoni bo'lsa, imkon qadar tashqaridagi qayta ishlangan oziq-ovqatni olmaslik.",
+          "text_translation_ru": "Да. Мой нынешний принцип такой: если можно есть приготовленное самим, по возможности не покупать переработанные продукты со стороны.",
+          "text_translation_en": "Right. My principle now is: if I can eat what I cook myself, I try not to buy processed food from outside.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d9-s15",
+          "text_original": "这个原则虽然麻烦，但对健康绝对是长远有益。",
+          "pinyin": "Zhè ge yuánzé suīrán máfan, dàn duì jiànkāng juéduì shì chángyuǎn yǒuyì.",
+          "text_translation": "Bu tamoyil ovoragarchilik bo'lsa-da, salomatlik uchun uzoq muddatda shubhasiz foydali.",
+          "text_translation_ru": "Этот принцип хоть и хлопотный, но для здоровья он, безусловно, полезен в долгосрочной перспективе.",
+          "text_translation_en": "This principle is a hassle, but it's absolutely beneficial for your health in the long run.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
