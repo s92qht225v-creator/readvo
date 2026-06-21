@@ -7,6 +7,7 @@ import { CSS } from '@dnd-kit/utilities';
 import type { Language } from '../types/ui-state';
 import { shuffleArray } from '@/utils/shuffle';
 import { resolveTtsUrl } from '@/utils/ttsAudio';
+import { hanChars, normalizeHan } from '@/utils/hanziNormalize';
 
 export interface DictationLine {
   id: string;
@@ -23,15 +24,22 @@ const T = (language: Language, uz: string, ru: string, en: string) =>
 
 /**
  * Dictation (listening) exercise for the dialogue reader. The learner hears a
- * line (text hidden), then rebuilds it by tapping its CHARACTERS into the
- * correct order. Reuses the test app's scramble *idea* — bespoke, self-
- * contained (no test engine), styled with the reader's own `dr-*` look.
+ * line (text hidden), then reproduces it. Two input modes:
+ *   - tiles: rebuild the line by tapping/dragging its CHARACTERS into order
+ *            (HSK 1–4 default, and the fallback for learners with no IME).
+ *   - type:  type the characters with a Chinese keyboard (HSK 5/6 default).
+ * Bespoke, self-contained (no test engine), styled with the reader's `dr-*` look.
  */
-export function DialogueDictation({ lines, language }: { lines: DictationLine[]; language: Language }) {
+export function DialogueDictation({ lines, language, level = 1 }: { lines: DictationLine[]; language: Language; level?: number }) {
+  // HSK 5/6 default to typing; lower levels stay on tiles. The mode is session-
+  // level (persists across lines), toggled via the fallback link when level≥5.
+  const [mode, setMode] = useState<'tiles' | 'type'>(level >= 5 ? 'type' : 'tiles');
+  const canType = level >= 5;
   const [phase, setPhase] = useState<'ready' | 'play' | 'done'>('ready');
   const [idx, setIdx] = useState(0);
   const [placed, setPlaced] = useState<number[]>([]);   // tile ids in answer order
   const [tray, setTray] = useState<number[]>([]);        // tile ids still in the tray
+  const [typed, setTyped] = useState('');                // typing mode input
   const [status, setStatus] = useState<'idle' | 'correct' | 'wrong' | 'revealed'>('idle');
   const [mistakes, setMistakes] = useState(0);
   const [results, setResults] = useState<boolean[]>([]); // first-try correct per line
@@ -70,6 +78,7 @@ export function DialogueDictation({ lines, language }: { lines: DictationLine[];
     const cs = l ? Array.from(l.zh).filter(isHan) : [];
     setPlaced([]);
     setTray(shuffleArray(cs.map((_, k) => k)));
+    setTyped('');
     setStatus('idle');
     setMistakes(0);
     void playLine(l);
@@ -125,6 +134,30 @@ export function DialogueDictation({ lines, language }: { lines: DictationLine[];
     const nextPlaced = arrayMove(placed, from, to);
     setPlaced(nextPlaced);
     evaluate(nextPlaced); // re-check: a reorder can complete or fix the answer
+  };
+
+  // Typing mode: check the typed line against the target (Han-only, trad→simp).
+  const checkTyped = () => {
+    if (status === 'correct' || status === 'revealed') return;
+    if (!normalizeHan(typed)) return; // ignore empty / punctuation-only submits
+    if (normalizeHan(typed) === normalizeHan(target)) {
+      setStatus('correct');
+      setResults(prev => { const n = prev.slice(); n[idx] = mistakes === 0; return n; });
+    } else {
+      setStatus('wrong');
+      setMistakes(m => m + 1);
+    }
+  };
+
+  // Switch input method (only offered at HSK 5/6). Session-level: persists across
+  // lines. Resets the current line's answer so the new mode starts clean; keeps
+  // the mistake count so swapping tools isn't a free retry.
+  const switchMode = (m: 'tiles' | 'type') => {
+    setMode(m);
+    setPlaced([]);
+    setTray(shuffleArray(chars.map((_, k) => k)));
+    setTyped('');
+    setStatus('idle');
   };
 
   const reveal = () => {
@@ -209,46 +242,99 @@ export function DialogueDictation({ lines, language }: { lines: DictationLine[];
         <span>{T(language, 'Eshitish', 'Слушать', 'Listen')}</span>
       </button>
 
-      {/* Answer slots — drag a placed tile to reorder, tap it to remove */}
-      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragStart={onDragStart} onDragEnd={onDragEnd}>
-        <SortableContext items={placed} strategy={rectSortingStrategy}>
-          <div className={`dr-dict__answer dr-dict__answer--${status}`}>
-            {placed.length === 0 ? (
-              <span className="dr-dict__answer-hint">{T(language, 'Tartiblang', 'Расставьте', 'Arrange')}</span>
-            ) : placed.map((tileId, pos) => (
-              <SortablePlacedTile
-                key={tileId}
-                id={tileId}
-                char={chars[tileId]}
-                onTap={() => tapPlaced(pos)}
-                disabled={done}
-              />
-            ))}
+      {mode === 'tiles' ? (
+        <>
+          {/* Answer slots — drag a placed tile to reorder, tap it to remove */}
+          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragStart={onDragStart} onDragEnd={onDragEnd}>
+            <SortableContext items={placed} strategy={rectSortingStrategy}>
+              <div className={`dr-dict__answer dr-dict__answer--${status}`}>
+                {placed.length === 0 ? (
+                  <span className="dr-dict__answer-hint">{T(language, 'Tartiblang', 'Расставьте', 'Arrange')}</span>
+                ) : placed.map((tileId, pos) => (
+                  <SortablePlacedTile
+                    key={tileId}
+                    id={tileId}
+                    char={chars[tileId]}
+                    onTap={() => tapPlaced(pos)}
+                    disabled={done}
+                  />
+                ))}
+              </div>
+            </SortableContext>
+          </DndContext>
+
+          {/* Tray */}
+          {!done && (
+            <div className="dr-dict__tray">
+              {tray.map(tileId => (
+                <button key={tileId} type="button" className="dr-dict__tile" onClick={() => tapTray(tileId)}>
+                  {chars[tileId]}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {status === 'wrong' && (
+            <div className="dr-dict__feedback dr-dict__feedback--wrong">
+              {T(language, 'Tartib noto\'g\'ri — qayta urinib ko\'ring', 'Неверный порядок — попробуйте ещё раз', 'Wrong order — try again')}
+            </div>
+          )}
+        </>
+      ) : (
+        <>
+          {/* Typing input — learner types the line with a Chinese IME */}
+          <div className="dr-dict__type">
+            <input
+              className={`dr-dict__input dr-dict__input--${status}`}
+              value={typed}
+              onChange={(e) => { setTyped(e.target.value); if (status === 'wrong') setStatus('idle'); }}
+              onKeyDown={(e) => { if (e.key === 'Enter') checkTyped(); }}
+              disabled={done}
+              placeholder={T(language, 'Eshitganingizni yozing…', 'Введите услышанное…', 'Type what you hear…')}
+              lang="zh"
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck={false}
+            />
+            {!done && (
+              <button
+                type="button"
+                className="dr-dict__btn dr-dict__btn--primary dr-dict__check"
+                onClick={checkTyped}
+                disabled={!normalizeHan(typed)}
+              >
+                {T(language, 'Tekshirish', 'Проверить', 'Check')}
+              </button>
+            )}
           </div>
-        </SortableContext>
-      </DndContext>
 
-      {/* Tray */}
-      {!done && (
-        <div className="dr-dict__tray">
-          {tray.map(tileId => (
-            <button key={tileId} type="button" className="dr-dict__tile" onClick={() => tapTray(tileId)}>
-              {chars[tileId]}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {status === 'wrong' && (
-        <div className="dr-dict__feedback dr-dict__feedback--wrong">
-          {T(language, 'Tartib noto\'g\'ri — qayta urinib ko\'ring', 'Неверный порядок — попробуйте ещё раз', 'Wrong order — try again')}
-        </div>
+          {status === 'wrong' && (
+            <div className="dr-dict__feedback dr-dict__feedback--wrong">
+              <div className="dr-dict__diff">
+                {hanChars(typed).map((c, i) => (
+                  <span key={i} className={c === chars[i] ? 'dr-dict__diff-ok' : 'dr-dict__diff-bad'}>{c}</span>
+                ))}
+              </div>
+              <div>{T(language, 'Noto\'g\'ri — qayta urinib ko\'ring', 'Неверно — попробуйте ещё раз', 'Not quite — try again')}</div>
+            </div>
+          )}
+        </>
       )}
 
       {/* Reveal (give up) — only before solving */}
       {!done && (
         <button type="button" className="dr-dict__link" onClick={reveal}>
           {T(language, 'Javobni ko\'rsatish', 'Показать ответ', 'Show answer')}
+        </button>
+      )}
+
+      {/* Input-method fallback toggle — HSK 5/6 only */}
+      {canType && !done && (
+        <button type="button" className="dr-dict__link dr-dict__mode-toggle" onClick={() => switchMode(mode === 'type' ? 'tiles' : 'type')}>
+          {mode === 'type'
+            ? T(language, '⌨️ Xitoycha yoza olmaysizmi? Tartiblang', '⌨️ Не можете печатать? Соберите', '⌨️ Can\'t type Chinese? Arrange instead')
+            : T(language, '⌨️ Yozishga qaytish', '⌨️ Вернуться к вводу', '⌨️ Back to typing')}
         </button>
       )}
 

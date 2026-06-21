@@ -691,7 +691,7 @@ export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps
             {/* ── GRAMMATIKA TAB ── */}
             {activeTab === 'dictation' && (
               <div className="dr-panel">
-                <DialogueDictation lines={dictationLines} language={language} />
+                <DialogueDictation lines={dictationLines} language={language} level={meta.level} />
               </div>
             )}
 

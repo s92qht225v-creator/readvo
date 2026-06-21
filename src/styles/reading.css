@@ -1133,6 +1133,45 @@ body {
 .dr-dict__feedback { font-size: 14px; font-weight: 600; text-align: center; }
 .dr-dict__feedback--wrong { color: #dc2626; }
 
+/* ── Typing mode (HSK 5/6 dictation) ── */
+.dr-dict__type {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dr-dict__input {
+  width: 100%;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 12px 14px;
+  border: 2px solid #d7dbe0;
+  border-radius: 10px;
+  background: #fff;
+  color: #1a1a1a;
+  outline: none;
+}
+.dr-dict__input:focus { border-color: var(--color-accent, #dc2626); }
+.dr-dict__input--wrong { border-color: #ef4444; background: #fef2f2; }
+.dr-dict__input--correct,
+.dr-dict__input--revealed { border-color: #16a34a; background: #f0fdf4; }
+.dr-dict__check { align-self: center; min-width: 140px; }
+.dr-dict__check:disabled { opacity: 0.5; cursor: default; }
+/* Per-character diff of the wrong attempt: right chars green, wrong chars red. */
+.dr-dict__diff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+.dr-dict__diff-ok { color: #16a34a; }
+.dr-dict__diff-bad { color: #dc2626; text-decoration: underline wavy; }
+.dr-dict__mode-toggle { color: var(--color-accent, #dc2626); }
+
 .dr-dict__link {
   border: none;
   background: none;
