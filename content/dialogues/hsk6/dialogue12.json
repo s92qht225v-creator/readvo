@@ -1,0 +1,188 @@
+{
+  "id": "hsk6-dialogue12",
+  "slug": "climate-change",
+  "title": "气候变化",
+  "pinyin": "Qìhòu biànhuà",
+  "titleTranslation": "Iqlim o'zgarishi",
+  "titleTranslation_ru": "Изменение климата",
+  "titleTranslation_en": "Climate Change",
+  "level": 6,
+  "tag": "atrof-muhit",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "印象",
+    "反常",
+    "暴热",
+    "频繁",
+    "后果",
+    "冰川",
+    "融化",
+    "海平面",
+    "极端",
+    "警告",
+    "淹没",
+    "危言耸听",
+    "无所谓",
+    "渺小",
+    "恰恰",
+    "一次性",
+    "严重性",
+    "无力",
+    "排放量",
+    "千疮百孔"
+  ],
+  "sections": [
+    {
+      "id": "h6d12-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d12-s1",
+          "text_original": "你觉不觉得今年夏天特别热？我印象中以前从来没这么热过。",
+          "pinyin": "Nǐ jué bù juéde jīnnián xiàtiān tèbié rè? Wǒ yìnxiàng zhōng yǐqián cónglái méi zhème rè guo.",
+          "text_translation": "Senga bu yilgi yoz juda issiqdek tuyulmayaptimi? Esimda, ilgari hech qachon bunchalik issiq bo'lmagan edi.",
+          "text_translation_ru": "Тебе не кажется, что этим летом особенно жарко? По моим воспоминаниям, раньше никогда так жарко не было.",
+          "text_translation_en": "Don't you think this summer is especially hot? As far as I remember, it was never this hot before.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d12-s2",
+          "text_original": "何止是今年，这几年天气越来越反常了。冬天不冷，夏天暴热，台风也来得更频繁了。",
+          "pinyin": "Hézhǐ shì jīnnián, zhè jǐ nián tiānqì yuè lái yuè fǎncháng le. Dōngtiān bù lěng, xiàtiān bàorè, táifēng yě lái de gèng pínfán le.",
+          "text_translation": "Faqat bu yil emas, so'nggi yillarda ob-havo borgan sari g'ayritabiiy bo'lib boryapti. Qish sovuq emas, yoz jazirama issiq, to'fonlar ham tez-tez kelyapti.",
+          "text_translation_ru": "Не только этот год — последние несколько лет погода всё более ненормальная. Зима не холодная, лето невыносимо жаркое, тайфуны приходят всё чаще.",
+          "text_translation_en": "Not just this year — the weather has been increasingly abnormal these past few years. Winters aren't cold, summers are scorching, and typhoons come more frequently.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d12-s3",
+          "text_original": "有人说这些都是全球变暖带来的后果。你相信吗？",
+          "pinyin": "Yǒurén shuō zhèxiē dōu shì quánqiú biànnuǎn dài lái de hòuguǒ. Nǐ xiāngxìn ma?",
+          "text_translation": "Ba'zilar bularning hammasi global isishning oqibati deyishadi. Sen ishonasanmi?",
+          "text_translation_ru": "Некоторые говорят, что всё это — последствия глобального потепления. Ты в это веришь?",
+          "text_translation_en": "Some people say all this is a consequence of global warming. Do you believe it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d12-s4",
+          "text_original": "我觉得证据已经很充分了。冰川融化、海平面上升、极端天气增多，这些都是科学家反复警告过的。",
+          "pinyin": "Wǒ juéde zhèngjù yǐjīng hěn chōngfèn le. Bīngchuān rónghuà, hǎi píngmiàn shàngshēng, jíduān tiānqì zēngduō, zhèxiē dōu shì kēxuéjiā fǎnfù jǐnggào guo de.",
+          "text_translation": "Menimcha dalillar yetarlicha kuchli. Muzliklarning erishi, dengiz sathining ko'tarilishi, ekstremal ob-havoning ko'payishi — bularning hammasidan olimlar qayta-qayta ogohlantirgan.",
+          "text_translation_ru": "По-моему, доказательств уже более чем достаточно. Таяние ледников, повышение уровня моря, учащение экстремальной погоды — обо всём этом учёные неоднократно предупреждали.",
+          "text_translation_en": "I think the evidence is already very solid. Melting glaciers, rising sea levels, more extreme weather — scientists have warned about all of this repeatedly.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d12-s5",
+          "text_original": "我也看过一些资料，说如果气温继续上升，很多沿海城市都会被淹没。",
+          "pinyin": "Wǒ yě kàn guo yìxiē zīliào, shuō rúguǒ qìwēn jìxù shàngshēng, hěnduō yánhǎi chéngshì dōu huì bèi yānmò.",
+          "text_translation": "Men ham ba'zi maqolalarni o'qiganman, ularda agar harorat ko'tarilishda davom etsa, ko'plab qirg'oq shaharlarini suv bosishi aytilgan.",
+          "text_translation_ru": "Я тоже читал кое-какие материалы, там говорится, что если температура продолжит расти, многие прибрежные города будут затоплены.",
+          "text_translation_en": "I've also read some materials saying that if temperatures keep rising, many coastal cities will be submerged.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d12-s6",
+          "text_original": "这不是危言耸听。但我发现很多人还是抱着无所谓的态度，觉得那是将来的事，跟自己没关系。",
+          "pinyin": "Zhè bú shì wēiyán sǒngtīng. Dàn wǒ fāxiàn hěnduō rén háishì bào zhe wúsuǒwèi de tàidù, juéde nà shì jiānglái de shì, gēn zìjǐ méi guānxi.",
+          "text_translation": "Bu vahima qo'zg'atish uchun aytilgan gap emas. Lekin men ko'p odamlar baribir befarq munosabatda bo'lishini, buni kelajakdagi ish deb, o'ziga aloqasi yo'q deb o'ylashini ko'rdim.",
+          "text_translation_ru": "Это не запугивание преувеличениями. Но я замечаю, что многие всё равно относятся равнодушно, считая, что это дело будущего и их не касается.",
+          "text_translation_en": "This isn't fearmongering. But I notice many people still take an indifferent attitude, thinking it's a future matter that has nothing to do with them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d12-s7",
+          "text_original": "我觉得他们可能觉得个人力量太渺小了，改变不了什么。",
+          "pinyin": "Wǒ juéde tāmen kěnéng juéde gèrén lìliang tài miǎoxiǎo le, gǎibiàn bù liǎo shénme.",
+          "text_translation": "Menimcha ular shaxsiy kuch juda arzimas, hech narsani o'zgartira olmaydi deb o'ylashsa kerak.",
+          "text_translation_ru": "Думаю, они, возможно, считают, что силы одного человека слишком ничтожны, чтобы что-то изменить.",
+          "text_translation_en": "I think they probably feel that one person's power is too insignificant to change anything.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d12-s8",
+          "text_original": "但这种想法恰恰是最危险的。如果每个人都这么想，就真的什么都不会改变。",
+          "pinyin": "Dàn zhè zhǒng xiǎngfǎ qiàqià shì zuì wéixiǎn de. Rúguǒ měi ge rén dōu zhème xiǎng, jiù zhēn de shénme dōu bú huì gǎibiàn.",
+          "text_translation": "Lekin aynan shunday fikr eng xavflisi. Agar har bir kishi shunday o'ylasa, haqiqatan ham hech narsa o'zgarmaydi.",
+          "text_translation_ru": "Но именно такое мышление и есть самое опасное. Если каждый будет так думать, то и правда ничего не изменится.",
+          "text_translation_en": "But that way of thinking is precisely the most dangerous. If everyone thinks like that, then nothing really will change.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d12-s9",
+          "text_original": "那你觉得普通人能做些什么？",
+          "pinyin": "Nà nǐ juéde pǔtōng rén néng zuò xiē shénme?",
+          "text_translation": "Unda seningcha oddiy odam nima qila oladi?",
+          "text_translation_ru": "А что, по-твоему, может сделать обычный человек?",
+          "text_translation_en": "So what do you think ordinary people can do?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d12-s10",
+          "text_original": "我觉得可以从生活小事做起。比如少开车，多坐公共交通；减少使用一次性塑料制品；节约用电用水。",
+          "pinyin": "Wǒ juéde kěyǐ cóng shēnghuó xiǎoshì zuò qǐ. Bǐrú shǎo kāichē, duō zuò gōnggòng jiāotōng; jiǎnshǎo shǐyòng yīcìxìng sùliào zhìpǐn; jiéyuē yòng diàn yòng shuǐ.",
+          "text_translation": "Menimcha hayotdagi mayda ishlardan boshlash mumkin. Masalan, kamroq mashina haydash, ko'proq jamoat transportidan foydalanish; bir martalik plastik buyumlarni kamroq ishlatish; elektr va suvni tejash.",
+          "text_translation_ru": "По-моему, можно начать с мелочей в быту. Например, меньше ездить на машине, чаще пользоваться общественным транспортом; меньше использовать одноразовые пластиковые изделия; экономить электричество и воду.",
+          "text_translation_en": "I think you can start with small everyday things. For example, drive less and take public transport more; reduce the use of disposable plastic products; save electricity and water.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d12-s11",
+          "text_original": "这些听起来很简单，但要长期坚持也不容易。",
+          "pinyin": "Zhèxiē tīng qǐlái hěn jiǎndān, dàn yào chángqī jiānchí yě bù róngyì.",
+          "text_translation": "Bular oson eshitiladi, lekin uzoq vaqt davom ettirish ham oson emas.",
+          "text_translation_ru": "Звучит это просто, но долго придерживаться тоже нелегко.",
+          "text_translation_en": "These sound simple, but keeping them up over the long term isn't easy either.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d12-s12",
+          "text_original": "确实。但总比什么都不做强。还有，我觉得我们可以多跟身边的人分享环保知识，让更多人意识到问题的严重性。",
+          "pinyin": "Quèshí. Dàn zǒng bǐ shénme dōu bú zuò qiáng. Hái yǒu, wǒ juéde wǒmen kěyǐ duō gēn shēnbiān de rén fēnxiǎng huánbǎo zhīshi, ràng gèng duō rén yìshi dào wèntí de yánzhòngxìng.",
+          "text_translation": "To'g'ri. Lekin hech narsa qilmagandan ko'ra yaxshiroq. Yana, menimcha biz atrofdagilarga ekologiya bilimlarini ko'proq ulashishimiz, ko'proq odamlarni muammoning jiddiyligini anglashga undashimiz mumkin.",
+          "text_translation_ru": "Действительно. Но это всё же лучше, чем не делать ничего. Ещё я думаю, мы можем больше делиться знаниями об экологии с окружающими, чтобы больше людей осознали серьёзность проблемы.",
+          "text_translation_en": "True. But it's still better than doing nothing. Also, I think we can share environmental knowledge with people around us more, so that more people realize the severity of the problem.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d12-s13",
+          "text_original": "我有时候会觉得很无力，毕竟那些大工厂、大企业的排放量才是大头。",
+          "pinyin": "Wǒ yǒu shíhou huì juéde hěn wúlì, bìjìng nàxiē dà gōngchǎng, dà qǐyè de páifàng liàng cái shì dàtóu.",
+          "text_translation": "Men ba'zan o'zimni juda ojiz his qilaman, axir o'sha katta zavodlar, yirik korxonalarning chiqindi miqdori asosiy ulushni tashkil qiladi.",
+          "text_translation_ru": "Иногда я чувствую себя совершенно бессильным, ведь основная доля выбросов приходится на крупные заводы и предприятия.",
+          "text_translation_en": "Sometimes I feel powerless, after all the emissions from big factories and large corporations are the major share.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d12-s14",
+          "text_original": "你说的对，但消费者的选择会影响市场。如果大家都选择环保产品，企业自然会改变生产方式。",
+          "pinyin": "Nǐ shuō de duì, dàn xiāofèi zhě de xuǎnzé huì yǐngxiǎng shìchǎng. Rúguǒ dàjiā dōu xuǎnzé huánbǎo chǎnpǐn, qǐyè zìrán huì gǎibiàn shēngchǎn fāngshì.",
+          "text_translation": "To'g'ri aytasan, lekin iste'molchilarning tanlovi bozorga ta'sir qiladi. Agar hamma ekologik mahsulotlarni tanlasa, korxonalar tabiiy ravishda ishlab chiqarish usulini o'zgartiradi.",
+          "text_translation_ru": "Ты прав, но выбор потребителей влияет на рынок. Если все будут выбирать экологичную продукцию, предприятия естественным образом изменят способ производства.",
+          "text_translation_en": "You're right, but consumers' choices affect the market. If everyone chooses eco-friendly products, companies will naturally change their production methods.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d12-s15",
+          "text_original": "有道理。看来气候变化这个问题的确需要个人、企业和政府三方共同努力。",
+          "pinyin": "Yǒu dàoli. Kànlái qìhòu biànhuà zhè ge wèntí de què xūyào gèrén, qǐyè hé zhèngfǔ sān fāng gòngtóng nǔlì.",
+          "text_translation": "Mantiqan to'g'ri. Ko'rinishidan iqlim o'zgarishi muammosi haqiqatan ham shaxs, korxona va hukumat — uch tomonning birgalikdagi sa'y-harakatini talab qiladi.",
+          "text_translation_ru": "Логично. Похоже, проблема изменения климата действительно требует совместных усилий трёх сторон: личности, бизнеса и государства.",
+          "text_translation_en": "That makes sense. It seems the problem of climate change really does require the joint effort of three sides: individuals, businesses, and the government.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d12-s16",
+          "text_original": "对。我们希望留给下一代的不是一个千疮百孔的地球。",
+          "pinyin": "Duì. Wǒmen xīwàng liú gěi xià yí dài de bú shì yí ge qiān chuāng bǎi kǒng de dìqiú.",
+          "text_translation": "Ha. Biz keyingi avlodga teshik-teshik, vayron bo'lgan sayyorani qoldirmaslikni istaymiz.",
+          "text_translation_ru": "Да. Мы хотим оставить следующему поколению не изрешечённую, истерзанную планету.",
+          "text_translation_en": "Right. We hope what we leave for the next generation isn't a planet riddled with scars.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
