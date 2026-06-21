@@ -1,0 +1,215 @@
+{
+  "id": "hsk5-dialogue18",
+  "slug": "career-advancement",
+  "title": "职场晋升",
+  "pinyin": "Zhíchǎng jìnshēng",
+  "titleTranslation": "Lavozimda ko'tarilish",
+  "titleTranslation_ru": "Карьерный рост",
+  "titleTranslation_en": "Career Advancement",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "升职",
+    "正式",
+    "职位",
+    "部门经理",
+    "责任",
+    "管理",
+    "员工",
+    "因素",
+    "积累",
+    "本职",
+    "额外",
+    "任务",
+    "季度",
+    "方案",
+    "带头",
+    "考核",
+    "晋升",
+    "顺利",
+    "角色",
+    "职责",
+    "范围",
+    "水平",
+    "管理者",
+    "挑战",
+    "转变",
+    "手头",
+    "协调",
+    "创造",
+    "业绩"
+  ],
+  "sections": [
+    {
+      "id": "h5d18-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d18-s1",
+          "text_original": "听说你升职了？恭喜啊！什么时候的事？",
+          "pinyin": "Tīngshuō nǐ shēngzhí le? Gōngxǐ a! Shénme shíhou de shì?",
+          "text_translation": "Lavozimingni ko'taribdilar deb eshitdim? Tabriklayman! Qachon bo'ldi?",
+          "text_translation_ru": "Слышал, тебя повысили? Поздравляю! Когда это случилось?",
+          "text_translation_en": "I heard you got promoted? Congratulations! When did that happen?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d18-s2",
+          "text_original": "上个月正式通知的，这周刚搬到新的办公室。",
+          "pinyin": "Shàng ge yuè zhèngshì tōngzhī de, zhè zhōu gāng bān dào xīn de bàngōngshì.",
+          "text_translation": "O'tgan oy rasman xabar qilishdi, bu hafta endi yangi ofisga ko'chdim.",
+          "text_translation_ru": "Официально сообщили в прошлом месяце, а на этой неделе я как раз переехал в новый кабинет.",
+          "text_translation_en": "I was officially notified last month, and just moved to a new office this week.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d18-s3",
+          "text_original": "这次升到什么职位了？",
+          "pinyin": "Zhè cì shēng dào shénme zhíwèi le?",
+          "text_translation": "Bu safar qaysi lavozimga ko'tarilding?",
+          "text_translation_ru": "На какую должность тебя повысили на этот раз?",
+          "text_translation_en": "What position did you get promoted to this time?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d18-s4",
+          "text_original": "部门经理。比以前的责任大了很多，管理的团队也扩大了。",
+          "pinyin": "Bùmén jīnglǐ. Bǐ yǐqián de zérèn dà le hěn duō, guǎnlǐ de tuánduì yě kuòdà le.",
+          "text_translation": "Bo'lim menejeri. Avvalgidan mas'uliyat ancha katta bo'ldi, boshqaradigan jamoam ham kengaydi.",
+          "text_translation_ru": "Руководитель отдела. Ответственности стало гораздо больше, чем раньше, и команда, которой я управляю, расширилась.",
+          "text_translation_en": "Department manager. The responsibility is much greater than before, and the team I manage has grown too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d18-s5",
+          "text_original": "这是你一直努力的结果。你在公司待了几年了？",
+          "pinyin": "Zhè shì nǐ yìzhí nǔlì de jiéguǒ. Nǐ zài gōngsī dāi le jǐ nián le?",
+          "text_translation": "Bu sening doimiy mehnatingning natijasi. Kompaniyada necha yil ishlading?",
+          "text_translation_ru": "Это результат твоих постоянных усилий. Сколько лет ты уже в компании?",
+          "text_translation_en": "This is the result of your continuous effort. How many years have you been at the company?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d18-s6",
+          "text_original": "快六年了。从普通员工一步步走到今天，确实不容易。",
+          "pinyin": "Kuài liù nián le. Cóng pǔtōng yuángōng yí bù bù zǒu dào jīntiān, quèshí bù róngyì.",
+          "text_translation": "Olti yilga yaqinlashdi. Oddiy xodimdan qadam-baqadam bugungi kunga yetib kelish rostdan oson emas.",
+          "text_translation_ru": "Почти шесть лет. Пройти путь от рядового сотрудника до сегодняшнего дня шаг за шагом действительно непросто.",
+          "text_translation_en": "Almost six years. Working my way up step by step from an ordinary employee to today really wasn't easy.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d18-s7",
+          "text_original": "你觉得这次升职的关键因素是什么？",
+          "pinyin": "Nǐ juéde zhè cì shēngzhí de guānjiàn yīnsù shì shénme?",
+          "text_translation": "Seningcha bu safargi ko'tarilishning asosiy omili nima?",
+          "text_translation_ru": "Как ты думаешь, какой ключевой фактор сыграл роль в этом повышении?",
+          "text_translation_en": "What do you think was the key factor in this promotion?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d18-s8",
+          "text_original": "我觉得主要是平时的积累。我不光做好本职工作，还会主动承担额外的任务。",
+          "pinyin": "Wǒ juéde zhǔyào shì píngshí de jīlěi. Wǒ bù guāng zuò hǎo běnzhí gōngzuò, hái huì zhǔdòng chéngdān éwài de rènwu.",
+          "text_translation": "Menimcha asosan kundalik to'plangan tajriba. Men nafaqat o'z asosiy ishimni yaxshi bajaraman, balki o'z tashabbusim bilan qo'shimcha vazifalarni ham zimmamga olaman.",
+          "text_translation_ru": "Думаю, главное — это постепенное накопление. Я не только хорошо выполняю свои прямые обязанности, но и по своей инициативе берусь за дополнительные задачи.",
+          "text_translation_en": "I think it's mainly the everyday accumulation. I don't just do my own job well — I also proactively take on extra tasks.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d18-s9",
+          "text_original": "你能具体说说吗？我想学习一下。",
+          "pinyin": "Nǐ néng jùtǐ shuō shuō ma? Wǒ xiǎng xuéxí yí xià.",
+          "text_translation": "Aniqroq aytib bera olasanmi? O'rganib olmoqchiman.",
+          "text_translation_ru": "Можешь рассказать конкретнее? Хочу поучиться.",
+          "text_translation_en": "Can you be more specific? I'd like to learn from it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d18-s10",
+          "text_original": "比如上个季度，项目遇到困难的时候，我主动提出解决方案，并且带头加班完成。",
+          "pinyin": "Bǐrú shàng ge jìdù, xiàngmù yùdào kùnnan de shíhou, wǒ zhǔdòng tíchū jiějué fāng'àn, bìngqiě dàitóu jiābān wánchéng.",
+          "text_translation": "Masalan o'tgan chorakda loyiha qiyinchilikka uchraganda, men o'zim yechim taklif qildim va boshchilik qilib qo'shimcha ishlab tugatdim.",
+          "text_translation_ru": "Например, в прошлом квартале, когда у проекта возникли трудности, я сам предложил решение и, подавая пример, остался сверхурочно, чтобы его завершить.",
+          "text_translation_en": "For example, last quarter when the project hit difficulties, I proactively proposed a solution and led the way in working overtime to finish it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d18-s11",
+          "text_original": "难怪领导会看重你。领导平时对你的评价怎么样？",
+          "pinyin": "Nánguài lǐngdǎo huì kànzhòng nǐ. Lǐngdǎo píngshí duì nǐ de píngjià zěnmeyàng?",
+          "text_translation": "Rahbar seni qadrlashi bejiz emas ekan. Rahbar odatda senga qanday baho beradi?",
+          "text_translation_ru": "Неудивительно, что руководитель тебя ценит. А как он обычно оценивает тебя?",
+          "text_translation_en": "No wonder the boss values you. How does the boss usually rate you?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d18-s12",
+          "text_original": "还算不错。去年年终考核我是部门第一名，所以这次晋升算比较顺利。",
+          "pinyin": "Hái suàn búcuò. Qùnián niánzhōng kǎohé wǒ shì bùmén dì-yī míng, suǒyǐ zhè cì jìnshēng suàn bǐjiào shùnlì.",
+          "text_translation": "Yomon emas. O'tgan yilgi yil yakuni baholashida bo'lim bo'yicha birinchi bo'ldim, shuning uchun bu safargi ko'tarilish ancha bemalol kechdi.",
+          "text_translation_ru": "Довольно неплохо. По итогам годовой оценки в прошлом году я был первым в отделе, поэтому это повышение прошло сравнительно гладко.",
+          "text_translation_en": "Pretty good. In last year's year-end review I was first in the department, so this promotion went fairly smoothly.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d18-s13",
+          "text_original": "那你对新的角色有什么规划吗？",
+          "pinyin": "Nà nǐ duì xīn de juésè yǒu shénme guīhuà ma?",
+          "text_translation": "Unda yangi rolingga nisbatan biror rejang bormi?",
+          "text_translation_ru": "А есть ли у тебя какие-то планы относительно новой роли?",
+          "text_translation_en": "So do you have any plans for your new role?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d18-s14",
+          "text_original": "首先要尽快熟悉新的职责范围，然后我要帮助团队提高整体水平。",
+          "pinyin": "Shǒuxiān yào jǐnkuài shúxī xīn de zhízé fànwéi, ránhòu wǒ yào bāngzhù tuánduì tígāo zhěngtǐ shuǐpíng.",
+          "text_translation": "Avvalo yangi vazifa doirasini imkon qadar tez o'zlashtirishim, keyin jamoaning umumiy saviyasini oshirishga yordam berishim kerak.",
+          "text_translation_ru": "Сначала нужно как можно быстрее освоить новый круг обязанностей, а затем я хочу помочь команде поднять общий уровень.",
+          "text_translation_en": "First I need to get familiar with the new scope of duties quickly, then help the team raise its overall level.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d18-s15",
+          "text_original": "你觉得从员工变成管理者，最大的挑战是什么？",
+          "pinyin": "Nǐ juéde cóng yuángōng biàn chéng guǎnlǐ zhě, zuì dà de tiǎozhàn shì shénme?",
+          "text_translation": "Seningcha oddiy xodimdan boshqaruvchiga aylanishda eng katta sinov nima?",
+          "text_translation_ru": "Как ты думаешь, какой самый большой вызов при переходе из сотрудника в управленца?",
+          "text_translation_en": "What do you think is the biggest challenge in going from employee to manager?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d18-s16",
+          "text_original": "最大的挑战是思维方式的转变。以前只关心自己手头的事，现在要考虑整个团队的协调和发展。",
+          "pinyin": "Zuì dà de tiǎozhàn shì sīwéi fāngshì de zhuǎnbiàn. Yǐqián zhǐ guānxīn zìjǐ shǒutóu de shì, xiànzài yào kǎolǜ zhěng ge tuánduì de xiétiáo hé fāzhǎn.",
+          "text_translation": "Eng katta sinov — tafakkur tarzining o'zgarishi. Avval faqat o'z qo'limdagi ishga e'tibor berardim, endi butun jamoaning muvofiqlashuvi va rivojini o'ylashim kerak.",
+          "text_translation_ru": "Самый большой вызов — изменение образа мышления. Раньше меня волновали только мои текущие дела, а теперь нужно думать о координации и развитии всей команды.",
+          "text_translation_en": "The biggest challenge is the shift in mindset. Before I only cared about the tasks at hand, but now I have to think about the whole team's coordination and growth.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d18-s17",
+          "text_original": "能走到这一步很不容易。继续加油！",
+          "pinyin": "Néng zǒu dào zhè yí bù hěn bù róngyì. Jìxù jiāyóu!",
+          "text_translation": "Shu bosqichga yetib kelish juda oson emas. Davom et, omad!",
+          "text_translation_ru": "Дойти до этого этапа очень непросто. Так держать!",
+          "text_translation_en": "Getting to this point isn't easy. Keep it up!",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d18-s18",
+          "text_original": "谢谢！我会继续努力的。希望以后能带好团队，创造更好的业绩。",
+          "pinyin": "Xièxie! Wǒ huì jìxù nǔlì de. Xīwàng yǐhòu néng dài hǎo tuánduì, chuàngzào gèng hǎo de yèjì.",
+          "text_translation": "Rahmat! Yana harakat qilaman. Kelajakda jamoani yaxshi boshqarib, yanada yaxshi natijalar yaratishni umid qilaman.",
+          "text_translation_ru": "Спасибо! Я продолжу стараться. Надеюсь, в будущем смогу хорошо вести команду и добиваться лучших результатов.",
+          "text_translation_en": "Thank you! I'll keep working hard. I hope to lead the team well and create better results in the future.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

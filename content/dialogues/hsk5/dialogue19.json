@@ -1,0 +1,185 @@
+{
+  "id": "hsk5-dialogue19",
+  "slug": "elderly-care",
+  "title": "养老",
+  "pinyin": "Yǎnglǎo",
+  "titleTranslation": "Keksalik ta'minoti",
+  "titleTranslation_ru": "Уход за пожилыми",
+  "titleTranslation_en": "Elderly Care",
+  "level": 5,
+  "tag": "oila",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "养老",
+    "年纪",
+    "高血压",
+    "糖尿病",
+    "定期",
+    "自在",
+    "打扰",
+    "护工",
+    "养老院",
+    "适应",
+    "经济",
+    "压力",
+    "难题",
+    "商业养老保险",
+    "明智",
+    "子女",
+    "负担"
+  ],
+  "sections": [
+    {
+      "id": "h5d19-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d19-s1",
+          "text_original": "你最近在忙什么？好久没看到你了。",
+          "pinyin": "Nǐ zuìjìn zài máng shénme? Hǎojiǔ méi kàn dào nǐ le.",
+          "text_translation": "Yaqinda nima bilan bandsan? Anchadan beri seni ko'rmadim.",
+          "text_translation_ru": "Чем ты занят в последнее время? Давно тебя не видел.",
+          "text_translation_en": "What have you been busy with lately? I haven't seen you in a while.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d19-s2",
+          "text_original": "我父母年纪大了，身体不如以前了，我正在考虑他们的养老问题。",
+          "pinyin": "Wǒ fùmǔ niánjì dà le, shēntǐ bùrú yǐqián le, wǒ zhèngzài kǎolǜ tāmen de yǎnglǎo wèntí.",
+          "text_translation": "Ota-onam yoshi ulg'aydi, sog'lig'i avvalgidek emas, men ularning keksalik ta'minoti masalasini o'ylab yuribman.",
+          "text_translation_ru": "Мои родители постарели, со здоровьем уже не так, как раньше, и я сейчас думаю об уходе за ними в старости.",
+          "text_translation_en": "My parents have gotten older and their health isn't what it used to be, so I'm thinking about their elderly care.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d19-s3",
+          "text_original": "他们多大了？身体怎么样？",
+          "pinyin": "Tāmen duō dà le? Shēntǐ zěnmeyàng?",
+          "text_translation": "Ular necha yoshda? Sog'liqlari qanday?",
+          "text_translation_ru": "Сколько им лет? Как у них со здоровьем?",
+          "text_translation_en": "How old are they? How's their health?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d19-s4",
+          "text_original": "我爸七十二，我妈六十八。我妈身体还行，但我爸有高血压和糖尿病，需要定期去医院。",
+          "pinyin": "Wǒ bà qīshí'èr, wǒ mā liùshíbā. Wǒ mā shēntǐ hái xíng, dàn wǒ bà yǒu gāoxuèyā hé tángniàobìng, xūyào dìngqī qù yīyuàn.",
+          "text_translation": "Dadam yetmish ikki, oyim oltmish sakkiz yoshda. Oyimning sog'lig'i hali yaxshi, lekin dadamda yuqori qon bosimi va qandli diabet bor, muntazam shifoxonaga borishi kerak.",
+          "text_translation_ru": "Папе семьдесят два, маме шестьдесят восемь. У мамы со здоровьем ещё ничего, а у папы повышенное давление и диабет, ему нужно регулярно ездить в больницу.",
+          "text_translation_en": "My dad is seventy-two, my mom sixty-eight. My mom's health is okay, but my dad has high blood pressure and diabetes and needs to go to the hospital regularly.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d19-s5",
+          "text_original": "那确实需要好好安排。他们现在是自己住还是跟你们一起？",
+          "pinyin": "Nà quèshí xūyào hǎohao ānpái. Tāmen xiànzài shì zìjǐ zhù háishì gēn nǐmen yìqǐ?",
+          "text_translation": "Unda rostdan yaxshilab tartibga solish kerak. Ular hozir o'zlari yashaydimi yoki sizlar bilan birgami?",
+          "text_translation_ru": "Тогда это действительно нужно как следует устроить. Они сейчас живут сами или вместе с вами?",
+          "text_translation_en": "That really needs proper arranging. Do they live on their own now, or with you?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d19-s6",
+          "text_original": "他们现在自己住，但离我家不远，开车二十分钟就能到。",
+          "pinyin": "Tāmen xiànzài zìjǐ zhù, dàn lí wǒ jiā bù yuǎn, kāichē èrshí fēnzhōng jiù néng dào.",
+          "text_translation": "Ular hozir o'zlari yashaydi, lekin uyimdan uzoq emas, mashinada yigirma daqiqada yetib boriladi.",
+          "text_translation_ru": "Сейчас они живут отдельно, но недалеко от моего дома — на машине двадцать минут.",
+          "text_translation_en": "They live on their own now, but not far from my place — twenty minutes by car.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d19-s7",
+          "text_original": "那还比较方便。你有没有考虑过接他们过来一起住？",
+          "pinyin": "Nà hái bǐjiào fāngbiàn. Nǐ yǒu méiyǒu kǎolǜ guo jiē tāmen guòlái yìqǐ zhù?",
+          "text_translation": "Unda ancha qulay ekan. Ularni o'z oldingga olib kelib birga yashashni o'ylab ko'rganmiding?",
+          "text_translation_ru": "Это довольно удобно. Ты не думал перевезти их к себе, чтобы жить вместе?",
+          "text_translation_en": "That's fairly convenient. Have you considered having them move in with you?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d19-s8",
+          "text_original": "考虑过，但我爸妈不太愿意。他们觉得有自己的空间更自在，不想打扰我们。",
+          "pinyin": "Kǎolǜ guo, dàn wǒ bà mā bú tài yuànyì. Tāmen juéde yǒu zìjǐ de kōngjiān gèng zìzài, bù xiǎng dǎrǎo wǒmen.",
+          "text_translation": "O'ylaganman, lekin ota-onam unchalik xohlamaydi. Ular o'z makonlari bo'lsa erkinroq deb hisoblaydi, bizni bezovta qilishni istamaydi.",
+          "text_translation_ru": "Думал, но родители не очень хотят. Им кажется, что со своим пространством свободнее, и они не хотят нас стеснять.",
+          "text_translation_en": "I have, but my parents aren't keen. They feel more at ease having their own space and don't want to disturb us.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d19-s9",
+          "text_original": "很多老人都是这样想的。那你现在怎么照顾他们？",
+          "pinyin": "Hěnduō lǎorén dōu shì zhèyàng xiǎng de. Nà nǐ xiànzài zěnme zhàogù tāmen?",
+          "text_translation": "Ko'p keksalar shunday o'ylaydi. Unda hozir ularni qanday parvarish qilasan?",
+          "text_translation_ru": "Многие пожилые так думают. И как ты сейчас за ними ухаживаешь?",
+          "text_translation_en": "A lot of elderly people think that way. So how do you take care of them now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d19-s10",
+          "text_original": "我每周至少去两次，帮他们买买菜、陪他们聊聊天。有需要的时候也会请假陪他们去医院。",
+          "pinyin": "Wǒ měi zhōu zhìshǎo qù liǎng cì, bāng tāmen mǎi mǎi cài, péi tāmen liáo liáo tiān. Yǒu xūyào de shíhou yě huì qǐngjià péi tāmen qù yīyuàn.",
+          "text_translation": "Har hafta kamida ikki marta boraman, ularga ovqat xaridiga yordamlashaman, suhbatlashib o'tiraman. Zarur bo'lganda ish so'rab, ularni shifoxonaga olib boraman.",
+          "text_translation_ru": "Я хожу к ним минимум дважды в неделю, помогаю с продуктами, болтаю с ними. Когда нужно, беру отгул и сопровождаю их в больницу.",
+          "text_translation_en": "I go at least twice a week, help them buy groceries, and chat with them. When needed, I take time off to go with them to the hospital.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d19-s11",
+          "text_original": "你有没有考虑过请护工或者送他们去养老院？",
+          "pinyin": "Nǐ yǒu méiyǒu kǎolǜ guo qǐng hùgōng huòzhě sòng tāmen qù yǎnglǎoyuàn?",
+          "text_translation": "Parvarishchi yollash yoki ularni qariyalar uyiga yuborishni o'ylab ko'rganmiding?",
+          "text_translation_ru": "Ты не думал нанять сиделку или отправить их в дом престарелых?",
+          "text_translation_en": "Have you considered hiring a caregiver or sending them to a nursing home?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d19-s12",
+          "text_original": "目前还没考虑养老院，怕他们不适应。请护工的话，经济上压力不小，而且也不一定能找到合适的。",
+          "pinyin": "Mùqián hái méi kǎolǜ yǎnglǎoyuàn, pà tāmen bú shìyìng. Qǐng hùgōng dehuà, jīngjì shàng yālì bù xiǎo, érqiě yě bù yídìng néng zhǎodào héshì de.",
+          "text_translation": "Hozircha qariyalar uyini o'ylaganim yo'q, moslasholmasligidan qo'rqaman. Parvarishchi yollasam, moliyaviy bosim katta, ustiga mosini topish ham aniq emas.",
+          "text_translation_ru": "Пока о доме престарелых не думал — боюсь, что они не приспособятся. А если нанимать сиделку, финансовая нагрузка немалая, да и не факт, что найдёшь подходящую.",
+          "text_translation_en": "For now I haven't considered a nursing home — I'm afraid they wouldn't adapt. As for hiring a caregiver, the financial pressure is considerable, and finding a suitable one isn't guaranteed either.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d19-s13",
+          "text_original": "确实不容易。养老问题对很多家庭来说都是一个难题。",
+          "pinyin": "Quèshí bù róngyì. Yǎnglǎo wèntí duì hěnduō jiātíng lái shuō dōu shì yí ge nántí.",
+          "text_translation": "Rostdan oson emas. Keksalik ta'minoti masalasi ko'p oilalar uchun mushkul muammo.",
+          "text_translation_ru": "Действительно непросто. Вопрос ухода за пожилыми для многих семей — настоящая головоломка.",
+          "text_translation_en": "It really isn't easy. Elderly care is a tough problem for many families.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d19-s14",
+          "text_original": "对。所以我现在开始为将来做准备了，自己也买了商业养老保险。",
+          "pinyin": "Duì. Suǒyǐ wǒ xiànzài kāishǐ wèi jiānglái zuò zhǔnbèi le, zìjǐ yě mǎi le shāngyè yǎnglǎo bǎoxiǎn.",
+          "text_translation": "To'g'ri. Shuning uchun hozir kelajak uchun tayyorgarlik ko'ra boshladim, o'zim ham tijoriy pensiya sug'urtasini oldim.",
+          "text_translation_ru": "Да. Поэтому я уже начал готовиться к будущему — сам тоже оформил коммерческое пенсионное страхование.",
+          "text_translation_en": "Right. So I've started preparing for the future — I've also bought commercial retirement insurance for myself.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d19-s15",
+          "text_original": "这个想法很明智。养老不能完全靠子女，自己提前规划很重要。",
+          "pinyin": "Zhè ge xiǎngfǎ hěn míngzhì. Yǎnglǎo bùnéng wánquán kào zǐnǚ, zìjǐ tíqián guīhuà hěn zhòngyào.",
+          "text_translation": "Bu fikr juda oqilona. Keksalik ta'minotini butunlay farzandlarga tashlab bo'lmaydi, oldindan o'zing rejalashtirish juda muhim.",
+          "text_translation_ru": "Это очень разумно. На старость нельзя полностью полагаться на детей, важно заранее планировать самому.",
+          "text_translation_en": "That's a wise idea. You can't rely entirely on your children for old age — planning ahead yourself is important.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d19-s16",
+          "text_original": "对。我也希望将来自己老了，不给孩子们增加太多负担。",
+          "pinyin": "Duì. Wǒ yě xīwàng jiānglái zìjǐ lǎo le, bù gěi háizimen zēngjiā tài duō fùdān.",
+          "text_translation": "To'g'ri. Men ham kelajakda qariganimda bolalarimga ortiqcha yuk bo'lmaslikni umid qilaman.",
+          "text_translation_ru": "Да. Я тоже надеюсь, что, состарившись, не стану слишком большим бременем для своих детей.",
+          "text_translation_en": "Right. I also hope that when I get old, I won't add too much burden on my children.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
