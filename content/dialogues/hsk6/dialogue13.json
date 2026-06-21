@@ -1,0 +1,209 @@
+{
+  "id": "hsk6-dialogue13",
+  "slug": "social-credit-system",
+  "title": "社会信用体系",
+  "pinyin": "Shèhuì xìnyòng tǐxì",
+  "titleTranslation": "Ijtimoiy kredit tizimi",
+  "titleTranslation_ru": "Система социального кредита",
+  "titleTranslation_en": "Social Credit System",
+  "level": 6,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "试点",
+    "运作",
+    "受限",
+    "贴标签",
+    "诚信",
+    "失信",
+    "定义",
+    "滥用",
+    "别有用心",
+    "客观",
+    "恶性循环",
+    "翻身",
+    "全面",
+    "试行",
+    "规范",
+    "完善",
+    "透明",
+    "申诉",
+    "误判",
+    "独立",
+    "第三方",
+    "全权控制",
+    "数字"
+  ],
+  "sections": [
+    {
+      "id": "h6d13-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d13-s1",
+          "text_original": "你听说了吗？我们城市要开始试点社会信用体系了。",
+          "pinyin": "Nǐ tīngshuō le ma? Wǒmen chéngshì yào kāishǐ shìdiǎn shèhuì xìnyòng tǐxì le.",
+          "text_translation": "Eshitdingmi? Bizning shahar ijtimoiy kredit tizimini sinov tariqasida joriy etishni boshlamoqchi ekan.",
+          "text_translation_ru": "Ты слышал? Наш город собирается запустить пилотную систему социального кредита.",
+          "text_translation_en": "Have you heard? Our city is going to start piloting a social credit system.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d13-s2",
+          "text_original": "听说过，但具体是怎么运作的？每个人都要参加吗？",
+          "pinyin": "Tīngshuō guo, dàn jùtǐ shì zěnme yùnzuò de? Měi ge rén dōu yào cānjiā ma?",
+          "text_translation": "Eshitganman, lekin aniq qanday ishlaydi? Hamma qatnashishi shartmi?",
+          "text_translation_ru": "Слышал, но как именно она работает? Все обязаны участвовать?",
+          "text_translation_en": "I've heard of it, but how exactly does it work? Does everyone have to take part?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d13-s3",
+          "text_original": "据说是收集你在交通、消费、银行等各方面的行为数据，然后给你打一个信用分。分数高的能享受一些便利，分数低的可能处处受限。",
+          "pinyin": "Jùshuō shì shōují nǐ zài jiāotōng, xiāofèi, yínháng děng gè fāngmiàn de xíngwéi shùjù, ránhòu gěi nǐ dǎ yí ge xìnyòng fēn. Fēnshù gāo de néng xiǎngshòu yì xiē biànlì, fēnshù dī de kěnéng chùchù shòuxiàn.",
+          "text_translation": "Aytishlaricha, transport, iste'mol, bank kabi turli sohalardagi xatti-harakating ma'lumotlarini yig'ib, senga kredit bahosi qo'yarkan. Bahosi yuqorilar ba'zi qulayliklardan foydalanadi, bahosi pastlar har joyda cheklanishi mumkin.",
+          "text_translation_ru": "Говорят, собирают данные о твоём поведении в транспорте, потреблении, банковской сфере и так далее, а потом выставляют тебе кредитный балл. У кого балл высокий — пользуются разными удобствами, у кого низкий — могут быть ограничены на каждом шагу.",
+          "text_translation_en": "Apparently it collects behavioral data about you across transport, spending, banking and so on, then gives you a credit score. Those with high scores enjoy certain conveniences, while those with low scores may be restricted at every turn.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d13-s4",
+          "text_original": "那不就是给每个人贴标签吗？我不太喜欢这种机制。",
+          "pinyin": "Nà bú jiùshì gěi měi ge rén tiē biāoqiān ma? Wǒ bú tài xǐhuān zhè zhǒng jīzhì.",
+          "text_translation": "Bu har bir odamga yorliq yopishtirish-ku? Menga bunday mexanizm unchalik yoqmaydi.",
+          "text_translation_ru": "Так это же навешивание ярлыков на каждого? Мне не очень нравится такой механизм.",
+          "text_translation_en": "Isn't that just labeling everyone? I don't really like this kind of mechanism.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d13-s5",
+          "text_original": "为什么？理论上说，这个制度能鼓励诚信行为，惩罚失信行为。",
+          "pinyin": "Wèishénme? Lǐlùn shàng shuō, zhè ge zhìdù néng gǔlì chéngxìn xíngwéi, chéngfá shīxìn xíngwéi.",
+          "text_translation": "Nega? Nazariy jihatdan bu tizim halol xatti-harakatni rag'batlantirib, ishonchni buzgan xatti-harakatni jazolay oladi.",
+          "text_translation_ru": "Почему? В теории эта система поощряет добросовестное поведение и наказывает за нарушение доверия.",
+          "text_translation_en": "Why? In theory, this system can encourage honest behavior and punish dishonest behavior.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d13-s6",
+          "text_original": "听起来是好的，但我担心几个问题。第一，谁来定义什么是「诚信」？谁来监管这个系统？",
+          "pinyin": "Tīng qǐlái shì hǎo de, dàn wǒ dānxīn jǐ ge wèntí. Dì-yī, shuí lái dìngyì shénme shì 'chéngxìn'? Shuí lái jiānguǎn zhè ge xìtǒng?",
+          "text_translation": "Eshitishga yaxshi, lekin men bir necha narsadan xavotirdaman. Birinchidan, «halollik» nimaligini kim belgilaydi? Bu tizimni kim nazorat qiladi?",
+          "text_translation_ru": "Звучит хорошо, но меня беспокоит несколько вопросов. Во-первых, кто будет определять, что такое «добросовестность»? Кто будет контролировать эту систему?",
+          "text_translation_en": "It sounds good, but I worry about a few things. First, who defines what \"integrity\" is? Who oversees this system?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d13-s7",
+          "text_original": "这确实是个值得思考的问题。还有第二呢？",
+          "pinyin": "Zhè quèshí shì ge zhídé sīkǎo de wèntí. Hái yǒu dì-èr ne?",
+          "text_translation": "Bu chindan ham o'ylab ko'rishga arziydigan savol. Yana ikkinchisi nima?",
+          "text_translation_ru": "Это действительно вопрос, над которым стоит подумать. А во-вторых?",
+          "text_translation_en": "That really is a question worth thinking about. And the second one?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d13-s8",
+          "text_original": "第二，数据会不会被滥用？如果系统被黑或者被别有用心的人利用，后果不堪设想。",
+          "pinyin": "Dì-èr, shùjù huì bú huì bèi lànyòng? Rúguǒ xìtǒng bèi hēi huòzhě bèi biéyǒu yòngxīn de rén lìyòng, hòuguǒ bùkān shèxiǎng.",
+          "text_translation": "Ikkinchidan, ma'lumotlar suiiste'mol qilinmaydimi? Agar tizim buzib kirilsa yoki g'arazli niyatli odamlar tomonidan ishlatilsa, oqibati o'ylashga ham qo'rqinchli.",
+          "text_translation_ru": "Во-вторых, не будут ли данные использованы во зло? Если систему взломают или ею воспользуются люди с задними мыслями, последствия трудно даже представить.",
+          "text_translation_en": "Second, could the data be misused? If the system gets hacked or exploited by people with ulterior motives, the consequences would be unthinkable.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d13-s9",
+          "text_original": "你说得对。大数据收集确实可能侵犯隐私，而且评分标准也很难做到完全客观。",
+          "pinyin": "Nǐ shuō de duì. Dà shùjù shōují quèshí kěnéng qīnfàn yǐnsī, érqiě píngfēn biāozhǔn yě hěn nán zuò dào wánquán kèguān.",
+          "text_translation": "To'g'ri aytasan. Katta ma'lumotlarni yig'ish chindan ham maxfiylikni buzishi mumkin, qolaversa baholash mezonini to'liq xolis qilish ham juda qiyin.",
+          "text_translation_ru": "Ты прав. Сбор больших данных действительно может нарушать приватность, к тому же критерии оценки трудно сделать полностью объективными.",
+          "text_translation_en": "You're right. Big-data collection really can infringe on privacy, and it's very hard to make the scoring criteria fully objective.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d13-s10",
+          "text_original": "还有，信用低的人会陷入恶性循环。本来就很困难，还被限制各种权利，他们更难翻身。",
+          "pinyin": "Hái yǒu, xìnyòng dī de rén huì xiànrù èxìng xúnhuán. Běnlái jiù hěn kùnnan, hái bèi xiànzhì gè zhǒng quánlì, tāmen gèng nán fānshēn.",
+          "text_translation": "Yana, krediti past odamlar yomon doiraga tushib qoladi. Allaqachon qiyin ahvolda, ustiga turli huquqlari cheklansa, ular ahvolini o'nglashi yanada qiyinlashadi.",
+          "text_translation_ru": "Ещё люди с низким кредитом попадают в порочный круг. Им и так трудно, а тут ещё ограничивают разные права — им ещё сложнее выправить положение.",
+          "text_translation_en": "Also, people with low credit fall into a vicious cycle. They're already struggling, and on top of that their various rights get restricted, making it even harder for them to turn things around.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d13-s11",
+          "text_original": "你考虑得挺全面的。我听说有些地方已经试行了一段时间，确实存在这些问题。",
+          "pinyin": "Nǐ kǎolǜ de tǐng quánmiàn de. Wǒ tīngshuō yǒuxiē dìfang yǐjīng shìxíng le yí duàn shíjiān, quèshí cúnzài zhèxiē wèntí.",
+          "text_translation": "Sen ancha har tomonlama o'ylab ko'ribsan. Eshitishimcha, ba'zi joylarda bir muddat sinab ko'rilgan ekan, chindan ham shu muammolar bor ekan.",
+          "text_translation_ru": "Ты подошёл к этому весьма всесторонне. Я слышал, в некоторых местах систему уже какое-то время применяли на пробу, и эти проблемы действительно есть.",
+          "text_translation_en": "You've thought about it quite comprehensively. I've heard some places have already tried it out for a while, and these problems really do exist.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d13-s12",
+          "text_original": "我理解政府希望通过制度来规范社会行为，但任何制度都需要不断完善。",
+          "pinyin": "Wǒ lǐjiě zhèngfǔ xīwàng tōngguò zhìdù lái guīfàn shèhuì xíngwéi, dàn rènhé zhìdù dōu xūyào búduàn wánshàn.",
+          "text_translation": "Men hukumat tizim orqali ijtimoiy xatti-harakatni tartibga solmoqchi ekanini tushunaman, lekin har qanday tizimni doimiy takomillashtirib borish kerak.",
+          "text_translation_ru": "Я понимаю, что государство хочет с помощью системы регулировать поведение в обществе, но любую систему нужно постоянно совершенствовать.",
+          "text_translation_en": "I understand the government wants to regulate social behavior through a system, but any system needs to be continually improved.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d13-s13",
+          "text_original": "那你觉得应该怎么改进呢？",
+          "pinyin": "Nà nǐ juéde yīnggāi zěnme gǎijìn ne?",
+          "text_translation": "Unda seningcha qanday yaxshilash kerak?",
+          "text_translation_ru": "А как, по-твоему, её следует улучшить?",
+          "text_translation_en": "So how do you think it should be improved?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d13-s14",
+          "text_original": "首先，要有透明的评分标准和申诉机制。如果分数被误判，个人应该有权利申诉。",
+          "pinyin": "Shǒuxiān, yào yǒu tòumíng de píngfēn biāozhǔn hé shēnsù jīzhì. Rúguǒ fēnshù bèi wùpàn, gèrén yīnggāi yǒu quánlì shēnsù.",
+          "text_translation": "Avvalo, shaffof baholash mezoni va shikoyat mexanizmi bo'lishi kerak. Agar ball xato baholansa, shaxs shikoyat qilish huquqiga ega bo'lishi lozim.",
+          "text_translation_ru": "Во-первых, нужны прозрачные критерии оценки и механизм апелляции. Если балл выставлен ошибочно, у человека должно быть право обжаловать.",
+          "text_translation_en": "First, there should be transparent scoring criteria and an appeals mechanism. If a score is misjudged, the individual should have the right to appeal.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d13-s15",
+          "text_original": "这点很重要。第二呢？",
+          "pinyin": "Zhè diǎn hěn zhòngyào. Dì-èr ne?",
+          "text_translation": "Bu juda muhim. Ikkinchisi-chi?",
+          "text_translation_ru": "Это очень важно. А во-вторых?",
+          "text_translation_en": "That's very important. And the second?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d13-s16",
+          "text_original": "第二，数据应该由独立的第三方管理，不能由单一部门全权控制。这样能减少滥用的风险。",
+          "pinyin": "Dì-èr, shùjù yīnggāi yóu dúlì de dì-sān fāng guǎnlǐ, bùnéng yóu dānyī bùmén quánquán kòngzhì. Zhèyàng néng jiǎnshǎo lànyòng de fēngxiǎn.",
+          "text_translation": "Ikkinchidan, ma'lumotlarni mustaqil uchinchi taraf boshqarishi kerak, bitta idora to'liq nazorat qilmasligi lozim. Shunday qilib suiiste'mol xavfini kamaytirish mumkin.",
+          "text_translation_ru": "Во-вторых, данными должна управлять независимая третья сторона, а не единственное ведомство с полным контролем. Так можно снизить риск злоупотреблений.",
+          "text_translation_en": "Second, the data should be managed by an independent third party, not fully controlled by a single department. That way the risk of abuse can be reduced.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d13-s17",
+          "text_original": "看来你对这个制度做过不少研究。",
+          "pinyin": "Kànlái nǐ duì zhè ge zhìdù zuò guo bùshǎo yánjiū.",
+          "text_translation": "Ko'rinishidan sen bu tizim ustida anchagina o'rgangansan.",
+          "text_translation_ru": "Похоже, ты немало изучал эту систему.",
+          "text_translation_en": "It seems you've done quite a bit of research on this system.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d13-s18",
+          "text_original": "因为关系到每个人的生活，我不希望我们生活在一个被数字定义的世界里。",
+          "pinyin": "Yīnwèi guānxì dào měi ge rén de shēnghuó, wǒ bù xīwàng wǒmen shēnghuó zài yí ge bèi shùzì dìngyì de shìjiè lǐ.",
+          "text_translation": "Chunki bu har bir kishining hayotiga taalluqli, men bizning raqamlar bilan belgilanadigan dunyoda yashashimizni istamayman.",
+          "text_translation_ru": "Потому что это касается жизни каждого, и я не хочу, чтобы мы жили в мире, определяемом цифрами.",
+          "text_translation_en": "Because it affects everyone's life, and I don't want us to live in a world defined by numbers.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
