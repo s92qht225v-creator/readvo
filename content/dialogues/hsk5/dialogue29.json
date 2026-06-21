@@ -1,0 +1,160 @@
+{
+  "id": "hsk5-dialogue29",
+  "slug": "urban-transportation",
+  "title": "城市交通",
+  "pinyin": "Chéngshì jiāotōng",
+  "titleTranslation": "Shahar transporti",
+  "titleTranslation_ru": "Городской транспорт",
+  "titleTranslation_en": "Urban Transportation",
+  "level": 5,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "别提了",
+    "路程",
+    "出行方式",
+    "充电桩",
+    "高峰",
+    "崩溃",
+    "拼车",
+    "公交专用道",
+    "一致",
+    "避开"
+  ],
+  "sections": [
+    {
+      "id": "h5d29-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d29-s1",
+          "text_original": "你今天怎么又迟到了？路上又堵车了吗？",
+          "pinyin": "Nǐ jīntiān zěnme yòu chídào le? Lùshàng yòu dǔchē le ma?",
+          "text_translation": "Bugun nega yana kechikding? Yo'lda yana tirbandlik bo'ldimi?",
+          "text_translation_ru": "Почему ты сегодня снова опоздал? Опять пробка на дороге?",
+          "text_translation_en": "Why are you late again today? Was there a traffic jam again?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d29-s2",
+          "text_original": "别提了，今天堵得特别厉害。平时半小时的路程，今天开了一个半小时。",
+          "pinyin": "Bié tí le, jīntiān dǔ de tèbié lìhai. Píngshí bàn xiǎoshí de lùchéng, jīntiān kāi le yí ge bàn xiǎoshí.",
+          "text_translation": "Aytmang-da, bugun tirbandlik juda qattiq edi. Odatda yarim soatlik yo'lni bugun bir yarim soatda bosib o'tdim.",
+          "text_translation_ru": "И не говори, сегодня пробка была просто ужасная. Дорогу, на которую обычно уходит полчаса, я сегодня ехал полтора часа.",
+          "text_translation_en": "Don't even mention it — the jam today was awful. A trip that usually takes half an hour took me an hour and a half today.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d29-s3",
+          "text_original": "那你没考虑换一种出行方式吗？比如地铁或者共享单车。",
+          "pinyin": "Nà nǐ méi kǎolǜ huàn yì zhǒng chūxíng fāngshì ma? Bǐrú dìtiě huòzhě gòngxiǎng dānchē.",
+          "text_translation": "Unda qatnov usulini o'zgartirishni o'ylab ko'rmadingmi? Masalan metro yoki umumiy velosiped.",
+          "text_translation_ru": "А ты не думал сменить способ передвижения? Например, метро или велосипед проката.",
+          "text_translation_en": "So haven't you thought about changing your mode of transport? Like the subway or a shared bike.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d29-s4",
+          "text_original": "想过，但地铁离我家有点远，走路要十五分钟。共享单车的话，下雨天又不方便。",
+          "pinyin": "Xiǎng guo, dàn dìtiě lí wǒ jiā yǒu diǎn yuǎn, zǒulù yào shíwǔ fēnzhōng. Gòngxiǎng dānchē dehuà, xià yǔ tiān yòu bù fāngbiàn.",
+          "text_translation": "O'ylaganman, lekin metro uyimdan biroz uzoq, piyoda o'n besh daqiqa ketadi. Umumiy velosiped bo'lsa, yomg'irli kunlari qulay emas.",
+          "text_translation_ru": "Думал, но метро от дома далековато — пешком пятнадцать минут. А велосипед проката в дождливый день неудобен.",
+          "text_translation_en": "I have, but the subway is a bit far from my home — fifteen minutes on foot. And a shared bike isn't convenient on rainy days.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d29-s5",
+          "text_original": "那你有没有考虑买一辆电动车？现在很多人都骑电动车上班。",
+          "pinyin": "Nà nǐ yǒu méiyǒu kǎolǜ mǎi yí liàng diàndòng chē? Xiànzài hěnduō rén dōu qí diàndòng chē shàngbān.",
+          "text_translation": "Unda elektrovelosiped olishni o'ylab ko'rganmiding? Hozir ko'p odam ishga elektrovelosipedda boradi.",
+          "text_translation_ru": "А ты не думал купить электробайк? Сейчас многие ездят на работу на электробайках.",
+          "text_translation_en": "Then have you thought about buying an electric scooter? Many people ride electric scooters to work now.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d29-s6",
+          "text_original": "电动车确实方便，但是充电有点麻烦，而且我们小区没有专门的充电桩。",
+          "pinyin": "Diàndòng chē quèshí fāngbiàn, dànshì chōngdiàn yǒu diǎn máfan, érqiě wǒmen xiǎoqū méiyǒu zhuānmén de chōngdiàn zhuāng.",
+          "text_translation": "Elektrovelosiped rostdan qulay, lekin quvvatlash biroz ovoragarchilik, ustiga turar-joy majmuamizda maxsus zaryad ustuni yo'q.",
+          "text_translation_ru": "Электробайк и правда удобен, но заряжать его немного хлопотно, к тому же в нашем дворе нет специальной зарядной станции.",
+          "text_translation_en": "Electric scooters really are convenient, but charging is a bit of a hassle, and our complex doesn't have a dedicated charging station.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d29-s7",
+          "text_original": "交通问题真是大城市的一大难题。尤其是在早晚高峰，堵得让人崩溃。",
+          "pinyin": "Jiāotōng wèntí zhēn shì dà chéngshì de yí dà nántí. Yóuqí shì zài zǎowǎn gāofēng, dǔ de ràng rén bēngkuì.",
+          "text_translation": "Transport muammosi rostdan katta shaharning katta muammosi. Ayniqsa ertalab-kechqurun gavjum vaqtda, tirbandlik odamni ruhan ezadi.",
+          "text_translation_ru": "Транспортная проблема — действительно большая головная боль крупного города. Особенно в утренний и вечерний час пик, пробки доводят до отчаяния.",
+          "text_translation_en": "Traffic really is a big problem in large cities. Especially during the morning and evening rush hour, the jams drive you crazy.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d29-s8",
+          "text_original": "可不是嘛！我现在每天早上都要提前半小时出门，不然肯定迟到。",
+          "pinyin": "Kě bú shì ma! Wǒ xiànzài měitiān zǎoshang dōu yào tíqián bàn xiǎoshí chūmén, bùrán kěndìng chídào.",
+          "text_translation": "Shunday-da! Men hozir har kuni ertalab yarim soat oldin chiqaman, aks holda albatta kechikaman.",
+          "text_translation_ru": "Вот именно! Теперь я каждое утро выхожу на полчаса раньше, иначе точно опоздаю.",
+          "text_translation_en": "Tell me about it! Now I have to leave half an hour early every morning, otherwise I'll definitely be late.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d29-s9",
+          "text_original": "你有没有试过跟同事拼车？这样既省钱又能走公交专用道。",
+          "pinyin": "Nǐ yǒu méiyǒu shì guo gēn tóngshì pīnchē? Zhèyàng jì shěng qián yòu néng zǒu gōngjiāo zhuānyòng dào.",
+          "text_translation": "Hamkasbing bilan mashinani bo'lishib minib ko'rganmiding? Bunday qilsang ham pul tejaysan, ham jamoat transporti yo'lagidan yura olasan.",
+          "text_translation_ru": "Ты пробовал ездить вскладчину с коллегой? Так и деньги экономишь, и можно ехать по выделенной полосе.",
+          "text_translation_en": "Have you tried carpooling with a colleague? That way you save money and can use the bus lane.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d29-s10",
+          "text_original": "试过一段时间，但是大家的上下班时间不太一致，后来就散了。",
+          "pinyin": "Shì guo yí duàn shíjiān, dànshì dàjiā de shàngxiàbān shíjiān bú tài yízhì, hòulái jiù sàn le.",
+          "text_translation": "Bir muddat sinab ko'rdim, lekin hammaning ishga borib-kelish vaqti unchalik mos kelmadi, keyin tarqab ketdik.",
+          "text_translation_ru": "Пробовал какое-то время, но у всех время прихода и ухода с работы не очень совпадало, и потом всё распалось.",
+          "text_translation_en": "I tried it for a while, but everyone's work hours didn't quite match up, and eventually it fell apart.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d29-s11",
+          "text_original": "那确实挺麻烦的。看来城市交通问题短期内很难解决。",
+          "pinyin": "Nà quèshí tǐng máfan de. Kànlái chéngshì jiāotōng wèntí duǎnqī nèi hěn nán jiějué.",
+          "text_translation": "Bu rostdan ancha ovoragarchilik. Ko'rinishidan shahar transporti muammosini qisqa muddatda hal qilish qiyin.",
+          "text_translation_ru": "Это и правда хлопотно. Похоже, проблему городского транспорта в короткие сроки решить трудно.",
+          "text_translation_en": "That really is a hassle. It seems the urban transport problem is hard to solve in the short term.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d29-s12",
+          "text_original": "对，所以我现在每天尽量早出门，避开高峰期。",
+          "pinyin": "Duì, suǒyǐ wǒ xiànzài měitiān jǐnliàng zǎo chūmén, bìkāi gāofēng qī.",
+          "text_translation": "To'g'ri, shuning uchun hozir har kuni imkon qadar erta chiqib, gavjum vaqtni chetlab o'taman.",
+          "text_translation_ru": "Да, поэтому теперь я каждый день стараюсь выходить пораньше, чтобы избежать часа пик.",
+          "text_translation_en": "Right, so now I try to leave early every day to avoid the rush hour.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d29-s13",
+          "text_original": "这是个聪明的办法。早起一点总比在路上堵着强。",
+          "pinyin": "Zhè shì ge cōngming de bànfǎ. Zǎo qǐ yì diǎn zǒng bǐ zài lùshàng dǔ zhe qiáng.",
+          "text_translation": "Bu aqlli usul. Biroz erta turish doim yo'lda tirbandlikda qolishdan ko'ra yaxshi.",
+          "text_translation_ru": "Это разумный выход. Встать пораньше всё же лучше, чем стоять в пробке.",
+          "text_translation_en": "That's a smart approach. Getting up a bit earlier always beats being stuck in traffic.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d29-s14",
+          "text_original": "是啊，而且早到公司还能安静地工作一会儿。",
+          "pinyin": "Shì a, érqiě zǎo dào gōngsī hái néng ānjìng de gōngzuò yíhuìr.",
+          "text_translation": "Ha, qolaversa ishxonaga erta yetib borsang, bir oz tinch ishlab ham olasan.",
+          "text_translation_ru": "Да, и к тому же, придя в офис пораньше, можно немного спокойно поработать.",
+          "text_translation_en": "Yeah, and getting to the office early lets me work quietly for a bit too.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
