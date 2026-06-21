@@ -1,0 +1,208 @@
+{
+  "id": "hsk6-dialogue15",
+  "slug": "entrepreneurial-spirit",
+  "title": "创业精神",
+  "pinyin": "Chuàngyè jīngshén",
+  "titleTranslation": "Tadbirkorlik ruhi",
+  "titleTranslation_ru": "Предпринимательский дух",
+  "titleTranslation_en": "Entrepreneurial Spirit",
+  "level": 6,
+  "tag": "biznes",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "回本",
+    "人脉",
+    "教训",
+    "急于求成",
+    "调研",
+    "扎实",
+    "平台",
+    "烧钱",
+    "现金流",
+    "体量",
+    "务实",
+    "合伙人",
+    "股份",
+    "期权池",
+    "激励",
+    "周全",
+    "融资",
+    "天使投资",
+    "风投",
+    "九死一生",
+    "挫折",
+    "韧性"
+  ],
+  "sections": [
+    {
+      "id": "h6d15-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d15-s1",
+          "text_original": "你怎么又开始新项目了？上一个还没回本呢。",
+          "pinyin": "Nǐ zěnme yòu kāishǐ xīn xiàngmù le? Shàng yí ge hái méi huí běn ne.",
+          "text_translation": "Nega yana yangi loyiha boshlading? Oldingisi hali sarmoyani ham qoplagani yo'q-ku.",
+          "text_translation_ru": "Почему ты опять начал новый проект? Предыдущий ещё даже не окупился.",
+          "text_translation_en": "Why have you started a new project again? The last one hasn't even recouped its costs yet.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d15-s2",
+          "text_original": "上一个虽然没赚钱，但积累了很多经验和人脉，这些比钱更有价值。",
+          "pinyin": "Shàng yí ge suīrán méi zhuàn qián, dàn jīlěi le hěnduō jīngyàn hé rénmài, zhèxiē bǐ qián gèng yǒu jiàzhí.",
+          "text_translation": "Oldingisi pul ishlab bermagan bo'lsa-da, ko'p tajriba va tanish-bilishlar to'pladim, bular puldan ham qadrliroq.",
+          "text_translation_ru": "Предыдущий хоть и не принёс денег, но я накопил много опыта и связей, а это ценнее денег.",
+          "text_translation_en": "The last one didn't make money, but I accumulated a lot of experience and connections, which are more valuable than money.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d15-s3",
+          "text_original": "你总是这么乐观。失败的教训你总结了吗？",
+          "pinyin": "Nǐ zǒng shì zhème lèguān. Shībài de jiàoxun nǐ zǒngjié le ma?",
+          "text_translation": "Sen doim shunday optimistsan. Mag'lubiyatdan saboq chiqardingmi?",
+          "text_translation_ru": "Ты всегда такой оптимист. А уроки из неудачи ты сделал?",
+          "text_translation_en": "You're always so optimistic. Have you drawn the lessons from the failure?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d15-s4",
+          "text_original": "当然总结了。最大的教训就是太急于求成，市场调研做得不够充分。这次我会把准备工作做扎实。",
+          "pinyin": "Dāngrán zǒngjié le. Zuì dà de jiàoxun jiùshì tài jíyú qiúchéng, shìchǎng diàoyán zuò de bú gòu chōngfèn. Zhè cì wǒ huì bǎ zhǔnbèi gōngzuò zuò zhāshi.",
+          "text_translation": "Albatta chiqardim. Eng katta saboq — juda shoshqaloqlik qilganim, bozor tadqiqotini yetarlicha to'liq qilmaganim. Bu safar tayyorgarlik ishini puxta qilaman.",
+          "text_translation_ru": "Конечно сделал. Главный урок в том, что я слишком спешил с результатом и недостаточно тщательно исследовал рынок. В этот раз я сделаю подготовку основательно.",
+          "text_translation_en": "Of course I have. The biggest lesson was being too eager for quick success and not doing enough market research. This time I'll make the preparation solid.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d15-s5",
+          "text_original": "你这次的项目和上次有什么区别？",
+          "pinyin": "Nǐ zhè cì de xiàngmù hé shàng cì yǒu shénme qūbié?",
+          "text_translation": "Bu safargi loyihang oldingisidan nimasi bilan farq qiladi?",
+          "text_translation_ru": "Чем твой нынешний проект отличается от прошлого?",
+          "text_translation_en": "How is this project different from last time?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d15-s6",
+          "text_original": "上次是做平台，烧钱太快，现金流跟不上。这次我打算做小体量的产品，先活下去再说。",
+          "pinyin": "Shàng cì shì zuò píngtái, shāo qián tài kuài, xiànjīnliú gēn bú shàng. Zhè cì wǒ dǎsuàn zuò xiǎo tǐliàng de chǎnpǐn, xiān huó xiàqù zài shuō.",
+          "text_translation": "Oldingi safar platforma qildim, pul juda tez sovurildi, pul oqimi yetib bormadi. Bu safar kichik hajmli mahsulot qilmoqchiman, avval omon qolaylik, keyin ko'ramiz.",
+          "text_translation_ru": "В прошлый раз я делал платформу, деньги сгорали слишком быстро, денежный поток не поспевал. В этот раз планирую сделать продукт небольшого масштаба — сначала выжить, а там посмотрим.",
+          "text_translation_en": "Last time I built a platform, burned cash too fast, and the cash flow couldn't keep up. This time I plan to make a small-scale product — survive first, then think further.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d15-s7",
+          "text_original": "这个思路比较务实。你是一个人做还是有团队？",
+          "pinyin": "Zhè ge sīlù bǐjiào wùshí. Nǐ shì yí ge rén zuò háishì yǒu tuánduì?",
+          "text_translation": "Bu yondashuv ancha amaliy. Yolg'iz qilyapsanmi yoki jamoang bormi?",
+          "text_translation_ru": "Такой подход более прагматичный. Ты работаешь один или есть команда?",
+          "text_translation_en": "That approach is more pragmatic. Are you doing it alone or do you have a team?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d15-s8",
+          "text_original": "目前有两个合伙人，一个负责技术，一个负责市场，我负责整体运营。",
+          "pinyin": "Mùqián yǒu liǎng ge héhuǒrén, yí ge fùzé jìshù, yí ge fùzé shìchǎng, wǒ fùzé zhěngtǐ yùnyíng.",
+          "text_translation": "Hozircha ikkita sherigim bor, biri texnikaga, biri bozorga javob beradi, men umumiy boshqaruvga javob beraman.",
+          "text_translation_ru": "Сейчас есть два компаньона: один отвечает за технологии, другой за рынок, а я — за общее управление.",
+          "text_translation_en": "Right now I have two partners — one handles tech, one handles the market, and I handle overall operations.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d15-s9",
+          "text_original": "你们之间的股份是怎么分的？",
+          "pinyin": "Nǐmen zhījiān de gǔfèn shì zěnme fēn de?",
+          "text_translation": "Oranglarda ulushlar qanday taqsimlangan?",
+          "text_translation_ru": "А как у вас распределены доли?",
+          "text_translation_en": "How are the shares divided among you?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d15-s10",
+          "text_original": "按贡献分配，我占百分之四十，技术合伙人百分之三十五，市场合伙人百分之二十五。留了百分之十作为期权池，激励未来的核心员工。",
+          "pinyin": "Àn gòngxiàn fēnpèi, wǒ zhàn bǎi fēn zhī sìshí, jìshù héhuǒrén bǎi fēn zhī sānshíwǔ, shìchǎng héhuǒrén bǎi fēn zhī èrshíwǔ. Liú le bǎi fēn zhī shí zuòwéi qīquán chí, jīlì wèilái de héxīn yuángōng.",
+          "text_translation": "Hissaga qarab taqsimlangan: menda qirq foiz, texnik sherikda o'ttiz besh foiz, bozor sherigida yigirma besh foiz. O'n foizini opsion fondi sifatida qoldirdik, kelajakdagi asosiy xodimlarni rag'batlantirish uchun.",
+          "text_translation_ru": "Распределили по вкладу: у меня сорок процентов, у технического партнёра тридцать пять, у партнёра по рынку двадцать пять. Десять процентов оставили под опционный пул для мотивации будущих ключевых сотрудников.",
+          "text_translation_en": "Allocated by contribution: I hold forty percent, the tech partner thirty-five, the market partner twenty-five. We kept ten percent as an option pool to incentivize future core employees.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d15-s11",
+          "text_original": "你考虑得挺周全的。这次融资怎么解决？",
+          "pinyin": "Nǐ kǎolǜ de tǐng zhōuquán de. Zhè cì róngzī zěnme jiějué?",
+          "text_translation": "Sen ancha har tomonlama o'ylab ko'ribsan. Bu safar mablag'ni qanday jalb qilasan?",
+          "text_translation_ru": "Ты всё весьма продумал. А как в этот раз решишь вопрос с финансированием?",
+          "text_translation_en": "You've thought it through pretty thoroughly. How will you solve the funding this time?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d15-s12",
+          "text_original": "初期靠自己的积蓄和几个朋友的天使投资，先跑出数据模型，再去找风投。",
+          "pinyin": "Chūqī kào zìjǐ de jīxù hé jǐ ge péngyou de tiānshǐ tóuzī, xiān pǎo chū shùjù móxíng, zài qù zhǎo fēngtóu.",
+          "text_translation": "Dastlab o'z jamg'armam va bir necha do'stning farishta investitsiyasiga tayanaman, avval ma'lumotlar modelini ishlab chiqaman, keyin venchur kapitali izlayman.",
+          "text_translation_ru": "На первом этапе — за счёт собственных сбережений и ангельских инвестиций нескольких друзей, сначала наработаю модель данных, а потом пойду к венчурным инвесторам.",
+          "text_translation_en": "Early on I'll rely on my own savings and angel investment from a few friends, first work out a data model, then go look for venture capital.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d15-s13",
+          "text_original": "你不怕第二次失败吗？",
+          "pinyin": "Nǐ bú pà dì-èr cì shībài ma?",
+          "text_translation": "Ikkinchi marta muvaffaqiyatsizlikka uchrashdan qo'rqmaysanmi?",
+          "text_translation_ru": "Ты не боишься потерпеть неудачу во второй раз?",
+          "text_translation_en": "Aren't you afraid of failing a second time?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d15-s14",
+          "text_original": "当然怕，但怕就不做了吗？创业本来就是九死一生的事情，要是害怕就干脆别开始。",
+          "pinyin": "Dāngrán pà, dàn pà jiù bú zuò le ma? Chuàngyè běnlái jiù shì jiǔ sǐ yì shēng de shìqing, yàoshi hàipà jiù gāncuì bié kāishǐ.",
+          "text_translation": "Albatta qo'rqaman, lekin qo'rqqan bilan qilmay qo'yamanmi? Tadbirkorlik aslida ham o'limdan qil sig'mas qutuladigan ish, qo'rqsang umuman boshlamagan ma'qul.",
+          "text_translation_ru": "Конечно боюсь, но что, из-за страха не делать? Предпринимательство и так дело крайне рискованное — если боишься, лучше вообще не начинать.",
+          "text_translation_en": "Of course I'm afraid, but does fear mean not doing it? Entrepreneurship is inherently a high-risk gamble — if you're afraid, you might as well not start at all.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d15-s15",
+          "text_original": "你这种心态确实适合创业。大多数人在遇到挫折的时候就放弃了。",
+          "pinyin": "Nǐ zhè zhǒng xīntài quèshí shìhé chuàngyè. Dà duōshù rén zài yùdào cuòzhé de shíhou jiù fàngqì le.",
+          "text_translation": "Sening bunday ruhiyating chindan ham tadbirkorlikka mos. Ko'pchilik mag'lubiyatga uchragan paytda voz kechib qo'yadi.",
+          "text_translation_ru": "Такой настрой действительно подходит для бизнеса. Большинство людей при первой же неудаче сдаются.",
+          "text_translation_en": "Your kind of mindset really does suit entrepreneurship. Most people give up the moment they hit a setback.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d15-s16",
+          "text_original": "我觉得创业最重要的是韧性。不是不失败，而是失败了还能站起来继续走。",
+          "pinyin": "Wǒ juéde chuàngyè zuì zhòngyào de shì rènxìng. Bú shì bù shībài, ér shì shībài le hái néng zhàn qǐlái jìxù zǒu.",
+          "text_translation": "Menimcha tadbirkorlikda eng muhimi — matonat. Umuman yiqilmaslik emas, balki yiqilgandan keyin ham o'rningdan turib yana yo'lda davom eta olish.",
+          "text_translation_ru": "По-моему, в бизнесе важнее всего стойкость. Не в том, чтобы не падать, а в том, чтобы, упав, суметь подняться и идти дальше.",
+          "text_translation_en": "I think the most important thing in entrepreneurship is resilience. Not avoiding failure, but being able to get back up and keep going after you fail.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d15-s17",
+          "text_original": "希望这次你能顺利。等你们产品出来了，我来当第一批用户。",
+          "pinyin": "Xīwàng zhè cì nǐ néng shùnlì. Děng nǐmen chǎnpǐn chūlái le, wǒ lái dāng dì-yī pī yònghù.",
+          "text_translation": "Bu safar omadli bo'lishingni tilayman. Mahsulotingiz chiqsa, men birinchi foydalanuvchilardan bo'laman.",
+          "text_translation_ru": "Надеюсь, в этот раз у тебя всё сложится удачно. Когда ваш продукт выйдет, я стану одним из первых пользователей.",
+          "text_translation_en": "I hope it goes smoothly this time. When your product comes out, I'll be one of the first users.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d15-s18",
+          "text_original": "那太好了！到时候给你打折。",
+          "pinyin": "Nà tài hǎo le! Dàoshíhou gěi nǐ dǎzhé.",
+          "text_translation": "Bu juda zo'r! O'shanda senga chegirma qilaman.",
+          "text_translation_ru": "Это здорово! Тогда сделаю тебе скидку.",
+          "text_translation_en": "That's great! I'll give you a discount when the time comes.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
