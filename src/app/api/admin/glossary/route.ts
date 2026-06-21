@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidateTag } from 'next/cache';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
+import { fetchAllGlossaryRows } from '@/services/glossary';
 
 function ok(req: NextRequest) {
   const pw = req.headers.get('x-admin-password');
@@ -12,11 +13,26 @@ export async function GET(req: NextRequest) {
   const q = (req.nextUrl.searchParams.get('q') || '').trim();
   // Strip PostgREST filter metacharacters so user input can't break out of the ilike.
   const safe = q.replace(/[,()*:."'\\%_]/g, ' ').trim();
-  let query = getSupabaseAdmin().from('glossary').select('*').order('zh');
-  if (safe) query = query.or(`zh.ilike.%${safe}%,py.ilike.%${safe}%,uz.ilike.%${safe}%,ru.ilike.%${safe}%,en.ilike.%${safe}%`);
-  const { data, error } = await query.limit(1000);
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  return NextResponse.json({ words: data });
+  try {
+    if (safe) {
+      // Filtered search: matches are few, a single capped query is fine.
+      const { data, error } = await getSupabaseAdmin()
+        .from('glossary')
+        .select('*')
+        .or(`zh.ilike.%${safe}%,py.ilike.%${safe}%,uz.ilike.%${safe}%,ru.ilike.%${safe}%,en.ilike.%${safe}%`)
+        .order('zh')
+        .limit(1000);
+      if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+      return NextResponse.json({ words: data });
+    }
+    // Unfiltered list: page through all rows (the table is >1000) so the admin
+    // can see/edit every word, then sort by zh for display.
+    const words = await fetchAllGlossaryRows<{ zh: string }>('*');
+    words.sort((a, b) => a.zh.localeCompare(b.zh, 'zh-Hans-u-co-pinyin'));
+    return NextResponse.json({ words });
+  } catch (e) {
+    return NextResponse.json({ error: (e as Error).message }, { status: 500 });
+  }
 }
 
 export async function POST(req: NextRequest) {

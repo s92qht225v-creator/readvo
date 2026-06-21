@@ -1,13 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import { getSupabaseAdmin } from '../src/lib/supabase-server';
-import { normPy, type VocabRef } from '../src/services/glossary';
+import { normPy, fetchAllGlossaryRows, type VocabRef } from '../src/services/glossary';
 
 const DIR = path.join(process.cwd(), 'content', 'dialogues');
 
 async function main() {
-  const { data: rows, error } = await getSupabaseAdmin().from('glossary').select('zh, py');
-  if (error) { console.error('glossary query failed:', error.message); process.exit(1); }
+  // MUST page — a bare .select() truncates at 1000 rows and reports every word
+  // past that as a false "not in glossary".
+  const rows = await fetchAllGlossaryRows<{ zh: string; py: string }>('zh, py');
   const byZh = new Map<string, Set<string>>();
   for (const r of rows ?? []) {
     const s = byZh.get(r.zh) ?? new Set();

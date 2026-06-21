@@ -9,32 +9,53 @@ export function normPy(py: string): string {
   return py.normalize('NFC').trim().replace(/\s+/g, ' ').toLowerCase();
 }
 
-/** All glossary rows, cached until the `glossary` tag is revalidated. */
+const GLOSSARY_COLS = 'zh, py, uz, ru, en, hsk';
+
+/**
+ * Read the ENTIRE glossary table, paged.
+ *
+ * PostgREST caps a single response at 1000 rows. The glossary has grown past
+ * that, so every full-table read MUST page — a bare `.select()` silently
+ * truncates to the first 1000 rows and the most recently added words vanish
+ * from whatever consumes them (dialogue Words tabs, the validator, the admin
+ * list). ALWAYS use this helper; never a bare `.select()` over `glossary`.
+ *
+ * Throws on a Supabase error (never returns a partial/empty list) so a transient
+ * failure isn't mistaken for "no glossary" — callers catch and fall back.
+ */
+export async function fetchAllGlossaryRows<T = GlossaryEntry>(columns: string = GLOSSARY_COLS): Promise<T[]> {
+  const PAGE = 1000;
+  const all: T[] = [];
+  for (let from = 0; ; from += PAGE) {
+    const { data, error } = await getSupabaseAdmin()
+      .from('glossary')
+      .select(columns)
+      // Order by the immutable PK so page boundaries are stable across requests
+      // (zh has homograph ties that could skip/duplicate a row at a boundary).
+      .order('id', { ascending: true })
+      .range(from, from + PAGE - 1);
+    if (error) throw new Error(`[glossary] load failed: ${error.message}`);
+    if (!data?.length) break;
+    all.push(...(data as unknown as T[]));
+    if (data.length < PAGE) break;
+  }
+  return all;
+}
+
+/**
+ * All glossary rows, cached under the `glossary` tag.
+ *
+ * `revalidate: 300` is a safety net, not the primary freshness mechanism: admin
+ * edits call `revalidateTag('glossary')` for instant propagation. But the tag
+ * bust can be missed (raw-SQL inserts don't fire it) or a stale snapshot can
+ * survive in `.next/cache` across a deploy — without a TTL that stale glossary
+ * would be served *forever*, which is exactly how words "kept not showing".
+ * The TTL guarantees any staleness self-heals within 5 minutes.
+ */
 export const getGlossary = unstable_cache(
-  async (): Promise<GlossaryEntry[]> => {
-    // PostgREST caps a single response at 1000 rows by default. The glossary has
-    // grown past that, so page through it explicitly — otherwise rows beyond 1000
-    // (the most recently added words) silently drop and their dialogues lose vocab.
-    const PAGE = 1000;
-    const all: GlossaryEntry[] = [];
-    for (let from = 0; ; from += PAGE) {
-      const { data, error } = await getSupabaseAdmin()
-        .from('glossary')
-        .select('zh, py, uz, ru, en, hsk')
-        .order('id', { ascending: true })
-        .range(from, from + PAGE - 1);
-      // Throw (don't return []) so unstable_cache does NOT cache a transient failure —
-      // otherwise one Supabase hiccup would persist an empty glossary for the whole
-      // tag lifetime. Callers (resolveDialogueVocab) catch this and fall back.
-      if (error) throw new Error(`[glossary] load failed: ${error.message}`);
-      if (!data?.length) break;
-      all.push(...data);
-      if (data.length < PAGE) break;
-    }
-    return all;
-  },
+  async (): Promise<GlossaryEntry[]> => fetchAllGlossaryRows<GlossaryEntry>(),
   ['glossary-all'],
-  { tags: ['glossary'] },
+  { tags: ['glossary'], revalidate: 300 },
 );
 
 /** Resolve a dialogue's reference list into display items. Unknown refs are
