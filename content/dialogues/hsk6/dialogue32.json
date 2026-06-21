@@ -1,0 +1,145 @@
+{
+  "id": "hsk6-dialogue32",
+  "slug": "package-delivery",
+  "title": "包裹投递",
+  "pinyin": "Bāoguǒ tóudì",
+  "titleTranslation": "Pochta yetkazib berish",
+  "titleTranslation_ru": "Доставка посылок",
+  "titleTranslation_en": "Package Delivery",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "沮丧",
+    "回拨",
+    "快递柜",
+    "爆满",
+    "大件",
+    "塞不进",
+    "商量",
+    "固定",
+    "路线",
+    "单独",
+    "签收",
+    "前台",
+    "收货地址"
+  ],
+  "sections": [
+    {
+      "id": "h6d32-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d32-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ jīntiān zěnme yòu yī liǎn jǔsàng? Kuàidì yòu méi shōudào?",
+          "text_translation": "Bugun nega yana xafa ko'rinasan? Pochta yana yetib kelmadimi?",
+          "text_translation_ru": "Почему ты сегодня снова такой расстроенный? Опять не получил посылку?",
+          "text_translation_en": "Why do you look so down again today? Didn't get your package again?",
+          "text_original": "你今天怎么又一脸沮丧？快递又没收到？"
+        },
+        {
+          "id": "h6d32-s2",
+          "speaker": "B",
+          "pinyin": "Bié tí le! Kuàidìyuán dǎ diànhuà de shíhou wǒ zhèngzài kāihuì, méi jiē dào. Děng wǒ huíbō guòqù, tā shuō tā yǐjīng zǒu le, míngtiān zài sòng.",
+          "text_translation": "Gapirma ham! Kuryer qo'ng'iroq qilganda men majlisda edim, javob bera olmadim. Qaytib qo'ng'iroq qilganimda u allaqachon ketib bo'lganini, ertaga yana keltirishini aytdi.",
+          "text_translation_ru": "Не говори! Когда курьер звонил, я был на совещании и не ответил. Когда я перезвонил, он сказал, что уже уехал и привезёт завтра.",
+          "text_translation_en": "Don't even mention it! When the courier called, I was in a meeting and didn't pick up. When I called back, he said he'd already left and would deliver it tomorrow.",
+          "text_original": "别提了！快递员打电话的时候我正在开会，没接到。等我回拨过去，他说他已经走了，明天再送。"
+        },
+        {
+          "id": "h6d32-s3",
+          "speaker": "A",
+          "pinyin": "Zhè zhǒng shìr wǒ yùdào tài duō cì le. Tāmen wǎngwǎng zhǐ děng jǐ fēnzhōng, nǐ bù jiē diànhuà jiù zhíjiē zǒu le.",
+          "text_translation": "Bunaqa narsaga men juda ko'p marta duch kelganman. Ular ko'pincha bir necha daqiqagina kutadi, qo'ng'iroqqa javob bermasang to'g'ri ketib qoladi.",
+          "text_translation_ru": "С таким я сталкивался слишком много раз. Они обычно ждут всего несколько минут, и если ты не берёшь трубку, сразу уезжают.",
+          "text_translation_en": "I've run into this kind of thing way too many times. They usually only wait a few minutes, and if you don't answer the phone, they just leave.",
+          "text_original": "这种事儿我遇到太多次了。他们往往只等几分钟，你不接电话就直接走了。"
+        },
+        {
+          "id": "h6d32-s4",
+          "speaker": "B",
+          "pinyin": "Kěshì dì-èr tiān wǒ yòu yào shàngbān, háishì bú zài jiā. Zhèyàng láihuí zhēteng, yí ge bāoguǒ tuō le yí ge xīngqī hái méi shōudào.",
+          "text_translation": "Lekin ertasiga men yana ishga ketaman, yana uyda bo'lmayman. Shunday qilib u yoq-bu yoqqa ovora bo'lib, bitta posilka bir hafta cho'zilib hali ham yetib kelgani yo'q.",
+          "text_translation_ru": "Но на следующий день мне снова на работу, и я опять не дома. Вот так туда-сюда мучаешься, и одна посылка тянется целую неделю, а я её до сих пор не получил.",
+          "text_translation_en": "But the next day I have to go to work again, so I'm still not home. With all this back-and-forth hassle, one package has dragged on for a week and I still haven't received it.",
+          "text_original": "可是第二天我又要上班，还是不在家。这样来回折腾，一个包裹拖了一个星期还没收到。"
+        },
+        {
+          "id": "h6d32-s5",
+          "speaker": "A",
+          "pinyin": "Wǒ yìbān huì ràng kuàidìyuán bǎ bāoguǒ fàng zài xiǎoqū ménkǒu de kuàidì guì lǐ, huílái zài qǔ. Zhèyàng jiù búyòng dānxīn shíjiān duì bú shàng le.",
+          "text_translation": "Men odatda kuryerdan posilkani turar-joy majmuasi kiraverishidagi pochta shkafiga qoldirishni so'rayman, qaytib kelgach olib olaman. Shunda vaqt mos kelmasligidan xavotir olmasa ham bo'ladi.",
+          "text_translation_ru": "Я обычно прошу курьера оставить посылку в почтовом шкафу у входа в жилой комплекс, а потом забираю, когда возвращаюсь. Так не нужно беспокоиться, что время не совпадёт.",
+          "text_translation_en": "I usually have the courier put the package in the parcel locker at the entrance of the residential complex, and pick it up when I get back. That way I don't have to worry about the timing not matching up.",
+          "text_original": "我一般会让快递员把包裹放在小区门口的快递柜里，回来再取。这样就不用担心时间对不上了。"
+        },
+        {
+          "id": "h6d32-s6",
+          "speaker": "B",
+          "pinyin": "Wǒmen xiǎoqū de kuàidì guì jīngcháng bàomǎn, fàng bú jìnqù. Érqiě yǒuxiē dà jiàn bāoguǒ yě sāi bú jìnqù.",
+          "text_translation": "Bizning turar-joy majmuamizdagi pochta shkaflari tez-tez to'lib ketadi, joylab bo'lmaydi. Bundan tashqari ba'zi yirik posilkalar ham sig'maydi.",
+          "text_translation_ru": "Почтовые шкафы в нашем комплексе часто забиты до отказа, туда ничего не вложишь. К тому же некоторые крупногабаритные посылки просто не влезают.",
+          "text_translation_en": "The parcel lockers in our complex are often packed full, so you can't fit anything in. And some large packages won't fit in anyway.",
+          "text_original": "我们小区的快递柜经常爆满，放不进去。而且有些大件包裹也塞不进去。"
+        },
+        {
+          "id": "h6d32-s7",
+          "speaker": "A",
+          "pinyin": "Nà nǐ kěyǐ gēn kuàidìyuán yuē yí ge shíjiān, bǐrú xiàbān hòu huòzhě zhōumò, ràng tā jízhōng sòng. Yǒude kuàidìyuán shì kěyǐ shāngliang shíjiān de.",
+          "text_translation": "Unda kuryer bilan biror vaqtni kelishib olsang bo'ladi, masalan ish tugagandan keyin yoki dam olish kunlari, hammasini bir vaqtda keltirsin. Ba'zi kuryerlar bilan vaqtni kelishib bo'ladi.",
+          "text_translation_ru": "Тогда ты можешь договориться с курьером о времени, например после работы или в выходные, чтобы он привёз всё разом. С некоторыми курьерами можно обсудить время.",
+          "text_translation_en": "Then you could arrange a time with the courier, like after work or on the weekend, and have him deliver everything at once. With some couriers you can negotiate the time.",
+          "text_original": "那你可以跟快递员约一个时间，比如下班后或者周末，让他集中送。有的快递员是可以商量时间的。"
+        },
+        {
+          "id": "h6d32-s8",
+          "speaker": "B",
+          "pinyin": "Wǒ shì guo, dàn tā shuō měitiān gùdìng lùxiàn, méi bànfǎ dāndú wèi wǒ tiáozhěng shíjiān.",
+          "text_translation": "Urinib ko'rganman, lekin u har kuni belgilangan yo'nalishi borligini, faqat men uchun alohida vaqtni o'zgartira olmasligini aytdi.",
+          "text_translation_ru": "Я пробовал, но он сказал, что у него каждый день фиксированный маршрут и он никак не может подстроить время отдельно под меня.",
+          "text_translation_en": "I've tried, but he said he has a fixed route every day and there's no way to adjust the time just for me.",
+          "text_original": "我试过，但他说每天固定路线，没办法单独为我调整时间。"
+        },
+        {
+          "id": "h6d32-s9",
+          "speaker": "A",
+          "pinyin": "Yàobù nǐ jì dào gōngsī? Hěnduō tóngshì dōu zhíjiē bǎ kuàidì jì dào bàngōngshì, shàngbān shíjiān fāngbiàn qiānshōu.",
+          "text_translation": "Yoki kompaniyaga yetkazib bersinmi? Ko'p hamkasblar pochtani to'g'ridan-to'g'ri ofisga yuborishadi, ish vaqtida qabul qilib olish qulay.",
+          "text_translation_ru": "А может, отправлять на работу? Многие коллеги отправляют посылки прямо в офис, в рабочее время удобно их получать и расписываться.",
+          "text_translation_en": "Or how about having it sent to your company? A lot of colleagues just have their packages sent to the office, since it's convenient to sign for them during work hours.",
+          "text_original": "要不你寄到公司？很多同事都直接把快递寄到办公室，上班时间方便签收。"
+        },
+        {
+          "id": "h6d32-s10",
+          "speaker": "B",
+          "pinyin": "Zhè ge bànfǎ hǎo! Wǒ zěnme méi xiǎng dào. Yǐhòu mǎi zhòngyào de dōngxi dōu tián gōngsī dìzhǐ.",
+          "text_translation": "Bu usul yaxshi ekan! Qanday qilib bu yodimga kelmadi-ya. Bundan keyin muhim narsalarni sotib olsam, kompaniya manzilini yozaman.",
+          "text_translation_ru": "Это хорошая идея! Как я сам не додумался. Впредь, покупая что-то важное, буду указывать адрес компании.",
+          "text_translation_en": "That's a good idea! How did I not think of it. From now on, whenever I buy something important, I'll put the company address.",
+          "text_original": "这个办法好！我怎么没想到。以后买重要的东西都填公司地址。"
+        },
+        {
+          "id": "h6d32-s11",
+          "speaker": "A",
+          "pinyin": "Wǒ jiùshì zhème gàn de. Shàngbān shíjiān kuàidìyuán lái, qiántái jiù huì bāng nǐ shōu, xiàbān dài huí jiā jiù xíng.",
+          "text_translation": "Men aynan shunday qilaman. Ish vaqtida kuryer kelsa, qabulxonadagi xodim sen uchun qabul qilib oladi, ishdan keyin uyga olib ketaversang bo'ladi.",
+          "text_translation_ru": "Я именно так и делаю. В рабочее время приходит курьер, и ресепшен принимает за тебя, а после работы просто несёшь домой.",
+          "text_translation_en": "That's exactly what I do. When the courier comes during work hours, the front desk receives it for you, and you just take it home after work.",
+          "text_original": "我就是这么干的。上班时间快递员来，前台就会帮你收，下班带回家就行。"
+        },
+        {
+          "id": "h6d32-s12",
+          "speaker": "B",
+          "pinyin": "Zhè ge fāng'àn wánměi. Wǒ gǎnjǐn qù gǎi shōuhuò dìzhǐ.",
+          "text_translation": "Bu reja mukammal. Tezroq borib yetkazib berish manzilini o'zgartiraman.",
+          "text_translation_ru": "Этот план идеален. Скорее пойду менять адрес доставки.",
+          "text_translation_en": "This plan is perfect. I'll go change the delivery address right away.",
+          "text_original": "这个方案完美。我赶紧去改收货地址。"
+        }
+      ]
+    }
+  ]
+}

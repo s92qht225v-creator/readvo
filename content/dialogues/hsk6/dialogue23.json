@@ -1,0 +1,193 @@
+{
+  "id": "hsk6-dialogue23",
+  "slug": "late-night-shopping",
+  "title": "深夜购物",
+  "pinyin": "Shēnyè gòuwù",
+  "titleTranslation": "Tungi xaridlar",
+  "titleTranslation_ru": "Ночные покупки",
+  "titleTranslation_en": "Late Night Shopping",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "没精打采",
+    "失眠",
+    "冲动消费",
+    "空气炸锅",
+    "加湿器",
+    "型号",
+    "打折",
+    "综合症",
+    "诱惑",
+    "吊牌",
+    "理智",
+    "快捷方式",
+    "步骤",
+    "账单",
+    "傻眼",
+    "壁纸"
+  ],
+  "sections": [
+    {
+      "id": "h6d23-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d23-s1",
+          "text_original": "你今天怎么看起来没精打采的？又熬夜了？",
+          "pinyin": "Nǐ jīntiān zěnme kàn qǐlái méi jīng dǎ cǎi de? Yòu áoyè le?",
+          "text_translation": "Bugun nega shunchalik holsiz ko'rinasan? Yana tun bo'yi uxlamadingmi?",
+          "text_translation_ru": "Почему ты сегодня выглядишь таким вялым? Опять не спал всю ночь?",
+          "text_translation_en": "Why do you look so listless today? Did you stay up all night again?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d23-s2",
+          "text_original": "别提了，昨晚失眠，躺在床上刷手机，结果又买了三件根本不需要的东西。",
+          "pinyin": "Bié tí le, zuó wǎn shīmián, tǎng zài chuáng shàng shuā shǒujī, jiéguǒ yòu mǎi le sān jiàn gēnběn bù xūyào de dōngxi.",
+          "text_translation": "Aytmasang ham bo'ladi, kecha uyqusizlik bo'ldi, krovatda yotib telefon titkiladim, oqibatda yana umuman kerak bo'lmagan uchta narsa sotib oldim.",
+          "text_translation_ru": "И не говори, вчера была бессонница, лежал в кровати, листал телефон, и в итоге снова купил три совершенно ненужные вещи.",
+          "text_translation_en": "Don't even mention it, last night I had insomnia, lay in bed scrolling on my phone, and ended up buying three things I don't need at all.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d23-s3",
+          "text_original": "又是深夜冲动消费？这次买了什么？",
+          "pinyin": "Yòu shì shēnyè chōngdòng xiāofèi? Zhè cì mǎi le shénme?",
+          "text_translation": "Yana tungi hissiy xarid qilishmi? Bu safar nima sotib olding?",
+          "text_translation_ru": "Опять ночные импульсивные покупки? Что на этот раз купил?",
+          "text_translation_en": "Late-night impulse buying again? What did you buy this time?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d23-s4",
+          "text_original": "一个空气炸锅，一套据说能改善睡眠的枕头，还有一个桌面加湿器。",
+          "pinyin": "Yí ge kōngqì zhà guō, yí tào jùshuō néng gǎishàn shuìmián de zhěntou, hái yǒu yí ge zhuōmiàn jiāshīqì.",
+          "text_translation": "Bitta havoli frityurnitsa, uyquni yaxshilaydi deyilgan bitta yostiqlar to'plami va yana bitta stol ustki namlagichi.",
+          "text_translation_ru": "Одну аэрофритюрницу, один комплект подушек, которые, как говорят, улучшают сон, и ещё настольный увлажнитель воздуха.",
+          "text_translation_en": "An air fryer, a set of pillows that supposedly improve sleep, and a desktop humidifier.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d23-s5",
+          "text_original": "空气炸锅？你不是上个月才买了一个空气炸锅吗？",
+          "pinyin": "Kōngqì zhà guō? Nǐ bú shì shàng ge yuè cái mǎi le yí ge kōngqì zhà guō ma?",
+          "text_translation": "Havoli frityurnitsami? Sen o'tgan oy bitta havoli frityurnitsa sotib olmaganmiding?",
+          "text_translation_ru": "Аэрофритюрницу? Разве ты не купил аэрофритюрницу только в прошлом месяце?",
+          "text_translation_en": "An air fryer? Didn't you just buy an air fryer last month?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d23-s6",
+          "text_original": "这个型号不一样，功能更多，而且当时正好打六折。我就觉得不买亏了。",
+          "pinyin": "Zhè ge xínghào bù yíyàng, gōngnéng gèng duō, érqiě dāngshí zhènghǎo dǎ liù zhé. Wǒ jiù juéde bù mǎi kuī le.",
+          "text_translation": "Bu model boshqacha, funksiyalari ko'proq, ustiga-ustak o'sha paytda aynan qirq foiz chegirma bor edi. Sotib olmasam zarar qilamandek tuyuldi.",
+          "text_translation_ru": "Эта модель другая, функций больше, и к тому же тогда как раз была скидка сорок процентов. Мне показалось, что не купить — себе в убыток.",
+          "text_translation_en": "This model is different, it has more functions, and at the time there happened to be a forty percent discount. I just felt that not buying it would be a loss.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d23-s7",
+          "text_original": "这不就是经典的「深夜购物综合症」吗？大脑在深夜会变得特别容易被诱惑。",
+          "pinyin": "Zhè bú jiùshì jīngdiǎn de 'shēnyè gòuwù zònghézhèng' ma? Dànǎo zài shēnyè huì biàn de tèbié róngyì bèi yòuhuò.",
+          "text_translation": "Bu aynan klassik 「tungi xarid sindromi」ku? Miya tunda ayniqsa osongina vasvasaga tushadigan bo'lib qoladi.",
+          "text_translation_ru": "Это же классический «синдром ночного шопинга», не так ли? Мозг ночью становится особенно подвержен соблазнам.",
+          "text_translation_en": "Isn't this exactly the classic 「late-night shopping syndrome」? At night the brain becomes especially easy to tempt.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d23-s8",
+          "text_original": "我也发现了。白天看到那些东西觉得没必要，一到晚上就觉得很需要。第二天醒来又后悔。",
+          "pinyin": "Wǒ yě fāxiàn le. Báitiān kàn dào nàxiē dōngxi juéde méi bìyào, yí dào wǎnshang jiù juéde hěn xūyào. Dì-èr tiān xǐnglái yòu hòuhuǐ.",
+          "text_translation": "Men ham buni payqadim. Kunduzi o'sha narsalarni ko'rsam kerak emasdek tuyuladi, kech kirishi bilan juda kerakdek bo'lib qoladi. Ertasi kuni uyg'onib yana afsuslanaman.",
+          "text_translation_ru": "Я тоже это заметил. Днём, видя те вещи, думаешь, что они не нужны, а как наступает вечер — кажется, что очень нужны. На следующий день просыпаешься и снова жалеешь.",
+          "text_translation_en": "I noticed that too. During the day those things seem unnecessary, but as soon as night falls they feel very necessary. The next day I wake up and regret it again.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d23-s9",
+          "text_original": "你这种情况我太熟悉了。我衣柜里还有三件吊牌都没摘的衣服，全是晚上冲动买的。",
+          "pinyin": "Nǐ zhè zhǒng qíngkuàng wǒ tài shúxī le. Wǒ yīguì lǐ hái yǒu sān jiàn diàopái dōu méi zhāi de yīfu, quán shì wǎnshang chōngdòng mǎi de.",
+          "text_translation": "Sening bu ahvolingni men juda yaxshi bilaman. Mening shkafimda hali ham narxnoma yorlig'i ham olinmagan uchta kiyim bor, hammasi kechqurun hissiyot bilan sotib olingan.",
+          "text_translation_ru": "Твоя ситуация мне слишком знакома. У меня в шкафу до сих пор лежат три вещи, с которых даже ярлыки не сняты, все куплены вечером на эмоциях.",
+          "text_translation_en": "I'm all too familiar with your situation. In my wardrobe I still have three pieces of clothing with the tags not even removed, all bought on impulse at night.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d23-s10",
+          "text_original": "那你是怎么改掉这个习惯的？",
+          "pinyin": "Nà nǐ shì zěnme gǎi diào zhè ge xíguàn de?",
+          "text_translation": "Unda sen bu odatni qanday tashlading?",
+          "text_translation_ru": "Тогда как ты избавился от этой привычки?",
+          "text_translation_en": "So how did you break this habit?",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d23-s11",
+          "text_original": "我给自己定了一个规矩：晚上十点以后不看购物软件。如果看到想买的东西，先放进购物车，第二天早上再说。",
+          "pinyin": "Wǒ gěi zìjǐ dìng le yí ge guījǔ: wǎnshang shí diǎn yǐhòu bú kàn gòuwù ruǎnjiàn. Rúguǒ kàn dào xiǎng mǎi de dōngxi, xiān fàng jìn gòuwù chē, dì-èr tiān zǎoshang zài shuō.",
+          "text_translation": "Men o'zimga bir qoida belgilab oldim: kechqurun soat o'ndan keyin xarid ilovasiga qaramayman. Agar sotib olgim kelgan narsani ko'rsam, avval savatga solib qo'yaman, ertasi kuni ertalab ko'ramiz.",
+          "text_translation_ru": "Я установил себе одно правило: после десяти вечера не заходить в приложения для покупок. Если вижу что-то, что хочу купить, сначала кладу в корзину, а решаю на следующее утро.",
+          "text_translation_en": "I set a rule for myself: after ten at night, don't look at shopping apps. If I see something I want to buy, I first put it in the cart and decide the next morning.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d23-s12",
+          "text_original": "第二天早上还会想买吗？",
+          "pinyin": "Dì-èr tiān zǎoshang hái huì xiǎng mǎi ma?",
+          "text_translation": "Ertasi kuni ertalab ham sotib olging keladimi?",
+          "text_translation_ru": "На следующее утро всё ещё хочется купить?",
+          "text_translation_en": "The next morning, do you still want to buy it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d23-s13",
+          "text_original": "大部分时候不会了。睡醒以后理智就回来了，才发现那些东西根本没有买的必要。",
+          "pinyin": "Dà bùfen shíhou bú huì le. Shuì xǐng yǐhòu lǐzhì jiù huílái le, cái fāxiàn nàxiē dōngxi gēnběn méiyǒu mǎi de bìyào.",
+          "text_translation": "Ko'p hollarda keramaydi. Uyqudan uyg'ongandan keyin aql-idrok qaytib keladi va o'sha narsalarni sotib olishga umuman hojat yo'qligini endi anglayman.",
+          "text_translation_ru": "В большинстве случаев уже нет. После сна рассудок возвращается, и только тогда понимаешь, что покупать те вещи совершенно не было необходимости.",
+          "text_translation_en": "Most of the time no. After waking up, my reason returns, and only then do I realize there was no need to buy those things at all.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d23-s14",
+          "text_original": "还有一个办法：删掉支付软件的快捷方式，增加付款的步骤。麻烦一点，冲动就会减少。",
+          "pinyin": "Hái yǒu yí ge bànfǎ: shān diào zhīfù ruǎnjiàn de kuàijié fāngshì, zēngjiā fùkuǎn de bùzhòu. Máfan yì diǎn, chōngdòng jiù huì jiǎnshǎo.",
+          "text_translation": "Yana bir usul bor: to'lov ilovasining tezkor yorlig'ini o'chirib tashlash, to'lov bosqichlarini ko'paytirish. Bir oz ovora bo'lsang, hissiy xaridlar kamayadi.",
+          "text_translation_ru": "Есть ещё один способ: удалить ярлык платёжного приложения, увеличить число шагов при оплате. Чуть сложнее — и импульсивность уменьшается.",
+          "text_translation_en": "There's another method: delete the shortcut of the payment app and add more steps to paying. A little more trouble, and impulses decrease.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d23-s15",
+          "text_original": "这些方法听起来很实用。我今晚就开始执行，免得下个月收到账单又傻眼。",
+          "pinyin": "Zhèxiē fāngfǎ tīng qǐlái hěn shíyòng. Wǒ jīn wǎn jiù kāishǐ zhíxíng, miǎnde xià ge yuè shōudào zhàngdān yòu shǎyǎn.",
+          "text_translation": "Bu usullar juda amaliy eshitiladi. Men bugun kechqurundan boshlab amalga oshiraman, keyingi oy hisob-fakturani olib yana dovdirab qolmaslik uchun.",
+          "text_translation_ru": "Эти способы звучат очень практично. Я начну применять их уже сегодня вечером, чтобы в следующем месяце, получив счёт, снова не остолбенеть.",
+          "text_translation_en": "These methods sound very practical. I'll start applying them tonight, so I don't get stunned again when I receive the bill next month.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d23-s16",
+          "text_original": "希望你坚持住。记住，深夜的你不是真正的你，别让那个「深夜的你」决定怎么花钱。",
+          "pinyin": "Xīwàng nǐ jiānchí zhù. Jìzhu, shēnyè de nǐ bú shì zhēnzhèng de nǐ, bié ràng nà ge 'shēnyè de nǐ' juédìng zěnme huā qián.",
+          "text_translation": "Umid qilamanki, qat'iy turasan. Esingda tut, tungi sen haqiqiy sen emas, o'sha 「tungi sen」pulni qanday sarflashni hal qilishiga yo'l qo'yma.",
+          "text_translation_ru": "Надеюсь, ты выдержишь. Запомни, ночной ты — это не настоящий ты, не позволяй тому «ночному тебе» решать, как тратить деньги.",
+          "text_translation_en": "I hope you stick with it. Remember, the late-night you is not the real you; don't let that 「late-night you」 decide how to spend money.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d23-s17",
+          "text_original": "这句话说得太好了！我要把它设成手机壁纸。",
+          "pinyin": "Zhè jù huà shuō de tài hǎo le! Wǒ yào bǎ tā shè chéng shǒujī bìzhǐ.",
+          "text_translation": "Bu gap juda zo'r aytildi! Men uni telefonimning fon rasmiga qo'yaman.",
+          "text_translation_ru": "Эти слова сказаны слишком хорошо! Я поставлю их на обои телефона.",
+          "text_translation_en": "That's so well said! I'm going to set it as my phone wallpaper.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

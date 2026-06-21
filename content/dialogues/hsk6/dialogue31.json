@@ -1,0 +1,171 @@
+{
+  "id": "hsk6-dialogue31",
+  "slug": "noisy-neighbors",
+  "title": "噪音邻居",
+  "pinyin": "Zàoyīn línjū",
+  "titleTranslation": "Shovqinli qo'shnilar",
+  "titleTranslation_ru": "Шумные соседи",
+  "titleTranslation_en": "Noisy Neighbors",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "折腾",
+    "拖鞋",
+    "啪嗒啪嗒",
+    "沟通",
+    "客气",
+    "不耐烦",
+    "棘手",
+    "忍气吞声",
+    "硬碰硬",
+    "闹僵",
+    "安宁",
+    "神经衰弱",
+    "耳塞",
+    "耳道",
+    "物业",
+    "协调",
+    "纠纷",
+    "报警",
+    "修复",
+    "权益",
+    "威慑力"
+  ],
+  "sections": [
+    {
+      "id": "h6d31-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d31-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ yǎnjing zěnme zhème hóng? Zuó wǎn yòu méi shuì hǎo?",
+          "text_translation": "Ko'zlaring nega bunchalik qizarib ketgan? Kecha yana yaxshi uxlamadingmi?",
+          "text_translation_ru": "Почему у тебя глаза такие красные? Опять плохо спал вчера ночью?",
+          "text_translation_en": "Why are your eyes so red? Didn't you sleep well again last night?",
+          "text_original": "你眼睛怎么这么红？昨晚又没睡好？"
+        },
+        {
+          "id": "h6d31-s2",
+          "speaker": "B",
+          "pinyin": "Lóu shàng nà jiā yòu zhēteng dào bànyè. Bú shì bān jiājù, jiùshì xiǎohái pǎo lái pǎo qù, tuōxié pādā pādā de, wǒ kuài bèi bī fēng le.",
+          "text_translation": "Yuqori qavatdagi oila yana yarim tungacha shovqin ko'tardi. Yo mebel surishadi, yo bola u yoqdan-bu yoqqa yuguradi, shippaklar shippa-shippa qiladi, men deyarli jinni bo'lib qoldim.",
+          "text_translation_ru": "Та семья наверху опять шумела до полуночи. То мебель двигают, то ребёнок туда-сюда бегает, тапочки шлёп-шлёп, я уже почти схожу с ума.",
+          "text_translation_en": "That family upstairs was at it again until midnight. Either they're moving furniture, or the kid is running back and forth, slippers going pitter-patter, I'm about to be driven crazy.",
+          "text_original": "楼上那家又折腾到半夜。不是搬家具，就是小孩跑来跑去，拖鞋啪嗒啪嗒的，我快被逼疯了。"
+        },
+        {
+          "id": "h6d31-s3",
+          "speaker": "A",
+          "pinyin": "Nǐ yǒu méiyǒu shàngqù gēn tāmen gōutōng guo?",
+          "text_translation": "Yuqoriga chiqib ular bilan gaplashib ko'rdingmi?",
+          "text_translation_ru": "Ты поднимался к ним, чтобы поговорить?",
+          "text_translation_en": "Have you gone up to talk things over with them?",
+          "text_original": "你有没有上去跟他们沟通过？"
+        },
+        {
+          "id": "h6d31-s4",
+          "speaker": "B",
+          "pinyin": "Qù guo liǎng cì. Dì-yī cì tāmen hái tǐng kèqi de, shuō huì zhùyì. Dàn guò le liǎng tiān yòu huīfù yuányàng le. Dì-èr cì qù de shíhou, nà ge nán zhǔrén tàidu míngxiǎn bú nàifán le.",
+          "text_translation": "Ikki marta bordim. Birinchi marta ular ancha xushmuomala edi, e'tibor beramiz deyishdi. Lekin ikki kun o'tib yana avvalgi holatiga qaytishdi. Ikkinchi marta borganimda, o'sha er kishining muomalasi aniq sabrsiz bo'lib qoldi.",
+          "text_translation_ru": "Ходил два раза. В первый раз они были довольно вежливы, сказали, что будут внимательнее. Но через два дня всё вернулось как было. Во второй раз тот хозяин дома вёл себя явно раздражённо.",
+          "text_translation_en": "I went twice. The first time they were quite polite, said they'd be careful. But after two days it went back to the same as before. The second time I went, that man of the house was clearly impatient.",
+          "text_original": "去过两次。第一次他们还挺客气的，说会注意。但过了两天又恢复原样了。第二次去的时候，那个男主人态度明显不耐烦了。"
+        },
+        {
+          "id": "h6d31-s5",
+          "speaker": "A",
+          "pinyin": "Zhè zhǒng qíngkuàng quèshí hěn jíshǒu. Nǐ yàoshi rěnqì tūnshēng, tiāntiān shuì bù hǎo; nǐ yàoshi yìng pèng yìng, yòu pà bǎ guānxi nào jiāng.",
+          "text_translation": "Bunday vaziyat haqiqatan ham juda chigal. Agar achchig'ingni ichingga yutsang, har kuni yaxshi uxlolmaysan; agar qattiq qarshilik ko'rsatsang, munosabatni butunlay buzib qo'yishdan qo'rqasan.",
+          "text_translation_ru": "Такая ситуация действительно непростая. Если будешь молча терпеть, каждый день будешь плохо спать; если пойдёшь в лоб, боишься окончательно испортить отношения.",
+          "text_translation_en": "This kind of situation is really tricky. If you swallow your anger, you sleep badly every day; if you go head-to-head, you're afraid of souring the relationship.",
+          "text_original": "这种情况确实很棘手。你要是忍气吞声，天天睡不好；你要是硬碰硬，又怕把关系闹僵。"
+        },
+        {
+          "id": "h6d31-s6",
+          "speaker": "B",
+          "pinyin": "Nǐ shuō de tài duì le. Wǒ báitiān shàngbān yǐjīng hěn lèi le, wǎnshang huí jiā hái bù dé ānníng. Wǒ xiànzài dōu yǒu diǎn shénjīng shuāiruò le.",
+          "text_translation": "Juda to'g'ri aytding. Kunduzi ishda allaqachon juda charchayman, kechqurun uyga qaytsam ham tinchlik topolmayman. Hozir hatto biroz asabim bo'shashib qoldi.",
+          "text_translation_ru": "Ты абсолютно прав. Днём на работе я и так очень устаю, а вечером прихожу домой и не нахожу покоя. У меня теперь даже что-то вроде нервного истощения.",
+          "text_translation_en": "You're absolutely right. I'm already exhausted from work during the day, and when I get home in the evening I can't even get any peace. I'm even getting a bit of nervous exhaustion now.",
+          "text_original": "你说得太对了。我白天上班已经很累了，晚上回家还不得安宁。我现在都有点神经衰弱了。"
+        },
+        {
+          "id": "h6d31-s7",
+          "speaker": "A",
+          "pinyin": "Nǐ shì guo dài ěrsāi shuìjiào ma? Yǒuxiē rén yòng xiàoguǒ búcuò.",
+          "text_translation": "Quloq tiqini taqib uxlab ko'rdingmi? Ba'zilarga juda yaxshi yordam beradi.",
+          "text_translation_ru": "Ты пробовал спать с берушами? У некоторых людей это неплохо помогает.",
+          "text_translation_en": "Have you tried sleeping with earplugs? Some people find them quite effective.",
+          "text_original": "你试过戴耳塞睡觉吗？有些人用效果不错。"
+        },
+        {
+          "id": "h6d31-s8",
+          "speaker": "B",
+          "pinyin": "Shì guo, dàn wǒ ěrdào bǐjiào xiǎo, dài jiǔ le huì téng. Érqiě shēngyīn dà de shíhou, ěrsāi yě dǎng bú zhù.",
+          "text_translation": "Sinab ko'rdim, lekin mening quloq yo'lim ancha tor, uzoq taqib tursam og'riydi. Bundan tashqari, ovoz baland bo'lganda quloq tiqini ham to'sib turolmaydi.",
+          "text_translation_ru": "Пробовал, но у меня довольно узкий слуховой проход, если долго носить, начинает болеть. К тому же, когда звук громкий, беруши его всё равно не заглушают.",
+          "text_translation_en": "I've tried, but my ear canal is rather small, and it hurts if I wear them for long. Besides, when the sound is loud, earplugs can't block it out either.",
+          "text_original": "试过，但我耳道比较小，戴久了会疼。而且声音大的时候，耳塞也挡不住。"
+        },
+        {
+          "id": "h6d31-s9",
+          "speaker": "A",
+          "pinyin": "Nà nǐ kěyǐ kǎolǜ lù xià zàoyīn zuòwéi zhèngjù, ránhòu xiàng wùyè fǎnyìng. Tāmen yǒu zérèn xiétiáo línlǐ jiūfēn.",
+          "text_translation": "Unda shovqinni dalil sifatida yozib olishni, so'ngra uy-joy boshqarmasiga shikoyat qilishni o'ylab ko'rsang bo'ladi. Ular qo'shnilar o'rtasidagi nizolarni muvofiqlashtirishga mas'ul.",
+          "text_translation_ru": "Тогда ты можешь записать шум как доказательство, а потом обратиться в управляющую компанию. Они обязаны улаживать споры между соседями.",
+          "text_translation_en": "Then you could consider recording the noise as evidence, and then reporting it to the property management. They're responsible for coordinating disputes between neighbors.",
+          "text_original": "那你可以考虑录下噪音作为证据，然后向物业反映。他们有责任协调邻里纠纷。"
+        },
+        {
+          "id": "h6d31-s10",
+          "speaker": "B",
+          "pinyin": "Wǒ zuótiān yǐjīng lù le yī duàn le, jīntiān xiàbān jiù qù wùyè bàngōngshì. Rúguǒ tāmen jiějué bù liǎo, wǒ kěnéng zhǐ néng bào jǐng le.",
+          "text_translation": "Kecha allaqachon bir parchasini yozib oldim, bugun ishdan keyin uy-joy boshqarmasi ofisiga boraman. Agar ular hal qila olmasa, ehtimol faqat politsiyaga qo'ng'iroq qilishimga to'g'ri keladi.",
+          "text_translation_ru": "Я вчера уже записал отрывок, сегодня после работы пойду в офис управляющей компании. Если они не смогут решить, мне, возможно, останется только вызвать полицию.",
+          "text_translation_en": "I already recorded a clip yesterday, and I'll go to the property management office after work today. If they can't resolve it, I might have no choice but to call the police.",
+          "text_original": "我昨天已经录了一段了，今天下班就去物业办公室。如果他们解决不了，我可能只能报警了。"
+        },
+        {
+          "id": "h6d31-s11",
+          "speaker": "A",
+          "pinyin": "Bào jǐng shì zuìhòu de shǒuduàn. Nǐ yào kǎolǜ hǎo, yídàn bào jǐng, línlǐ guānxi jiù hěn nán xiūfù le.",
+          "text_translation": "Politsiyaga qo'ng'iroq qilish — bu eng oxirgi chora. Yaxshilab o'ylab ko'r, bir marta politsiyani chaqirsang, qo'shnichilik munosabatini tiklash juda qiyin bo'lib qoladi.",
+          "text_translation_ru": "Вызов полиции — это крайняя мера. Тебе нужно хорошо подумать: как только вызовешь полицию, соседские отношения будет очень трудно восстановить.",
+          "text_translation_en": "Calling the police is a last resort. You need to think it over carefully — once you call the police, the neighborly relationship will be very hard to repair.",
+          "text_original": "报警是最后的手段。你要考虑好，一旦报警，邻里关系就很难修复了。"
+        },
+        {
+          "id": "h6d31-s12",
+          "speaker": "B",
+          "pinyin": "Wǒ dāngrán bù xiǎng zǒu dào nà yī bù. Dàn rúguǒ wùyè chūmiàn yě méi yòng, wǒ zhǐ néng cǎiqǔ fǎlǜ shǒuduàn bǎohù zìjǐ de quányì le.",
+          "text_translation": "Albatta, men o'sha bosqichga yetishni xohlamayman. Lekin agar uy-joy boshqarmasining aralashuvi ham foyda bermasa, o'z huquqlarimni himoya qilish uchun faqat qonuniy yo'llardan foydalanishimga to'g'ri keladi.",
+          "text_translation_ru": "Конечно, я не хочу доходить до этого. Но если вмешательство управляющей компании тоже не поможет, мне останется только прибегнуть к правовым мерам, чтобы защитить свои права.",
+          "text_translation_en": "Of course I don't want to go that far. But if the property management stepping in doesn't help either, I'll have no choice but to take legal measures to protect my own rights.",
+          "text_original": "我当然不想走到那一步。但如果物业出面也没用，我只能采取法律手段保护自己的权益了。"
+        },
+        {
+          "id": "h6d31-s13",
+          "speaker": "A",
+          "pinyin": "Wǒ jiànyì nǐ xiān gēn wùyè gōutōng, ràng tāmen qù xiétiáo. Yìbān lái shuō, wùyè chūmiàn bǐ nǐ zìjǐ qù qiāomén gèng yǒu wēishè lì.",
+          "text_translation": "Avval uy-joy boshqarmasi bilan gaplashishingni, ularga muvofiqlashtirishni topshirishingni maslahat beraman. Odatda, o'zing borib eshik qoqqaningdan ko'ra, uy-joy boshqarmasining aralashuvi ko'proq ta'sir kuchiga ega bo'ladi.",
+          "text_translation_ru": "Советую тебе сначала поговорить с управляющей компанией, пусть они урегулируют. Как правило, вмешательство управляющей компании оказывает больше сдерживающего воздействия, чем если ты сам пойдёшь стучать в дверь.",
+          "text_translation_en": "I suggest you first communicate with the property management and let them coordinate. Generally speaking, the property management stepping in has more deterrent effect than you going to knock on the door yourself.",
+          "text_original": "我建议你先跟物业沟通，让他们去协调。一般来说，物业出面比你自己去敲门更有威慑力。"
+        },
+        {
+          "id": "h6d31-s14",
+          "speaker": "B",
+          "pinyin": "Xīwàng wùyè néng guǎnyòng ba. Wǒ zhēn de zhǐ xiǎng hǎohao shuì ge jiào.",
+          "text_translation": "Umid qilamanki, uy-joy boshqarmasi yordam bera oladi. Men chindan ham faqat bir yaxshilab uxlashni xohlayman.",
+          "text_translation_ru": "Надеюсь, управляющая компания поможет. Я правда хочу всего лишь хорошенько выспаться.",
+          "text_translation_en": "I hope the property management can be of use. I really just want to get a good night's sleep.",
+          "text_original": "希望物业能管用吧。我真的只想好好睡个觉。"
+        }
+      ]
+    }
+  ]
+}

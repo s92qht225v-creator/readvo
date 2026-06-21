@@ -1,0 +1,202 @@
+{
+  "id": "hsk6-dialogue25",
+  "slug": "subscription-services",
+  "title": "订阅服务",
+  "pinyin": "Dìngyuè fúwù",
+  "titleTranslation": "Obuna xizmatlari",
+  "titleTranslation_ru": "Подписки",
+  "titleTranslation_en": "Subscription Services",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "订阅",
+    "莫名其妙",
+    "盗刷",
+    "自动续费",
+    "云存储",
+    "修图",
+    "独播剧",
+    "试用",
+    "扣费",
+    "冤大头",
+    "清单",
+    "硬盘",
+    "虚拟信用卡",
+    "预付卡",
+    "遗忘税",
+    "贴切"
+  ],
+  "sections": [
+    {
+      "id": "h6d25-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d25-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ zuìjìn zěnme lǎo shì shuō qián bú gòu huā? Gōngzī bú shì gāng fā ma?",
+          "text_translation": "Nega so'nggi paytlarda doim pul yetmayapti deysan? Maoshni hozirgina berishmadimi?",
+          "text_translation_ru": "Почему ты в последнее время всё время говоришь, что денег не хватает? Зарплату же только что выдали?",
+          "text_translation_en": "Why have you been saying you don't have enough money lately? Wasn't your salary just paid?",
+          "text_original": "你最近怎么老是说钱不够花？工资不是刚发吗？"
+        },
+        {
+          "id": "h6d25-s2",
+          "speaker": "B",
+          "pinyin": "Wǒ jīntiān chá le yí xià yínhángkǎ zhàngdān, fāxiàn měi ge yuè dōu zài kòu yì xiē mòmíngqímiào de fèiyong.",
+          "text_translation": "Bugun bank kartasi hisobini tekshirib ko'rdim va har oyda qandaydir tushunarsiz to'lovlar yechilayotganini payqadim.",
+          "text_translation_ru": "Сегодня я проверил выписку по банковской карте и обнаружил, что каждый месяц списываются какие-то непонятные платежи.",
+          "text_translation_en": "Today I checked my bank card statement and found that some inexplicable charges are being deducted every month.",
+          "text_original": "我今天查了一下银行卡账单，发现每个月都在扣一些莫名其妙的费用。"
+        },
+        {
+          "id": "h6d25-s3",
+          "speaker": "A",
+          "pinyin": "Shì dàoshuā le ma?",
+          "text_translation": "Kartangni o'g'irlab ishlatishganmi?",
+          "text_translation_ru": "Это мошенническое списание?",
+          "text_translation_en": "Was your card fraudulently charged?",
+          "text_original": "是盗刷了吗？"
+        },
+        {
+          "id": "h6d25-s4",
+          "speaker": "B",
+          "pinyin": "Bú shì, shì yì xiē dìngyuè fúwù de zìdòng xùfèi. Shìpín huìyuán, yún cúnchǔ, xiūtú ruǎnjiàn, jiànshēn App …… jiā qǐlái měi ge yuè jūrán yào sānbǎi duō kuài.",
+          "text_translation": "Yo'q, bu ba'zi obuna xizmatlarining avtomatik uzaytirilishi ekan. Video a'zoligi, bulutli saqlash, surat tahrirlash dasturi, fitnes ilovasi… hammasini qo'shsang, har oyda uch yuz yuandan ortiq bo'lar ekan.",
+          "text_translation_ru": "Нет, это автоматическое продление некоторых подписок. Видеоподписка, облачное хранилище, программа для обработки фото, фитнес-приложение… в сумме выходит больше трёхсот юаней в месяц.",
+          "text_translation_en": "No, it's the automatic renewal of some subscription services. Video membership, cloud storage, photo editing software, a fitness app… altogether it actually comes to over three hundred yuan a month.",
+          "text_original": "不是，是一些订阅服务的自动续费。视频会员、云存储、修图软件、健身App……加起来每个月居然要三百多块。"
+        },
+        {
+          "id": "h6d25-s5",
+          "speaker": "A",
+          "pinyin": "Zhème duō? Nǐ píngshí dōu yòng zhèxiē ruǎnjiàn ma?",
+          "text_translation": "Shunchami? Bu dasturlarni odatda ishlatasanmi o'zi?",
+          "text_translation_ru": "Так много? Ты вообще обычно пользуешься этими программами?",
+          "text_translation_en": "That much? Do you usually even use all these apps?",
+          "text_original": "这么多？你平时都用这些软件吗？"
+        },
+        {
+          "id": "h6d25-s6",
+          "speaker": "B",
+          "pinyin": "Shuō shíhuà, dà bùfen gēnběn jiù méi yòng guo. Dāngshí wèile kàn yí bù dúbō jù kāi le huìyuán, kàn wán jiù wàng le guān. Hái yǒu yì xiē shì wèile shìyòng miǎnfèi qī tiān, jiéguǒ dàoqī zìdòng kòufèi le.",
+          "text_translation": "Rostini aytsam, ko'pchiligini umuman ishlatmaganman. O'shanda bitta eksklyuziv serialni ko'rish uchun a'zolik ochib, ko'rib bo'lgach uni o'chirishni unutibman. Yana ba'zilari yetti kun bepul sinab ko'rish uchun edi, oqibatda muddati tugagach pul avtomatik yechilibdi.",
+          "text_translation_ru": "Честно говоря, большинством я вообще не пользовался. Тогда я оформил подписку, чтобы посмотреть один эксклюзивный сериал, а после просмотра забыл её отключить. А некоторые я подключил ради семи дней бесплатного пробного периода, в итоге по истечении срока деньги автоматически списались.",
+          "text_translation_en": "Honestly, I haven't used most of them at all. Back then I signed up for membership just to watch one exclusive show, and after finishing it I forgot to cancel. Some others I subscribed to for a free seven-day trial, but in the end the charges were deducted automatically when the trial expired.",
+          "text_original": "说实话，大部分根本就没用过。当时为了看一部独播剧开了会员，看完就忘了关。还有一些是为了试用免费七天，结果到期自动扣费了。"
+        },
+        {
+          "id": "h6d25-s7",
+          "speaker": "A",
+          "pinyin": "Zhè qíngkuàng tài chángjiàn le. Hěnduō gōngsī jiùshì kào yònghù wàngjì qǔxiāo dìngyuè lái zhuàn qián de.",
+          "text_translation": "Bu holat juda keng tarqalgan. Ko'p kompaniyalar aynan foydalanuvchilar obunani bekor qilishni unutishi hisobiga pul ishlaydi.",
+          "text_translation_ru": "Это очень распространённая ситуация. Многие компании как раз и зарабатывают на том, что пользователи забывают отменить подписку.",
+          "text_translation_en": "This situation is very common. Many companies make money precisely by relying on users forgetting to cancel their subscriptions.",
+          "text_original": "这情况太常见了。很多公司就是靠用户忘记取消订阅来赚钱的。"
+        },
+        {
+          "id": "h6d25-s8",
+          "speaker": "B",
+          "pinyin": "Wǒ xiànzài gǎnjué zìjǐ xiàng ge yuāndàtóu, měi ge yuè báibái sòng qián gěi biérén.",
+          "text_translation": "Hozir o'zimni bekorga aldanib pul to'lab yurgan soddadek his qilyapman, har oyda boshqalarga bekorga pul berib turibman.",
+          "text_translation_ru": "Сейчас я чувствую себя простофилей, который каждый месяц зря отдаёт деньги другим.",
+          "text_translation_en": "Now I feel like a sucker, giving away money to others for nothing every month.",
+          "text_original": "我现在感觉自己像个冤大头，每个月白白送钱给别人。"
+        },
+        {
+          "id": "h6d25-s9",
+          "speaker": "A",
+          "pinyin": "Gǎnjǐn bǎ bù xūyào de dōu qǔxiāo diào ba. Xiān liè yí ge qīngdān, kàn kan nǎxiē shì zhēnzhèng yǒuyòng de.",
+          "text_translation": "Tezroq keraksizlarining hammasini bekor qilib tashla. Avval bitta ro'yxat tuz, qaysilari haqiqatan ham foydali ekanini ko'rib chiq.",
+          "text_translation_ru": "Скорее отмени всё ненужное. Сначала составь список и посмотри, какие из них действительно полезны.",
+          "text_translation_en": "Hurry up and cancel all the ones you don't need. First make a list and see which ones are truly useful.",
+          "text_original": "赶紧把不需要的都取消掉吧。先列一个清单，看看哪些是真正有用的。"
+        },
+        {
+          "id": "h6d25-s10",
+          "speaker": "B",
+          "pinyin": "Wǒ gāngcái yǐjīng qǔxiāo le sān xiàng, hái yǒu liǎng xiàng zài yóuyù.",
+          "text_translation": "Hozirgina uchtasini bekor qildim, yana ikkitasi haqida ikkilanyapman.",
+          "text_translation_ru": "Я только что отменил три, а по поводу ещё двух колеблюсь.",
+          "text_translation_en": "I just cancelled three of them, and I'm still hesitating about two more.",
+          "text_original": "我刚才已经取消了三项，还有两项在犹豫。"
+        },
+        {
+          "id": "h6d25-s11",
+          "speaker": "A",
+          "pinyin": "Yóuyù shénme?",
+          "text_translation": "Nimadan ikkilanyapsan?",
+          "text_translation_ru": "А чего колеблешься?",
+          "text_translation_en": "What are you hesitating about?",
+          "text_original": "犹豫什么？"
+        },
+        {
+          "id": "h6d25-s12",
+          "speaker": "B",
+          "pinyin": "Yí ge shì yīnyuè App, wǒ ǒu'ěr huì yòng tā tīng gē. Lìng yí ge shì yún cúnchǔ, lǐmiàn cún le yì xiē zhàopiàn, pà qǔxiāo yǐhòu zhàopiàn bú jiàn le.",
+          "text_translation": "Biri musiqa ilovasi, uni ba'zan qo'shiq eshitish uchun ishlataman. Yana biri bulutli saqlash, ichida bir nechta surat saqlangan, bekor qilsam suratlar yo'qolib qolishidan qo'rqyapman.",
+          "text_translation_ru": "Одно — это музыкальное приложение, я иногда слушаю в нём песни. Другое — облачное хранилище, в нём хранятся некоторые фотографии, и я боюсь, что после отмены фотографии пропадут.",
+          "text_translation_en": "One is a music app — I occasionally use it to listen to songs. The other is cloud storage, where I've saved some photos, and I'm afraid the photos will disappear after I cancel it.",
+          "text_original": "一个是音乐App，我偶尔会用它听歌。另一个是云存储，里面存了一些照片，怕取消以后照片不见了。"
+        },
+        {
+          "id": "h6d25-s13",
+          "speaker": "A",
+          "pinyin": "Yīnyuè App nǐ kěyǐ huàn chéng miǎnfèi bǎn de, tīng gē yǒu guǎnggào éryǐ. Yún cúnchǔ dehuà, nǐ bǎ zhàopiàn xiàzài dào yìngpán lǐ zài qǔxiāo, zhèyàng jiù bú pà diū le.",
+          "text_translation": "Musiqa ilovasini bepul versiyaga o'zgartirsang bo'ladi, faqat qo'shiq eshitishda reklama bo'ladi xolos. Bulutli saqlashga kelsak, suratlarni qattiq diskka yuklab olib, keyin bekor qil, shunda yo'qotib qo'yishdan qo'rqmaysan.",
+          "text_translation_ru": "Музыкальное приложение ты можешь поменять на бесплатную версию, просто при прослушивании будет реклама. А что касается облачного хранилища, скачай фотографии на жёсткий диск, а потом отмени — так не придётся бояться, что они пропадут.",
+          "text_translation_en": "You can switch the music app to the free version — there'll just be ads when you listen. As for cloud storage, download the photos to a hard drive first and then cancel; that way you won't have to worry about losing them.",
+          "text_original": "音乐App你可以换成免费版的，听歌有广告而已。云存储的话，你把照片下载到硬盘里再取消，这样就不怕丢了。"
+        },
+        {
+          "id": "h6d25-s14",
+          "speaker": "B",
+          "pinyin": "Hǎo zhǔyi! Wǒ zhè jiù qù bàn. Yǐhòu zhùcè rènhé dìngyuè fúwù, wǒ yídìng yào zài shǒujī rìlì shàng shè ge tíxǐng, dàoqī qián liǎng tiān tōngzhī wǒ qǔxiāo.",
+          "text_translation": "Yaxshi fikr! Hoziroq shu bilan shug'ullanaman. Bundan keyin qaysidir obuna xizmatiga ro'yxatdan o'tsam, albatta telefon kalendarida eslatma o'rnataman, muddati tugashidan ikki kun oldin meni bekor qilishga ogohlantirsin.",
+          "text_translation_ru": "Хорошая идея! Сейчас же займусь этим. В будущем, регистрируясь на любую подписку, я обязательно поставлю напоминание в календаре телефона, чтобы за два дня до окончания срока оно напомнило мне отменить.",
+          "text_translation_en": "Good idea! I'll go do it right now. From now on, whenever I sign up for any subscription service, I'll definitely set a reminder in my phone calendar to notify me to cancel two days before it expires.",
+          "text_original": "好主意！我这就去办。以后注册任何订阅服务，我一定要在手机日历上设个提醒，到期前两天通知我取消。"
+        },
+        {
+          "id": "h6d25-s15",
+          "speaker": "A",
+          "pinyin": "Zhè ge bànfǎ cōngming. Lìngwài, jǐnliàng yòng xūnǐ xìnyòngkǎ huòzhě yùfù kǎ lái zhīfù, zhèyàng jiùsuàn wàng le qǔxiāo, kǎ lǐ méi qián yě kòu bù liǎo.",
+          "text_translation": "Bu usul aqlli. Bundan tashqari, imkon qadar virtual kredit karta yoki oldindan to'lov kartasi orqali to'lashga harakat qil, shunda bekor qilishni unutsang ham, kartada pul bo'lmagani uchun yecha olishmaydi.",
+          "text_translation_ru": "Это умный способ. Кроме того, по возможности расплачивайся виртуальной кредитной картой или предоплаченной картой — так, даже если забудешь отменить, при отсутствии денег на карте списать ничего не смогут.",
+          "text_translation_en": "That's a smart approach. Besides, try to pay with a virtual credit card or a prepaid card as much as possible; that way, even if you forget to cancel, they can't charge you if there's no money on the card.",
+          "text_original": "这个办法聪明。另外，尽量用虚拟信用卡或者预付卡来支付，这样就算忘了取消，卡里没钱也扣不了。"
+        },
+        {
+          "id": "h6d25-s16",
+          "speaker": "B",
+          "pinyin": "Yuánlái hái yǒu zhè zhǒng cāozuò! Kànlái nǐ duì zhè fāngmiàn hěn yǒu jīngyàn a.",
+          "text_translation": "Demak bunday usul ham bor ekan! Ko'rinishidan sen bu sohada juda tajribali ekansan.",
+          "text_translation_ru": "Оказывается, есть и такой приём! Похоже, ты в этом деле очень опытный.",
+          "text_translation_en": "So there's even a trick like that! It seems you're quite experienced in this area.",
+          "text_original": "原来还有这种操作！看来你对这方面很有经验啊。"
+        },
+        {
+          "id": "h6d25-s17",
+          "speaker": "A",
+          "pinyin": "Yǐqián chī guo kuī, jiāo guo bùshǎo 'yíwàng shuì'. Xiànzài měi ge yuè yī hào wǒ dōu huì huā shí fēnzhōng jiǎnchá yí xià zhàngdān, fángzhǐ bèi chíxù kòufèi.",
+          "text_translation": "Avvallari zarar ko'rganman, anchagina 「unutish solig'i」 to'laganman. Endi har oyning birinchi kunida hisobni o'n daqiqa tekshirib chiqaman, doimiy pul yechilib turishining oldini olish uchun.",
+          "text_translation_ru": "Раньше я обжигался, заплатил немало 「налога за забывчивость」. Теперь первого числа каждого месяца я трачу десять минут на проверку выписки, чтобы не допустить постоянных списаний.",
+          "text_translation_en": "I've suffered losses before and paid quite a lot of 「forgetfulness tax」. Now on the first of every month I spend ten minutes checking my statement to prevent ongoing charges.",
+          "text_original": "以前吃过亏，交过不少「遗忘税」。现在每个月一号我都会花十分钟检查一下账单，防止被持续扣费。"
+        },
+        {
+          "id": "h6d25-s18",
+          "speaker": "B",
+          "pinyin": "'Yíwàng shuì' zhè ge cí tài tiēqiè le! Wǒ yǐhòu yě yào yǎngchéng zhè ge xíguàn.",
+          "text_translation": "「Unutish solig'i」 degan bu so'z juda o'rinli ekan! Men ham bundan keyin shu odatni hosil qilaman.",
+          "text_translation_ru": "Слово 「налог за забывчивость」 очень меткое! Я тоже впредь выработаю эту привычку.",
+          "text_translation_en": "The phrase 「forgetfulness tax」 is so apt! I'm going to develop this habit too from now on.",
+          "text_original": "「遗忘税」这个词太贴切了！我以后也要养成这个习惯。"
+        }
+      ]
+    }
+  ]
+}

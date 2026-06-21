@@ -1,0 +1,202 @@
+{
+  "id": "hsk6-dialogue33",
+  "slug": "rental-traps",
+  "title": "租房陷阱",
+  "pinyin": "Zūfáng xiànjǐng",
+  "titleTranslation": "Ijara uy tuzoqlari",
+  "titleTranslation_ru": "Ловушки при аренде жилья",
+  "titleTranslation_en": "Renting Apartments",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "承诺",
+    "蒸笼",
+    "家电",
+    "损耗",
+    "维修",
+    "模糊",
+    "设施",
+    "下水道",
+    "返水",
+    "排水",
+    "老化",
+    "业主",
+    "推卸",
+    "押金",
+    "退租",
+    "正规"
+  ],
+  "sections": [
+    {
+      "id": "h6d33-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d33-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ zuìjìn bú shì bān xīn jiā le ma? Zhù de hái xíguàn ma?",
+          "text_translation": "Yaqinda yangi uyga ko'chmadingmi? Yashash qulaymi?",
+          "text_translation_ru": "Ты ведь недавно переехал в новую квартиру? Удобно ли жить?",
+          "text_translation_en": "Didn't you move into a new place recently? Are you settling in okay?",
+          "text_original": "你最近不是搬新家了吗？住得还习惯吗？"
+        },
+        {
+          "id": "h6d33-s2",
+          "speaker": "B",
+          "pinyin": "Bié tí le, bān jìnqù cái fāxiàn wèntí yī dà duī. Qiānyuē de shíhou fángdōng gè zhǒng chéngnuò, zhù jìnqù quán shì kēng.",
+          "text_translation": "Gapirmasang ham bo'ladi, ko'chib kirgandan keyingina muammolar to'p-to'p bo'lib chiqdi. Shartnoma tuzayotganda uy egasi turli xil va'dalar berdi, ko'chib kirsam hammasi tuzoq ekan.",
+          "text_translation_ru": "Не говори, только въехал — и обнаружил кучу проблем. При подписании договора хозяин надавал кучу обещаний, а заехал — сплошные подвохи.",
+          "text_translation_en": "Don't even ask, only after moving in did I find a whole pile of problems. When signing the lease the landlord made all kinds of promises, but once I moved in it was all traps.",
+          "text_original": "别提了，搬进去才发现问题一大堆。签约的时候房东各种承诺，住进去全是坑。"
+        },
+        {
+          "id": "h6d33-s3",
+          "speaker": "A",
+          "pinyin": "Zěnme huí shì? Fángzū bú shì tǐng piányi de ma?",
+          "text_translation": "Nima bo'ldi? Ijara haqi ancha arzon emasmidi?",
+          "text_translation_ru": "Что случилось? Аренда же вроде довольно дешёвая?",
+          "text_translation_en": "What happened? Wasn't the rent quite cheap?",
+          "text_original": "怎么回事？房租不是挺便宜的吗？"
+        },
+        {
+          "id": "h6d33-s4",
+          "speaker": "B",
+          "pinyin": "Piányi shì yǒu yuányīn de. Bān jìnqù dì-yī tiān jiù fāxiàn kōngtiáo shì huài de, dà xiàtiān fángjiān xiàng zhēnglóng yīyàng.",
+          "text_translation": "Arzonligining sababi bor. Ko'chib kirgan birinchi kuniyoq konditsioner buzuq ekanini bilib qoldim, jaziramada xona xuddi bug'xonadek isib ketadi.",
+          "text_translation_ru": "У дешевизны есть причина. В первый же день после переезда я обнаружил, что кондиционер сломан, и в самую жару комната как парилка.",
+          "text_translation_en": "The cheapness has a reason. On the very first day after moving in I found the air conditioner was broken, and in the height of summer the room was like a steamer basket.",
+          "text_original": "便宜是有原因的。搬进去第一天就发现空调是坏的，大夏天房间像蒸笼一样。"
+        },
+        {
+          "id": "h6d33-s5",
+          "speaker": "A",
+          "pinyin": "Nǐ méi zài qiānyuē qián jiǎnchá guo jiādiàn ma?",
+          "text_translation": "Shartnoma tuzishdan oldin maishiy texnikani tekshirib ko'rmaganmiding?",
+          "text_translation_ru": "Ты разве не проверял бытовую технику перед подписанием договора?",
+          "text_translation_en": "Didn't you check the appliances before signing the lease?",
+          "text_original": "你没在签约前检查过家电吗？"
+        },
+        {
+          "id": "h6d33-s6",
+          "speaker": "B",
+          "pinyin": "Kàn le, dàn dāngshí fángdōng shuō kōngtiáo shì hǎo de, zhǐshì hěn jiǔ méi yòng, xūyào qīnglǐ yíxià. Wǒ jiù xìn le. Xiànzài tā shuō zhè shì zhèngcháng sǔnhào, wéixiū fèi yào wǒ zìjǐ chū.",
+          "text_translation": "Ko'rdim, lekin o'shanda uy egasi konditsioner soz, faqat ancha vaqt ishlatilmagani uchun tozalash kerak, dedi. Men ham ishondim. Endi esa bu oddiy eskirish, ta'mirlash xarajatini o'zing to'lashing kerak, deyapti.",
+          "text_translation_ru": "Смотрел, но тогда хозяин сказал, что кондиционер исправен, просто давно не использовался и надо его почистить. Я и поверил. А теперь он говорит, что это нормальный износ и ремонт я должен оплачивать сам.",
+          "text_translation_en": "I did look, but back then the landlord said the air conditioner was fine, it just hadn't been used for a long time and needed cleaning. So I believed him. Now he says this is normal wear and tear and that I have to pay for the repairs myself.",
+          "text_original": "看了，但当时房东说空调是好的，只是很久没用，需要清理一下。我就信了。现在他说这是正常损耗，维修费要我自己出。"
+        },
+        {
+          "id": "h6d33-s7",
+          "speaker": "A",
+          "pinyin": "Zhè yě tài kēng le. Hétóng lǐ méiyǒu xiě jiādiàn wéixiū de zérèn huàfēn ma?",
+          "text_translation": "Bu juda tuzoq ekan. Shartnomada maishiy texnikani ta'mirlash mas'uliyati kim zimmasida ekani yozilmaganmi?",
+          "text_translation_ru": "Это уж слишком — настоящий развод. В договоре разве не прописано, кто отвечает за ремонт бытовой техники?",
+          "text_translation_en": "That's such a rip-off. Doesn't the contract spell out who is responsible for appliance repairs?",
+          "text_original": "这也太坑了。合同里没有写家电维修的责任划分吗？"
+        },
+        {
+          "id": "h6d33-s8",
+          "speaker": "B",
+          "pinyin": "Hétóng xiě de hěn móhu, zhǐ shuō 'zūkè yīng àihù fángwū shèshī'. Zhè zhǒng huà zěnme shuō dōu xíng, wǒ gēnběn méi bǎozhàng.",
+          "text_translation": "Shartnoma juda noaniq yozilgan, faqat 「ijarachi uy jihozlarini avaylab-asrashi kerak」 deb yozilgan. Bunaqa gapni xohlagancha talqin qilsa bo'ladi, menda umuman hech qanday kafolat yo'q.",
+          "text_translation_ru": "Договор составлен очень расплывчато, там только сказано «арендатор должен бережно относиться к оборудованию жилья». Такую формулировку можно трактовать как угодно, у меня вообще нет никакой защиты.",
+          "text_translation_en": "The contract is worded very vaguely, it just says 'the tenant should take care of the housing facilities.' That kind of wording can be interpreted any way you like, so I have no protection at all.",
+          "text_original": "合同写得很模糊，只说「租客应爱护房屋设施」。这种话怎么说都行，我根本没保障。"
+        },
+        {
+          "id": "h6d33-s9",
+          "speaker": "A",
+          "pinyin": "Nà nǐ xiànzài dǎsuàn zěnme bàn? Kōngtiáo bù xiū gēnběn zhù bù xiàqù.",
+          "text_translation": "Unda endi nima qilmoqchisan? Konditsionerni tuzatmasang, umuman yashab bo'lmaydi-ku.",
+          "text_translation_ru": "И что ты теперь собираешься делать? Без ремонта кондиционера там вообще жить невозможно.",
+          "text_translation_en": "So what are you planning to do now? Without fixing the air conditioner you simply can't live there.",
+          "text_original": "那你现在打算怎么办？空调不修根本住不下去。"
+        },
+        {
+          "id": "h6d33-s10",
+          "speaker": "B",
+          "pinyin": "Wǒ zhǐ néng zìjǐ zhǎo rén xiū le. Dàn wǒ zuì dānxīn de bú shì zhè ge, shì wèishēngjiān de xiàshuǐdào yǒu wèidào, wǎnshang hái huì fǎn shuǐ.",
+          "text_translation": "Faqat o'zim odam topib tuzattirishimga to'g'ri keladi. Lekin meni eng ko'p tashvishga solayotgani bu emas, hojatxonaning kanalizatsiyasidan hid kelishi, kechalari esa suv qaytib chiqib ketishi.",
+          "text_translation_ru": "Придётся самому искать мастера и ремонтировать. Но больше всего меня беспокоит не это, а то, что из канализации в санузле идёт запах, а по ночам ещё и вода поднимается обратно.",
+          "text_translation_en": "I'll just have to find someone to fix it myself. But what worries me most isn't that — it's that the bathroom drain smells, and at night the water even backs up.",
+          "text_original": "我只能自己找人修了。但我最担心的不是这个，是卫生间的下水道有味道，晚上还会返水。"
+        },
+        {
+          "id": "h6d33-s11",
+          "speaker": "A",
+          "pinyin": "Fǎn shuǐ? Zhè wèntí hěn yánzhòng a! Nǐ qiānyuē qián méi shì guo chōng shuǐ ma?",
+          "text_translation": "Suv qaytib chiqadimi? Bu juda jiddiy muammo-ku! Shartnoma tuzishdan oldin suv tortib ko'rmaganmiding?",
+          "text_translation_ru": "Вода поднимается обратно? Это же очень серьёзная проблема! Ты перед подписанием договора не пробовал спускать воду?",
+          "text_translation_en": "The water backs up? That's a really serious problem! Didn't you test the flushing before signing the lease?",
+          "text_original": "返水？这问题很严重啊！你签约前没试过冲水吗？"
+        },
+        {
+          "id": "h6d33-s12",
+          "speaker": "B",
+          "pinyin": "Dāngshí shì le, shuǐliú shì tōng de. Dàn zhù jìnqù yǐhòu cái fāxiàn, lóuxià páishuǐ bú chàng, yí dào yòng shuǐ gāofēng qī jiù huì wǎng shàng mào.",
+          "text_translation": "O'shanda sinab ko'rgandim, suv bemalol oqib ketdi. Lekin ko'chib kirgandan keyingina bildimki, pastki qavatda suv chiqishi yomon ekan, suv ko'p ishlatiladigan vaqt kelishi bilan yuqoriga qaytib otilib chiqadi.",
+          "text_translation_ru": "Тогда пробовал — вода уходила нормально. Но только после переезда я обнаружил, что на нижнем этаже плохой слив, и в часы пик потребления воды она поднимается вверх.",
+          "text_translation_en": "I tested it then and the water drained fine. But only after moving in did I realize the drainage downstairs is poor, and during peak water-use hours it bubbles back up.",
+          "text_original": "当时试了，水流是通的。但住进去以后才发现，楼下排水不畅，一到用水高峰期就会往上冒。"
+        },
+        {
+          "id": "h6d33-s13",
+          "speaker": "A",
+          "pinyin": "Zhè zhǒng wèntí fángdōng kěndìng zhīdào, gùyì méi gàosu nǐ. Nǐ dǎsuàn zěnme wéiquán?",
+          "text_translation": "Bunday muammoni uy egasi albatta bilgan, ataylab senga aytmagan. Huquqingni qanday himoya qilmoqchisan?",
+          "text_translation_ru": "О такой проблеме хозяин наверняка знал и намеренно тебе не сказал. Как ты собираешься отстаивать свои права?",
+          "text_translation_en": "The landlord surely knew about this problem and deliberately didn't tell you. How do you plan to defend your rights?",
+          "text_original": "这种问题房东肯定知道，故意没告诉你。你打算怎么维权？"
+        },
+        {
+          "id": "h6d33-s14",
+          "speaker": "B",
+          "pinyin": "Wǒ zhǎo le wùyè, tāmen shuō zhè shì guǎndào lǎohuà de wèntí, xūyào quán lóu wéixiū, dàn fèiyòng yào yèzhǔ chū. Xiànzài fángdōng zài tuīxiè zérèn.",
+          "text_translation": "Boshqaruv kompaniyasiga murojaat qildim, ular bu quvurlarning eskirgani sababli muammo, butun binoni ta'mirlash kerak, lekin xarajatni uy egasi to'lashi kerak, deyishdi. Hozir uy egasi mas'uliyatni o'zidan ag'darayapti.",
+          "text_translation_ru": "Я обратился в управляющую компанию, они сказали, что это проблема изношенных труб, нужен ремонт всего дома, но расходы должен нести собственник. А хозяин теперь сваливает ответственность.",
+          "text_translation_en": "I went to the property management, and they said it's a problem of aging pipes that requires repairing the whole building, but the cost has to be borne by the property owner. Now the landlord is shifting the responsibility.",
+          "text_original": "我找了物业，他们说这是管道老化的问题，需要全楼维修，但费用要业主出。现在房东在推卸责任。"
+        },
+        {
+          "id": "h6d33-s15",
+          "speaker": "A",
+          "pinyin": "Nà nǐ xiànzài gǎnjué jiùshì bèi piàn le?",
+          "text_translation": "Unda hozir o'zingni aldangandek his qilyapsanmi?",
+          "text_translation_ru": "Так ты сейчас чувствуешь, что тебя просто обманули?",
+          "text_translation_en": "So right now you feel like you've simply been cheated?",
+          "text_original": "那你现在感觉就是被骗了？"
+        },
+        {
+          "id": "h6d33-s16",
+          "speaker": "B",
+          "pinyin": "Shì a, dàn hétóng yǐjīng qiān le, yājīn yě jiāo le. Rúguǒ xiànzài tuì zū, yājīn jiù ná bù huílái le. Zhǐ néng yìng zhe tóupí zhù yì nián.",
+          "text_translation": "Ha, lekin shartnoma allaqachon imzolangan, kafolat puli ham to'langan. Agar hozir ijaradan voz kechsam, kafolat pulini qaytarib ololmayman. Tishimni-tishimga qo'yib bir yil yashashdan boshqa chora yo'q.",
+          "text_translation_ru": "Да, но договор уже подписан, и залог тоже внесён. Если сейчас расторгнуть аренду, залог обратно не вернёшь. Остаётся только скрепя сердце прожить год.",
+          "text_translation_en": "Yeah, but the contract is already signed and the deposit is paid. If I terminate the lease now, I won't get the deposit back. I can only grit my teeth and live there for a year.",
+          "text_original": "是啊，但合同已经签了，押金也交了。如果现在退租，押金就拿不回来了。只能硬着头皮住一年。"
+        },
+        {
+          "id": "h6d33-s17",
+          "speaker": "A",
+          "pinyin": "Xià cì zūfáng yídìng yào jìzhu: qiānyuē qián bǎ suǒyǒu diànqì dōu shì yī biàn, xiàshuǐdào yě chōng shuǐ kàn kan, érqiě yào bǎ suǒyǒu chéngnuò xiě jìn hétóng lǐ.",
+          "text_translation": "Keyingi safar uy ijaraga olganda albatta esda tut: shartnoma tuzishdan oldin barcha elektr jihozlarni bir bor sinab ko'r, kanalizatsiyaga ham suv tortib ko'r, bundan tashqari barcha va'dalarni shartnomaga yozdirib qo'y.",
+          "text_translation_ru": "В следующий раз при аренде обязательно запомни: перед подписанием договора проверь всю технику, спусти воду в канализацию, а ещё впиши все обещания прямо в договор.",
+          "text_translation_en": "Next time you rent, be sure to remember: before signing, test every appliance, run water through the drain to check it, and write all the promises into the contract.",
+          "text_original": "下次租房一定要记住：签约前把所有电器都试一遍，下水道也冲水看看，而且要把所有承诺写进合同里。"
+        },
+        {
+          "id": "h6d33-s18",
+          "speaker": "B",
+          "pinyin": "Nǐ shuō de duì. Zhè cì jiù dāng jiāo xuéfèi le. Yǐhòu wǒ nìngkě duō huā diǎn qián zū zhèngguī zhōngjiè de fángzi, yě bù tú zhè ge piányi le.",
+          "text_translation": "To'g'ri aytasan. Bu safarni saboq pulini to'lagandek qabul qilaman. Bundan keyin ko'proq pul sarflab bo'lsa ham rasmiy vositachining uyini ijaraga olaman, shu arzonchilikning ortidan quvmayman.",
+          "text_translation_ru": "Ты прав. В этот раз буду считать, что заплатил за науку. Впредь я лучше потрачу побольше денег и сниму жильё через официальное агентство, чем погонюсь за такой дешевизной.",
+          "text_translation_en": "You're right. I'll just treat this time as paying tuition. From now on I'd rather spend a bit more money and rent through a proper agency than chase this kind of cheap deal.",
+          "text_original": "你说得对。这次就当交学费了。以后我宁可多花点钱租正规中介的房子，也不图这个便宜了。"
+        }
+      ]
+    }
+  ]
+}

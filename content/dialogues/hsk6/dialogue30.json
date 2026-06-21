@@ -1,0 +1,171 @@
+{
+  "id": "hsk6-dialogue30",
+  "slug": "family-group-chats",
+  "title": "家庭群聊",
+  "pinyin": "Jiātíng qún liáo",
+  "titleTranslation": "Oilaviy guruh suhbati",
+  "titleTranslation_ru": "Семейный чат",
+  "titleTranslation_en": "Family Group Chats",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "养生",
+    "表情包",
+    "动图",
+    "免打扰",
+    "屏蔽",
+    "试探",
+    "冒泡",
+    "轰炸",
+    "置顶",
+    "漏掉",
+    "已读",
+    "私聊"
+  ],
+  "sections": [
+    {
+      "id": "h6d30-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d30-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ shǒujī yòu xiǎng le, shuí yīzhí gěi nǐ fā xiāoxi?",
+          "text_translation": "Telefoning yana jiringladi, kim senga doim xabar yuboryapti?",
+          "text_translation_ru": "У тебя телефон снова зазвонил, кто это тебе всё время шлёт сообщения?",
+          "text_translation_en": "Your phone went off again, who keeps sending you messages?",
+          "text_original": "你手机又响了，谁一直给你发消息？"
+        },
+        {
+          "id": "h6d30-s2",
+          "speaker": "B",
+          "pinyin": "Hái néng yǒu shuí? Wǒ jiā de nà ge jiātíng qún a. Měi tiān dōu jǐ bǎi tiáo xiāoxi, quán shì yì xiē yǎngshēng wénzhāng hé zhùfú biǎoqíngbāo.",
+          "text_translation": "Yana kim bo'lardi? Bizning oilaviy guruhimiz-da. Har kuni yuzlab xabar, hammasi sog'lomlashtirish maqolalari va tabrik stikerlari.",
+          "text_translation_ru": "А кто ещё? Это наш семейный чат. Каждый день по несколько сотен сообщений, всё статьи о здоровом образе жизни и поздравительные стикеры.",
+          "text_translation_en": "Who else? It's my family group chat. Hundreds of messages every day, all health-tips articles and blessing stickers.",
+          "text_original": "还能有谁？我家的那个家庭群啊。每天都几百条消息，全是一些养生文章和祝福表情包。"
+        },
+        {
+          "id": "h6d30-s3",
+          "speaker": "A",
+          "pinyin": "Hāhā, wǒ jiā de qún yě yīyàng. Wǒ gūgu měitiān zǎoshang zhǔnshí fā 'zǎo'ān' dòngtú, jiē zhe jiùshì gè zhǒng huā, yángguāng, kāfēi de biǎoqíngbāo.",
+          "text_translation": "Haha, bizning guruh ham xuddi shunday. Ammam har kuni ertalab vaqtida 「Xayrli tong」 deb gif yuboradi, keyin esa turli xil gul, quyosh, kofe stikerlari.",
+          "text_translation_ru": "Ха-ха, в нашем чате то же самое. Моя тётя каждое утро ровно по времени шлёт гифку 「Доброе утро」, а затем всякие стикеры с цветами, солнцем и кофе.",
+          "text_translation_en": "Haha, my family group is the same. My aunt sends a 「Good morning」 GIF right on time every morning, followed by all sorts of flower, sunshine and coffee stickers.",
+          "text_original": "哈哈，我家的群也一样。我姑姑每天早上准时发「早安」动图，接着就是各种花、阳光、咖啡的表情包。"
+        },
+        {
+          "id": "h6d30-s4",
+          "speaker": "B",
+          "pinyin": "Wèntí shì wǒ yǐjīng shè le miǎn dǎrǎo, dàn háishì kòngzhì bú zhù huì qù kàn. Shēngpà cuòguò shénme zhòngyào de shì.",
+          "text_translation": "Muammosi shundaki, men allaqachon \"bezovta qilmaslik\" rejimini yoqib qo'yganman, lekin baribir qarab qo'yishni o'zimni tiyolmayman. Biror muhim narsani o'tkazib yuborishdan qo'rqaman.",
+          "text_translation_ru": "Проблема в том, что я уже включил режим «не беспокоить», но всё равно не могу удержаться и заглядываю. Боюсь пропустить что-нибудь важное.",
+          "text_translation_en": "The problem is I've already set it to do-not-disturb, but I still can't help checking it. I'm afraid of missing something important.",
+          "text_original": "问题是我已经设了免打扰，但还是控制不住会去看。生怕错过什么重要的事。"
+        },
+        {
+          "id": "h6d30-s5",
+          "speaker": "A",
+          "pinyin": "Wǒ dōu shì dìngqī qīnglǐ wèi dú xiāoxi, měi zhōu jízhōng kàn yī cì. Zhòngyào de shì jiārén huì dāndú @ wǒ.",
+          "text_translation": "Men o'qilmagan xabarlarni muntazam tozalab turaman, har hafta bir marta yig'ib qarayman. Muhim ish bo'lsa, oila a'zolari alohida @ qilib chaqiradi.",
+          "text_translation_ru": "Я регулярно разбираю непрочитанные сообщения, просматриваю их раз в неделю одним заходом. По важным делам родные отдельно отмечают меня через @.",
+          "text_translation_en": "I clear out unread messages periodically and look through them once a week. For important things, my family will @ me separately.",
+          "text_original": "我都是定期清理未读消息，每周集中看一次。重要的事家人会单独@我。"
+        },
+        {
+          "id": "h6d30-s6",
+          "speaker": "B",
+          "pinyin": "Nǐ shuō de duì. Dàn wǒ mā zhǐyào wǒ bù huí xiāoxi, jiù huì dǎ diànhuà lái wèn 'nǐ zěnme bù huí qún lǐ de xiāoxi?'",
+          "text_translation": "To'g'ri aytasan. Lekin onam men xabarga javob bermasam bo'ldi, darrov qo'ng'iroq qilib 「Nega guruhdagi xabarlarga javob bermayapsan?」 deb so'raydi.",
+          "text_translation_ru": "Ты прав. Но моя мама, стоит мне не ответить на сообщение, тут же звонит и спрашивает: 「Почему ты не отвечаешь на сообщения в чате?」",
+          "text_translation_en": "You're right. But the moment I don't reply, my mom calls to ask 「Why aren't you answering the messages in the group?」",
+          "text_original": "你说得对。但我妈只要我不回消息，就会打电话来问「你怎么不回群里的消息？」"
+        },
+        {
+          "id": "h6d30-s7",
+          "speaker": "A",
+          "pinyin": "Zhè ge wǒ tài dǒng le! Wǒ shàng cì wàngjì huífù, wǒ mā zhíjiē dǎ diànhuà zhìwèn wǒ shì bú shì bǎ tā píngbì le.",
+          "text_translation": "Buni juda yaxshi tushunaman! O'tgan safar javob berishni unutgan edim, onam to'g'ridan-to'g'ri qo'ng'iroq qilib uni bloklab qo'yganmanmi deb so'roqqa tutdi.",
+          "text_translation_ru": "Это мне слишком хорошо знакомо! В прошлый раз я забыл ответить, и мама сразу позвонила и допросила, не заблокировал ли я её.",
+          "text_translation_en": "I know that all too well! Last time I forgot to reply, my mom called right away and demanded to know whether I'd blocked her.",
+          "text_original": "这个我太懂了！我上次忘记回复，我妈直接打电话质问我是不是把她屏蔽了。"
+        },
+        {
+          "id": "h6d30-s8",
+          "speaker": "B",
+          "pinyin": "Nà nǐ zěnme jiěshì de?",
+          "text_translation": "Xo'sh, sen qanday tushuntirding?",
+          "text_translation_ru": "И как же ты это объяснил?",
+          "text_translation_en": "So how did you explain it?",
+          "text_original": "那你怎么解释的？"
+        },
+        {
+          "id": "h6d30-s9",
+          "speaker": "A",
+          "pinyin": "Wǒ shuō zuìjìn gōngzuò máng, shǒujī jìngyīn le. Dàn tā gēnběn bù xìn, dì-èr tiān yòu wǎng qún lǐ fā le hǎoduō xìnxī shìtàn wǒ.",
+          "text_translation": "So'nggi paytlarda ishim ko'p, telefonni ovozsiz qilib qo'ygan edim dedim. Lekin u umuman ishonmadi, ertasi kuni guruhga yana ko'plab xabar yuborib meni sinab ko'rdi.",
+          "text_translation_ru": "Я сказал, что в последнее время занят на работе и поставил телефон на беззвучный режим. Но она совсем не поверила и на следующий день снова отправила в чат кучу сообщений, чтобы прощупать меня.",
+          "text_translation_en": "I said I'd been busy with work lately and had the phone on silent. But she didn't believe me at all, and the next day sent a bunch of messages to the group to test me.",
+          "text_original": "我说最近工作忙，手机静音了。但她根本不信，第二天又往群里发了好多信息试探我。"
+        },
+        {
+          "id": "h6d30-s10",
+          "speaker": "B",
+          "pinyin": "Tài nán le. Wǒ xiànzài měi ge zhōumò huì zhǔdòng zài qún lǐ fā yī zhāng wǒ zuò de cài de zhàopiàn, huòzhě suíshǒu pāi de fēngjǐng. Tāmen kàn dào wǒ huó zhe, jiù fàngxīn le.",
+          "text_translation": "Juda qiyin. Men endi har dam olish kunlari guruhga o'zim pishirgan taom rasmini yoki shunchaki olib qo'ygan manzara suratini o'zim yuboraman. Ular meni tirik ekanimni ko'rsa, xotirjam bo'lishadi.",
+          "text_translation_ru": "Это очень тяжело. Теперь я каждые выходные сам отправляю в чат фотографию приготовленного мной блюда или случайно снятого пейзажа. Увидев, что я жив, они успокаиваются.",
+          "text_translation_en": "It's so hard. Now every weekend I proactively post a photo of a dish I cooked or some scenery I snapped. Once they see I'm alive, they relax.",
+          "text_original": "太难了。我现在每个周末会主动在群里发一张我做的菜的照片，或者随手拍的风景。他们看到我活着，就放心了。"
+        },
+        {
+          "id": "h6d30-s11",
+          "speaker": "A",
+          "pinyin": "Nǐ zhè ge cèlüè kěyǐ. Dìngqī mào ge pào, zhèngmíng zìjǐ hái huó zhe, tāmen jiù bú huì yīzhí hōngzhà nǐ le.",
+          "text_translation": "Bu strategiyang yaxshi ekan. Vaqti-vaqti bilan ko'rinish berib, hali tirik ekaningni isbotlasang, ular seni doim xabarlar bilan bombardimon qilmaydi.",
+          "text_translation_ru": "Эта твоя стратегия годится. Время от времени появляешься, доказываешь, что ещё жив — и они перестают тебя постоянно бомбардировать.",
+          "text_translation_en": "That strategy of yours works. Surface now and then to prove you're still alive, and they won't keep bombarding you.",
+          "text_original": "你这个策略可以。定期冒个泡，证明自己还活着，他们就不会一直轰炸你了。"
+        },
+        {
+          "id": "h6d30-s12",
+          "speaker": "B",
+          "pinyin": "Lìngwài, wǒ bǎ qún liáo shèzhì le zhìdǐng, zhèyàng yī dǎkāi jiù néng kàn dào, miǎndé lòudiào zhòngyào tōngzhī.",
+          "text_translation": "Bundan tashqari, men guruh suhbatini eng tepaga qadab qo'ydim, shunda ochishim bilan ko'rinadi, muhim e'lonni o'tkazib yubormaslik uchun.",
+          "text_translation_ru": "Кроме того, я закрепил чат вверху, чтобы он был виден сразу, как только открою, и я не пропустил важное уведомление.",
+          "text_translation_en": "Also, I pinned the group chat to the top, so I see it the moment I open the app, to avoid missing an important notice.",
+          "text_original": "另外，我把群聊设置了置顶，这样一打开就能看到，免得漏掉重要通知。"
+        },
+        {
+          "id": "h6d30-s13",
+          "speaker": "A",
+          "pinyin": "Wǒ yǐjīng fàngqì zhìliáo le. Wǒ de jiātíng qún yǒu sānshí duō ge rén, xiànzài wǒ yǐjīng xuéhuì le yī jiàn yǐ dú quánbù xiāoxi.",
+          "text_translation": "Men allaqachon davolanishdan voz kechganman. Mening oilaviy guruhimda o'ttizdan ortiq odam bor, endi men bir tugma bilan barcha xabarlarni o'qilgan qilib qo'yishni o'rganib oldim.",
+          "text_translation_ru": "Я уже махнул на это рукой. В моём семейном чате больше тридцати человек, и теперь я научился одним нажатием помечать все сообщения как прочитанные.",
+          "text_translation_en": "I've already given up trying to fix it. My family group has over thirty people, and now I've learned to mark all messages as read with one tap.",
+          "text_original": "我已经放弃治疗了。我的家庭群有三十多个人，现在我已经学会了一键已读全部消息。"
+        },
+        {
+          "id": "h6d30-s14",
+          "speaker": "B",
+          "pinyin": "Dàn nǐ bù huí xiāoxi, tāmen bú huì shēngqì ma?",
+          "text_translation": "Lekin sen xabarga javob bermasang, ular xafa bo'lmaydimi?",
+          "text_translation_ru": "Но если ты не отвечаешь на сообщения, они не обижаются?",
+          "text_translation_en": "But if you don't reply, won't they get upset?",
+          "text_original": "但你不回消息，他们不会生气吗？"
+        },
+        {
+          "id": "h6d30-s15",
+          "speaker": "A",
+          "pinyin": "Wǒ yǐjīng gēn tāmen jiǎng hǎo le, zhòngyào de shì sīliáo wǒ, qún lǐ de xiāoxi wǒ ǒu'ěr kàn. Shíjiān jiǔ le tāmen yě xíguàn le.",
+          "text_translation": "Men ular bilan allaqachon kelishib oldim: muhim ish bo'lsa menga shaxsiy yozsin, guruhdagi xabarlarni esa men gohida ko'raman. Vaqt o'tib ular ham o'rganib qolishdi.",
+          "text_translation_ru": "Я уже договорился с ними: по важным делам пишите мне в личку, а сообщения в чате я просматриваю изредка. Со временем они тоже привыкли.",
+          "text_translation_en": "I've already worked it out with them: message me privately for important things, and I'll glance at the group messages occasionally. Over time they got used to it too.",
+          "text_original": "我已经跟他们讲好了，重要的事私聊我，群里的消息我偶尔看。时间久了他们也习惯了。"
+        }
+      ]
+    }
+  ]
+}

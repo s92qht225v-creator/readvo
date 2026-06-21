@@ -1,0 +1,156 @@
+{
+  "id": "hsk6-dialogue35",
+  "slug": "weekend-laziness",
+  "title": "周末懒散",
+  "pinyin": "Zhōumò lǎnsǎn",
+  "titleTranslation": "Dam olish kunidagi dangasalik",
+  "titleTranslation_ru": "Выходная лень",
+  "titleTranslation_en": "Weekend Laziness",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "窝",
+    "冬眠",
+    "颓废",
+    "夸张",
+    "泡面",
+    "意识到",
+    "彻底",
+    "躺平",
+    "疲惫",
+    "发软",
+    "生锈",
+    "综合征",
+    "高强度",
+    "静止",
+    "恢复"
+  ],
+  "sections": [
+    {
+      "id": "h6d35-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d35-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ zhōumò gàn má le? Gěi nǐ fā xiāoxi yě bù huí.",
+          "text_translation": "Dam olish kunlari nima qilding? Senga xabar yozsam ham javob bermading.",
+          "text_translation_ru": "Чем ты занимался в выходные? Я тебе писал, а ты не отвечал.",
+          "text_translation_en": "What did you do over the weekend? I texted you and you didn't even reply.",
+          "text_original": "你周末干嘛了？给你发消息也不回。"
+        },
+        {
+          "id": "h6d35-s2",
+          "speaker": "B",
+          "pinyin": "Bié tí le, zhěng gè zhōumò dōu wō zài chuáng shàng, lián chuānglián dōu méi lā kāi guo.",
+          "text_translation": "Gapirma, butun dam olish kunini karavotda bujmayib o'tkazdim, hatto pardani ham ochmadim.",
+          "text_translation_ru": "Не говори, все выходные провалялся в кровати, даже шторы ни разу не раздвинул.",
+          "text_translation_en": "Don't even ask, I was curled up in bed the whole weekend, didn't even open the curtains once.",
+          "text_original": "别提了，整个周末都窝在床上，连窗帘都没拉开过。"
+        },
+        {
+          "id": "h6d35-s3",
+          "speaker": "A",
+          "pinyin": "Liǎng tiān dōu zài chuáng shàng? Nǐ shì zài dōngmián ma?",
+          "text_translation": "Ikki kun ham karavotdami? Sen qishki uyqudamisan?",
+          "text_translation_ru": "Оба дня в кровати? Ты что, в зимней спячке?",
+          "text_translation_en": "Both days in bed? Are you hibernating?",
+          "text_original": "两天都在床上？你是在冬眠吗？"
+        },
+        {
+          "id": "h6d35-s4",
+          "speaker": "B",
+          "pinyin": "Chàbuduō. Zhōuwǔ wǎnshang jiābān dào hěn wǎn, zhōuliù yī jiào shuì dào zhōngwǔ, xǐnglái yě bù xiǎng dòng, jiù tǎng zhe shuā shǒujī, kàn jù, diǎn wàimài.",
+          "text_translation": "Deyarli shunday. Juma kuni kechqurun kechgacha qo'shimcha ishladim, shanba kuni tushgacha uxladim, uyg'onganimda ham qimirlagim kelmadi, shunchaki yotib telefon kovladim, serial ko'rdim, ovqat buyurtma qildim.",
+          "text_translation_ru": "Почти. В пятницу вечером работал допоздна, в субботу проспал до полудня, проснулся и даже двигаться не хотел, просто лежал, листал телефон, смотрел сериалы, заказывал еду на дом.",
+          "text_translation_en": "Pretty much. Friday night I worked overtime until very late, Saturday I slept till noon, and when I woke up I didn't want to move, just lay there scrolling my phone, watching shows, and ordering takeout.",
+          "text_original": "差不多。周五晚上加班到很晚，周六一觉睡到中午，醒来也不想动，就躺着刷手机、看剧、点外卖。"
+        },
+        {
+          "id": "h6d35-s5",
+          "speaker": "A",
+          "pinyin": "Nǐ zhè yě tài tuífèi le ba. Zhōurì ne?",
+          "text_translation": "Bu juda ham loqaydlik-ku. Yakshanba kuni-chi?",
+          "text_translation_ru": "Это уж слишком безвольно. А в воскресенье?",
+          "text_translation_en": "That's way too sluggish. What about Sunday?",
+          "text_original": "你这也太颓废了吧。周日呢？"
+        },
+        {
+          "id": "h6d35-s6",
+          "speaker": "B",
+          "pinyin": "Zhōurì gèng kuāzhāng, wǒ lián wàimài dōu lǎn de diǎn, zhíjiē chī le liǎng dùn pàomiàn. Dào le wǎnshang cái tūrán yìshi dào, míngtiān yòu yào shàngbān le.",
+          "text_translation": "Yakshanba kuni battar bo'ldi, hatto ovqat buyurtma qilishga ham erindim, to'g'ridan-to'g'ri ikki mahal tezpishar lag'mon yedim. Kechqurun bo'lganda esa birdan tushundimki, ertaga yana ishga borishim kerak.",
+          "text_translation_ru": "В воскресенье было еще хуже, мне даже лень было заказать еду, я просто два раза поел лапшу быстрого приготовления. Только к вечеру вдруг осознал, что завтра снова на работу.",
+          "text_translation_en": "Sunday was even more extreme, I was too lazy even to order takeout and just ate instant noodles twice. It wasn't until evening that I suddenly realized I had to go to work again the next day.",
+          "text_original": "周日更夸张，我连外卖都懒得点，直接吃了两顿泡面。到了晚上才突然意识到，明天又要上班了。"
+        },
+        {
+          "id": "h6d35-s7",
+          "speaker": "A",
+          "pinyin": "Nǐ zhèyàng zhōuyī zǎoshang huì gèng lèi de. Wǒ zhōumò jiùsuàn bù chūmén, zhìshǎo yě huì lā kāi chuānglián, huàn jiàn yīfu, zuò ge jiǎndān de zǎocān.",
+          "text_translation": "Bunday qilsang dushanba ertalab yanada charchaysan. Men dam olish kunlari uydan chiqmasam ham, hech bo'lmaganda pardani ochaman, kiyim almashtiraman, oddiygina nonushta tayyorlayman.",
+          "text_translation_ru": "Так в понедельник утром ты будешь еще больше уставшим. Я в выходные, даже если не выхожу из дома, хотя бы раздвину шторы, переоденусь, приготовлю простой завтрак.",
+          "text_translation_en": "If you do that, you'll be even more tired on Monday morning. Even if I don't go out on the weekend, I at least open the curtains, change my clothes, and make a simple breakfast.",
+          "text_original": "你这样周一早上会更累的。我周末就算不出门，至少也会拉开窗帘、换件衣服、做个简单的早餐。"
+        },
+        {
+          "id": "h6d35-s8",
+          "speaker": "B",
+          "pinyin": "Nǐ shuō de duì, dàn wǒ jiùshì kòngzhì bú zhù. Gōngzuò rì tài lèi le, zhōumò jiù xiǎng chèdǐ tǎng píng.",
+          "text_translation": "To'g'ri aytasan, lekin men o'zimni jilovlay olmayman. Ish kunlari juda charchatadi, dam olish kunlari esa butunlay yotib qolgim keladi.",
+          "text_translation_ru": "Ты прав, но я просто не могу себя контролировать. В будни так устаю, что в выходные хочется полностью завалиться лежать.",
+          "text_translation_en": "You're right, but I just can't control it. Weekdays are so exhausting that on weekends I just want to completely lie flat and do nothing.",
+          "text_original": "你说得对，但我就是控制不住。工作日太累了，周末就想彻底躺平。"
+        },
+        {
+          "id": "h6d35-s9",
+          "speaker": "A",
+          "pinyin": "Chèdǐ tǎng píng méi wèntí, dàn liǎng tiān wánquán bù chūmén, rén fǎn'ér huì gèng píbèi. Nǐ chūqù zǒu zǒu, shài shài tàiyáng, nǎpà zhǐ shì xià lóu mǎi ge cài, yě bǐ tān zài chuáng shàng qiáng.",
+          "text_translation": "Butunlay yotib dam olishda muammo yo'q, lekin ikki kun butunlay uydan chiqmasang, odam aksincha ko'proq holdan toyadi. Chiqib biroz yur, quyoshda toblan, hatto pastga tushib sabzavot olib kelsang ham, karavotda lanj bo'lib yotgandan ko'ra yaxshiroq.",
+          "text_translation_ru": "Полностью отлежаться — не проблема, но если два дня совсем не выходить, человек, наоборот, устанет еще больше. Выйди прогуляйся, погрейся на солнце, пусть даже просто спустись купить продуктов — это лучше, чем валяться в кровати.",
+          "text_translation_en": "Completely lying flat is fine, but if you don't go out at all for two days, you'll actually end up more exhausted. Go out for a walk, get some sun, even if it's just going downstairs to buy some groceries — that's better than sprawling in bed.",
+          "text_original": "彻底躺平没问题，但两天完全不出门，人反而会更疲惫。你出去走走，晒晒太阳，哪怕只是下楼买个菜，也比瘫在床上强。"
+        },
+        {
+          "id": "h6d35-s10",
+          "speaker": "B",
+          "pinyin": "Wǒ qíshí yě hòuhuǐ le. Gāngcái zhàn qǐlái de shíhou, gǎnjué húnshēn dōu fā ruǎn, hǎoxiàng shēntǐ shēng xiù le yīyàng.",
+          "text_translation": "Aslida men ham afsuslandim. Hozir o'rnimdan turganimda, butun vujudim bo'shashib ketganday tuyuldi, go'yo tanam zanglab qolganday.",
+          "text_translation_ru": "На самом деле я тоже пожалел. Когда только что встал, почувствовал, что все тело размякло, словно оно заржавело.",
+          "text_translation_en": "Actually, I regret it too. Just now when I stood up, my whole body felt weak, as if my body had rusted.",
+          "text_original": "我其实也后悔了。刚才站起来的时候，感觉浑身都发软，好像身体生锈了一样。"
+        },
+        {
+          "id": "h6d35-s11",
+          "speaker": "A",
+          "pinyin": "Zhè jiù jiào 'zhōumò zònghézhèng'. Píngshí gāo qiángdù gōngzuò, zhōumò tūrán jìngzhǐ, shēntǐ fǎn'ér shìyìng bù liǎo.",
+          "text_translation": "Buni «dam olish kuni sindromi» deyiladi. Odatda yuqori shiddatda ishlaysan, dam olish kunlari esa birdan harakatsiz qolasan, tanang aksincha bunga moslasha olmaydi.",
+          "text_translation_ru": "Это и называется «синдром выходного дня». Обычно работаешь с высокой нагрузкой, а в выходные вдруг замираешь, и тело, наоборот, не может приспособиться.",
+          "text_translation_en": "This is called \"weekend syndrome.\" Usually you work at high intensity, then on the weekend you suddenly come to a standstill, and your body actually can't adapt.",
+          "text_original": "这就叫「周末综合征」。平时高强度工作，周末突然静止，身体反而适应不了。"
+        },
+        {
+          "id": "h6d35-s12",
+          "speaker": "B",
+          "pinyin": "Wǒ juédìng xià ge zhōumò yídìng yào chūmén, nǎpà jiùshì qù gōngyuán zuò yī ge xiǎoshí yě xíng.",
+          "text_translation": "Keyingi dam olish kuni albatta uydan chiqishga qaror qildim, hatto bog'ga borib bir soat o'tirsam ham bo'ladi.",
+          "text_translation_ru": "Я решил, что в следующие выходные обязательно выйду из дома, пусть даже просто схожу в парк и посижу часок.",
+          "text_translation_en": "I've decided that next weekend I'll definitely go out, even if it's just going to the park to sit for an hour.",
+          "text_original": "我决定下个周末一定要出门，哪怕就是去公园坐一个小时也行。"
+        },
+        {
+          "id": "h6d35-s13",
+          "speaker": "A",
+          "pinyin": "Zhè jiù duì le. Zhōumò shì yòng lái huīfù jīnglì de, bú shì yòng lái xiāohào zìjǐ de.",
+          "text_translation": "Mana shunisi to'g'ri. Dam olish kunlari kuch-quvvatni tiklash uchun, o'zingni holdan toydirish uchun emas.",
+          "text_translation_ru": "Вот это правильно. Выходные нужны, чтобы восстанавливать силы, а не чтобы изматывать себя.",
+          "text_translation_en": "That's right. Weekends are for restoring your energy, not for draining yourself.",
+          "text_original": "这就对了。周末是用来恢复精力的，不是用来消耗自己的。"
+        }
+      ]
+    }
+  ]
+}

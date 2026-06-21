@@ -1,0 +1,161 @@
+{
+  "id": "hsk6-dialogue26",
+  "slug": "review-hunting",
+  "title": "看评论选餐厅",
+  "pinyin": "Kàn pínglùn xuǎn cāntīng",
+  "titleTranslation": "Sharhlarga qarab restoran tanlash",
+  "titleTranslation_ru": "Выбор ресторана по отзывам",
+  "titleTranslation_en": "Review Hunting",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "评论",
+    "评分",
+    "对比",
+    "刷好评",
+    "靠谱",
+    "翻车",
+    "筛选",
+    "人均",
+    "综合",
+    "耽误",
+    "白看"
+  ],
+  "sections": [
+    {
+      "id": "h6d26-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d26-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ shǒujī kàn le bàntiān le, zài gàn ma ne?",
+          "text_translation": "Telefoningga ancha vaqtdan beri qarab o'tiribsan, nima qilyapsan?",
+          "text_translation_ru": "Ты уже долго смотришь в телефон, что ты делаешь?",
+          "text_translation_en": "You've been staring at your phone for ages, what are you doing?",
+          "text_original": "你手机看了半天了，在干嘛呢？"
+        },
+        {
+          "id": "h6d26-s2",
+          "speaker": "B",
+          "pinyin": "Wǒ zài zhǎo wǎnshang chī fàn de dìfang. Kàn le yí ge xiǎoshí le, hái méi juédìng.",
+          "text_translation": "Kechqurun ovqatlanadigan joy qidiryapman. Bir soatdan beri qarayapman, hali ham qaror qila olmadim.",
+          "text_translation_ru": "Я ищу место, где поужинать вечером. Уже час смотрю, но всё ещё не решил.",
+          "text_translation_en": "I'm looking for a place to eat tonight. I've been looking for an hour and still haven't decided.",
+          "text_original": "我在找晚上吃饭的地方。看了一个小时了，还没决定。"
+        },
+        {
+          "id": "h6d26-s3",
+          "speaker": "A",
+          "pinyin": "Yí ge xiǎoshí? Nǐ shì zài xiě lùnwén háishì zài xuǎn cāntīng?",
+          "text_translation": "Bir soat? Sen ilmiy ish yozyapsanmi yoki restoran tanlayapsanmi?",
+          "text_translation_ru": "Целый час? Ты диссертацию пишешь или ресторан выбираешь?",
+          "text_translation_en": "An hour? Are you writing a thesis or choosing a restaurant?",
+          "text_original": "一个小时？你是在写论文还是在选餐厅？"
+        },
+        {
+          "id": "h6d26-s4",
+          "speaker": "B",
+          "pinyin": "Méi bànfǎ, wǒ děi kàn píngfēn, kàn pínglùn, kàn zhàopiàn, hái yào duìbǐ jiàgé. Wànyī xuǎn le ge nán chī de, jīn wǎn jiù huǐ le.",
+          "text_translation": "Iloji yo'q, men reytingni, sharhlarni, suratlarni ko'rishim, narxlarni ham solishtirishim kerak. Birdan mazasizini tanlab qolsam, bugungi kech barbod bo'ladi.",
+          "text_translation_ru": "Ничего не поделаешь, мне нужно посмотреть рейтинг, отзывы, фотографии, а ещё сравнить цены. Если вдруг выберу невкусное место, весь вечер будет испорчен.",
+          "text_translation_en": "There's no other way, I have to check the rating, read the reviews, look at the photos, and also compare prices. If I happen to pick a bad one, tonight will be ruined.",
+          "text_original": "没办法，我得看评分、看评论、看照片，还要对比价格。万一选了个难吃的，今晚就毁了。"
+        },
+        {
+          "id": "h6d26-s5",
+          "speaker": "A",
+          "pinyin": "Nǐ zhè yě tài kuāzhāng le. Wǒ yìbān jiù kàn qián sān tiáo pínglùn, chàbuduō jiù dìng le.",
+          "text_translation": "Bu sening haddan tashqari oshirib yuborishing. Men odatda faqat birinchi uchta sharhni ko'raman, taxminan shu bilan tanlab qo'yaman.",
+          "text_translation_ru": "Это уже слишком. Я обычно просто читаю первые три отзыва и почти сразу определяюсь.",
+          "text_translation_en": "You're really overdoing it. I usually just read the first three reviews and pretty much decide.",
+          "text_original": "你这也太夸张了。我一般就看前三条评论，差不多就定了。"
+        },
+        {
+          "id": "h6d26-s6",
+          "speaker": "B",
+          "pinyin": "Qián sān tiáo gēnběn bú kàopǔ. Hěnduō cāntīng huì shuā hǎopíng, nǐ děi wǎng xià fān, kàn nàxiē dài zhàopiàn de zhōng chàpíng, cáinéng liǎojiě zhēnshí qíngkuàng.",
+          "text_translation": "Birinchi uchtasi umuman ishonchli emas. Ko'p restoranlar soxta maqtov sharhlarini yozdiradi, sen pastga aylantirib, suratli o'rta va salbiy sharhlarni ko'rishing kerak, shundagina haqiqiy ahvolni bilib olasan.",
+          "text_translation_ru": "Первые три вообще ненадёжны. Многие рестораны накручивают хорошие отзывы, нужно листать вниз и смотреть средние и плохие отзывы с фотографиями — только так можно понять реальную картину.",
+          "text_translation_en": "The first three are completely unreliable. Many restaurants fake good reviews, so you have to scroll down and look at the mediocre and bad reviews with photos to understand the real situation.",
+          "text_original": "前三条根本不靠谱。很多餐厅会刷好评，你得往下翻，看那些带照片的中差评，才能了解真实情况。"
+        },
+        {
+          "id": "h6d26-s7",
+          "speaker": "A",
+          "pinyin": "Nǐ zhè bú shì chī fàn, shì zài zuò shèhuì diàochá a.",
+          "text_translation": "Sen ovqat yeyayotganing yo'q, balki ijtimoiy tadqiqot o'tkazyapsan-ku.",
+          "text_translation_ru": "Это уже не ужин, а социологическое исследование.",
+          "text_translation_en": "This isn't eating out, this is conducting a social survey.",
+          "text_original": "你这不是吃饭，是在做社会调查啊。"
+        },
+        {
+          "id": "h6d26-s8",
+          "speaker": "B",
+          "pinyin": "Wǒ juéde zhè hěn zhòngyào. Shàng cì nǐ tuījiàn de huǒguō diàn, shuō shì wǔ xīng hǎopíng, jiéguǒ yòu guì yòu nán chī, jiùshì shuā chūlái de.",
+          "text_translation": "Menimcha bu juda muhim. O'tgan safar sen tavsiya qilgan huoguo restorani besh yulduzli yaxshi baholangan deyilgandi, oqibatda ham qimmat, ham mazasiz chiqdi, baholar o'sha soxta yozdirilgan ekan.",
+          "text_translation_ru": "Я думаю, это очень важно. В прошлый раз ресторан хого, который ты порекомендовал, был с пятизвёздочными отзывами, а в итоге оказался и дорогим, и невкусным — отзывы просто накрутили.",
+          "text_translation_en": "I think this is very important. Last time the hotpot place you recommended was said to have five-star reviews, but it turned out to be both expensive and bad — the reviews were just faked.",
+          "text_original": "我觉得这很重要。上次你推荐的火锅店，说是五星好评，结果又贵又难吃，就是刷出来的。"
+        },
+        {
+          "id": "h6d26-s9",
+          "speaker": "A",
+          "pinyin": "Nà jiā quèshí fānchē le. Hǎo ba, nà nǐ kàn le yī xiǎoshí, yǒu jiélùn le ma?",
+          "text_translation": "U joy haqiqatan ham puchga chiqdi. Mayli, bir soat qaradingu, xulosa chiqardingmi?",
+          "text_translation_ru": "То место и правда оказалось провалом. Ладно, ты час смотрел — пришёл к какому-нибудь выводу?",
+          "text_translation_en": "That place really was a flop. Okay then, you've looked for an hour — have you reached a conclusion?",
+          "text_original": "那家确实翻车了。好吧，那你看了一小时，有结论了吗？"
+        },
+        {
+          "id": "h6d26-s10",
+          "speaker": "B",
+          "pinyin": "Shāixuǎn le sì jiā, liǎng jiā píngjià búcuò dàn rénjūn tài guì, yī jiā jùlí tài yuǎn, hái yǒu yī jiā shuō fúwù tàidu chà.",
+          "text_translation": "To'rttasini saralab oldim, ikkitasining bahosi yaxshi-yu, lekin har bir kishiga to'g'ri keladigan narxi juda qimmat, biri masofasi juda uzoq, yana biri haqida xizmat ko'rsatish darajasi yomon deyilgan.",
+          "text_translation_ru": "Я отобрал четыре заведения: два с хорошими оценками, но слишком дорогие в расчёте на человека, одно слишком далеко, и ещё про одно пишут, что плохое обслуживание.",
+          "text_translation_en": "I narrowed it down to four: two have good ratings but the cost per person is too high, one is too far away, and another is said to have poor service.",
+          "text_original": "筛选了四家，两家评价不错但人均太贵，一家距离太远，还有一家说服务态度差。"
+        },
+        {
+          "id": "h6d26-s11",
+          "speaker": "A",
+          "pinyin": "Nà nǐ bú shì bái kàn yī xiǎoshí le?",
+          "text_translation": "Unda sen bir soatni bekorga sarflamadingmi?",
+          "text_translation_ru": "Так получается, ты час смотрел впустую?",
+          "text_translation_en": "So didn't you waste an hour looking for nothing?",
+          "text_original": "那你不是白看一小时了？"
+        },
+        {
+          "id": "h6d26-s12",
+          "speaker": "B",
+          "pinyin": "Yě bú shì, wǒ xiànzài quèdìng le yī jiā, zònghé píngfēn sì diǎn wǔ fēn, chàpíng zhǔyào shuō páiduì tài jiǔ, dàn wèidào méi wèntí. Wǒmen zǎo diǎn qù páiduì jiù xíng.",
+          "text_translation": "Unday emas, men hozir bittasini aniqlab oldim, umumiy reytingi to'rt yarim ball, salbiy sharhlarda asosan navbat juda uzoq deyilgan, lekin mazasida muammo yo'q. Biz biroz erta borib navbatga tursak bo'ldi.",
+          "text_translation_ru": "Да нет, я сейчас определился с одним местом, общий рейтинг четыре с половиной, в плохих отзывах в основном пишут про слишком долгую очередь, но со вкусом всё в порядке. Просто придём пораньше и займём очередь.",
+          "text_translation_en": "Not really, I've now settled on one place, the overall rating is four point five, the bad reviews mainly say the queue is too long, but the food is fine. We just need to go early and wait in line.",
+          "text_original": "也不是，我现在确定了一家，综合评分四点五分，差评主要说排队太久，但味道没问题。我们早点去排队就行。"
+        },
+        {
+          "id": "h6d26-s13",
+          "speaker": "A",
+          "pinyin": "Xíng, tīng nǐ de. Búguò xià cì néng bùnéng suōduǎn dào bàn xiǎoshí? Wǒmen yuēhuì de shíjiān dōu huā zài nǐ kàn shǒujī shàng le.",
+          "text_translation": "Mayli, seni gapingga kiraman. Lekin keyingi safar yarim soatga qisqartira olasanmi? Bizning uchrashuv vaqtimiz seni telefon ko'rishingga sarflanib ketyapti.",
+          "text_translation_ru": "Ладно, поступим по-твоему. Но в следующий раз можешь сократить до получаса? Всё время нашего свидания уходит на то, что ты смотришь в телефон.",
+          "text_translation_en": "Fine, let's do it your way. But next time can you cut it down to half an hour? All our date time is being spent on you staring at your phone.",
+          "text_original": "行，听你的。不过下次能不能缩短到半小时？我们约会的时间都花在你看手机上了。"
+        },
+        {
+          "id": "h6d26-s14",
+          "speaker": "B",
+          "pinyin": "Hǎo hǎo hǎo, xià cì wǒ tíqián yì tiān xuǎn hǎo, bù dānwù chī fàn shíjiān.",
+          "text_translation": "Xo'p, xo'p, xo'p, keyingi safar bir kun oldin tanlab qo'yaman, ovqatlanish vaqtini kechiktirmayman.",
+          "text_translation_ru": "Хорошо-хорошо, в следующий раз выберу за день заранее, не буду задерживать время ужина.",
+          "text_translation_en": "Okay okay okay, next time I'll pick a day in advance so I won't hold up our mealtime.",
+          "text_original": "好好好，下次我提前一天选好，不耽误吃饭时间。"
+        }
+      ]
+    }
+  ]
+}

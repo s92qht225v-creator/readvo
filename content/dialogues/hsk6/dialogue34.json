@@ -1,0 +1,167 @@
+{
+  "id": "hsk6-dialogue34",
+  "slug": "lost-items",
+  "title": "丢东西",
+  "pinyin": "Diū dōngxi",
+  "titleTranslation": "Narsa yo'qotish",
+  "titleTranslation_ru": "Потеря вещей",
+  "titleTranslation_en": "Lost Items",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["满头大汗", "翻遍", "口袋", "空", "补办", "挂失", "空白", "冷静", "回忆", "洗手间", "外套", "滑出来", "虚惊一场"],
+  "sections": [
+    {
+      "id": "h6d34-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d34-s1",
+          "speaker": "A",
+          "text_original": "你怎么满头大汗的？跑哪儿去了？",
+          "pinyin": "Nǐ zěnme mǎntóu dàhàn de? Pǎo nǎr qù le?",
+          "text_translation": "Nega bunchalik terlab ketibsan? Qayoqqa yugurding?",
+          "text_translation_ru": "Почему ты весь в поту? Куда ты бегал?",
+          "text_translation_en": "Why are you all sweaty? Where did you run off to?"
+        },
+        {
+          "id": "h6d34-s2",
+          "speaker": "B",
+          "text_original": "别提了！我刚刚发现我的钱包不见了，把所有地方都翻了一遍，还是找不到。",
+          "pinyin": "Bié tí le! Wǒ gānggāng fāxiàn wǒ de qiánbāo bú jiàn le, bǎ suǒyǒu dìfang dōu fān le yī biàn, háishì zhǎo bú dào.",
+          "text_translation": "Aytmasang ham bo'ladi! Hozirgina hamyonim yo'qolganini payqab qoldim, hamma joyni titkilab chiqdim, baribir topolmadim.",
+          "text_translation_ru": "И не говори! Я только что обнаружил, что мой кошелёк пропал, перерыл все места, но так и не нашёл.",
+          "text_translation_en": "Don't even ask! I just realized my wallet is gone, I searched everywhere, but still can't find it."
+        },
+        {
+          "id": "h6d34-s3",
+          "speaker": "A",
+          "text_original": "你别急，最后一次看到它是什么时候？",
+          "pinyin": "Nǐ bié jí, zuìhòu yī cì kàn dào tā shì shénme shíhou?",
+          "text_translation": "Shoshilma, oxirgi marta uni qachon ko'rgan eding?",
+          "text_translation_ru": "Не паникуй, когда ты в последний раз его видел?",
+          "text_translation_en": "Don't panic, when did you last see it?"
+        },
+        {
+          "id": "h6d34-s4",
+          "speaker": "B",
+          "text_original": "中午吃饭的时候还用了，刷完卡就放进口袋了。刚才想买杯咖啡，一摸口袋才发现空了。",
+          "pinyin": "Zhōngwǔ chīfàn de shíhou hái yòng le, shuā wán kǎ jiù fàng jìn kǒudài le. Gāngcái xiǎng mǎi bēi kāfēi, yī mō kǒudài cái fāxiàn kōng le.",
+          "text_translation": "Tushlik paytida hali ishlatgandim, kartani o'tkazib bo'lib cho'ntakka solib qo'ygandim. Hozirgina bir piyola qahva olmoqchi bo'lib, cho'ntagimni paypaslab bo'sh ekanini sezdim.",
+          "text_translation_ru": "Во время обеда я ещё им пользовался, провёл картой и сразу положил в карман. Только что захотел купить чашку кофе, пощупал карман — и обнаружил, что он пустой.",
+          "text_translation_en": "I still used it at lunch, swiped my card and put it back in my pocket. Just now I wanted to buy a coffee, felt my pocket and found it empty."
+        },
+        {
+          "id": "h6d34-s5",
+          "speaker": "A",
+          "text_original": "你确定没放在办公桌上？或者掉在通勤路上了？",
+          "pinyin": "Nǐ quèdìng méi fàng zài bàngōngzhuō shàng? Huòzhě diào zài tōngqín lù shàng le?",
+          "text_translation": "Ish stoliga qo'ymaganingga aminmisan? Yoki ishga kelish yo'lida tushib qolgan emasmi?",
+          "text_translation_ru": "Ты уверен, что не оставил его на рабочем столе? Или не выронил по дороге на работу?",
+          "text_translation_en": "Are you sure you didn't leave it on your desk? Or drop it on the way to work?"
+        },
+        {
+          "id": "h6d34-s6",
+          "speaker": "B",
+          "text_original": "办公桌找过了，没有。通勤路上更不可能，我中午吃完饭就没出过公司。",
+          "pinyin": "Bàngōngzhuō zhǎo guo le, méiyǒu. Tōngqín lù shàng gèng bù kěnéng, wǒ zhōngwǔ chī wán fàn jiù méi chū guo gōngsī.",
+          "text_translation": "Ish stolini qaradim, yo'q. Yo'lda tushib qolishi esa umuman mumkin emas, tushlikdan keyin kompaniyadan tashqariga chiqmadim.",
+          "text_translation_ru": "Рабочий стол я проверил — нет. По дороге тем более невозможно, после обеда я вообще не выходил из компании.",
+          "text_translation_en": "I checked my desk, it's not there. On the way is even less likely, I haven't left the company since lunch."
+        },
+        {
+          "id": "h6d34-s7",
+          "speaker": "A",
+          "text_original": "那你有没有可能落在餐厅了？你现在赶紧打电话问一下餐厅。",
+          "pinyin": "Nà nǐ yǒu méiyǒu kěnéng luò zài cāntīng le? Nǐ xiànzài gǎnjǐn dǎ diànhuà wèn yíxià cāntīng.",
+          "text_translation": "Unda restoranda qoldirib ketgan bo'lishing mumkin emasmi? Hoziroq tezda restoranga qo'ng'iroq qilib so'rab ko'r.",
+          "text_translation_ru": "Тогда, может, ты оставил его в ресторане? Срочно позвони в ресторан и спроси.",
+          "text_translation_en": "Then could you have left it at the restaurant? Quickly call the restaurant and ask now."
+        },
+        {
+          "id": "h6d34-s8",
+          "speaker": "B",
+          "text_original": "对对对！我这就打。如果落在那里还好，要是真丢了，银行卡、身份证全在里面，补办太麻烦了。",
+          "pinyin": "Duì duì duì! Wǒ zhè jiù dǎ. Rúguǒ luò zài nàli hái hǎo, yàoshi zhēn diū le, yínhángkǎ, shēnfènzhèng quán zài lǐmiàn, bǔbàn tài máfan le.",
+          "text_translation": "To'g'ri, to'g'ri, to'g'ri! Hoziroq qo'ng'iroq qilaman. Agar o'sha yerda qolgan bo'lsa yaxshi, agar rostdan ham yo'qolgan bo'lsa, bank kartasi, pasport hammasi ichida, qaytadan rasmiylashtirish juda mashaqqatli.",
+          "text_translation_ru": "Да, да, да! Сейчас же позвоню. Если он там остался — хорошо, а если и вправду потерялся, то банковская карта и паспорт — всё внутри, восстанавливать слишком хлопотно.",
+          "text_translation_en": "Right, right, right! I'll call now. If it's left there, that's fine, but if it's really lost, my bank card and ID are all inside, and replacing them is too much trouble."
+        },
+        {
+          "id": "h6d34-s9",
+          "speaker": "A",
+          "text_original": "你先别慌。就算真丢了，也能挂失补办，就是费点时间。",
+          "pinyin": "Nǐ xiān bié huāng. Jiùsuàn zhēn diū le, yě néng guàshī bǔbàn, jiùshì fèi diǎn shíjiān.",
+          "text_translation": "Avval vahimaga tushma. Hatto rostdan ham yo'qolgan bo'lsa ham, yo'qolgani haqida ariza berib qaytadan rasmiylashtirsa bo'ladi, faqat biroz vaqt ketadi.",
+          "text_translation_ru": "Сначала не паникуй. Даже если он действительно потерялся, можно заявить о пропаже и восстановить, просто это займёт немного времени.",
+          "text_translation_en": "Don't panic first. Even if it's really lost, you can report it and get replacements, it just takes a bit of time."
+        },
+        {
+          "id": "h6d34-s10",
+          "speaker": "B",
+          "text_original": "餐厅说没看到……我现在脑子里一片空白，完全想不起来放哪儿了。",
+          "pinyin": "Cāntīng shuō méi kàn dào …… Wǒ xiànzài nǎozi lǐ yī piàn kòngbái, wánquán xiǎng bù qǐlái fàng nǎr le.",
+          "text_translation": "Restoran ko'rmaganini aytdi…… Hozir miyam butunlay bo'm-bo'sh, qayerga qo'yganimni umuman eslay olmayapman.",
+          "text_translation_ru": "В ресторане сказали, что не видели…… Сейчас в голове полная пустота, совсем не могу вспомнить, куда положил.",
+          "text_translation_en": "The restaurant said they didn't see it…… My mind is completely blank now, I can't remember at all where I put it."
+        },
+        {
+          "id": "h6d34-s11",
+          "speaker": "A",
+          "text_original": "你冷静一下，仔细回忆一下今天去过哪些地方，动了哪些东西。有时候越急越想不起来。",
+          "pinyin": "Nǐ lěngjìng yíxià, zǐxì huíyì yíxià jīntiān qù guo nǎxiē dìfang, dòng le nǎxiē dōngxi. Yǒu shíhou yuè jí yuè xiǎng bù qǐlái.",
+          "text_translation": "Bir oz tinchlan, bugun qaysi joylarga borganingni, qaysi narsalarga tegib qo'yganingni sinchiklab esla. Ba'zan qancha shoshsang, shuncha eslay olmaysan.",
+          "text_translation_ru": "Успокойся, тщательно вспомни, в каких местах ты сегодня был, какие вещи трогал. Иногда чем сильнее спешишь, тем меньше можешь вспомнить.",
+          "text_translation_en": "Calm down, carefully recall which places you went today and which things you touched. Sometimes the more you rush, the less you can remember."
+        },
+        {
+          "id": "h6d34-s12",
+          "speaker": "B",
+          "text_original": "我中午吃完饭，回办公室，然后去了趟洗手间……对了！我去洗手间的时候把外套脱了挂在门上，钱包可能在口袋里滑出来了！",
+          "pinyin": "Wǒ zhōngwǔ chī wán fàn, huí bàngōngshì, ránhòu qù le tàng xǐshǒujiān …… Duì le! Wǒ qù xǐshǒujiān de shíhou bǎ wàitào tuō le guà zài mén shàng, qiánbāo kěnéng zài kǒudai lǐ huá chūlái le!",
+          "text_translation": "Tushlikdan keyin ofisga qaytdim, keyin hojatxonaga bir borib keldim…… To'g'ri! Hojatxonaga borganimda ustki kiyimimni yechib eshikka ildim, hamyon cho'ntakdan sirg'alib chiqib ketgan bo'lishi mumkin!",
+          "text_translation_ru": "После обеда я вернулся в офис, потом сходил в туалет…… Точно! Когда я ходил в туалет, я снял куртку и повесил её на дверь, кошелёк, наверное, выскользнул из кармана!",
+          "text_translation_en": "After lunch I went back to the office, then went to the restroom…… That's it! When I went to the restroom, I took off my jacket and hung it on the door, the wallet may have slipped out of the pocket!"
+        },
+        {
+          "id": "h6d34-s13",
+          "speaker": "A",
+          "text_original": "那赶紧去看看！外套还在那儿吗？",
+          "pinyin": "Nà gǎnjǐn qù kàn kan! Wàitào hái zài nàr ma?",
+          "text_translation": "Unda tezda borib qara! Ustki kiyim hali o'sha yerdami?",
+          "text_translation_ru": "Тогда скорее иди посмотри! Куртка ещё там?",
+          "text_translation_en": "Then go check quickly! Is the jacket still there?"
+        },
+        {
+          "id": "h6d34-s14",
+          "speaker": "B",
+          "text_original": "还在！我摸一下……找到了！真的在口袋里！虚惊一场！",
+          "pinyin": "Hái zài! Wǒ mō yíxià …… zhǎodào le! Zhēn de zài kǒudai lǐ! Xūjīng yī chǎng!",
+          "text_translation": "Hali turibdi! Bir paypaslab ko'ray…… topdim! Rostdan ham cho'ntakda ekan! Bekorga vahimaga tushibman!",
+          "text_translation_ru": "Ещё там! Сейчас пощупаю…… нашёл! И вправду в кармане! Зря переполошился!",
+          "text_translation_en": "Still there! Let me feel…… found it! It's really in the pocket! What a false alarm!"
+        },
+        {
+          "id": "h6d34-s15",
+          "speaker": "A",
+          "text_original": "以后还是养成习惯，把钱包放在固定的地方，这样就不会天天找不到了。",
+          "pinyin": "Yǐhòu háishì yǎngchéng xíguàn, bǎ qiánbāo fàng zài gùdìng de dìfang, zhèyàng jiù bú huì tiāntiān zhǎo bú dào le.",
+          "text_translation": "Bundan keyin odat qilib, hamyonni doimiy bir joyga qo'yganing ma'qul, shunda har kuni topolmay yurmaysan.",
+          "text_translation_ru": "На будущее всё же выработай привычку класть кошелёк в одно постоянное место, тогда не будешь каждый день его терять.",
+          "text_translation_en": "From now on, you'd better develop a habit of keeping your wallet in a fixed place, that way you won't fail to find it every day."
+        },
+        {
+          "id": "h6d34-s16",
+          "speaker": "B",
+          "text_original": "你说得对。我这次真的被吓到了。以后一定注意！",
+          "pinyin": "Nǐ shuō de duì. Wǒ zhè cì zhēn de bèi xià dào le. Yǐhòu yídìng zhùyì!",
+          "text_translation": "To'g'ri aytasan. Bu safar rostdan ham qattiq qo'rqib ketdim. Bundan keyin albatta ehtiyot bo'laman!",
+          "text_translation_ru": "Ты прав. В этот раз я и вправду перепугался. Впредь обязательно буду внимательнее!",
+          "text_translation_en": "You're right. This time I really got scared. I'll definitely be careful from now on!"
+        }
+      ]
+    }
+  ]
+}

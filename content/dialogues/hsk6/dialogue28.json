@@ -1,0 +1,174 @@
+{
+  "id": "hsk6-dialogue28",
+  "slug": "borrowing-money",
+  "title": "借钱",
+  "pinyin": "Jiè qián",
+  "titleTranslation": "Qarz berish",
+  "titleTranslation_ru": "Одолжить деньги",
+  "titleTranslation_en": "Borrowing Money",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "心事重重",
+    "皱着眉",
+    "周转",
+    "敏感",
+    "催",
+    "前科",
+    "真诚",
+    "不近人情",
+    "处境",
+    "数字",
+    "白纸黑字",
+    "借条",
+    "生分",
+    "明智",
+    "维护"
+  ],
+  "sections": [
+    {
+      "id": "h6d28-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d28-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ zěnme xīnshì chóngchóng de? Cóng gāngcái jiù yīzhí zhòu zhe méi.",
+          "text_translation": "Nega bunchalik o'ylarga botgansan? Hozirgina'dan beri qoshingni chimirib o'tiribsan.",
+          "text_translation_ru": "Почему ты такой задумчивый? С недавнего времени всё хмуришь брови.",
+          "text_translation_en": "Why do you look so weighed down with worries? You've been frowning ever since just now.",
+          "text_original": "你怎么心事重重的？从刚才就一直皱着眉。"
+        },
+        {
+          "id": "h6d28-s2",
+          "speaker": "B",
+          "pinyin": "Wǒ biǎogē zuótiān zhǎo wǒ jiè qián, shuō yào zhōuzhuǎn yíxià, sān ge yuè jiù huán. Wǒ bù zhīdào gāi zěnme jùjué.",
+          "text_translation": "Amakivachcham kecha mendan pul qarz so'radi, biroz pul aylantirib turishim kerak, uch oyda qaytaraman dedi. Qanday rad etishni bilmayman.",
+          "text_translation_ru": "Мой двоюродный брат вчера попросил у меня денег в долг, сказал, что нужно прокрутить средства, через три месяца вернёт. Не знаю, как отказать.",
+          "text_translation_en": "My cousin asked to borrow money from me yesterday, saying he needs to make ends meet for a while and will pay it back in three months. I don't know how to refuse.",
+          "text_original": "我表哥昨天找我借钱，说要周转一下，三个月就还。我不知道该怎么拒绝。"
+        },
+        {
+          "id": "h6d28-s3",
+          "speaker": "A",
+          "pinyin": "Jiè qián zhè jiàn shì shì zuì mǐngǎn de. Nǐ biǎogē yǐqián jiè guo qián ma? Ànshí huán guo ma?",
+          "text_translation": "Pul qarz berish ishi eng nozik narsa. Amakivachchang ilgari qarz olganmi? O'z vaqtida qaytarganmi?",
+          "text_translation_ru": "Одалживать деньги — это самое деликатное дело. Твой двоюродный брат раньше брал в долг? Возвращал вовремя?",
+          "text_translation_en": "Lending money is the most sensitive matter. Has your cousin borrowed money before? Did he pay it back on time?",
+          "text_original": "借钱这事儿是最敏感的。你表哥以前借过钱吗？按时还过吗？"
+        },
+        {
+          "id": "h6d28-s4",
+          "speaker": "B",
+          "pinyin": "Jiè guo liǎng cì. Dì-yī cì tuō le dà bàn nián cái huán, dì-èr cì yě shì cuī le hǎo jǐ cì cái yào huílái.",
+          "text_translation": "Ikki marta olgan. Birinchi safar deyarli yarim yil cho'zib qaytardi, ikkinchi safar ham bir necha bor talab qilganimdan keyin qaytarib oldim.",
+          "text_translation_ru": "Брал дважды. В первый раз тянул почти полгода, прежде чем вернуть, во второй раз тоже пришлось несколько раз требовать, чтобы получить обратно.",
+          "text_translation_en": "He's borrowed twice. The first time he dragged it out for nearly half a year before repaying, and the second time I only got it back after pressing him several times.",
+          "text_original": "借过两次。第一次拖了大半年才还，第二次也是催了好几次才要回来。"
+        },
+        {
+          "id": "h6d28-s5",
+          "speaker": "A",
+          "pinyin": "Nà nǐ hái yóuyù shénme? Zhè zhǒng 'qiánkē' yǐjīng shuōmíng le wèntí. Jiè qián róngyì yào qián nán.",
+          "text_translation": "Unda nimaga ikkilanyapsan? Bunday 「前科」 (oldingi qilmish) muammoni allaqachon ko'rsatib turibdi. Pulni qarz berish oson, qaytarib olish qiyin.",
+          "text_translation_ru": "Тогда чего ты ещё колеблешься? Такая «история» уже всё объясняет. Одолжить деньги легко, а вернуть — трудно.",
+          "text_translation_en": "Then what are you still hesitating about? This kind of 「track record」 already says it all. Lending money is easy, getting it back is hard.",
+          "text_original": "那你还犹豫什么？这种「前科」已经说明了问题。借钱容易要钱难。"
+        },
+        {
+          "id": "h6d28-s6",
+          "speaker": "B",
+          "pinyin": "Dàn tā zhè cì shuō de hěn zhēnchéng, shuō zhǎo le gōngzuò, yuè dǐ fā gōngzī jiù huán. Érqiě tā shì wǒ biǎogē, wǒ bú jiè xiǎnde wǒ bú jìn rénqíng.",
+          "text_translation": "Lekin bu safar u juda samimiy gapirdi, ish topdim, oy oxirida maosh olganimdan keyin qaytaraman dedi. Qolaversa, u mening amakivachcham, bermasam o'zimni beshafqat ko'rsatib qo'yaman.",
+          "text_translation_ru": "Но в этот раз он говорил очень искренне, сказал, что нашёл работу и в конце месяца, как получит зарплату, сразу вернёт. К тому же он мой двоюродный брат, и если я не дам, то покажусь бессердечным.",
+          "text_translation_en": "But this time he spoke very sincerely, saying he's found a job and will repay at the end of the month when he gets his salary. Besides, he's my cousin, and if I don't lend it, I'll seem heartless.",
+          "text_original": "但他这次说得很真诚，说找了工作，月底发工资就还。而且他是我表哥，我不借显得我不近人情。"
+        },
+        {
+          "id": "h6d28-s7",
+          "speaker": "A",
+          "pinyin": "Wǒ míngbai nǐ de chǔjìng. Dàn nǐ yào xiǎng qīngchu, jiè chūqù de qián, nǐ yào zuò hǎo shōu bù huílái de xīnlǐ zhǔnbèi.",
+          "text_translation": "Sening ahvolingni tushunaman. Lekin yaxshilab o'ylab ko'r, qarz bergan pulingni qaytarib ololmaslikka ruhan tayyor turishing kerak.",
+          "text_translation_ru": "Я понимаю твоё положение. Но ты должен ясно осознавать: одолженные деньги — будь психологически готов к тому, что не получишь их обратно.",
+          "text_translation_en": "I understand your situation. But you need to think it through clearly: with money you lend out, you must be psychologically prepared not to get it back.",
+          "text_original": "我明白你的处境。但你要想清楚，借出去的钱，你要做好收不回来的心理准备。"
+        },
+        {
+          "id": "h6d28-s8",
+          "speaker": "B",
+          "pinyin": "Nà nǐ de yìsi shì……bù jiè?",
+          "text_translation": "Demak, aytmoqchisanki… bermay qo'ya qol?",
+          "text_translation_ru": "То есть ты хочешь сказать… не давать в долг?",
+          "text_translation_en": "So you mean… don't lend it?",
+          "text_original": "那你的意思是……不借？"
+        },
+        {
+          "id": "h6d28-s9",
+          "speaker": "A",
+          "pinyin": "Rúguǒ nǐ juédìng jiè, jiù jiè yí ge nǐ néng jiēshòu de shùzì. Jiùsuàn tā bù huán, yě bú huì yǐngxiǎng nǐ de shēnghuó.",
+          "text_translation": "Agar berishga qaror qilsang, o'zing tan ola oladigan miqdordagi pulni ber. U qaytarmasa ham, bu hayotingga ta'sir qilmaydi.",
+          "text_translation_ru": "Если ты решишь дать в долг, то дай такую сумму, которую можешь себе позволить потерять. Даже если он не вернёт, это не повлияет на твою жизнь.",
+          "text_translation_en": "If you decide to lend, lend an amount you can accept losing. Even if he doesn't pay it back, it won't affect your life.",
+          "text_original": "如果你决定借，就借一个你能接受的数字。就算他不还，也不会影响你的生活。"
+        },
+        {
+          "id": "h6d28-s10",
+          "speaker": "B",
+          "pinyin": "Tā kāikǒu yào sān wàn, wǒ běnlái xiǎng jiè tā yī wàn. Dàn nǐ shuō de duì, wǒ bùrú zhíjiē gàosu tā wǒ zhǐ néng jiè wǔqiān.",
+          "text_translation": "U og'iz ochib o'ttiz ming so'radi, men dastlab unga o'n ming bermoqchi edim. Lekin haq gapni aytding, undan ko'ra to'g'ridan-to'g'ri aytaman, faqat besh ming bera olaman.",
+          "text_translation_ru": "Он попросил тридцать тысяч, я изначально хотел дать ему десять тысяч. Но ты прав, лучше я прямо скажу ему, что могу одолжить только пять тысяч.",
+          "text_translation_en": "He asked for thirty thousand; I originally wanted to lend him ten thousand. But you're right, I might as well tell him directly that I can only lend five thousand.",
+          "text_original": "他开口要三万，我本来想借他一万。但你说得对，我不如直接告诉他我只能借五千。"
+        },
+        {
+          "id": "h6d28-s11",
+          "speaker": "A",
+          "pinyin": "Érqiě yīdìng yào báizhǐ hēizì xiě qīngchu, shénme shíhou huán, zěnme huán. Qīn xiōngdì yě yào míng suàn zhàng.",
+          "text_translation": "Qolaversa, qachon qaytarishini, qanday qaytarishini albatta oq qog'ozga qora harf bilan aniq yozib qo'yish kerak. Tug'ishgan aka-uka ham hisob-kitobni aniq qilishi lozim.",
+          "text_translation_ru": "И обязательно нужно чёрным по белому чётко прописать, когда и как он вернёт. Даже с родными братьями счёт должен быть ясным.",
+          "text_translation_en": "And you must put it clearly in black and white: when he'll repay and how. Even blood brothers should keep their accounts clear.",
+          "text_original": "而且一定要白纸黑字写清楚，什么时候还，怎么还。亲兄弟也要明算账。"
+        },
+        {
+          "id": "h6d28-s12",
+          "speaker": "B",
+          "pinyin": "Nǐ shuō de duì. Kěshì xiě jiètiáo huì bú huì xiǎnde tài shēngfèn le?",
+          "text_translation": "Haq gapni aytding. Lekin qarz tilxati yozish o'zaro begonalashganday ko'rinmaydimi?",
+          "text_translation_ru": "Ты прав. Но не покажется ли, что писать долговую расписку — это слишком отчуждённо?",
+          "text_translation_en": "You're right. But wouldn't writing an IOU seem too distant and impersonal?",
+          "text_original": "你说得对。可是写借条会不会显得太生分了？"
+        },
+        {
+          "id": "h6d28-s13",
+          "speaker": "A",
+          "pinyin": "Zhèng yīnwèi shì qīnqi, cái gèng yīnggāi bǎ huà shuō qīngchu. Xiě jiètiáo bú shì bú xìnrèn, ér shì bǎohù shuāngfāng.",
+          "text_translation": "Aynan qarindosh bo'lganinglar uchun ham gapni aniq aytib qo'yish kerak. Tilxat yozish ishonmaslik emas, balki ikki tomonni ham himoya qilishdir.",
+          "text_translation_ru": "Именно потому, что вы родственники, и нужно всё проговорить чётко. Написать расписку — это не недоверие, а защита обеих сторон.",
+          "text_translation_en": "Precisely because you're relatives, you should spell things out all the more clearly. Writing an IOU isn't distrust — it protects both sides.",
+          "text_original": "正因为是亲戚，才更应该把话说清楚。写借条不是不信任，而是保护双方。"
+        },
+        {
+          "id": "h6d28-s14",
+          "speaker": "B",
+          "pinyin": "Hǎo ba, wǒ dāihuǐr gěi tā dǎ diànhuà, shuō zuì duō zhǐ néng jiè wǔqiān, érqiě xūyào xiě jiètiáo.",
+          "text_translation": "Mayli, birozdan keyin unga qo'ng'iroq qilaman, ko'pi bilan besh ming bera olaman, qolaversa tilxat yozish kerak deyman.",
+          "text_translation_ru": "Ладно, я попозже ему позвоню и скажу, что могу одолжить максимум пять тысяч, и к тому же нужно написать расписку.",
+          "text_translation_en": "All right, I'll call him in a bit and tell him I can lend at most five thousand, and that we need to write an IOU.",
+          "text_original": "好吧，我待会儿给他打电话，说最多只能借五千，而且需要写借条。"
+        },
+        {
+          "id": "h6d28-s15",
+          "speaker": "A",
+          "pinyin": "Zhè cái shì míngzhì de zuòfǎ. Jìzhu, yǒuqíng hé qīnqíng bǐ qián zhòngyào, dàn zhèng yīnwèi zhòngyào, cái yào yòng zhèngquè de fāngshì qù wéihù.",
+          "text_translation": "Mana shu aqlli yo'l. Esingda tut, do'stlik va qarindoshlik puldan muhimroq, lekin aynan muhim bo'lgani uchun ham uni to'g'ri usul bilan asrash kerak.",
+          "text_translation_ru": "Вот это разумный подход. Запомни: дружба и родственные узы важнее денег, но именно потому, что они важны, их нужно беречь правильным образом.",
+          "text_translation_en": "Now that's the wise approach. Remember, friendship and family ties are more important than money, but precisely because they're important, you must preserve them in the right way.",
+          "text_original": "这才是明智的做法。记住，友情和亲情比钱重要，但正因为重要，才要用正确的方式去维护。"
+        }
+      ]
+    }
+  ]
+}

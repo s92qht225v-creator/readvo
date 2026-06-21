@@ -1,0 +1,184 @@
+{
+  "id": "hsk6-dialogue24",
+  "slug": "gym-memberships",
+  "title": "健身房会员",
+  "pinyin": "Jiànshēnfáng huìyuán",
+  "titleTranslation": "Sport zali a'zoligi",
+  "titleTranslation_ru": "Абонемент в спортзал",
+  "titleTranslation_en": "Gym Memberships",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "躺灰",
+    "信誓旦旦",
+    "腹肌",
+    "酸痛",
+    "松懈",
+    "提不起劲",
+    "综合症",
+    "爆满",
+    "心理安慰",
+    "转让",
+    "瑜伽垫",
+    "设备",
+    "循序渐进",
+    "一鼓作气",
+    "累垮",
+    "强求"
+  ],
+  "sections": [
+    {
+      "id": "h6d24-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d24-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ shàng ge yuè bú shì shuō bàn le jiànshēn kǎ ma? Zěnme méi jiàn nǐ qù guo?",
+          "text_translation": "O'tgan oy sport zaliga a'zolik kartasi ochdim degandiNG-ku? Nega seni borganingni ko'rmadim?",
+          "text_translation_ru": "Ты же в прошлом месяце говорил, что оформил абонемент в спортзал? Почему я не видел, чтобы ты туда ходил?",
+          "text_translation_en": "Didn't you say last month that you got a gym membership? How come I never saw you go?",
+          "text_original": "你上个月不是说办了健身卡吗？怎么没见你去过？"
+        },
+        {
+          "id": "h6d24-s2",
+          "speaker": "B",
+          "pinyin": "Bié tí le, qù le liǎng zhōu jiù fàngqì le. Xiànzài nà zhāng kǎ zài qiánbāo lǐ tǎng huī ne.",
+          "text_translation": "Gapirma, ikki hafta borib tashlab qo'ydim. Hozir o'sha karta hamyonimda chang bosib yotibdi.",
+          "text_translation_ru": "Не напоминай, проходил две недели и бросил. Теперь эта карта пылится у меня в кошельке.",
+          "text_translation_en": "Don't even mention it, I went for two weeks and then gave up. Now that card is just gathering dust in my wallet.",
+          "text_original": "别提了，去了两周就放弃了。现在那张卡在钱包里躺灰呢。"
+        },
+        {
+          "id": "h6d24-s3",
+          "speaker": "A",
+          "pinyin": "Zěnme zhème kuài jiù fàngqì le? Dāngshí bú shì xìnshìdàndàn shuō yào liàn chū fùjī ma?",
+          "text_translation": "Nega bunchalik tez tashlab qo'yding? O'shanda qat'iy qasam ichib, qorin mushaklarini chiqaraman demaganmiding?",
+          "text_translation_ru": "Почему так быстро бросил? Ты же тогда клятвенно обещал накачать кубики на животе?",
+          "text_translation_en": "How did you give up so quickly? Didn't you solemnly vow back then that you'd build up your abs?",
+          "text_original": "怎么这么快就放弃了？当时不是信誓旦旦说要练出腹肌吗？"
+        },
+        {
+          "id": "h6d24-s4",
+          "speaker": "B",
+          "pinyin": "Yī kāishǐ quèshí tǐng yǒu dònglì de, měitiān xiàbān dōu qù. Dàn jiānchí le yí ge xīngqī, húnshēn suāntòng, zǎoshang gēnběn qǐ bù lái.",
+          "text_translation": "Boshida haqiqatan ham juda ishtiyoq bor edi, har kuni ishdan keyin borardim. Lekin bir hafta davom etgach, butun badanim og'rib, ertalab umuman tura olmaydigan bo'ldim.",
+          "text_translation_ru": "Поначалу и правда был большой запал, каждый день после работы ходил. Но после недели всё тело ныло, по утрам вообще не мог встать.",
+          "text_translation_en": "At first I really did have a lot of motivation, I went every day after work. But after sticking with it for a week, my whole body ached and I just couldn't get up in the mornings.",
+          "text_original": "一开始确实挺有动力的，每天下班都去。但坚持了一个星期，浑身酸痛，早上根本起不来。"
+        },
+        {
+          "id": "h6d24-s5",
+          "speaker": "A",
+          "pinyin": "Nà wèishénme bù tiáozhěng yí xià pínlǜ, bǐrú yī zhōu qù sān cì?",
+          "text_translation": "Unda nega chastotani biroz o'zgartirmading, masalan, haftada uch marta?",
+          "text_translation_ru": "Тогда почему бы не отрегулировать частоту, например, ходить три раза в неделю?",
+          "text_translation_en": "Then why not adjust the frequency, for instance go three times a week?",
+          "text_original": "那为什么不调整一下频率，比如一周去三次？"
+        },
+        {
+          "id": "h6d24-s6",
+          "speaker": "B",
+          "pinyin": "Yī kāishǐ yě shì zhème xiǎng de, dàn hòulái yī sōngxiè jiù zài yě tí bù qǐ jìn le. Érqiě měi cì qù hái yào huàn yīfu, xǐzǎo, gǎnjué tèbié máfan.",
+          "text_translation": "Boshida men ham shunday o'ylagandim, lekin keyin bir bo'shashishim bilan boshqa qaytib g'ayrat topa olmadim. Bundan tashqari, har safar borganda kiyim almashtirib, dush olish kerak, juda mashaqqatli tuyuladi.",
+          "text_translation_ru": "Сначала я тоже так думал, но потом, как только расслабился, уже никак не мог себя заставить. К тому же каждый раз надо переодеваться, принимать душ — кажется ужасно хлопотным.",
+          "text_translation_en": "At first I thought so too, but later, once I let myself slack off, I just couldn't muster the energy anymore. Besides, every time I go I have to change clothes and shower, it feels really troublesome.",
+          "text_original": "一开始也是这么想的，但后来一松懈就再也提不起劲了。而且每次去还要换衣服、洗澡，感觉特别麻烦。"
+        },
+        {
+          "id": "h6d24-s7",
+          "speaker": "A",
+          "pinyin": "Nǐ zhè shì diǎnxíng de xīnnián juéxīn zònghézhèng. Měi nián yī yuè jiànshēnfáng dōu bàomǎn, dào le èr yuè rén jiù bú jiàn le yí bàn.",
+          "text_translation": "Bu seniki tipik Yangi yil va'dasi sindromi. Har yili yanvarda sport zallari to'lib-toshadi, fevralga kelib odamlarning yarmi ko'rinmay qoladi.",
+          "text_translation_ru": "У тебя типичный синдром новогодних обещаний. Каждый год в январе спортзалы переполнены, а к февралю половина людей исчезает.",
+          "text_translation_en": "You've got the classic New Year's resolution syndrome. Every January the gyms are packed, and by February half the people have vanished.",
+          "text_original": "你这是典型的新年决心综合症。每年一月健身房都爆满，到了二月人就不见了一半。"
+        },
+        {
+          "id": "h6d24-s8",
+          "speaker": "B",
+          "pinyin": "Wǒ hòulái xiǎng míngbai le, wǒ bàn de qíshí bú shì jiànshēn kǎ, shì xīnlǐ ānwèi kǎ. Mǎi de shíhou juéde 'wǒ huì biàn shòu biàn jiànkāng', fù wán qián jiù yǐjīng mǎnzú le.",
+          "text_translation": "Men keyin tushunib yetdim, men ochgan narsam aslida sport kartasi emas, balki ruhiy taskin kartasi ekan. Sotib olayotganda 「ozaman, sog'lomlashaman」 deb o'ylaysan, pulni to'lab bo'lgach esa allaqachon qoniqib qolasan.",
+          "text_translation_ru": "Я потом понял: то, что я оформил, на самом деле не абонемент в спортзал, а карта психологического утешения. Когда покупаешь, думаешь «я похудею и стану здоровым», а заплатив деньги, уже доволен.",
+          "text_translation_en": "I later figured it out: what I bought was actually not a gym card, but a psychological comfort card. When buying it you think 「I'll get slim and healthy」, and once you've paid you're already satisfied.",
+          "text_original": "我后来想明白了，我办的其实不是健身卡，是心理安慰卡。买的时候觉得「我会变瘦变健康」，付完钱就已经满足了。"
+        },
+        {
+          "id": "h6d24-s9",
+          "speaker": "A",
+          "pinyin": "Hěnduō rén dōu shì zhèyàng. Jiànshēnfáng zhuàn de jiùshì nàxiē bàn le kǎ bù lái de rén de qián.",
+          "text_translation": "Ko'p odamlar shunday. Sport zallari aynan karta ochib, kelmaydigan odamlarning pulidan foyda ko'radi.",
+          "text_translation_ru": "Многие люди такие. Спортзалы как раз и зарабатывают на деньгах тех, кто оформил карту, но не приходит.",
+          "text_translation_en": "Lots of people are like that. Gyms make their money precisely from the people who buy a card but don't show up.",
+          "text_original": "很多人都是这样。健身房赚的就是那些办了卡不来的人的钱。"
+        },
+        {
+          "id": "h6d24-s10",
+          "speaker": "B",
+          "pinyin": "Wǒ xiànzài yǐjīng jiēshòu le zhè ge shìshí: wǒ jiùshì bù shìhé qù jiànshēnfáng. Dǎsuàn bǎ kǎ zhuǎnràng chūqù, yǐhòu zài jiā gēn zhe shìpín liàn.",
+          "text_translation": "Men hozir bu haqiqatni qabul qildim: men sport zaliga borishga shunchaki mos kelmayman. Kartani boshqaga o'tkazib yuborib, bundan keyin uyda videoga ergashib mashq qilmoqchiman.",
+          "text_translation_ru": "Я теперь уже принял этот факт: я просто не создан для спортзала. Собираюсь переуступить карту, а потом тренироваться дома по видео.",
+          "text_translation_en": "I've now accepted this fact: I'm just not cut out for the gym. I plan to transfer the card to someone else and from now on work out at home following videos.",
+          "text_original": "我现在已经接受了这个事实：我就是不适合去健身房。打算把卡转让出去，以后在家跟着视频练。"
+        },
+        {
+          "id": "h6d24-s11",
+          "speaker": "A",
+          "pinyin": "Zài jiā liàn yě wèibì néng jiānchí. Nǐ qùnián bú shì hái mǎi guo yújiā diàn ma? Xiànzài diànzi zài nǎr?",
+          "text_translation": "Uyda mashq qilsang ham davom ettira olishing shart emas. O'tgan yili yoga gilamchasi ham sotib olmaganmiding? Hozir gilamcha qayerda?",
+          "text_translation_ru": "Дома тренироваться тоже не факт, что выдержишь. Ты же в прошлом году ещё коврик для йоги покупал? Где теперь этот коврик?",
+          "text_translation_en": "Working out at home doesn't guarantee you'll keep it up either. Didn't you also buy a yoga mat last year? Where's that mat now?",
+          "text_original": "在家练也未必能坚持。你去年不是还买过瑜伽垫吗？现在垫子在哪儿？"
+        },
+        {
+          "id": "h6d24-s12",
+          "speaker": "B",
+          "pinyin": "…… Zài chuáng dǐxià yā zhe. Nǐ yě tài liǎojiě wǒ le.",
+          "text_translation": "...Karavot tagida bosilib yotibdi. Sen meni juda yaxshi bilarkansan.",
+          "text_translation_ru": "...Лежит придавленный под кроватью. Ты слишком хорошо меня знаешь.",
+          "text_translation_en": "...It's stuffed under the bed. You know me far too well.",
+          "text_original": "……在床底下压着。你也太了解我了。"
+        },
+        {
+          "id": "h6d24-s13",
+          "speaker": "A",
+          "pinyin": "Wǒ jiànyì nǐ bú yào zài huā qián mǎi shèbèi le, xiān cóng zuì jiǎndān de kāishǐ, bǐrú měitiān sànbù èrshí fēnzhōng. Néng jiānchí yí ge yuè zài shuō.",
+          "text_translation": "Senga maslahatim, boshqa jihozlarga pul sarflama, avval eng oddiyidan boshla, masalan, har kuni yigirma daqiqa sayr qil. Bir oy davom ettira olsang, keyin gaplashamiz.",
+          "text_translation_ru": "Советую тебе больше не тратить деньги на оборудование, начни с самого простого, например, гуляй каждый день по двадцать минут. Сможешь продержаться месяц — тогда и поговорим.",
+          "text_translation_en": "I'd advise you not to spend money on equipment anymore. Start with the simplest thing, like walking twenty minutes every day. If you can keep it up for a month, then we'll talk.",
+          "text_original": "我建议你不要再花钱买设备了，先从最简单的开始，比如每天散步二十分钟。能坚持一个月再说。"
+        },
+        {
+          "id": "h6d24-s14",
+          "speaker": "B",
+          "pinyin": "Sànbù tīng qǐlái quèshí bǐ jiànshēn jiǎndān duō le. Hǎo, wǒ cóng jīntiān kāishǐ shì shi.",
+          "text_translation": "Sayr qilish haqiqatan ham sport zalidan ancha osonroq eshitiladi. Mayli, bugundan boshlab sinab ko'raman.",
+          "text_translation_ru": "Прогулки и правда звучат гораздо проще, чем тренажёрный зал. Хорошо, начну с сегодняшнего дня попробовать.",
+          "text_translation_en": "Walking does sound much simpler than going to the gym. Okay, I'll start trying from today.",
+          "text_original": "散步听起来确实比健身简单多了。好，我从今天开始试试。"
+        },
+        {
+          "id": "h6d24-s15",
+          "speaker": "A",
+          "pinyin": "Jìzhu, xúnxù jiànjìn bǐ yīgǔzuòqì gèng zhòngyào. Búyào yī kāishǐ jiù bǎ zìjǐ lèi kuǎ.",
+          "text_translation": "Esda tut, bosqichma-bosqich borish bir zarb bilan harakat qilishdan muhimroq. Boshidanoq o'zingni holdan toydirib qo'yma.",
+          "text_translation_ru": "Запомни, постепенность важнее, чем рвануть одним рывком. Не загоняй себя до изнеможения с самого начала.",
+          "text_translation_en": "Remember, progressing step by step is more important than going all-out in one burst. Don't wear yourself out right from the start.",
+          "text_original": "记住，循序渐进比一鼓作气更重要。不要一开始就把自己累垮。"
+        },
+        {
+          "id": "h6d24-s16",
+          "speaker": "B",
+          "pinyin": "Shuō de duì. Zhè cì wǒ mànmàn lái, bù qiángqiú zìjǐ.",
+          "text_translation": "To'g'ri aytasan. Bu safar asta-sekin boraman, o'zimni majburlamayman.",
+          "text_translation_ru": "Верно говоришь. На этот раз я буду действовать постепенно, не буду себя принуждать.",
+          "text_translation_en": "Well said. This time I'll take it slow and not force myself.",
+          "text_original": "说得对。这次我慢慢来，不强求自己。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "id": "hsk6-dialogue39",
+  "slug": "weather-moods",
+  "title": "天气与心情",
+  "pinyin": "Tiānqì yǔ xīnqíng",
+  "titleTranslation": "Ob-havo va kayfiyat",
+  "titleTranslation_ru": "Погода и настроение",
+  "titleTranslation_en": "Weather Moods",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "无精打采",
+    "阴沉沉",
+    "蒙",
+    "索性",
+    "负担",
+    "血清素",
+    "分泌",
+    "懒散",
+    "低落",
+    "光线",
+    "节能模式",
+    "活跃",
+    "灰蒙蒙",
+    "渗",
+    "压抑",
+    "气氛",
+    "白费"
+  ],
+  "sections": [
+    {
+      "id": "h6d39-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d39-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ jīntiān zěnme yī zhěng tiān dōu wújīng dǎcǎi de? Shì bú shì zuó wǎn yòu áoyè le?",
+          "text_translation": "Bugun nega kun bo'yi shu qadar lanj bo'lib yuribsan? Kechasi yana tunni bedor o'tkazdingmi?",
+          "text_translation_ru": "Почему ты сегодня весь день такой вялый? Ты что, опять полночи не спал?",
+          "text_translation_en": "Why have you been listless all day today? Did you stay up late again last night?",
+          "text_original": "你今天怎么一整天都无精打采的？是不是昨晚又熬夜了？"
+        },
+        {
+          "id": "h6d39-s2",
+          "speaker": "B",
+          "pinyin": "Gēn áoyè méi guānxi, dōu shì zhè guǐ tiānqì hài de. Wàimiàn yīnchénchén de, yǔ xià ge bù tíng, zhěng ge rén dōu tí bù qǐ jìn.",
+          "text_translation": "Tunni bedor o'tkazish bilan bog'liq emas, hammasi shu jin urgan ob-havo aybi. Tashqarisi qop-qorong'i, yomg'ir to'xtamay yog'yapti, butun vujudimda darmon yo'q.",
+          "text_translation_ru": "Дело не в том, что я не спал, во всём виновата эта мерзкая погода. На улице пасмурно, дождь льёт без остановки, у меня вообще нет сил.",
+          "text_translation_en": "It has nothing to do with staying up late, it's all because of this awful weather. It's gloomy outside, the rain won't stop, and I just can't get any energy.",
+          "text_original": "跟熬夜没关系，都是这鬼天气害的。外面阴沉沉的，雨下个不停，整个人都提不起劲。"
+        },
+        {
+          "id": "h6d39-s3",
+          "speaker": "A",
+          "pinyin": "Wǒ yě yǒu tónggǎn. Yī dào xià yǔ tiān, wǒ jiù gǎnjué dànǎo xiàng bèi méng le yī céng wù, zuò shénme dōu màn bàn pāi.",
+          "text_translation": "Men ham shunday his qilaman. Yomg'irli kun bo'lishi bilan miyam go'yo bir qatlam tuman bilan qoplanganday bo'ladi, nima qilsam ham sustlashib qolaman.",
+          "text_translation_ru": "У меня то же самое. Как только наступает дождливый день, мне кажется, будто мозг затянут пеленой тумана, и я всё делаю с запозданием.",
+          "text_translation_en": "I feel the same. As soon as it's a rainy day, my brain feels like it's covered by a layer of fog, and I'm a beat slower at everything.",
+          "text_original": "我也有同感。一到下雨天，我就感觉大脑像被蒙了一层雾，做什么都慢半拍。"
+        },
+        {
+          "id": "h6d39-s4",
+          "speaker": "B",
+          "pinyin": "Wǒ jīntiān zǎoshang běnlái jìhuà xiě yī fèn bàogào, jiéguǒ zuò zài diànnǎo qián liǎng ge xiǎoshí, yī ge zì dōu dǎ bù chūlái. Hòulái suǒxìng shuā le yī shàngwǔ shǒujī.",
+          "text_translation": "Men bugun ertalab bir hisobot yozishni rejalashtirgandim, oqibatda kompyuter oldida ikki soat o'tirib, bironta ham harf yoza olmadim. Keyin esa shunchaki butun tongni telefon kovlab o'tkazdim.",
+          "text_translation_ru": "Сегодня утром я собирался написать отчёт, но в итоге просидел два часа перед компьютером и не смог напечатать ни единого слова. Потом я просто полутра залипал в телефоне.",
+          "text_translation_en": "This morning I had planned to write a report, but I ended up sitting in front of the computer for two hours without typing a single word. In the end I just scrolled on my phone all morning.",
+          "text_original": "我今天早上本来计划写一份报告，结果坐在电脑前两个小时，一个字都打不出来。后来索性刷了一上午手机。"
+        },
+        {
+          "id": "h6d39-s5",
+          "speaker": "A",
+          "pinyin": "Wǒ xià yǔ tiān yě yīyàng. Píngshí juéde qīngsōng de gōngzuò, dào le yǔ tiān jiù biàn chéng le yī zhǒng fùdān.",
+          "text_translation": "Men ham yomg'irli kunlari xuddi shunday. Odatda yengil tuyuladigan ish yomg'irli kun kelganda bir turdagi yukka aylanadi.",
+          "text_translation_ru": "У меня в дождливые дни так же. Работа, которая обычно кажется лёгкой, в дождь превращается в какое-то бремя.",
+          "text_translation_en": "It's the same for me on rainy days. Work that usually feels easy turns into a kind of burden when it rains.",
+          "text_original": "我下雨天也一样。平时觉得轻松的工作，到了雨天就变成了一种负担。"
+        },
+        {
+          "id": "h6d39-s6",
+          "speaker": "B",
+          "pinyin": "Nǐ shuō zhè dàodǐ shì wèishénme ne? Nándào tiānqì zhēn de néng yǐngxiǎng rén de qíngxù hé xiàolǜ?",
+          "text_translation": "Sen ayt-chi, buning sababi nimada axir? Nahotki ob-havo rostdan ham odamning kayfiyati va ish unumdorligiga ta'sir qila olsa?",
+          "text_translation_ru": "Скажи, в чём же всё-таки причина? Неужели погода действительно может влиять на настроение и продуктивность человека?",
+          "text_translation_en": "Tell me, what on earth is the reason for this? Can the weather really affect a person's mood and efficiency?",
+          "text_original": "你说这到底是为什么呢？难道天气真的能影响人的情绪和效率？"
+        },
+        {
+          "id": "h6d39-s7",
+          "speaker": "A",
+          "pinyin": "Kēxué yánjiū biǎomíng, quēfá yángguāng huì yǐngxiǎng xuèqīngsù de fēnmì, ràng rén biàn de lǎnsǎn hé dīluò. Yīnyǔ tiān guāngxiàn bùzú, dànǎo jiù róngyì jìnrù 'jiénéng móshì'.",
+          "text_translation": "Ilmiy tadqiqotlar shuni ko'rsatadiki, quyosh nuri yetishmasligi serotonin ishlab chiqarilishiga ta'sir qiladi va odamni dangasa hamda tushkun qilib qo'yadi. Bulutli yomg'irli kunlarda yorug'lik yetarli bo'lmaydi, shu sababli miya osongina «tejamkorlik rejimiga» o'tib qoladi.",
+          "text_translation_ru": "Научные исследования показывают, что нехватка солнечного света влияет на выработку серотонина, делая человека ленивым и подавленным. В пасмурные дождливые дни освещения недостаточно, и мозг легко переходит в «режим энергосбережения».",
+          "text_translation_en": "Scientific research shows that a lack of sunlight affects the secretion of serotonin, making people sluggish and low. On overcast rainy days there isn't enough light, so the brain easily enters \"energy-saving mode\".",
+          "text_original": "科学研究表明，缺乏阳光会影响血清素的分泌，让人变得懒散和低落。阴雨天光线不足，大脑就容易进入「节能模式」。"
+        },
+        {
+          "id": "h6d39-s8",
+          "speaker": "B",
+          "pinyin": "Yuánlái bú shì wǒ de wèntí, shì shēnglǐ fǎnyìng! Nà wǒ jīntiān gōngzuò xiàolǜ dī, yě bùnéng guài wǒ le.",
+          "text_translation": "Demak, bu mening muammoyim emas ekan, fiziologik reaksiya ekan! Unda bugun ish unumdorligim past bo'lgani uchun ham meni ayblab bo'lmaydi.",
+          "text_translation_ru": "Оказывается, это не моя проблема, а физиологическая реакция! Значит, и за низкую продуктивность сегодня меня винить нельзя.",
+          "text_translation_en": "So it's not my problem, it's a physiological reaction! Then you can't blame me for my low productivity today either.",
+          "text_original": "原来不是我的问题，是生理反应！那我今天工作效率低，也不能怪我了。"
+        },
+        {
+          "id": "h6d39-s9",
+          "speaker": "A",
+          "pinyin": "Huà suī zhème shuō, dàn gōngzuò háishì déi wánchéng. Nǐ kěyǐ shì shi bǎ dēng tiáo liàng yì xiē, huòzhě tīng diǎn jiézòu kuài de yīnyuè, qiǎngpò dànǎo huóyuè qǐlái.",
+          "text_translation": "Gap bunday bo'lsa-da, lekin ish baribir bajarilishi kerak. Sen chiroqni biroz yorqinroq qilib ko'rishing, yoki tezkor ritmli musiqa tinglab, miyangni majburan faollashtirishing mumkin.",
+          "text_translation_ru": "Хоть оно и так, но работу всё равно надо доделать. Можешь попробовать сделать свет поярче или послушать музыку с быстрым ритмом, чтобы заставить мозг взбодриться.",
+          "text_translation_en": "That may be so, but the work still has to be done. You could try turning the lights up brighter, or listening to some fast-paced music to force your brain to become active.",
+          "text_original": "话虽这么说，但工作还是得完成。你可以试试把灯调亮一些，或者听点节奏快的音乐，强迫大脑活跃起来。"
+        },
+        {
+          "id": "h6d39-s10",
+          "speaker": "B",
+          "pinyin": "Wǒ shì guo kāi dēng, dàn gǎnjué háishì bú gòu. Wàimiàn nà zhǒng huīméngméng de guāngxiàn, tòu guò chuānghu shèn jìnlái, zhěng ge fángjiān dōu xiǎnde hěn yāyì.",
+          "text_translation": "Men chiroq yoqib ko'rganman, lekin baribir yetarli emasday tuyuladi. Tashqaridagi o'sha xira-zog' yorug'lik deraza orqali sizib kiradi va butun xona juda bo'g'iq ko'rinadi.",
+          "text_translation_ru": "Я пробовал включать свет, но всё равно кажется, что этого мало. Тот тусклый серый свет с улицы просачивается сквозь окно, и вся комната выглядит очень гнетущей.",
+          "text_translation_en": "I've tried turning on the lights, but it still doesn't feel like enough. That kind of dull, grey light from outside seeps in through the window, and the whole room looks really oppressive.",
+          "text_original": "我试过开灯，但感觉还是不够。外面那种灰蒙蒙的光线，透过窗户渗进来，整个房间都显得很压抑。"
+        },
+        {
+          "id": "h6d39-s11",
+          "speaker": "A",
+          "pinyin": "Yàobù nǐ huàn ge huánjìng? Qù lóuxià de kāfēitīng gōngzuò, nàli guāngxiàn hǎo, rén yě duō, qìfēn huì bù yīyàng.",
+          "text_translation": "Yo muhitni o'zgartirsang-chi? Pastdagi kafega borib ishla, u yerda yorug'lik yaxshi, odam ham ko'p, muhit boshqacha bo'ladi.",
+          "text_translation_ru": "А может, ты сменишь обстановку? Сходи поработать в кафе на первом этаже, там хорошее освещение, много людей, и атмосфера будет другой.",
+          "text_translation_en": "How about changing your environment? Go work at the café downstairs — the lighting there is good, there are lots of people, and the atmosphere will be different.",
+          "text_original": "要不你换个环境？去楼下的咖啡厅工作，那里光线好，人也多，气氛会不一样。"
+        },
+        {
+          "id": "h6d39-s12",
+          "speaker": "B",
+          "pinyin": "Hǎo zhǔyi! Wǒ xiànzài jiù shōushi dōngxi xiàqù. Yěxǔ huàn ge dìfang, xīnqíng huì hǎo qǐlái, xiàolǜ yě néng tí shànglái.",
+          "text_translation": "Zo'r fikr! Men hozir narsalarimni yig'ishtirib pastga tushaman. Ehtimol, joyni o'zgartirsam, kayfiyatim ham ko'tariladi, ish unumdorligim ham oshadi.",
+          "text_translation_ru": "Хорошая идея! Я сейчас же соберу вещи и спущусь. Может, сменив место, я почувствую себя лучше, и продуктивность тоже поднимется.",
+          "text_translation_en": "Good idea! I'll pack up my things and go down right now. Maybe a change of place will lift my mood and boost my efficiency too.",
+          "text_original": "好主意！我现在就收拾东西下去。也许换个地方，心情会好起来，效率也能提上来。"
+        },
+        {
+          "id": "h6d39-s13",
+          "speaker": "A",
+          "pinyin": "Búguò bié dāi tài jiǔ, bùrán nǐ huì rěnbúzhù diǎn dàngāo hé nátiě, zhè zhōu jiǎnféi yòu báifèi le.",
+          "text_translation": "Lekin u yerda juda uzoq qolma, aks holda o'zingni tutolmay tort bilan latte buyurib qo'yasan, shu haftadagi parhezing yana bekorga ketadi.",
+          "text_translation_ru": "Только не засиживайся там слишком долго, иначе ты не удержишься и закажешь торт и латте, и тогда вся диета на этой неделе пойдёт насмарку.",
+          "text_translation_en": "But don't stay too long, otherwise you won't be able to resist ordering cake and a latte, and this week's diet will be wasted again.",
+          "text_original": "不过别待太久，不然你会忍不住点蛋糕和拿铁，这周减肥又白费了。"
+        },
+        {
+          "id": "h6d39-s14",
+          "speaker": "B",
+          "pinyin": "Hāhā, nǐ shuō de tài wǎn le, wǒ yǐjīng zài lù shàng le.",
+          "text_translation": "Ha-ha, juda kech aytding, men allaqachon yo'ldaman.",
+          "text_translation_ru": "Ха-ха, ты слишком поздно это сказал, я уже в пути.",
+          "text_translation_en": "Haha, you said that too late, I'm already on my way.",
+          "text_original": "哈哈，你说得太晚了，我已经在路上了。"
+        }
+      ]
+    }
+  ]
+}

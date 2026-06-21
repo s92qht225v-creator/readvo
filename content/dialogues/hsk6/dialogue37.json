@@ -1,0 +1,157 @@
+{
+  "id": "hsk6-dialogue37",
+  "slug": "impulsive-dieting",
+  "title": "冲动减肥",
+  "pinyin": "Chōngdòng jiǎnféi",
+  "titleTranslation": "O'ylamasdan parhez tutish",
+  "titleTranslation_ru": "Импульсивная диета",
+  "titleTranslation_en": "Impulsive Dieting",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "炸鸡",
+    "鸡胸肉",
+    "西兰花",
+    "断碳水",
+    "水煮",
+    "一时兴起",
+    "宏伟",
+    "怀疑人生",
+    "不可持续",
+    "暴减",
+    "频率",
+    "分量",
+    "禁止",
+    "立flag",
+    "打回原形",
+    "急功近利"
+  ],
+  "sections": [
+    {
+      "id": "h6d37-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d37-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ zuótiān bú shì shuō yào kāishǐ jiǎnféi ma? Zěnme jīntiān yòu zài chī zhá jī?",
+          "text_translation": "Kecha parhez tutishni boshlayman demovmiding? Bugun yana qovurilgan tovuq yeyapsanmi?",
+          "text_translation_ru": "Ты же вчера говорил, что начнёшь худеть? Почему сегодня опять ешь жареную курицу?",
+          "text_translation_en": "Didn't you say yesterday you were going to start dieting? How come you're eating fried chicken again today?",
+          "text_original": "你昨天不是说要开始减肥吗？怎么今天又在吃炸鸡？"
+        },
+        {
+          "id": "h6d37-s2",
+          "speaker": "B",
+          "pinyin": "Wǒ zhīdào, dàn wǒ yǐjīng jiānchí le liǎng tiān le, jīntiān shízài rěnbúzhù le. Zhè zhá jī tài xiāng le, wǒ jiù chī yī kuài …… ránhòu chī le sān kuài.",
+          "text_translation": "Bilaman, lekin men allaqachon ikki kun chidadim, bugun rostdan ham chiday olmadim. Bu qovurilgan tovuq juda ishtaha ochar, men shunchaki bitta bo'lak yeyman desam …… keyin uchta bo'lak yeb qo'ydim.",
+          "text_translation_ru": "Знаю, но я уже два дня держался, сегодня просто не смог устоять. Эта жареная курица так аппетитно пахнет, я хотел съесть один кусочек …… а потом съел три.",
+          "text_translation_en": "I know, but I already held out for two days, today I really couldn't resist. This fried chicken smells so good, I was just going to eat one piece …… and then I ate three.",
+          "text_original": "我知道，但我已经坚持了两天了，今天实在忍不住了。这炸鸡太香了，我就吃一块……然后吃了三块。"
+        },
+        {
+          "id": "h6d37-s3",
+          "speaker": "A",
+          "pinyin": "Nǐ qián liǎng tiān bú shì shuō yào yángé zhíxíng 'duàn tànshuǐ' ma? Hái mǎi le yī duī jīxiōng ròu hé xīlánhuā.",
+          "text_translation": "Bir necha kun oldin 「uglevodni kesish」ni qat'iy bajaraman demovmiding? Hatto bir to'da tovuq ko'krak go'shti va brokkoli ham sotib olding-ku.",
+          "text_translation_ru": "Разве ты пару дней назад не говорил, что будешь строго придерживаться 「отказа от углеводов」? Ещё и кучу куриной грудки и брокколи купил.",
+          "text_translation_en": "Didn't you say a couple of days ago you were going to strictly follow 「cutting carbs」? You even bought a pile of chicken breast and broccoli.",
+          "text_original": "你前两天不是说要严格执行「断碳水」吗？还买了一堆鸡胸肉和西兰花。"
+        },
+        {
+          "id": "h6d37-s4",
+          "speaker": "B",
+          "pinyin": "Jīxiōng ròu hái zài bīngxiāng lǐ dòng zhe ne. Wǒ běnlái xiǎng jīntiān wǎnshang zuò shuǐzhǔ jīxiōng, dàn xiàbān tài lèi le, jiù diǎn le zhá jī wàimài.",
+          "text_translation": "Tovuq ko'krak go'shti hali muzlatkichda muzlab turibdi. Aslida bugun kechqurun suvda qaynatilgan tovuq ko'krak qilmoqchi edim, lekin ishdan keyin juda charchadim, shuning uchun qovurilgan tovuqni yetkazib berishga buyurtma berdim.",
+          "text_translation_ru": "Куриная грудка всё ещё лежит замороженная в холодильнике. Вообще-то я хотел сегодня вечером сделать отварную куриную грудку, но после работы слишком устал и заказал жареную курицу с доставкой.",
+          "text_translation_en": "The chicken breast is still frozen in the fridge. I originally planned to make boiled chicken breast tonight, but I was too tired after work, so I ordered fried chicken delivery.",
+          "text_original": "鸡胸肉还在冰箱里冻着呢。我本来想今天晚上做水煮鸡胸，但下班太累了，就点了炸鸡外卖。"
+        },
+        {
+          "id": "h6d37-s5",
+          "speaker": "A",
+          "pinyin": "Nǐ zhè jiào 'chōngdòng jiǎnféi zhèng'. Yīshí xīngqǐ dìng xià hóngwěi mùbiāo, rèqíng yī guò jiù lìkè fàngqì.",
+          "text_translation": "Buni 「o'ylamasdan parhez tutish kasalligi」 deyishadi. Bir lahzalik qiziqish bilan ulug'vor maqsadlar qo'yasan, ishtiyoq o'tib ketishi bilanoq darrov tashlab qo'yasan.",
+          "text_translation_ru": "Это называется 「синдром импульсивного похудения」. На минутном порыве ставишь грандиозные цели, а как только запал проходит — сразу всё бросаешь.",
+          "text_translation_en": "This is called 「impulsive dieting syndrome」. On a sudden whim you set grand goals, and as soon as the enthusiasm fades you immediately give up.",
+          "text_original": "你这叫「冲动减肥症」。一时兴起定下宏伟目标，热情一过就立刻放弃。"
+        },
+        {
+          "id": "h6d37-s6",
+          "speaker": "B",
+          "pinyin": "Shuō shíhuà, shuǐzhǔ jīxiōng zhēn de tài nán chī le. Zuótiān chī le yī dùn, wǒ jiù kāishǐ huáiyí rénshēng le.",
+          "text_translation": "Rostini aytsam, suvda qaynatilgan tovuq ko'krak go'shti rostdan ham juda bemaza. Kecha bir marta yeb, hayotimdan shubhalana boshladim.",
+          "text_translation_ru": "Честно говоря, отварная куриная грудка действительно ужасно невкусная. Вчера съел одну порцию и начал сомневаться в смысле жизни.",
+          "text_translation_en": "Honestly, boiled chicken breast really tastes terrible. Yesterday I ate one meal of it and started questioning my whole life.",
+          "text_original": "说实话，水煮鸡胸真的太难吃了。昨天吃了一顿，我就开始怀疑人生了。"
+        },
+        {
+          "id": "h6d37-s7",
+          "speaker": "A",
+          "pinyin": "Nǐ zhè zhǒng 'yàome bù chī, yàome chī hěnduō' de fāngshì gēnběn bù kě chíxù. Yào xiǎng jiǎnféi chénggōng, děi mànmàn tiáozhěng yǐnshí, ér bú shì tūrán bào jiǎn.",
+          "text_translation": "Sening bu 「yo umuman yemaslik, yo ko'p yeyish」 usuling umuman barqaror emas. Parhez tutishda muvaffaqiyat qozonish uchun ovqatlanishni asta-sekin sozlash kerak, birdaniga keskin kamaytirish emas.",
+          "text_translation_ru": "Твой подход 「либо вообще не есть, либо есть много」 совершенно не устойчив. Чтобы похудеть успешно, нужно постепенно корректировать питание, а не резко урезать его.",
+          "text_translation_en": "Your 「either don't eat, or eat a lot」 approach is simply unsustainable. If you want to lose weight successfully, you have to adjust your diet gradually, not suddenly slash it.",
+          "text_original": "你这种「要么不吃，要么吃很多」的方式根本不可持续。要想减肥成功，得慢慢调整饮食，而不是突然暴减。"
+        },
+        {
+          "id": "h6d37-s8",
+          "speaker": "B",
+          "pinyin": "Nà nǐ de yìsi shì, jiǎnféi qījiān yě kěyǐ chī zhá jī?",
+          "text_translation": "Demak, sening aytmoqchi bo'lganing, parhez davrida ham qovurilgan tovuq yeyish mumkinmi?",
+          "text_translation_ru": "То есть ты хочешь сказать, что во время диеты тоже можно есть жареную курицу?",
+          "text_translation_en": "So what you mean is, I can also eat fried chicken while dieting?",
+          "text_original": "那你的意思是，减肥期间也可以吃炸鸡？"
+        },
+        {
+          "id": "h6d37-s9",
+          "speaker": "A",
+          "pinyin": "Kěyǐ chī, dàn yào kòngzhì pínlǜ hé fènliàng. Bǐrú yī zhōu chī yī cì, ér bú shì tiāntiān chī. Chèdǐ jìnzhǐ fǎn'ér huì ràng nǐ gèng xiǎng chī.",
+          "text_translation": "Yeyish mumkin, lekin chastota va miqdorni nazorat qilish kerak. Masalan, haftada bir marta yeyish, har kuni emas. Butunlay taqiqlash, aksincha, seni yanada ko'proq yegisi keltiradi.",
+          "text_translation_ru": "Есть можно, но нужно контролировать частоту и порции. Например, есть раз в неделю, а не каждый день. Полный запрет, наоборот, заставит тебя хотеть этого ещё больше.",
+          "text_translation_en": "You can eat it, but you have to control the frequency and portion. For example, eat it once a week, not every day. A complete ban will only make you want it more.",
+          "text_original": "可以吃，但要控制频率和分量。比如一周吃一次，而不是天天吃。彻底禁止反而会让你更想吃。"
+        },
+        {
+          "id": "h6d37-s10",
+          "speaker": "B",
+          "pinyin": "Nǐ shuō de duì. Wǒ měi cì yī jiǎnféi jiù lì flag, jiānchí bù liǎo sān tiān jiù dǎ huí yuánxíng.",
+          "text_translation": "To'g'ri aytasan. Men har safar parhez tutmoqchi bo'lganimda baland gaplarni aytaman, lekin uch kun ham chiday olmay, eski holatimga qaytib qolaman.",
+          "text_translation_ru": "Ты прав. Каждый раз, как начинаю худеть, я громко заявляю о намерениях, но и трёх дней не выдерживаю — возвращаюсь к прежнему.",
+          "text_translation_en": "You're right. Every time I start dieting I make a big declaration, but I can't last even three days before I revert back to my old self.",
+          "text_original": "你说得对。我每次一减肥就立flag，坚持不了三天就打回原形。"
+        },
+        {
+          "id": "h6d37-s11",
+          "speaker": "A",
+          "pinyin": "Nǐ yīnggāi dìng yī ge xiànshí de jìhuà. Bǐrú xiān cóng měitiān shǎo chī yī dùn wàimài kāishǐ, ér bú shì yī shànglái jiù duàn tànshuǐ.",
+          "text_translation": "Sen real reja tuzishing kerak. Masalan, avval har kuni bir mahal yetkazib berilgan ovqatdan kam yeyishdan boshla, birdaniga uglevodni kesishdan emas.",
+          "text_translation_ru": "Тебе нужно составить реалистичный план. Например, для начала есть на одну заказную еду в день меньше, а не сразу отказываться от углеводов.",
+          "text_translation_en": "You should set a realistic plan. For example, start by eating one less takeout meal a day, rather than cutting carbs right from the start.",
+          "text_original": "你应该定一个现实的计划。比如先从每天少吃一顿外卖开始，而不是一上来就断碳水。"
+        },
+        {
+          "id": "h6d37-s12",
+          "speaker": "B",
+          "pinyin": "Nà wǒ míngtiān zhōngwǔ bù diǎn zhá jī le, gǎi diǎn shālā ba.",
+          "text_translation": "Unda ertaga tushda qovurilgan tovuq buyurtma qilmayman, salat buyurtma qilaman.",
+          "text_translation_ru": "Тогда завтра в обед не буду заказывать жареную курицу, закажу-ка лучше салат.",
+          "text_translation_en": "Then tomorrow at lunch I won't order fried chicken, I'll order a salad instead.",
+          "text_original": "那我明天中午不点炸鸡了，改点沙拉吧。"
+        },
+        {
+          "id": "h6d37-s13",
+          "speaker": "A",
+          "pinyin": "Shālā kěyǐ, dàn bié jiā tài duō jiàng. Mànmàn lái, bǐ jí gōng jìn lì zhòngyào de duō.",
+          "text_translation": "Salat yaxshi, lekin juda ko'p sous qo'shma. Sekin-asta harakat qilish, tezda natija ketidan quvishdan ancha muhimroq.",
+          "text_translation_ru": "Салат — это хорошо, но не клади слишком много соуса. Действовать постепенно гораздо важнее, чем гнаться за быстрым результатом.",
+          "text_translation_en": "Salad is fine, but don't add too much sauce. Taking it slow is far more important than chasing quick results.",
+          "text_original": "沙拉可以，但别加太多酱。慢慢来，比急功近利重要得多。"
+        }
+      ]
+    }
+  ]
+}

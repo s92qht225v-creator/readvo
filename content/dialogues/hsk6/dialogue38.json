@@ -1,0 +1,169 @@
+{
+  "id": "hsk6-dialogue38",
+  "slug": "social-fatigue",
+  "title": "社交疲劳",
+  "pinyin": "Shèjiāo píláo",
+  "titleTranslation": "Muloqotdan charchash",
+  "titleTranslation_ru": "Социальная усталость",
+  "titleTranslation_en": "Social Fatigue",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "掏空",
+    "瘫",
+    "叙旧",
+    "消耗",
+    "打招呼",
+    "寒暄",
+    "应付",
+    "尴尬",
+    "审问",
+    "合影",
+    "撑不住",
+    "借口",
+    "溜",
+    "内向",
+    "规模",
+    "场合",
+    "冷漠",
+    "充电",
+    "元气"
+  ],
+  "sections": [
+    {
+      "id": "h6d38-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d38-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ zhōumò bú shì qù cānjiā tóngxué jùhuì le ma? Zěnme kàn qǐlái bǐ shàngbān hái lèi?",
+          "text_translation": "Sen dam olish kunlari sinfdoshlar uchrashuviga borgan eding-ku? Nega ishga borgandan ham charchaganga o'xshaysan?",
+          "text_translation_ru": "Ты же на выходных ходил на встречу одноклассников? Почему выглядишь уставшим больше, чем после работы?",
+          "text_translation_en": "Didn't you go to the classmates' reunion over the weekend? Why do you look even more tired than after work?",
+          "text_original": "你周末不是去参加同学聚会了吗？怎么看起来比上班还累？"
+        },
+        {
+          "id": "h6d38-s2",
+          "speaker": "B",
+          "pinyin": "Bié tí le, wǒ xiànzài zhěng ge rén xiàng shì bèi tāokōng le yīyàng. Zuótiān huí dào jiā, zhíjiē tān zài shāfā shàng, dòng dōu bù xiǎng dòng.",
+          "text_translation": "Aytmasang ham bo'ladi, hozir butun vujudim bo'shab qolgandek. Kecha uyga qaytib, to'g'ri divanga yiqilib qoldim, qimirlashni ham xohlamadim.",
+          "text_translation_ru": "Не говори, я сейчас будто полностью опустошён. Вчера вернулся домой, сразу рухнул на диван, даже шевелиться не хотелось.",
+          "text_translation_en": "Don't even mention it, I feel completely drained right now. Yesterday I got home and just collapsed onto the sofa, didn't even want to move.",
+          "text_original": "别提了，我现在整个人像是被掏空了一样。昨天回到家，直接瘫在沙发上，动都不想动。"
+        },
+        {
+          "id": "h6d38-s3",
+          "speaker": "A",
+          "pinyin": "Jùhuì bú shì hěn kāixīn ma? Gēn lǎo tóngxué xùjiù, yīnggāi hěn fàngsōng cái duì a.",
+          "text_translation": "Uchrashuv juda quvonchli emasmi? Eski sinfdoshlar bilan eski kunlarni eslash, aslida juda dam beradigan bo'lishi kerak-ku.",
+          "text_translation_ru": "Разве встреча не радостная? Вспоминать прошлое со старыми одноклассниками — это же должно быть расслабляюще.",
+          "text_translation_en": "Isn't a reunion fun? Reminiscing with old classmates should actually be quite relaxing.",
+          "text_original": "聚会不是很开心吗？跟老同学叙旧，应该很放松才对啊。"
+        },
+        {
+          "id": "h6d38-s4",
+          "speaker": "B",
+          "pinyin": "Lǐlùn shàng shì de, dàn shíjì shàng tài xiāohào néngliàng le. Èrshí duō ge rén, měi ge rén dōu yào dǎ zhāohu, hánxuān, huíyì wǎngshì, hái yào yìngfu gè zhǒng gāngà wèntí.",
+          "text_translation": "Nazariy jihatdan shunday, lekin amalda juda ko'p kuch sarflanadi. Yigirmadan ortiq odam, har biri bilan salomlashish, xushmuomalalik qilish, o'tmishni eslash, yana har xil noqulay savollarni ham eplash kerak.",
+          "text_translation_ru": "В теории да, но на практике это слишком сильно отнимает энергию. Больше двадцати человек, с каждым нужно поздороваться, обменяться любезностями, вспоминать прошлое, да ещё справляться со всякими неловкими вопросами.",
+          "text_translation_en": "In theory yes, but in practice it drains too much energy. More than twenty people, with each one you have to greet them, exchange pleasantries, reminisce, and also handle all sorts of awkward questions.",
+          "text_original": "理论上是的，但实际上太消耗能量了。二十多个人，每个人都要打招呼、寒暄、回忆往事，还要应付各种尴尬问题。"
+        },
+        {
+          "id": "h6d38-s5",
+          "speaker": "A",
+          "pinyin": "Shénme gāngà wèntí?",
+          "text_translation": "Qanaqa noqulay savollar?",
+          "text_translation_ru": "Какие неловкие вопросы?",
+          "text_translation_en": "What kind of awkward questions?",
+          "text_original": "什么尴尬问题？"
+        },
+        {
+          "id": "h6d38-s6",
+          "speaker": "B",
+          "pinyin": "Bǐrú 'nǐ zěnme hái bù jiéhūn a' 'gōngzī duōshao a' 'mǎi fáng le ma'. Wǒ dōu kuài bèi wèn fēng le. Gǎnjué bú shì zài xùjiù, shì zài bèi shěnwèn.",
+          "text_translation": "Masalan, 「nega hali uylanmayapsan」 「maoshing qancha」 「uy oldingmi」. Savollardan deyarli aqldan ozay dedim. O'tmishni eslashayotgandek emas, balki so'roq qilinayotgandek tuyuldi.",
+          "text_translation_ru": "Например, 「почему ты до сих пор не женился」 「какая у тебя зарплата」 「купил ли квартиру」. Меня чуть с ума не свели вопросами. Ощущение, будто не прошлое вспоминаем, а меня допрашивают.",
+          "text_translation_en": "For example, 「why aren't you married yet」 「how much do you earn」 「have you bought an apartment」. I was nearly driven crazy by the questions. It felt less like reminiscing and more like being interrogated.",
+          "text_original": "比如「你怎么还不结婚啊」「工资多少啊」「买房了吗」。我都快被问疯了。感觉不是在叙旧，是在被审问。"
+        },
+        {
+          "id": "h6d38-s7",
+          "speaker": "A",
+          "pinyin": "Hāhā, zhè zhǒng wèntí quèshí ràng rén tóuténg. Nà nǐ wèishénme bù duō dāi yīhuǐr jiù zǒu le?",
+          "text_translation": "Haha, bunday savollar rostdan ham boshni og'ritadi. Unda nega ko'proq turmasdan ketib qolding?",
+          "text_translation_ru": "Ха-ха, такие вопросы и правда вызывают головную боль. Тогда почему ты не задержался подольше, а ушёл?",
+          "text_translation_en": "Haha, such questions really do give you a headache. So why didn't you stay a bit longer instead of leaving?",
+          "text_original": "哈哈，这种问题确实让人头疼。那你为什么不多待一会儿就走了？"
+        },
+        {
+          "id": "h6d38-s8",
+          "speaker": "B",
+          "pinyin": "Wǒ běnlái xiǎng zǎo diǎn zǒu de, dàn yòu bèi lā qù pāi héyǐng, ránhòu yòu yǒu rén tíyì qù KTV, wǒ shízài chēng bú zhù le, zhǎo le ge jièkǒu liū le.",
+          "text_translation": "Aslida ertaroq ketmoqchi edim, lekin yana umumiy suratga tortilishga sudrab ketishdi, keyin yana kimdir KTV ga borishni taklif qildi, men rostdan ham chiday olmadim, bahona topib jimgina sirg'alib chiqib ketdim.",
+          "text_translation_ru": "Я изначально хотел уйти пораньше, но меня потащили фотографироваться вместе, потом кто-то предложил пойти в KTV, я уже совсем не выдержал, нашёл предлог и улизнул.",
+          "text_translation_en": "I originally wanted to leave early, but I got dragged off to take a group photo, then someone suggested going to KTV — I really couldn't hold up any longer, so I made up an excuse and slipped away.",
+          "text_original": "我本来想早点走的，但又被拉去拍合影，然后又有人提议去KTV，我实在撑不住了，找了个借口溜了。"
+        },
+        {
+          "id": "h6d38-s9",
+          "speaker": "A",
+          "pinyin": "Nǐ zhè shì diǎnxíng de 'shèjiāo píláo'. Nèixiàng de rén cānjiā dàxíng shèjiāo huódòng hòu, quèshí xūyào hěn cháng shíjiān lái huīfù jīnglì.",
+          "text_translation": "Bu sendagi tipik 「muloqotdan charchash」. Ichki dunyosiga berilgan odamlar yirik ijtimoiy tadbirlardan keyin haqiqatan ham kuchini tiklash uchun uzoq vaqt talab qiladi.",
+          "text_translation_ru": "У тебя это типичная 「социальная усталость」. Интровертам после участия в крупных социальных мероприятиях действительно нужно много времени, чтобы восстановить силы.",
+          "text_translation_en": "What you have is classic 「social fatigue」. Introverts really do need a long time to recover their energy after taking part in large social events.",
+          "text_original": "你这是典型的「社交疲劳」。内向的人参加大型社交活动后，确实需要很长时间来恢复精力。"
+        },
+        {
+          "id": "h6d38-s10",
+          "speaker": "B",
+          "pinyin": "Wǒ fāxiàn zìjǐ xiànzài yuè lái yuè bù xǐhuān zhè zhǒng dà guīmó de jùhuì le. Chāoguò wǔ ge rén wǒ jiù kāishǐ juéde lèi.",
+          "text_translation": "O'zimni hozir bunday katta ko'lamdagi uchrashuvlarni tobora yoqtirmayotganimni sezyapman. Besh kishidan oshsa, charchay boshlayman.",
+          "text_translation_ru": "Я замечаю, что сейчас всё больше не люблю такие масштабные встречи. Когда людей больше пяти, я уже начинаю чувствовать усталость.",
+          "text_translation_en": "I've noticed that I dislike these large-scale gatherings more and more now. Once there are more than five people, I start to feel tired.",
+          "text_original": "我发现自己现在越来越不喜欢这种大规模的聚会了。超过五个人我就开始觉得累。"
+        },
+        {
+          "id": "h6d38-s11",
+          "speaker": "A",
+          "pinyin": "Zhè shuōmíng nǐ xūyào tíqián guīhuà hǎo shèjiāo huódòng. Xià cì cānjiā jùhuì qián, nǐ kěyǐ gěi zìjǐ shèdìng yī ge shíjiān, bǐrú dāi yī ge xiǎoshí jiù zǒu.",
+          "text_translation": "Bu shuni anglatadiki, sen ijtimoiy tadbirlarni oldindan yaxshilab rejalashtirishing kerak. Keyingi safar uchrashuvga borishdan oldin, o'zingga vaqt belgilab qo'yishing mumkin, masalan, bir soat turib ketish.",
+          "text_translation_ru": "Это значит, что тебе нужно заранее планировать социальные мероприятия. В следующий раз перед встречей ты можешь установить себе время, например, побыть час и уйти.",
+          "text_translation_en": "That means you need to plan your social activities in advance. Next time before going to a gathering, you can set yourself a time limit, like staying an hour and then leaving.",
+          "text_original": "这说明你需要提前规划好社交活动。下次参加聚会前，你可以给自己设定一个时间，比如待一个小时就走。"
+        },
+        {
+          "id": "h6d38-s12",
+          "speaker": "B",
+          "pinyin": "Zhè ge zhǔyi búcuò. Érqiě wǒ yǐhòu yào xuǎnzéxìng de cānjiā huódòng, zhǐ qù nàxiē zhēnzhèng ràng wǒ gǎnjué shūfu de chǎnghé.",
+          "text_translation": "Bu yaxshi fikr. Bundan tashqari, men keyinchalik tadbirlarda tanlab qatnashaman, faqat meni haqiqatan ham qulay his qildiradigan joylargagina boraman.",
+          "text_translation_ru": "Это хорошая идея. К тому же я впредь буду участвовать в мероприятиях избирательно, ходить только туда, где мне действительно комфортно.",
+          "text_translation_en": "That's a good idea. Besides, from now on I'll attend events selectively, only going to those occasions where I genuinely feel comfortable.",
+          "text_original": "这个主意不错。而且我以后要选择性地参加活动，只去那些真正让我感到舒服的场合。"
+        },
+        {
+          "id": "h6d38-s13",
+          "speaker": "A",
+          "pinyin": "Duì, xuéhuì bǎohù zìjǐ de shèjiāo néngliàng hěn zhòngyào. Ǒu'ěr 'xiāoshī' yíxià, bú shì lěngmò, ér shì zài chōngdiàn.",
+          "text_translation": "To'g'ri, o'zingning ijtimoiy energiyangni asrashni o'rganish juda muhim. Vaqti-vaqti bilan 「g'oyib bo'lib」 turish befarqlik emas, balki quvvat to'plashdir.",
+          "text_translation_ru": "Верно, очень важно научиться беречь свою социальную энергию. Иногда 「исчезнуть」 — это не равнодушие, а подзарядка.",
+          "text_translation_en": "Right, learning to protect your own social energy is very important. Occasionally 「disappearing」 isn't being cold, it's recharging.",
+          "text_original": "对，学会保护自己的社交能量很重要。偶尔「消失」一下，不是冷漠，而是在充电。"
+        },
+        {
+          "id": "h6d38-s14",
+          "speaker": "B",
+          "pinyin": "Nǐ shuō de tài duì le. Wǒ jīntiān dǎsuàn yī ge rén dāi zhe, shuí dōu bú jiàn, huīfù yíxià yuánqì.",
+          "text_translation": "Juda to'g'ri aytding. Men bugun yolg'iz o'zim qolmoqchiman, hech kim bilan ko'rishmayman, biroz kuch-quvvatimni tiklayman.",
+          "text_translation_ru": "Ты совершенно прав. Сегодня я собираюсь побыть один, ни с кем не видеться, немного восстановить силы.",
+          "text_translation_en": "You're absolutely right. Today I plan to be alone, not see anyone, and recover my energy a bit.",
+          "text_original": "你说得太对了。我今天打算一个人待着，谁都不见，恢复一下元气。"
+        }
+      ]
+    }
+  ]
+}

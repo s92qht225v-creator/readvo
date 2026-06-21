@@ -1,0 +1,171 @@
+{
+  "id": "hsk6-dialogue27",
+  "slug": "dividing-chores",
+  "title": "家务分工",
+  "pinyin": "Jiāwù fēngōng",
+  "titleTranslation": "Uy ishlari taqsimoti",
+  "titleTranslation_ru": "Распределение домашних дел",
+  "titleTranslation_en": "Dividing Chores",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "家务",
+    "分工",
+    "水池",
+    "堆满",
+    "叠衣服",
+    "至于",
+    "闲着",
+    "家务活",
+    "拖到",
+    "机器人",
+    "明确",
+    "擅长"
+  ],
+  "sections": [
+    {
+      "id": "h6d27-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d27-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ jīntiān zěnme le? Yī huí jiā jiù bù shuōhuà.",
+          "text_translation": "Bugun senga nima bo'ldi? Uyga kelishing bilan gapirmay qo'yding.",
+          "text_translation_ru": "Что с тобой сегодня? Как только пришёл домой, перестал разговаривать.",
+          "text_translation_en": "What's wrong with you today? You stopped talking the moment you got home.",
+          "text_original": "你今天怎么了？一回家就不说话。"
+        },
+        {
+          "id": "h6d27-s2",
+          "speaker": "B",
+          "pinyin": "Wǒ jīntiān lèi le yī tiān, huílái kàn dào chúfáng shuǐchí lǐ duī mǎn le wǎn, dì shàng dōu shì huī, nǐ yī xiàwǔ zài gàn shénme?",
+          "text_translation": "Men bugun kun bo'yi charchadim, kelib qarasam oshxona rakovinasi idishlarga to'lib ketibdi, pol changga to'la, sen butun tushdan keyin nima qilding?",
+          "text_translation_ru": "Я сегодня устал за весь день, прихожу и вижу, что раковина на кухне завалена посудой, на полу всюду пыль — ты что делал весь день после обеда?",
+          "text_translation_en": "I was tired all day, and when I came back I saw the kitchen sink piled up with dishes and the floor covered in dust — what were you doing all afternoon?",
+          "text_original": "我今天累了一天，回来看到厨房水池里堆满了碗，地上都是灰，你一下午在干什么？"
+        },
+        {
+          "id": "h6d27-s3",
+          "speaker": "A",
+          "pinyin": "Wǒ xiàwǔ yě máng le yī xiàwǔ, xǐ yīfu, dié yīfu, hái qù chāoshì mǎi le cài. Wǎn wǒ dǎsuàn chī wán fàn yīqǐ xǐ de.",
+          "text_translation": "Men ham butun tushdan keyin band bo'ldim, kir yuvdim, kiyim taxladim, hatto do'konga borib oziq-ovqat oldim. Idishlarni ovqatdan keyin birga yuvmoqchi edim.",
+          "text_translation_ru": "Я тоже был занят весь день после обеда: стирал бельё, складывал одежду, ещё ходил в магазин за продуктами. Посуду я собирался помыть всю сразу после еды.",
+          "text_translation_en": "I was busy all afternoon too — I did the laundry, folded clothes, and even went to the supermarket for groceries. I was planning to wash the dishes all at once after dinner.",
+          "text_original": "我下午也忙了一下午，洗衣服、叠衣服、还去超市买了菜。碗我打算吃完饭一起洗的。"
+        },
+        {
+          "id": "h6d27-s4",
+          "speaker": "B",
+          "pinyin": "Měi cì dōu děng chī wán fàn yīqǐ xǐ, nà xiànzài de wǎn shuí lái xǐ?",
+          "text_translation": "Har safar ovqatdan keyin birga yuvishni kutasan, unda hozirgi idishlarni kim yuvadi?",
+          "text_translation_ru": "Каждый раз ждёшь, чтобы помыть всё сразу после еды, — а кто тогда помоет нынешнюю посуду?",
+          "text_translation_en": "Every time you wait to wash everything at once after dinner — then who's going to wash the dishes that are there now?",
+          "text_original": "每次都等吃完饭一起洗，那现在的碗谁来洗？"
+        },
+        {
+          "id": "h6d27-s5",
+          "speaker": "A",
+          "pinyin": "Wǒ méi shuō bù xǐ, nǐ zhìyú zhème jí ma? Nǐ huílái yě méi xián zhe, hái zài shuā shǒujī.",
+          "text_translation": "Men yuvmayman demadim-ku, shunchalik shoshilishga arziydimi? Sen ham kelib bekor turganing yo'q, telefon titkilab o'tiribsan.",
+          "text_translation_ru": "Я не говорил, что не буду мыть, стоит ли так нервничать? Ты тоже, придя домой, не сидел без дела — всё в телефоне.",
+          "text_translation_en": "I didn't say I wouldn't wash them — is it really worth getting so worked up? You weren't idle when you came back either, you're still scrolling your phone.",
+          "text_original": "我没说不洗，你至于这么急吗？你回来也没闲着，还在刷手机。"
+        },
+        {
+          "id": "h6d27-s6",
+          "speaker": "B",
+          "pinyin": "Wǒ shuā shǒujī shì yīnwèi wǒ tài lèi le, xiǎng xiūxi wǔ fēnzhōng. Nǐ yǒngyuǎn dōu shì zhèyàng, jiāwù huó zǒng shì tuō dào zuìhòu yī kè.",
+          "text_translation": "Men telefonni titkilayotganim juda charchaganim uchun, besh daqiqa dam olmoqchi edim. Sen doim shunaqasan, uy ishlarini doim oxirgi daqiqagacha cho'zasan.",
+          "text_translation_ru": "Я сижу в телефоне, потому что слишком устал и хочу отдохнуть пять минут. Ты всегда такой — домашние дела вечно откладываешь до последней минуты.",
+          "text_translation_en": "I'm on my phone because I'm too tired and want to rest for five minutes. You're always like this — you always put off the chores until the last minute.",
+          "text_original": "我刷手机是因为我太累了，想休息五分钟。你永远都是这样，家务活总是拖到最后一刻。"
+        },
+        {
+          "id": "h6d27-s7",
+          "speaker": "A",
+          "pinyin": "Nà nǐ juéde wǒ yīnggāi zěnme zuò? Wǒ yě bú shì jīqìrén, wǒ yě xiǎng xiūxi.",
+          "text_translation": "Unda menimcha nima qilishim kerak deb o'ylaysan? Men ham robot emasman, men ham dam olishni xohlayman.",
+          "text_translation_ru": "Тогда как, по-твоему, я должен поступать? Я ведь не робот, я тоже хочу отдохнуть.",
+          "text_translation_en": "So what do you think I should do? I'm not a robot either, I also want to rest.",
+          "text_original": "那你觉得我应该怎么做？我也不是机器人，我也想休息。"
+        },
+        {
+          "id": "h6d27-s8",
+          "speaker": "B",
+          "pinyin": "Wǒmen xūyào yī ge míngquè de fēngōng. Yǐhòu nǐ fùzé zuò fàn hé xǐ wǎn, wǒ fùzé sǎo dì hé tuō dì, zhèyàng jiù bú huì yǒu máodùn le.",
+          "text_translation": "Bizga aniq vazifa taqsimoti kerak. Bundan keyin sen ovqat pishirish va idish yuvishga, men supurish va pol artishga mas'ul bo'laman, shunda ziddiyat bo'lmaydi.",
+          "text_translation_ru": "Нам нужно чёткое распределение обязанностей. С этого момента ты отвечаешь за готовку и мытьё посуды, а я за подметание и мытьё полов — тогда не будет конфликтов.",
+          "text_translation_en": "We need a clear division of labor. From now on you're in charge of cooking and washing dishes, and I'm in charge of sweeping and mopping the floor — that way there won't be any conflicts.",
+          "text_original": "我们需要一个明确的分工。以后你负责做饭和洗碗，我负责扫地和拖地，这样就不会有矛盾了。"
+        },
+        {
+          "id": "h6d27-s9",
+          "speaker": "A",
+          "pinyin": "Píng shénme wǒ zuò fàn yòu xǐ wǎn? Zuò fàn yǐjīng gòu lèi le, wǎn yīnggāi nǐ xǐ.",
+          "text_translation": "Nega men ham ovqat pishiraman, ham idish yuvaman? Ovqat pishirishning o'zi yetarlicha charchatadi, idishlarni sen yuvishing kerak.",
+          "text_translation_ru": "С какой стати я и готовлю, и мою посуду? Готовка и так достаточно утомительна, посуду должна мыть ты.",
+          "text_translation_en": "Why should I both cook and wash the dishes? Cooking is tiring enough already — you should wash the dishes.",
+          "text_original": "凭什么我做饭又洗碗？做饭已经够累了，碗应该你洗。"
+        },
+        {
+          "id": "h6d27-s10",
+          "speaker": "B",
+          "pinyin": "Nà huàn yīxià, nǐ sǎo dì tuō dì, wǒ zuò fàn xǐ wǎn?",
+          "text_translation": "Unda almashaylik, sen supurib pol artasan, men ovqat pishirib idish yuvaman?",
+          "text_translation_ru": "Тогда давай поменяемся: ты подметаешь и моешь полы, а я готовлю и мою посуду?",
+          "text_translation_en": "Then let's swap — you sweep and mop the floor, and I cook and wash the dishes?",
+          "text_original": "那换一下，你扫地拖地，我做饭洗碗？"
+        },
+        {
+          "id": "h6d27-s11",
+          "speaker": "A",
+          "pinyin": "Yě bùxíng, nǐ zuò de fàn tài nán chī le.",
+          "text_translation": "Bu ham bo'lmaydi, sen pishirgan ovqat juda bemaza.",
+          "text_translation_ru": "Тоже не пойдёт — еда, которую ты готовишь, слишком невкусная.",
+          "text_translation_en": "That won't work either — the food you cook is too unappetizing.",
+          "text_original": "也不行，你做的饭太难吃了。"
+        },
+        {
+          "id": "h6d27-s12",
+          "speaker": "B",
+          "pinyin": "Nà jiù ànzhào gèzì shàncháng de lái fēn. Nǐ zuò fàn hǎochī, nǐ zuò; wǒ xǐ wǎn kuài, wǒ xǐ. Xíng le ba?",
+          "text_translation": "Unda har kim qaysiga mohir bo'lsa, shunga qarab taqsimlaylik. Sen mazali ovqat pishirasan, sen pishir; men tez idish yuvaman, men yuvaman. Bo'ldimi?",
+          "text_translation_ru": "Тогда давай делить по тому, у кого что лучше получается. Ты вкусно готовишь — ты готовь; я быстро мою посуду — я мою. Договорились?",
+          "text_translation_en": "Then let's split it according to what each of us is good at. You cook well, so you cook; I wash dishes quickly, so I wash. Okay?",
+          "text_original": "那就按照各自擅长的来分。你做饭好吃，你做；我洗碗快，我洗。行了吧？"
+        },
+        {
+          "id": "h6d27-s13",
+          "speaker": "A",
+          "pinyin": "Zhè hái chàbuduō. Dàn dì shuí tuō?",
+          "text_translation": "Mana bu ma'qulroq. Lekin polni kim artadi?",
+          "text_translation_ru": "Вот это уже более-менее. Но кто будет мыть пол?",
+          "text_translation_en": "That's more like it. But who's going to mop the floor?",
+          "text_original": "这还差不多。但地谁拖？"
+        },
+        {
+          "id": "h6d27-s14",
+          "speaker": "B",
+          "pinyin": "Zhōumò yīqǐ tuō. Zhèyàng gōngpíng le ba?",
+          "text_translation": "Dam olish kunlari birga artamiz. Shunday adolatli bo'ldimi?",
+          "text_translation_ru": "По выходным будем мыть вместе. Так справедливо?",
+          "text_translation_en": "We'll mop it together on weekends. That's fair, right?",
+          "text_original": "周末一起拖。这样公平了吧？"
+        },
+        {
+          "id": "h6d27-s15",
+          "speaker": "A",
+          "pinyin": "Gōngpíng. Nǐ yàoshi zǎo zhème shuō, wǒ jiù bù shēngqì le.",
+          "text_translation": "Adolatli. Agar shuni avvalroq aytganingda, men jahlim chiqmas edi.",
+          "text_translation_ru": "Справедливо. Если бы ты сказала так пораньше, я бы не злился.",
+          "text_translation_en": "Fair. If you'd said this earlier, I wouldn't have gotten angry.",
+          "text_original": "公平。你要是早这么说，我就不生气了。"
+        }
+      ]
+    }
+  ]
+}

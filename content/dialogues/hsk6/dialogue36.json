@@ -1,0 +1,182 @@
+{
+  "id": "hsk6-dialogue36",
+  "slug": "procrastination",
+  "title": "拖延症",
+  "pinyin": "Tuōyán zhèng",
+  "titleTranslation": "Sustkashlik kasalligi",
+  "titleTranslation_ru": "Прокрастинация",
+  "titleTranslation_en": "Procrastination",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "拖延症",
+    "动手",
+    "迈不出",
+    "头大",
+    "逃避",
+    "负担",
+    "步骤",
+    "衣柜",
+    "截止日期",
+    "危害",
+    "即时满足",
+    "快感",
+    "搞定",
+    "奖励"
+  ],
+  "sections": [
+    {
+      "id": "h6d36-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d36-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ fángjiān zěnme háishì zhème luàn? Shàng zhōu bú shì shuō yào shōushi ma?",
+          "text_translation": "Xonang nega hali ham shunchalik tartibsiz? O'tgan hafta yig'ishtiraman demaganmiding?",
+          "text_translation_ru": "Почему у тебя в комнате всё ещё такой беспорядок? Разве на прошлой неделе ты не говорил, что приберёшься?",
+          "text_translation_en": "Why is your room still such a mess? Didn't you say last week you'd clean it up?",
+          "text_original": "你房间怎么还是这么乱？上周不是说要收拾吗？"
+        },
+        {
+          "id": "h6d36-s2",
+          "speaker": "B",
+          "pinyin": "Wǒ zhīdào, dàn měi cì xiǎng dòngshǒu de shíhou, jiù juéde hǎo máfan, xiǎng zhe 'zài děng yīhuǐr', jiéguǒ děng dào xiànzài yě méi dòng.",
+          "text_translation": "Bilaman, lekin har safar ishga kirishmoqchi bo'lganimda juda mashaqqatli tuyuladi, «yana bir oz kutay» deb o'ylayman, oqibatda hozirgacha kutib ham hech narsa qilmadim.",
+          "text_translation_ru": "Я знаю, но каждый раз, когда хочу взяться за дело, мне кажется это таким хлопотным, думаю «подожду ещё немного», и в итоге дотянул до сих пор и так ничего и не сделал.",
+          "text_translation_en": "I know, but every time I want to get started, it feels like such a hassle, I think 「I'll wait a little longer」, and as a result I've waited until now and still haven't done anything.",
+          "text_original": "我知道，但每次想动手的时候，就觉得好麻烦，想着「再等一会儿」，结果等到现在也没动。"
+        },
+        {
+          "id": "h6d36-s3",
+          "speaker": "A",
+          "pinyin": "Nǐ zhè yě tài tuōyán le. Tuō le yī ge xīngqī, fángjiān zhǐ huì yuè lái yuè luàn.",
+          "text_translation": "Sen juda ham sustkashlik qilyapsan. Bir hafta cho'zsang, xona faqat tobora tartibsizroq bo'ladi.",
+          "text_translation_ru": "Ты уж слишком тянешь. Откладывал целую неделю, и в комнате будет только всё больше беспорядка.",
+          "text_translation_en": "You're really procrastinating too much. Putting it off for a week, the room will only get messier and messier.",
+          "text_original": "你这也太拖延了。拖了一个星期，房间只会越来越乱。"
+        },
+        {
+          "id": "h6d36-s4",
+          "speaker": "B",
+          "pinyin": "Wǒ yě zhīdào, dàn jiùshì mài bù chū dì-yī bù. Měi cì kàn dào nà duī yīfu hé shū, wǒ jiù juéde tóu dà, gāncuì zhuāngzuò méi kànjiàn.",
+          "text_translation": "Men ham bilaman, lekin birinchi qadamni tashlay olmayman. Har safar o'sha kiyim va kitob uyumini ko'rganimda boshim qotadi, shunchaki ko'rmaganga olaman.",
+          "text_translation_ru": "Я тоже это знаю, но просто не могу сделать первый шаг. Каждый раз, когда вижу ту кучу одежды и книг, у меня голова идёт кругом, и я попросту делаю вид, что не замечаю.",
+          "text_translation_en": "I know that too, but I just can't take the first step. Every time I see that pile of clothes and books, my head spins, and I simply pretend I didn't see it.",
+          "text_original": "我也知道，但就是迈不出第一步。每次看到那堆衣服和书，我就觉得头大，干脆装作没看见。"
+        },
+        {
+          "id": "h6d36-s5",
+          "speaker": "A",
+          "pinyin": "Zhè jiùshì diǎnxíng de tuōyán zhèng. Nǐ yuè shì táobì, xīnlǐ fùdān yuè zhòng, zuìhòu fǎn'ér huā gèng shǎo de shíjiān qù wánchéng.",
+          "text_translation": "Bu aynan tipik sustkashlik kasalligi. Qancha qochsang, ruhiy yuk shuncha og'irlashadi, oxir-oqibat aksincha tugatish uchun kamroq vaqt sarflagan bo'larding.",
+          "text_translation_ru": "Это и есть типичная прокрастинация. Чем больше ты избегаешь, тем тяжелее психологическая нагрузка, а в конце концов наоборот потратил бы меньше времени, чтобы закончить.",
+          "text_translation_en": "This is exactly typical procrastination. The more you avoid it, the heavier the psychological burden, and in the end you'd actually spend less time to finish it.",
+          "text_original": "这就是典型的拖延症。你越是逃避，心理负担越重，最后反而花更少的时间去完成。"
+        },
+        {
+          "id": "h6d36-s6",
+          "speaker": "B",
+          "pinyin": "Wǒ qíshí bú shì bù xiǎng zuò, jiùshì juéde zuò zhè jiàn shì huì ràng wǒ hěn lèi, suǒyǐ yìzhí tuō.",
+          "text_translation": "Aslida qilishni istamayotganim yo'q, faqat shu ishni qilish meni juda charchatadi deb o'ylayman, shuning uchun doim cho'zib yuraman.",
+          "text_translation_ru": "На самом деле я не то чтобы не хочу делать, просто мне кажется, что это дело меня сильно вымотает, поэтому всё откладываю.",
+          "text_translation_en": "Actually it's not that I don't want to do it, I just feel that doing this thing will tire me out a lot, so I keep putting it off.",
+          "text_original": "我其实不是不想做，就是觉得做这件事会让我很累，所以一直拖。"
+        },
+        {
+          "id": "h6d36-s7",
+          "speaker": "A",
+          "pinyin": "Wǒ jiāo nǐ yī ge bànfǎ: bǎ dà rènwu chāi chéng xiǎo bùzhòu. Bǐrú bú yào xiǎng 'wǒ yào shōushi zhěng ge fángjiān', ér shì 'wǒ jīntiān xiān bǎ zhuō shàng de shū fàng huí shūjià'.",
+          "text_translation": "Senga bir usul o'rgatay: katta vazifani kichik bosqichlarga bo'l. Masalan, «butun xonani yig'ishtirishim kerak» deb o'ylama, balki «bugun avval stol ustidagi kitoblarni javonga qaytarib qo'yaman» de.",
+          "text_translation_ru": "Я научу тебя одному способу: раздели большую задачу на маленькие шаги. Например, не думай «мне надо убрать всю комнату», а «сегодня я сначала верну книги со стола на полку».",
+          "text_translation_en": "Let me teach you a method: break the big task into small steps. For example, don't think 「I have to clean the whole room」, but rather 「today I'll first put the books on the desk back on the shelf」.",
+          "text_original": "我教你一个办法：把大任务拆成小步骤。比如不要想「我要收拾整个房间」，而是「我今天先把桌上的书放回书架」。"
+        },
+        {
+          "id": "h6d36-s8",
+          "speaker": "B",
+          "pinyin": "Zhè ge bànfǎ tīng qǐlái hǎoxiàng kěyǐ shì shi. Nà wǒ jīntiān de mùbiāo jiùshì bǎ yīguì zhěnglǐ hǎo, qítā de bù guǎn.",
+          "text_translation": "Bu usul eshitishga sinab ko'rsa bo'ladigandek tuyuladi. Unda bugungi maqsadim shkafni tartibga keltirish bo'ladi, qolganlariga aralashmayman.",
+          "text_translation_ru": "Этот способ, кажется, можно попробовать. Тогда моя цель на сегодня — привести в порядок шкаф, до остального дела нет.",
+          "text_translation_en": "This method sounds like it's worth a try. Then my goal for today is to tidy up the wardrobe, and I won't bother with the rest.",
+          "text_original": "这个办法听起来好像可以试试。那我今天的目标就是把衣柜整理好，其他的不管。"
+        },
+        {
+          "id": "h6d36-s9",
+          "speaker": "A",
+          "pinyin": "Duì! Wánchéng yī ge xiǎo rènwu zhīhòu, nǐ huì juéde zìjǐ hěn yǒu chéngjiù gǎn, ránhòu jiù yǒu dònglì zuò xià yī jiàn le.",
+          "text_translation": "To'g'ri! Bir kichik vazifani tugatganingdan keyin, o'zingni juda yutuqqa erishgandek his qilasan, keyin esa keyingisini qilishga rag'bat paydo bo'ladi.",
+          "text_translation_ru": "Верно! После того как выполнишь одну маленькую задачу, ты почувствуешь чувство достижения, а потом появится мотивация сделать следующее.",
+          "text_translation_en": "Right! After completing one small task, you'll feel a sense of accomplishment, and then you'll have the motivation to do the next one.",
+          "text_original": "对！完成一个小任务之后，你会觉得自己很有成就感，然后就有动力做下一件了。"
+        },
+        {
+          "id": "h6d36-s10",
+          "speaker": "B",
+          "pinyin": "Kěshì wǒ fāxiàn wǒ bù jǐn tuōyán shōushi fángjiān, gōngzuò shàng yě jīngcháng tuō dào jiézhǐ rìqī qián cái kāishǐ zuò.",
+          "text_translation": "Lekin men shuni sezdimki, men nafaqat xona yig'ishtirishni cho'zaman, ishda ham ko'pincha muddat tugashi oldidan endigina ishlay boshlayman.",
+          "text_translation_ru": "Но я заметил, что я откладываю не только уборку комнаты — на работе тоже часто тяну до самого дедлайна и только тогда начинаю делать.",
+          "text_translation_en": "But I've noticed that I don't just procrastinate on cleaning the room, at work I also often put things off until right before the deadline before I start.",
+          "text_original": "可是我发现我不仅拖延收拾房间，工作上也经常拖到截止日期前才开始做。"
+        },
+        {
+          "id": "h6d36-s11",
+          "speaker": "A",
+          "pinyin": "Nà nǐ bǐ wǒ yánzhòng. Wǒ zài gōngzuò shàng bú huì tuōyán, yīnwèi tuōyán huì yǐngxiǎng biérén duì wǒ de píngjià.",
+          "text_translation": "Unda sen mendan og'irroqsan. Men ishda sustkashlik qilmayman, chunki sustkashlik boshqalarning men haqimdagi bahosiga ta'sir qiladi.",
+          "text_translation_ru": "Тогда у тебя всё серьёзнее, чем у меня. Я на работе не тяну, потому что промедление повлияет на то, как другие меня оценивают.",
+          "text_translation_en": "Then you're worse than me. I don't procrastinate at work, because procrastination would affect how others evaluate me.",
+          "text_original": "那你比我严重。我在工作上不会拖延，因为拖延会影响别人对我的评价。"
+        },
+        {
+          "id": "h6d36-s12",
+          "speaker": "B",
+          "pinyin": "Wǒ qíshí yě zhīdào tuōyán de wéihài, dàn jiùshì gǎi bù liǎo. Yǒu shíhou wǒ nìngyuàn qù shuā yī ge xiǎoshí duǎn shìpín, yě bú yuànyì zuò shí fēnzhōng de zhèngshì.",
+          "text_translation": "Aslida men ham sustkashlikning zararini bilaman, lekin uni o'zgartira olmayman. Ba'zan o'n daqiqalik haqiqiy ishni qilishni xohlamasdan, bir soat qisqa videolarni varaqlashni afzal ko'raman.",
+          "text_translation_ru": "На самом деле я тоже знаю о вреде прокрастинации, но просто не могу с этим справиться. Иногда я лучше час буду листать короткие видео, чем десять минут заниматься настоящим делом.",
+          "text_translation_en": "Actually I know the harm of procrastination too, but I just can't change it. Sometimes I'd rather scroll short videos for an hour than spend ten minutes doing real work.",
+          "text_original": "我其实也知道拖延的危害，但就是改不了。有时候我宁愿去刷一个小时短视频，也不愿意做十分钟的正事。"
+        },
+        {
+          "id": "h6d36-s13",
+          "speaker": "A",
+          "pinyin": "Nà shì yīnwèi nǐ de dànǎo zài zhuīqiú jíshí mǎnzú. Shuā shìpín néng dài lái duǎnzàn de kuàigǎn, ér zuò zhèngshì xūyào nàixīn hé zhuānzhù.",
+          "text_translation": "Bu sening miyang lahzalik qoniqishni quvayotgani uchun. Video varaqlash qisqa muddatli zavq keltiradi, haqiqiy ish esa sabr va e'tibor talab qiladi.",
+          "text_translation_ru": "Это потому, что твой мозг гонится за мгновенным удовольствием. Листание видео даёт кратковременное наслаждение, а настоящее дело требует терпения и сосредоточенности.",
+          "text_translation_en": "That's because your brain is chasing instant gratification. Scrolling videos brings brief pleasure, while doing real work requires patience and focus.",
+          "text_original": "那是因为你的大脑在追求即时满足。刷视频能带来短暂的快感，而做正事需要耐心和专注。"
+        },
+        {
+          "id": "h6d36-s14",
+          "speaker": "B",
+          "pinyin": "Nǐ shuō de tài duì le. Wǒ juédìng cóng xiànzài kāishǐ, měitiān xiān zuò zuì bù xiǎng zuò de nà jiàn shì, zuò wán zài shuā shǒujī.",
+          "text_translation": "Juda to'g'ri aytding. Hozirdan boshlab, har kuni avval eng qilgim kelmaydigan ishni qilishga, tugatgandan keyingina telefonni varaqlashga qaror qildim.",
+          "text_translation_ru": "Ты совершенно прав. Я решил, что начиная с этого момента каждый день буду сначала делать то дело, которое меньше всего хочется делать, а уже потом листать телефон.",
+          "text_translation_en": "You're absolutely right. I've decided that from now on, every day I'll first do the thing I least want to do, and only scroll my phone after finishing it.",
+          "text_original": "你说得太对了。我决定从现在开始，每天先做最不想做的那件事，做完再刷手机。"
+        },
+        {
+          "id": "h6d36-s15",
+          "speaker": "A",
+          "pinyin": "Zhè jiùshì 'xiān chī qīngwā' yuánzé. Rúguǒ nǐ měitiān xiān bǎ zuì nán de shìqing gǎo dìng, shèngxià de shíjiān jiù huì qīngsōng hěnduō.",
+          "text_translation": "Bu aynan «avval qurbaqani yeyish» tamoyili. Agar har kuni avval eng qiyin ishni uddalasang, qolgan vaqting ancha yengil o'tadi.",
+          "text_translation_ru": "Это и есть принцип «сначала съешь лягушку». Если ты каждый день сначала справишься с самым трудным делом, оставшееся время будет намного легче.",
+          "text_translation_en": "This is exactly the 「eat the frog first」 principle. If you get the hardest thing done first every day, the rest of your time will be much easier.",
+          "text_original": "这就是「先吃青蛙」原则。如果你每天先把最难的事情搞定，剩下的时间就会轻松很多。"
+        },
+        {
+          "id": "h6d36-s16",
+          "speaker": "B",
+          "pinyin": "Hǎo, wǒ jīntiān jiù kāishǐ zhíxíng. Xiān bǎ yīguì shōushi hǎo, zài jiǎnglì zìjǐ kàn yī jí jù.",
+          "text_translation": "Yaxshi, bugundanoq amalga oshira boshlayman. Avval shkafni yig'ishtiraman, keyin o'zimni bir qism serial ko'rish bilan mukofotlayman.",
+          "text_translation_ru": "Хорошо, прямо сегодня и начну выполнять. Сначала приберу шкаф, а потом награжу себя одной серией сериала.",
+          "text_translation_en": "Okay, I'll start carrying it out today. First I'll tidy up the wardrobe, then reward myself by watching one episode of a show.",
+          "text_original": "好，我今天就开始执行。先把衣柜收拾好，再奖励自己看一集剧。"
+        }
+      ]
+    }
+  ]
+}

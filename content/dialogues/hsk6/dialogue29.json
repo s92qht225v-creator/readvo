@@ -1,0 +1,162 @@
+{
+  "id": "hsk6-dialogue29",
+  "slug": "parental-pressure",
+  "title": "父母催婚",
+  "pinyin": "Fùmǔ cuīhūn",
+  "titleTranslation": "Ota-onaning turmushga undashi",
+  "titleTranslation_ru": "Родители торопят с браком",
+  "titleTranslation_en": "Parental Pressure",
+  "level": 6,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "催婚",
+    "对象",
+    "起茧",
+    "拼事业",
+    "挑完",
+    "必经之路",
+    "相亲",
+    "社交圈",
+    "出发点",
+    "期限",
+    "稳住",
+    "把柄"
+  ],
+  "sections": [
+    {
+      "id": "h6d29-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d29-s1",
+          "speaker": "A",
+          "pinyin": "Nǐ zuìjìn zěnme dōu bù jiē nǐ mā de diànhuà? Tā zuótiān dǎ dào wǒ zhèr lái le.",
+          "text_translation": "Nega oxirgi paytlarda onangning telefoniga umuman javob bermayapsan? U kecha menikiga qo'ng'iroq qildi.",
+          "text_translation_ru": "Почему ты в последнее время совсем не отвечаешь на звонки своей мамы? Она вчера позвонила мне.",
+          "text_translation_en": "Why haven't you been answering your mom's calls lately? She called me yesterday.",
+          "text_original": "你最近怎么都不接你妈的电话？她昨天打到我这儿来了。"
+        },
+        {
+          "id": "h6d29-s2",
+          "speaker": "B",
+          "pinyin": "Wǒ zhīdào tā yòu yào cuīhūn. Měi cì dǎ diànhuà dōu shì wèn 'yǒu duìxiàng le ma' 'shénme shíhou jiéhūn', wǒ ěrduo dōu qǐ jiǎn le.",
+          "text_translation": "Bilaman, u yana turmushga undamoqchi. Har safar qo'ng'iroq qilganda 「yigiting bormi」 「qachon turmushga chiqasan」 deb so'raydi, qulog'imda qadoq paydo bo'ldi.",
+          "text_translation_ru": "Я знаю, она опять будет торопить с браком. Каждый раз, когда звонит, спрашивает 「есть ли у тебя кто-нибудь」 「когда выйдешь замуж」, у меня уже уши в мозолях.",
+          "text_translation_en": "I know she wants to push me to get married again. Every time she calls she asks 「do you have someone」 「when will you get married」, my ears have gone numb from it.",
+          "text_original": "我知道她又要催婚。每次打电话都是问「有对象了吗」「什么时候结婚」，我耳朵都起茧了。"
+        },
+        {
+          "id": "h6d29-s3",
+          "speaker": "A",
+          "pinyin": "Nǐ mā yě shì wèi nǐ hǎo, niánjì bù xiǎo le, tā zháojí yě hěn zhèngcháng.",
+          "text_translation": "Onang ham senga yaxshilik tilaydi, yoshing ham kichkina emas, uning xavotirlanishi tabiiy.",
+          "text_translation_ru": "Твоя мама ведь желает тебе добра, ты уже не маленькая, и то, что она волнуется, вполне нормально.",
+          "text_translation_en": "Your mom means well for you, you're not so young anymore, and it's normal for her to worry.",
+          "text_original": "你妈也是为你好，年纪不小了，她着急也很正常。"
+        },
+        {
+          "id": "h6d29-s4",
+          "speaker": "B",
+          "pinyin": "Wǒ lǐjiě tā zháojí, dàn jiéhūn yòu bú shì mǎi cài, shuō mǎi jiù néng mǎi. Gǎnqíng de shì děi mànmàn lái.",
+          "text_translation": "Uning xavotirini tushunaman, lekin turmushga chiqish sabzavot sotib olishga o'xshamaydi, olaman desang darrov bo'lmaydi. His-tuyg'u masalasi asta-sekin bo'lishi kerak.",
+          "text_translation_ru": "Я понимаю, что она волнуется, но женитьба — это не покупка овощей, захотел купить и купил. Дела сердечные требуют времени.",
+          "text_translation_en": "I understand she's anxious, but marriage isn't like buying vegetables, where you just decide and buy. Matters of the heart take time.",
+          "text_original": "我理解她着急，但结婚又不是买菜，说买就能买。感情的事得慢慢来。"
+        },
+        {
+          "id": "h6d29-s5",
+          "speaker": "A",
+          "pinyin": "Nà nǐ yǒu méiyǒu gēn tā hǎohao liáo guo nǐ de xiǎngfǎ?",
+          "text_translation": "Unda sen u bilan o'z fikrlaringni yaxshilab gaplashib ko'rganmisan?",
+          "text_translation_ru": "А ты по-хорошему обсуждала с ней свои мысли?",
+          "text_translation_en": "So have you ever properly talked to her about your thoughts?",
+          "text_original": "那你有没有跟她好好聊过你的想法？"
+        },
+        {
+          "id": "h6d29-s6",
+          "speaker": "B",
+          "pinyin": "Liáo guo, dàn tā gēnběn tīng bú jìnqù. Wǒ shuō wǒ xiànzài xiǎng xiān pīn shìyè, tā shuō 'děng nǐ shìyè pīn hǎo le, hǎo nánrén dōu bèi tiāo wán le'.",
+          "text_translation": "Gaplashganman, lekin u umuman quloq solmaydi. Men hozir avval ish karyeramni qurmoqchiman desam, u 「karyerangni qurib bo'lguningcha, yaxshi erkaklarning hammasini tanlab bo'lishadi」 deydi.",
+          "text_translation_ru": "Обсуждала, но она совершенно не слушает. Я говорю, что сейчас хочу сначала построить карьеру, а она говорит 「пока ты построишь карьеру, всех хороших мужчин разберут」.",
+          "text_translation_en": "I have, but she just won't listen. I say I want to focus on my career first, and she says 「by the time you've built your career, all the good men will be taken」.",
+          "text_original": "聊过，但她根本听不进去。我说我现在想先拼事业，她说「等你事业拼好了，好男人都被挑完了」。"
+        },
+        {
+          "id": "h6d29-s7",
+          "speaker": "A",
+          "pinyin": "Hāhā, zhè huà wǒ mā yě shuō guo. Zài tāmen nà yī dài rén de guānniàn lǐ, jiéhūn shēngzǐ shì rénshēng de bìjīng zhī lù.",
+          "text_translation": "Haha, bu gapni mening onam ham aytgan. Ularning avlodi tushunchasida turmush qurish va farzand ko'rish hayotning muqarrar yo'lidir.",
+          "text_translation_ru": "Ха-ха, эти слова и моя мама говорила. В представлении того поколения вступление в брак и рождение детей — это неизбежный путь жизни.",
+          "text_translation_en": "Haha, my mom said the same thing. In their generation's mindset, getting married and having children is an inevitable path in life.",
+          "text_original": "哈哈，这话我妈也说过。在他们那一代人的观念里，结婚生子是人生的必经之路。"
+        },
+        {
+          "id": "h6d29-s8",
+          "speaker": "B",
+          "pinyin": "Shàng zhōu tā shènzhì gěi wǒ ānpái le yī chǎng xiāngqīn, wǒ bù hǎoyìsi jùjué jiù qù le. Jiéguǒ duìfāng gèng gāngà, liǎng ge rén miànduìmiàn zuò zhe dōu bù zhīdào shuō shénme.",
+          "text_translation": "O'tgan hafta u hatto menga bir tanishuv uchrashuvini tashkil qildi, rad etishga noqulay bo'lib bordim. Natijada qarshi tomon undan ham xijolat bo'lib qoldi, ikkimiz yuzma-yuz o'tirib nima deyishni ham bilmadik.",
+          "text_translation_ru": "На прошлой неделе она даже устроила мне смотрины, мне было неудобно отказаться, и я пошла. В итоге другой стороне было ещё более неловко, мы сидели лицом к лицу и не знали, что сказать.",
+          "text_translation_en": "Last week she even arranged a blind date for me, I felt too awkward to refuse so I went. In the end the other person was even more awkward, the two of us sat face to face and didn't know what to say.",
+          "text_original": "上周她甚至给我安排了一场相亲，我不好意思拒绝就去了。结果对方更尴尬，两个人面对面坐着都不知道说什么。"
+        },
+        {
+          "id": "h6d29-s9",
+          "speaker": "A",
+          "pinyin": "Xiāngqīn zhè jiàn shì quèshí gāngà. Dàn nǐ mā yě shì méi bànfǎ, tā rènshi de rén yǒuxiàn, zhǐ néng tōngguò zhè zhǒng fāngshì bāng nǐ kuòdà shèjiāo quān.",
+          "text_translation": "Tanishuv uchrashuvi haqiqatan ham xijolatli narsa. Lekin onangning ham iloji yo'q, u taniydigan odamlar cheklangan, faqat shu yo'l bilan ijtimoiy doirangni kengaytirishga yordam bera oladi.",
+          "text_translation_ru": "Смотрины — действительно неловкое дело. Но у твоей мамы тоже нет выбора, круг её знакомых ограничен, она только так может помочь тебе расширить круг общения.",
+          "text_translation_en": "Blind dates really are awkward. But your mom has no other choice, the people she knows are limited, this is the only way she can help expand your social circle.",
+          "text_original": "相亲这事儿确实尴尬。但你妈也是没办法，她认识的人有限，只能通过这种方式帮你扩大社交圈。"
+        },
+        {
+          "id": "h6d29-s10",
+          "speaker": "B",
+          "pinyin": "Wǒ zhīdào tā chūfā diǎn shì hǎo de, dàn zhè zhǒng fāngshì ràng wǒ yālì hěn dà. Wǒ xiànzài dōu bù xiǎng huí jiā guò jié le, yī jiànmiàn jiùshì cuīhūn.",
+          "text_translation": "Bilaman, uning niyati yaxshi, lekin bu usul menga juda katta bosim beradi. Endi bayramda uyga qaytishni ham xohlamayman, uchrashishimiz bilanoq turmushga undashni boshlaydi.",
+          "text_translation_ru": "Я знаю, что у неё благие намерения, но такой подход создаёт мне сильное давление. Теперь я даже не хочу ехать домой на праздники, как только встречаемся — сразу торопит с браком.",
+          "text_translation_en": "I know her intentions are good, but this approach puts a lot of pressure on me. Now I don't even want to go home for the holidays, the moment we meet she starts pushing marriage.",
+          "text_original": "我知道她出发点是好的，但这种方式让我压力很大。我现在都不想回家过节了，一见面就是催婚。"
+        },
+        {
+          "id": "h6d29-s11",
+          "speaker": "A",
+          "pinyin": "Yàobù nǐ zhǔdòng gēn nǐ mā dìng ge qīxiàn, bǐrú 'rúguǒ míngnián wǒ hái méi zhǎodào héshì de rén, wǒ jiù tīng nǐ de ānpái'. Xiān wěn zhù tā zài shuō.",
+          "text_translation": "Yoki sen o'zing onang bilan muddat belgilab qo'ysang-chi, masalan 「agar kelgusi yili hali mos odam topmasam, sening tartibingga ko'naman」 deb. Avval uni tinchlantirib qo'y, keyin ko'ramiz.",
+          "text_translation_ru": "А может, ты сама договоришься с мамой о сроке, например 「если к следующему году я всё ещё не найду подходящего человека, то послушаюсь тебя」. Сначала успокой её, а там видно будет.",
+          "text_translation_en": "Why don't you take the initiative and set a deadline with your mom, like 「if I still haven't found the right person by next year, I'll go along with your arrangements」. First settle her down, then we'll see.",
+          "text_original": "要不你主动跟你妈定个期限，比如「如果明年我还没找到合适的人，我就听你的安排」。先稳住她再说。"
+        },
+        {
+          "id": "h6d29-s12",
+          "speaker": "B",
+          "pinyin": "Zhè zhāo guǎnyòng ma? Wǒ pà tā dàoshíhou ná zhe zhè ge dāng bǎbǐng.",
+          "text_translation": "Bu usul ish beradimi? Qo'rqaman, u o'sha vaqt kelganda buni dastak qilib ushlab oladi.",
+          "text_translation_ru": "А этот приём сработает? Боюсь, она потом ухватится за это как за повод.",
+          "text_translation_en": "Will this trick work? I'm afraid she'll use it as leverage against me when the time comes.",
+          "text_original": "这招管用吗？我怕她到时候拿着这个当把柄。"
+        },
+        {
+          "id": "h6d29-s13",
+          "speaker": "A",
+          "pinyin": "Zhìshǎo néng ràng tā zànshí ānjìng xiàlái. Tóngshí nǐ yě kěyǐ ràng tā zhīdào, nǐ bú shì bù jiéhūn, zhǐshì zài děng héshì de rén.",
+          "text_translation": "Hech bo'lmaganda uni vaqtincha tinchlantira oladi. Shu bilan birga sen unga shuni bildirib qo'yishing mumkin, sen turmush qurmayman demayapsan, faqat mos odamni kutyapsan.",
+          "text_translation_ru": "По крайней мере, это позволит ей на время успокоиться. В то же время ты можешь дать ей понять, что ты не против брака, а просто ждёшь подходящего человека.",
+          "text_translation_en": "At least it can quiet her down for a while. At the same time you can let her know that you're not against marriage, you're just waiting for the right person.",
+          "text_original": "至少能让她暂时安静下来。同时你也可以让她知道，你不是不结婚，只是在等合适的人。"
+        },
+        {
+          "id": "h6d29-s14",
+          "speaker": "B",
+          "pinyin": "Xíng ba, wǒ shì shi. Xià zhōumò huíqù gēn tā hǎohao tán yī cì.",
+          "text_translation": "Mayli, urinib ko'raman. Kelgusi hafta oxiri uyga borib u bilan bir bor yaxshilab gaplashaman.",
+          "text_translation_ru": "Ладно, попробую. В следующие выходные съезжу домой и хорошенько с ней поговорю.",
+          "text_translation_en": "Alright, I'll give it a try. Next weekend I'll go back and have a proper talk with her.",
+          "text_original": "行吧，我试试。下周末回去跟她好好谈一次。"
+        }
+      ]
+    }
+  ]
+}
