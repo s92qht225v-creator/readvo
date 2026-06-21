@@ -105,14 +105,14 @@ function splitPinyinWord(word: string): string[] {
             continue;
           }
         }
-        // "n" followed by vowel: could be final "n" + new vowel-initial syllable,
-        // or part of current syllable
+        // "n" followed by a vowel: n is the INITIAL of the next syllable, not a
+        // final of the current one — e.g. zhìnéng → zhì·néng, kěnéng → kě·néng,
+        // rènào → rè·nào. (A genuine final-n before a vowel-initial syllable is
+        // written with an apostrophe, e.g. Xī'ān, and is handled above.)
         if (i + 1 < word.length && isVowel(word[i + 1])) {
-          // n + vowel: n is final of current, next vowel starts new syllable
-          current += 'n';
-          i += 1;
           syllables.push(current);
-          current = '';
+          current = 'n';
+          i += 1;
           continue;
         }
         // "n" followed by consonant: n is final
