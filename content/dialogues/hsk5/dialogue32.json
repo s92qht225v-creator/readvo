@@ -1,0 +1,188 @@
+{
+  "id": "hsk5-dialogue32",
+  "slug": "healthcare-resources",
+  "title": "医疗资源",
+  "pinyin": "Yīliáo zīyuán",
+  "titleTranslation": "Tibbiy resurslar",
+  "titleTranslation_ru": "Медицинские ресурсы",
+  "titleTranslation_en": "Healthcare Resources",
+  "level": 5,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "请假",
+    "腰疼",
+    "腰椎间盘突出",
+    "康复治疗",
+    "挂号",
+    "专家号",
+    "预约",
+    "医疗资源",
+    "分布不均",
+    "集中",
+    "社区医院",
+    "康复科",
+    "设备",
+    "康复理疗",
+    "医保",
+    "报销",
+    "慢性病",
+    "基层医疗",
+    "投入",
+    "老百姓"
+  ],
+  "sections": [
+    {
+      "id": "h5d32-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d32-s1",
+          "text_original": "你最近怎么又请假了？身体不舒服吗？",
+          "pinyin": "Nǐ zuìjìn zěnme yòu qǐngjià le? Shēntǐ bù shūfu ma?",
+          "text_translation": "Yaqinda nega yana ishdan javob olding? Mazang yo'qmi?",
+          "text_translation_ru": "Почему ты в последнее время снова взял отгул? Плохо себя чувствуешь?",
+          "text_translation_en": "Why did you take leave again recently? Are you feeling unwell?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d32-s2",
+          "text_original": "不是我自己，是我妈。她腰疼了好几个月，我带她去医院检查了一下。",
+          "pinyin": "Bú shì wǒ zìjǐ, shì wǒ mā. Tā yāo téng le hǎo jǐ ge yuè, wǒ dài tā qù yīyuàn jiǎnchá le yí xià.",
+          "text_translation": "O'zim emas, oyim. Uning beli bir necha oydan beri og'riydi, men uni shifoxonaga tekshiruvga olib bordim.",
+          "text_translation_ru": "Не я сам, а моя мама. У неё уже несколько месяцев болит поясница, и я отвёз её в больницу на обследование.",
+          "text_translation_en": "Not me — my mom. She's had back pain for several months, so I took her to the hospital for a check-up.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d32-s3",
+          "text_original": "检查结果怎么样？",
+          "pinyin": "Jiǎnchá jiéguǒ zěnmeyàng?",
+          "text_translation": "Tekshiruv natijasi qanday?",
+          "text_translation_ru": "И какие результаты обследования?",
+          "text_translation_en": "How were the test results?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d32-s4",
+          "text_original": "问题不大，就是腰椎间盘突出，需要做康复治疗。但是医院的号太难挂了，我们排了一上午才看上。",
+          "pinyin": "Wèntí bú dà, jiùshì yāozhuī jiānpán tūchū, xūyào zuò kāngfù zhìliáo. Dànshì yīyuàn de hào tài nán guà le, wǒmen pái le yí shàngwǔ cái kàn shàng.",
+          "text_translation": "Muammo katta emas, shunchaki umurtqa diski churrasi, reabilitatsiya davolanish kerak. Lekin shifoxonadan navbat olish juda qiyin, biz butun ertalab navbatda turib endi ko'rsatdik.",
+          "text_translation_ru": "Ничего серьёзного, просто грыжа межпозвоночного диска, нужна реабилитация. Но талон в больнице получить очень трудно — мы простояли в очереди всё утро, прежде чем попали к врачу.",
+          "text_translation_en": "Nothing major — just a herniated disc that needs rehabilitation therapy. But getting an appointment at the hospital is so hard; we queued all morning before we got seen.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d32-s5",
+          "text_original": "大城市看病确实不容易。专家号就更难挂了。",
+          "pinyin": "Dà chéngshì kàn bìng quèshí bù róngyì. Zhuānjiā hào jiù gèng nán guà le.",
+          "text_translation": "Katta shaharda davolanish rostdan oson emas. Mutaxassis qabuliga talon olish yanada qiyin.",
+          "text_translation_ru": "Лечиться в большом городе действительно непросто. А талон к специалисту достать ещё труднее.",
+          "text_translation_en": "Seeing a doctor in a big city really isn't easy. Getting a specialist appointment is even harder.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d32-s6",
+          "text_original": "对。我们还特意提前一周在网上预约的，结果到了医院还是等了很久。",
+          "pinyin": "Duì. Wǒmen hái tèyì tíqián yì zhōu zài wǎngshàng yùyuē de, jiéguǒ dào le yīyuàn háishì děng le hěn jiǔ.",
+          "text_translation": "To'g'ri. Biz hatto bir hafta oldin internetdan ataylab navbatga yozilgandik, baribir shifoxonaga borgach uzoq kutdik.",
+          "text_translation_ru": "Да. Мы даже специально за неделю записались онлайн, и всё равно, придя в больницу, долго ждали.",
+          "text_translation_en": "Right. We even deliberately booked online a week in advance, yet still waited a long time at the hospital.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d32-s7",
+          "text_original": "这就是大城市医疗资源分布不均的问题。好医院都集中在市中心，人多资源少。",
+          "pinyin": "Zhè jiùshì dà chéngshì yīliáo zīyuán fēnbù bù jūn de wèntí. Hǎo yīyuàn dōu jízhōng zài shìzhōngxīn, rén duō zīyuán shǎo.",
+          "text_translation": "Mana bu katta shaharlardagi tibbiy resurslarning notekis taqsimlanishi muammosi. Yaxshi shifoxonalar shahar markazida jamlangan, odam ko'p, resurs kam.",
+          "text_translation_ru": "Вот это и есть проблема неравномерного распределения медицинских ресурсов в большом городе. Хорошие больницы сосредоточены в центре, людей много, а ресурсов мало.",
+          "text_translation_en": "This is exactly the problem of uneven distribution of healthcare resources in big cities. The good hospitals are all concentrated downtown — many people, few resources.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d32-s8",
+          "text_original": "你说得对。我听说一些社区医院也有康复科，但设备和技术跟大医院没法比。",
+          "pinyin": "Nǐ shuō de duì. Wǒ tīngshuō yì xiē shèqū yīyuàn yě yǒu kāngfù kē, dàn shèbèi hé jìshù gēn dà yīyuàn méifǎ bǐ.",
+          "text_translation": "To'g'ri aytasan. Ba'zi mahalla shifoxonalarida ham reabilitatsiya bo'limi bor deb eshitdim, lekin jihozi va texnikasi katta shifoxona bilan taqqoslab bo'lmaydi.",
+          "text_translation_ru": "Ты прав. Я слышал, что в некоторых районных поликлиниках тоже есть отделение реабилитации, но их оборудование и технологии не сравнить с большими больницами.",
+          "text_translation_en": "You're right. I heard some community hospitals also have a rehabilitation department, but their equipment and expertise can't compare with big hospitals.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d32-s9",
+          "text_original": "那你们现在打算怎么办？",
+          "pinyin": "Nà nǐmen xiànzài dǎsuàn zěnme bàn?",
+          "text_translation": "Unda hozir nima qilmoqchisizlar?",
+          "text_translation_ru": "И что вы теперь собираетесь делать?",
+          "text_translation_en": "So what are you planning to do now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d32-s10",
+          "text_original": "医生建议先做三个月的康复理疗，每周去两次。我们已经约好了时间。",
+          "pinyin": "Yīshēng jiànyì xiān zuò sān ge yuè de kāngfù lǐliáo, měi zhōu qù liǎng cì. Wǒmen yǐjīng yuē hǎo le shíjiān.",
+          "text_translation": "Shifokor avval uch oy reabilitatsiya fizioterapiyasini qilishni, haftasiga ikki marta borishni maslahat berdi. Biz allaqachon vaqt belgilab oldik.",
+          "text_translation_ru": "Врач посоветовал сначала пройти трёхмесячную физиотерапию, два раза в неделю. Мы уже договорились о времени.",
+          "text_translation_en": "The doctor recommended starting with three months of physical therapy, twice a week. We've already scheduled the times.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d32-s11",
+          "text_original": "那费用高吗？",
+          "pinyin": "Nà fèiyòng gāo ma?",
+          "text_translation": "Xarajati qimmatmi?",
+          "text_translation_ru": "А расходы высокие?",
+          "text_translation_en": "Are the costs high?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d32-s12",
+          "text_original": "一次大概四五百，医保能报销一部分，但自己也要承担不少。",
+          "pinyin": "Yī cì dàgài sì wǔ bǎi, yībǎo néng bàoxiāo yí bùfen, dàn zìjǐ yě yào chéngdān bùshǎo.",
+          "text_translation": "Bir martasi taxminan to'rt-besh yuz, tibbiy sug'urta bir qismini qoplaydi, lekin o'zing ham anchasini ko'tarishing kerak.",
+          "text_translation_ru": "Один сеанс примерно четыреста-пятьсот, медстраховка частично возмещает, но и самому приходится платить немало.",
+          "text_translation_en": "Each session is about four or five hundred; medical insurance reimburses part of it, but you still have to cover quite a bit yourself.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d32-s13",
+          "text_original": "看病贵确实是个大问题。特别是慢性病或者需要长期治疗的病。",
+          "pinyin": "Kàn bìng guì quèshí shì ge dà wèntí. Tèbié shì mànxìng bìng huòzhě xūyào chángqī zhìliáo de bìng.",
+          "text_translation": "Davolanish qimmatligi rostdan katta muammo. Ayniqsa surunkali kasallik yoki uzoq muddat davolanish kerak bo'lgan kasallik.",
+          "text_translation_ru": "Дороговизна лечения — действительно большая проблема. Особенно при хронических заболеваниях или болезнях, требующих долгого лечения.",
+          "text_translation_en": "Expensive medical care really is a big problem. Especially for chronic diseases or illnesses that need long-term treatment.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d32-s14",
+          "text_original": "对。我觉得国家应该加大对基层医疗的投入，让老百姓在家门口就能看好病。",
+          "pinyin": "Duì. Wǒ juéde guójiā yīnggāi jiādà duì jīcéng yīliáo de tóurù, ràng lǎobǎixìng zài jiā ménkǒu jiù néng kàn hǎo bìng.",
+          "text_translation": "To'g'ri. Menimcha davlat boshlang'ich tibbiyotga investitsiyani ko'paytirishi kerak, toki oddiy xalq uy yonida turib yaxshi davolanishi mumkin bo'lsin.",
+          "text_translation_ru": "Да. Я считаю, что государству нужно увеличить вложения в первичную медицину, чтобы простые люди могли качественно лечиться прямо рядом с домом.",
+          "text_translation_en": "Right. I think the country should increase investment in primary healthcare, so ordinary people can get proper treatment right near home.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d32-s15",
+          "text_original": "这个愿望是好的，但是实现起来需要时间。",
+          "pinyin": "Zhè ge yuànwàng shì hǎo de, dànshì shíxiàn qǐlái xūyào shíjiān.",
+          "text_translation": "Bu yaxshi orzu, lekin uni amalga oshirish vaqt talab qiladi.",
+          "text_translation_ru": "Это хорошее пожелание, но на его осуществление нужно время.",
+          "text_translation_en": "That's a good wish, but it will take time to realize.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d32-s16",
+          "text_original": "是啊，不过慢慢总会改善的。",
+          "pinyin": "Shì a, búguò mànmàn zǒng huì gǎishàn de.",
+          "text_translation": "Ha, lekin asta-sekin baribir yaxshilanadi.",
+          "text_translation_ru": "Да, но постепенно всё обязательно улучшится.",
+          "text_translation_en": "Yeah, but it will gradually improve in the end.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

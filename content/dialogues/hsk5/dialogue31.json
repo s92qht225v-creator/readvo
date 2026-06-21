@@ -1,0 +1,172 @@
+{
+  "id": "hsk5-dialogue31",
+  "slug": "pressure-on-young-people",
+  "title": "年轻人压力",
+  "pinyin": "Niánqīng rén yālì",
+  "titleTranslation": "Yoshlar zimmasidagi bosim",
+  "titleTranslation_ru": "Давление на молодёжь",
+  "titleTranslation_en": "Pressure on Young People",
+  "level": 5,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "熬夜",
+    "压力",
+    "存款",
+    "首付",
+    "生活成本",
+    "节奏",
+    "两难",
+    "困扰",
+    "期望",
+    "催婚",
+    "无奈",
+    "焦虑",
+    "原地踏步"
+  ],
+  "sections": [
+    {
+      "id": "h5d31-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d31-s1",
+          "text_original": "你最近怎么老是熬夜？看你脸色不太好。",
+          "pinyin": "Nǐ zuìjìn zěnme lǎoshi áoyè? Kàn nǐ liǎnsè bú tài hǎo.",
+          "text_translation": "Yaqinda nega doim tunni bedor o'tkazasan? Rang-ro'ying yaxshi emasga o'xshaydi.",
+          "text_translation_ru": "Почему ты в последнее время всё время сидишь допоздна? Вид у тебя неважный.",
+          "text_translation_en": "Why have you been staying up late so much lately? You don't look so well.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d31-s2",
+          "text_original": "压力太大了。工作上的事一堆，还要考虑买房、结婚，晚上根本睡不着。",
+          "pinyin": "Yālì tài dà le. Gōngzuò shàng de shì yī duī, hái yào kǎolǜ mǎi fáng, jiéhūn, wǎnshang gēnběn shuì bù zháo.",
+          "text_translation": "Bosim juda katta. Ishda ishlar uyum-uyum, ustiga uy olish, turmush qurishni o'ylash kerak, kechasi umuman uxlay olmayman.",
+          "text_translation_ru": "Слишком большое давление. На работе куча дел, ещё нужно думать о покупке жилья и женитьбе, и по ночам вообще не могу уснуть.",
+          "text_translation_en": "The pressure is too much. There's a pile of work, plus I have to think about buying a house and getting married — I just can't sleep at night.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d31-s3",
+          "text_original": "现在年轻人确实不容易。房价那么高，工资却涨得慢。",
+          "pinyin": "Xiànzài niánqīng rén quèshí bù róngyì. Fángjià nàme gāo, gōngzī què zhǎng de màn.",
+          "text_translation": "Hozirgi yoshlarga rostdan oson emas. Uy narxi shunchalik baland, maosh esa sekin oshadi.",
+          "text_translation_ru": "Молодёжи сейчас и правда нелегко. Цены на жильё такие высокие, а зарплата растёт медленно.",
+          "text_translation_en": "Young people really do have it hard now. Housing prices are so high, yet salaries rise slowly.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d31-s4",
+          "text_original": "对。我工作五年了，存款还不到十万，连首付都不够。",
+          "pinyin": "Duì. Wǒ gōngzuò wǔ nián le, cúnkuǎn hái bú dào shí wàn, lián shǒufù dōu bú gòu.",
+          "text_translation": "To'g'ri. Besh yil ishladim, jamg'armam hali o'n ming yuanga ham yetmaydi, hatto boshlang'ich to'lovga ham kamlik qiladi.",
+          "text_translation_ru": "Да. Я работаю пять лет, а накоплений нет и ста тысяч — даже на первоначальный взнос не хватает.",
+          "text_translation_en": "Right. I've worked five years, and my savings aren't even a hundred thousand — not even enough for a down payment.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d31-s5",
+          "text_original": "那你有没有考虑过去小一点的城市发展？那边生活成本会低一些。",
+          "pinyin": "Nà nǐ yǒu méiyǒu kǎolǜ guo qù xiǎo yì diǎn de chéngshì fāzhǎn? Nàbiān shēnghuó chéngběn huì dī yì xiē.",
+          "text_translation": "Unda kichikroq shaharda rivojlanishni o'ylab ko'rganmiding? U yerda yashash xarajati pastroq bo'ladi.",
+          "text_translation_ru": "А ты не думал перебраться в город поменьше? Там стоимость жизни ниже.",
+          "text_translation_en": "So have you considered moving to a smaller city to build your career? The cost of living there would be lower.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d31-s6",
+          "text_original": "想过，但是小城市工作机会少，工资也低。而且我已经习惯了现在的生活节奏。",
+          "pinyin": "Xiǎng guo, dànshì xiǎo chéngshì gōngzuò jīhuì shǎo, gōngzī yě dī. Érqiě wǒ yǐjīng xíguàn le xiànzài de shēnghuó jiézòu.",
+          "text_translation": "O'ylaganman, lekin kichik shaharda ish imkoniyati kam, maosh ham past. Qolaversa men hozirgi hayot sur'atiga o'rganib qolganman.",
+          "text_translation_ru": "Думал, но в маленьком городе мало возможностей для работы, и зарплата ниже. К тому же я уже привык к нынешнему ритму жизни.",
+          "text_translation_en": "I have, but small cities have fewer job opportunities and lower pay. Besides, I'm already used to my current pace of life.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d31-s7",
+          "text_original": "这确实是两难的选择。我身边很多朋友也有类似的困扰。",
+          "pinyin": "Zhè quèshí shì liǎng nán de xuǎnzé. Wǒ shēnbiān hěnduō péngyou yě yǒu lèisì de kùnrǎo.",
+          "text_translation": "Bu rostdan og'ir tanlov. Atrofimdagi ko'p do'stimda ham shunga o'xshash tashvish bor.",
+          "text_translation_ru": "Это действительно нелёгкий выбор. У многих моих знакомых тоже похожие переживания.",
+          "text_translation_en": "It really is a dilemma. Many friends around me have similar troubles.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d31-s8",
+          "text_original": "是啊，现在年轻人不仅要面对经济压力，还要应对家庭和社会对他们的期望。",
+          "pinyin": "Shì a, xiànzài niánqīng rén bùjǐn yào miànduì jīngjì yālì, hái yào yìngduì jiātíng hé shèhuì duì tāmen de qīwàng.",
+          "text_translation": "Ha, hozirgi yoshlar nafaqat iqtisodiy bosimga duch keladi, balki oila va jamiyatning ulardan kutgan umidlarini ham eplashi kerak.",
+          "text_translation_ru": "Да, нынешней молодёжи приходится не только справляться с финансовым давлением, но и оправдывать ожидания семьи и общества.",
+          "text_translation_en": "Yeah, young people today have to face not only economic pressure, but also the expectations their family and society place on them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d31-s9",
+          "text_original": "家里催你结婚了吗？",
+          "pinyin": "Jiālǐ cuī nǐ jiéhūn le ma?",
+          "text_translation": "Oilang seni turmush qurishga undayaptimi?",
+          "text_translation_ru": "Дома тебя торопят с женитьбой?",
+          "text_translation_en": "Is your family pressuring you to get married?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d31-s10",
+          "text_original": "催了。每次打电话都问「有没有对象」「什么时候结婚」，听得我头都大了。",
+          "pinyin": "Cuī le. Měi cì dǎ diànhuà dōu wèn 'yǒu méiyǒu duìxiàng' 'shénme shíhou jiéhūn', tīng de wǒ tóu dōu dà le.",
+          "text_translation": "Undayapti. Har safar qo'ng'iroq qilganda «yor topdingmi», «qachon turmush qurasan» deb so'rashadi, eshitaverib boshim qotib ketadi.",
+          "text_translation_ru": "Торопят. Каждый раз по телефону спрашивают «есть ли у тебя кто-то», «когда свадьба» — у меня от этого голова кругом.",
+          "text_translation_en": "They are. Every phone call they ask \"do you have a partner,\" \"when are you getting married\" — it does my head in.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d31-s11",
+          "text_original": "我理解，家长催婚真的让人很无奈。但婚姻毕竟是自己的事，急不来。",
+          "pinyin": "Wǒ lǐjiě, jiāzhǎng cuīhūn zhēn de ràng rén hěn wúnài. Dàn hūnyīn bìjìng shì zìjǐ de shì, jí bù lái.",
+          "text_translation": "Tushunaman, ota-onaning turmushga undashi rostdan odamni chorasiz qoldiradi. Lekin nikoh oxir-oqibat o'zingning ishing, shoshilib bo'lmaydi.",
+          "text_translation_ru": "Понимаю, когда родители торопят с браком, это правда выматывает. Но брак — это всё-таки твоё личное дело, его не поторопишь.",
+          "text_translation_en": "I understand — parents pushing marriage really leaves you feeling helpless. But marriage is ultimately your own affair; it can't be rushed.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d31-s12",
+          "text_original": "对，我也这么想。但有时候也很焦虑，看着同学一个个都结婚生子了，自己还在原地踏步。",
+          "pinyin": "Duì, wǒ yě zhème xiǎng. Dàn yǒu shíhou yě hěn jiāolǜ, kàn zhe tóngxué yī gè gè dōu jiéhūn shēng zǐ le, zìjǐ hái zài yuándì tàbù.",
+          "text_translation": "To'g'ri, men ham shunday o'ylayman. Lekin ba'zan juda xavotirlanaman, sinfdoshlarim birin-ketin turmush qurib, farzandli bo'lganini ko'rib, o'zim hali bir joyda depsinib turibman.",
+          "text_translation_ru": "Да, я тоже так думаю. Но иногда сильно тревожусь: смотрю, как однокурсники один за другим женятся и заводят детей, а я всё топчусь на месте.",
+          "text_translation_en": "Right, I think so too. But sometimes I get anxious — watching my classmates marry and have kids one by one, while I'm still stuck in the same place.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d31-s13",
+          "text_original": "每个人都有自己的节奏，不用跟别人比。你已经在努力工作了，这就很好。",
+          "pinyin": "Měi ge rén dōu yǒu zìjǐ de jiézòu, búyòng gēn biérén bǐ. Nǐ yǐjīng zài nǔlì gōngzuò le, zhè jiù hěn hǎo.",
+          "text_translation": "Har kimning o'z sur'ati bor, birov bilan solishtirish shart emas. Sen allaqachon tirishib ishlayapsan, shuning o'zi juda yaxshi.",
+          "text_translation_ru": "У каждого свой ритм, не нужно сравнивать себя с другими. Ты уже усердно работаешь — и это уже хорошо.",
+          "text_translation_en": "Everyone has their own pace; there's no need to compare yourself with others. You're already working hard, and that's good enough.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d31-s14",
+          "text_original": "谢谢你这么说。有时候确实需要提醒自己不要过度焦虑。",
+          "pinyin": "Xièxie nǐ zhème shuō. Yǒu shíhou quèshí xūyào tíxǐng zìjǐ búyào guòdù jiāolǜ.",
+          "text_translation": "Shunday deganing uchun rahmat. Ba'zan o'zimga haddan tashqari xavotirlanmaslikni eslatishim rostdan kerak.",
+          "text_translation_ru": "Спасибо, что так говоришь. Иногда мне действительно нужно напоминать себе не тревожиться чрезмерно.",
+          "text_translation_en": "Thank you for saying that. Sometimes I really need to remind myself not to be overly anxious.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d31-s15",
+          "text_original": "放轻松，一步一步来。生活会慢慢好起来的。",
+          "pinyin": "Fàng qīngsōng, yí bù yí bù lái. Shēnghuó huì mànmàn hǎo qǐlái de.",
+          "text_translation": "Bo'shashib ol, qadam-baqadam harakat qil. Hayot asta-sekin yaxshilanadi.",
+          "text_translation_ru": "Расслабься, шаг за шагом. Жизнь постепенно наладится.",
+          "text_translation_en": "Relax, take it step by step. Life will gradually get better.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
