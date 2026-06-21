@@ -1,0 +1,209 @@
+{
+  "id": "hsk5-dialogue48",
+  "slug": "comfort-zone",
+  "title": "舒适区",
+  "pinyin": "Shūshì qū",
+  "titleTranslation": "Qulaylik zonasi",
+  "titleTranslation_ru": "Зона комфорта",
+  "titleTranslation_en": "Comfort Zones",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "舒适区",
+    "辞职",
+    "冲动",
+    "现状",
+    "犹豫",
+    "稳定",
+    "重复",
+    "退步",
+    "动力",
+    "激情",
+    "挑战",
+    "成长",
+    "潜力",
+    "过渡期",
+    "充电",
+    "盲目",
+    "设想",
+    "预期",
+    "遗憾",
+    "恐惧",
+    "安逸",
+    "不安",
+    "突破"
+  ],
+  "sections": [
+    {
+      "id": "h5d48-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d48-s1",
+          "text_original": "听说你最近辞职了？你不是在那家公司做了好几年了吗？",
+          "pinyin": "Tīngshuō nǐ zuìjìn cízhí le? Nǐ bú shì zài nà jiā gōngsī zuò le hǎo jǐ nián le ma?",
+          "text_translation": "Eshitishimcha, yaqinda ishdan bo'shabsan? Sen o'sha kompaniyada bir necha yil ishlamaganmiding?",
+          "text_translation_ru": "Слышал, ты недавно уволился? Разве ты не проработал в той компании несколько лет?",
+          "text_translation_en": "I heard you quit your job recently? Weren't you working at that company for several years?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d48-s2",
+          "text_original": "对，我上个月交了辞职信。我知道在别人看来可能有点冲动，但我觉得再不改变就来不及了。",
+          "pinyin": "Duì, wǒ shàng ge yuè jiāo le cízhí xìn. Wǒ zhīdào zài biérén kàn lái kěnéng yǒu diǎn chōngdòng, dàn wǒ juéde zài bù gǎibiàn jiù lái bù jí le.",
+          "text_translation": "Ha, o'tgan oy iste'fo xatini topshirdim. Bilaman, boshqalarga bu biroz o'ylamasdan qilingan ishdek tuyulishi mumkin, lekin men endi o'zgarmasam, kech bo'lib qoladi deb o'yladim.",
+          "text_translation_ru": "Да, в прошлом месяце я подал заявление об уходе. Знаю, со стороны это может показаться немного импульсивным, но я почувствовал, что если не изменюсь сейчас, то будет поздно.",
+          "text_translation_en": "Yes, I handed in my resignation letter last month. I know it might seem a bit impulsive to others, but I felt that if I didn't change now, it would be too late.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d48-s3",
+          "text_original": "你准备去哪儿？找到新工作了吗？",
+          "pinyin": "Nǐ zhǔnbèi qù nǎr? Zhǎo dào xīn gōngzuò le ma?",
+          "text_translation": "Qayerga borishni rejalashtiryapsan? Yangi ish topdingmi?",
+          "text_translation_ru": "Куда ты собираешься? Уже нашёл новую работу?",
+          "text_translation_en": "Where are you planning to go? Have you found a new job?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d48-s4",
+          "text_original": "还没有。我打算先休息一个月，然后去学一些新技能，再考虑下一步。",
+          "pinyin": "Hái méiyǒu. Wǒ dǎsuàn xiān xiūxi yí ge yuè, ránhòu qù xué yì xiē xīn jìnéng, zài kǎolǜ xià yí bù.",
+          "text_translation": "Hali yo'q. Avval bir oy dam olmoqchiman, keyin yangi ko'nikmalar o'rganaman, so'ngra keyingi qadamni o'ylab ko'raman.",
+          "text_translation_ru": "Ещё нет. Я планирую сначала отдохнуть месяц, потом освоить какие-нибудь новые навыки, а затем подумать о следующем шаге.",
+          "text_translation_en": "Not yet. I plan to rest for a month first, then learn some new skills, and then think about the next step.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d48-s5",
+          "text_original": "你这样跳出舒适区，真的很有勇气。很多人即使对自己的现状不满意，也不敢迈出这一步。",
+          "pinyin": "Nǐ zhèyàng tiàochū shūshì qū, zhēn de hěn yǒu yǒngqì. Hěnduō rén jíshǐ duì zìjǐ de xiànzhuàng bù mǎnyì, yě bù gǎn mài chū zhè yí bù.",
+          "text_translation": "Shu tarzda qulaylik zonasidan chiqib ketishing chindan ham juda jasoratli. Ko'p odamlar o'z hozirgi ahvolidan norozi bo'lsa ham, bu qadamni tashlashga jur'at eta olmaydi.",
+          "text_translation_ru": "То, что ты вот так вышел из зоны комфорта, — это действительно очень смело. Многие люди, даже будучи недовольны своим положением, не осмеливаются сделать этот шаг.",
+          "text_translation_en": "Stepping out of your comfort zone like this really takes courage. Many people, even when they're dissatisfied with their current situation, don't dare to take that step.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d48-s6",
+          "text_original": "其实我也犹豫了很久。以前的工作虽然稳定，但每天重复同样的内容，我感觉自己慢慢在退步。",
+          "pinyin": "Qíshí wǒ yě yóuyù le hěn jiǔ. Yǐqián de gōngzuò suīrán wěndìng, dàn měitiān chóngfù tóngyàng de nèiróng, wǒ gǎnjué zìjǐ mànmàn zài tuìbù.",
+          "text_translation": "Aslida men ham uzoq vaqt ikkilandim. Avvalgi ishim barqaror bo'lsa-da, har kuni bir xil ishlarni takrorlardim va o'zimni asta-sekin orqaga ketayotgandek his qildim.",
+          "text_translation_ru": "На самом деле я тоже долго колебался. Хотя прежняя работа была стабильной, я каждый день повторял одно и то же и чувствовал, что постепенно деградирую.",
+          "text_translation_en": "Actually, I hesitated for a long time too. Although my previous job was stable, I repeated the same things every day and felt that I was slowly regressing.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d48-s7",
+          "text_original": "我理解。一直待在舒适区里，确实会让人失去动力和激情。",
+          "pinyin": "Wǒ lǐjiě. Yìzhí dāi zài shūshì qū lǐ, quèshí huì ràng rén shīqù dònglì hé jīqíng.",
+          "text_translation": "Tushunaman. Doimo qulaylik zonasida qolish, haqiqatan ham insonni rag'bat va ishtiyoqdan mahrum qiladi.",
+          "text_translation_ru": "Я понимаю. Постоянно оставаясь в зоне комфорта, человек действительно теряет мотивацию и страсть.",
+          "text_translation_en": "I understand. Staying in the comfort zone all the time really does make a person lose motivation and passion.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d48-s8",
+          "text_original": "对。我觉得人生需要一些挑战，才能不断成长。如果永远不做改变，怎么知道自己的潜力有多大呢？",
+          "pinyin": "Duì. Wǒ juéde rénshēng xūyào yì xiē tiǎozhàn, cáinéng búduàn chéngzhǎng. Rúguǒ yǒngyuǎn bú zuò gǎibiàn, zěnme zhīdào zìjǐ de qiánlì yǒu duō dà ne?",
+          "text_translation": "Ha. Menimcha, hayotda doimiy o'sish uchun ba'zi sinovlar kerak. Agar hech qachon o'zgarmasang, o'z salohiyating qanchalik katta ekanini qanday bilasan?",
+          "text_translation_ru": "Да. Я думаю, что жизни нужны вызовы, чтобы постоянно расти. Если никогда не меняться, как узнать, насколько велик твой потенциал?",
+          "text_translation_en": "Right. I think life needs some challenges in order to keep growing. If you never make any changes, how would you know how great your potential is?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d48-s9",
+          "text_original": "你说得对。但跳出舒适区也要有准备，不然很容易因为压力太大而放弃。",
+          "pinyin": "Nǐ shuō de duì. Dàn tiàochū shūshì qū yě yào yǒu zhǔnbèi, bùrán hěn róngyì yīnwèi yālì tài dà ér fàngqì.",
+          "text_translation": "To'g'ri aytasan. Lekin qulaylik zonasidan chiqishga ham tayyorgarlik kerak, aks holda bosim juda kuchli bo'lib, oson taslim bo'lib qolish mumkin.",
+          "text_translation_ru": "Ты прав. Но к выходу из зоны комфорта тоже нужно подготовиться, иначе легко сдаться из-за слишком сильного давления.",
+          "text_translation_en": "You're right. But stepping out of the comfort zone also requires preparation, otherwise it's easy to give up because the pressure is too great.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d48-s10",
+          "text_original": "所以我给自己设定了一个过渡期。先学习充电，再重新出发。不会盲目行动。",
+          "pinyin": "Suǒyǐ wǒ gěi zìjǐ shèdìng le yí ge guòdù qī. Xiān xuéxí chōngdiàn, zài chóngxīn chūfā. Bú huì mángmù xíngdòng.",
+          "text_translation": "Shuning uchun men o'zimga bir o'tish davrini belgilab oldim. Avval o'qib bilim to'playman, keyin qaytadan yo'lga chiqaman. Ko'r-ko'rona harakat qilmayman.",
+          "text_translation_ru": "Поэтому я установил себе переходный период. Сначала поучусь и подзаряжусь, а потом снова отправлюсь в путь. Не буду действовать вслепую.",
+          "text_translation_en": "So I've set myself a transition period. First I'll study and recharge, then I'll set off again. I won't act blindly.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d48-s11",
+          "text_original": "那你有没有设想过最坏的情况？万一新方向不如预期怎么办？",
+          "pinyin": "Nà nǐ yǒu méiyǒu shèxiǎng guo zuì huài de qíngkuàng? Wànyī xīn fāngxiàng bù rú yùqī zěnme bàn?",
+          "text_translation": "Unda eng yomon holatni tasavvur qilib ko'rganmisan? Birdan yangi yo'nalish kutilganidek bo'lmasa nima qilasan?",
+          "text_translation_ru": "А ты представлял себе худший вариант? Что если новое направление не оправдает ожиданий?",
+          "text_translation_en": "Then have you imagined the worst-case scenario? What if the new direction doesn't live up to expectations?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d48-s12",
+          "text_original": "当然想过。如果失败了，大不了重新找工作。至少有尝试过，不会留下遗憾。",
+          "pinyin": "Dāngrán xiǎng guo. Rúguǒ shībài le, dàbùliǎo chóngxīn zhǎo gōngzuò. Zhìshǎo yǒu chángshì guo, bú huì liú xià yíhàn.",
+          "text_translation": "Albatta o'yladim. Agar muvaffaqiyatsiz bo'lsam, eng yomoni qaytadan ish topaman. Hech bo'lmasa urinib ko'rganman, afsus qoldirmayman.",
+          "text_translation_ru": "Конечно, думал. Если потерплю неудачу, то в худшем случае снова найду работу. По крайней мере, я попробовал, и не останется сожалений.",
+          "text_translation_en": "Of course I have. If I fail, the worst case is that I'll look for a job again. At least I'll have tried, and won't be left with regret.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d48-s13",
+          "text_original": "这种心态很值得学习。很多人因为害怕失败，一辈子都不敢尝试新事物。",
+          "pinyin": "Zhè zhǒng xīntài hěn zhídé xuéxí. Hěnduō rén yīnwèi hàipà shībài, yí bèizi dōu bù gǎn chángshì xīn shìwù.",
+          "text_translation": "Bunday qarash o'rganishga juda arziydi. Ko'p odamlar muvaffaqiyatsizlikdan qo'rqqani uchun, butun umri davomida yangi narsalarni sinab ko'rishga jur'at eta olmaydi.",
+          "text_translation_ru": "Такому настрою стоит поучиться. Многие люди из-за страха неудачи всю жизнь не решаются попробовать что-то новое.",
+          "text_translation_en": "This kind of mindset is really worth learning from. Many people, because they're afraid of failure, never dare to try new things their whole lives.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d48-s14",
+          "text_original": "失败没什么可怕的，真正可怕的是后悔当初没有行动。",
+          "pinyin": "Shībài méi shénme kěpà de, zhēnzhèng kěpà de shì hòuhuǐ dāngchū méiyǒu xíngdòng.",
+          "text_translation": "Muvaffaqiyatsizlikda qo'rqinchli narsa yo'q, asl qo'rqinchlisi o'sha paytda harakat qilmaganidan afsuslanishdir.",
+          "text_translation_ru": "В неудаче нет ничего страшного, по-настоящему страшно — сожалеть, что в своё время не действовал.",
+          "text_translation_en": "There's nothing scary about failure; what's truly scary is regretting that you didn't act back then.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d48-s15",
+          "text_original": "你现在回头看，觉得自己当初为什么会犹豫那么久？",
+          "pinyin": "Nǐ xiànzài huítóu kàn, juéde zìjǐ dāngchū wèishénme huì yóuyù nàme jiǔ?",
+          "text_translation": "Endi orqaga qarab, o'sha paytda nega bunchalik uzoq ikkilanganingni qanday tushuntirasan?",
+          "text_translation_ru": "Оглядываясь назад, как ты думаешь, почему ты тогда так долго колебался?",
+          "text_translation_en": "Looking back now, why do you think you hesitated for so long back then?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d48-s16",
+          "text_original": "主要是对未知的恐惧。习惯了安逸之后，改变会让人感到不安。但一旦迈出第一步，反而觉得没有那么难。",
+          "pinyin": "Zhǔyào shì duì wèizhī de kǒngjù. Xíguàn le ānyì zhīhòu, gǎibiàn huì ràng rén gǎndào bù'ān. Dàn yí dàn mài chū dì-yī bù, fǎn'ér juéde méiyǒu nàme nán.",
+          "text_translation": "Asosan noma'lumlikdan qo'rqish edi. Farog'atga o'rganib qolgandan keyin, o'zgarish insonni tashvishga soladi. Lekin birinchi qadamni tashlaganingdan keyin, aksincha, u qadar qiyin emasdek tuyuladi.",
+          "text_translation_ru": "В основном это был страх перед неизвестностью. Привыкнув к комфорту, начинаешь тревожиться при мысли о переменах. Но как только делаешь первый шаг, наоборот, понимаешь, что это не так уж и трудно.",
+          "text_translation_en": "Mainly it was fear of the unknown. After getting used to comfort, change makes a person feel uneasy. But once you take the first step, it actually doesn't feel that hard.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d48-s17",
+          "speaker": "A",
+          "text_original": "这就是突破舒适区后的成长吧。希望你能在新的道路上找到真正的方向。",
+          "pinyin": "Zhè jiùshì tūpò shūshì qū hòu de chéngzhǎng ba. Xīwàng nǐ néng zài xīn de dàolù shàng zhǎodào zhēnzhèng de fāngxiàng.",
+          "text_translation": "Mana shu qulaylik zonasini yorib o'tgandan keyingi o'sish-da. Yangi yo'lda haqiqiy yo'nalishingni topishingni umid qilaman.",
+          "text_translation_ru": "Вот это и есть рост после выхода из зоны комфорта. Надеюсь, на новом пути ты найдёшь своё настоящее направление.",
+          "text_translation_en": "This is exactly the growth that comes after breaking out of your comfort zone. I hope you find your true direction on this new path."
+        },
+        {
+          "id": "h5d48-s18",
+          "speaker": "B",
+          "text_original": "谢谢你！我会努力的。",
+          "pinyin": "Xièxie nǐ! Wǒ huì nǔlì de.",
+          "text_translation": "Rahmat senga! Harakat qilaman.",
+          "text_translation_ru": "Спасибо тебе! Я буду стараться.",
+          "text_translation_en": "Thank you! I'll work hard."
+        }
+      ]
+    }
+  ]
+}

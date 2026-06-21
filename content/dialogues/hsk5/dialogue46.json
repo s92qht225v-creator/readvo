@@ -1,0 +1,176 @@
+{
+  "id": "hsk5-dialogue46",
+  "slug": "solo-living",
+  "title": "独居生活",
+  "pinyin": "Dújū shēnghuó",
+  "titleTranslation": "Yolg'iz yashash",
+  "titleTranslation_ru": "Жизнь в одиночестве",
+  "titleTranslation_en": "Solo Living",
+  "level": 5,
+  "tag": "hayot",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "独居",
+    "孤单",
+    "个人空间",
+    "独立性",
+    "节奏",
+    "可怜",
+    "伴侣",
+    "单身",
+    "状态",
+    "应付",
+    "挑战",
+    "自理能力",
+    "心理承受力",
+    "成年人",
+    "相处",
+    "享受",
+    "孤独"
+  ],
+  "sections": [
+    {
+      "id": "h5d46-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d46-s1",
+          "text_original": "听说你搬出来自己住了？感觉怎么样？",
+          "pinyin": "Tīngshuō nǐ bān chūlái zìjǐ zhù le? Gǎnjué zěnmeyàng?",
+          "text_translation": "Eshitishimcha, ko'chib chiqib yolg'iz yashayotgan ekansan? O'zingni qanday his qilyapsan?",
+          "text_translation_ru": "Слышал, ты съехал и живёшь один? Каково это?",
+          "text_translation_en": "I heard you moved out and live on your own now? How does it feel?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d46-s2",
+          "text_original": "挺好的！虽然有时候会觉得孤单，但总的来说自由多了，想干什么就干什么。",
+          "pinyin": "Tǐng hǎo de! Suīrán yǒu shíhou huì juéde gūdān, dàn zǒng de lái shuō zìyóu duō le, xiǎng gàn shénme jiù gàn shénme.",
+          "text_translation": "Juda yaxshi! Garchi ba'zan o'zimni yolg'iz his qilsam ham, umuman olganda ancha erkinman, nima qilishni istasam, shuni qilaman.",
+          "text_translation_ru": "Очень хорошо! Хотя иногда бывает одиноко, но в целом стало гораздо свободнее — делаю что хочу.",
+          "text_translation_en": "Pretty good! Although sometimes I feel lonely, overall I'm much freer — I can do whatever I want.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d46-s3",
+          "text_original": "我也是独居，已经三年了。很多人问我为什么一个人住，不找个室友或者回家跟父母住。",
+          "pinyin": "Wǒ yě shì dújū, yǐjīng sān nián le. Hěnduō rén wèn wǒ wèishénme yí ge rén zhù, bù zhǎo ge shìyǒu huòzhě huí jiā gēn fùmǔ zhù.",
+          "text_translation": "Men ham yolg'iz yashayman, allaqachon uch yil bo'ldi. Ko'p odamlar mendan nega yolg'iz yashashimni, xonadosh topmasligimni yoki ota-onam bilan yashashga uyga qaytmasligimni so'rashadi.",
+          "text_translation_ru": "Я тоже живу один, уже три года. Многие спрашивают меня, почему я живу один, а не найду соседа по квартире или не вернусь жить к родителям.",
+          "text_translation_en": "I live alone too, already for three years. Many people ask me why I live by myself instead of finding a roommate or moving back in with my parents.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d46-s4",
+          "text_original": "我觉得独居是一种生活方式的选择。现在的年轻人越来越重视个人空间和独立性了。",
+          "pinyin": "Wǒ juéde dújū shì yì zhǒng shēnghuó fāngshì de xuǎnzé. Xiànzài de niánqīng rén yuè lái yuè zhòngshì gèrén kōngjiān hé dúlìxìng le.",
+          "text_translation": "Menimcha, yolg'iz yashash bu turmush tarzini tanlashning bir turi. Hozirgi yoshlar shaxsiy makon va mustaqillikka tobora ko'proq e'tibor berishyapti.",
+          "text_translation_ru": "Я думаю, что жизнь в одиночестве — это выбор образа жизни. Современная молодёжь всё больше ценит личное пространство и независимость.",
+          "text_translation_en": "I think solo living is a choice of lifestyle. Young people today increasingly value personal space and independence.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d46-s5",
+          "text_original": "我同意。自己住可以完全按自己的节奏生活，不用担心打扰别人。",
+          "pinyin": "Wǒ tóngyì. Zìjǐ zhù kěyǐ wánquán àn zìjǐ de jiézòu shēnghuó, búyòng dānxīn dǎrǎo biérén.",
+          "text_translation": "Roziman. Yolg'iz yashasang, butunlay o'z sur'atingda yashashing mumkin, boshqalarga xalal beraman deb tashvishlanish kerak emas.",
+          "text_translation_ru": "Согласен. Живя один, можно полностью жить в своём ритме и не беспокоиться о том, что мешаешь другим.",
+          "text_translation_en": "I agree. Living alone, you can completely live at your own pace without worrying about disturbing others.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d46-s6",
+          "text_original": "但是有些人觉得一个人住很可怜，觉得人应该结婚或者跟别人一起生活。",
+          "pinyin": "Dànshì yǒuxiē rén juéde yí ge rén zhù hěn kělián, juéde rén yīnggāi jiéhūn huòzhě gēn biérén yìqǐ shēnghuó.",
+          "text_translation": "Lekin ba'zi odamlar yolg'iz yashashni juda achinarli deb bilishadi, insonlar turmush qurishi yoki boshqalar bilan birga yashashi kerak deb o'ylashadi.",
+          "text_translation_ru": "Но некоторые люди считают, что жить одному очень жалко, и думают, что человек должен жениться или жить вместе с кем-то.",
+          "text_translation_en": "But some people think living alone is pitiful, believing that a person should get married or live together with someone.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d46-s7",
+          "text_original": "这种观念正在慢慢改变。现在很多人选择独居，不是因为找不到伴侣，而是主动选择这种生活方式。",
+          "pinyin": "Zhè zhǒng guānniàn zhèngzài mànmàn gǎibiàn. Xiànzài hěnduō rén xuǎnzé dújū, bú shì yīnwèi zhǎo bú dào bànlǚ, ér shì zhǔdòng xuǎnzé zhè zhǒng shēnghuó fāngshì.",
+          "text_translation": "Bunday qarash asta-sekin o'zgarib bormoqda. Hozir ko'p odamlar yolg'iz yashashni tanlaydi, bu juft topa olmagani uchun emas, balki bu turmush tarzini ixtiyoriy ravishda tanlaganlari uchun.",
+          "text_translation_ru": "Такое представление постепенно меняется. Сейчас многие выбирают жизнь в одиночестве не потому, что не могут найти партнёра, а потому, что сами осознанно выбирают такой образ жизни.",
+          "text_translation_en": "This notion is slowly changing. Many people now choose solo living not because they can't find a partner, but because they actively choose this lifestyle.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d46-s8",
+          "text_original": "我也觉得单身和独居是两回事。单身可能是一种状态，但独居是一种主动的选择。",
+          "pinyin": "Wǒ yě juéde dānshēn hé dújū shì liǎng huí shì. Dānshēn kěnéng shì yì zhǒng zhuàngtài, dàn dújū shì yì zhǒng zhǔdòng de xuǎnzé.",
+          "text_translation": "Men ham yolg'izlik va yolg'iz yashash ikki boshqa narsa deb o'ylayman. Yolg'izlik bu bir holat bo'lishi mumkin, lekin yolg'iz yashash bu ixtiyoriy tanlovdir.",
+          "text_translation_ru": "Я тоже считаю, что быть холостым и жить в одиночестве — это две разные вещи. Холостяцкое положение — это, возможно, состояние, а жизнь в одиночестве — осознанный выбор.",
+          "text_translation_en": "I also think being single and living alone are two different things. Being single may be a state, but living alone is an active choice.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d46-s9",
+          "text_original": "独居其实能让人更好地了解自己。以前跟别人合租的时候，很多时间都在应付社交，根本没时间思考自己需要什么。",
+          "pinyin": "Dújū qíshí néng ràng rén gèng hǎo de liǎojiě zìjǐ. Yǐqián gēn biérén hézū de shíhou, hěnduō shíjiān dōu zài yìngfu shèjiāo, gēnběn méi shíjiān sīkǎo zìjǐ xūyào shénme.",
+          "text_translation": "Aslida yolg'iz yashash insonga o'zini yaxshiroq tushunishga yordam beradi. Ilgari boshqalar bilan birga ijaraga turganimda, ko'p vaqtimni muloqotga sarflardim, o'zimga nima kerakligini o'ylashga umuman vaqtim yo'q edi.",
+          "text_translation_ru": "На самом деле жизнь в одиночестве позволяет человеку лучше понять себя. Раньше, когда я снимал жильё с другими, много времени уходило на общение, и совсем не было времени подумать о том, что мне нужно.",
+          "text_translation_en": "Living alone actually lets a person understand themselves better. Before, when I shared a rental with others, a lot of time went into dealing with socializing, and there was no time at all to think about what I needed.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d46-s10",
+          "text_original": "这一点我特别有同感。独居以后，我每天下班回家都可以安静地看书、做运动、做自己喜欢的事。",
+          "pinyin": "Zhè yì diǎn wǒ tèbié yǒu tónggǎn. Dújū yǐhòu, wǒ měitiān xiàbān huí jiā dōu kěyǐ ānjìng de kàn shū, zuò yùndòng, zuò zìjǐ xǐhuān de shì.",
+          "text_translation": "Buni men ayniqsa yaxshi tushunaman. Yolg'iz yashay boshlaganimdan keyin, har kuni ishdan uyga qaytib, tinch holatda kitob o'qishim, sport bilan shug'ullanishim va o'zim yoqtirgan ishlarni qilishim mumkin.",
+          "text_translation_ru": "В этом я особенно с тобой солидарен. После того как стал жить один, я каждый день, возвращаясь с работы, могу спокойно читать книги, заниматься спортом и делать то, что мне нравится.",
+          "text_translation_en": "I especially relate to this. After living alone, every day when I come home from work I can quietly read books, exercise, and do the things I enjoy.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d46-s11",
+          "text_original": "不过独居也有挑战。比如生病的时候没有人照顾，遇到问题也得自己解决。",
+          "pinyin": "Búguò dújū yě yǒu tiǎozhàn. Bǐrú shēngbìng de shíhou méiyǒu rén zhàogù, yùdào wèntí yě děi zìjǐ jiějué.",
+          "text_translation": "Ammo yolg'iz yashashning qiyinchiliklari ham bor. Masalan, kasal bo'lganingda hech kim qarab turmaydi, muammoga duch kelganingda ham o'zing hal qilishing kerak.",
+          "text_translation_ru": "Однако у жизни в одиночестве есть и свои сложности. Например, когда болеешь, некому за тобой ухаживать, и проблемы тоже приходится решать самому.",
+          "text_translation_en": "But solo living also has challenges. For instance, when you're sick there's no one to take care of you, and when you face problems you have to solve them yourself.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d46-s12",
+          "text_original": "确实。所以独居的人需要更强的自理能力和心理承受力。",
+          "pinyin": "Quèshí. Suǒyǐ dújū de rén xūyào gèng qiáng de zìlǐ nénglì hé xīnlǐ chéngshòu lì.",
+          "text_translation": "To'g'ri. Shuning uchun yolg'iz yashaydigan odamga kuchliroq o'zini o'zi eplash qobiliyati va psixologik bardoshlilik kerak.",
+          "text_translation_ru": "Действительно. Поэтому человеку, живущему одному, нужны более сильная способность к самообслуживанию и психологическая устойчивость.",
+          "text_translation_en": "Indeed. So people who live alone need stronger self-care ability and psychological resilience.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d46-s13",
+          "text_original": "但是总的来说，我觉得独居是成年人的基本能力之一。学会和自己相处，是人生中很重要的一课。",
+          "pinyin": "Dànshì zǒng de lái shuō, wǒ juéde dújū shì chéngnián rén de jīběn nénglì zhī yī. Xuéhuì hé zìjǐ xiāngchǔ, shì rénshēng zhōng hěn zhòngyào de yī kè.",
+          "text_translation": "Lekin umuman olganda, menimcha, yolg'iz yashash kattalarning asosiy qobiliyatlaridan biridir. O'zing bilan til topishishni o'rganish hayotdagi juda muhim darsdir.",
+          "text_translation_ru": "Но в целом я считаю, что умение жить одному — это одна из базовых способностей взрослого человека. Научиться ладить с самим собой — очень важный урок в жизни.",
+          "text_translation_en": "But overall, I think living alone is one of the basic abilities of an adult. Learning to get along with yourself is a very important lesson in life.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d46-s14",
+          "text_original": "完全同意。独居教会我如何享受孤独，而不是害怕它。",
+          "pinyin": "Wánquán tóngyì. Dújū jiāohuì wǒ rúhé xiǎngshòu gūdú, ér bú shì hàipà tā.",
+          "text_translation": "Butunlay roziman. Yolg'iz yashash menga yolg'izlikdan qo'rqishni emas, balki undan zavqlanishni o'rgatdi.",
+          "text_translation_ru": "Полностью согласен. Жизнь в одиночестве научила меня, как наслаждаться одиночеством, а не бояться его.",
+          "text_translation_en": "I completely agree. Living alone taught me how to enjoy solitude rather than fear it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d46-s15",
+          "speaker": "A",
+          "text_original": "所以不管是单身还是独居，只要是自己真正想要的生活方式，就是最好的选择。",
+          "pinyin": "Suǒyǐ bùguǎn shì dānshēn háishì dújū, zhǐyào shì zìjǐ zhēnzhèng xiǎng yào de shēnghuó fāngshì, jiùshì zuì hǎo de xuǎnzé.",
+          "text_translation": "Shuning uchun yolg'iz (bo'ydoq) bo'lasanmi yoki yolg'iz yashaysanmi, faqat o'zing chinakam xohlagan turmush tarzi bo'lsa, bu eng yaxshi tanlov.",
+          "text_translation_ru": "Поэтому, одинок ты или живёшь один — если это образ жизни, которого ты действительно хочешь, это и есть лучший выбор.",
+          "text_translation_en": "So whether you're single or living alone, as long as it's the lifestyle you truly want, it's the best choice."
+        }
+      ]
+    }
+  ]
+}

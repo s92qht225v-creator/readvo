@@ -1,0 +1,185 @@
+{
+  "id": "hsk5-dialogue45",
+  "slug": "interpersonal-conflict",
+  "title": "人际冲突",
+  "pinyin": "Rénjì chōngtū",
+  "titleTranslation": "Shaxslararo nizo",
+  "titleTranslation_ru": "Межличностный конфликт",
+  "titleTranslation_en": "Interpersonal Conflict",
+  "level": 5,
+  "tag": "ish",
+  "dateAdded": "2026-06-21",
+  "vocab": ["冲突", "分歧", "尴尬", "风险", "各执己见", "让步", "干脆", "配合", "私下", "激进", "根源", "认可", "忽略", "环节", "尊重", "观点", "解决方案", "态度"],
+  "sections": [
+    {
+      "id": "h5d45-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d45-s1",
+          "text_original": "你最近好像不太开心，是不是跟同事之间出了什么问题？",
+          "pinyin": "Nǐ zuìjìn hǎoxiàng bú tài kāixīn, shì bú shì gēn tóngshì zhījiān chū le shénme wèntí?",
+          "text_translation": "Sen yaqinda unchalik xursand emasdek ko'rinasan, hamkasblaring bilan biror muammo chiqdimi?",
+          "text_translation_ru": "Ты в последнее время выглядишь не очень счастливым, не возникло ли какой-то проблемы с коллегами?",
+          "text_translation_en": "You don't seem very happy lately, did something come up between you and your coworkers?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d45-s2",
+          "text_original": "是啊，我跟一个同事在项目上产生了分歧，现在气氛很尴尬。",
+          "pinyin": "Shì a, wǒ gēn yí ge tóngshì zài xiàngmù shàng chǎnshēng le fēnqí, xiànzài qìfēn hěn gāngà.",
+          "text_translation": "Ha, men bir hamkasbim bilan loyiha bo'yicha kelishmovchilikka tushib qoldim, hozir muhit juda noqulay.",
+          "text_translation_ru": "Да, у меня с одним коллегой возникли разногласия по проекту, и сейчас атмосфера очень неловкая.",
+          "text_translation_en": "Yeah, I had a disagreement with a coworker over a project, and now the atmosphere is really awkward.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d45-s3",
+          "text_original": "怎么回事？具体是什么分歧？",
+          "pinyin": "Zěnme huí shì? Jùtǐ shì shénme fēnqí?",
+          "text_translation": "Nima gap o'zi? Aniqrog'i qanaqa kelishmovchilik?",
+          "text_translation_ru": "В чём дело? В чём конкретно разногласие?",
+          "text_translation_en": "What happened? What exactly is the disagreement about?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d45-s4",
+          "text_original": "他觉得应该用传统方案，风险小、稳定；我觉得应该尝试新方案，虽然有风险，但效果可能更好。",
+          "pinyin": "Tā juéde yīnggāi yòng chuántǒng fāng'àn, fēngxiǎn xiǎo, wěndìng; wǒ juéde yīnggāi chángshì xīn fāng'àn, suīrán yǒu fēngxiǎn, dàn xiàoguǒ kěnéng gèng hǎo.",
+          "text_translation": "U an'anaviy variantni qo'llash kerak deb hisoblaydi, xavfi kam va barqaror; men esa yangi variantni sinab ko'rish kerak deb o'ylayman, garchi xavfi bo'lsa-da, natijasi balki yaxshiroq bo'lar.",
+          "text_translation_ru": "Он считает, что нужно использовать традиционный вариант — риск мал и стабильно; а я думаю, что стоит попробовать новый вариант, хотя есть риск, но результат может быть лучше.",
+          "text_translation_en": "He thinks we should use the traditional approach — low risk and stable; I think we should try the new approach, which has risk but the results might be better.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d45-s5",
+          "text_original": "这确实是个难题。你们有没有开会讨论过？",
+          "pinyin": "Zhè quèshí shì ge nántí. Nǐmen yǒu méiyǒu kāihuì tǎolùn guo?",
+          "text_translation": "Bu haqiqatan ham qiyin masala. Yig'ilish o'tkazib muhokama qildingizmi?",
+          "text_translation_ru": "Это действительно сложный вопрос. Вы проводили совещание, чтобы это обсудить?",
+          "text_translation_en": "This really is a tough problem. Have you held a meeting to discuss it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d45-s6",
+          "text_original": "讨论过，但各执己见，谁也不愿意让步。后来他干脆不理我了，工作也不怎么配合。",
+          "pinyin": "Tǎolùn guo, dàn gè zhí jǐ jiàn, shuí yě bú yuànyì ràngbù. Hòulái tā gāncuì bù lǐ wǒ le, gōngzuò yě bù zěnme pèihé.",
+          "text_translation": "Muhokama qildik, lekin har birimiz o'z fikrimizda qoldik, hech kim yon bermoqchi emas edi. Keyin u mutlaqo menga e'tibor bermay qo'ydi, ishda ham unchalik hamkorlik qilmaydi.",
+          "text_translation_ru": "Обсуждали, но каждый стоял на своём, никто не хотел уступать. Потом он вообще перестал со мной разговаривать и в работе почти не идёт навстречу.",
+          "text_translation_en": "We did, but each of us stuck to our own view, neither willing to back down. After that he just stopped paying attention to me and barely cooperates at work.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d45-s7",
+          "text_original": "这种情况很常见，处理不好的确会影响工作。你试过私下找他聊聊吗？",
+          "pinyin": "Zhè zhǒng qíngkuàng hěn chángjiàn, chǔlǐ bù hǎo díquè huì yǐngxiǎng gōngzuò. Nǐ shì guo sīxià zhǎo tā liáo liao ma?",
+          "text_translation": "Bunday holat juda keng tarqalgan, yaxshi hal qilinmasa, haqiqatan ham ishga ta'sir qiladi. Yashirincha u bilan gaplashib ko'rganmiding?",
+          "text_translation_ru": "Такая ситуация очень распространена, и если её плохо уладить, она действительно повлияет на работу. Ты пробовал поговорить с ним наедине?",
+          "text_translation_en": "This kind of situation is very common, and if handled poorly it really does affect the work. Have you tried talking to him privately?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d45-s8",
+          "text_original": "试过，但他还是坚持自己的想法，觉得我太激进了。",
+          "pinyin": "Shì guo, dàn tā háishì jiānchí zìjǐ de xiǎngfǎ, juéde wǒ tài jījìn le.",
+          "text_translation": "Sinab ko'rdim, lekin u baribir o'z fikrida qat'iy turdi, meni juda keskin deb hisobladi.",
+          "text_translation_ru": "Пробовал, но он всё равно настаивает на своём, считает, что я слишком радикален.",
+          "text_translation_en": "I tried, but he still insists on his own idea and thinks I'm too aggressive.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d45-s9",
+          "text_original": "我觉得你们的分歧可能不在于方案本身，而在于沟通方式。你试着先肯定他的想法了吗？",
+          "pinyin": "Wǒ juéde nǐmen de fēnqí kěnéng bú zàiyú fāng'àn běnshēn, ér zàiyú gōutōng fāngshì. Nǐ shì zhe xiān kěndìng tā de xiǎngfǎ le ma?",
+          "text_translation": "Menimcha, sizning kelishmovchiligingiz balki variantning o'zida emas, balki muloqot uslubidadir. Avval uning fikrini tan olishga harakat qilib ko'rdingmi?",
+          "text_translation_ru": "Мне кажется, ваше разногласие, возможно, не в самом варианте, а в способе общения. Ты пробовал сначала признать его идею?",
+          "text_translation_en": "I think your disagreement may not be about the approach itself but about the way you communicate. Have you tried acknowledging his idea first?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d45-s10",
+          "text_original": "一开始没有，我觉得他的方案太保守了，就直接否定了。",
+          "pinyin": "Yī kāishǐ méiyǒu, wǒ juéde tā de fāng'àn tài bǎoshǒu le, jiù zhíjiē fǒudìng le.",
+          "text_translation": "Boshida yo'q, men uning variantini juda konservativ deb o'yladim, shuning uchun to'g'ridan-to'g'ri rad etdim.",
+          "text_translation_ru": "Сначала нет, я считал его вариант слишком консервативным и прямо его отверг.",
+          "text_translation_en": "Not at first — I thought his approach was too conservative, so I rejected it outright.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d45-s11",
+          "text_original": "那可能就是问题的根源。如果你先认可他的优点，再提出你的想法，他可能更容易接受。",
+          "pinyin": "Nà kěnéng jiùshì wèntí de gēnyuán. Rúguǒ nǐ xiān rènkě tā de yōudiǎn, zài tíchū nǐ de xiǎngfǎ, tā kěnéng gèng róngyì jiēshòu.",
+          "text_translation": "Mana shu muammoning ildizi bo'lishi mumkin. Agar avval uning yutuqlarini tan olib, keyin o'z fikringni bildirsang, u balki osonroq qabul qiladi.",
+          "text_translation_ru": "Вот это, возможно, и есть корень проблемы. Если ты сначала признаешь его сильные стороны, а потом выскажешь свою идею, ему, возможно, будет легче её принять.",
+          "text_translation_en": "That might be the root of the problem. If you first acknowledge his strengths and then present your idea, he might find it easier to accept.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d45-s12",
+          "text_original": "你说得有道理。我可能太着急表达自己了，忽略了他的感受。",
+          "pinyin": "Nǐ shuō de yǒu dàoli. Wǒ kěnéng tài zháojí biǎodá zìjǐ le, hūlüè le tā de gǎnshòu.",
+          "text_translation": "Gaping mantiqqa to'g'ri keladi. Men balki o'zimni ifodalashga juda shoshilib, uning his-tuyg'ularini e'tibordan chetda qoldirgandirman.",
+          "text_translation_ru": "Ты прав. Я, наверное, слишком торопился выразить себя и не учёл его чувств.",
+          "text_translation_en": "You have a point. I was probably too eager to express myself and ignored his feelings.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d45-s13",
+          "text_original": "另外，你们也可以找一个中间方案，把两种思路结合起来。不一定非要二选一。",
+          "pinyin": "Lìngwài, nǐmen yě kěyǐ zhǎo yí ge zhōngjiān fāng'àn, bǎ liǎng zhǒng sīlù jiéhé qǐlái. Bù yídìng fēi yào èr xuǎn yī.",
+          "text_translation": "Bundan tashqari, ikki yondashuvni birlashtirib, oraliq variant ham topsangiz bo'ladi. Ikkalasidan birini tanlash shart emas.",
+          "text_translation_ru": "Кроме того, вы можете найти промежуточный вариант, объединив два подхода. Необязательно выбирать что-то одно из двух.",
+          "text_translation_en": "Besides, you could find a middle-ground approach that combines both lines of thinking. You don't necessarily have to choose one or the other.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d45-s14",
+          "text_original": "这个建议不错。我觉得可以先用保守方案做基础，然后在某些环节尝试新方法。",
+          "pinyin": "Zhè ge jiànyì búcuò. Wǒ juéde kěyǐ xiān yòng bǎoshǒu fāng'àn zuò jīchǔ, ránhòu zài mǒuxiē huánjié chángshì xīn fāngfǎ.",
+          "text_translation": "Bu taklif yomon emas. Menimcha, avval konservativ variantni asos qilib olib, keyin ayrim bosqichlarda yangi usulni sinab ko'rsa bo'ladi.",
+          "text_translation_ru": "Это неплохое предложение. Думаю, можно сначала взять консервативный вариант за основу, а потом на некоторых этапах попробовать новый метод.",
+          "text_translation_en": "That's a good suggestion. I think we could use the conservative approach as a foundation, then try the new method in certain stages.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d45-s15",
+          "text_original": "这样既尊重了他的意见，也实现了你的想法。你觉得他会同意吗？",
+          "pinyin": "Zhèyàng jì zūnzhòng le tā de yìjiàn, yě shíxiàn le nǐ de xiǎngfǎ. Nǐ juéde tā huì tóngyì ma?",
+          "text_translation": "Bunday qilsang, ham uning fikrini hurmat qilgan bo'lasan, ham o'z g'oyangni amalga oshirasan. Sening fikringcha, u rozi bo'ladimi?",
+          "text_translation_ru": "Так ты и уважишь его мнение, и реализуешь свою идею. Как думаешь, он согласится?",
+          "text_translation_en": "This way you both respect his opinion and realize your idea. Do you think he'll agree?",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d45-s16",
+          "text_original": "我觉得可以再跟他聊一次。这次我会先听他说，再慢慢表达我的观点。",
+          "pinyin": "Wǒ juéde kěyǐ zài gēn tā liáo yí cì. Zhè cì wǒ huì xiān tīng tā shuō, zài mànmàn biǎodá wǒ de guāndiǎn.",
+          "text_translation": "Menimcha, u bilan yana bir marta gaplashsam bo'ladi. Bu safar avval uni eshitaman, keyin asta-sekin o'z nuqtai nazarimni bildiraman.",
+          "text_translation_ru": "Думаю, можно ещё раз с ним поговорить. На этот раз я сначала выслушаю его, а потом не спеша выскажу свою точку зрения.",
+          "text_translation_en": "I think I could talk to him again. This time I'll listen to him first, then slowly express my own point of view.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d45-s17",
+          "text_original": "这样很好。处理冲突的关键不是谁赢谁输，而是找到一个双方都能接受的解决方案。",
+          "pinyin": "Zhèyàng hěn hǎo. Chǔlǐ chōngtū de guānjiàn bú shì shuí yíng shuí shū, ér shì zhǎodào yí ge shuāngfāng dōu néng jiēshòu de jiějué fāng'àn.",
+          "text_translation": "Bu juda yaxshi. Nizoni hal qilishning kaliti kim yutib, kim yutqazishida emas, balki ikki tomon ham qabul qila oladigan yechim topishdadir.",
+          "text_translation_ru": "Это очень хорошо. Ключ к разрешению конфликта не в том, кто победит, а кто проиграет, а в том, чтобы найти решение, приемлемое для обеих сторон.",
+          "text_translation_en": "That's very good. The key to handling conflict isn't who wins and who loses, but finding a solution that both sides can accept.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d45-s18",
+          "text_original": "谢谢你的建议。我会试着调整一下自己的态度。",
+          "pinyin": "Xièxie nǐ de jiànyì. Wǒ huì shì zhe tiáozhěng yí xià zìjǐ de tàidu.",
+          "text_translation": "Maslahating uchun rahmat. Men o'z munosabatimni biroz to'g'rilashga harakat qilaman.",
+          "text_translation_ru": "Спасибо за совет. Я постараюсь немного скорректировать своё отношение.",
+          "text_translation_en": "Thank you for your advice. I'll try to adjust my attitude a bit.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

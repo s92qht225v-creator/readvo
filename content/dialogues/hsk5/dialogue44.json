@@ -1,0 +1,194 @@
+{
+  "id": "hsk5-dialogue44",
+  "slug": "short-videos",
+  "title": "短视频",
+  "pinyin": "Duǎn shìpín",
+  "titleTranslation": "Qisqa videolar",
+  "titleTranslation_ru": "Короткие видео",
+  "titleTranslation_en": "Short Videos",
+  "level": 5,
+  "tag": "texnologiya",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "短视频",
+    "魔力",
+    "注意力",
+    "专注力",
+    "研究表明",
+    "切换",
+    "降低",
+    "火爆",
+    "形式",
+    "算法推荐",
+    "推送",
+    "深度思考",
+    "主动",
+    "设定",
+    "定时器",
+    "培养",
+    "兴趣爱好"
+  ],
+  "sections": [
+    {
+      "id": "h5d44-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d44-s1",
+          "text_original": "你最近怎么老是刷短视频？我看你吃饭的时候也在看。",
+          "pinyin": "Nǐ zuìjìn zěnme lǎo shì shuā duǎn shìpín? Wǒ kàn nǐ chīfàn de shíhou yě zài kàn.",
+          "text_translation": "Yaqinda nega doim qisqa video ko'raverasan? Ovqat yeyayotganingda ham ko'rayotganingni payqadim.",
+          "text_translation_ru": "Почему ты в последнее время всё время листаешь короткие видео? Я заметил, ты и во время еды их смотришь.",
+          "text_translation_en": "Why have you been scrolling short videos all the time lately? I noticed you watch them even while eating.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d44-s2",
+          "text_original": "我也发现自己刷得越来越多，有时候本来只想看几分钟，结果一刷就是一两个小时。",
+          "pinyin": "Wǒ yě fāxiàn zìjǐ shuā de yuè lái yuè duō, yǒu shíhou běnlái zhǐ xiǎng kàn jǐ fēnzhōng, jiéguǒ yī shuā jiù shì yī liǎng ge xiǎoshí.",
+          "text_translation": "Men ham o'zimni tobora ko'proq ko'rayotganimni sezdim, ba'zan dastlab bir necha daqiqa ko'rmoqchi bo'laman, oxiri bir-ikki soat ko'rib qo'yaman.",
+          "text_translation_ru": "Я и сам заметил, что листаю всё больше. Иногда хочу посмотреть всего пару минут, а в итоге залипаю на час-два.",
+          "text_translation_en": "I've noticed I scroll more and more too. Sometimes I only mean to watch a few minutes, but end up scrolling for an hour or two.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d44-s3",
+          "text_original": "我也是这样！感觉短视频有一种魔力，让人停不下来。",
+          "pinyin": "Wǒ yě shì zhèyàng! Gǎnjué duǎn shìpín yǒu yī zhǒng mólì, ràng rén tíng bù xiàlái.",
+          "text_translation": "Men ham shunaqaman! Qisqa videoda qandaydir sehr bordek, odamni to'xtatmaydi.",
+          "text_translation_ru": "У меня то же самое! Кажется, у коротких видео есть какая-то магия — невозможно остановиться.",
+          "text_translation_en": "Same here! It feels like short videos have a kind of magic that makes you unable to stop.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d44-s4",
+          "text_original": "我最近开始担心一个问题，我的注意力越来越差了。以前能安静地看一本书，现在看几页就想拿起手机。",
+          "pinyin": "Wǒ zuìjìn kāishǐ dānxīn yī ge wèntí, wǒ de zhùyìlì yuè lái yuè chà le. Yǐqián néng ānjìng de kàn yī běn shū, xiànzài kàn jǐ yè jiù xiǎng ná qǐ shǒujī.",
+          "text_translation": "Yaqinda bir narsadan xavotirlana boshladim — diqqatim tobora yomonlashyapti. Avval bir kitobni tinch o'qiy olardim, hozir bir necha bet o'qisam telefonni olgim keladi.",
+          "text_translation_ru": "В последнее время меня начала беспокоить одна вещь: моё внимание становится всё хуже. Раньше я мог спокойно читать книгу, а теперь, прочитав пару страниц, уже хочется взять телефон.",
+          "text_translation_en": "Lately I've started to worry about something — my attention is getting worse and worse. I used to be able to read a book quietly, but now after a few pages I want to pick up my phone.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d44-s5",
+          "text_original": "你说到点子上了。很多研究都表明，短视频的快速切换会降低人的专注力。",
+          "pinyin": "Nǐ shuō dào diǎnzi shàng le. Hěnduō yánjiū dōu biǎomíng, duǎn shìpín de kuàisù qiēhuàn huì jiàngdī rén de zhuānzhùlì.",
+          "text_translation": "Aynan nuqtaga tegding. Ko'p tadqiqotlar ko'rsatishicha, qisqa videolarning tez almashishi odamning diqqatini jamlash qobiliyatini pasaytiradi.",
+          "text_translation_ru": "Ты попал в самую точку. Многие исследования показывают, что быстрое переключение коротких видео снижает способность человека концентрироваться.",
+          "text_translation_en": "You hit the nail on the head. Many studies show that the rapid switching of short videos reduces people's ability to concentrate.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d44-s6",
+          "text_original": "那你怎么看短视频的火爆现象？",
+          "pinyin": "Nà nǐ zěnme kàn duǎn shìpín de huǒbào xiànxiàng?",
+          "text_translation": "Unda qisqa videolarning shu darajada ommalashuvini qanday baholaysan?",
+          "text_translation_ru": "А как ты смотришь на бурную популярность коротких видео?",
+          "text_translation_en": "So how do you view the booming popularity of short videos?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d44-s7",
+          "text_original": "我认为短视频本身没问题，是一种新的内容形式。但问题在于算法推荐，它会一直推送你感兴趣的内容，让你停不下来。",
+          "pinyin": "Wǒ rènwéi duǎn shìpín běnshēn méi wèntí, shì yī zhǒng xīn de nèiróng xíngshì. Dàn wèntí zàiyú suànfǎ tuījiàn, tā huì yīzhí tuīsòng nǐ gǎn xìngqù de nèiróng, ràng nǐ tíng bù xiàlái.",
+          "text_translation": "Menimcha qisqa videoning o'zida muammo yo'q, bu yangi mazmun shakli. Lekin muammo algoritm tavsiyasida — u sen qiziqadigan mazmunni doimo yetkazib turadi va to'xtata olmaysan.",
+          "text_translation_ru": "Я считаю, что сами по себе короткие видео — это не проблема, это новая форма контента. Но проблема в рекомендациях алгоритма: он постоянно подсовывает тебе интересный контент, и ты не можешь остановиться.",
+          "text_translation_en": "I think short videos themselves aren't the problem — they're a new form of content. The problem lies in the algorithm's recommendations: it keeps pushing content you're interested in, so you can't stop.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d44-s8",
+          "text_original": "确实。我本来只是想放松一下，结果越看越累，反而没有得到休息。",
+          "pinyin": "Quèshí. Wǒ běnlái zhǐ shì xiǎng fàngsōng yīxià, jiéguǒ yuè kàn yuè lèi, fǎn'ér méiyǒu dédào xiūxi.",
+          "text_translation": "Rostdan. Men aslida shunchaki dam olmoqchi edim, oqibatda qaragan sari charchadim, aksincha dam ololmadim.",
+          "text_translation_ru": "Действительно. Я ведь просто хотел немного расслабиться, а в итоге чем больше смотрю, тем сильнее устаю — и наоборот, не отдыхаю.",
+          "text_translation_en": "True. I only meant to relax a bit, but the more I watched the more tired I got — I didn't actually get any rest.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d44-s9",
+          "text_original": "更严重的是，长期刷短视频可能会影响我们深度思考的能力。",
+          "pinyin": "Gèng yánzhòng de shì, chángqī shuā duǎn shìpín kěnéng huì yǐngxiǎng wǒmen shēndù sīkǎo de nénglì.",
+          "text_translation": "Yana jiddiyrog'i, uzoq vaqt qisqa video ko'rish chuqur fikrlash qobiliyatimizga ta'sir qilishi mumkin.",
+          "text_translation_ru": "Что ещё серьёзнее, длительный просмотр коротких видео может повлиять на нашу способность к глубокому мышлению.",
+          "text_translation_en": "What's more serious is that scrolling short videos long-term may affect our ability to think deeply.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d44-s10",
+          "text_original": "你说得对。我现在看长一点的文章都觉得没耐心，总想跳着看。",
+          "pinyin": "Nǐ shuō de duì. Wǒ xiànzài kàn cháng yī diǎn de wénzhāng dōu juéde méi nàixīn, zǒng xiǎng tiào zhe kàn.",
+          "text_translation": "To'g'ri aytasan. Hozir biroz uzunroq maqola o'qisam sabrim qolmaydi, hadeb sakrab o'qigim keladi.",
+          "text_translation_ru": "Ты прав. Сейчас, когда читаю чуть более длинную статью, мне не хватает терпения — всё время хочется читать по диагонали.",
+          "text_translation_en": "You're right. Now when I read a slightly longer article I have no patience — I always want to skim through it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d44-s11",
+          "text_original": "所以我觉得我们需要主动控制使用时间，而不是完全被算法控制。",
+          "pinyin": "Suǒyǐ wǒ juéde wǒmen xūyào zhǔdòng kòngzhì shǐyòng shíjiān, ér bú shì wánquán bèi suànfǎ kòngzhì.",
+          "text_translation": "Shuning uchun menimcha biz foydalanish vaqtini o'zimiz faol nazorat qilishimiz kerak, butunlay algoritm nazoratiga tushib qolmaslik kerak.",
+          "text_translation_ru": "Поэтому я считаю, что нам нужно самим активно контролировать время использования, а не полностью находиться под контролем алгоритма.",
+          "text_translation_en": "So I think we need to proactively control our usage time, rather than being completely controlled by the algorithm.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d44-s12",
+          "text_original": "那你有什么好建议吗？",
+          "pinyin": "Nà nǐ yǒu shénme hǎo jiànyì ma?",
+          "text_translation": "Unda biror yaxshi maslahating bormi?",
+          "text_translation_ru": "А у тебя есть какой-нибудь хороший совет?",
+          "text_translation_en": "So do you have any good advice?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d44-s13",
+          "text_original": "我给自己设定了一个规则：每天刷短视频不超过半小时，用手机定时器提醒自己。",
+          "pinyin": "Wǒ gěi zìjǐ shèdìng le yī ge guīzé: měitiān shuā duǎn shìpín bù chāoguò bàn xiǎoshí, yòng shǒujī dìngshíqì tíxǐng zìjǐ.",
+          "text_translation": "Men o'zimga bitta qoida belgiladim: har kuni qisqa videoni yarim soatdan ortiq ko'rmaslik, telefon taymeri bilan o'zimni ogohlantiraman.",
+          "text_translation_ru": "Я установил себе правило: каждый день смотреть короткие видео не больше получаса, и напоминаю себе таймером в телефоне.",
+          "text_translation_en": "I set myself a rule: no more than half an hour of short videos a day, using my phone's timer to remind myself.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d44-s14",
+          "text_original": "这办法不错。我也得试试，不然真的太浪费时间了。",
+          "pinyin": "Zhè bànfǎ bùcuò. Wǒ yě děi shì shi, bùrán zhēn de tài làngfèi shíjiān le.",
+          "text_translation": "Bu usul yaxshi. Men ham sinab ko'rishim kerak, aks holda rostdan juda ko'p vaqt behuda ketadi.",
+          "text_translation_ru": "Хороший способ. Мне тоже стоит попробовать, иначе и правда слишком много времени уходит впустую.",
+          "text_translation_en": "That's a good method. I should try it too, otherwise I'm really wasting too much time.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d44-s15",
+          "text_original": "还有，可以试着培养一些其他的兴趣爱好，比如阅读、运动或者绘画，让注意力回到现实生活中来。",
+          "pinyin": "Hái yǒu, kěyǐ shì zhe péiyǎng yīxiē qítā de xìngqù àihào, bǐrú yuèdú, yùndòng huòzhě huìhuà, ràng zhùyìlì huí dào xiànshí shēnghuó zhōng lái.",
+          "text_translation": "Yana, boshqa qiziqishlar va sevimli mashg'ulotlarni rivojlantirib ko'rsa bo'ladi, masalan o'qish, sport yoki rasm chizish, shunda diqqat real hayotga qaytadi.",
+          "text_translation_ru": "Ещё можно попробовать развивать другие увлечения, например чтение, спорт или рисование, чтобы вернуть внимание к реальной жизни.",
+          "text_translation_en": "Also, you could try cultivating other hobbies — like reading, exercise, or painting — to bring your attention back to real life.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d44-s16",
+          "text_original": "你说得很有道理。我决定从今天起控制刷视频的时间。",
+          "pinyin": "Nǐ shuō de hěn yǒu dàoli. Wǒ juédìng cóng jīntiān qǐ kòngzhì shuā shìpín de shíjiān.",
+          "text_translation": "Gaping juda mantiqli. Bugundan boshlab video ko'rish vaqtimni nazorat qilishga qaror qildim.",
+          "text_translation_ru": "Ты говоришь очень разумно. Я решил с сегодняшнего дня контролировать время на видео.",
+          "text_translation_en": "What you say makes a lot of sense. I've decided to control my video-scrolling time starting today.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d44-s17",
+          "text_original": "加油！改变习惯需要一些时间，但值得去做。",
+          "pinyin": "Jiāyóu! Gǎibiàn xíguàn xūyào yīxiē shíjiān, dàn zhídé qù zuò.",
+          "text_translation": "Omad! Odatni o'zgartirish biroz vaqt talab qiladi, lekin qilishga arziydi.",
+          "text_translation_ru": "Удачи! Изменение привычки требует времени, но это того стоит.",
+          "text_translation_en": "Good luck! Changing a habit takes some time, but it's worth doing.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "id": "hsk5-dialogue47",
+  "slug": "idol-worship",
+  "title": "偶像崇拜",
+  "pinyin": "Ǒuxiàng chóngbài",
+  "titleTranslation": "Kumirga sig'inish",
+  "titleTranslation_ru": "Поклонение кумирам",
+  "titleTranslation_en": "Idol Worship",
+  "level": 5,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": ["偶像", "塌房", "粉丝", "专辑", "周边", "崇拜", "负面", "完美", "幻想", "精神寄托", "打击", "积蓄", "理智", "未成年人", "言行", "以身作则", "价值观", "理性", "盲目", "榜样"],
+  "sections": [
+    {
+      "id": "h5d47-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h5d47-s1",
+          "text_original": "你最近有没有看到那个偶像塌房的新闻？我简直不敢相信。",
+          "pinyin": "Nǐ zuìjìn yǒu méiyǒu kàn dào nà ge ǒuxiàng tā fáng de xīnwén? Wǒ jiǎnzhí bù gǎn xiāngxìn.",
+          "text_translation": "Yaqinda o'sha kumirning sharmandagarchiligi haqidagi yangilikni ko'rdingmi? Men shunchaki ishonolmayapman.",
+          "text_translation_ru": "Ты видел недавно новость о скандале с этим кумиром? Я просто не могу в это поверить.",
+          "text_translation_en": "Did you see the news recently about that idol's scandal? I just can't believe it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d47-s2",
+          "text_original": "看到了。很多粉丝花了好多钱买他的专辑和周边，现在都失望极了。",
+          "pinyin": "Kàn dào le. Hěnduō fěnsī huā le hǎoduō qián mǎi tā de zhuānjí hé zhōubiān, xiànzài dōu shīwàng jí le.",
+          "text_translation": "Ko'rdim. Ko'p muxlislar uning albomlari va atributikalariga juda ko'p pul sarflagan edi, hozir esa hammasi qattiq hafsalasi pir bo'ldi.",
+          "text_translation_ru": "Видел. Многие фанаты потратили кучу денег на его альбомы и мерч, а теперь все ужасно разочарованы.",
+          "text_translation_en": "I did. Many fans spent a lot of money buying his albums and merch, and now they're all extremely disappointed.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d47-s3",
+          "text_original": "我觉得追星本身没什么问题，但过度崇拜偶像可能会有负面影响。",
+          "pinyin": "Wǒ juéde zhuīxīng běnshēn méi shénme wèntí, dàn guòdù chóngbài ǒuxiàng kěnéng huì yǒu fùmiàn yǐngxiǎng.",
+          "text_translation": "Menimcha, yulduzlarga ergashishning o'zida hech qanday muammo yo'q, lekin kumirga haddan tashqari sig'inish salbiy ta'sir ko'rsatishi mumkin.",
+          "text_translation_ru": "Я думаю, в самом фанатстве нет ничего плохого, но чрезмерное поклонение кумиру может иметь негативные последствия.",
+          "text_translation_en": "I think being a fan itself isn't a problem, but excessive idol worship can have negative effects.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d47-s4",
+          "text_original": "我同意。尤其是年轻人，容易把偶像当成完美的人，幻想他们不会犯错。",
+          "pinyin": "Wǒ tóngyì. Yóuqí shì niánqīng rén, róngyì bǎ ǒuxiàng dāng chéng wánměi de rén, huànxiǎng tāmen bú huì fàn cuò.",
+          "text_translation": "Roziman. Ayniqsa yoshlar kumirni mukammal inson deb bilishga, ular hech qachon xato qilmaydi deb xayol qilishga moyil.",
+          "text_translation_ru": "Согласен. Особенно молодёжь склонна считать кумира идеальным человеком и фантазировать, что он не совершает ошибок.",
+          "text_translation_en": "I agree. Young people especially tend to see idols as perfect people and imagine that they never make mistakes.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d47-s5",
+          "text_original": "但偶像也是普通人，他们也有缺点，也会做出错误的选择。",
+          "pinyin": "Dàn ǒuxiàng yě shì pǔtōng rén, tāmen yě yǒu quēdiǎn, yě huì zuò chū cuòwù de xuǎnzé.",
+          "text_translation": "Lekin kumirlar ham oddiy odamlar, ularning ham kamchiliklari bor, ular ham noto'g'ri tanlov qilishi mumkin.",
+          "text_translation_ru": "Но кумиры тоже обычные люди, у них тоже есть недостатки, и они тоже могут делать неправильный выбор.",
+          "text_translation_en": "But idols are ordinary people too; they have flaws and can make wrong choices as well.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d47-s6",
+          "text_original": "很多粉丝把偶像当成精神寄托，从他们身上寻找动力和安慰。",
+          "pinyin": "Hěnduō fěnsī bǎ ǒuxiàng dàng chéng jīngshén jìtuō, cóng tāmen shēnshang xúnzhǎo dònglì hé ānwèi.",
+          "text_translation": "Ko'p muxlislar kumirni ma'naviy tayanch deb biladi, ulardan ilhom va tasalli izlaydi.",
+          "text_translation_ru": "Многие фанаты делают кумира своей духовной опорой, ищут в нём мотивацию и утешение.",
+          "text_translation_en": "Many fans treat their idol as an emotional anchor, seeking motivation and comfort from them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d47-s7",
+          "text_original": "这种情感需求可以理解。但如果把所有的情感都寄托在偶像身上，一旦偶像出现问题，粉丝可能会受到很大的打击。",
+          "pinyin": "Zhè zhǒng qínggǎn xūqiú kěyǐ lǐjiě. Dàn rúguǒ bǎ suǒyǒu de qínggǎn dōu jìtuō zài ǒuxiàng shēnshang, yí dàn ǒuxiàng chūxiàn wèntí, fěnsī kěnéng huì shòudào hěn dà de dǎjī.",
+          "text_translation": "Bunday hissiy ehtiyojni tushunsa bo'ladi. Lekin agar barcha tuyg'ularni kumirga bog'lab qo'ysang, kumir bilan biror muammo yuzaga kelsa, muxlis katta zarba olishi mumkin.",
+          "text_translation_ru": "Такую эмоциональную потребность можно понять. Но если возложить все чувства на кумира, то как только у кумира возникнут проблемы, фанат может получить серьёзный удар.",
+          "text_translation_en": "That emotional need is understandable. But if you place all your emotions on an idol, then once the idol runs into trouble, fans can suffer a major blow.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d47-s8",
+          "text_original": "是啊，我看到有些粉丝甚至愿意为偶像花光所有的积蓄。",
+          "pinyin": "Shì a, wǒ kàn dào yǒuxiē fěnsī shènzhì yuànyì wèi ǒuxiàng huā guāng suǒyǒu de jīxù.",
+          "text_translation": "Ha, men ba'zi muxlislar kumiri uchun butun jamg'armasini sarflashga ham tayyorligini ko'rdim.",
+          "text_translation_ru": "Да, я видел, что некоторые фанаты готовы даже потратить на кумира все свои сбережения.",
+          "text_translation_en": "Yeah, I've seen some fans who are even willing to spend all their savings on their idol.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d47-s9",
+          "text_original": "这就有点失去理智了。崇拜偶像可以是一种娱乐，但不能让它控制你的生活。",
+          "pinyin": "Zhè jiù yǒudiǎn shīqù lǐzhì le. Chóngbài ǒuxiàng kěyǐ shì yì zhǒng yúlè, dàn bùnéng ràng tā kòngzhì nǐ de shēnghuó.",
+          "text_translation": "Bu allaqachon biroz aql-idrokni yo'qotish demakdir. Kumirga sig'inish bir xil ko'ngilochar mashg'ulot bo'lishi mumkin, lekin u sening hayotingni boshqarishiga yo'l qo'yib bo'lmaydi.",
+          "text_translation_ru": "Это уже немного потеря рассудка. Поклонение кумиру может быть развлечением, но нельзя позволять ему контролировать твою жизнь.",
+          "text_translation_en": "That's already losing your sense a bit. Worshipping an idol can be a form of entertainment, but you can't let it control your life.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d47-s10",
+          "text_original": "你觉得偶像应该对社会负什么样的责任？",
+          "pinyin": "Nǐ juéde ǒuxiàng yīnggāi duì shèhuì fù shénmeyàng de zérèn?",
+          "text_translation": "Sencha, kumirlar jamiyat oldida qanday mas'uliyatni zimmasiga olishi kerak?",
+          "text_translation_ru": "Как ты думаешь, какую ответственность кумиры должны нести перед обществом?",
+          "text_translation_en": "What kind of responsibility do you think idols should bear toward society?",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d47-s11",
+          "text_original": "因为很多粉丝是未成年人，偶像的言行会对他们产生很大的影响。",
+          "pinyin": "Yīnwèi hěnduō fěnsī shì wèichéngnián rén, ǒuxiàng de yánxíng huì duì tāmen chǎnshēng hěn dà de yǐngxiǎng.",
+          "text_translation": "Chunki ko'p muxlislar voyaga yetmaganlar, kumirning so'z va xatti-harakatlari ularga katta ta'sir ko'rsatadi.",
+          "text_translation_ru": "Поскольку многие фанаты — несовершеннолетние, слова и поступки кумира оказывают на них большое влияние.",
+          "text_translation_en": "Because many fans are minors, an idol's words and actions have a big influence on them.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d47-s12",
+          "text_original": "所以偶像应该以身作则，传递正确的价值观。",
+          "pinyin": "Suǒyǐ ǒuxiàng yīnggāi yǐ shēn zuò zé, chuándì zhèngquè de jiàzhíguān.",
+          "text_translation": "Shuning uchun kumirlar o'zlari namuna bo'lib, to'g'ri qadriyatlarni yetkazishi kerak.",
+          "text_translation_ru": "Поэтому кумиры должны подавать личный пример и транслировать правильные ценности.",
+          "text_translation_en": "So idols should lead by example and convey the right values.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d47-s13",
+          "text_original": "但说到底，粉丝自己也要学会理性看待偶像。喜欢一个人没错，但不能盲目崇拜。",
+          "pinyin": "Dàn shuō dào dǐ, fěnsī zìjǐ yě yào xuéhuì lǐxìng kàndài ǒuxiàng. Xǐhuān yí ge rén méi cuò, dàn bùnéng mángmù chóngbài.",
+          "text_translation": "Lekin oxir-oqibat, muxlisning o'zi ham kumirga oqilona qarashni o'rganishi kerak. Bir odamni yoqtirishda xato yo'q, ammo ko'r-ko'rona sig'inib bo'lmaydi.",
+          "text_translation_ru": "Но в конце концов, фанаты сами тоже должны научиться относиться к кумиру разумно. Любить кого-то — это нормально, но нельзя слепо поклоняться.",
+          "text_translation_en": "But in the end, fans themselves also need to learn to view their idol rationally. Liking someone is fine, but you can't worship them blindly.",
+          "speaker": "A"
+        },
+        {
+          "id": "h5d47-s14",
+          "text_original": "我觉得健康追星的关键在于，把偶像当成激励自己的榜样，而不是生活的全部。",
+          "pinyin": "Wǒ juéde jiànkāng zhuīxīng de guānjiàn zàiyú, bǎ ǒuxiàng dàng chéng jīlì zìjǐ de bǎngyàng, ér bú shì shēnghuó de quánbù.",
+          "text_translation": "Menimcha, sog'lom muxlislikning kaliti — kumirni o'zingni rag'batlantiradigan namuna deb bilish, hayotingning hammasi deb emas.",
+          "text_translation_ru": "Я думаю, ключ к здоровому фанатству в том, чтобы воспринимать кумира как пример, который вдохновляет тебя, а не как всю свою жизнь.",
+          "text_translation_en": "I think the key to healthy fandom is to treat your idol as a role model that motivates you, not as your entire life.",
+          "speaker": "B"
+        },
+        {
+          "id": "h5d47-s15",
+          "text_original": "说得太对了！希望更多的年轻人能够理性追星。",
+          "pinyin": "Shuō de tài duì le! Xīwàng gèng duō de niánqīng rén nénggòu lǐxìng zhuīxīng.",
+          "text_translation": "Juda to'g'ri aytding! Yanada ko'proq yoshlar oqilona muxlis bo'la olishini umid qilaman.",
+          "text_translation_ru": "Очень верно сказано! Надеюсь, всё больше молодых людей смогут быть фанатами разумно.",
+          "text_translation_en": "Very well said! I hope more young people can be fans rationally.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
