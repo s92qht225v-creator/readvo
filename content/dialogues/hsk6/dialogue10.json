@@ -1,0 +1,183 @@
+{
+  "id": "hsk6-dialogue10",
+  "slug": "urban-rural-gap",
+  "title": "城乡差距",
+  "pinyin": "Chéngxiāng chājù",
+  "titleTranslation": "Shahar va qishloq tafovuti",
+  "titleTranslation_ru": "Разрыв между городом и деревней",
+  "titleTranslation_en": "Urban-Rural Gap",
+  "level": 6,
+  "tag": "jamiyat",
+  "dateAdded": "2026-06-21",
+  "vocab": [
+    "差距",
+    "空心化",
+    "冷清",
+    "教学设备",
+    "卫生站",
+    "乡村振兴",
+    "产业发展",
+    "自然规律",
+    "承载",
+    "城市化",
+    "回流",
+    "情怀",
+    "缩小",
+    "双重",
+    "焕发"
+  ],
+  "sections": [
+    {
+      "id": "h6d10-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h6d10-s1",
+          "text_original": "你春节回老家了吗？感觉怎么样？",
+          "pinyin": "Nǐ chūnjié huí lǎojiā le ma? Gǎnjué zěnmeyàng?",
+          "text_translation": "Bahor bayramida ona yurtingga bordingmi? O'zingni qanday his qilding?",
+          "text_translation_ru": "Ты на праздник Весны ездил на родину? Какие впечатления?",
+          "text_translation_en": "Did you go back to your hometown for the Spring Festival? How did it feel?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d10-s2",
+          "text_original": "回去了，每次回去都觉得跟城市差距越来越大。村里年轻人越来越少，大部分都外出打工了，剩下老人和孩子。",
+          "pinyin": "Huí qù le, měi cì huíqù dōu juéde gēn chéngshì chājù yuè lái yuè dà. Cūn lǐ niánqīng rén yuè lái yuè shǎo, dà bùfen dōu wàichū dǎgōng le, shèngxià lǎorén hé háizi.",
+          "text_translation": "Bordim, har safar borganimda shahar bilan tafovut tobora kattalashayotganini his qilaman. Qishloqda yoshlar tobora kamayyapti, ko'pchiligi tashqariga ishlashga ketgan, faqat keksalar va bolalar qolgan.",
+          "text_translation_ru": "Ездил, и каждый раз чувствую, что разрыв с городом всё больше. Молодёжи в деревне всё меньше, большинство уехали на заработки, остались старики и дети.",
+          "text_translation_en": "I did, and every time I go back I feel the gap with the city is growing. There are fewer and fewer young people in the village — most have left to work elsewhere, leaving only the elderly and children.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d10-s3",
+          "text_original": "这就是农村空心化的问题。年轻人都往城市跑，村里越来越冷清。",
+          "pinyin": "Zhè jiùshì nóngcūn kōngxīnhuà de wèntí. Niánqīng rén dōu wǎng chéngshì pǎo, cūn lǐ yuè lái yuè lěngqīng.",
+          "text_translation": "Mana bu qishloqning bo'shab qolish muammosi. Yoshlar hammasi shaharga qochadi, qishloq tobora kimsasiz bo'lib boryapti.",
+          "text_translation_ru": "Это и есть проблема опустошения села. Молодёжь вся бежит в город, и деревня становится всё безлюднее.",
+          "text_translation_en": "This is the problem of rural hollowing-out. Young people all rush to the cities, and the villages grow more and more deserted.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d10-s4",
+          "text_original": "我小时候村里小学有几百个学生，现在只剩下几十个了。老师也不愿意来，教学设备也很落后。",
+          "pinyin": "Wǒ xiǎoshíhou cūn lǐ xiǎoxué yǒu jǐ bǎi ge xuéshēng, xiànzài zhǐ shèng xià jǐ shí ge le. Lǎoshī yě bú yuànyì lái, jiàoxué shèbèi yě hěn luòhòu.",
+          "text_translation": "Men bolaligimda qishloq boshlang'ich maktabida bir necha yuz o'quvchi bor edi, hozir atigi o'n nechtasi qoldi. O'qituvchilar ham kelishni xohlamaydi, o'quv jihozlari ham juda eskirgan.",
+          "text_translation_ru": "В детстве в нашей сельской школе было несколько сотен учеников, а теперь осталось всего несколько десятков. Учителя тоже не хотят туда ехать, и учебное оборудование очень отсталое.",
+          "text_translation_en": "When I was little, the village primary school had a few hundred students; now only a few dozen are left. Teachers don't want to come either, and the teaching equipment is very outdated.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d10-s5",
+          "text_original": "你村子的医疗条件怎么样？",
+          "pinyin": "Nǐ cūnzi de yīliáo tiáojiàn zěnmeyàng?",
+          "text_translation": "Qishlog'ingning tibbiy sharoiti qanday?",
+          "text_translation_ru": "А как обстоят дела с медициной в твоей деревне?",
+          "text_translation_en": "What are the medical conditions like in your village?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d10-s6",
+          "text_original": "只有一个卫生站，一个老医生，平时看个感冒还行，大病都得去县里。老人看病特别不方便。",
+          "pinyin": "Zhǐ yǒu yí ge wèishēng zhàn, yí ge lǎo yīshēng, píngshí kàn ge gǎnmào hái xíng, dà bìng dōu děi qù xiàn lǐ. Lǎorén kàn bìng tèbié bù fāngbiàn.",
+          "text_translation": "Faqat bitta tibbiy punkt, bitta keksa shifokor bor, oddiy shamollashni davolasa bo'ladi, og'ir kasallikda tuman markaziga borish kerak. Keksalar uchun davolanish juda noqulay.",
+          "text_translation_ru": "Есть только один медпункт и один старый врач: простуду полечить ещё можно, а при серьёзной болезни приходится ехать в уездный центр. Старикам лечиться очень неудобно.",
+          "text_translation_en": "There's only one health station and one old doctor — for a common cold it's fine, but for serious illness you have to go to the county seat. It's very inconvenient for the elderly to see a doctor.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d10-s7",
+          "text_original": "政府这些年不是也在推乡村振兴吗？有没有什么变化？",
+          "pinyin": "Zhèngfǔ zhèxiē nián bú shì yě zài tuī xiāngcūn zhènxīng ma? Yǒu méiyǒu shénme biànhuà?",
+          "text_translation": "Hukumat shu yillarda qishloqni tiklashni targ'ib qilyapti-ku? Biror o'zgarish bormi?",
+          "text_translation_ru": "Государство ведь все эти годы продвигает возрождение села? Есть какие-нибудь изменения?",
+          "text_translation_en": "Hasn't the government been promoting rural revitalization these years? Have there been any changes?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d10-s8",
+          "text_original": "有修了一些路和广场，但产业发展还是跟不上。年轻人回去了找不到合适的工作，最后还是得走。",
+          "pinyin": "Yǒu xiū le yì xiē lù hé guǎngchǎng, dàn chǎnyè fāzhǎn háishì gēn bú shàng. Niánqīng rén huíqù le zhǎo bú dào héshì de gōngzuò, zuìhòu háishì děi zǒu.",
+          "text_translation": "Bir nechta yo'l va maydon qurildi, lekin tarmoq rivoji baribir orqada qolyapti. Yoshlar qaytsa ham mos ish topa olmaydi, oxiri baribir ketishga majbur.",
+          "text_translation_ru": "Построили кое-какие дороги и площади, но развитие отраслей по-прежнему отстаёт. Молодёжь, вернувшись, не может найти подходящую работу и в итоге всё равно уезжает.",
+          "text_translation_en": "They've built some roads and squares, but industrial development still can't keep up. Young people go back but can't find suitable jobs, so in the end they have to leave again.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d10-s9",
+          "text_original": "你觉得城乡差距最核心的问题是什么？",
+          "pinyin": "Nǐ juéde chéngxiāng chājù zuì héxīn de wèntí shì shénme?",
+          "text_translation": "Seningcha shahar-qishloq tafovutining eng asosiy muammosi nima?",
+          "text_translation_ru": "Как ты думаешь, в чём главная проблема разрыва между городом и деревней?",
+          "text_translation_en": "What do you think is the core problem of the urban-rural gap?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d10-s10",
+          "text_original": "还是机会不平等。教育、医疗、就业、基础设施，城市都比农村好太多。人往高处走，这是自然规律。",
+          "pinyin": "Háishì jīhuì bù píngděng. Jiàoyù, yīliáo, jiùyè, jīchǔ shèshī, chéngshì dōu bǐ nóngcūn hǎo tài duō. Rén wǎng gāo chù zǒu, zhè shì zìrán guīlǜ.",
+          "text_translation": "Baribir imkoniyatlar tengsizligi. Ta'lim, tibbiyot, bandlik, infratuzilma — shahar qishloqdan ancha yaxshi. Inson yuqoriga intiladi, bu tabiat qonuniyati.",
+          "text_translation_ru": "Всё-таки неравенство возможностей. Образование, медицина, занятость, инфраструктура — в городе всё гораздо лучше, чем в деревне. Человек стремится туда, где лучше, — это закон природы.",
+          "text_translation_en": "It's still the inequality of opportunity. Education, healthcare, employment, infrastructure — the city is far better than the countryside in all of them. People move toward better prospects — that's a law of nature.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d10-s11",
+          "text_original": "但城市也承载不了那么多人啊。房价、交通、污染，都是问题。",
+          "pinyin": "Dàn chéngshì yě chéngzài bù liǎo nàme duō rén a. Fángjià, jiāotōng, wūrǎn, dōu shì wèntí.",
+          "text_translation": "Lekin shahar ham shuncha odamni sig'dira olmaydi-ku. Uy narxi, transport, ifloslanish — hammasi muammo.",
+          "text_translation_ru": "Но город ведь тоже не может вместить столько людей. Цены на жильё, транспорт, загрязнение — всё это проблемы.",
+          "text_translation_en": "But the city can't carry that many people either. Housing prices, traffic, pollution — they're all problems.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d10-s12",
+          "text_original": "所以城市化到了一定程度，就得反过来考虑怎么发展乡村。否则两头都会出问题。",
+          "pinyin": "Suǒyǐ chéngshìhuà dào le yídìng chéngdù, jiù děi fǎn guòlái kǎolǜ zěnme fāzhǎn xiāngcūn. Fǒuzé liǎng tóu dōu huì chū wèntí.",
+          "text_translation": "Shuning uchun shaharlashuv ma'lum darajaga yetganda, aksincha qishloqni qanday rivojlantirishni o'ylash kerak. Aks holda ikkala tomonda ham muammo chiqadi.",
+          "text_translation_ru": "Поэтому, когда урбанизация достигает определённого уровня, нужно, наоборот, думать, как развивать село. Иначе проблемы возникнут с обеих сторон.",
+          "text_translation_en": "So once urbanization reaches a certain point, you have to think the other way — how to develop the countryside. Otherwise problems arise on both ends.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d10-s13",
+          "text_original": "你觉得年轻人现在回流乡村的可能大吗？",
+          "pinyin": "Nǐ juéde niánqīng rén xiànzài huíliú xiāngcūn de kěnéng dà ma?",
+          "text_translation": "Seningcha hozir yoshlarning qishloqqa qaytishi ehtimoli kattami?",
+          "text_translation_ru": "Как ты думаешь, велика ли сейчас вероятность, что молодёжь вернётся в село?",
+          "text_translation_en": "Do you think there's a good chance of young people flowing back to the countryside now?",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d10-s14",
+          "text_original": "短期内不大。除非乡村有足够的产业和收入机会，不然没有人愿意回去。光靠情怀是不够的。",
+          "pinyin": "Duǎnqī nèi bú dà. Chúfēi xiāngcūn yǒu zúgòu de chǎnyè hé shōurù jīhuì, bùrán méiyǒu rén yuànyì huíqù. Guāng kào qínghuái shì bú gòu de.",
+          "text_translation": "Qisqa muddatda katta emas. Qishloqda yetarli tarmoq va daromad imkoniyatlari bo'lmasa, hech kim qaytishni xohlamaydi. Faqat tuyg'uga tayanish yetarli emas.",
+          "text_translation_ru": "В краткосрочной перспективе невелика. Если в селе не будет достаточно отраслей и возможностей для заработка, никто не захочет возвращаться. Одних лишь сентиментов недостаточно.",
+          "text_translation_en": "Not in the short term. Unless the countryside has enough industry and income opportunities, no one will want to go back. Sentiment alone isn't enough.",
+          "speaker": "B"
+        },
+        {
+          "id": "h6d10-s15",
+          "text_original": "你说得现实。城乡差距的缩小，需要时间和政策的双重推动。",
+          "pinyin": "Nǐ shuō de xiànshí. Chéngxiāng chājù de suōxiǎo, xūyào shíjiān hé zhèngcè de shuāngchóng tuīdòng.",
+          "text_translation": "Voqelikka mos aytasan. Shahar-qishloq tafovutini qisqartirish vaqt va siyosatning ikki tomonlama turtkisini talab qiladi.",
+          "text_translation_ru": "Ты говоришь реалистично. Сокращение разрыва между городом и деревней требует двойного толчка — времени и политики.",
+          "text_translation_en": "You're being realistic. Narrowing the urban-rural gap requires the dual push of time and policy.",
+          "speaker": "A"
+        },
+        {
+          "id": "h6d10-s16",
+          "text_original": "希望有一天能看到乡村真正焕发活力吧。",
+          "pinyin": "Xīwàng yǒu yì tiān néng kàn dào xiāngcūn zhēnzhèng huànfā huólì ba.",
+          "text_translation": "Bir kun kelib qishloq chinakamiga jonlanib, hayot qaynashini ko'rishni umid qilaman.",
+          "text_translation_ru": "Надеюсь, однажды мы увидим, как село по-настоящему наполнится жизненной силой.",
+          "text_translation_en": "I hope that one day we'll see the countryside truly come alive again.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
