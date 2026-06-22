@@ -1,0 +1,188 @@
+{
+  "id": "hsk4-dialogue27",
+  "slug": "packing-a-suitcase",
+  "title": "收拾行李",
+  "pinyin": "Shōushi xíngli",
+  "titleTranslation": "Yuk yig'ish",
+  "titleTranslation_ru": "Сборы чемодана",
+  "titleTranslation_en": "Packing a Suitcase",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "行李",
+    "收拾",
+    "行李箱",
+    "洗漱用品",
+    "充电器",
+    "转换插头",
+    "干干净净",
+    "幸好",
+    "提醒",
+    "天气预报",
+    "雨伞",
+    "夹层",
+    "降压药",
+    "随身背包",
+    "护照",
+    "口袋",
+    "充电线",
+    "万无一失",
+    "侧袋",
+    "齐了"
+  ],
+  "sections": [
+    {
+      "id": "h4d27-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d27-s1",
+          "text_original": "妈，你的行李收拾好了吗？我们明天早上七点的飞机，得早点起来。",
+          "pinyin": "Mā, nǐ de xíngli shōushi hǎo le ma? Wǒmen míngtiān zǎoshang qī diǎn de fēijī, děi zǎo diǎn qǐlái.",
+          "text_translation": "Oyi, yukingizni yig'ib bo'ldingizmi? Ertaga ertalab soat yettidagi samolyotimiz, erta turishimiz kerak.",
+          "text_translation_ru": "Мам, ты вещи собрала? У нас завтра самолёт в семь утра, надо встать пораньше.",
+          "text_translation_en": "Mom, have you packed your luggage? Our flight is at seven tomorrow morning, we need to get up early.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d27-s2",
+          "text_original": "差不多了，衣服都装好了，洗漱用品也放进行李箱了。你帮我看看还有什么忘了带。",
+          "pinyin": "Chàbuduō le, yīfu dōu zhuāng hǎo le, xǐshù yòngpǐn yě fàng jìn xínglixiāng le. Nǐ bāng wǒ kàn kan hái yǒu shénme wàng le dài.",
+          "text_translation": "Deyarli tayyor, kiyimlarni joyladim, yuvinish buyumlarini ham chamadonga soldim. Yana nimani olishni unutganimni ko'rib bera qol.",
+          "text_translation_ru": "Почти всё, одежду уложила, туалетные принадлежности тоже положила в чемодан. Посмотри, что я ещё забыла взять.",
+          "text_translation_en": "Almost done — the clothes are packed and the toiletries are in the suitcase too. Help me check what else I might have forgotten.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d27-s3",
+          "text_original": "妈，你带充电器和转换插头了吗？国外插头跟咱们这儿不一样。",
+          "pinyin": "Mā, nǐ dài chōngdiànqì hé zhuǎnhuàn chātóu le ma? Guówài chātóu gēn zánmen zhèr bù yíyàng.",
+          "text_translation": "Oyi, quvvatlagich va o'tkazgich vilkani oldingizmi? Chet eldagi rozetka bizdagidan boshqacha.",
+          "text_translation_ru": "Мам, ты взяла зарядку и переходник для розетки? За границей розетки не такие, как у нас.",
+          "text_translation_en": "Mom, did you bring the charger and the power adapter? Foreign plugs are different from ours.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d27-s4",
+          "text_original": "哎呀，这个我忘得干干净净！幸好你提醒我了，我现在就放进去。",
+          "pinyin": "Āiyā, zhè ge wǒ wàng de gāngānjìngjìng! Xìngkuì nǐ tíxǐng wǒ le, wǒ xiànzài jiù fàng jìnqù.",
+          "text_translation": "Voy, buni butunlay unutibman! Yaxshiyamki eslatding, hozir solib qo'yaman.",
+          "text_translation_ru": "Ой, про это я начисто забыла! Хорошо, что ты напомнил, сейчас же положу.",
+          "text_translation_en": "Oh, I completely forgot about that! Good thing you reminded me, I'll put it in right now.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d27-s5",
+          "text_original": "还有，你看天气预报说明天杭州有雨，你带伞了吗？",
+          "pinyin": "Hái yǒu, nǐ kàn tiānqì yùbào shuō míngtiān Hángzhōu yǒu yǔ, nǐ dài sǎn le ma?",
+          "text_translation": "Yana, ob-havo ma'lumotiga qarang, ertaga Xanchjouda yomg'ir yog'armish, soyabon oldingizmi?",
+          "text_translation_ru": "Ещё: по прогнозу погоды завтра в Ханчжоу дождь, ты зонт взяла?",
+          "text_translation_en": "Also, the weather forecast says it'll rain in Hangzhou tomorrow — did you bring an umbrella?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d27-s6",
+          "text_original": "雨伞？我放进行李箱了，在夹层里。你放心，我记得的。",
+          "pinyin": "Yǔsǎn? Wǒ fàng jìn xínglixiāng le, zài jiācéng lǐ. Nǐ fàngxīn, wǒ jìde de.",
+          "text_translation": "Soyabonmi? Chamadonga solib qo'ydim, oraliq bo'lmada. Xotirjam bo'l, esimda.",
+          "text_translation_ru": "Зонт? Я положила его в чемодан, в среднее отделение. Не волнуйся, я помню.",
+          "text_translation_en": "The umbrella? I put it in the suitcase, in the middle compartment. Don't worry, I remembered.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d27-s7",
+          "text_original": "好的。对了，你的药带了吗？你平时吃的降压药和感冒药。",
+          "pinyin": "Hǎo de. Duìle, nǐ de yào dài le ma? Nǐ píngshí chī de jiàngyā yào hé gǎnmào yào.",
+          "text_translation": "Yaxshi. Aytgancha, dorilaringizni oldingizmi? Doim ichadigan qon bosimi dorisi va shamollash dorisi.",
+          "text_translation_ru": "Хорошо. Кстати, ты лекарства взяла? Те, что обычно пьёшь, — от давления и от простуды.",
+          "text_translation_en": "Okay. By the way, did you bring your medicine? The blood-pressure pills and cold medicine you usually take.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d27-s8",
+          "text_original": "带了带了，放在随身背包里，方便拿。",
+          "pinyin": "Dài le dài le, fàng zài suíshēn bēibāo lǐ, fāngbiàn ná.",
+          "text_translation": "Oldim, oldim, qo'l yuki ryukzagiga soldim, olish qulay bo'lsin deb.",
+          "text_translation_ru": "Взяла-взяла, положила в рюкзак с собой, чтобы удобно было достать.",
+          "text_translation_en": "Yes, I brought them, they're in my carry-on backpack, easy to reach.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d27-s9",
+          "text_original": "那护照和身份证呢？这些最重要，千万别忘了。",
+          "pinyin": "Nà hùzhào hé shēnfènzhèng ne? Zhèxiē zuì zhòngyào, qiān wàn bié wàng le.",
+          "text_translation": "Pasport va shaxsiy guvohnoma-chi? Bular eng muhimi, aslo unutmang.",
+          "text_translation_ru": "А паспорт и удостоверение? Это самое важное, ни в коем случае не забудь.",
+          "text_translation_en": "What about your passport and ID? These are the most important — don't forget them whatever you do.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d27-s10",
+          "text_original": "护照在我包里，身份证也在。我昨天就准备好了，放在最里面的口袋。",
+          "pinyin": "Hùzhào zài wǒ bāo lǐ, shēnfènzhèng yě zài. Wǒ zuótiān jiù zhǔnbèi hǎo le, fàng zài zuì lǐmiàn de kǒudai.",
+          "text_translation": "Pasport sumkamda, shaxsiy guvohnoma ham shu yerda. Kechayoq tayyorlab qo'ygandim, eng ichkaridagi cho'ntakka soldim.",
+          "text_translation_ru": "Паспорт у меня в сумке, удостоверение тоже. Я ещё вчера всё подготовила, положила в самый внутренний карман.",
+          "text_translation_en": "The passport is in my bag, and the ID too. I got them ready yesterday, in the innermost pocket.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d27-s11",
+          "text_original": "那就没问题了。你再检查一下手机充电线，别到时候没电了。",
+          "pinyin": "Nà jiù méi wèntí le. Nǐ zài jiǎnchá yíxià shǒujī chōngdiàn xiàn, bié dàoshíhou méi diàn le.",
+          "text_translation": "Unda muammo yo'q. Telefon quvvatlash kabelini yana bir tekshiring, keyin zaryadsiz qolmang.",
+          "text_translation_ru": "Тогда всё в порядке. Проверь ещё кабель для зарядки телефона, чтобы он потом не разрядился.",
+          "text_translation_en": "Then there's no problem. Check the phone charging cable again, so you don't run out of battery later.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d27-s12",
+          "text_original": "充电线我装了两根，一根放箱子里，一根放背包里。万无一失。",
+          "pinyin": "Chōngdiàn xiàn wǒ zhuāng le liǎng gēn, yī gēn fàng xiāngzi lǐ, yī gēn fàng bēibāo lǐ. Wàn wú yī shī.",
+          "text_translation": "Quvvatlash kabelidan ikkitasini soldim, biri chamadonda, biri ryukzakda. Yuz foiz ishonchli.",
+          "text_translation_ru": "Кабелей я положила два: один в чемодан, один в рюкзак. Наверняка не подведёт.",
+          "text_translation_en": "I packed two charging cables — one in the suitcase, one in the backpack. Foolproof.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d27-s13",
+          "text_original": "那我就放心了。你把雨伞放在外面方便拿的地方吧，万一到了那边下雨，不用开箱子就能拿到。",
+          "pinyin": "Nà wǒ jiù fàngxīn le. Nǐ bǎ yǔsǎn fàng zài wàimiàn fāngbiàn ná de dìfang ba, wànyī dào le nàbiān xià yǔ, búyòng kāi xiāngzi jiù néng ná dào.",
+          "text_translation": "Unda xotirjamman. Soyabonni tashqaridagi, olish qulay joyga qo'ying, mabodo u yoqqa borganda yomg'ir yog'sa, chamadonni ochmasdan ola olasiz.",
+          "text_translation_ru": "Тогда я спокоен. Положи зонт снаружи, где удобно достать, чтобы, если там пойдёт дождь, его можно было взять, не открывая чемодан.",
+          "text_translation_en": "Then I'm at ease. Put the umbrella somewhere easy to reach on the outside, so if it rains when we get there, you can grab it without opening the suitcase.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d27-s14",
+          "text_original": "有道理！我把它放在背包侧袋里了。好了，这下应该都齐了。",
+          "pinyin": "Yǒu dàoli! Wǒ bǎ tā fàng zài bēibāo cè dài lǐ le. Hǎo le, zhè xià yīnggāi dōu qí le.",
+          "text_translation": "To'g'ri aytasan! Uni ryukzakning yon cho'ntagiga soldim. Bo'ldi, endi hammasi tayyor bo'lsa kerak.",
+          "text_translation_ru": "Логично! Я положила его в боковой карман рюкзака. Ну вот, теперь, кажется, всё на месте.",
+          "text_translation_en": "Good point! I put it in the side pocket of the backpack. There, now everything should be ready.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d27-s15",
+          "text_original": "好的，那早点休息吧，明天还要早起赶飞机呢。",
+          "pinyin": "Hǎo de, nà zǎo diǎn xiūxi ba, míngtiān hái yào zǎo qǐ gǎn fēijī ne.",
+          "text_translation": "Yaxshi, unda erta dam oling, ertaga yana erta turib samolyotga ulgurishimiz kerak.",
+          "text_translation_ru": "Хорошо, тогда ложись пораньше, завтра ещё рано вставать и спешить на самолёт.",
+          "text_translation_en": "Okay, then get some rest early — tomorrow we have to get up early to catch the flight.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d27-s16",
+          "text_original": "好，你也早点睡。晚安！",
+          "pinyin": "Hǎo, nǐ yě zǎo diǎn shuì. Wǎn'ān!",
+          "text_translation": "Mayli, sen ham erta uxla. Xayrli tun!",
+          "text_translation_ru": "Хорошо, ты тоже ложись пораньше. Спокойной ночи!",
+          "text_translation_en": "Okay, you go to sleep early too. Good night!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
