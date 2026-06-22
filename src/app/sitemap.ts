@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { loadBlogPosts } from '@/services/blog';
 import { routing } from '@/i18n/routing';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
 const locales = routing.locales;
 
 /** Build alternates.languages object for a given path */

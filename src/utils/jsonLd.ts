@@ -1,4 +1,4 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
 
 export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
   return {

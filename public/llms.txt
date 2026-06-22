@@ -4,9 +4,9 @@
 
 ## Sections
 
-- [Xitoy tili darslari](https://www.blim.uz/chinese): HSK 1-6 darajali dialoglar va darslar
-- [Fleshkartalar](https://www.blim.uz/chinese/hsk1/flashcards): So'z boyligi uchun fleshkartalar
-- [Karaoke](https://www.blim.uz/chinese/hsk1/karaoke/yueliang): Xitoy qo'shiqlari bilan o'rganish
+- [Xitoy tili darslari](https://blim.uz/chinese): HSK 1-6 darajali dialoglar va darslar
+- [Fleshkartalar](https://blim.uz/chinese/hsk1/flashcards): So'z boyligi uchun fleshkartalar
+- [Karaoke](https://blim.uz/chinese/hsk1/karaoke/yueliang): Xitoy qo'shiqlari bilan o'rganish
 
 ## Notes
 

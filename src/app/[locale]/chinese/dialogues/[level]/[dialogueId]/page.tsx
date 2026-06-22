@@ -70,7 +70,7 @@ export default async function DialoguePage({ params }: PageParams) {
   const raw = await getDialogue(level, dialogueId);
   if (!raw) notFound();
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
   const translation = locale === 'ru' ? raw.titleTranslation_ru
     : locale === 'en' ? (raw.titleTranslation_en || raw.titleTranslation)
     : raw.titleTranslation;

@@ -5,7 +5,7 @@ import { HomePage } from '@/components/HomePage';
 
 export const revalidate = 3600; // re-render at most once per hour
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: {

@@ -55,7 +55,7 @@ export default async function BlogPostPage({ params }: PageParams) {
     notFound();
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
   const title = locale === 'ru' ? post.title_ru : locale === 'en' ? (post.title_en || post.title) : post.title;
   const description = locale === 'ru' ? post.description_ru : locale === 'en' ? (post.description_en || post.description) : post.description;
   const jsonLd = jsonLdScript([

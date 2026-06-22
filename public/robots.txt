@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /*admin*
 
-Sitemap: https://www.blim.uz/sitemap.xml
+Sitemap: https://blim.uz/sitemap.xml

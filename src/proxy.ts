@@ -13,6 +13,14 @@ export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const host = request.headers.get('host') ?? '';
 
+  // Canonical host: fold the www host onto the bare domain so the site has a
+  // single canonical domain (no duplicate-content split across www / non-www).
+  if (host.startsWith('www.')) {
+    const url = request.nextUrl.clone();
+    url.host = host.replace(/^www\./, '');
+    return NextResponse.redirect(url, 301);
+  }
+
   // Test creator subdomain: rewrite into the /test-app route group so URLs
   // stay clean (e.g. test.blim.uz/dashboard → /test-app/dashboard internally).
   // The locale middleware is skipped entirely for this hostname.

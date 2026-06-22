@@ -12,7 +12,7 @@ import { AnalyticsScripts } from '@/components/AnalyticsScripts';
 const font = Noto_Sans({ subsets: ['latin', 'latin-ext', 'cyrillic'], weight: ['400', '500', '700'], variable: '--font-pinyin', display: 'swap', preload: true });
 const arabicFont = Noto_Naskh_Arabic({ subsets: ['arabic'], weight: ['400', '500', '700'], variable: '--font-arabic', display: 'swap', preload: false });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.blim.uz';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
 
 const meta: Record<string, { title: string; description: string; ogLocale: string }> = {
   uz: {
