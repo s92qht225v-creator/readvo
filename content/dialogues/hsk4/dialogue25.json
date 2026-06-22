@@ -1,0 +1,219 @@
+{
+  "id": "hsk4-dialogue25",
+  "slug": "taking-a-taxi",
+  "title": "打车",
+  "pinyin": "Dǎchē",
+  "titleTranslation": "Taksiga o'tirish",
+  "titleTranslation_ru": "Поездка на такси",
+  "titleTranslation_en": "Taking a Taxi",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "师傅",
+    "绕路",
+    "快速路",
+    "距离",
+    "按里程计费",
+    "估计",
+    "赶时间",
+    "超速",
+    "安全带",
+    "系好",
+    "出发",
+    "路口",
+    "下车",
+    "过马路",
+    "随身物品"
+  ],
+  "sections": [
+    {
+      "id": "h4d25-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d25-s1",
+          "text_original": "师傅，您好！请问您走吗？",
+          "pinyin": "Shīfu, nín hǎo! Qǐngwèn nín zǒu ma?",
+          "text_translation": "Usta, assalomu alaykum! Yo'lga chiqasizmi?",
+          "text_translation_ru": "Водитель, здравствуйте! Скажите, вы свободны (едете)?",
+          "text_translation_en": "Driver, hello! Excuse me, are you available?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d25-s2",
+          "text_original": "走！您去哪儿？",
+          "pinyin": "Zǒu! Nín qù nǎr?",
+          "text_translation": "Boraman! Qayerga borasiz?",
+          "text_translation_ru": "Еду! Вам куда?",
+          "text_translation_en": "Yes! Where to?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d25-s3",
+          "text_original": "我去中山路88号，阳光大厦。",
+          "pinyin": "Wǒ qù Zhōngshān Lù bāshíbā hào, Yángguāng Dàshà.",
+          "text_translation": "Men Chjongshan ko'chasi 88-uyga, Yangguang binosiga boraman.",
+          "text_translation_ru": "Мне на улицу Чжуншань, дом 88, бизнес-центр «Янгуан».",
+          "text_translation_en": "I'm going to 88 Zhongshan Road, the Yangguang Building.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d25-s4",
+          "text_original": "中山路？那边有点堵，不过我可以给您绕一下快速路，会快一些，但是距离稍微远一点。",
+          "pinyin": "Zhōngshān Lù? Nà biān yǒu diǎn dǔ, búguò wǒ kěyǐ gěi nín rào yíxià kuàisù lù, huì kuài yì xiē, dànshì jùlí shāowēi yuǎn yì diǎn.",
+          "text_translation": "Chjongshan ko'chasimi? U yoqda biroz tirbandlik bor, lekin men sizni tezyurar yo'ldan aylantirib olib o'tsam bo'ladi, tezroq bo'ladi, faqat masofa bir oz uzoqroq.",
+          "text_translation_ru": "Улица Чжуншань? Там немного пробки, но я могу объехать по скоростной дороге, будет быстрее, хотя расстояние чуть больше.",
+          "text_translation_en": "Zhongshan Road? It's a bit congested over there, but I can take a detour via the expressway — it'll be faster, though the distance is slightly longer.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d25-s5",
+          "text_original": "绕路的话大概要多长时间？",
+          "pinyin": "Rào lù dehuà dàgài yào duō cháng shíjiān?",
+          "text_translation": "Aylanma yo'ldan ketsak, taxminan qancha vaqt ketadi?",
+          "text_translation_ru": "Если ехать в объезд, примерно сколько времени займёт?",
+          "text_translation_en": "If we take the detour, roughly how long will it take?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d25-s6",
+          "text_original": "不堵的话大概二十分钟。如果走最近的路，可能要四十分钟。",
+          "pinyin": "Bù dǔ dehuà dàgài èrshí fēnzhōng. Rúguǒ zǒu zuì jìn de lù, kěnéng yào sìshí fēnzhōng.",
+          "text_translation": "Tirbandlik bo'lmasa taxminan yigirma daqiqa. Eng yaqin yo'ldan ketsak, qirq daqiqa ketishi mumkin.",
+          "text_translation_ru": "Без пробок примерно двадцать минут. Если ехать кратчайшим путём, может уйти сорок минут.",
+          "text_translation_en": "Without traffic, about twenty minutes. If we take the shortest route, it might take forty.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d25-s7",
+          "text_original": "那就走快速路吧，时间比较重要。大概多少钱？",
+          "pinyin": "Nà jiù zǒu kuàisù lù ba, shíjiān bǐjiào zhòngyào. Dàgài duōshao qián?",
+          "text_translation": "Unda tezyurar yo'ldan ketaylik, vaqt muhimroq. Taxminan qancha bo'ladi?",
+          "text_translation_ru": "Тогда поедем по скоростной, время важнее. Примерно сколько будет стоить?",
+          "text_translation_en": "Then let's take the expressway, time matters more. About how much will it cost?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d25-s8",
+          "text_original": "按里程计费，估计三十块左右。比走普通路贵几块钱，但省时间。",
+          "pinyin": "Àn lǐchéng jìfèi, gūjì sānshí kuài zuǒyòu. Bǐ zǒu pǔtōng lù guì jǐ kuài qián, dàn shěng shíjiān.",
+          "text_translation": "Masofaga qarab hisoblanadi, taxminan o'ttiz yuan-ga yaqin. Oddiy yo'ldan ketgandan bir necha yuan qimmatroq, lekin vaqtni tejaydi.",
+          "text_translation_ru": "Оплата по километражу, ориентировочно около тридцати юаней. На несколько юаней дороже обычной дороги, зато экономит время.",
+          "text_translation_en": "Charged by distance, I'd estimate around thirty yuan. A few yuan more than the regular route, but it saves time.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d25-s9",
+          "text_original": "好，那走吧。师傅，我赶时间，麻烦您稍微开快一点，但别超速。",
+          "pinyin": "Hǎo, nà zǒu ba. Shīfu, wǒ gǎn shíjiān, máfan nín shāowēi kāi kuài yì diǎn, dàn bié chāosù.",
+          "text_translation": "Yaxshi, unda ketaylik. Usta, men shoshyapman, iltimos biroz tezroq haydang, lekin tezlikdan oshmang.",
+          "text_translation_ru": "Хорошо, тогда поехали. Водитель, я тороплюсь, пожалуйста, езжайте чуть быстрее, но не превышайте скорость.",
+          "text_translation_en": "Okay, let's go. Driver, I'm in a hurry, please drive a bit faster, but don't speed.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d25-s10",
+          "text_original": "放心，我知道。您把安全带系好，我们出发了。",
+          "pinyin": "Fàngxīn, wǒ zhīdào. Nín bǎ ānquándài jì hǎo, wǒmen chūfā le.",
+          "text_translation": "Xotirjam bo'ling, bilaman. Xavfsizlik kamarini taqib oling, jo'nadik.",
+          "text_translation_ru": "Не волнуйтесь, я понял. Пристегните ремень безопасности, мы поехали.",
+          "text_translation_en": "Don't worry, I know. Fasten your seatbelt, we're off.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d25-s11",
+          "text_original": "师傅，还有多久能到？",
+          "pinyin": "Shīfu, hái yǒu duō jiǔ néng dào?",
+          "text_translation": "Usta, yetib borishga yana qancha bor?",
+          "text_translation_ru": "Водитель, сколько ещё до места?",
+          "text_translation_en": "Driver, how much longer until we arrive?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d25-s12",
+          "text_original": "快了，前面第二个红绿灯右转就到了。大概还有五分钟。",
+          "pinyin": "Kuài le, qiánmiàn dì-èr ge hónglǜdēng yòu zhuǎn jiù dào le. Dàgài hái yǒu wǔ fēnzhōng.",
+          "text_translation": "Yaqin qoldi, oldinda ikkinchi svetoforda o'ngga burilsak yetib boramiz. Taxminan yana besh daqiqa.",
+          "text_translation_ru": "Уже скоро, на втором светофоре впереди повернём направо — и приехали. Примерно ещё пять минут.",
+          "text_translation_en": "Almost there — turn right at the second traffic light ahead and we're there. About five more minutes.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d25-s13",
+          "text_original": "好的，谢谢您。",
+          "pinyin": "Hǎo de, xièxie nín.",
+          "text_translation": "Yaxshi, rahmat sizga.",
+          "text_translation_ru": "Хорошо, спасибо вам.",
+          "text_translation_en": "Okay, thank you.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d25-s14",
+          "text_original": "您在这个路口下车可以吗？正好在门口，不用过马路。",
+          "pinyin": "Nín zài zhè ge lùkǒu xià chē kěyǐ ma? Zhènghǎo zài ménkǒu, búyòng guò mǎlù.",
+          "text_translation": "Shu chorrahada tushsangiz bo'ladimi? Aynan eshik oldida, yo'ldan o'tishingiz shart emas.",
+          "text_translation_ru": "Можно высадить вас на этом перекрёстке? Как раз у входа, не придётся переходить дорогу.",
+          "text_translation_en": "Is it okay if you get out at this intersection? It's right by the entrance, no need to cross the road.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d25-s15",
+          "text_original": "可以可以，就在这儿停吧。多少钱？",
+          "pinyin": "Kěyǐ kěyǐ, jiù zài zhèr tíng ba. Duōshao qián?",
+          "text_translation": "Bo'ladi, bo'ladi, shu yerda to'xtang. Qancha bo'ldi?",
+          "text_translation_ru": "Да-да, остановите прямо здесь. Сколько с меня?",
+          "text_translation_en": "Sure, sure, just stop here. How much is it?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d25-s16",
+          "text_original": "三十二块五，给您算三十二吧。",
+          "pinyin": "Sānshí'èr kuài wǔ, gěi nín suàn sānshí'èr ba.",
+          "text_translation": "O'ttiz ikki yuan-u besh mao, sizga o'ttiz ikki qilib hisoblay qolay.",
+          "text_translation_ru": "Тридцать два пятьдесят, давайте посчитаю вам тридцать два.",
+          "text_translation_en": "Thirty-two-fifty — I'll just count it as thirty-two for you.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d25-s17",
+          "text_original": "给您五十块，您找十八块就行。",
+          "pinyin": "Gěi nín wǔshí kuài, nín zhǎo shíbā kuài jiù xíng.",
+          "text_translation": "Sizga ellik yuan beraman, o'n sakkiz yuan qaytim bersangiz bo'ldi.",
+          "text_translation_ru": "Вот вам пятьдесят, сдачи восемнадцать — и всё.",
+          "text_translation_en": "Here's fifty, just give me eighteen back.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d25-s18",
+          "text_original": "好，找您十八块。拿好随身物品，别忘了东西。",
+          "pinyin": "Hǎo, zhǎo nín shíbā kuài. Ná hǎo suíshēn wùpǐn, bié wàng le dōngxi.",
+          "text_translation": "Mayli, o'n sakkiz yuan qaytim. Shaxsiy buyumlaringizni oling, narsangizni unutmang.",
+          "text_translation_ru": "Хорошо, сдачи восемнадцать. Возьмите свои вещи, ничего не забудьте.",
+          "text_translation_en": "Okay, eighteen back. Take your belongings, don't forget anything.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d25-s19",
+          "text_original": "好的，谢谢师傅！",
+          "pinyin": "Hǎo de, xièxie shīfu!",
+          "text_translation": "Yaxshi, rahmat, usta!",
+          "text_translation_ru": "Хорошо, спасибо, водитель!",
+          "text_translation_en": "Okay, thank you, driver!",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d25-s20",
+          "text_original": "不客气！慢走！",
+          "pinyin": "Bú kèqi! Màn zǒu!",
+          "text_translation": "Arzimaydi! Yaxshi boring!",
+          "text_translation_ru": "Не за что! Счастливого пути!",
+          "text_translation_en": "You're welcome! Take care!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
