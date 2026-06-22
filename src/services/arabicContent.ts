@@ -15,7 +15,8 @@ export interface ArabicSentence {
   text_translation_uz: string;
   text_translation_ru: string;
   text_translation_en: string;
-  audio_url?: string;
+  audio_url?: string;    // curated recording for the male (ar_m) wording
+  audio_url_f?: string;  // curated recording for the female (ar_f) wording
 }
 
 /** A dialogue vocabulary entry (Words tab). */

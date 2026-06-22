@@ -110,7 +110,8 @@
       "text_translation_uz": "Sizda meva bormi?",
       "text_translation_ru": "У тебя есть фрукты?",
       "text_translation_en": "Do you have fruit?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s1.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s1.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s1.mp3"
     },
     {
       "id": "s2",
@@ -122,7 +123,8 @@
       "text_translation_uz": "Ha, menda olma, banan va apelsin bor.",
       "text_translation_ru": "Да, у меня есть яблоки, бананы и апельсины.",
       "text_translation_en": "Yes, I have apples, bananas, and oranges.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s2.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s2.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s2.mp3"
     },
     {
       "id": "s3-s4",
@@ -134,7 +136,8 @@
       "text_translation_uz": "Menga olma va banan kerak. Bir kilo olma qancha turadi?",
       "text_translation_ru": "Я хочу яблоки и бананы. Сколько стоит кило яблок?",
       "text_translation_en": "I want apples and bananas. How much is a kilo of apples?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s3-s4.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s3-s4.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s3-s4.mp3"
     },
     {
       "id": "s5",
@@ -146,7 +149,8 @@
       "text_translation_uz": "Bir kilo olma besh dinor.",
       "text_translation_ru": "Кило яблок — пять динаров.",
       "text_translation_en": "A kilo of apples is 5 dinars.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s5.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s5.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s5.mp3"
     },
     {
       "id": "s6",
@@ -158,7 +162,8 @@
       "text_translation_uz": "Bir kilo banan-chi, qancha?",
       "text_translation_ru": "А сколько стоит кило бананов?",
       "text_translation_en": "And how much is a kilo of bananas?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s6.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s6.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s6.mp3"
     },
     {
       "id": "s7",
@@ -170,7 +175,8 @@
       "text_translation_uz": "Bir kilo banan uch dinor.",
       "text_translation_ru": "Кило бананов — три динара.",
       "text_translation_en": "A kilo of bananas is 3 dinars.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s7.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s7.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s7.mp3"
     },
     {
       "id": "s8",
@@ -182,7 +188,8 @@
       "text_translation_uz": "Menga bir kilo olma va bir kilo banan kerak.",
       "text_translation_ru": "Я хочу один кило яблок и один кило бананов.",
       "text_translation_en": "I want one kilo of apples and one kilo of bananas.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s8.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s8.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s8.mp3"
     },
     {
       "id": "s9",
@@ -194,7 +201,8 @@
       "text_translation_uz": "Mayli. Mana bir kilo olma, mana bir kilo banan.",
       "text_translation_ru": "Хорошо. Вот кило яблок и вот кило бананов.",
       "text_translation_en": "Okay. This is one kilo of apples and this is one kilo of bananas.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s9.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s9.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s9.mp3"
     },
     {
       "id": "s10",
@@ -206,7 +214,8 @@
       "text_translation_uz": "Narxi qancha?",
       "text_translation_ru": "Сколько с меня (какова цена)?",
       "text_translation_en": "How much is the price?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s10.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s10.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s10.mp3"
     },
     {
       "id": "s11",
@@ -218,7 +227,8 @@
       "text_translation_uz": "Narxi sakkiz dinor.",
       "text_translation_ru": "Цена — восемь динаров.",
       "text_translation_en": "The price is 8 dinars.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s11.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s11.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s11.mp3"
     },
     {
       "id": "s12",
@@ -230,7 +240,8 @@
       "text_translation_uz": "Mana, marhamat. (pulni berib)",
       "text_translation_ru": "Вот, пожалуйста. (отдавая деньги)",
       "text_translation_en": "Here you are. (giving the money)",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s12.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s12.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s12.mp3"
     },
     {
       "id": "s13",
@@ -242,7 +253,8 @@
       "text_translation_uz": "Rahmat. Xayr, sogʻ boʻling!",
       "text_translation_ru": "Спасибо. До свидания!",
       "text_translation_en": "Thank you. Goodbye!",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s13.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s13.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s13.mp3"
     },
     {
       "id": "s14",
@@ -254,7 +266,8 @@
       "text_translation_uz": "Xayr, sogʻ boʻling!",
       "text_translation_ru": "До свидания!",
       "text_translation_en": "Goodbye!",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s14.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s14.mp3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/female/s14.mp3"
     }
   ]
 }
