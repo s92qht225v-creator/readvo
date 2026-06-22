@@ -34,7 +34,8 @@ interface ApiSentence {
   // Optional female-version translations (e.g. a line that names the speaker —
   // the gloss flips with the 👨/👩 toggle). Fall back to the base when absent.
   text_translation_uz_f?: string; text_translation_ru_f?: string; text_translation_en_f?: string;
-  audio_url?: string;
+  audio_url?: string;    // curated recording for the male (ar_m) wording
+  audio_url_f?: string;  // curated recording for the female (ar_f) wording
 }
 interface ApiDialogue { id: string; sentences: ApiSentence[]; vocab?: ArabicVocabItem[]; }
 
