@@ -1,0 +1,200 @@
+{
+  "id": "hsk4-dialogue14",
+  "slug": "buying-groceries-bargaining",
+  "title": "买菜讲价",
+  "pinyin": "Mǎi cài jiǎngjià",
+  "titleTranslation": "Bozorlik qilish va narx kelishish",
+  "titleTranslation_ru": "Покупка продуктов и торг",
+  "titleTranslation_en": "Buying Groceries and Bargaining",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "西红柿",
+    "鸡蛋",
+    "牛肉",
+    "斤",
+    "新鲜",
+    "红彤彤",
+    "熟透",
+    "土鸡蛋",
+    "普通",
+    "切",
+    "红烧牛肉",
+    "最低价",
+    "一共",
+    "毛"
+  ],
+  "sections": [
+    {
+      "id": "h4d14-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d14-s1",
+          "text_original": "老板，西红柿怎么卖？",
+          "pinyin": "Lǎobǎn, xīhóngshì zěnme mài?",
+          "text_translation": "Xo'jayin, pomidor qancha turadi?",
+          "text_translation_ru": "Хозяин, почём помидоры?",
+          "text_translation_en": "Boss, how much are the tomatoes?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d14-s2",
+          "text_original": "四块五一斤，今天早上刚到的，特别新鲜。",
+          "pinyin": "Sì kuài wǔ yī jīn, jīntiān zǎoshang gāng dào de, tèbié xīnxiān.",
+          "text_translation": "Yarim kilosi to'rt yuan-u besh mao, bugun ertalab kelgan, juda yangi.",
+          "text_translation_ru": "Четыре пятьдесят за полкило, сегодня утром только привезли, очень свежие.",
+          "text_translation_en": "Four-fifty per half-kilo, they just arrived this morning, extra fresh.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d14-s3",
+          "text_original": "四块五太贵了吧？前面那家才卖三块八。",
+          "pinyin": "Sì kuài wǔ tài guì le ba? Qiánmiàn nà jiā cái mài sān kuài bā.",
+          "text_translation": "To'rt yuan-u besh mao qimmat-ku? Naridagi do'kon atigi uch yuan-u sakkiz maoga sotyapti.",
+          "text_translation_ru": "Четыре пятьдесят — это же дорого? Вон та лавка впереди продаёт всего за три восемьдесят.",
+          "text_translation_en": "Four-fifty is too expensive, isn't it? That stall up front only charges three-eighty.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d14-s4",
+          "text_original": "三块八的能跟我这个比吗？你看这颜色，红彤彤的，个个都熟透了。",
+          "pinyin": "Sān kuài bā de néng gēn wǒ zhè ge bǐ ma? Nǐ kàn zhè yánsè, hóng tōng tōng de, gè gè dōu shú tòu le.",
+          "text_translation": "Uch yuan-u sakkiz maolikni meningki bilan solishtirib bo'ladimi? Mana shu rangiga qara, qip-qizil, hammasi g'arq pishgan.",
+          "text_translation_ru": "Разве за три восемьдесят сравнятся с моими? Посмотри на цвет — ярко-красные, все полностью спелые.",
+          "text_translation_en": "Can the three-eighty ones compare with mine? Look at this color — bright red, every one fully ripe.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d14-s5",
+          "text_original": "看着是不错，但还是有点贵。便宜点吧，三块五行不行？",
+          "pinyin": "Kàn zhe shì búcuò, dàn háishì yǒu diǎn guì. Piányi diǎn ba, sān kuài wǔ xíng bù xíng?",
+          "text_translation": "Ko'rinishidan yaxshi, lekin baribir biroz qimmat. Arzonroq qiling, uch yuan-u besh mao bo'ladimi?",
+          "text_translation_ru": "Выглядят и правда неплохо, но всё равно дороговато. Сделайте подешевле — три пятьдесят пойдёт?",
+          "text_translation_en": "They look good, but it's still a bit pricey. Make it cheaper — would three-fifty work?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d14-s6",
+          "text_original": "三块五我真卖不了。这样，四块一斤，你要多少？",
+          "pinyin": "Sān kuài wǔ wǒ zhēn mài bù liǎo. Zhèyàng, sì kuài yī jīn, nǐ yào duōshao?",
+          "text_translation": "Uch yuan-u besh maoga rostdan sotolmayman. Mana shunday qilaylik, yarim kilosi to'rt yuan, qancha olasiz?",
+          "text_translation_ru": "За три пятьдесят я правда не могу отдать. Давай так: четыре за полкило. Сколько тебе?",
+          "text_translation_en": "I really can't sell at three-fifty. Tell you what — four per half-kilo. How much do you want?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d14-s7",
+          "text_original": "给我称两斤吧。对了，鸡蛋怎么卖？",
+          "pinyin": "Gěi wǒ chēng liǎng jīn ba. Duìle, jīdàn zěnme mài?",
+          "text_translation": "Bir kilo tortib bering. Aytgancha, tuxum qancha turadi?",
+          "text_translation_ru": "Взвесьте мне килограмм. Кстати, почём яйца?",
+          "text_translation_en": "Weigh me out a kilo. By the way, how much are the eggs?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d14-s8",
+          "text_original": "鸡蛋六块五一斤，土鸡蛋，比普通鸡蛋香。",
+          "pinyin": "Jīdàn liù kuài wǔ yī jīn, tǔ jīdàn, bǐ pǔtōng jīdàn xiāng.",
+          "text_translation": "Tuxum yarim kilosi olti yuan-u besh mao, qishloq tovuq tuxumi, oddiy tuxumdan mazaliroq.",
+          "text_translation_ru": "Яйца шесть пятьдесят за полкило, деревенские, вкуснее обычных.",
+          "text_translation_en": "Eggs are six-fifty per half-kilo, free-range, tastier than ordinary eggs.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d14-s9",
+          "text_original": "土鸡蛋确实好，但价格还是高了点。五块五行吗？",
+          "pinyin": "Tǔ jīdàn quèshí hǎo, dàn jiàgé háishì gāo le diǎn. Wǔ kuài wǔ xíng ma?",
+          "text_translation": "Qishloq tuxumi chindan ham yaxshi, lekin narxi baribir bir oz baland. Besh yuan-u besh mao bo'ladimi?",
+          "text_translation_ru": "Деревенские яйца и правда хорошие, но цена всё же высоковата. Пять пятьдесят можно?",
+          "text_translation_en": "Free-range eggs really are good, but the price is still a bit high. Would five-fifty do?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d14-s10",
+          "text_original": "五块五真的做不了。你要是买两斤，我给你算六块。",
+          "pinyin": "Wǔ kuài wǔ zhēn de zuò bù liǎo. Nǐ yàoshi mǎi liǎng jīn, wǒ gěi nǐ suàn liù kuài.",
+          "text_translation": "Besh yuan-u besh maoga rostdan bo'lmaydi. Agar bir kilo olsangiz, olti yuandan hisoblayman.",
+          "text_translation_ru": "За пять пятьдесят правда никак. Если возьмёшь килограмм, посчитаю по шесть.",
+          "text_translation_en": "Five-fifty really isn't possible. If you buy a kilo, I'll count it as six.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d14-s11",
+          "text_original": "行，那就来两斤鸡蛋。牛肉怎么卖？",
+          "pinyin": "Xíng, nà jiù lái liǎng jīn jīdàn. Niúròu zěnme mài?",
+          "text_translation": "Mayli, unda bir kilo tuxum bering. Mol go'shti qancha turadi?",
+          "text_translation_ru": "Хорошо, тогда давай килограмм яиц. А почём говядина?",
+          "text_translation_en": "Alright, then a kilo of eggs. How much is the beef?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d14-s12",
+          "text_original": "牛肉四十五块一斤，今天早上新宰的，你看这肉多新鲜。",
+          "pinyin": "Niúròu sìshíwǔ kuài yī jīn, jīntiān zǎoshang xīn zǎi de, nǐ kàn zhè ròu duō xīnxiān.",
+          "text_translation": "Mol go'shti yarim kilosi qirq besh yuan, bugun ertalab yangi so'yilgan, mana shu go'shtning qanchalik yangiligiga qara.",
+          "text_translation_ru": "Говядина сорок пять за полкило, сегодня утром свежезабитая, посмотри какое свежее мясо.",
+          "text_translation_en": "Beef is forty-five per half-kilo, freshly slaughtered this morning — look how fresh this meat is.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d14-s13",
+          "text_original": "我想买来做红烧牛肉，能不能便宜点？",
+          "pinyin": "Wǒ xiǎng mǎi lái zuò hóngshāo niúròu, néng bùnéng piányi diǎn?",
+          "text_translation": "Honshao mol go'shti qilish uchun olmoqchiman, arzonroq qilib bo'lmaydimi?",
+          "text_translation_ru": "Хочу купить для тушёной говядины, можно подешевле?",
+          "text_translation_en": "I want to buy some to make braised beef — could you make it a bit cheaper?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d14-s14",
+          "text_original": "四十块吧，最低价了。你要多少？",
+          "pinyin": "Sìshí kuài ba, zuì dī jià le. Nǐ yào duōshao?",
+          "text_translation": "Qirq yuan bo'la qolsin, eng past narx. Qancha olasiz?",
+          "text_translation_ru": "Сорок, это самая низкая цена. Сколько тебе?",
+          "text_translation_en": "Forty then, that's the lowest price. How much do you want?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d14-s15",
+          "text_original": "给我切一斤半吧。",
+          "pinyin": "Gěi wǒ qiē yī jīn bàn ba.",
+          "text_translation": "Bir kilo-yu chorak kesib bering.",
+          "text_translation_ru": "Отрежьте мне полтора цзиня (750 грамм).",
+          "text_translation_en": "Cut me a kilo and a quarter.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d14-s16",
+          "text_original": "好嘞！西红柿两斤八块，鸡蛋两斤十二块，牛肉一斤半六十块，一共八十块。",
+          "pinyin": "Hǎo lei! Xīhóngshì liǎng jīn bā kuài, jīdàn liǎng jīn shí'èr kuài, niúròu yī jīn bàn liùshí kuài, yīgòng bāshí kuài.",
+          "text_translation": "Bo'pti! Pomidor bir kilo sakkiz yuan, tuxum bir kilo o'n ikki yuan, mol go'shti bir kilo-yu chorak oltmish yuan, jami sakson yuan.",
+          "text_translation_ru": "Хорошо! Помидоры килограмм — восемь, яйца килограмм — двенадцать, говядина полтора цзиня — шестьдесят, итого восемьдесят.",
+          "text_translation_en": "Got it! Tomatoes a kilo — eight, eggs a kilo — twelve, beef a kilo and a quarter — sixty, eighty in total.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d14-s17",
+          "text_original": "给！这是八十块。",
+          "pinyin": "Gěi! Zhè shì bāshí kuài.",
+          "text_translation": "Mana! Sakson yuan.",
+          "text_translation_ru": "Вот, держите — восемьдесят.",
+          "text_translation_en": "Here! That's eighty.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d14-s18",
+          "text_original": "好嘞！下次再来啊！",
+          "pinyin": "Hǎo lei! Xià cì zài lái a!",
+          "text_translation": "Bo'pti! Yana keling!",
+          "text_translation_ru": "Хорошо! Заходите ещё!",
+          "text_translation_en": "Got it! Come again next time!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
