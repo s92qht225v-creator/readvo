@@ -17,7 +17,12 @@ export default function proxy(request: NextRequest) {
   // single canonical domain (no duplicate-content split across www / non-www).
   if (host.startsWith('www.')) {
     const url = request.nextUrl.clone();
-    url.host = host.replace(/^www\./, '');
+    // Set hostname (not host) and clear the port explicitly: the WHATWG `host`
+    // setter ignores the port when the value has no colon, so behind the proxy
+    // it would otherwise leak the internal :3000 into the redirect target.
+    url.hostname = host.replace(/^www\./, '');
+    url.port = '';
+    url.protocol = 'https:';
     return NextResponse.redirect(url, 301);
   }
 
