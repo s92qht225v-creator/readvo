@@ -1,0 +1,149 @@
+{
+  "id": "hsk4-dialogue28",
+  "slug": "first-day-at-work",
+  "title": "上班第一天",
+  "pinyin": "Shàngbān dì-yī tiān",
+  "titleTranslation": "Ishdagi birinchi kun",
+  "titleTranslation_ru": "Первый день на работе",
+  "titleTranslation_en": "The First Day at Work",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["加入", "上班", "熟悉", "茶水间", "走廊", "打印区", "打印机", "纸张", "墨盒", "限额", "扣", "休息室", "微波炉", "饮水机", "系统", "预约", "办公用品", "行政部", "前台", "申请表", "热心"],
+  "sections": [
+    {
+      "id": "h4d28-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d28-s1",
+          "text_original": "小李，欢迎你加入我们公司！这是你第一天上班，有什么不熟悉的尽管问我。",
+          "pinyin": "Xiǎo Lǐ, huānyíng nǐ jiārù wǒmen gōngsī! Zhè shì nǐ dì-yī tiān shàngbān, yǒu shénme bù shúxī de jǐnguǎn wèn wǒ.",
+          "text_translation": "Kichkina Li, kompaniyamizga qo'shilganingiz bilan tabriklayman! Bu sizning ishdagi birinchi kuningiz, biror narsani bilmasangiz bemalol mendan so'rayvering.",
+          "text_translation_ru": "Сяо Ли, добро пожаловать в нашу компанию! Это твой первый рабочий день, если что-то непонятно — смело спрашивай меня.",
+          "text_translation_en": "Xiao Li, welcome to our company! This is your first day at work, so feel free to ask me about anything you're not familiar with.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d28-s2",
+          "text_original": "谢谢王姐！我刚才看到茶水间在走廊尽头，但还有很多地方不太清楚。",
+          "pinyin": "Xièxie Wáng jiě! Wǒ gāngcái kàn dào cháshuǐ jiān zài zǒuláng jìntóu, dàn hái yǒu hěnduō dìfang bú tài qīngchu.",
+          "text_translation": "Rahmat, Van opa! Men hozirgina choy xonasi yo'lakning oxirida ekanini ko'rdim, lekin yana ko'p joylarni unchalik aniq bilmayman.",
+          "text_translation_ru": "Спасибо, сестра Ван! Я только что увидела, что чайная комната в конце коридора, но многие места мне ещё не очень понятны.",
+          "text_translation_en": "Thank you, Sister Wang! I just saw that the tea room is at the end of the corridor, but there are still many places I'm not quite clear about.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d28-s3",
+          "text_original": "没事，我带你走一圈。首先是打印区，就在茶水间对面。打印机旁边有纸张和墨盒，如果缺纸了可以去柜子里拿。",
+          "pinyin": "Méi shì, wǒ dài nǐ zǒu yī quān. Shǒuxiān shì dǎyìn qū, jiù zài cháshuǐ jiān duìmiàn. Dǎyìnjī pángbiān yǒu zhǐzhāng hé mòhé, rúguǒ quē zhǐ le kěyǐ qù guìzi lǐ ná.",
+          "text_translation": "Hechqisi yo'q, sizni bir aylantirib chiqaman. Avvalo bosib chiqarish zonasi, u choy xonasining ro'parasida. Printer yonida qog'oz va kartrij bor, agar qog'oz tugab qolsa shkafdan olishingiz mumkin.",
+          "text_translation_ru": "Ничего, я проведу тебя по кругу. Сначала зона печати, она прямо напротив чайной комнаты. Рядом с принтером есть бумага и картриджи, если бумага закончится, можешь взять её в шкафу.",
+          "text_translation_en": "No problem, I'll take you on a tour. First is the printing area, right across from the tea room. Next to the printer there's paper and ink cartridges; if you run out of paper, you can get more from the cabinet.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d28-s4",
+          "text_original": "好的。打印需要密码吗？",
+          "pinyin": "Hǎo de. Dǎyìn xūyào mìmǎ ma?",
+          "text_translation": "Yaxshi. Bosib chiqarish uchun parol kerakmi?",
+          "text_translation_ru": "Хорошо. Для печати нужен пароль?",
+          "text_translation_en": "Okay. Does printing require a password?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d28-s5",
+          "text_original": "不需要密码，但每个人每个月有打印限额，超过的话要从工资里扣。",
+          "pinyin": "Bù xūyào mìmǎ, dàn měi ge rén měi ge yuè yǒu dǎyìn xiàné, chāoguò dehuà yào cóng gōngzī lǐ kòu.",
+          "text_translation": "Parol kerak emas, lekin har bir kishi uchun har oyda bosib chiqarish chegarasi bor, undan oshib ketsa maoshdan ushlab qolinadi.",
+          "text_translation_ru": "Пароль не нужен, но у каждого есть месячный лимит на печать, при превышении его вычтут из зарплаты.",
+          "text_translation_en": "No password is needed, but everyone has a monthly printing limit, and if you exceed it, it'll be deducted from your salary.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d28-s6",
+          "text_original": "明白了，我会注意的。那休息室在哪儿？",
+          "pinyin": "Míngbai le, wǒ huì zhùyì de. Nà xiūxishì zài nǎr?",
+          "text_translation": "Tushundim, e'tibor beraman. Unda dam olish xonasi qayerda?",
+          "text_translation_ru": "Поняла, буду внимательна. А где комната отдыха?",
+          "text_translation_en": "Got it, I'll be careful. So where is the break room?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d28-s7",
+          "text_original": "休息室在二楼，出了电梯右拐就是。里面有微波炉、冰箱和饮水机，午饭可以带饭来热。",
+          "pinyin": "Xiūxishì zài èr lóu, chū le diàntī yòu guǎi jiù shì. Lǐmiàn yǒu wēibōlú, bīngxiāng hé yǐnshuǐjī, wǔfàn kěyǐ dài fàn lái rè.",
+          "text_translation": "Dam olish xonasi ikkinchi qavatda, liftdan chiqib o'ngga burilsangiz o'sha yer. Ichida mikroto'lqinli pech, muzlatgich va suv sovutgich bor, tushlikka ovqat olib kelib isitishingiz mumkin.",
+          "text_translation_ru": "Комната отдыха на втором этаже, выйдешь из лифта и повернёшь направо — там она. Внутри есть микроволновка, холодильник и кулер, можешь приносить обед и разогревать его.",
+          "text_translation_en": "The break room is on the second floor; turn right when you get out of the elevator and it's right there. Inside there's a microwave, a fridge and a water dispenser, so you can bring lunch and heat it up.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d28-s8",
+          "text_original": "太好了！那我以后不用天天点外卖了。",
+          "pinyin": "Tài hǎo le! Nà wǒ yǐhòu búyòng tiāntiān diǎn wàimài le.",
+          "text_translation": "Juda yaxshi! Unda bundan keyin har kuni tashqaridan ovqat buyurtma qilishim shart emas ekan.",
+          "text_translation_ru": "Отлично! Тогда мне больше не придётся каждый день заказывать еду на вынос.",
+          "text_translation_en": "Great! Then from now on I won't have to order takeout every day.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d28-s9",
+          "text_original": "对，自己带饭既健康又省钱。对了，会议室在走廊尽头，如果需要开会，记得提前在系统里预约。",
+          "pinyin": "Duì, zìjǐ dài fàn jì jiànkāng yòu shěng qián. Duìle, huìyìshì zài zǒuláng jìntóu, rúguǒ xūyào kāihuì, jìde tíqián zài xìtǒng lǐ yùyuē.",
+          "text_translation": "To'g'ri, o'zing ovqat olib kelish ham sog'lom, ham tejamkor. Aytgancha, majlis xonasi yo'lakning oxirida, agar majlis o'tkazish kerak bo'lsa, oldindan tizimda band qilishni unutma.",
+          "text_translation_ru": "Да, приносить еду с собой и полезно, и экономно. Кстати, переговорная в конце коридора, если нужно провести собрание, не забудь заранее забронировать её в системе.",
+          "text_translation_en": "Right, bringing your own food is both healthy and saves money. By the way, the meeting room is at the end of the corridor; if you need to hold a meeting, remember to book it in advance in the system.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d28-s10",
+          "text_original": "好的。那大家的办公用品是在哪里领的？",
+          "pinyin": "Hǎo de. Nà dàjiā de bàngōng yòngpǐn shì zài nǎli lǐng de?",
+          "text_translation": "Yaxshi. Unda hammaning ofis buyumlarini qayerdan oladi?",
+          "text_translation_ru": "Хорошо. А где все получают канцелярские принадлежности?",
+          "text_translation_en": "Okay. So where does everyone get their office supplies?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d28-s11",
+          "text_original": "办公用品在行政部，就是前台旁边的那个房间。你需要什么可以填一张申请表，签个字就能领了。",
+          "pinyin": "Bàngōng yòngpǐn zài xíngzhèng bù, jiùshì qiántái pángbiān de nà ge fángjiān. Nǐ xūyào shénme kěyǐ tián yī zhāng shēnqǐng biǎo, qiān ge zì jiù néng lǐng le.",
+          "text_translation": "Ofis buyumlari ma'muriyat bo'limida, ya'ni qabulxona yonidagi o'sha xonada. Sizga nima kerak bo'lsa, bir ariza to'ldirib, imzo qo'ysangiz olishingiz mumkin.",
+          "text_translation_ru": "Канцелярские принадлежности в административном отделе — это та комната рядом с ресепшеном. Что тебе нужно, можешь заполнить заявку, подписать и получить.",
+          "text_translation_en": "Office supplies are in the administration department, the room right next to the front desk. Whatever you need, you can fill out an application form, sign it, and then collect it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d28-s12",
+          "text_original": "今天上午你先熟悉一下环境，中午我带你跟同事们一起吃饭。",
+          "pinyin": "Jīntiān shàngwǔ nǐ xiān shúxī yíxià huánjìng, zhōngwǔ wǒ dài nǐ gēn tóngshìmen yìqǐ chī fàn.",
+          "text_translation": "Bugun ertalab avval atrof-muhit bilan tanishib oling, tushda men sizni hamkasblar bilan birga ovqatlanishga olib boraman.",
+          "text_translation_ru": "Сегодня утром сначала освойся с обстановкой, а в обед я поведу тебя пообедать вместе с коллегами.",
+          "text_translation_en": "This morning, get familiar with the surroundings first; at noon I'll take you to have lunch together with your colleagues.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d28-s13",
+          "text_original": "好的，谢谢王姐！你太热心了。",
+          "pinyin": "Hǎo de, xièxie Wáng jiě! Nǐ tài rèxīn le.",
+          "text_translation": "Yaxshi, rahmat Van opa! Siz juda mehribon ekansiz.",
+          "text_translation_ru": "Хорошо, спасибо, сестра Ван! Ты такая отзывчивая.",
+          "text_translation_en": "Okay, thank you, Sister Wang! You're so kind and helpful.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d28-s14",
+          "text_original": "不客气。如果你还有其他问题，随时问我。",
+          "pinyin": "Bú kèqi. Rúguǒ nǐ hái yǒu qítā wèntí, suíshí wèn wǒ.",
+          "text_translation": "Arzimaydi. Agar boshqa savollaringiz bo'lsa, istalgan vaqtda mendan so'rang.",
+          "text_translation_ru": "Не за что. Если у тебя ещё будут вопросы, спрашивай меня в любое время.",
+          "text_translation_en": "You're welcome. If you have any other questions, ask me anytime.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

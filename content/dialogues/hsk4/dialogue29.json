@@ -1,0 +1,176 @@
+{
+  "id": "hsk4-dialogue29",
+  "slug": "fixing-the-copier",
+  "title": "打印文件",
+  "pinyin": "Dǎyìn wénjiàn",
+  "titleTranslation": "Hujjat chop etish",
+  "titleTranslation_ru": "Печать документов",
+  "titleTranslation_en": "Printed Documents",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["复印机", "卡纸", "复印", "合同", "显示", "常见", "卡住", "盖", "拉", "撕", "皱", "不清楚", "恢复正常", "重启", "卡槽", "讲究", "份"],
+  "sections": [
+    {
+      "id": "h4d29-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d29-s1",
+          "text_original": "小王，你有空吗？复印机好像卡纸了，你帮我看看怎么回事。",
+          "pinyin": "Xiǎo Wáng, nǐ yǒu kòng ma? Fùyìnjī hǎoxiàng kǎ zhǐ le, nǐ bāng wǒ kàn kan zěnme huí shì.",
+          "text_translation": "Syao Van, bo'sh vaqting bormi? Nusxa ko'chirgich qog'oz tiqilib qolganga o'xshaydi, nima bo'lganini ko'rishga yordam ber.",
+          "text_translation_ru": "Сяо Ван, у тебя есть время? Похоже, в копировальном аппарате застряла бумага, помоги мне посмотреть, в чём дело.",
+          "text_translation_en": "Xiao Wang, do you have a moment? The copier seems to have a paper jam, help me figure out what's going on.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d29-s2",
+          "text_original": "好的，我过来看看。你刚才在复印什么？",
+          "pinyin": "Hǎo de, wǒ guòlái kàn kan. Nǐ gāngcái zài fùyìn shénme?",
+          "text_translation": "Mayli, kelib ko'raman. Hozir nimani nusxa ko'chirayotgan eding?",
+          "text_translation_ru": "Хорошо, я подойду посмотрю. Что ты только что копировал?",
+          "text_translation_en": "Okay, I'll come take a look. What were you copying just now?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d29-s3",
+          "text_original": "我在复印一份合同，印到第五页的时候突然停了，屏幕上也显示「卡纸」两个字。",
+          "pinyin": "Wǒ zài fùyìn yī fèn hétong, yìn dào dì-wǔ yè de shíhou tūrán tíng le, píngmù shàng yě xiǎnshì 'kǎ zhǐ' liǎng ge zì.",
+          "text_translation": "Men bir nusxa shartnomani ko'chirayotgan edim, beshinchi betga yetganda to'satdan to'xtab qoldi, ekranda ham «卡纸» degan ikki ieroglif chiqdi.",
+          "text_translation_ru": "Я копировал договор, и когда дошло до пятой страницы, оно вдруг остановилось, на экране тоже отобразилось «卡纸» — два иероглифа.",
+          "text_translation_en": "I was copying a contract, and when it got to the fifth page it suddenly stopped, and the screen also showed the two characters 「卡纸」 (paper jam).",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d29-s4",
+          "text_original": "别担心，这是常见问题。我先把卡住的纸抽出来。你把复印机的前盖打开。",
+          "pinyin": "Bié dānxīn, zhè shì chángjiàn wèntí. Wǒ xiān bǎ kǎ zhù de zhǐ chōu chūlái. Nǐ bǎ fùyìnjī de qián gài dǎkāi.",
+          "text_translation": "Xavotir olma, bu odatiy muammo. Avval men tiqilib qolgan qog'ozni tortib chiqaraman. Sen nusxa ko'chirgichning old qopqog'ini och.",
+          "text_translation_ru": "Не волнуйся, это распространённая проблема. Сначала я вытащу застрявшую бумагу. А ты открой переднюю крышку копировального аппарата.",
+          "text_translation_en": "Don't worry, this is a common problem. First I'll pull out the jammed paper. You open the front cover of the copier.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d29-s5",
+          "text_original": "打开了。然后呢？",
+          "pinyin": "Dǎkāi le. Ránhòu ne?",
+          "text_translation": "Ochdim. Keyin-chi?",
+          "text_translation_ru": "Открыл. А дальше?",
+          "text_translation_en": "It's open. Then what?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d29-s6",
+          "text_original": "看到那卷纸了吗？轻轻拉出来，不要用力撕，不然断在里面会更麻烦。",
+          "pinyin": "Kàn dào nà juǎn zhǐ le ma? Qīngqīng lā chūlái, búyào yònglì sī, bùrán duàn zài lǐmiàn huì gèng máfan.",
+          "text_translation": "Anavi o'ralgan qog'ozni ko'rdingmi? Avaylab tortib chiqar, kuch bilan yirtma, bo'lmasa ichida uzilib qolsa yana ham qiyin bo'ladi.",
+          "text_translation_ru": "Видишь тот свёрнутый лист? Аккуратно вытяни его, не рви с силой, иначе если порвётся внутри, будет ещё хлопотнее.",
+          "text_translation_en": "Do you see that roll of paper? Pull it out gently, don't tear it forcefully, otherwise if it breaks off inside it'll be even more troublesome.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d29-s7",
+          "text_original": "好的……我拿出来了。纸有点皱了，还能用吗？",
+          "pinyin": "Hǎo de …… wǒ ná chūlái le. Zhǐ yǒu diǎn zhòu le, hái néng yòng ma?",
+          "text_translation": "Mayli…… chiqarib oldim. Qog'oz biroz g'ijimlanibdi, hali ishlatsa bo'ladimi?",
+          "text_translation_ru": "Хорошо…… я вытащил. Бумага немного помялась, её ещё можно использовать?",
+          "text_translation_en": "Okay…… I got it out. The paper is a bit crumpled, can it still be used?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d29-s8",
+          "text_original": "皱了就换一张新的吧，不然复印出来也会不清楚。你把盖子关上，然后再试试。",
+          "pinyin": "Zhòu le jiù huàn yī zhāng xīn de ba, bùrán fùyìn chūlái yě huì bù qīngchu. Nǐ bǎ gài zi guān shàng, ránhòu zài shì shi.",
+          "text_translation": "G'ijimlangan bo'lsa yangisiga almashtir, bo'lmasa nusxasi ham noaniq chiqadi. Qopqoqni yop, keyin yana bir urinib ko'r.",
+          "text_translation_ru": "Если помялась, замени её на новую, иначе копия тоже выйдет нечёткой. Закрой крышку, а потом попробуй ещё раз.",
+          "text_translation_en": "If it's crumpled, just swap in a new sheet, otherwise the copy will come out unclear too. Close the cover, then try again.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d29-s9",
+          "text_original": "好了！现在恢复正常了，绿灯亮了。谢谢你啊小王！",
+          "pinyin": "Hǎo le! Xiànzài huīfù zhèngcháng le, lǜ dēng liàng le. Xièxie nǐ a Xiǎo Wáng!",
+          "text_translation": "Bo'ldi! Endi normal holatga qaytdi, yashil chiroq yondi. Rahmat senga, Syao Van!",
+          "text_translation_ru": "Готово! Теперь всё вернулось в норму, загорелся зелёный индикатор. Спасибо тебе, Сяо Ван!",
+          "text_translation_en": "It's working! Now it's back to normal, the green light is on. Thank you, Xiao Wang!",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d29-s10",
+          "text_original": "不客气。下次如果再有卡纸，不要用力拉，先把机器重启一下，有时候重启就能解决。",
+          "pinyin": "Bú kèqi. Xià cì rúguǒ zài yǒu kǎ zhǐ, búyào yònglì lā, xiān bǎ jīqì chóngqǐ yíxià, yǒu shíhou chóngqǐ jiù néng jiějué.",
+          "text_translation": "Arzimaydi. Keyingi safar yana qog'oz tiqilib qolsa, kuch bilan tortma, avval qurilmani qayta ishga tushir, ba'zan qayta ishga tushirishning o'zi muammoni hal qiladi.",
+          "text_translation_ru": "Не за что. В следующий раз, если снова застрянет бумага, не тяни с силой, сначала перезапусти аппарат, иногда перезапуск решает проблему.",
+          "text_translation_en": "You're welcome. Next time if there's a paper jam again, don't pull forcefully, first restart the machine — sometimes a restart can solve it.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d29-s11",
+          "text_original": "好的，我记住了。对了，你刚才说的那卷纸应该放在哪个位置？",
+          "pinyin": "Hǎo de, wǒ jìzhù le. Duìle, nǐ gāngcái shuō de nà juǎn zhǐ yīnggāi fàng zài nǎ ge wèizhi?",
+          "text_translation": "Mayli, esimda saqlab qoldim. Aytgancha, hozir aytgan o'ralgan qog'ozni qaysi joyga qo'yish kerak?",
+          "text_translation_ru": "Хорошо, я запомнил. Кстати, тот рулон бумаги, о котором ты говорил, в какое место его нужно класть?",
+          "text_translation_en": "Okay, I've memorized it. By the way, that roll of paper you just mentioned — which position should it be placed in?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d29-s12",
+          "text_original": "你看机器里面有个白色的卡槽，纸卷就卡在那里。放的时候注意方向，纸要朝上放。",
+          "pinyin": "Nǐ kàn jīqì lǐmiàn yǒu ge báisè de kǎcáo, zhǐ juǎn jiù kǎ zài nàli. Fàng de shíhou zhùyì fāngxiàng, zhǐ yào cháo shàng fàng.",
+          "text_translation": "Qara, qurilmaning ichida oq rangli uyacha bor, qog'oz o'rami o'sha yerga o'rnatiladi. Qo'yayotganingda yo'nalishga e'tibor ber, qog'ozni yuzini yuqoriga qaratib qo'y.",
+          "text_translation_ru": "Смотри, внутри аппарата есть белый паз, рулон бумаги вставляется именно туда. Когда вставляешь, обращай внимание на направление, бумагу нужно класть лицевой стороной вверх.",
+          "text_translation_en": "Look, inside the machine there's a white slot, the paper roll fits right there. When you put it in, pay attention to the direction — the paper should face up.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d29-s13",
+          "text_original": "明白了。没想到复印机还有这么多讲究。",
+          "pinyin": "Míngbai le. Méi xiǎng dào fùyìnjī hái yǒu zhème duō jiǎngjiu.",
+          "text_translation": "Tushundim. Nusxa ko'chirgichda buncha ko'p nozik qoidalar borligini o'ylamabman.",
+          "text_translation_ru": "Понял. Не думал, что у копировального аппарата столько тонкостей.",
+          "text_translation_en": "I understand. I never imagined a copier had so many particularities.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d29-s14",
+          "text_original": "用习惯了就好了。你要印多少？我帮你印吧。",
+          "pinyin": "Yòng xíguàn le jiù hǎo le. Nǐ yào yìn duōshao? Wǒ bāng nǐ yìn ba.",
+          "text_translation": "Ko'nikib qolsang yaxshi bo'ladi. Qancha nusxa olmoqchisan? Senga yordam beray, men chop etib beraman.",
+          "text_translation_ru": "Привыкнешь — и всё будет в порядке. Сколько тебе нужно напечатать? Давай я помогу тебе.",
+          "text_translation_en": "Once you get used to it, it'll be fine. How many do you need to print? Let me help you print them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d29-s15",
+          "text_original": "就五份合同，一共十五页。我自己来吧，你已经帮了大忙了。",
+          "pinyin": "Jiù wǔ fèn hétong, yīgòng shíwǔ yè. Wǒ zìjǐ lái ba, nǐ yǐjīng bāng le dà máng le.",
+          "text_translation": "Atigi besh nusxa shartnoma, jami o'n besh bet. O'zim qilaman, sen allaqachon katta yordam berding.",
+          "text_translation_ru": "Всего пять экземпляров договора, в сумме пятнадцать страниц. Я сам справлюсь, ты уже очень мне помог.",
+          "text_translation_en": "Just five copies of the contract, fifteen pages in all. I'll do it myself, you've already been a big help.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d29-s16",
+          "text_original": "好的，那有问题再叫我。",
+          "pinyin": "Hǎo de, nà yǒu wèntí zài jiào wǒ.",
+          "text_translation": "Mayli, unda muammo bo'lsa yana meni chaqir.",
+          "text_translation_ru": "Хорошо, тогда если возникнут проблемы, зови меня снова.",
+          "text_translation_en": "Okay, then call me again if there's a problem.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d29-s17",
+          "text_original": "好的，谢谢！",
+          "pinyin": "Hǎo de, xièxie!",
+          "text_translation": "Mayli, rahmat!",
+          "text_translation_ru": "Хорошо, спасибо!",
+          "text_translation_en": "Okay, thanks!",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

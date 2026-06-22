@@ -1,0 +1,167 @@
+{
+  "id": "hsk4-dialogue31",
+  "slug": "job-interview-prep",
+  "title": "面试准备",
+  "pinyin": "Miànshì zhǔnbèi",
+  "titleTranslation": "Suhbatga tayyorgarlik",
+  "titleTranslation_ru": "Подготовка к собеседованию",
+  "titleTranslation_en": "Job Interview Prep",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["学长", "经验", "外企", "简历", "正规", "轮", "职业规划", "典型", "优点", "缺点", "主管", "专业", "案例分析", "题库", "模拟", "背景", "水平", "环节", "口语", "感谢信", "印象", "实用", "心仪"],
+  "sections": [
+    {
+      "id": "h4d31-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d31-s1",
+          "text_original": "学长，听说你去年找工作很顺利，能给我一些面试经验吗？",
+          "pinyin": "Xuézhǎng, tīngshuō nǐ qùnián zhǎo gōngzuò hěn shùnlì, néng gěi wǒ yīxiē miànshì jīngyàn ma?",
+          "text_translation": "Katta kursdoshim, eshitishimcha o'tgan yili ish topishing juda yaxshi o'tibdi, menga suhbat bo'yicha biroz tajriba bera olasanmi?",
+          "text_translation_ru": "Старшекурсник, я слышал, что в прошлом году ты успешно нашёл работу, можешь поделиться со мной опытом прохождения собеседований?",
+          "text_translation_en": "Senior, I heard your job search went really smoothly last year. Could you give me some interview tips?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d31-s2",
+          "text_original": "没问题。你准备去面试什么样的公司？",
+          "pinyin": "Méi wèntí. Nǐ zhǔnbèi qù miànshì shénmeyàng de gōngsī?",
+          "text_translation": "Muammo yo'q. Qanaqa kompaniyaga suhbatga borishni rejalashtiryapsan?",
+          "text_translation_ru": "Без проблем. В какую компанию ты собираешься на собеседование?",
+          "text_translation_en": "No problem. What kind of company are you planning to interview with?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d31-s3",
+          "text_original": "我想去外企做市场方面的工作，已经投了几家公司的简历了。",
+          "pinyin": "Wǒ xiǎng qù wàiqǐ zuò shìchǎng fāngmiàn de gōngzuò, yǐjīng tóu le jǐ jiā gōngsī de jiǎnlì le.",
+          "text_translation": "Men chet el kompaniyasiga marketing sohasida ishlamoqchiman, bir nechta kompaniyaga rezyume yuborib bo'ldim.",
+          "text_translation_ru": "Я хочу работать в иностранной компании в сфере маркетинга, уже отправил резюме в несколько компаний.",
+          "text_translation_en": "I want to work in marketing at a foreign company, and I've already sent my resume to a few companies.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d31-s4",
+          "text_original": "外企的面试一般比较正规，通常会有好几轮。第一轮一般是HR面，主要问一些基本情况和你的职业规划。",
+          "pinyin": "Wàiqǐ de miànshì yìbān bǐjiào zhèngguī, tōngcháng huì yǒu hǎo jǐ lún. Dì-yī lún yìbān shì HR miàn, zhǔyào wèn yīxiē jīběn qíngkuàng hé nǐ de zhíyè guīhuà.",
+          "text_translation": "Chet el kompaniyalarining suhbatlari odatda ancha rasmiy bo'ladi va ko'pincha bir necha bosqichdan iborat bo'ladi. Birinchi bosqich odatda HR suhbati bo'lib, asosan ba'zi asosiy ma'lumotlar va kasbiy rejalaring haqida so'raladi.",
+          "text_translation_ru": "Собеседования в иностранных компаниях обычно довольно формальные и, как правило, проходят в несколько туров. Первый тур — обычно собеседование с HR, в основном спрашивают базовую информацию и о твоих карьерных планах.",
+          "text_translation_en": "Interviews at foreign companies are usually fairly formal and typically have several rounds. The first round is usually an HR interview, mainly asking about basic information and your career plans.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d31-s5",
+          "text_original": "HR会问哪些典型问题？",
+          "pinyin": "HR huì wèn nǎxiē diǎnxíng wèntí?",
+          "text_translation": "HR qanday tipik savollarni beradi?",
+          "text_translation_ru": "Какие типичные вопросы задаёт HR?",
+          "text_translation_en": "What typical questions does HR ask?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d31-s6",
+          "text_original": "比如「你为什么选择我们公司？」「你对自己未来五年的规划是什么？」「你的优点和缺点是什么？」",
+          "pinyin": "Bǐrú 'nǐ wèishénme xuǎnzé wǒmen gōngsī?' 'nǐ duì zìjǐ wèilái wǔ nián de guīhuà shì shénme?' 'nǐ de yōudiǎn hé quēdiǎn shì shénme?'",
+          "text_translation": "Masalan, 「Nega bizning kompaniyamizni tanladingiz?」「Kelgusi besh yil uchun o'zingiz haqingizdagi rejalaringiz qanday?」「Sizning kuchli va kuchsiz tomonlaringiz nimalardan iborat?」",
+          "text_translation_ru": "Например, 「Почему вы выбрали нашу компанию?」「Какие у вас планы на ближайшие пять лет?」「Каковы ваши сильные и слабые стороны?」",
+          "text_translation_en": "For example, 「Why did you choose our company?」「What are your plans for yourself over the next five years?」「What are your strengths and weaknesses?」",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d31-s7",
+          "text_original": "这些我都准备了。那第二轮呢？",
+          "pinyin": "Zhèxiē wǒ dōu zhǔnbèi le. Nà dì-èr lún ne?",
+          "text_translation": "Bularning hammasiga tayyorgarlik ko'rdim. Ikkinchi bosqich-chi?",
+          "text_translation_ru": "Ко всему этому я подготовился. А второй тур?",
+          "text_translation_en": "I've prepared for all of these. What about the second round?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d31-s8",
+          "text_original": "第二轮通常是部门主管面，会问更多关于专业能力和工作经验的问题。他们可能会让你做案例分析。",
+          "pinyin": "Dì-èr lún tōngcháng shì bùmén zhǔguǎn miàn, huì wèn gèng duō guānyú zhuānyè nénglì hé gōngzuò jīngyàn de wèntí. Tāmen kěnéng huì ràng nǐ zuò ànlì fēnxī.",
+          "text_translation": "Ikkinchi bosqich odatda bo'lim rahbari bilan suhbat bo'ladi, kasbiy mahorat va ish tajribasi haqida ko'proq savollar beriladi. Ehtimol, sizdan keys tahlilini qilishingizni so'rashlari mumkin.",
+          "text_translation_ru": "Второй тур обычно — собеседование с руководителем отдела, задают больше вопросов о профессиональных навыках и опыте работы. Возможно, тебя попросят сделать анализ кейса.",
+          "text_translation_en": "The second round is usually an interview with the department manager, asking more questions about professional skills and work experience. They might ask you to do a case analysis.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d31-s9",
+          "text_original": "案例分析听起来有点难。我平时应该怎么准备？",
+          "pinyin": "Ànlì fēnxī tīng qǐlái yǒu diǎn nán. Wǒ píngshí yīnggāi zěnme zhǔnbèi?",
+          "text_translation": "Keys tahlili biroz qiyin tuyuladi. Men odatda qanday tayyorlanishim kerak?",
+          "text_translation_ru": "Анализ кейсов звучит немного сложно. Как мне обычно готовиться?",
+          "text_translation_en": "Case analysis sounds a bit difficult. How should I prepare for it day to day?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d31-s10",
+          "text_original": "你可以多看看网上的面试题库，做一些模拟练习。另外，面试前一定要仔细研究公司的背景和业务。",
+          "pinyin": "Nǐ kěyǐ duō kàn kan wǎngshàng de miànshì tíkù, zuò yīxiē mónǐ liànxí. Lìngwài, miànshì qián yídìng yào zǐxì yánjiū gōngsī de bèijǐng hé yèwù.",
+          "text_translation": "Internetdagi suhbat savollari bazasini ko'proq ko'rib chiqib, ba'zi mashq mashg'ulotlarini qilishing mumkin. Bundan tashqari, suhbatdan oldin kompaniyaning kelib chiqishi va faoliyatini albatta sinchkovlik bilan o'rganib chiqishing kerak.",
+          "text_translation_ru": "Ты можешь побольше изучать онлайн-базы вопросов для собеседований и делать пробные упражнения. Кроме того, перед собеседованием обязательно тщательно изучи историю и деятельность компании.",
+          "text_translation_en": "You can look at online interview question banks more and do some mock practice. Also, before the interview be sure to carefully research the company's background and business.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d31-s11",
+          "text_original": "我听说外企很看重英语水平，面试的时候会用英语提问吗？",
+          "pinyin": "Wǒ tīngshuō wàiqǐ hěn kànzhòng Yīngyǔ shuǐpíng, miànshì de shíhou huì yòng Yīngyǔ tíwèn ma?",
+          "text_translation": "Eshitishimcha, chet el kompaniyalari ingliz tili darajasiga katta e'tibor berarkan, suhbat paytida ingliz tilida savol berishadimi?",
+          "text_translation_ru": "Я слышал, что иностранные компании очень ценят уровень английского. На собеседовании задают вопросы на английском?",
+          "text_translation_en": "I heard foreign companies value English proficiency a lot. Will they ask questions in English during the interview?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d31-s12",
+          "text_original": "会的。很多外企会有英语面试环节，至少会要求你用英语做一段自我介绍。",
+          "pinyin": "Huì de. Hěnduō wàiqǐ huì yǒu Yīngyǔ miànshì huánjié, zhìshǎo huì yāoqiú nǐ yòng Yīngyǔ zuò yī duàn zìwǒ jièshào.",
+          "text_translation": "Ha, beradi. Ko'pgina chet el kompaniyalarida ingliz tilida suhbat bosqichi bo'ladi, hech bo'lmaganda sizdan ingliz tilida o'zingiz haqingizda qisqacha tanishtirish qilishingizni so'rashadi.",
+          "text_translation_ru": "Да. У многих иностранных компаний есть этап собеседования на английском, как минимум попросят рассказать о себе на английском.",
+          "text_translation_en": "Yes. Many foreign companies have an English interview segment, and at the very least they'll ask you to give a self-introduction in English.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d31-s13",
+          "text_original": "那我要好好练习口语了。最后一个问题，面试结束后是不是要发感谢邮件？",
+          "pinyin": "Nà wǒ yào hǎohao liànxí kǒuyǔ le. Zuìhòu yí ge wèntí, miànshì jiéshù hòu shì bú shì yào fā gǎnxiè yóujiàn?",
+          "text_translation": "Unday bo'lsa og'zaki nutqni yaxshilab mashq qilishim kerak ekan. Oxirgi savol, suhbat tugagandan keyin minnatdorchilik xati yuborish kerakmi?",
+          "text_translation_ru": "Тогда мне нужно как следует попрактиковать разговорную речь. Последний вопрос: после собеседования нужно отправлять письмо с благодарностью?",
+          "text_translation_en": "Then I need to practice my speaking well. Last question: after the interview, should I send a thank-you email?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d31-s14",
+          "text_original": "一定要发，这是个好习惯。面试后24小时内给面试官发一封简短的感谢信，能给对方留下好印象。",
+          "pinyin": "Yídìng yào fā, zhè shì ge hǎo xíguàn. Miànshì hòu 24 xiǎoshí nèi gěi miànshìguān fā yī fēng jiǎnduǎn de gǎnxiè xìn, néng gěi duìfāng liú xià hǎo yìnxiàng.",
+          "text_translation": "Albatta yuborish kerak, bu yaxshi odat. Suhbatdan keyin 24 soat ichida suhbatdoshga qisqa minnatdorchilik xati yuborsang, qarshi tomonda yaxshi taassurot qoldira olasan.",
+          "text_translation_ru": "Обязательно отправь, это хорошая привычка. В течение 24 часов после собеседования отправь интервьюеру короткое письмо с благодарностью — это произведёт хорошее впечатление.",
+          "text_translation_en": "Definitely send one, it's a good habit. Sending the interviewer a short thank-you letter within 24 hours after the interview leaves a good impression.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d31-s15",
+          "text_original": "非常感谢你！你给的建议太实用了。我回去好好准备一下。",
+          "pinyin": "Fēicháng gǎnxiè nǐ! Nǐ gěi de jiànyì tài shíyòng le. Wǒ huíqù hǎohao zhǔnbèi yíxià.",
+          "text_translation": "Senga juda katta rahmat! Bergan maslahatlaring juda foydali bo'ldi. Uyga qaytib yaxshilab tayyorgarlik ko'raman.",
+          "text_translation_ru": "Большое тебе спасибо! Твои советы очень полезные. Вернусь домой и как следует подготовлюсь.",
+          "text_translation_en": "Thank you so much! The advice you gave is really practical. I'll go back and prepare well.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d31-s16",
+          "text_original": "不客气！祝你面试顺利，拿到心仪的offer！",
+          "pinyin": "Bú kèqi! Zhù nǐ miànshì shùnlì, ná dào xīnyí de offer!",
+          "text_translation": "Arzimaydi! Suhbating muvaffaqiyatli o'tib, o'zing istagan offerni qo'lga kiritishingni tilayman!",
+          "text_translation_ru": "Не за что! Желаю тебе успешного собеседования и получить желанный offer!",
+          "text_translation_en": "You're welcome! I wish you a smooth interview and that you get the offer you want!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

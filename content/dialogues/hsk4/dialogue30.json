@@ -1,0 +1,181 @@
+{
+  "id": "hsk4-dialogue30",
+  "slug": "class-schedule",
+  "title": "课程表",
+  "pinyin": "Kèchéngbiǎo",
+  "titleTranslation": "Dars jadvali",
+  "titleTranslation_ru": "Расписание занятий",
+  "titleTranslation_en": "Class Schedule",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "课程表",
+    "学期",
+    "期待",
+    "讲课",
+    "生动",
+    "课本",
+    "念",
+    "案例",
+    "打分",
+    "松",
+    "期末",
+    "摄影",
+    "现代文学",
+    "爱好",
+    "互动性",
+    "分组",
+    "讨论",
+    "表达",
+    "心理学",
+    "逻辑学",
+    "必修课",
+    "收获"
+  ],
+  "sections": [
+    {
+      "id": "h4d30-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d30-s1",
+          "text_original": "你看过下学期的课程表了吗？我觉得这次的课比上学期有意思多了。",
+          "pinyin": "Nǐ kàn guo xià xuéqī de kèchéngbiǎo le ma? Wǒ juéde zhè cì de kè bǐ shàng xuéqī yǒuyìsi duō le.",
+          "text_translation": "Keyingi semestrning dars jadvalini ko'rdingmi? Menimcha, bu safargi darslar o'tgan semestrga qaraganda ancha qiziqarli.",
+          "text_translation_ru": "Ты видел расписание занятий на следующий семестр? Мне кажется, в этот раз занятия гораздо интереснее, чем в прошлом семестре.",
+          "text_translation_en": "Have you seen next semester's class schedule? I think these classes are much more interesting than last semester's.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d30-s2",
+          "text_original": "看过了。我最期待的是王老师的中国文化课，听说他讲课特别生动。",
+          "pinyin": "Kàn guo le. Wǒ zuì qīdài de shì Wáng lǎoshī de Zhōngguó wénhuà kè, tīngshuō tā jiǎngkè tèbié shēngdòng.",
+          "text_translation": "Ko'rdim. Men eng ko'p Vang o'qituvchining Xitoy madaniyati darsini intizorlik bilan kutyapman, eshitishimcha u darsni juda jonli o'tarkan.",
+          "text_translation_ru": "Видел. Больше всего я жду урок китайской культуры учителя Вана, говорят, он ведёт занятия особенно живо.",
+          "text_translation_en": "I have. The one I'm most looking forward to is Teacher Wang's Chinese culture class — I heard he teaches in a really lively way.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d30-s3",
+          "text_original": "我也听说了！上学期有同学上过他的课，说他从不照着课本念，而是讲很多故事和真实案例。",
+          "pinyin": "Wǒ yě tīngshuō le! Shàng xuéqī yǒu tóngxué shàng guo tā de kè, shuō tā cóng bú zhàozhe kèběn niàn, ér shì jiǎng hěnduō gùshi hé zhēnshí ànlì.",
+          "text_translation": "Men ham eshitdim! O'tgan semestr ba'zi sinfdoshlar uning darsiga qatnashgan, ular u hech qachon darslikni o'qib bermaydi, balki ko'plab hikoyalar va haqiqiy misollar aytib beradi deyishdi.",
+          "text_translation_ru": "Я тоже слышал! В прошлом семестре некоторые однокурсники ходили на его занятия и говорили, что он никогда не читает по учебнику, а рассказывает много историй и реальных примеров.",
+          "text_translation_en": "I heard that too! Last semester some classmates took his class and said he never just reads from the textbook — instead he tells lots of stories and real cases.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d30-s4",
+          "text_original": "这种老师最受欢迎了。不像李老师，上课就是念PPT，听得人想睡觉。",
+          "pinyin": "Zhè zhǒng lǎoshī zuì shòu huānyíng le. Bú xiàng Lǐ lǎoshī, shàngkè jiùshì niàn PPT, tīng de rén xiǎng shuìjiào.",
+          "text_translation": "Bunday o'qituvchilar eng mashhur bo'ladi. Li o'qituvchiga o'xshamaydi, u darsda faqat PPT o'qiydi, tinglagan odamning uxlagisi keladi.",
+          "text_translation_ru": "Такие преподаватели пользуются наибольшей популярностью. В отличие от учителя Ли, который на занятиях просто читает PPT, и от этого хочется спать.",
+          "text_translation_en": "That kind of teacher is the most popular. Not like Teacher Li, who just reads off the PPT in class — it makes you want to fall asleep.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d30-s5",
+          "text_original": "李老师的课确实有点无聊，但听说他打分比较松，期末容易过。",
+          "pinyin": "Lǐ lǎoshī de kè quèshí yǒu diǎn wúliáo, dàn tīngshuō tā dǎfēn bǐjiào sōng, qīmò róngyì guò.",
+          "text_translation": "Li o'qituvchining darsi haqiqatan ham biroz zerikarli, lekin eshitishimcha u baho qo'yishda ancha yumshoq, semestr oxirida o'tish oson.",
+          "text_translation_ru": "Урок учителя Ли действительно немного скучный, но говорят, он ставит оценки довольно мягко, и сдать в конце семестра легко.",
+          "text_translation_en": "Teacher Li's class really is a bit boring, but I heard he grades pretty leniently, so it's easy to pass the final.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d30-s6",
+          "text_original": "那倒是。不过我选课更看重老师教得好不好，而不是好不好过。",
+          "pinyin": "Nà dàoshi. Búguò wǒ xuǎn kè gèng kànzhòng lǎoshī jiāo de hǎo bù hǎo, ér bú shì hǎo bù hǎo guò.",
+          "text_translation": "To'g'ri-ku. Lekin men dars tanlaganda o'qituvchining qanchalik yaxshi o'qitishini ko'proq e'tiborga olaman, o'tish oson yoki qiyinligini emas.",
+          "text_translation_ru": "Это так. Но при выборе предметов я больше обращаю внимание на то, насколько хорошо преподаёт учитель, а не на то, легко ли сдать.",
+          "text_translation_en": "That's true. But when I choose classes, I care more about how well the teacher teaches than whether it's easy to pass.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d30-s7",
+          "text_original": "你说的有道理。那除了中国文化课，你还选了哪些课？",
+          "pinyin": "Nǐ shuō de yǒu dàoli. Nà chúle Zhōngguó wénhuà kè, nǐ hái xuǎn le nǎxiē kè?",
+          "text_translation": "Gaping mantiqli. Unda Xitoy madaniyati darsidan tashqari yana qaysi darslarni tanlading?",
+          "text_translation_ru": "Ты прав. Тогда, кроме урока китайской культуры, какие ещё предметы ты выбрал?",
+          "text_translation_en": "You have a point. So besides the Chinese culture class, what other courses did you choose?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d30-s8",
+          "text_original": "我还选了摄影课和张老师的现代文学课。摄影课是我一直想学的，可以当爱好。",
+          "pinyin": "Wǒ hái xuǎn le shèyǐng kè hé Zhāng lǎoshī de xiàndài wénxué kè. Shèyǐng kè shì wǒ yìzhí xiǎng xué de, kěyǐ dāng àihào.",
+          "text_translation": "Men yana fotografiya darsini va Jang o'qituvchining zamonaviy adabiyot darsini tanladim. Fotografiya darsini doim o'rganmoqchi edim, uni qiziqish sifatida o'rgansa bo'ladi.",
+          "text_translation_ru": "Я ещё выбрал урок фотографии и урок современной литературы учителя Чжана. Фотографию я всегда хотел изучать, ею можно заниматься как хобби.",
+          "text_translation_en": "I also chose a photography class and Teacher Zhang's modern literature class. I've always wanted to learn photography — it can be a hobby.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d30-s9",
+          "text_original": "现代文学课怎么样？张老师教得好吗？",
+          "pinyin": "Xiàndài wénxué kè zěnmeyàng? Zhāng lǎoshī jiāo de hǎo ma?",
+          "text_translation": "Zamonaviy adabiyot darsi qanaqa? Jang o'qituvchi yaxshi o'qitadimi?",
+          "text_translation_ru": "А как урок современной литературы? Учитель Чжан хорошо преподаёт?",
+          "text_translation_en": "How's the modern literature class? Does Teacher Zhang teach well?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d30-s10",
+          "text_original": "听说不错，她的课互动性很强，经常让我们分组讨论。",
+          "pinyin": "Tīngshuō búcuò, tā de kè hùdòng xìng hěn qiáng, jīngcháng ràng wǒmen fēnzǔ tǎolùn.",
+          "text_translation": "Eshitishimcha yaxshi, uning darsi juda interaktiv, ko'pincha bizni guruhlarga bo'lib muhokama qildiradi.",
+          "text_translation_ru": "Говорят, неплохо, её занятия очень интерактивные, она часто делит нас на группы для обсуждения.",
+          "text_translation_en": "I heard it's good — her class is very interactive, and she often has us discuss in groups.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d30-s11",
+          "text_original": "那挺适合你的，你本来就很喜欢表达自己的想法。",
+          "pinyin": "Nà tǐng shìhé nǐ de, nǐ běnlái jiù hěn xǐhuān biǎodá zìjǐ de xiǎngfǎ.",
+          "text_translation": "Unda bu senga juda mos keladi, sen aslidan ham o'z fikrlaringni bildirishni juda yaxshi ko'rasan.",
+          "text_translation_ru": "Тогда это тебе очень подходит, ты ведь и так любишь высказывать свои мысли.",
+          "text_translation_en": "Then that suits you well — you've always liked expressing your own ideas.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d30-s12",
+          "text_original": "你呢？你选了什么课？",
+          "pinyin": "Nǐ ne? Nǐ xuǎn le shénme kè?",
+          "text_translation": "Sen-chi? Qanday darslarni tanlading?",
+          "text_translation_ru": "А ты? Какие предметы ты выбрал?",
+          "text_translation_en": "What about you? What classes did you choose?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d30-s13",
+          "text_original": "我选了心理学和逻辑学。心理学是必修课，逻辑学是我自己感兴趣的。",
+          "pinyin": "Wǒ xuǎn le xīnlǐ xué hé luóji xué. Xīnlǐ xué shì bìxiū kè, luóji xué shì wǒ zìjǐ gǎn xìngqù de.",
+          "text_translation": "Men psixologiya va mantiqni tanladim. Psixologiya majburiy fan, mantiq esa o'zim qiziqib qolgan fan.",
+          "text_translation_ru": "Я выбрал психологию и логику. Психология — обязательный предмет, а логика — то, что мне самому интересно.",
+          "text_translation_en": "I chose psychology and logic. Psychology is a required course, and logic is something I'm personally interested in.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d30-s14",
+          "text_original": "逻辑学听说挺难的，你可要做好心理准备。",
+          "pinyin": "Luóji xué tīngshuō tǐng nán de, nǐ kě yào zuò hǎo xīnlǐ zhǔnbèi.",
+          "text_translation": "Eshitishimcha mantiq ancha qiyin, ruhiy jihatdan yaxshilab tayyorgarlik ko'rib qo'ygin.",
+          "text_translation_ru": "Говорят, логика довольно сложная, тебе стоит психологически подготовиться.",
+          "text_translation_en": "I heard logic is pretty hard, so you'd better be mentally prepared.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d30-s15",
+          "text_original": "我知道，但我喜欢挑战。希望这学期能收获满满。",
+          "pinyin": "Wǒ zhīdào, dàn wǒ xǐhuān tiǎozhàn. Xīwàng zhè xuéqī néng shōuhuò mǎnmǎn.",
+          "text_translation": "Bilaman, lekin men sinovlarni yaxshi ko'raman. Bu semestrda ko'p narsaga erishishni umid qilaman.",
+          "text_translation_ru": "Я знаю, но я люблю вызовы. Надеюсь, этот семестр будет очень плодотворным.",
+          "text_translation_en": "I know, but I like challenges. I hope I'll gain a lot this semester.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}
