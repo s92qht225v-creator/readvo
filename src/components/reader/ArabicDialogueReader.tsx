@@ -103,7 +103,9 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
     translation: trOf(s, language, genderMode),
     speaker: s.speaker,
     audioText: arOf(s),
-    audioUrl: s.audio_url,
+    // Curated recordings are the male (ar_m) renders → use them only in male
+    // mode; female mode falls back to TTS for the lines whose wording differs.
+    audioUrl: genderMode === 'm' ? s.audio_url : undefined,
     voice: isGendered ? voiceFor(s.speaker) : undefined,
   }));
 

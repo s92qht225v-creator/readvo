@@ -7,19 +7,97 @@
   "titleTranslation_ru": "Покупка фруктов",
   "titleTranslation_en": "Buying Fruit",
   "vocab": [
-    { "ar": "فَاكِهَة", "translit": "fākiha", "uz": "meva", "ru": "фрукты", "en": "fruit" },
-    { "ar": "تُفَّاح", "translit": "tuffāḥ", "uz": "olma", "ru": "яблоки", "en": "apples" },
-    { "ar": "مَوْز", "translit": "mawz", "uz": "banan", "ru": "бананы", "en": "bananas" },
-    { "ar": "بُرْتُقَال", "translit": "burtuqāl", "uz": "apelsin", "ru": "апельсины", "en": "oranges" },
-    { "ar": "عِنْدِي", "translit": "ʿindī", "uz": "menda bor", "ru": "у меня есть", "en": "I have" },
-    { "ar": "أُرِيدُ", "translit": "urīdu", "uz": "xohlayman", "ru": "я хочу", "en": "I want" },
-    { "ar": "كَمْ", "translit": "kam", "uz": "qancha, necha", "ru": "сколько", "en": "how much / how many" },
-    { "ar": "كِيلُو", "translit": "kīlū", "uz": "kilogramm", "ru": "килограмм", "en": "kilo" },
-    { "ar": "دِينَار", "translit": "dīnār", "uz": "dinor (pul)", "ru": "динар", "en": "dinar (currency)" },
-    { "ar": "ثَمَن", "translit": "thaman", "uz": "narx", "ru": "цена", "en": "price" },
-    { "ar": "حَسَنًا", "translit": "ḥasanan", "uz": "yaxshi, mayli", "ru": "хорошо, ладно", "en": "okay" },
-    { "ar": "تَفَضَّلْ", "translit": "tafaḍḍal", "uz": "marhamat, mana", "ru": "пожалуйста, вот", "en": "here you are" },
-    { "ar": "مَعَ السَّلَامَةِ", "translit": "maʿa s-salāma", "uz": "xayr, sogʻ boʻling", "ru": "до свидания", "en": "goodbye" }
+    {
+      "ar": "فَاكِهَة",
+      "translit": "fākiha",
+      "uz": "meva",
+      "ru": "фрукты",
+      "en": "fruit"
+    },
+    {
+      "ar": "تُفَّاح",
+      "translit": "tuffāḥ",
+      "uz": "olma",
+      "ru": "яблоки",
+      "en": "apples"
+    },
+    {
+      "ar": "مَوْز",
+      "translit": "mawz",
+      "uz": "banan",
+      "ru": "бананы",
+      "en": "bananas"
+    },
+    {
+      "ar": "بُرْتُقَال",
+      "translit": "burtuqāl",
+      "uz": "apelsin",
+      "ru": "апельсины",
+      "en": "oranges"
+    },
+    {
+      "ar": "عِنْدِي",
+      "translit": "ʿindī",
+      "uz": "menda bor",
+      "ru": "у меня есть",
+      "en": "I have"
+    },
+    {
+      "ar": "أُرِيدُ",
+      "translit": "urīdu",
+      "uz": "xohlayman",
+      "ru": "я хочу",
+      "en": "I want"
+    },
+    {
+      "ar": "كَمْ",
+      "translit": "kam",
+      "uz": "qancha, necha",
+      "ru": "сколько",
+      "en": "how much / how many"
+    },
+    {
+      "ar": "كِيلُو",
+      "translit": "kīlū",
+      "uz": "kilogramm",
+      "ru": "килограмм",
+      "en": "kilo"
+    },
+    {
+      "ar": "دِينَار",
+      "translit": "dīnār",
+      "uz": "dinor (pul)",
+      "ru": "динар",
+      "en": "dinar (currency)"
+    },
+    {
+      "ar": "ثَمَن",
+      "translit": "thaman",
+      "uz": "narx",
+      "ru": "цена",
+      "en": "price"
+    },
+    {
+      "ar": "حَسَنًا",
+      "translit": "ḥasanan",
+      "uz": "yaxshi, mayli",
+      "ru": "хорошо, ладно",
+      "en": "okay"
+    },
+    {
+      "ar": "تَفَضَّلْ",
+      "translit": "tafaḍḍal",
+      "uz": "marhamat, mana",
+      "ru": "пожалуйста, вот",
+      "en": "here you are"
+    },
+    {
+      "ar": "مَعَ السَّلَامَةِ",
+      "translit": "maʿa s-salāma",
+      "uz": "xayr, sogʻ boʻling",
+      "ru": "до свидания",
+      "en": "goodbye"
+    }
   ],
   "sentences": [
     {
@@ -31,7 +109,8 @@
       "translit_f": "Hal ʿindaki fākihatun?",
       "text_translation_uz": "Sizda meva bormi?",
       "text_translation_ru": "У тебя есть фрукты?",
-      "text_translation_en": "Do you have fruit?"
+      "text_translation_en": "Do you have fruit?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s1.mp3"
     },
     {
       "id": "s2",
@@ -42,7 +121,8 @@
       "translit_f": "Naʿam, ʿindī tuffāḥun wa mawzun wa burtuqālun.",
       "text_translation_uz": "Ha, menda olma, banan va apelsin bor.",
       "text_translation_ru": "Да, у меня есть яблоки, бананы и апельсины.",
-      "text_translation_en": "Yes, I have apples, bananas, and oranges."
+      "text_translation_en": "Yes, I have apples, bananas, and oranges.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s2.mp3"
     },
     {
       "id": "s3",
@@ -53,7 +133,8 @@
       "translit_f": "Urīdu tuffāḥan wa mawzan.",
       "text_translation_uz": "Menga olma va banan kerak.",
       "text_translation_ru": "Я хочу яблоки и бананы.",
-      "text_translation_en": "I want apples and bananas."
+      "text_translation_en": "I want apples and bananas.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s3.mp3"
     },
     {
       "id": "s4",
@@ -64,7 +145,8 @@
       "translit_f": "Kam kīlū t-tuffāḥi?",
       "text_translation_uz": "Bir kilo olma qancha turadi?",
       "text_translation_ru": "Сколько стоит кило яблок?",
-      "text_translation_en": "How much is a kilo of apples?"
+      "text_translation_en": "How much is a kilo of apples?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s4.mp3"
     },
     {
       "id": "s5",
@@ -75,7 +157,8 @@
       "translit_f": "Kīlū t-tuffāḥi bikhamsati danānīra.",
       "text_translation_uz": "Bir kilo olma besh dinor.",
       "text_translation_ru": "Кило яблок — пять динаров.",
-      "text_translation_en": "A kilo of apples is 5 dinars."
+      "text_translation_en": "A kilo of apples is 5 dinars.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s5.mp3"
     },
     {
       "id": "s6",
@@ -86,7 +169,8 @@
       "translit_f": "Wa kam kīlū l-mawzi?",
       "text_translation_uz": "Bir kilo banan-chi, qancha?",
       "text_translation_ru": "А сколько стоит кило бананов?",
-      "text_translation_en": "And how much is a kilo of bananas?"
+      "text_translation_en": "And how much is a kilo of bananas?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s6.mp3"
     },
     {
       "id": "s7",
@@ -97,7 +181,8 @@
       "translit_f": "Kīlū l-mawzi bithalāthati danānīra.",
       "text_translation_uz": "Bir kilo banan uch dinor.",
       "text_translation_ru": "Кило бананов — три динара.",
-      "text_translation_en": "A kilo of bananas is 3 dinars."
+      "text_translation_en": "A kilo of bananas is 3 dinars.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s7.mp3"
     },
     {
       "id": "s8",
@@ -108,7 +193,8 @@
       "translit_f": "Urīdu kīlū tuffāḥin wa kīlū mawzin.",
       "text_translation_uz": "Menga bir kilo olma va bir kilo banan kerak.",
       "text_translation_ru": "Я хочу один кило яблок и один кило бананов.",
-      "text_translation_en": "I want one kilo of apples and one kilo of bananas."
+      "text_translation_en": "I want one kilo of apples and one kilo of bananas.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s8.mp3"
     },
     {
       "id": "s9",
@@ -119,7 +205,8 @@
       "translit_f": "Ḥasanan. Hādhā kīlū tuffāḥin wa hādhā kīlū mawzin.",
       "text_translation_uz": "Mayli. Mana bir kilo olma, mana bir kilo banan.",
       "text_translation_ru": "Хорошо. Вот кило яблок и вот кило бананов.",
-      "text_translation_en": "Okay. This is one kilo of apples and this is one kilo of bananas."
+      "text_translation_en": "Okay. This is one kilo of apples and this is one kilo of bananas.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s9.mp3"
     },
     {
       "id": "s10",
@@ -130,7 +217,8 @@
       "translit_f": "Kam ath-thamanu?",
       "text_translation_uz": "Narxi qancha?",
       "text_translation_ru": "Сколько с меня (какова цена)?",
-      "text_translation_en": "How much is the price?"
+      "text_translation_en": "How much is the price?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s10.mp3"
     },
     {
       "id": "s11",
@@ -141,7 +229,8 @@
       "translit_f": "Ath-thamanu thamāniyatu danānīra.",
       "text_translation_uz": "Narxi sakkiz dinor.",
       "text_translation_ru": "Цена — восемь динаров.",
-      "text_translation_en": "The price is 8 dinars."
+      "text_translation_en": "The price is 8 dinars.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s11.mp3"
     },
     {
       "id": "s12",
@@ -152,7 +241,8 @@
       "translit_f": "Tafaḍḍalī.",
       "text_translation_uz": "Mana, marhamat. (pulni berib)",
       "text_translation_ru": "Вот, пожалуйста. (отдавая деньги)",
-      "text_translation_en": "Here you are. (giving the money)"
+      "text_translation_en": "Here you are. (giving the money)",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s12.mp3"
     },
     {
       "id": "s13",
@@ -163,7 +253,8 @@
       "translit_f": "Shukran. Maʿa s-salāmah!",
       "text_translation_uz": "Rahmat. Xayr, sogʻ boʻling!",
       "text_translation_ru": "Спасибо. До свидания!",
-      "text_translation_en": "Thank you. Goodbye!"
+      "text_translation_en": "Thank you. Goodbye!",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s13.mp3"
     },
     {
       "id": "s14",
@@ -174,7 +265,8 @@
       "translit_f": "Maʿa s-salāmah!",
       "text_translation_uz": "Xayr, sogʻ boʻling!",
       "text_translation_ru": "До свидания!",
-      "text_translation_en": "Goodbye!"
+      "text_translation_en": "Goodbye!",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/s14.mp3"
     }
   ]
 }
