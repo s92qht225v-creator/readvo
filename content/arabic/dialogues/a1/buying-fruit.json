@@ -125,28 +125,16 @@
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s2.mp3"
     },
     {
-      "id": "s3",
+      "id": "s3-s4",
       "speaker": "A",
-      "ar_m": "أُرِيدُ تَفَّاحًا وَمَوْزًا.",
-      "translit_m": "Urīdu tuffāḥan wa mawzan.",
-      "ar_f": "أُرِيدُ تَفَّاحًا وَمَوْزًا.",
-      "translit_f": "Urīdu tuffāḥan wa mawzan.",
-      "text_translation_uz": "Menga olma va banan kerak.",
-      "text_translation_ru": "Я хочу яблоки и бананы.",
-      "text_translation_en": "I want apples and bananas.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s3.mp3"
-    },
-    {
-      "id": "s4",
-      "speaker": "A",
-      "ar_m": "كَمْ كِيلُو التُّفَّاحِ؟",
-      "translit_m": "Kam kīlū t-tuffāḥi?",
-      "ar_f": "كَمْ كِيلُو التُّفَّاحِ؟",
-      "translit_f": "Kam kīlū t-tuffāḥi?",
-      "text_translation_uz": "Bir kilo olma qancha turadi?",
-      "text_translation_ru": "Сколько стоит кило яблок?",
-      "text_translation_en": "How much is a kilo of apples?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s4.mp3"
+      "ar_m": "أُرِيدُ تَفَّاحًا وَمَوْزًا. كَمْ كِيلُو التُّفَّاحِ؟",
+      "translit_m": "Urīdu tuffāḥan wa mawzan. Kam kīlū t-tuffāḥi?",
+      "ar_f": "أُرِيدُ تَفَّاحًا وَمَوْزًا. كَمْ كِيلُو التُّفَّاحِ؟",
+      "translit_f": "Urīdu tuffāḥan wa mawzan. Kam kīlū t-tuffāḥi?",
+      "text_translation_uz": "Menga olma va banan kerak. Bir kilo olma qancha turadi?",
+      "text_translation_ru": "Я хочу яблоки и бананы. Сколько стоит кило яблок?",
+      "text_translation_en": "I want apples and bananas. How much is a kilo of apples?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/buying-fruit/omar/s3-s4.mp3"
     },
     {
       "id": "s5",
