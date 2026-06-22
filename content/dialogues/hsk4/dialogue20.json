@@ -1,0 +1,167 @@
+{
+  "id": "hsk4-dialogue20",
+  "slug": "meeting-a-new-neighbor",
+  "title": "认识新邻居",
+  "pinyin": "Rènshi xīn línjū",
+  "titleTranslation": "Yangi qo'shni bilan tanishish",
+  "titleTranslation_ru": "Знакомство с новым соседом",
+  "titleTranslation_en": "Meeting Someone New",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["邻居", "关照", "互相", "毕业", "外卖", "偶尔", "尽管", "熟悉", "超市", "日用品", "大型", "合理", "快递", "快递柜", "物业", "微信群", "绿化", "公交站"],
+  "sections": [
+    {
+      "id": "h4d20-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d20-s1",
+          "text_original": "你好！你是刚搬来的吧？我住在对面，姓张。",
+          "pinyin": "Nǐ hǎo! Nǐ shì gāng bān lái de ba? Wǒ zhù zài duìmiàn, xìng Zhāng.",
+          "text_translation": "Salom! Siz hozirgina ko'chib kelganmisiz? Men ro'paradagi uyda yashayman, familiyam Chjan.",
+          "text_translation_ru": "Здравствуйте! Вы недавно переехали, верно? Я живу напротив, моя фамилия Чжан.",
+          "text_translation_en": "Hello! You just moved in, didn't you? I live across the way, my surname is Zhang.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d20-s2",
+          "text_original": "你好张姐！我叫小李，昨天刚搬过来。以后请多多关照！",
+          "pinyin": "Nǐ hǎo Zhāng jiě! Wǒ jiào Xiǎo Lǐ, zuótiān gāng bān guòlái. Yǐhòu qǐng duōduō guānzhào!",
+          "text_translation": "Salom Chjan opa! Mening ismim Syao Li, kecha endigina ko'chib keldim. Bundan keyin menga g'amxo'rlik qilib turing!",
+          "text_translation_ru": "Здравствуйте, сестрица Чжан! Меня зовут Сяо Ли, я только вчера переехал. Прошу вашей поддержки и впредь!",
+          "text_translation_en": "Hello, Sister Zhang! My name is Xiao Li, I just moved in yesterday. Please look after me from now on!",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d20-s3",
+          "text_original": "哪里哪里！大家都是邻居，互相帮助是应该的。你一个人住吗？",
+          "pinyin": "Nǎli nǎli! Dàjiā dōu shì línjū, hùxiāng bāngzhù shì yīnggāi de. Nǐ yí ge rén zhù ma?",
+          "text_translation": "Arzimaydi! Hammamiz qo'shnimiz, bir-birimizga yordam berishimiz kerak. Yolg'iz yashaysizmi?",
+          "text_translation_ru": "Что вы, что вы! Мы все соседи, помогать друг другу — это само собой разумеется. Вы живёте один?",
+          "text_translation_en": "Not at all! We're all neighbors, helping each other is only natural. Do you live alone?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d20-s4",
+          "text_original": "对，我一个人住。我是去年刚毕业的，现在在附近一家公司上班。",
+          "pinyin": "Duì, wǒ yí ge rén zhù. Wǒ shì qùnián gāng bìyè de, xiànzài zài fùjìn yī jiā gōngsī shàngbān.",
+          "text_translation": "Ha, men yolg'iz yashayman. O'tgan yili endigina o'qishni tugatdim, hozir yaqin atrofdagi bir kompaniyada ishlayman.",
+          "text_translation_ru": "Да, я живу один. Я только в прошлом году окончил учёбу, сейчас работаю в компании неподалёку.",
+          "text_translation_en": "Yes, I live alone. I just graduated last year, and now I work at a company nearby.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d20-s5",
+          "text_original": "那你平时一个人做饭吗？还是经常点外卖？",
+          "pinyin": "Nà nǐ píngshí yí ge rén zuò fàn ma? Háishì jīngcháng diǎn wàimài?",
+          "text_translation": "Unda odatda o'zingiz ovqat tayyorlaysizmi? Yoki tez-tez yetkazib beriladigan ovqat buyurtma qilasizmi?",
+          "text_translation_ru": "Тогда вы обычно сами готовите? Или часто заказываете еду с доставкой?",
+          "text_translation_en": "So do you usually cook for yourself? Or do you often order takeout?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d20-s6",
+          "text_original": "我工作日一般都点外卖，周末偶尔会自己做点简单的菜。",
+          "pinyin": "Wǒ gōngzuò rì yìbān dōu diǎn wàimài, zhōumò ǒu'ěr huì zìjǐ zuò diǎn jiǎndān de cài.",
+          "text_translation": "Ish kunlari odatda yetkazib beriladigan ovqat buyurtma qilaman, dam olish kunlari ba'zan o'zim oddiy taom tayyorlayman.",
+          "text_translation_ru": "В будни я обычно заказываю еду с доставкой, а по выходным иногда сам готовлю что-нибудь простое.",
+          "text_translation_en": "On weekdays I usually order takeout, and on weekends I occasionally cook something simple myself.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d20-s7",
+          "text_original": "如果有什么需要帮忙的，尽管说。我对这个小区很熟悉。",
+          "pinyin": "Rúguǒ yǒu shénme xūyào bāngmáng de, jǐnguǎn shuō. Wǒ duì zhè ge xiǎoqū hěn shúxī.",
+          "text_translation": "Agar yordam kerak bo'lsa, bemalol ayting. Men bu turar-joy majmuasini juda yaxshi bilaman.",
+          "text_translation_ru": "Если понадобится какая-то помощь, не стесняйтесь, говорите. Я хорошо знаю этот жилой комплекс.",
+          "text_translation_en": "If there's anything you need help with, just say so. I know this residential complex very well.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d20-s8",
+          "text_original": "太好了！我正好想问一下，附近哪里有超市？我想买一些日用品。",
+          "pinyin": "Tài hǎo le! Wǒ zhènghǎo xiǎng wèn yíxià, fùjìn nǎli yǒu chāoshì? Wǒ xiǎng mǎi yì xiē rìyòngpǐn.",
+          "text_translation": "Juda yaxshi! Aynan so'ramoqchi edim, yaqin atrofda qayerda supermarket bor? Bir oz kundalik ehtiyoj buyumlarini sotib olmoqchiman.",
+          "text_translation_ru": "Отлично! Я как раз хотел спросить, где поблизости есть супермаркет? Хочу купить кое-какие товары первой необходимости.",
+          "text_translation_en": "Great! I was just about to ask, where is there a supermarket nearby? I'd like to buy some daily necessities.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d20-s9",
+          "text_original": "小区门口右转走五百米就有一个大型超市，东西很全，价格也合理。",
+          "pinyin": "Xiǎoqū ménkǒu yòu zhuǎn zǒu wǔbǎi mǐ jiù yǒu yí ge dàxíng chāoshì, dōngxi hěn quán, jiàgé yě hélǐ.",
+          "text_translation": "Majmua darvozasi oldida o'ngga burilib besh yuz metr yursangiz katta supermarket bor, mahsulotlari to'liq, narxlari ham o'rinli.",
+          "text_translation_ru": "У ворот комплекса поверните направо и пройдите пятьсот метров — там есть большой супермаркет, товары там разнообразные, и цены разумные.",
+          "text_translation_en": "Turn right at the complex gate and walk five hundred meters, and there's a large supermarket — it has a wide selection and reasonable prices.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d20-s10",
+          "text_original": "好的，谢谢张姐！对了，这边的快递一般都放在哪里？",
+          "pinyin": "Hǎo de, xièxie Zhāng jiě! Duìle, zhè biān de kuàidì yìbān dōu fàng zài nǎli?",
+          "text_translation": "Yaxshi, rahmat Chjan opa! Aytmoqchi, bu yerda kuryer pochtasi odatda qayerga qo'yiladi?",
+          "text_translation_ru": "Хорошо, спасибо, сестрица Чжан! Кстати, куда здесь обычно складывают посылки от курьеров?",
+          "text_translation_en": "Okay, thank you, Sister Zhang! By the way, where do they usually leave the express deliveries around here?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d20-s11",
+          "text_original": "小区门口有快递柜，大件的话会放在物业办公室。你可以加一下小区微信群，有什么通知都会发在里面。",
+          "pinyin": "Xiǎoqū ménkǒu yǒu kuàidì guì, dà jiàn dehuà huì fàng zài wùyè bàngōngshì. Nǐ kěyǐ jiā yíxià xiǎoqū Wēixìn qún, yǒu shénme tōngzhī dōu huì fā zài lǐmiàn.",
+          "text_translation": "Majmua darvozasi oldida pochta shkaflari bor, agar yirik yuk bo'lsa, uy-joy boshqaruvi ofisiga qo'yiladi. Majmuaning WeChat guruhiga qo'shilib qo'ying, har qanday e'lon o'sha yerga yuboriladi.",
+          "text_translation_ru": "У ворот комплекса есть постаматы для посылок, а крупные оставляют в офисе управляющей компании. Можете вступить в чат комплекса в WeChat — все объявления присылают туда.",
+          "text_translation_en": "There are parcel lockers at the complex gate, and large items are left at the property management office. You can join the complex's WeChat group — all notices are posted there.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d20-s12",
+          "text_original": "好的，我加一下。这个小区环境真不错，绿化也很好。",
+          "pinyin": "Hǎo de, wǒ jiā yíxià. Zhè ge xiǎoqū huánjìng zhēn búcuò, lǜhuà yě hěn hǎo.",
+          "text_translation": "Yaxshi, qo'shilib qo'yaman. Bu majmuaning muhiti haqiqatan ham yaxshi, ko'kalamzorlashtirish ham juda yaxshi qilingan.",
+          "text_translation_ru": "Хорошо, вступлю. Обстановка в этом комплексе действительно неплохая, и озеленение очень хорошее.",
+          "text_translation_en": "Okay, I'll join. The environment in this complex is really nice, and the greenery is very good too.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d20-s13",
+          "text_original": "是啊，我当初也是看中了这里的环境才搬来的。这里交通也方便，出门就有公交站。",
+          "pinyin": "Shì a, wǒ dāngchū yě shì kàn zhòng le zhèli de huánjìng cái bān lái de. Zhèli jiāotōng yě fāngbiàn, chūmén jiù yǒu gōngjiāo zhàn.",
+          "text_translation": "Ha, men ham o'sha paytda aynan shu yerning muhitini yoqtirib ko'chib kelganman. Bu yerda transport ham qulay, ko'chaga chiqsangiz darrov avtobus bekati bor.",
+          "text_translation_ru": "Да, я тоже в своё время переехала сюда именно потому, что мне понравилась здешняя обстановка. Здесь и с транспортом удобно — стоит выйти, и сразу автобусная остановка.",
+          "text_translation_en": "Yes, I also moved here back then precisely because I liked the environment. Transportation here is convenient too — there's a bus stop right outside the door.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d20-s14",
+          "text_original": "那就太好了！我上班坐公交正好方便。谢谢你张姐，认识你很高兴！",
+          "pinyin": "Nà jiù tài hǎo le! Wǒ shàngbān zuò gōngjiāo zhènghǎo fāngbiàn. Xièxie nǐ Zhāng jiě, rènshi nǐ hěn gāoxìng!",
+          "text_translation": "Unda juda zo'r! Men ishga avtobusda borsam aynan qulay bo'larkan. Rahmat sizga Chjan opa, siz bilan tanishganimdan juda xursandman!",
+          "text_translation_ru": "Тогда это просто отлично! Мне как раз удобно ездить на работу на автобусе. Спасибо вам, сестрица Чжан, очень рад знакомству!",
+          "text_translation_en": "That's wonderful! Taking the bus to work is just convenient for me. Thank you, Sister Zhang, I'm very glad to meet you!",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d20-s15",
+          "text_original": "我也很高兴认识你！有空来我家坐坐。",
+          "pinyin": "Wǒ yě hěn gāoxìng rènshi nǐ! Yǒu kòng lái wǒ jiā zuò zuo.",
+          "text_translation": "Men ham siz bilan tanishganimdan juda xursandman! Bo'sh vaqtingiz bo'lsa uyimga kelib o'tiring.",
+          "text_translation_ru": "Я тоже очень рада знакомству! Будет время — заходите ко мне в гости.",
+          "text_translation_en": "I'm very glad to meet you too! Come over to my place and visit when you have time.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d20-s16",
+          "text_original": "好的！一定去！",
+          "pinyin": "Hǎo de! Yídìng qù!",
+          "text_translation": "Yaxshi! Albatta boraman!",
+          "text_translation_ru": "Хорошо! Обязательно зайду!",
+          "text_translation_en": "Okay! I'll definitely come!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

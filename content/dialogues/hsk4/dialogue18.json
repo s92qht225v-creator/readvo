@@ -1,0 +1,167 @@
+{
+  "id": "hsk4-dialogue18",
+  "slug": "planning-a-hotpot-dinner",
+  "title": "优雅晚餐",
+  "pinyin": "Yōuyǎn wǎncān",
+  "titleTranslation": "Nafis kechki ovqat",
+  "titleTranslation_ru": "Изысканный ужин",
+  "titleTranslation_en": "An Elegant Dinner",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["火锅", "鸳鸯锅", "订位", "周到", "推荐", "招牌", "毛肚", "牛肉卷", "虾滑", "鸭血", "菌菇拼盘", "荤素", "搭配"],
+  "sections": [
+    {
+      "id": "h4d18-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d18-s1",
+          "text_original": "这个周末你有空吗？我想请你吃顿饭。",
+          "pinyin": "Zhè ge zhōumò nǐ yǒu kòng ma? Wǒ xiǎng qǐng nǐ chī dùn fàn.",
+          "text_translation": "Bu hafta oxiri vaqting bormi? Seni ovqatga taklif qilmoqchiman.",
+          "text_translation_ru": "У тебя есть время в эти выходные? Я хочу пригласить тебя поесть.",
+          "text_translation_en": "Are you free this weekend? I'd like to treat you to a meal.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d18-s2",
+          "text_original": "有空啊！你想去哪儿吃？",
+          "pinyin": "Yǒu kòng a! Nǐ xiǎng qù nǎr chī?",
+          "text_translation": "Vaqtim bor! Qayerga borib ovqatlanmoqchisan?",
+          "text_translation_ru": "Есть время! Куда ты хочешь пойти поесть?",
+          "text_translation_en": "Yes, I'm free! Where do you want to go to eat?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d18-s3",
+          "text_original": "我听说新开了一家四川火锅店，评价特别好，要不要去试试？",
+          "pinyin": "Wǒ tīngshuō xīn kāi le yī jiā Sìchuān huǒguō diàn, píngjià tèbié hǎo, yào bú yào qù shì shi?",
+          "text_translation": "Eshitishimcha, yangi bir Sichuan xo'tpot restorani ochilibdi, sharhlari juda yaxshi, borib ko'rib chiqamizmi?",
+          "text_translation_ru": "Я слышал, открылся новый сычуаньский ресторан хого, отзывы очень хорошие, может, сходим попробуем?",
+          "text_translation_en": "I heard a new Sichuan hotpot restaurant opened, the reviews are really good — want to give it a try?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d18-s4",
+          "text_original": "四川火锅？我吃辣不太行，但可以试试鸳鸯锅。",
+          "pinyin": "Sìchuān huǒguō? Wǒ chī là bú tài xíng, dàn kěyǐ shì shì yuānyāng guō.",
+          "text_translation": "Sichuan xo'tpoti? Men achchiqni unchalik ko'tara olmayman, lekin yuanyang qozonni sinab ko'rsam bo'ladi.",
+          "text_translation_ru": "Сычуаньский хого? Я не очень переношу острое, но можно попробовать котёл «юаньян».",
+          "text_translation_en": "Sichuan hotpot? I'm not great with spicy food, but we could try the yuanyang (twin) pot.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d18-s5",
+          "text_original": "对，鸳鸯锅一边辣一边不辣，正好适合我们。",
+          "pinyin": "Duì, yuānyāng guō yī biān là yī biān bú là, zhènghǎo shìhé wǒmen.",
+          "text_translation": "To'g'ri, yuanyang qozonning bir tomoni achchiq, bir tomoni achchiq emas, aynan bizga mos keladi.",
+          "text_translation_ru": "Точно, котёл «юаньян» с одной стороны острый, с другой нет — как раз нам подходит.",
+          "text_translation_en": "Right, the yuanyang pot is spicy on one side and mild on the other — it's perfect for us.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d18-s6",
+          "text_original": "那家火锅店需要提前订位吗？",
+          "pinyin": "Nà jiā huǒguō diàn xūyào tíqián dìng wèi ma?",
+          "text_translation": "U xo'tpot restoranida oldindan joy band qilish kerakmi?",
+          "text_translation_ru": "В том ресторане хого нужно заранее бронировать место?",
+          "text_translation_en": "Does that hotpot restaurant require booking a table in advance?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d18-s7",
+          "text_original": "需要，我昨天晚上已经订好了，周六晚上七点。",
+          "pinyin": "Xūyào, wǒ zuótiān wǎnshang yǐjīng dìng hǎo le, zhōuliù wǎnshang qī diǎn.",
+          "text_translation": "Kerak, men kecha kechqurun joyni band qilib qo'ydim, shanba kuni kechqurun soat yettiga.",
+          "text_translation_ru": "Нужно, я вчера вечером уже забронировал — на субботу, на семь вечера.",
+          "text_translation_en": "Yes, I already booked it last night — Saturday at seven in the evening.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d18-s8",
+          "text_original": "你考虑得真周到！那家店有什么推荐的菜？",
+          "pinyin": "Nǐ kǎolǜ de zhēn zhōudào! Nà jiā diàn yǒu shénme tuījiàn de cài?",
+          "text_translation": "Sen hammasini juda puxta o'ylabsan! U restoranda qanaqa tavsiya etiladigan taomlar bor?",
+          "text_translation_ru": "Ты всё так тщательно продумал! Какие блюда в том ресторане рекомендуют?",
+          "text_translation_en": "You've thought of everything so thoughtfully! What dishes does that place recommend?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d18-s9",
+          "text_original": "我看了菜单，招牌是毛肚和牛肉卷。还有虾滑和鸭血也很受欢迎。",
+          "pinyin": "Wǒ kàn le càidān, zhāopái shì máodù hé niúròu juǎn. Hái yǒu xiāhuá hé yāxuè yě hěn shòu huānyíng.",
+          "text_translation": "Men menyuni ko'rdim, asosiy taomlari mol qorin va mol go'shti o'ramlari. Yana qisqichbaqa pyuresi va o'rdak qoni ham juda mashhur.",
+          "text_translation_ru": "Я посмотрел меню, фирменные блюда — говяжий рубец и рулетики из говядины. Ещё креветочное пюре и утиная кровь тоже очень популярны.",
+          "text_translation_en": "I looked at the menu — the signature dishes are beef tripe and beef rolls. The shrimp paste and duck blood are also very popular.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d18-s10",
+          "text_original": "听起来都不错！我们到时候可以多点几样。",
+          "pinyin": "Tīng qǐlái dōu búcuò! Wǒmen dàoshíhou kěyǐ duō diǎn jǐ yàng.",
+          "text_translation": "Hammasi yaxshi eshitilyapti! O'sha vaqtda biz bir nechta taomni ko'proq buyursak bo'ladi.",
+          "text_translation_ru": "Всё звучит неплохо! Тогда мы сможем заказать побольше разных блюд.",
+          "text_translation_en": "It all sounds great! When we get there we can order a few more kinds.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d18-s11",
+          "text_original": "对了，你喜欢吃蔬菜吗？他们家的菌菇拼盘也很新鲜。",
+          "pinyin": "Duìle, nǐ xǐhuān chī shūcài ma? Tāmen jiā de jūngū pīnpán yě hěn xīnxiān.",
+          "text_translation": "Aytmoqchi, sen sabzavot yeyishni yoqtirasanmi? Ularning qo'ziqorin assortisi ham juda yangi.",
+          "text_translation_ru": "Кстати, ты любишь овощи? У них и грибное ассорти очень свежее.",
+          "text_translation_en": "By the way, do you like vegetables? Their mushroom platter is also very fresh.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d18-s12",
+          "text_original": "喜欢。我们可以点一个蔬菜拼盘，这样荤素搭配比较好。",
+          "pinyin": "Xǐhuān. Wǒmen kěyǐ diǎn yī ge shūcài pīnpán, zhèyàng hūnsù dāpèi bǐjiào hǎo.",
+          "text_translation": "Yoqtiraman. Biz bitta sabzavot assortisi buyursak bo'ladi, shunda go'shtli va sabzavotli taomlar yaxshiroq mos keladi.",
+          "text_translation_ru": "Люблю. Мы можем заказать овощное ассорти, так мясное и овощное будут лучше сочетаться.",
+          "text_translation_en": "I do. We can order a vegetable platter, that way the meat and vegetables will be better balanced.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d18-s13",
+          "text_original": "那我们周六晚上见！我提前去排队，怕人多。",
+          "pinyin": "Nà wǒmen zhōuliù wǎnshang jiàn! Wǒ tíqián qù páiduì, pà rén duō.",
+          "text_translation": "Unda shanba kuni kechqurun ko'rishamiz! Men oldindan borib navbatga turaman, odam ko'p bo'lib qolishidan qo'rqaman.",
+          "text_translation_ru": "Тогда увидимся в субботу вечером! Я приду заранее и встану в очередь, боюсь, будет много народу.",
+          "text_translation_en": "Then let's meet Saturday evening! I'll go early to queue, I'm worried it'll be crowded.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d18-s14",
+          "text_original": "不用不用，你不是已经订位了吗？我们准时到就行。",
+          "pinyin": "Búyòng búyòng, nǐ bú shì yǐjīng dìng wèi le ma? Wǒmen zhǔnshí dào jiù xíng.",
+          "text_translation": "Kerak emas, kerak emas, sen joyni allaqachon band qilmadingmi? Biz o'z vaqtida yetib borsak bas.",
+          "text_translation_ru": "Не надо, не надо, ты же уже забронировал место? Нам достаточно прийти вовремя.",
+          "text_translation_en": "No need, no need — didn't you already book the table? We just need to arrive on time.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d18-s15",
+          "text_original": "哈哈，我太激动了，都忘了。那就七点见！",
+          "pinyin": "Hāhā, wǒ tài jīdòng le, dōu wàng le. Nà jiù qī diǎn jiàn!",
+          "text_translation": "Haha, men juda hayajonlanib, hatto buni unutibman. Unda soat yettida ko'rishamiz!",
+          "text_translation_ru": "Ха-ха, я так разволновался, что совсем забыл. Тогда увидимся в семь!",
+          "text_translation_en": "Haha, I got so excited that I forgot. Then see you at seven!",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d18-s16",
+          "text_original": "好，周六见！",
+          "pinyin": "Hǎo, zhōuliù jiàn!",
+          "text_translation": "Yaxshi, shanba kuni ko'rishamiz!",
+          "text_translation_ru": "Хорошо, до субботы!",
+          "text_translation_en": "Okay, see you Saturday!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

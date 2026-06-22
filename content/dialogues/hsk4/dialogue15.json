@@ -1,0 +1,149 @@
+{
+  "id": "hsk4-dialogue15",
+  "slug": "ordering-coffee",
+  "title": "在咖啡店",
+  "pinyin": "Zài kāfēi diàn",
+  "titleTranslation": "Kafeda",
+  "titleTranslation_ru": "В кофейне",
+  "titleTranslation_en": "At the Coffee Shop",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["美式", "拿铁", "卡布奇诺", "季节特饮", "桂花", "糖浆", "香味", "中杯", "芝士蛋糕", "扫码", "支付", "密码", "数字", "靠窗", "稍后"],
+  "sections": [
+    {
+      "id": "h4d15-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d15-s1",
+          "text_original": "你好，我要点一杯喝的。",
+          "pinyin": "Nǐ hǎo, wǒ yào diǎn yī bēi hē de.",
+          "text_translation": "Salom, men bir stakan ichimlik buyurtma qilmoqchiman.",
+          "text_translation_ru": "Здравствуйте, я хочу заказать стаканчик чего-нибудь попить.",
+          "text_translation_en": "Hello, I'd like to order something to drink.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d15-s2",
+          "text_original": "好的，您想要什么？我们有美式、拿铁、卡布奇诺，还有季节特饮。",
+          "pinyin": "Hǎo de, nín xiǎng yào shénme? Wǒmen yǒu Měishì, Nátiě, Kǎbùqínuò, hái yǒu jìjié tèyǐn.",
+          "text_translation": "Yaxshi, nimani xohlaysiz? Bizda amerikano, latte, kapuchino, yana mavsumiy maxsus ichimlik bor.",
+          "text_translation_ru": "Хорошо, что вы хотите? У нас есть американо, латте, капучино, а ещё сезонный фирменный напиток.",
+          "text_translation_en": "Sure, what would you like? We have Americano, latte, cappuccino, and also a seasonal special drink.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d15-s3",
+          "text_original": "季节特饮是什么？",
+          "pinyin": "Jìjié tèyǐn shì shénme?",
+          "text_translation": "Mavsumiy maxsus ichimlik nima?",
+          "text_translation_ru": "А что за сезонный фирменный напиток?",
+          "text_translation_en": "What is the seasonal special drink?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d15-s4",
+          "text_original": "这杯是桂花拿铁，加了桂花糖浆和牛奶，香味很特别。",
+          "pinyin": "Zhè bēi shì guìhuā Nátiě, jiā le guìhuā tángjiāng hé niúnǎi, xiāngwèi hěn tèbié.",
+          "text_translation": "Bu stakan guyxua lattesi, unga guyxua siropi va sut qo'shilgan, hidi juda o'ziga xos.",
+          "text_translation_ru": "Это латте с османтусом, в него добавлены сироп османтуса и молоко, аромат очень особенный.",
+          "text_translation_en": "This is an osmanthus latte, made with osmanthus syrup and milk, and the aroma is very special.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d15-s5",
+          "text_original": "听起来不错。那我要一杯热的桂花拿铁，中杯。",
+          "pinyin": "Tīng qǐlái búcuò. Nà wǒ yào yī bēi rè de guìhuā Nátiě, zhōng bēi.",
+          "text_translation": "Yaxshi eshitilyapti. Unda men bir stakan issiq guyxua lattesi, o'rta o'lcham, buyuraman.",
+          "text_translation_ru": "Звучит неплохо. Тогда я возьму один горячий латте с османтусом, средний размер.",
+          "text_translation_en": "That sounds good. Then I'll have a hot osmanthus latte, medium size.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d15-s6",
+          "text_original": "好的，中杯桂花拿铁，三十六块。还要别的吗？",
+          "pinyin": "Hǎo de, zhōng bēi guìhuā Nátiě, sānshíliù kuài. Hái yào bié de ma?",
+          "text_translation": "Yaxshi, o'rta o'lcham guyxua lattesi, o'ttiz olti yuan. Boshqa narsa kerakmi?",
+          "text_translation_ru": "Хорошо, средний латте с османтусом, тридцать шесть юаней. Что-нибудь ещё?",
+          "text_translation_en": "Okay, a medium osmanthus latte, thirty-six yuan. Anything else?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d15-s7",
+          "text_original": "再要一块芝士蛋糕吧。",
+          "pinyin": "Zài yào yī kuài zhīshì dàngāo ba.",
+          "text_translation": "Yana bir bo'lak chizkeyk ham olaman.",
+          "text_translation_ru": "Возьму ещё кусочек чизкейка.",
+          "text_translation_en": "I'll also have a slice of cheesecake.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d15-s8",
+          "text_original": "好的，一共五十八块。请问您用现金还是扫码？",
+          "pinyin": "Hǎo de, yīgòng wǔshíbā kuài. Qǐngwèn nín yòng xiànjīn háishì sǎomǎ?",
+          "text_translation": "Yaxshi, jami ellik sakkiz yuan. Naqd pulda to'laysizmi yoki QR-kodni skanerlaysizmi?",
+          "text_translation_ru": "Хорошо, всего пятьдесят восемь юаней. Скажите, вы будете платить наличными или сканированием кода?",
+          "text_translation_en": "Okay, fifty-eight yuan in total. May I ask, will you pay with cash or by scanning the code?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d15-s9",
+          "text_original": "我扫码支付。对了，你们店的Wi-Fi密码是多少？",
+          "pinyin": "Wǒ sǎomǎ zhīfù. Duìle, nǐmen diàn de Wi-Fi mìmǎ shì duōshao?",
+          "text_translation": "Men QR-kodni skanerlab to'layman. Aytgancha, sizning do'koningizning Wi-Fi paroli nima?",
+          "text_translation_ru": "Я заплачу сканированием кода. Кстати, какой пароль от Wi-Fi в вашем заведении?",
+          "text_translation_en": "I'll pay by scanning the code. By the way, what's the Wi-Fi password at your shop?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d15-s10",
+          "text_original": "Wi-Fi密码是八个八：八八八八八八八八，全部都是数字八。",
+          "pinyin": "Wi-Fi mìmǎ shì bā ge bā: bā bā bā bā bā bā bā bā, quánbù dōu shì shùzì bā.",
+          "text_translation": "Wi-Fi paroli sakkizta sakkiz: sakkiz sakkiz sakkiz sakkiz sakkiz sakkiz sakkiz sakkiz, hammasi sakkiz raqami.",
+          "text_translation_ru": "Пароль от Wi-Fi — восемь восьмёрок: восемь восемь восемь восемь восемь восемь восемь восемь, всё это цифра восемь.",
+          "text_translation_en": "The Wi-Fi password is eight eights: eight eight eight eight eight eight eight eight, all of them are the digit eight.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d15-s11",
+          "text_original": "好的，我记住了。那我的咖啡大概多久能好？",
+          "pinyin": "Hǎo de, wǒ jìzhù le. Nà wǒ de kāfēi dàgài duō jiǔ néng hǎo?",
+          "text_translation": "Yaxshi, esladim. Unda mening qahvam taxminan qancha vaqtda tayyor bo'ladi?",
+          "text_translation_ru": "Хорошо, я запомнил. А мой кофе примерно через сколько будет готов?",
+          "text_translation_en": "Okay, I've remembered it. So about how long until my coffee is ready?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d15-s12",
+          "text_original": "大概五到十分钟。您可以先找位置坐下，好了我叫您。",
+          "pinyin": "Dàgài wǔ dào shí fēnzhōng. Nín kěyǐ xiān zhǎo wèizhi zuò xià, hǎo le wǒ jiào nín.",
+          "text_translation": "Taxminan besh-o'n daqiqa. Avval joy topib o'tirib turishingiz mumkin, tayyor bo'lganda sizni chaqiraman.",
+          "text_translation_ru": "Примерно пять-десять минут. Вы можете сначала найти место и присесть, когда будет готово, я вас позову.",
+          "text_translation_en": "About five to ten minutes. You can find a seat first, and I'll call you when it's ready.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d15-s13",
+          "text_original": "谢谢！我坐靠窗那边。",
+          "pinyin": "Xièxie! Wǒ zuò kàochuāng nà biān.",
+          "text_translation": "Rahmat! Men deraza yonidagi o'sha tomonda o'tiraman.",
+          "text_translation_ru": "Спасибо! Я сяду вон там, у окна.",
+          "text_translation_en": "Thank you! I'll sit over there by the window.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d15-s14",
+          "text_original": "好的，稍后给您送过去。",
+          "pinyin": "Hǎo de, shāohòu gěi nín sòng guòqù.",
+          "text_translation": "Yaxshi, birozdan keyin sizga olib boraman.",
+          "text_translation_ru": "Хорошо, чуть позже принесу вам.",
+          "text_translation_en": "Okay, I'll bring it over to you shortly.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

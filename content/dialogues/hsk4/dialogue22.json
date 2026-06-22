@@ -1,0 +1,203 @@
+{
+  "id": "hsk4-dialogue22",
+  "slug": "broken-air-conditioner",
+  "title": "家电坏了",
+  "pinyin": "Jiādiàn huài le",
+  "titleTranslation": "Maishiy texnika buzildi",
+  "titleTranslation_ru": "Сломалась бытовая техника",
+  "titleTranslation_en": "The Broken Appliance",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["房东", "打扰", "空调", "制冷", "遥控器", "模式", "制热", "温度", "压缩机", "师傅", "维修", "自然损坏", "承担", "缺氟", "结清", "收款码"],
+  "sections": [
+    {
+      "id": "h4d22-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d22-s1",
+          "text_original": "喂，房东您好！我是住在302的小李。",
+          "pinyin": "Wèi, fángdōng nín hǎo! Wǒ shì zhù zài 302 de Xiǎo Lǐ.",
+          "text_translation": "Allo, uy egasi, assalomu alaykum! Men 302-xonada yashaydigan Syao Liman.",
+          "text_translation_ru": "Алло, здравствуйте, хозяин! Я Сяо Ли, живу в 302-й.",
+          "text_translation_en": "Hello, landlord! This is Xiao Li, living in 302.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d22-s2",
+          "text_original": "小李啊，怎么了？有什么事吗？",
+          "pinyin": "Xiǎo Lǐ a, zěnme le? Yǒu shénme shì ma?",
+          "text_translation": "Syao Li-ku, nima bo'ldi? Biror ishingiz bormi?",
+          "text_translation_ru": "А, Сяо Ли, что случилось? Что-то нужно?",
+          "text_translation_en": "Oh, Xiao Li, what's wrong? Is something the matter?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d22-s3",
+          "text_original": "不好意思打扰您，我房间的空调坏了，昨天晚上突然不制冷了。",
+          "pinyin": "Bù hǎoyìsi dǎrǎo nín, wǒ fángjiān de kōngtiáo huài le, zuótiān wǎnshang tūrán bú zhìlěng le.",
+          "text_translation": "Bezovta qilganim uchun uzr, xonamdagi konditsioner buzildi, kecha kechqurun to'satdan sovutmay qoldi.",
+          "text_translation_ru": "Извините за беспокойство, у меня в комнате сломался кондиционер, вчера вечером вдруг перестал охлаждать.",
+          "text_translation_en": "Sorry to bother you, the air conditioner in my room broke; last night it suddenly stopped cooling.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d22-s4",
+          "text_original": "是吗？你检查过遥控器设置了吗？是不是调到制热模式了？",
+          "pinyin": "Shì ma? Nǐ jiǎnchá guo yáokòngqì shèzhì le ma? Shì bú shì tiáo dào zhìrè móshì le?",
+          "text_translation": "Rostdanmi? Pultning sozlamalarini tekshirib ko'rdingmi? Isitish rejimiga o'tib qolmaganmi?",
+          "text_translation_ru": "Правда? Ты проверял настройки пульта? Может, переключилось на режим обогрева?",
+          "text_translation_en": "Really? Did you check the remote settings? Could it have been switched to heating mode?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d22-s5",
+          "text_original": "我检查过了，模式没有问题，温度也调到二十二度了，但吹出来的风还是热的。",
+          "pinyin": "Wǒ jiǎnchá guo le, móshì méiyǒu wèntí, wēndù yě tiáo dào èrshí'èr dù le, dàn chuī chūlái de fēng háishì rè de.",
+          "text_translation": "Tekshirib ko'rdim, rejimda muammo yo'q, haroratni ham yigirma ikki gradusga qo'ydim, lekin chiqayotgan shamol baribir issiq.",
+          "text_translation_ru": "Я проверял, с режимом всё в порядке, температуру выставил на двадцать два градуса, но воздух всё равно дует тёплый.",
+          "text_translation_en": "I checked, the mode is fine, I even set the temperature to twenty-two degrees, but the air coming out is still warm.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d22-s6",
+          "text_original": "那可能是压缩机出了问题。我下午找个师傅去看看，你在家吗？",
+          "pinyin": "Nà kěnéng shì yāsuōjī chū le wèntí. Wǒ xiàwǔ zhǎo ge shīfu qù kàn kan, nǐ zài jiā ma?",
+          "text_translation": "Unda kompressorda muammo bo'lsa kerak. Tushdan keyin ustani topib ko'rishga yuboraman, uydamisan?",
+          "text_translation_ru": "Тогда, возможно, проблема в компрессоре. Я после обеда найду мастера, чтобы он посмотрел, ты дома?",
+          "text_translation_en": "Then it might be a problem with the compressor. I'll find a repairman to take a look this afternoon, will you be home?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d22-s7",
+          "text_original": "下午两点到五点我都在家，您让师傅过来就行。",
+          "pinyin": "Xiàwǔ liǎng diǎn dào wǔ diǎn wǒ dōu zài jiā, nín ràng shīfu guòlái jiù xíng.",
+          "text_translation": "Tushdan keyin soat ikkidan beshgacha uyda bo'laman, ustani yuborsangiz bo'ldi.",
+          "text_translation_ru": "С двух до пяти дня я дома, просто пришлите мастера.",
+          "text_translation_en": "I'll be home from two to five in the afternoon, just have the repairman come over.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d22-s8",
+          "text_original": "好的，我打电话约一下维修师傅。如果今天修不好，我明天再安排别的空调给你。",
+          "pinyin": "Hǎo de, wǒ dǎ diànhuà yuē yíxià wéixiū shīfu. Rúguǒ jīntiān xiū bù hǎo, wǒ míngtiān zài ānpái bié de kōngtiáo gěi nǐ.",
+          "text_translation": "Yaxshi, ta'mirlovchi ustaga qo'ng'iroq qilib kelishib olaman. Agar bugun tuzatib bo'lmasa, ertaga senga boshqa konditsioner topib beraman.",
+          "text_translation_ru": "Хорошо, я позвоню и договорюсь с мастером по ремонту. Если сегодня не починят, завтра подберу тебе другой кондиционер.",
+          "text_translation_en": "Alright, I'll call and arrange with the repairman. If it can't be fixed today, I'll arrange a different air conditioner for you tomorrow.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d22-s9",
+          "text_original": "太感谢您了！那我等师傅来。",
+          "pinyin": "Tài gǎnxiè nín le! Nà wǒ děng shīfu lái.",
+          "text_translation": "Sizdan juda minnatdorman! Unda men ustani kutaman.",
+          "text_translation_ru": "Большое вам спасибо! Тогда я подожду мастера.",
+          "text_translation_en": "Thank you so much! Then I'll wait for the repairman to come.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d22-s10",
+          "text_original": "对了，维修费用你放心，只要是自然损坏，都由我来承担。",
+          "pinyin": "Duìle, wéixiū fèiyong nǐ fàngxīn, zhǐyào shì zìrán sǔnhuài, dōu yóu wǒ lái chéngdān.",
+          "text_translation": "Aytmoqchi, ta'mirlash xarajatidan xavotir olma, agar tabiiy zararlanish bo'lsa, hammasini men qoplayman.",
+          "text_translation_ru": "Кстати, насчёт стоимости ремонта не волнуйся, если это естественная поломка, всё беру на себя я.",
+          "text_translation_en": "By the way, don't worry about the repair cost; as long as it's natural wear and tear, I'll cover it all.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d22-s11",
+          "text_original": "好的，麻烦您了！",
+          "pinyin": "Hǎo de, máfan nín le!",
+          "text_translation": "Yaxshi, sizni ovora qildim!",
+          "text_translation_ru": "Хорошо, спасибо за беспокойство!",
+          "text_translation_en": "Alright, thank you for your trouble!",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d22-s12",
+          "text_original": "房东您好！维修师傅刚才来过了。",
+          "pinyin": "Fángdōng nín hǎo! Wéixiū shīfu gāngcái lái guo le.",
+          "text_translation": "Uy egasi, assalomu alaykum! Ta'mirlovchi usta hozirgina kelib ketdi.",
+          "text_translation_ru": "Здравствуйте, хозяин! Мастер по ремонту только что приходил.",
+          "text_translation_en": "Hello, landlord! The repairman just came by.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d22-s13",
+          "text_original": "怎么样了？问题大吗？",
+          "pinyin": "Zěnmeyàng le? Wèntí dà ma?",
+          "text_translation": "Qanday bo'ldi? Muammo kattami?",
+          "text_translation_ru": "Ну как? Проблема серьёзная?",
+          "text_translation_en": "How did it go? Is it a big problem?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d22-s14",
+          "text_original": "师傅说是缺氟了，加了氟以后空调现在已经能正常制冷了。",
+          "pinyin": "Shīfu shuō shì quē fú le, jiā le fú yǐhòu kōngtiáo xiànzài yǐjīng néng zhèngcháng zhìlěng le.",
+          "text_translation": "Usta freon yetishmagan dedi, freon qo'shgandan keyin konditsioner endi normal sovutyapti.",
+          "text_translation_ru": "Мастер сказал, что не хватало фреона; после заправки фреоном кондиционер теперь нормально охлаждает.",
+          "text_translation_en": "The repairman said it was low on refrigerant; after adding refrigerant the air conditioner can now cool normally.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d22-s15",
+          "text_original": "那就好！总算修好了，这两天太热了，没空调确实受不了。",
+          "pinyin": "Nà jiù hǎo! Zǒngsuàn xiū hǎo le, zhè liǎng tiān tài rè le, méi kōngtiáo quèshí shòu bù liǎo.",
+          "text_translation": "Yaxshi bo'libdi! Nihoyat tuzatildi, bu kunlari juda issiq, konditsionersiz haqiqatan ham chidab bo'lmaydi.",
+          "text_translation_ru": "Ну и хорошо! Наконец-то починили, эти дни такие жаркие, без кондиционера и правда не вытерпеть.",
+          "text_translation_en": "That's good! It's finally fixed; these past couple of days have been so hot, without an air conditioner it's really unbearable.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d22-s16",
+          "text_original": "是啊！谢谢您帮忙联系师傅。费用我已经跟师傅结清了。",
+          "pinyin": "Shì a! Xièxie nín bāngmáng liánxì shīfu. Fèiyong wǒ yǐjīng gēn shīfu jiéqīng le.",
+          "text_translation": "Ha-da! Usta bilan bog'lanishga yordam berganingiz uchun rahmat. Haqni men allaqachon usta bilan to'lab bo'ldim.",
+          "text_translation_ru": "Да уж! Спасибо, что помогли связаться с мастером. Оплату я уже полностью рассчитал с мастером.",
+          "text_translation_en": "Yes! Thank you for helping to contact the repairman. I've already settled the cost with him.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d22-s17",
+          "text_original": "多少钱？我转给你。",
+          "pinyin": "Duōshao qián? Wǒ zhuǎn gěi nǐ.",
+          "text_translation": "Qancha pul bo'ldi? Senga o'tkazib beraman.",
+          "text_translation_ru": "Сколько вышло? Я тебе переведу.",
+          "text_translation_en": "How much was it? I'll transfer it to you.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d22-s18",
+          "text_original": "不用了，一百五十块也不多，我自己出就行了。",
+          "pinyin": "Búyòng le, yībǎi wǔshí kuài yě bù duō, wǒ zìjǐ chū jiù xíng le.",
+          "text_translation": "Kerak emas, bir yuz ellik yuan ham ko'p emas, o'zim to'lasam bo'ldi.",
+          "text_translation_ru": "Не надо, сто пятьдесят юаней — это немного, я сам заплачу.",
+          "text_translation_en": "No need, a hundred and fifty yuan isn't much, I'll just pay it myself.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d22-s19",
+          "text_original": "那怎么行！说好了我承担的。你把收款码发给我，我马上转给你。",
+          "pinyin": "Nà zěnme xíng! Shuō hǎo le wǒ chéngdān de. Nǐ bǎ shōukuǎn mǎ fā gěi wǒ, wǒ mǎshàng zhuǎn gěi nǐ.",
+          "text_translation": "Bunday bo'lmaydi! Men qoplayman deb kelishib olgandik. To'lov QR-kodingni menga yubor, hozir o'tkazib yuboraman.",
+          "text_translation_ru": "Как же так! Мы договорились, что плачу я. Пришли мне свой QR-код для оплаты, я сейчас же переведу.",
+          "text_translation_en": "That won't do! We agreed that I'd cover it. Send me your payment QR code, I'll transfer it right away.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d22-s20",
+          "text_original": "那……好吧，谢谢房东！",
+          "pinyin": "Nà …… hǎo ba, xièxie fángdōng!",
+          "text_translation": "Unda…… mayli, rahmat uy egasi!",
+          "text_translation_ru": "Тогда…… ладно, спасибо, хозяин!",
+          "text_translation_en": "Then…… alright, thank you, landlord!",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

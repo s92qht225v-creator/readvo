@@ -1,0 +1,176 @@
+{
+  "id": "hsk4-dialogue16",
+  "slug": "splitting-the-bill",
+  "title": "结账",
+  "pinyin": "Jiézhàng",
+  "titleTranslation": "Hisob-kitob qilish",
+  "titleTranslation_ru": "Оплата счёта",
+  "titleTranslation_en": "Paying the Bill",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["买单", "账单", "一共", "除以", "转", "转账", "微信", "二维码", "收款码", "垫钱", "吃亏", "请客"],
+  "sections": [
+    {
+      "id": "h4d16-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d16-s1",
+          "text_original": "服务员，买单！",
+          "pinyin": "Fúwùyuán, mǎidān!",
+          "text_translation": "Ofitsiant, hisob-kitob qilamiz!",
+          "text_translation_ru": "Официант, счёт, пожалуйста!",
+          "text_translation_en": "Waiter, the bill, please!",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d16-s2",
+          "text_original": "您好，这是您的账单，一共二百三十六块。",
+          "pinyin": "Nín hǎo, zhè shì nín de zhàngdān, yīgòng èrbǎi sānshíliù kuài.",
+          "text_translation": "Assalomu alaykum, bu sizning hisobingiz, jami ikki yuz o'ttiz olti yuan.",
+          "text_translation_ru": "Здравствуйте, это ваш счёт, всего двести тридцать шесть юаней.",
+          "text_translation_en": "Hello, this is your bill, two hundred thirty-six yuan in total.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d16-s3",
+          "text_original": "好的，我们两个人AA。",
+          "pinyin": "Hǎo de, wǒmen liǎng ge rén AA.",
+          "text_translation": "Yaxshi, biz ikkimiz teng bo'lib to'laymiz.",
+          "text_translation_ru": "Хорошо, мы вдвоём платим поровну.",
+          "text_translation_en": "Okay, we two will split it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d16-s4",
+          "text_original": "那一个人多少钱？",
+          "pinyin": "Nà yí ge rén duōshao qián?",
+          "text_translation": "Unda har bir kishiga qancha bo'ladi?",
+          "text_translation_ru": "Тогда сколько с одного человека?",
+          "text_translation_en": "Then how much per person?",
+          "speaker": "C"
+        },
+        {
+          "id": "h4d16-s5",
+          "text_original": "一共二百三十六，除以二，每个人一百一十八块。",
+          "pinyin": "Yīgòng èrbǎi sānshíliù, chú yǐ èr, měi ge rén yībǎi yīshíbā kuài.",
+          "text_translation": "Jami ikki yuz o'ttiz olti, ikkiga bo'linsa, har bir kishiga bir yuz o'n sakkiz yuan.",
+          "text_translation_ru": "Всего двести тридцать шесть, разделить на два, по сто восемнадцать юаней с человека.",
+          "text_translation_en": "Two hundred thirty-six total, divided by two, that's one hundred eighteen yuan each.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d16-s6",
+          "text_original": "好，我转给你。你手机号是多少？",
+          "pinyin": "Hǎo, wǒ zhuǎn gěi nǐ. Nǐ shǒujī hào shì duōshao?",
+          "text_translation": "Yaxshi, men senga o'tkazib beraman. Telefon raqaming nechi?",
+          "text_translation_ru": "Хорошо, я тебе переведу. Какой у тебя номер телефона?",
+          "text_translation_en": "Okay, I'll transfer it to you. What's your phone number?",
+          "speaker": "C"
+        },
+        {
+          "id": "h4d16-s7",
+          "text_original": "我加你微信吧，你直接转账给我就行。",
+          "pinyin": "Wǒ jiā nǐ Wēixìn ba, nǐ zhíjiē zhuǎnzhàng gěi wǒ jiù xíng.",
+          "text_translation": "Men seni WeChatga qo'shay, to'g'ridan-to'g'ri o'tkazib bersang bo'ldi.",
+          "text_translation_ru": "Давай я добавлю тебя в WeChat, просто переведи мне напрямую.",
+          "text_translation_en": "Let me add you on WeChat, you can just transfer directly to me.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d16-s8",
+          "text_original": "好，我扫你二维码。你发个收款码给我。",
+          "pinyin": "Hǎo, wǒ sǎo nǐ èrwéimǎ. Nǐ fā ge shōukuǎn mǎ gěi wǒ.",
+          "text_translation": "Yaxshi, men sening QR-kodingni skanerlayman. Menga to'lov qabul qilish kodini yubor.",
+          "text_translation_ru": "Хорошо, я отсканирую твой QR-код. Пришли мне код для получения денег.",
+          "text_translation_en": "Okay, I'll scan your QR code. Send me your payment code.",
+          "speaker": "C"
+        },
+        {
+          "id": "h4d16-s9",
+          "text_original": "好的，稍等……好啦，你扫吧。",
+          "pinyin": "Hǎo de, shāo děng …… Hǎo la, nǐ sǎo ba.",
+          "text_translation": "Yaxshi, biroz kuting…… Bo'ldi, skanerlay qol.",
+          "text_translation_ru": "Хорошо, подожди немного…… Готово, сканируй.",
+          "text_translation_en": "Okay, just a moment…… There, go ahead and scan.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d16-s10",
+          "text_original": "好了，转过去了。你看看收到了吗？",
+          "pinyin": "Hǎo le, zhuǎn guòqù le. Nǐ kàn kan shōudào le ma?",
+          "text_translation": "Bo'ldi, o'tkazib yubordim. Qarab ko'r, yetib keldimi?",
+          "text_translation_ru": "Готово, перевёл. Посмотри, пришло?",
+          "text_translation_en": "Done, I've sent it. Check if you received it.",
+          "speaker": "C"
+        },
+        {
+          "id": "h4d16-s11",
+          "text_original": "收到了，一百一十八块。对了，我多转了一百块给你，上次你帮我垫的钱。",
+          "pinyin": "Shōudào le, yībǎi yīshíbā kuài. Duìle, wǒ duō zhuǎn le yībǎi kuài gěi nǐ, shàng cì nǐ bāng wǒ diàn de qián.",
+          "text_translation": "Keldi, bir yuz o'n sakkiz yuan. Aytmoqchi, men senga yuz yuan ortiqcha o'tkazdim, o'tgan safar men uchun to'lab turgan puling edi.",
+          "text_translation_ru": "Пришло, сто восемнадцать юаней. Кстати, я перевёл тебе на сто юаней больше — это деньги, которые ты в прошлый раз заплатил за меня.",
+          "text_translation_en": "Got it, one hundred eighteen yuan. By the way, I transferred you an extra hundred yuan — that's the money you covered for me last time.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d16-s12",
+          "text_original": "你还记得啊！我都忘了。",
+          "pinyin": "Nǐ hái jìde a! Wǒ dōu wàng le.",
+          "text_translation": "Hali ham esingdami! Men butunlay unutibman.",
+          "text_translation_ru": "Ты всё ещё помнишь! А я уже совсем забыл.",
+          "text_translation_en": "You still remember! I'd completely forgotten.",
+          "speaker": "C"
+        },
+        {
+          "id": "h4d16-s13",
+          "text_original": "当然记得，不能让你吃亏。",
+          "pinyin": "Dāngrán jìde, bùnéng ràng nǐ chīkuī.",
+          "text_translation": "Albatta esimda, senga ziyon bo'lishiga yo'l qo'yib bo'lmaydi.",
+          "text_translation_ru": "Конечно помню, нельзя, чтобы ты остался в убытке.",
+          "text_translation_en": "Of course I remember, I can't let you lose out.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d16-s14",
+          "text_original": "那这顿饭我请客吧，你把那一百块收回去。",
+          "pinyin": "Nà zhè dùn fàn wǒ qǐngkè ba, nǐ bǎ nà yībǎi kuài shōu huíqù.",
+          "text_translation": "Unda bu ovqatni men mehmon qilay, o'sha yuz yuanni qaytarib ol.",
+          "text_translation_ru": "Тогда давай этот обед за мой счёт, забери те сто юаней обратно.",
+          "text_translation_en": "Then let this meal be my treat, take that hundred yuan back.",
+          "speaker": "C"
+        },
+        {
+          "id": "h4d16-s15",
+          "text_original": "不用不用，说好AA就AA。以后你请我喝咖啡就行了。",
+          "pinyin": "Búyòng búyòng, shuō hǎo AA jiù AA. Yǐhòu nǐ qǐng wǒ hē kāfēi jiù xíng le.",
+          "text_translation": "Kerakmas, kerakmas, teng to'laymiz deb kelishganmiz, shunday bo'lsin. Keyinroq menga qahva olib bersang bo'ldi.",
+          "text_translation_ru": "Не надо, не надо, договорились платить поровну — значит поровну. В следующий раз угостишь меня кофе, и хватит.",
+          "text_translation_en": "No need, no need, we agreed to split, so we split. Just treat me to coffee sometime, that's enough.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d16-s16",
+          "text_original": "那好吧。下次我请你吃饭。",
+          "pinyin": "Nà hǎo ba. Xià cì wǒ qǐng nǐ chī fàn.",
+          "text_translation": "Mayli, unda. Keyingi safar seni ovqatga mehmon qilaman.",
+          "text_translation_ru": "Ну ладно. В следующий раз я угощу тебя обедом.",
+          "text_translation_en": "Alright then. Next time I'll treat you to a meal.",
+          "speaker": "C"
+        },
+        {
+          "id": "h4d16-s17",
+          "text_original": "好，那我先走了，你也早点回去。",
+          "pinyin": "Hǎo, nà wǒ xiān zǒu le, nǐ yě zǎo diǎn huíqù.",
+          "text_translation": "Yaxshi, unda men avval ketdim, sen ham ertaroq uyga qayt.",
+          "text_translation_ru": "Хорошо, тогда я пойду первым, ты тоже не задерживайся, иди домой пораньше.",
+          "text_translation_en": "Okay, then I'll head off first, you should go home early too.",
+          "speaker": "A"
+        }
+      ]
+    }
+  ]
+}

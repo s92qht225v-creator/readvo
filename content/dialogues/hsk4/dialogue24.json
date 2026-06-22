@@ -1,0 +1,167 @@
+{
+  "id": "hsk4-dialogue24",
+  "slug": "asking-directions-to-the-subway",
+  "title": "问路",
+  "pinyin": "Wèn lù",
+  "titleTranslation": "Yo'l so'rash",
+  "titleTranslation_ru": "Спросить дорогу",
+  "titleTranslation_en": "Asking for Directions",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["地铁站", "号线", "远不远", "左右", "十字路口", "左转", "红绿灯", "入口", "右手边", "指示牌", "对面", "经过", "清楚", "旅游", "熟悉", "地图软件", "下载"],
+  "sections": [
+    {
+      "id": "h4d24-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d24-s1",
+          "text_original": "不好意思，打扰一下。请问这附近有地铁站吗？",
+          "pinyin": "Bù hǎoyìsi, dǎrǎo yíxià. Qǐngwèn zhè fùjìn yǒu dìtiě zhàn ma?",
+          "text_translation": "Kechirasiz, bezovta qilganim uchun uzr. Aytsangiz, bu atrofda metro bekati bormi?",
+          "text_translation_ru": "Извините, что беспокою. Скажите, пожалуйста, есть ли поблизости станция метро?",
+          "text_translation_en": "Excuse me, sorry to bother you. May I ask, is there a subway station nearby?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d24-s2",
+          "text_original": "有的。您要去几号线？",
+          "pinyin": "Yǒu de. Nín yào qù jǐ hào xiàn?",
+          "text_translation": "Bor. Necha raqamli liniyaga bormoqchisiz?",
+          "text_translation_ru": "Есть. На какую линию вам нужно?",
+          "text_translation_en": "Yes, there is. Which line do you want to go to?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d24-s3",
+          "text_original": "我要去二号线，从这里走过去远不远？",
+          "pinyin": "Wǒ yào qù èr hào xiàn, cóng zhèlǐ zǒu guòqù yuǎn bù yuǎn?",
+          "text_translation": "Men ikkinchi liniyaga bormoqchiman, bu yerdan piyoda borish uzoqmi?",
+          "text_translation_ru": "Мне нужна вторая линия, отсюда пешком далеко идти?",
+          "text_translation_en": "I want to go to Line 2. Is it far to walk there from here?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d24-s4",
+          "text_original": "不算远，走路大概十分钟左右。您沿着这条路一直走到十字路口，然后左转。",
+          "pinyin": "Bú suàn yuǎn, zǒulù dàgài shí fēnzhōng zuǒyòu. Nín yánzhe zhè tiáo lù yìzhí zǒu dào shízì lùkǒu, ránhòu zuǒ zhuǎn.",
+          "text_translation": "Unchalik uzoq emas, piyoda taxminan o'n daqiqacha. Shu yo'l bo'ylab to'rt yo'l chorrahasigacha to'g'ri yuring, keyin chapga buriling.",
+          "text_translation_ru": "Не так уж далеко, пешком примерно минут десять. Идите вдоль этой дороги прямо до перекрёстка, а потом поверните налево.",
+          "text_translation_en": "It's not far, about ten minutes on foot. Walk straight along this road until you reach the crossroads, then turn left.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d24-s5",
+          "text_original": "左转以后呢？",
+          "pinyin": "Zuǒ zhuǎn yǐhòu ne?",
+          "text_translation": "Chapga burilgandan keyin-chi?",
+          "text_translation_ru": "А после того, как поверну налево?",
+          "text_translation_en": "And after I turn left?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d24-s6",
+          "text_original": "左转以后您会看到一个红绿灯，过了红绿灯再往前走两百米左右，地铁站入口就在您的右手边。",
+          "pinyin": "Zuǒ zhuǎn yǐhòu nín huì kàn dào yí ge hónglǜdēng, guò le hónglǜdēng zài wǎng qián zǒu liǎngbǎi mǐ zuǒyòu, dìtiě zhàn rùkǒu jiù zài nín de yòu shǒu biān.",
+          "text_translation": "Chapga burilgandan keyin bitta svetoforni ko'rasiz, svetofordan o'tib yana ikki yuz metrcha oldinga yuring, metro bekatining kirish joyi sizning o'ng tomoningizda bo'ladi.",
+          "text_translation_ru": "После поворота налево вы увидите светофор, пройдите светофор и идите ещё вперёд примерно двести метров — вход в станцию метро будет справа от вас.",
+          "text_translation_en": "After turning left you'll see a traffic light. Pass the traffic light and walk forward another two hundred meters or so, and the subway station entrance will be on your right-hand side.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d24-s7",
+          "text_original": "好的，我大概明白了。您说那个十字路口有标志牌吗？",
+          "pinyin": "Hǎo de, wǒ dàgài míngbai le. Nín shuō nà ge shízì lùkǒu yǒu biāozhì pái ma?",
+          "text_translation": "Yaxshi, taxminan tushundim. Aytingchi, o'sha chorrahada belgi taxtasi bormi?",
+          "text_translation_ru": "Хорошо, в общих чертах я понял. Скажите, на том перекрёстке есть указатель?",
+          "text_translation_en": "Okay, I roughly understand. Is there a sign at that crossroads you mentioned?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d24-s8",
+          "text_original": "有，路边有一个蓝色的指示牌，上面写着「地铁站」的方向。您看到那个牌子就不会走错了。",
+          "pinyin": "Yǒu, lùbiān yǒu yí ge lánsè de zhǐshì pái, shàngmiàn xiě zhe 'dìtiě zhàn' de fāngxiàng. Nín kàn dào nà ge páizi jiù bú huì zǒu cuò le.",
+          "text_translation": "Bor, yo'l chetida bitta ko'k rangli yo'l ko'rsatkich taxtasi bor, ustida 「地铁站」ning yo'nalishi yozilgan. O'sha taxtani ko'rsangiz, adashib ketmaysiz.",
+          "text_translation_ru": "Есть, на обочине стоит синий указатель, на нём написано направление к 「地铁站」. Увидите эту табличку — не заблудитесь.",
+          "text_translation_en": "Yes, there's a blue sign at the roadside with the direction to 「地铁站」 written on it. Once you see that sign, you won't go wrong.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d24-s9",
+          "text_original": "太好了。那附近有没有公交站？我想顺便问一下。",
+          "pinyin": "Tài hǎo le. Nà fùjìn yǒu méiyǒu gōngjiāo zhàn? Wǒ xiǎng shùnbiàn wèn yíxià.",
+          "text_translation": "Juda yaxshi. Atrofda avtobus bekati bormi? Yo'l-yo'lakay so'rab qo'yay dedim.",
+          "text_translation_ru": "Прекрасно. А есть ли поблизости автобусная остановка? Хотел заодно спросить.",
+          "text_translation_en": "Great. Is there a bus stop nearby? I'd like to ask while I'm at it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d24-s10",
+          "text_original": "有的，公交站就在地铁站对面。您要是坐公交的话，很多车都经过市中心。",
+          "pinyin": "Yǒu de, gōngjiāo zhàn jiù zài dìtiě zhàn duìmiàn. Nín yàoshi zuò gōngjiāo dehuà, hěnduō chē dōu jīngguò shìzhōngxīn.",
+          "text_translation": "Bor, avtobus bekati metro bekatining ro'parasida. Agar avtobusda yursangiz, ko'p avtobuslar shahar markazidan o'tadi.",
+          "text_translation_ru": "Есть, автобусная остановка прямо напротив станции метро. Если поедете на автобусе, многие маршруты проходят через центр города.",
+          "text_translation_en": "Yes, the bus stop is right across from the subway station. If you take the bus, many of them pass through the city center.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d24-s11",
+          "text_original": "谢谢您！您说得很清楚，我应该能找到。",
+          "pinyin": "Xièxie nín! Nín shuō de hěn qīngchu, wǒ yīnggāi néng zhǎodào.",
+          "text_translation": "Rahmat sizga! Juda aniq tushuntirdingiz, men topa olsam kerak.",
+          "text_translation_ru": "Спасибо вам! Вы очень понятно объяснили, я, наверное, смогу найти.",
+          "text_translation_en": "Thank you! You explained it very clearly, I should be able to find it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d24-s12",
+          "text_original": "不客气。您第一次来这边吗？",
+          "pinyin": "Bú kèqi. Nín dì-yī cì lái zhè biān ma?",
+          "text_translation": "Arzimaydi. Bu tarafga birinchi marta kelishingizmi?",
+          "text_translation_ru": "Не за что. Вы впервые в этих краях?",
+          "text_translation_en": "You're welcome. Is this your first time coming here?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d24-s13",
+          "text_original": "对，我是来旅游的，刚到这里两天，还不太熟悉路。",
+          "pinyin": "Duì, wǒ shì lái lǚyóu de, gāng dào zhèli liǎng tiān, hái bú tài shúxī lù.",
+          "text_translation": "Ha, men sayohatga kelganman, bu yerga endigina ikki kun bo'ldi, hali yo'llarni unchalik yaxshi bilmayman.",
+          "text_translation_ru": "Да, я приехал как турист, всего два дня здесь, ещё не очень хорошо знаю дороги.",
+          "text_translation_en": "Yes, I came as a tourist. I just arrived two days ago and I'm not very familiar with the roads yet.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d24-s14",
+          "text_original": "那您需要下载一个地图软件，走路和坐车都很方便。",
+          "pinyin": "Nà nín xūyào xiàzài yí ge dìtú ruǎnjiàn, zǒulù hé zuò chē dōu hěn fāngbiàn.",
+          "text_translation": "Unda sizga bitta xarita dasturini yuklab olish kerak, piyoda yurish ham, transportda yurish ham juda qulay bo'ladi.",
+          "text_translation_ru": "Тогда вам стоит скачать приложение с картами — и пешком ходить, и на транспорте ездить будет очень удобно.",
+          "text_translation_en": "Then you should download a map app; it makes both walking and taking transport very convenient.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d24-s15",
+          "text_original": "好的，谢谢您的建议。那我走了，再见！",
+          "pinyin": "Hǎo de, xièxie nín de jiànyì. Nà wǒ zǒu le, zàijiàn!",
+          "text_translation": "Yaxshi, maslahatingiz uchun rahmat. Unda men ketdim, xayr!",
+          "text_translation_ru": "Хорошо, спасибо за совет. Ну, я пошёл, до свидания!",
+          "text_translation_en": "Okay, thank you for the advice. I'll be going then, goodbye!",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d24-s16",
+          "text_original": "再见！祝您玩得愉快！",
+          "pinyin": "Zàijiàn! Zhù nín wán de yúkuài!",
+          "text_translation": "Xayr! Sizga yoqimli dam olishni tilayman!",
+          "text_translation_ru": "До свидания! Желаю вам приятно провести время!",
+          "text_translation_en": "Goodbye! I hope you have a great time!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

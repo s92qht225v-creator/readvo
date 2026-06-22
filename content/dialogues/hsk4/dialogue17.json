@@ -1,0 +1,185 @@
+{
+  "id": "hsk4-dialogue17",
+  "slug": "buying-clothes-tailoring",
+  "title": "买衣服",
+  "pinyin": "Mǎi yīfu",
+  "titleTranslation": "Kiyim sotib olish",
+  "titleTranslation_ru": "Покупка одежды",
+  "titleTranslation_en": "Buying Clothes",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["外套", "新款", "羊毛", "混纺", "轻便", "试衣间", "合身", "袖子", "改短", "免费", "改衣服务", "原价", "打八折", "折扣", "尺寸", "收据", "收银台", "刷卡"],
+  "sections": [
+    {
+      "id": "h4d17-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d17-s1",
+          "text_original": "你好，我想看看这件外套。",
+          "pinyin": "Nǐ hǎo, wǒ xiǎng kàn kan zhè jiàn wàitào.",
+          "text_translation": "Salom, men bu paltoni ko'rib chiqmoqchiman.",
+          "text_translation_ru": "Здравствуйте, я хочу посмотреть это пальто.",
+          "text_translation_en": "Hello, I'd like to take a look at this coat.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d17-s2",
+          "text_original": "您真有眼光！这是今年新款，羊毛混纺的，又暖和又轻便。",
+          "pinyin": "Nín zhēn yǒu yǎnguāng! Zhè shì jīnnián xīnkuǎn, yángmáo hùnfǎng de, yòu nuǎnhuo yòu qīngbiàn.",
+          "text_translation": "Sizning didingiz juda yaxshi! Bu shu yilgi yangi model, jundan aralash to'qilgan, ham issiq, ham yengil.",
+          "text_translation_ru": "У вас отличный вкус! Это новинка этого года, из шерстяной смеси, и тёплое, и лёгкое.",
+          "text_translation_en": "You have great taste! This is this year's new style, a wool blend, both warm and lightweight.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d17-s3",
+          "text_original": "颜色是不错，但我想要一件更亮一点的。你们有这个颜色吗？比如蓝色或者绿色？",
+          "pinyin": "Yánsè shì búcuò, dàn wǒ xiǎng yào yī jiàn gèng liàng yī diǎn de. Nǐmen yǒu zhè ge yánsè ma? Bǐrú lánsè huòzhě lǜsè?",
+          "text_translation": "Rangi yomon emas, lekin men biroz yorqinrog'ini xohlayman. Sizda shu rang bormi? Masalan, ko'k yoki yashil?",
+          "text_translation_ru": "Цвет неплохой, но я хочу что-то поярче. У вас есть такой цвет? Например, синий или зелёный?",
+          "text_translation_en": "The color is nice, but I'd like one that's a bit brighter. Do you have this in another color? Like blue or green?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d17-s4",
+          "text_original": "这件有蓝色的，但是没有绿色的。您要试试蓝色的吗？",
+          "pinyin": "Zhè jiàn yǒu lánsè de, dànshì méiyǒu lǜsè de. Nín yào shì shì lánsè de ma?",
+          "text_translation": "Bu modelning ko'k rangi bor, lekin yashili yo'q. Ko'k rangini kiyib ko'rasizmi?",
+          "text_translation_ru": "Эта модель есть в синем, но зелёного нет. Хотите примерить синюю?",
+          "text_translation_en": "This one comes in blue, but not in green. Would you like to try on the blue one?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d17-s5",
+          "text_original": "好的，我可以试一下吗？",
+          "pinyin": "Hǎo de, wǒ kěyǐ shì yíxià ma?",
+          "text_translation": "Yaxshi, kiyib ko'rsam bo'ladimi?",
+          "text_translation_ru": "Хорошо, можно примерить?",
+          "text_translation_en": "Okay, may I try it on?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d17-s6",
+          "text_original": "当然可以！试衣间在那边，您跟我来。",
+          "pinyin": "Dāngrán kěyǐ! Shìyījiān zài nàbiān, nín gēn wǒ lái.",
+          "text_translation": "Albatta bo'ladi! Kiyinish xonasi anavi tarafda, men bilan yuring.",
+          "text_translation_ru": "Конечно! Примерочная вон там, пройдёмте за мной.",
+          "text_translation_en": "Of course! The fitting room is over there, please follow me.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d17-s7",
+          "text_original": "（试完后）这件蓝色的挺合身的。但我觉得袖子有点长，能改短一点吗？",
+          "pinyin": "(Shì wán hòu) Zhè jiàn lánsè de tǐng héshēn de. Dàn wǒ juéde xiùzi yǒu diǎn cháng, néng gǎi duǎn yī diǎn ma?",
+          "text_translation": "(Kiyib ko'rgandan keyin) Bu ko'k modeli juda mos kelyapti. Lekin yenglari biroz uzunga o'xshaydi, biroz qisqartirsa bo'ladimi?",
+          "text_translation_ru": "(После примерки) Эта синяя сидит очень хорошо. Но рукава, по-моему, длинноваты, можно их немного укоротить?",
+          "text_translation_en": "(After trying it on) This blue one fits quite well. But I think the sleeves are a bit long, could they be shortened a little?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d17-s8",
+          "text_original": "可以的，我们有免费改衣服务，大概两天能改好。",
+          "pinyin": "Kěyǐ de, wǒmen yǒu miǎnfèi gǎi yī fúwù, dàgài liǎng tiān néng gǎi hǎo.",
+          "text_translation": "Bo'ladi, bizda bepul kiyim o'zgartirish xizmati bor, taxminan ikki kunda tayyor bo'ladi.",
+          "text_translation_ru": "Можно, у нас есть бесплатная услуга подгонки одежды, примерно за два дня сделаем.",
+          "text_translation_en": "Yes, we offer free alteration service, it'll be ready in about two days.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d17-s9",
+          "text_original": "那太好了！这件多少钱？",
+          "pinyin": "Nà tài hǎo le! Zhè jiàn duōshao qián?",
+          "text_translation": "Juda zo'r! Bu qancha turadi?",
+          "text_translation_ru": "Это замечательно! Сколько стоит эта вещь?",
+          "text_translation_en": "That's great! How much is this one?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d17-s10",
+          "text_original": "这件原价六百九十九，现在打八折，只要五百五十九。",
+          "pinyin": "Zhè jiàn yuánjià liùbǎi jiǔshíjiǔ, xiànzài dǎ bā zhé, zhǐ yào wǔbǎi wǔshíjiǔ.",
+          "text_translation": "Bu modelning asl narxi olti yuz to'qson to'qqiz, hozir yigirma foiz chegirma bilan atigi besh yuz ellik to'qqiz.",
+          "text_translation_ru": "Первоначальная цена этой вещи — шестьсот девяносто девять, сейчас скидка двадцать процентов, всего пятьсот пятьдесят девять.",
+          "text_translation_en": "The original price is six hundred ninety-nine, now it's twenty percent off, only five hundred fifty-nine.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d17-s11",
+          "text_original": "五百五十九……还能再便宜点吗？",
+          "pinyin": "Wǔbǎi wǔshíjiǔ …… hái néng zài piányi diǎn ma?",
+          "text_translation": "Besh yuz ellik to'qqiz... yana bir oz arzonlatsa bo'ladimi?",
+          "text_translation_ru": "Пятьсот пятьдесят девять… можно ещё немного дешевле?",
+          "text_translation_en": "Five hundred fifty-nine... could you make it a bit cheaper?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d17-s12",
+          "text_original": "这已经是最低价了，因为这是新款，折扣已经很低了。",
+          "pinyin": "Zhè yǐjīng shì zuì dī jià le, yīnwèi zhè shì xīnkuǎn, zhékòu yǐjīng hěn dī le.",
+          "text_translation": "Bu allaqachon eng past narx, chunki bu yangi model, chegirma allaqachon juda past.",
+          "text_translation_ru": "Это уже самая низкая цена, ведь это новинка, и скидка уже очень большая.",
+          "text_translation_en": "This is already the lowest price, because it's a new style, the discount is already very high.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d17-s13",
+          "text_original": "好吧，那我就要这件蓝色的。帮我改一下袖子，我过两天来取。",
+          "pinyin": "Hǎo ba, nà wǒ jiù yào zhè jiàn lánsè de. Bāng wǒ gǎi yíxià xiùzi, wǒ guò liǎng tiān lái qǔ.",
+          "text_translation": "Mayli, unda men shu ko'k modelni olaman. Yenglarini o'zgartirib bering, ikki kundan keyin kelib olaman.",
+          "text_translation_ru": "Ладно, тогда я беру эту синюю. Подгоните мне рукава, через два дня я приду забрать.",
+          "text_translation_en": "Alright, then I'll take this blue one. Please alter the sleeves for me, I'll come pick it up in two days.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d17-s14",
+          "text_original": "好的，您试穿的时候我们已经量过尺寸了，改好以后我们会提前打电话通知您。",
+          "pinyin": "Hǎo de, nín shìchuān de shíhou wǒmen yǐjīng liàng guo chǐcùn le, gǎi hǎo yǐhòu wǒmen huì tíqián dǎ diànhuà tōngzhī nín.",
+          "text_translation": "Yaxshi, siz kiyib ko'rganingizda biz allaqachon o'lchamlarini olib qo'ydik, tayyor bo'lganidan keyin oldindan qo'ng'iroq qilib xabar beramiz.",
+          "text_translation_ru": "Хорошо, когда вы примеряли, мы уже сняли мерки, а когда будет готово, заранее позвоним и сообщим вам.",
+          "text_translation_en": "Okay, we already took your measurements when you tried it on, and once it's ready we'll call to let you know in advance.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d17-s15",
+          "text_original": "好的，谢谢！怎么付款？",
+          "pinyin": "Hǎo de, xièxie! Zěnme fùkuǎn?",
+          "text_translation": "Yaxshi, rahmat! Qanday to'lasam bo'ladi?",
+          "text_translation_ru": "Хорошо, спасибо! Как оплатить?",
+          "text_translation_en": "Okay, thank you! How do I pay?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d17-s16",
+          "text_original": "这边收银台，现金、刷卡、扫码都可以。",
+          "pinyin": "Zhè biān shōuyíntái, xiànjīn, shuākǎ, sǎomǎ dōu kěyǐ.",
+          "text_translation": "Bu yerda kassa, naqd pul, karta orqali yoki QR-kod skanerlab to'lasangiz ham bo'ladi.",
+          "text_translation_ru": "Касса здесь, можно наличными, картой или по QR-коду.",
+          "text_translation_en": "The cashier is over here, you can pay with cash, card, or by scanning a QR code.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d17-s17",
+          "text_original": "我扫码支付。",
+          "pinyin": "Wǒ sǎomǎ zhīfù.",
+          "text_translation": "Men QR-kod skanerlab to'layman.",
+          "text_translation_ru": "Я оплачу по QR-коду.",
+          "text_translation_en": "I'll pay by scanning the QR code.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d17-s18",
+          "text_original": "好的，付款成功了。这是您的收据，取衣服的时候请带上它。",
+          "pinyin": "Hǎo de, fùkuǎn chénggōng le. Zhè shì nín de shōujù, qǔ yīfu de shíhou qǐng dài shàng tā.",
+          "text_translation": "Yaxshi, to'lov muvaffaqiyatli amalga oshdi. Bu sizning chekingiz, kiyimni olishga kelganingizda uni olib keling.",
+          "text_translation_ru": "Хорошо, оплата прошла успешно. Вот ваш чек, пожалуйста, возьмите его с собой, когда придёте забирать одежду.",
+          "text_translation_en": "Okay, the payment went through. Here is your receipt, please bring it with you when you come to pick up the clothes.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "id": "hsk4-dialogue19",
+  "slug": "birthday-party-planning",
+  "title": "生日派对",
+  "pinyin": "Shēngrì pàiduì",
+  "titleTranslation": "Tug'ilgan kun bazmi",
+  "titleTranslation_ru": "День рождения",
+  "titleTranslation_en": "Birthday Party",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["生日","礼物","蓝牙音箱","确定","粉色","百搭","预算","包装纸","草莓","贴心","派对","气球","彩带","布置","惊喜"],
+  "sections": [
+    {
+      "id": "h4d19-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d19-s1",
+          "text_original": "下周六是小美的生日，你记得吗？",
+          "pinyin": "Xià zhōuliù shì Xiǎo Měi de shēngrì, nǐ jìde ma?",
+          "text_translation": "Keyingi shanba Syao Meyning tug'ilgan kuni, esingdami?",
+          "text_translation_ru": "В следующую субботу день рождения Сяо Мэй, ты помнишь?",
+          "text_translation_en": "Next Saturday is Xiao Mei's birthday, do you remember?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d19-s2",
+          "text_original": "当然记得！我们不是说要一起给她买礼物吗？想好买什么了吗？",
+          "pinyin": "Dāngrán jìde! Wǒmen bú shì shuō yào yìqǐ gěi tā mǎi lǐwù ma? Xiǎng hǎo mǎi shénme le ma?",
+          "text_translation": "Albatta esimda! Biz unga birga sovg'a olamiz deb kelishmaganmidik? Nima olishni o'ylab qo'ydingmi?",
+          "text_translation_ru": "Конечно помню! Разве мы не договорились вместе купить ей подарок? Ты уже придумал, что купить?",
+          "text_translation_en": "Of course I remember! Didn't we say we'd buy her a gift together? Have you decided what to buy?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d19-s3",
+          "text_original": "我还没想好。她最近好像说想买一个蓝牙音箱，但我们不确定她喜欢什么颜色。",
+          "pinyin": "Wǒ hái méi xiǎng hǎo. Tā zuìjìn hǎoxiàng shuō xiǎng mǎi yí ge lányá yīnxiāng, dàn wǒmen bù quèdìng tā xǐhuān shénme yánsè.",
+          "text_translation": "Hali o'ylab qo'ymadim. U yaqinda bluetooth karnay olmoqchiman degandek, lekin uning qaysi rangni yoqtirishini aniq bilmaymiz.",
+          "text_translation_ru": "Я ещё не придумал. Кажется, она недавно говорила, что хочет купить Bluetooth-колонку, но мы не уверены, какой цвет ей нравится.",
+          "text_translation_en": "I haven't decided yet. She recently seemed to say she wants to buy a Bluetooth speaker, but we're not sure what color she likes.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d19-s4",
+          "text_original": "那我们可以买一个她喜欢的颜色的。她平时喜欢粉色还是白色？",
+          "pinyin": "Nà wǒmen kěyǐ mǎi yí ge tā xǐhuān de yánsè de. Tā píngshí xǐhuān fěnsè háishì báisè?",
+          "text_translation": "Unday bo'lsa unga yoqadigan rangdagisini olsak bo'ladi. U odatda pushti rangni yoqtiradimi yoki oqnimi?",
+          "text_translation_ru": "Тогда мы можем купить в том цвете, который ей нравится. Ей обычно нравится розовый или белый?",
+          "text_translation_en": "Then we can buy one in the color she likes. Does she usually prefer pink or white?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d19-s5",
+          "text_original": "我记得她说过喜欢白色，因为白色比较百搭。",
+          "pinyin": "Wǒ jìde tā shuō guo xǐhuān báisè, yīnwèi báisè bǐjiào bǎidā.",
+          "text_translation": "Esimda, u oq rangni yoqtiraman degandi, chunki oq rang hamma narsaga mos keladi.",
+          "text_translation_ru": "Я помню, она говорила, что любит белый, потому что белый цвет ко всему подходит.",
+          "text_translation_en": "I remember she said she likes white, because white goes with everything.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d19-s6",
+          "text_original": "好的，那就买白色的蓝牙音箱。预算大概多少？",
+          "pinyin": "Hǎo de, nà jiù mǎi báisè de lányá yīnxiāng. Yùsuàn dàgài duōshao?",
+          "text_translation": "Yaxshi, unday bo'lsa oq bluetooth karnay olamiz. Byudjet taxminan qancha?",
+          "text_translation_ru": "Хорошо, тогда купим белую Bluetooth-колонку. Какой примерно бюджет?",
+          "text_translation_en": "Okay, then let's buy a white Bluetooth speaker. What's the budget roughly?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d19-s7",
+          "text_original": "我看了几款，价格在三百到五百之间。我们两个人一起买，一人出一半，怎么样？",
+          "pinyin": "Wǒ kàn le jǐ kuǎn, jiàgé zài sānbǎi dào wǔbǎi zhījiān. Wǒmen liǎng ge rén yìqǐ mǎi, yī rén chū yí bàn, zěnmeyàng?",
+          "text_translation": "Bir nechta turini ko'rdim, narxi uch yuzdan besh yuzgacha. Ikkalamiz birga olamiz, har birimiz yarmini to'laymiz, qanday bo'ladi?",
+          "text_translation_ru": "Я посмотрел несколько моделей, цена от трёхсот до пятисот. Купим вдвоём, каждый заплатит половину, как тебе?",
+          "text_translation_en": "I looked at a few models, the price is between three hundred and five hundred. We'll buy it together, each paying half, how about that?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d19-s8",
+          "text_original": "可以啊！那我们什么时候去买？",
+          "pinyin": "Kěyǐ a! Nà wǒmen shénme shíhou qù mǎi?",
+          "text_translation": "Bo'ladi! Unda qachon olishga boramiz?",
+          "text_translation_ru": "Можно! А когда мы пойдём покупать?",
+          "text_translation_en": "Sure! So when shall we go to buy it?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d19-s9",
+          "text_original": "要不这周末去商场逛逛？顺便看看有没有好看的包装纸。",
+          "pinyin": "Yàobù zhè zhōumò qù shāngchǎng guàng guang? Shùnbiàn kàn kan yǒu méiyǒu hǎokàn de bāozhuāng zhǐ.",
+          "text_translation": "Bu hafta oxiri savdo markaziga aylanib kelaylikmi? Zaodan chiroyli o'rash qog'ozi bor-yo'qligini ham ko'ramiz.",
+          "text_translation_ru": "Может, в эти выходные пройдёмся по торговому центру? Заодно посмотрим, есть ли красивая обёрточная бумага.",
+          "text_translation_en": "How about going to the mall this weekend? We can also check if there's nice wrapping paper.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d19-s10",
+          "text_original": "好主意！那周六下午两点，商场门口见？",
+          "pinyin": "Hǎo zhǔyi! Nà zhōuliù xiàwǔ liǎng diǎn, shāngchǎng ménkǒu jiàn?",
+          "text_translation": "Yaxshi fikr! Unda shanba kuni soat ikkida savdo markazi eshigi oldida ko'rishamizmi?",
+          "text_translation_ru": "Хорошая идея! Тогда в субботу в два часа дня встретимся у входа в торговый центр?",
+          "text_translation_en": "Good idea! Then let's meet at the mall entrance at two o'clock on Saturday afternoon?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d19-s11",
+          "text_original": "好的。那除了礼物，我们还准备蛋糕吗？",
+          "pinyin": "Hǎo de. Nà chúle lǐwù, wǒmen hái zhǔnbèi dàngāo ma?",
+          "text_translation": "Yaxshi. Unda sovg'adan tashqari tort ham tayyorlaymizmi?",
+          "text_translation_ru": "Хорошо. А кроме подарка, мы ещё готовим торт?",
+          "text_translation_en": "Okay. Besides the gift, are we also preparing a cake?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d19-s12",
+          "text_original": "当然！我已经订了一个草莓蛋糕，小美最喜欢草莓了。",
+          "pinyin": "Dāngrán! Wǒ yǐjīng dìng le yí ge cǎoméi dàngāo, Xiǎo Měi zuì xǐhuān cǎoméi le.",
+          "text_translation": "Albatta! Men allaqachon qulupnayli tort buyurtma qildim, Syao Mey qulupnayni eng yoqtiradi.",
+          "text_translation_ru": "Конечно! Я уже заказал клубничный торт, Сяо Мэй больше всего любит клубнику.",
+          "text_translation_en": "Of course! I've already ordered a strawberry cake, Xiao Mei loves strawberries the most.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d19-s13",
+          "text_original": "你太贴心了！那派对还准备了什么？",
+          "pinyin": "Nǐ tài tiēxīn le! Nà pàiduì hái zhǔnbèi le shénme?",
+          "text_translation": "Sen juda e'tiborlisan! Bazm uchun yana nima tayyorlading?",
+          "text_translation_ru": "Ты такой заботливый! А что ещё подготовлено для вечеринки?",
+          "text_translation_en": "You're so thoughtful! So what else have you prepared for the party?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d19-s14",
+          "text_original": "我还买了一些气球和彩带，可以布置一下房间。到时候大家一起给她一个惊喜。",
+          "pinyin": "Wǒ hái mǎi le yì xiē qìqiú hé cǎidài, kěyǐ bùzhì yíxià fángjiān. Dàoshíhou dàjiā yìqǐ gěi tā yí ge jīngxǐ.",
+          "text_translation": "Men yana bir nechta sharlar va lentalar oldim, xonani bezatish mumkin. O'sha payti hammamiz birga unga syurpriz qilamiz.",
+          "text_translation_ru": "Я ещё купил воздушные шары и ленты, можно украсить комнату. Тогда мы все вместе устроим ей сюрприз.",
+          "text_translation_en": "I also bought some balloons and ribbons, we can decorate the room. Then everyone can give her a surprise together.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d19-s15",
+          "text_original": "她一定会很开心的！那周六见！",
+          "pinyin": "Tā yídìng huì hěn kāixīn de! Nà zhōuliù jiàn!",
+          "text_translation": "U albatta juda xursand bo'ladi! Unda shanbada ko'rishamiz!",
+          "text_translation_ru": "Она наверняка будет очень рада! Тогда до субботы!",
+          "text_translation_en": "She'll definitely be very happy! See you on Saturday then!",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d19-s16",
+          "text_original": "周六见！",
+          "pinyin": "Zhōuliù jiàn!",
+          "text_translation": "Shanbada ko'rishamiz!",
+          "text_translation_ru": "До субботы!",
+          "text_translation_en": "See you Saturday!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": "hsk4-dialogue23",
+  "slug": "calling-in-sick",
+  "title": "生病请假",
+  "pinyin": "Shēngbìng qǐngjià",
+  "titleTranslation": "Kasallik bo'yicha ta'til",
+  "titleTranslation_ru": "Больничный",
+  "titleTranslation_en": "Getting Sick",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["请假", "声音", "哑", "感冒", "发烧", "头疼", "力气", "体温", "撑不住", "硬撑", "按时", "紧急", "处理", "养好", "病历", "报销", "气色", "退烧", "底子"],
+  "sections": [
+    {
+      "id": "h4d23-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d23-s1",
+          "text_original": "王经理，早上好。我身体不太舒服，想跟您请一天假。",
+          "pinyin": "Wáng jīnglǐ, zǎoshang hǎo. Wǒ shēntǐ bú tài shūfu, xiǎng gēn nín qǐng yī tiān jià.",
+          "text_translation": "Vang menejer, xayrli tong. O'zimni unchalik yaxshi his qilmayapman, sizdan bir kunlik ta'til so'ramoqchiman.",
+          "text_translation_ru": "Менеджер Ван, доброе утро. Я чувствую себя не очень хорошо, хочу попросить у вас отгул на один день.",
+          "text_translation_en": "Manager Wang, good morning. I'm not feeling very well, I'd like to ask you for a day off.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d23-s2",
+          "text_original": "你怎么了？听你声音有点哑，是不是感冒了？",
+          "pinyin": "Nǐ zěnme le? Tīng nǐ shēngyīn yǒu diǎn yǎ, shì bú shì gǎnmào le?",
+          "text_translation": "Senga nima bo'ldi? Ovozing biroz xirillagandek, shamollab qoldingmi?",
+          "text_translation_ru": "Что с тобой? Голос у тебя немного сиплый, ты не простудился?",
+          "text_translation_en": "What's wrong with you? Your voice sounds a bit hoarse, did you catch a cold?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d23-s3",
+          "text_original": "对，昨天晚上开始发烧，头疼得厉害，浑身也没力气。",
+          "pinyin": "Duì, zuótiān wǎnshang kāishǐ fāshāo, tóuténg de lìhai, húnshēn yě méi lìqi.",
+          "text_translation": "Ha, kecha kechqurun isitmam ko'tarila boshladi, boshim qattiq og'riyapti, butun tanamda kuch ham yo'q.",
+          "text_translation_ru": "Да, вчера вечером поднялась температура, сильно болит голова, и во всём теле нет сил.",
+          "text_translation_en": "Yes, last night I started running a fever, my head aches badly, and I have no strength in my whole body.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d23-s4",
+          "text_original": "那确实应该好好休息。你量体温了吗？多少度？",
+          "pinyin": "Nà quèshí yīnggāi hǎohao xiūxi. Nǐ liáng tǐwēn le ma? Duōshao dù?",
+          "text_translation": "Unda haqiqatan ham yaxshilab dam olishing kerak. Tanang haroratini o'lchadingmi? Necha gradus?",
+          "text_translation_ru": "Тогда действительно нужно хорошо отдохнуть. Ты измерил температуру? Сколько градусов?",
+          "text_translation_en": "Then you really should rest well. Did you take your temperature? How many degrees?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d23-s5",
+          "text_original": "量了，三十八度五。我本来想坚持来上班的，但是实在撑不住了。",
+          "pinyin": "Liáng le, sānshíbā dù wǔ. Wǒ běnlái xiǎng jiānchí lái shàngbān de, dànshì shízài chēng bú zhù le.",
+          "text_translation": "O'lchadim, o'ttiz sakkiz yarim gradus. Aslida ishga kelishga intilmoqchi edim, lekin rostdan ham chiday olmadim.",
+          "text_translation_ru": "Измерил, тридцать восемь и пять. Я сначала хотел всё же прийти на работу, но действительно не выдержал.",
+          "text_translation_en": "I did, thirty-eight point five. I originally wanted to push through and come to work, but I really couldn't hold on.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d23-s6",
+          "text_original": "发烧这么高就别硬撑了。你今天就在家好好休息，多喝水，按时吃药。",
+          "pinyin": "Fāshāo zhème gāo jiù bié yìng chēng le. Nǐ jīntiān jiù zài jiā hǎohao xiūxi, duō hē shuǐ, ànshí chī yào.",
+          "text_translation": "Isitmang shunchalik baland bo'lsa, zo'r berib chidashga urinma. Bugun uyda yaxshilab dam ol, ko'p suv ich, dorini vaqtida ich.",
+          "text_translation_ru": "Раз такая высокая температура, не надо себя пересиливать. Сегодня хорошо отдохни дома, пей побольше воды, принимай лекарства вовремя.",
+          "text_translation_en": "With such a high fever, don't force yourself to push through. Just rest well at home today, drink plenty of water, and take your medicine on time.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d23-s7",
+          "text_original": "谢谢王经理！那我今天的工作怎么办？有紧急的事情可以发消息给我。",
+          "pinyin": "Xièxie Wáng jīnglǐ! Nà wǒ jīntiān de gōngzuò zěnme bàn? Yǒu jǐnjí de shìqing kěyǐ fā xiāoxi gěi wǒ.",
+          "text_translation": "Rahmat, Vang menejer! Unda bugungi ishlarim nima bo'ladi? Shoshilinch ish bo'lsa, menga xabar yuborishingiz mumkin.",
+          "text_translation_ru": "Спасибо, менеджер Ван! А как же быть с моей сегодняшней работой? Если будет что-то срочное, можете написать мне сообщение.",
+          "text_translation_en": "Thank you, Manager Wang! But what about my work today? If there's anything urgent, you can send me a message.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d23-s8",
+          "text_original": "工作的事你放心，我让小刘帮你处理一下。你现在最重要的是把身体养好。",
+          "pinyin": "Gōngzuò de shì nǐ fàngxīn, wǒ ràng Xiǎo Liú bāng nǐ chǔlǐ yíxià. Nǐ xiànzài zuì zhòngyào de shì bǎ shēntǐ yǎng hǎo.",
+          "text_translation": "Ish haqida xotirjam bo'l, Syao Lyuga senga yordam berib, hal qilib qo'yishini aytaman. Hozir sen uchun eng muhimi sog'ligingni tuzatib olish.",
+          "text_translation_ru": "Насчёт работы не беспокойся, я попрошу Сяо Лю помочь тебе с этим разобраться. Сейчас для тебя самое важное — поправить здоровье.",
+          "text_translation_en": "Don't worry about the work, I'll have Xiao Liu help handle it for you. The most important thing for you now is to recover your health.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d23-s9",
+          "text_original": "好的，太麻烦您和小刘了。",
+          "pinyin": "Hǎo de, tài máfan nín hé Xiǎo Liú le.",
+          "text_translation": "Yaxshi, sizni va Syao Lyuni juda ko'p ovora qilib qo'ydim.",
+          "text_translation_ru": "Хорошо, доставил столько хлопот вам и Сяо Лю.",
+          "text_translation_en": "All right, I've troubled you and Xiao Liu so much.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d23-s10",
+          "text_original": "不麻烦。你好好休息，如果需要去医院，记得把病历留着，回头可以报销。",
+          "pinyin": "Bù máfan. Nǐ hǎohao xiūxi, rúguǒ xūyào qù yīyuàn, jìde bǎ bìnglì liú zhe, huítóu kěyǐ bàoxiāo.",
+          "text_translation": "Ovorasi yo'q. Yaxshilab dam ol, agar shifoxonaga borishing kerak bo'lsa, kasallik tarixini saqlab qo'yishni unutma, keyinroq xarajatlarni qoplab olsa bo'ladi.",
+          "text_translation_ru": "Никаких хлопот. Хорошо отдохни, если понадобится поехать в больницу, не забудь сохранить медицинскую карту, потом можно будет возместить расходы.",
+          "text_translation_en": "No trouble at all. Rest well, and if you need to go to the hospital, remember to keep the medical records — you can get reimbursed later.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d23-s11",
+          "text_original": "好的，我知道了。谢谢王经理！那我先挂电话了。",
+          "pinyin": "Hǎo de, wǒ zhīdào le. Xièxie Wáng jīnglǐ! Nà wǒ xiān guà diànhuà le.",
+          "text_translation": "Yaxshi, tushundim. Rahmat, Vang menejer! Unda men telefonni qo'yaman.",
+          "text_translation_ru": "Хорошо, понял. Спасибо, менеджер Ван! Тогда я кладу трубку.",
+          "text_translation_en": "All right, I understand. Thank you, Manager Wang! I'll hang up the phone now then.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d23-s12",
+          "text_original": "好，好好休息，明天见。",
+          "pinyin": "Hǎo, hǎohao xiūxi, míngtiān jiàn.",
+          "text_translation": "Yaxshi, yaxshilab dam ol, ertaga ko'rishamiz.",
+          "text_translation_ru": "Хорошо, хорошо отдыхай, до завтра.",
+          "text_translation_en": "Okay, rest well, see you tomorrow.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d23-s13",
+          "text_original": "王经理，早上好。我今天好多了，来上班了。",
+          "pinyin": "Wáng jīnglǐ, zǎoshang hǎo. Wǒ jīntiān hǎo duō le, lái shàngbān le.",
+          "text_translation": "Vang menejer, xayrli tong. Bugun ancha yaxshi bo'lib qoldim, ishga keldim.",
+          "text_translation_ru": "Менеджер Ван, доброе утро. Сегодня мне намного лучше, я вышел на работу.",
+          "text_translation_en": "Manager Wang, good morning. I'm much better today, I've come to work.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d23-s14",
+          "text_original": "气色看起来确实好了不少。昨天休息得怎么样？",
+          "pinyin": "Qìsè kàn qǐlái quèshí hǎo le bùshǎo. Zuótiān xiūxi de zěnmeyàng?",
+          "text_translation": "Yuzingdagi rang haqiqatan ham ancha yaxshilangandek ko'rinadi. Kecha qanday dam olding?",
+          "text_translation_ru": "Цвет лица у тебя действительно выглядит намного лучше. Как отдохнул вчера?",
+          "text_translation_en": "Your complexion really does look a lot better. How was your rest yesterday?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d23-s15",
+          "text_original": "按照您说的，我喝了很多水，按时吃了药，睡了一整天。今天烧退了，头也不疼了。",
+          "pinyin": "Ànzhào nín shuō de, wǒ hē le hěnduō shuǐ, ànshí chī le yào, shuì le yī zhěng tiān. Jīntiān shāo tuì le, tóu yě bù téng le.",
+          "text_translation": "Siz aytganingizdek, ko'p suv ichdim, dorini vaqtida ichdim, kun bo'yi uxladim. Bugun isitmam tushdi, boshim ham og'rimay qoldi.",
+          "text_translation_ru": "Как вы сказали, я пил много воды, вовремя принимал лекарства, проспал весь день. Сегодня температура спала, и голова больше не болит.",
+          "text_translation_en": "As you said, I drank a lot of water, took my medicine on time, and slept the whole day. Today the fever has gone down and my head no longer hurts.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d23-s16",
+          "text_original": "那就好。年轻人身体底子好，恢复得快。以后不舒服就及时请假，别硬撑。",
+          "pinyin": "Nà jiù hǎo. Niánqīng rén shēntǐ dǐzi hǎo, huīfù de kuài. Yǐhòu bù shūfu jiù jíshí qǐngjià, bié yìng chēng.",
+          "text_translation": "Unda yaxshi. Yoshlarning tana asosi mustahkam bo'ladi, tez tuzaladi. Bundan keyin o'zingni yomon his qilsang, o'z vaqtida ta'til so'ra, zo'r berib chidashga urinma.",
+          "text_translation_ru": "Вот и хорошо. У молодых крепкое здоровье, они быстро восстанавливаются. В дальнейшем, если плохо себя чувствуешь, сразу бери отгул, не пересиливай себя.",
+          "text_translation_en": "That's good. Young people have a strong constitution and recover quickly. From now on, if you don't feel well, take leave in time — don't force yourself to push through.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d23-s17",
+          "text_original": "好的，我记住了。对了，昨天小刘帮我处理的工作，我一会儿去感谢一下他。",
+          "pinyin": "Hǎo de, wǒ jìzhù le. Duìle, zuótiān Xiǎo Liú bāng wǒ chǔlǐ de gōngzuò, wǒ yīhuǐr qù gǎnxiè yíxià tā.",
+          "text_translation": "Yaxshi, esimda saqlab qoldim. Aytmoqchi, kecha Syao Lyu menga yordam berib hal qilgan ish uchun, birozdan keyin borib unga rahmat aytaman.",
+          "text_translation_ru": "Хорошо, я запомнил. Кстати, насчёт работы, которую вчера за меня сделал Сяо Лю, я сейчас схожу его поблагодарить.",
+          "text_translation_en": "All right, I'll remember that. By the way, regarding the work Xiao Liu handled for me yesterday, I'll go thank him in a moment.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d23-s18",
+          "text_original": "小刘工作很认真，你们互相帮助是应该的。去吧。",
+          "pinyin": "Xiǎo Liú gōngzuò hěn rènzhēn, nǐmen hùxiāng bāngzhù shì yīnggāi de. Qù ba.",
+          "text_translation": "Syao Lyu ishni juda mas'uliyat bilan bajaradi, bir-biringizga yordam berishingiz tabiiy. Bor.",
+          "text_translation_ru": "Сяо Лю работает очень добросовестно, помогать друг другу — это правильно. Иди.",
+          "text_translation_en": "Xiao Liu works very conscientiously; helping each other is the right thing to do. Go ahead.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}

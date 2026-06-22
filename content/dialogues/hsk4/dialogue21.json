@@ -1,0 +1,194 @@
+{
+  "id": "hsk4-dialogue21",
+  "slug": "losing-car-keys",
+  "title": "丢东西",
+  "pinyin": "Diū dōngxi",
+  "titleTranslation": "Narsa yo'qotish",
+  "titleTranslation_ru": "Потеря вещи",
+  "titleTranslation_en": "Losing Something",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": ["车钥匙", "最后一次", "停好", "口袋", "洗手间", "便利店", "店员", "钥匙扣", "图案", "走不开", "收银台", "果然", "捡到"],
+  "sections": [
+    {
+      "id": "h4d21-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d21-s1",
+          "text_original": "小王，你看见我的车钥匙了吗？我找了好久都找不到。",
+          "pinyin": "Xiǎo Wáng, nǐ kànjiàn wǒ de chē yàoshi le ma? Wǒ zhǎo le hǎojiǔ dōu zhǎo bú dào.",
+          "text_translation": "Xiao Vang, mening mashina kalitimni ko'rmadingmi? Ancha vaqt qidirdim, lekin topa olmadim.",
+          "text_translation_ru": "Сяо Ван, ты не видел мой ключ от машины? Я уже долго ищу и никак не могу найти.",
+          "text_translation_en": "Xiao Wang, have you seen my car keys? I've been looking for a long time and can't find them.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d21-s2",
+          "text_original": "没看见啊。你最后一次用钥匙是什么时候？",
+          "pinyin": "Méi kànjiàn a. Nǐ zuìhòu yī cì yòng yàoshi shì shénme shíhou?",
+          "text_translation": "Ko'rmadim. Kalitni oxirgi marta qachon ishlatgan eding?",
+          "text_translation_ru": "Не видел. Когда ты в последний раз пользовался ключом?",
+          "text_translation_en": "I haven't seen them. When was the last time you used the keys?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d21-s3",
+          "text_original": "我记得早上开车来公司，停好车以后就把钥匙放在口袋里了。然后我就没动过。",
+          "pinyin": "Wǒ jìde zǎoshang kāichē lái gōngsī, tíng hǎo chē yǐhòu jiù bǎ yàoshi fàng zài kǒudai lǐ le. Ránhòu wǒ jiù méi dòng guo.",
+          "text_translation": "Eslayman, ertalab mashinada ishga keldim, mashinani to'xtatgandan keyin kalitni cho'ntakka soldim. Keyin unga tegmadim.",
+          "text_translation_ru": "Помню, утром приехал на машине в офис, припарковался и положил ключ в карман. После этого я его не трогал.",
+          "text_translation_en": "I remember driving to the company in the morning, and after parking I put the keys in my pocket. Then I didn't touch them.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d21-s4",
+          "text_original": "那你刚才去没去过会议室或者洗手间？",
+          "pinyin": "Nà nǐ gāngcái qù méi qù guo huìyì shì huòzhě xǐshǒujiān?",
+          "text_translation": "Unda hozir yig'ilish xonasiga yoki hojatxonaga borib keldingmi?",
+          "text_translation_ru": "А ты только что ходил в переговорную или в туалет?",
+          "text_translation_en": "Then did you just go to the meeting room or the restroom?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d21-s5",
+          "text_original": "去过！我刚才去了趟洗手间，回来以后就发现钥匙不见了。",
+          "pinyin": "Qù guo! Wǒ gāngcái qù le tàng xǐshǒujiān, huílái yǐhòu jiù fāxiàn yàoshi bú jiàn le.",
+          "text_translation": "Bordim! Hozirgina hojatxonaga borib keldim, qaytib kelganimdan keyin kalit yo'qolganini sezdim.",
+          "text_translation_ru": "Ходил! Я только что сходил в туалет, а когда вернулся, обнаружил, что ключа нет.",
+          "text_translation_en": "I did! I just went to the restroom, and after coming back I noticed the keys were gone.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d21-s6",
+          "text_original": "那很可能掉在洗手间了。你要不要回去看看？",
+          "pinyin": "Nà hěn kěnéng diào zài xǐshǒujiān le. Nǐ yào bú yào huíqù kàn kan?",
+          "text_translation": "Unda u hojatxonaga tushib qolgan bo'lishi mumkin. Qaytib borib ko'rmaysanmi?",
+          "text_translation_ru": "Тогда он, скорее всего, упал в туалете. Не хочешь вернуться посмотреть?",
+          "text_translation_en": "Then they probably fell in the restroom. Do you want to go back and check?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d21-s7",
+          "text_original": "我刚才已经回去找过了，但是没找到。",
+          "pinyin": "Wǒ gāngcái yǐjīng huíqù zhǎo guo le, dànshì méi zhǎodào.",
+          "text_translation": "Men hozir borib qidirib ham keldim, lekin topa olmadim.",
+          "text_translation_ru": "Я уже сходил и поискал, но не нашёл.",
+          "text_translation_en": "I already went back and looked, but I didn't find them.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d21-s8",
+          "text_original": "别着急，你再想想，除了洗手间还去过哪里？",
+          "pinyin": "Bié zháojí, nǐ zài xiǎng xiǎng, chúle xǐshǒujiān hái qù guo nǎli?",
+          "text_translation": "Xavotir olma, yana bir o'ylab ko'r, hojatxonadan tashqari yana qayerga borgan eding?",
+          "text_translation_ru": "Не волнуйся, подумай ещё раз, куда ты ходил кроме туалета?",
+          "text_translation_en": "Don't worry, think again, where else did you go besides the restroom?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d21-s9",
+          "text_original": "对了！我中午去楼下便利店买了瓶水，可能那时候掏钱包的时候把钥匙带出来了。",
+          "pinyin": "Duìle! Wǒ zhōngwǔ qù lóuxià biànlì diàn mǎi le píng shuǐ, kěnéng nà shíhou tāo qiánbāo de shíhou bǎ yàoshi dài chūlái le.",
+          "text_translation": "To'g'ri! Tushda pastdagi do'konga bir shisha suv olgani tushdim, ehtimol o'shanda hamyonni olayotganda kalitni ham olib chiqqanman.",
+          "text_translation_ru": "Точно! В обед я спускался в магазинчик внизу за бутылкой воды, наверное тогда, доставая кошелёк, вытащил и ключ.",
+          "text_translation_en": "Right! At noon I went down to the convenience store to buy a bottle of water, maybe I pulled the keys out along with my wallet then.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d21-s10",
+          "text_original": "那你快去便利店问问吧，说不定店员捡到了。",
+          "pinyin": "Nà nǐ kuài qù biànlì diàn wèn wen ba, shuōbúdìng diànyuán jiǎn dào le.",
+          "text_translation": "Unda tezroq do'konga borib so'rab ko'r, balki sotuvchi topib olgandir.",
+          "text_translation_ru": "Тогда скорее сходи в магазинчик и спроси, может, продавец его подобрал.",
+          "text_translation_en": "Then quickly go ask at the convenience store, maybe the clerk picked them up.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d21-s11",
+          "text_original": "可是我现在走不开，马上要开会了。你能不能帮我去问一下？",
+          "pinyin": "Kěshì wǒ xiànzài zǒu bù kāi, mǎshàng yào kāihuì le. Nǐ néng bùnéng bāng wǒ qù wèn yíxià?",
+          "text_translation": "Lekin men hozir keta olmayman, hozir yig'ilish boshlanadi. Men uchun borib so'rab kela olasanmi?",
+          "text_translation_ru": "Но я сейчас не могу отлучиться, скоро совещание. Ты не мог бы сходить спросить за меня?",
+          "text_translation_en": "But I can't leave right now, the meeting is about to start. Could you go ask for me?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d21-s12",
+          "text_original": "行，我帮你去看看。你那个车钥匙是什么样的？",
+          "pinyin": "Xíng, wǒ bāng nǐ qù kàn kan. Nǐ nà ge chē yàoshi shì shénmeyàng de?",
+          "text_translation": "Mayli, men borib ko'rib kelaman. Mashina kaliting qanaqa?",
+          "text_translation_ru": "Хорошо, я схожу посмотрю. А как выглядит твой ключ от машины?",
+          "text_translation_en": "Okay, I'll go check for you. What do your car keys look like?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d21-s13",
+          "text_original": "黑色的，挂着一个红色的钥匙扣，上面有个小熊图案。",
+          "pinyin": "Hēisè de, guà zhe yí ge hóngsè de yàoshikòu, shàngmiàn yǒu ge xiǎo xióng tú'àn.",
+          "text_translation": "Qora rangli, unga qizil rangli kalit halqasi osilgan, ustida kichkina ayiq rasmi bor.",
+          "text_translation_ru": "Чёрный, на нём висит красный брелок, а на нём рисунок медвежонка.",
+          "text_translation_en": "Black, with a red keychain attached, and there's a little bear pattern on it.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d21-s14",
+          "text_original": "好的，我记住了。你先去开会，我找到以后给你打电话。",
+          "pinyin": "Hǎo de, wǒ jìzhù le. Nǐ xiān qù kāihuì, wǒ zhǎodào yǐhòu gěi nǐ dǎ diànhuà.",
+          "text_translation": "Yaxshi, eslab qoldim. Sen avval yig'ilishga bor, topganimdan keyin senga qo'ng'iroq qilaman.",
+          "text_translation_ru": "Хорошо, я запомнил. Ты пока иди на совещание, а я найду и позвоню тебе.",
+          "text_translation_en": "Okay, I've remembered. You go to the meeting first, and I'll call you after I find them.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d21-s15",
+          "text_original": "太感谢了！如果找不到的话，我今天就回不了家了。",
+          "pinyin": "Tài gǎnxiè le! Rúguǒ zhǎo bú dào dehuà, wǒ jīntiān jiù huí bù liǎo jiā le.",
+          "text_translation": "Katta rahmat! Agar topilmasa, bugun uyga qayta olmay qolaman.",
+          "text_translation_ru": "Большое спасибо! Если не найдётся, я сегодня не смогу попасть домой.",
+          "text_translation_en": "Thank you so much! If they aren't found, I won't be able to get home today.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d21-s16",
+          "text_original": "放心，应该能找到。你开会去吧。",
+          "pinyin": "Fàngxīn, yīnggāi néng zhǎodào. Nǐ kāihuì qù ba.",
+          "text_translation": "Xotirjam bo'l, topilsa kerak. Sen yig'ilishga boraver.",
+          "text_translation_ru": "Не переживай, должны найтись. Иди на совещание.",
+          "text_translation_en": "Don't worry, they should turn up. Go to your meeting.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d21-s17",
+          "text_original": "喂，你的钥匙找到了！果然在便利店收银台，店员捡到了。",
+          "pinyin": "Wèi, nǐ de yàoshi zhǎodào le! Guǒrán zài biànlì diàn shōuyíntái, diànyuán jiǎn dào le.",
+          "text_translation": "Allo, kalitingni topdim! Haqiqatan ham do'kondagi kassada ekan, sotuvchi topib olibdi.",
+          "text_translation_ru": "Алло, твой ключ нашёлся! Как и думали, он был на кассе магазинчика, продавец его подобрал.",
+          "text_translation_en": "Hello, your keys are found! Just as expected, they were at the convenience store checkout counter, the clerk picked them up.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d21-s18",
+          "text_original": "太好了！太谢谢你了！我开完会就去拿。",
+          "pinyin": "Tài hǎo le! Tài xièxie nǐ le! Wǒ kāi wán huì jiù qù ná.",
+          "text_translation": "Juda yaxshi! Senga katta rahmat! Yig'ilish tugashi bilan borib olaman.",
+          "text_translation_ru": "Отлично! Огромное тебе спасибо! Как закончится совещание, сразу схожу заберу.",
+          "text_translation_en": "Great! Thank you so much! I'll go get them right after the meeting ends.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d21-s19",
+          "text_original": "不用谢！下次小心点，别再丢东西了。",
+          "pinyin": "Búyòng xiè! Xià cì xiǎoxīn diǎn, bié zài diū dōngxi le.",
+          "text_translation": "Arzimaydi! Keyingi safar ehtiyot bo'l, boshqa narsa yo'qotma.",
+          "text_translation_ru": "Не за что! В следующий раз будь осторожнее, больше не теряй вещи.",
+          "text_translation_en": "You're welcome! Be more careful next time, don't lose things again.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
