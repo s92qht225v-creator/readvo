@@ -1,0 +1,204 @@
+{
+  "id": "hsk4-dialogue26",
+  "slug": "booking-a-train-ticket",
+  "title": "订票",
+  "pinyin": "Dìng piào",
+  "titleTranslation": "Chipta band qilish",
+  "titleTranslation_ru": "Покупка билета",
+  "titleTranslation_en": "Booking a Ticket",
+  "level": 4,
+  "tag": "turmush",
+  "dateAdded": "2026-06-22",
+  "vocab": [
+    "高铁票",
+    "趟",
+    "到达",
+    "二等座",
+    "票价",
+    "靠窗",
+    "座位",
+    "出示",
+    "身份证",
+    "出票",
+    "进站",
+    "改签",
+    "退票",
+    "窗口",
+    "办理",
+    "手续费",
+    "原票",
+    "旅途"
+  ],
+  "sections": [
+    {
+      "id": "h4d26-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "h4d26-s1",
+          "text_original": "你好，我想买一张明天去杭州的高铁票。",
+          "pinyin": "Nǐ hǎo, wǒ xiǎng mǎi yī zhāng míngtiān qù Hángzhōu de gāotiě piào.",
+          "text_translation": "Assalomu alaykum, ertangi Xanchjouga ketadigan bitta tezyurar poyezd chiptasi olmoqchiman.",
+          "text_translation_ru": "Здравствуйте, я хочу купить один билет на скоростной поезд до Ханчжоу на завтра.",
+          "text_translation_en": "Hello, I'd like to buy a high-speed train ticket to Hangzhou for tomorrow.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d26-s2",
+          "text_original": "好的，请问您要几点的车？我们明天有好几趟车。",
+          "pinyin": "Hǎo de, qǐngwèn nín yào jǐ diǎn de chē? Wǒmen míngtiān yǒu hǎojǐ tàng chē.",
+          "text_translation": "Yaxshi, soat nechadagi poyezd kerak? Ertaga bir necha reys bor.",
+          "text_translation_ru": "Хорошо, на какое время вам поезд? У нас завтра несколько рейсов.",
+          "text_translation_en": "Sure, what time would you like? We have several trains tomorrow.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d26-s3",
+          "text_original": "上午的比较好，十点左右有吗？",
+          "pinyin": "Shàngwǔ de bǐjiào hǎo, shí diǎn zuǒyòu yǒu ma?",
+          "text_translation": "Tushdan oldingisi yaxshiroq, soat o'nlar atrofida bormi?",
+          "text_translation_ru": "Лучше утренний, есть что-нибудь около десяти?",
+          "text_translation_en": "Morning would be better — is there one around ten?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d26-s4",
+          "text_original": "有的，明天上午十点十五分有一趟，到达时间是十二点半。",
+          "pinyin": "Yǒu de, míngtiān shàngwǔ shí diǎn shíwǔ fēn yǒu yī tàng, dàodá shíjiān shì shí'èr diǎn bàn.",
+          "text_translation": "Bor, ertaga ertalab soat o'n-u o'n besh daqiqada bitta reys bor, yetib borish vaqti o'n ikki yarim.",
+          "text_translation_ru": "Есть, завтра в 10:15 один рейс, время прибытия — половина первого.",
+          "text_translation_en": "Yes, there's one at 10:15 tomorrow morning, arriving at 12:30.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d26-s5",
+          "text_original": "二等座还有票吗？多少钱？",
+          "pinyin": "Èrděng zuò hái yǒu piào ma? Duōshao qián?",
+          "text_translation": "Ikkinchi toifa o'rindiqqa chipta bormi? Qancha turadi?",
+          "text_translation_ru": "Билеты во второй класс ещё есть? Сколько стоит?",
+          "text_translation_en": "Are there still second-class seats? How much?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d26-s6",
+          "text_original": "二等座还有票，票价是一百五十八块。",
+          "pinyin": "Èrděng zuò hái yǒu piào, piàojià shì yībǎi wǔshíbā kuài.",
+          "text_translation": "Ikkinchi toifa o'rindiqqa chipta bor, narxi bir yuz ellik sakkiz yuan.",
+          "text_translation_ru": "Билеты во второй класс есть, цена — сто пятьдесят восемь юаней.",
+          "text_translation_en": "Yes, second-class is available, the price is 158 yuan.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d26-s7",
+          "text_original": "靠窗的座位还有吗？我想看风景。",
+          "pinyin": "Kàochuāng de zuòwèi hái yǒu ma? Wǒ xiǎng kàn fēngjǐng.",
+          "text_translation": "Deraza yonidagi o'rindiq bormi? Manzarani tomosha qilmoqchiman.",
+          "text_translation_ru": "Есть ли места у окна? Хочу смотреть на пейзаж.",
+          "text_translation_en": "Are there any window seats left? I'd like to see the scenery.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d26-s8",
+          "text_original": "我帮您查一下……靠窗的还有，F座，可以吗？",
+          "pinyin": "Wǒ bāng nín chá yíxià …… kàochuāng de hái yǒu, F zuò, kěyǐ ma?",
+          "text_translation": "Tekshirib ko'ray... deraza yonidagisi bor, F o'rindiq, bo'ladimi?",
+          "text_translation_ru": "Сейчас посмотрю… у окна ещё есть, место F, подойдёт?",
+          "text_translation_en": "Let me check for you… there's a window seat, seat F, is that okay?",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d26-s9",
+          "text_original": "可以。就要这张。",
+          "pinyin": "Kěyǐ. Jiù yào zhè zhāng.",
+          "text_translation": "Bo'ladi. Shu chiptani olaman.",
+          "text_translation_ru": "Подойдёт. Беру этот.",
+          "text_translation_en": "That works. I'll take this one.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d26-s10",
+          "text_original": "好的，请出示您的身份证。",
+          "pinyin": "Hǎo de, qǐng chūshì nín de shēnfènzhèng.",
+          "text_translation": "Yaxshi, shaxsiy guvohnomangizni ko'rsating.",
+          "text_translation_ru": "Хорошо, предъявите ваше удостоверение личности.",
+          "text_translation_en": "Okay, please show your ID card.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d26-s11",
+          "text_original": "给你。",
+          "pinyin": "Gěi nǐ.",
+          "text_translation": "Mana.",
+          "text_translation_ru": "Вот, пожалуйста.",
+          "text_translation_en": "Here you go.",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d26-s12",
+          "text_original": "好的，已经出票了。这是您的车票，请收好。进站的时候刷身份证就可以了。",
+          "pinyin": "Hǎo de, yǐjīng chū piào le. Zhè shì nín de chēpiào, qǐng shōu hǎo. Jìn zhàn de shíhou shuā shēnfènzhèng jiù kěyǐ le.",
+          "text_translation": "Yaxshi, chipta chiqarildi. Bu sizning chiptangiz, ehtiyot qilib saqlang. Bekatga kirayotganda shaxsiy guvohnomani skanerlasangiz bo'ldi.",
+          "text_translation_ru": "Хорошо, билет оформлен. Вот ваш билет, сохраните его. При входе на станцию просто приложите удостоверение.",
+          "text_translation_en": "Okay, the ticket has been issued. Here's your ticket, please keep it safe. When entering the station, just scan your ID card.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d26-s13",
+          "text_original": "好的，谢谢。我想问一下，如果我要改签或者退票，应该怎么办？",
+          "pinyin": "Hǎo de, xièxie. Wǒ xiǎng wèn yíxià, rúguǒ wǒ yào gǎiqiān huòzhě tuìpiào, yīnggāi zěnme bàn?",
+          "text_translation": "Yaxshi, rahmat. Bir narsani so'ramoqchiman, agar chiptani o'zgartirmoqchi yoki qaytarmoqchi bo'lsam, qanday qilaman?",
+          "text_translation_ru": "Хорошо, спасибо. Хочу спросить: если мне нужно поменять билет или вернуть его, как это сделать?",
+          "text_translation_en": "Okay, thanks. I'd like to ask — if I want to change or refund the ticket, what should I do?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d26-s14",
+          "text_original": "改签的话，开车前半小时可以在网上或者车站窗口办理。退票的话，开车前八小时以上可以退，但要收手续费。",
+          "pinyin": "Gǎiqiān dehuà, kāichē qián bàn xiǎoshí kěyǐ zài wǎngshàng huòzhě chēzhàn chuāngkǒu bànlǐ. Tuìpiào dehuà, kāichē qián bā xiǎoshí yǐshàng kěyǐ tuì, dàn yào shōu shǒuxù fèi.",
+          "text_translation": "Chiptani o'zgartirmoqchi bo'lsangiz, poyezd jo'nashidan yarim soat oldin internetda yoki bekat kassasida rasmiylashtirsangiz bo'ladi. Qaytarmoqchi bo'lsangiz, jo'nashdan sakkiz soatdan ko'proq oldin qaytarish mumkin, lekin xizmat haqi olinadi.",
+          "text_translation_ru": "Чтобы поменять билет, можно за полчаса до отправления оформить онлайн или в кассе вокзала. Для возврата — не позднее чем за восемь часов до отправления, но возьмут сервисный сбор.",
+          "text_translation_en": "To change it, you can do so online or at the station window up to half an hour before departure. For a refund, you can return it more than eight hours before departure, but a service fee applies.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d26-s15",
+          "text_original": "明白了。那如果我想改到下午，手续费多少钱？",
+          "pinyin": "Míngbai le. Nà rúguǒ wǒ xiǎng gǎi dào xiàwǔ, shǒuxù fèi duōshao qián?",
+          "text_translation": "Tushundim. Unda tushdan keyingisiga o'zgartirsam, xizmat haqi qancha bo'ladi?",
+          "text_translation_ru": "Понятно. А если я захочу перенести на вторую половину дня, сколько будет сервисный сбор?",
+          "text_translation_en": "I see. So if I want to change it to the afternoon, how much is the service fee?",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d26-s16",
+          "text_original": "改签不收费，只要改的车票价格跟原票一样就不用加钱。",
+          "pinyin": "Gǎiqiān bù shōu fèi, zhǐyào gǎi de chēpiào jiàgé gēn yuán piào yíyàng jiù búyòng jiā qián.",
+          "text_translation": "Chiptani o'zgartirish uchun haq olinmaydi, faqat yangi chipta narxi asl chipta bilan bir xil bo'lsa, qo'shimcha to'lov shart emas.",
+          "text_translation_ru": "За смену билета плата не берётся: если цена нового билета такая же, как у исходного, доплачивать не нужно.",
+          "text_translation_en": "Changing the ticket is free — as long as the new ticket costs the same as the original, there's no extra charge.",
+          "speaker": "B"
+        },
+        {
+          "id": "h4d26-s17",
+          "text_original": "好的，我记住了。谢谢！",
+          "pinyin": "Hǎo de, wǒ jìzhù le. Xièxie!",
+          "text_translation": "Yaxshi, esimda bo'ladi. Rahmat!",
+          "text_translation_ru": "Хорошо, я запомнил. Спасибо!",
+          "text_translation_en": "Okay, I've got it. Thank you!",
+          "speaker": "A"
+        },
+        {
+          "id": "h4d26-s18",
+          "text_original": "不客气！祝您旅途愉快！",
+          "pinyin": "Bú kèqi! Zhù nín lǚtú yúkuài!",
+          "text_translation": "Arzimaydi! Yo'lingiz bemalol bo'lsin!",
+          "text_translation_ru": "Не за что! Счастливого пути!",
+          "text_translation_en": "You're welcome! Have a pleasant journey!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
