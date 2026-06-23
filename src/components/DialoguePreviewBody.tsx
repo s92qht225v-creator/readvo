@@ -46,12 +46,12 @@ export function DialoguePreviewBody({ preview, language, title, description, isA
           {description && <p className="dlg-desc">{description}</p>}
         </div>
 
-        {/* First lines of the dialogue — Chinese only (no pinyin, no translation) */}
+        {/* First lines of the dialogue as chat bubbles — Chinese only
+            (no pinyin, no translation). A = left, B = right. */}
         <div className="dlg-teaser">
           {preview.teaser.map((s) => (
-            <div className="dlg-teaser__line" key={s.id}>
-              {s.speaker && <span className="dlg-teaser__speaker">{s.speaker}:</span>}
-              <span className="dlg-teaser__zh" lang="zh-Hans">{s.text_original}</span>
+            <div className={`dlg-bubble dlg-bubble--${(s.speaker || 'a').toLowerCase() === 'b' ? 'b' : 'a'}`} key={s.id}>
+              <span className="dlg-bubble__zh" lang="zh-Hans">{s.text_original}</span>
             </div>
           ))}
         </div>

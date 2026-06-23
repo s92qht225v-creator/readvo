@@ -12785,10 +12785,10 @@ body {
 .dlg-intro { padding: 14px 18px 4px; }
 .dlg-intro__title { font-size: 20px; font-weight: 700; line-height: 1.25; margin: 0 0 6px; color: #1a1a1a; }
 .dlg-desc { margin: 0; font-size: 15px; line-height: 1.6; color: #555; }
-.dlg-teaser { margin-top: 6px; }
-.dlg-teaser__line { background: #f5f5f5; border-radius: 10px; padding: 10px 12px; margin: 8px 18px; }
-.dlg-teaser__speaker { font-weight: 700; color: #b91c1c; margin-right: 6px; }
-.dlg-teaser__zh { font-size: 18px; }
+.dlg-teaser { margin-top: 6px; padding: 4px 18px; display: flex; flex-direction: column; gap: 10px; }
+.dlg-bubble { max-width: 82%; padding: 10px 14px; font-size: 18px; line-height: 1.45; }
+.dlg-bubble--a { align-self: flex-start; background: #f0f0f0; color: #1a1a1a; border-radius: 14px 14px 14px 4px; }
+.dlg-bubble--b { align-self: flex-end; background: #fdeaea; color: #1a1a1a; border-radius: 14px 14px 4px 14px; }
 .dlg-read-cta { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px; background: #b91c1c; color: #fff; border-radius: 8px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; font-size: 16px; }
 .dlg-read-cta:disabled { opacity: 0.7; cursor: default; }
 .dlg-read-cta--float { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom)); width: min(calc(100% - 32px), 560px); z-index: 80; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
