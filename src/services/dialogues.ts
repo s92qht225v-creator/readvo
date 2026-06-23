@@ -29,6 +29,12 @@ export interface DialoguePage {
   tag?: string;
   dateAdded?: string;
   audio_url?: string;
+  /** Hero image URL (Supabase). Absent → branded placeholder is used. */
+  image?: string;
+  /** Public SEO description, per locale. Absent → falls back to title translation. */
+  description_uz?: string;
+  description_ru?: string;
+  description_en?: string;
   sections: {
     id: string;
     type: string;
