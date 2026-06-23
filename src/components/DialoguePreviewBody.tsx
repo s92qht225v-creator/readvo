@@ -1,0 +1,85 @@
+'use client';
+
+import { useState } from 'react';
+import { Link } from '@/i18n/navigation';
+import type { Language } from '../types/ui-state';
+import type { DialoguePreviewData } from './dialoguePreview.types';
+import { DialogueVocab } from './DialogueVocab';
+
+interface DialoguePreviewBodyProps {
+  preview: DialoguePreviewData;
+  language: Language;
+  /** True when a real user is signed in (gates the "subscribe" vs "log in" CTA target). */
+  isAuthed: boolean;
+}
+
+const T = (uz: string, ru: string, en: string, l: Language) =>
+  ({ uz, ru, en } as Record<string, string>)[l] ?? uz;
+
+/**
+ * The public, crawlable body of a dialogue page: a Dialog teaser (first N lines)
+ * + a full vocab list, shown to anonymous visitors and search crawlers.
+ *
+ * Both tab panels are always present in the DOM (toggled with the `hidden`
+ * attribute, never conditionally rendered or lazy-fetched) so a crawler reads
+ * the vocab even while the Dialog tab is active. The gated lines + audio live in
+ * the full reader, which replaces this body once a subscriber's content loads.
+ */
+export function DialoguePreviewBody({ preview, language, isAuthed }: DialoguePreviewBodyProps) {
+  const [tab, setTab] = useState<'dialog' | 'vocab'>('dialog');
+
+  const trOf = (s: DialoguePreviewData['teaser'][number]) =>
+    language === 'ru' ? s.text_translation_ru
+    : language === 'en' ? (s.text_translation_en || s.text_translation)
+    : s.text_translation;
+
+  const tabs: { id: 'dialog' | 'vocab'; label: string }[] = [
+    { id: 'dialog', label: T('Dialog', 'Диалог', 'Dialogue', language) },
+    { id: 'vocab', label: T("So'zlar", 'Слова', 'Words', language) },
+  ];
+
+  return (
+    <>
+      <div className="dr-tabs">
+        <div className="dr-tabs__inner">
+          {tabs.map((t) => (
+            <button
+              key={t.id}
+              type="button"
+              className={`dr-tabs__tab ${tab === t.id ? 'dr-tabs__tab--active' : ''}`}
+              aria-pressed={tab === t.id}
+              onClick={() => setTab(t.id)}
+            >{t.label}</button>
+          ))}
+        </div>
+      </div>
+
+      {/* Dialog teaser — always in the DOM, hidden when the Words tab is active */}
+      <div className="dlg-teaser" hidden={tab !== 'dialog'}>
+        {preview.teaser.map((s) => (
+          <div className="dlg-teaser__line" key={s.id}>
+            <div>
+              {s.speaker && <span className="dlg-teaser__speaker">{s.speaker}: </span>}
+              <span className="dlg-teaser__zh" lang="zh-Hans">{s.text_original}</span>
+              <span className="dlg-teaser__py">{s.pinyin}</span>
+            </div>
+            <div className="dlg-teaser__tr">{trOf(s)}</div>
+          </div>
+        ))}
+        {preview.hiddenCount > 0 && (
+          <div className="dlg-teaser__lock">
+            <span>🔒 {T(`yana ${preview.hiddenCount} qator`, `ещё ${preview.hiddenCount} строк`, `${preview.hiddenCount} more lines`, language)}</span>
+          </div>
+        )}
+        <Link href={isAuthed ? '/payment' : '/login'} className="dlg-read-cta">
+          {T("O'qish va tinglash", 'Читать и слушать', 'Read & Listen', language)}
+        </Link>
+      </div>
+
+      {/* Vocab — always in the DOM, hidden when the Dialog tab is active */}
+      <div hidden={tab !== 'vocab'}>
+        <DialogueVocab words={preview.vocab} language={language} />
+      </div>
+    </>
+  );
+}

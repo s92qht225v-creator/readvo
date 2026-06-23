@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { getDialogue, loadDialoguesForBook } from '@/services';
+import { getDialogue, loadDialoguesForBook, resolveDialogueVocab } from '@/services';
+import { buildDialoguePreview } from '@/services/dialoguePreview';
 import { DialogueReader } from '@/components/DialogueReader';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 import { stripPinyinTones } from '@/utils/rubyText';
@@ -58,6 +59,13 @@ export async function generateMetadata({ params }: PageParams) {
         'x-default': `/uz/chinese/dialogues/${level}/${dialogueId}`,
       },
     } : undefined,
+    openGraph: dialogue ? {
+      title: `${hanzi} — ${translation}`,
+      description: `HSK ${num} Chinese dialogue`,
+      type: 'article',
+      // Dialogue hero image when set; otherwise the root-layout default OG image applies.
+      ...(dialogue.image ? { images: [{ url: dialogue.image }] } : {}),
+    } : undefined,
   };
 }
 
@@ -69,6 +77,9 @@ export default async function DialoguePage({ params }: PageParams) {
 
   const raw = await getDialogue(level, dialogueId);
   if (!raw) notFound();
+
+  const resolved = await resolveDialogueVocab(raw);
+  const preview = buildDialoguePreview(resolved);
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
   const translation = locale === 'ru' ? raw.titleTranslation_ru
@@ -110,6 +121,7 @@ export default async function DialoguePage({ params }: PageParams) {
         }}
         bookPath={`/chinese/${level}`}
         listPath={`/chinese/dialogues?dialhsk=${num}`}
+        preview={preview}
       />
     </>
   );

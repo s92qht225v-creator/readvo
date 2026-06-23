@@ -1,17 +1,17 @@
 'use client';
 
 import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
-import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
-import { useRequireAuth } from '../hooks/useRequireAuth';
 import { useAuth } from '../hooks/useAuth';
-import { Paywall } from './Paywall';
+import { DialogueHero } from './DialogueHero';
+import { DialoguePreviewBody } from './DialoguePreviewBody';
+import type { DialoguePreviewData } from './dialoguePreview.types';
+// BannerMenu now lives inside DialogueHero.
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
 import { protectAudioUrlSync } from '../lib/audio/token-client';
 import { resolveTtsUrl } from '../utils/ttsAudio';
 import { RubyText } from './RubyText';
 import { alignPinyinToText } from '../utils/rubyText';
-import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
 import { CoachMarkTour, dismissTip } from './CoachMark';
 import type { TourStep } from './CoachMark';
@@ -101,6 +101,7 @@ interface DialogueReaderProps {
   meta: DialogueMeta;
   bookPath: string;
   listPath?: string;
+  preview: DialoguePreviewData;   // server-rendered public slice (always present)
 }
 
 // ── Main component ─────────────────────────────────────────────────────────
@@ -112,10 +113,14 @@ const TABS = [
   { id: 'practice', uz: 'Mashq', ru: 'Практика', en: 'Practice' },
 ];
 
-export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps) {
-  const { isLoading: authLoading } = useRequireAuth();
-  const { getAccessToken } = useAuth();
+export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueReaderProps) {
+  const { getAccessToken, user, isLoading: authLoading } = useAuth();
   const [language] = useLanguage();
+
+  // Localized public description (falls back to Uzbek, then nothing).
+  const description = language === 'ru' ? preview.description_ru
+    : language === 'en' ? (preview.description_en || preview.description_uz)
+    : preview.description_uz;
   const { saveStars: saveDialogueStars } = useStars('dialogue');
 
   // Font size
@@ -444,32 +449,28 @@ export function DialogueReader({ meta, bookPath, listPath }: DialogueReaderProps
     return merged;
   }, [allSentences, language]);
 
-  if (authLoading) return <div className="loading-spinner" />;
-
   return (
     <>
-      {status === 'locked' && <Paywall />}
       <div className="dialogue-reader" style={{ fontSize: `${fontSize}%` }}>
 
-        {/* ── Hero banner — always visible, reads from meta ── */}
-        <div className="dr-hero">
-          <div className="dr-hero__watermark">对话</div>
-          <div className="dr-hero__top-row">
-            <Link href={listPath || `${bookPath}/dialogues`} className="dr-back-btn" aria-label={({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-            </Link>
-            <BannerMenu />
-          </div>
-          <div className="dr-hero__body">
-            <div className="dr-hero__level">HSK {meta.level ?? 1} · {({ uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' } as Record<string, string>)[language]}</div>
-            <h1 className="dr-hero__title">{meta.title}</h1>
-            <div className="dr-hero__pinyin">{meta.pinyin}</div>
-            <div className="dr-hero__translation">— {language === 'ru' ? meta.titleTranslation_ru : language === 'en' ? (meta.titleTranslation_en || meta.titleTranslation) : meta.titleTranslation} —</div>
-          </div>
-        </div>
+        {/* ── Image hero — always visible, reads from meta + preview image ── */}
+        <DialogueHero
+          image={preview.image}
+          title={meta.title}
+          pinyin={meta.pinyin}
+          level={meta.level ?? 1}
+          listPath={listPath || `${bookPath}/dialogues`}
+          language={language}
+        />
 
-        {/* ── Status: loading / error ── */}
-        {status === 'loading' && <div className="loading-spinner" />}
+        {description && <p className="dlg-desc">{description}</p>}
+
+        {/* ── Public preview (anonymous, loading, or locked): teaser + vocab ── */}
+        {status !== 'loaded' && status !== 'error' && (
+          <DialoguePreviewBody preview={preview} language={language} isAuthed={!!user} />
+        )}
+
+        {/* ── Status: error ── */}
         {status === 'error' && (
           <div className="page__audio-error" role="status" style={{ position: 'static', margin: '24px auto', display: 'flex', gap: 12, alignItems: 'center' }}>
             {({ uz: 'Yuklab bo\'lmadi.', ru: 'Не удалось загрузить.', en: 'Could not load.' } as Record<string, string>)[language]}
