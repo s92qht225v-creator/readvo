@@ -12780,32 +12780,18 @@ body {
   .dialogue-card__bookmark--active { animation: none; }
 }
 
-/* ── Public dialogue page: image-as-hero ───────────────────────────────── */
-.dlg-hero { position: relative; width: 100%; height: 200px; overflow: hidden; background: #b91c1c; display: flex; align-items: flex-end; }
-.dlg-hero--placeholder { background: linear-gradient(135deg, #dc2626, #b91c1c 55%, #7f1d1d); }
-.dlg-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.dlg-hero__scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05) 55%, transparent); }
-.dlg-hero__top { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; }
-.dlg-hero__back { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(0,0,0,0.32); color: #fff; flex-shrink: 0; }
-.dlg-hero__body { position: relative; z-index: 1; padding: 14px 18px; color: #fff; }
-.dlg-hero__level { font-size: 13px; opacity: 0.92; margin-bottom: 4px; }
-.dlg-hero__title { font-size: 24px; font-weight: 700; margin: 0; line-height: 1.2; color: #fff; }
-.dlg-hero__pinyin { font-size: 14px; opacity: 0.9; margin-top: 2px; }
-@media (min-width: 768px) { .dlg-hero { height: 260px; } }
-
-/* ── Public dialogue page: intro (title + description) + teaser ─────────── */
+/* ── Public dialogue page (single scroll): intro + teaser + floating CTA ── */
+.dlg-preview { padding-bottom: 96px; } /* clear the fixed Read & Listen button */
 .dlg-intro { padding: 14px 18px 4px; }
 .dlg-intro__title { font-size: 20px; font-weight: 700; line-height: 1.25; margin: 0 0 6px; color: #1a1a1a; }
 .dlg-desc { margin: 0; font-size: 15px; line-height: 1.6; color: #555; }
-.dlg-teaser__line { background: #f5f5f5; border-radius: 10px; padding: 8px 12px; margin: 8px 18px; }
-.dlg-teaser__zh { font-size: 17px; }
-.dlg-teaser__speaker { font-weight: 600; color: #b91c1c; margin-right: 2px; }
-.dlg-teaser__py { color: #888; font-size: 13px; margin-left: 6px; }
-.dlg-teaser__tr { color: #555; font-size: 13px; margin-top: 2px; }
-.dlg-teaser__lock { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 16px 18px; color: #999; font-size: 13px; }
-.dlg-teaser__lock::before, .dlg-teaser__lock::after { content: ""; flex: 1; border-top: 1px dashed #ccc; }
-.dlg-read-cta { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 8px 18px 16px; padding: 12px; background: #b91c1c; color: #fff; border-radius: 8px; font-weight: 600; text-decoration: none; border: none; width: calc(100% - 36px); cursor: pointer; font-size: 16px; }
+.dlg-teaser { margin-top: 6px; }
+.dlg-teaser__line { background: #f5f5f5; border-radius: 10px; padding: 10px 12px; margin: 8px 18px; }
+.dlg-teaser__speaker { font-weight: 700; color: #b91c1c; margin-right: 6px; }
+.dlg-teaser__zh { font-size: 18px; }
+.dlg-read-cta { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px; background: #b91c1c; color: #fff; border-radius: 8px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; font-size: 16px; }
 .dlg-read-cta:disabled { opacity: 0.7; cursor: default; }
+.dlg-read-cta--float { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom)); width: min(calc(100% - 32px), 560px); z-index: 80; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
 
 /* Public vocab — plain readable list (not the gated interactive trainer) */
 .dlg-vocab { list-style: none; margin: 8px 0 16px; padding: 0; }

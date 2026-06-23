@@ -2,7 +2,7 @@ import type { DialoguePageResolved } from './dialogues';
 import type { DialoguePreviewData, PreviewSentence } from '@/components/dialoguePreview.types';
 
 /** Number of dialogue lines shown publicly as a teaser. */
-export const TEASER_LINES = 3;
+export const TEASER_LINES = 2;
 
 /**
  * Derive the public, crawlable slice from a fully-resolved dialogue.

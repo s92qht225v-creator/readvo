@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import type { Language } from '../types/ui-state';
 import type { DialoguePreviewData } from './dialoguePreview.types';
@@ -9,9 +8,9 @@ import type { VocabItem } from '@/services/glossary';
 interface DialoguePreviewBodyProps {
   preview: DialoguePreviewData;
   language: Language;
-  /** Localized dialogue title (shown as the H2 heading above the description). */
+  /** Localized dialogue title (H2 heading above the description). */
   title: string;
-  /** SEO description shown below the tab bar. */
+  /** SEO description shown under the hero. */
   description?: string;
   /** True when a real user is signed in. Signed-in users reveal the full dialogue
    *  in place via `onReveal`; anonymous users are sent to login by the CTA link. */
@@ -28,92 +27,57 @@ const T = (uz: string, ru: string, en: string, l: Language) =>
 const meaningOf = (v: VocabItem, l: Language) => (l === 'ru' ? v.ru : l === 'en' ? (v.en || v.uz) : v.uz);
 
 /**
- * The public, crawlable body of a dialogue page: a Dialog teaser (first N lines)
- * + a full vocab list, shown to anonymous visitors and search crawlers.
- *
- * Both tab panels are always present in the DOM (toggled with the `hidden`
- * attribute, never conditionally rendered or lazy-fetched) so a crawler reads
- * the vocab even while the Dialog tab is active. The gated lines + audio live in
- * the full reader, which replaces this body once a subscriber's content loads.
+ * The public, crawlable body of a dialogue page — a single scroll (no tabs):
+ * title + description, the first lines of the dialogue (Chinese only), and the
+ * full vocab list. The gated lines + audio live in the full reader, which
+ * replaces this body once a subscriber taps the floating "Read & Listen".
  */
 export function DialoguePreviewBody({ preview, language, title, description, isAuthed, onReveal, revealing }: DialoguePreviewBodyProps) {
-  const [tab, setTab] = useState<'dialog' | 'vocab'>('dialog');
-
-  const trOf = (s: DialoguePreviewData['teaser'][number]) =>
-    language === 'ru' ? s.text_translation_ru
-    : language === 'en' ? (s.text_translation_en || s.text_translation)
-    : s.text_translation;
-
-  const tabs: { id: 'dialog' | 'vocab'; label: string }[] = [
-    { id: 'dialog', label: T('Dialog', 'Диалог', 'Dialogue', language) },
-    { id: 'vocab', label: T("So'zlar", 'Слова', 'Words', language) },
-  ];
+  const ctaLabel = revealing
+    ? T('Yuklanmoqda…', 'Загрузка…', 'Loading…', language)
+    : T("O'qish va tinglash", 'Читать и слушать', 'Read & Listen', language);
 
   return (
     <>
-      <div className="dr-tabs">
-        <div className="dr-tabs__inner">
-          {tabs.map((t) => (
-            <button
-              key={t.id}
-              type="button"
-              className={`dr-tabs__tab ${tab === t.id ? 'dr-tabs__tab--active' : ''}`}
-              aria-pressed={tab === t.id}
-              onClick={() => setTab(t.id)}
-            >{t.label}</button>
+      <div className="dlg-preview">
+        {/* Title + SEO description, under the hero */}
+        <div className="dlg-intro">
+          <h2 className="dlg-intro__title">{title}</h2>
+          {description && <p className="dlg-desc">{description}</p>}
+        </div>
+
+        {/* First lines of the dialogue — Chinese only (no pinyin, no translation) */}
+        <div className="dlg-teaser">
+          {preview.teaser.map((s) => (
+            <div className="dlg-teaser__line" key={s.id}>
+              {s.speaker && <span className="dlg-teaser__speaker">{s.speaker}:</span>}
+              <span className="dlg-teaser__zh" lang="zh-Hans">{s.text_original}</span>
+            </div>
           ))}
         </div>
+
+        {/* Full vocab list — plain, crawlable text (the interactive trainer is gated) */}
+        <ul className="dlg-vocab">
+          {preview.vocab.map((v, i) => (
+            <li className="dlg-vocab__row" key={i}>
+              <span className="dlg-vocab__zh" lang="zh-Hans">{v.zh}</span>
+              <span className="dlg-vocab__py">{v.py}</span>
+              <span className="dlg-vocab__mean">{meaningOf(v, language)}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
-      {/* Title + SEO description — below the tab bar, on the Dialog tab only
-          (kept in the DOM via `hidden` so it stays crawlable). */}
-      <div className="dlg-intro" hidden={tab !== 'dialog'}>
-        <h2 className="dlg-intro__title">{title}</h2>
-        {description && <p className="dlg-desc">{description}</p>}
-      </div>
-
-      {/* Dialog teaser — always in the DOM, hidden when the Words tab is active */}
-      <div className="dlg-teaser" hidden={tab !== 'dialog'}>
-        {preview.teaser.map((s) => (
-          <div className="dlg-teaser__line" key={s.id}>
-            <div>
-              {s.speaker && <span className="dlg-teaser__speaker">{s.speaker}: </span>}
-              <span className="dlg-teaser__zh" lang="zh-Hans">{s.text_original}</span>
-              <span className="dlg-teaser__py">{s.pinyin}</span>
-            </div>
-            <div className="dlg-teaser__tr">{trOf(s)}</div>
-          </div>
-        ))}
-        {preview.hiddenCount > 0 && (
-          <div className="dlg-teaser__lock">
-            <span>🔒 {T(`yana ${preview.hiddenCount} qator`, `ещё ${preview.hiddenCount} строк`, `${preview.hiddenCount} more lines`, language)}</span>
-          </div>
-        )}
-        {isAuthed ? (
-          <button type="button" className="dlg-read-cta" onClick={onReveal} disabled={revealing} aria-busy={revealing}>
-            {revealing
-              ? T('Yuklanmoqda…', 'Загрузка…', 'Loading…', language)
-              : T("O'qish va tinglash", 'Читать и слушать', 'Read & Listen', language)}
-          </button>
-        ) : (
-          <Link href="/login" className="dlg-read-cta">
-            {T("O'qish va tinglash", 'Читать и слушать', 'Read & Listen', language)}
-          </Link>
-        )}
-      </div>
-
-      {/* Vocab — a plain, crawlable list (the interactive flip-card trainer is
-          gated; this is just readable text for SEO + a preview). Always in the
-          DOM, hidden when the Dialog tab is active. */}
-      <ul className="dlg-vocab" hidden={tab !== 'vocab'}>
-        {preview.vocab.map((v, i) => (
-          <li className="dlg-vocab__row" key={i}>
-            <span className="dlg-vocab__zh" lang="zh-Hans">{v.zh}</span>
-            <span className="dlg-vocab__py">{v.py}</span>
-            <span className="dlg-vocab__mean">{meaningOf(v, language)}</span>
-          </li>
-        ))}
-      </ul>
+      {/* Floating "Read & Listen" — fixed, always visible */}
+      {isAuthed ? (
+        <button type="button" className="dlg-read-cta dlg-read-cta--float" onClick={onReveal} disabled={revealing} aria-busy={revealing}>
+          {ctaLabel}
+        </button>
+      ) : (
+        <Link href="/login" className="dlg-read-cta dlg-read-cta--float">
+          {ctaLabel}
+        </Link>
+      )}
     </>
   );
 }
