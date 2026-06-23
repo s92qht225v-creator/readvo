@@ -7,7 +7,10 @@ const intlMiddleware = createMiddleware(routing);
 const LOCALES = new Set(routing.locales);
 
 // Routes that require authentication (matched after stripping locale prefix)
-const PROTECTED_PATTERN = /^\/chinese\/(hsk|dialogues\/hsk|karaoke\/.|flashcards\/.|writing\/.)|^\/arabic\/dialogues\/[^/]+\/.|^\/arabic\/flashcards\/./;
+// Chinese dialogue reader pages are NOT gated here: they render a public,
+// crawlable preview (hero + description + teaser + vocab) and gate only the
+// full dialogue + audio client-side. Everything else stays login-gated.
+const PROTECTED_PATTERN = /^\/chinese\/(hsk|karaoke\/.|flashcards\/.|writing\/.)|^\/arabic\/dialogues\/[^/]+\/.|^\/arabic\/flashcards\/./;
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
