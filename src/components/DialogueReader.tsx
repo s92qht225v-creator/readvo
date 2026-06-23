@@ -119,10 +119,14 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   const { getAccessToken, user, isLoading: authLoading } = useAuth();
   const [language] = useLanguage();
 
-  // Localized public description (falls back to Uzbek, then nothing).
-  const description = language === 'ru' ? preview.description_ru
+  // Localized public description. Falls back to the title translation until a
+  // real description_* is written for the dialogue, so the preview is never blank.
+  const description = (language === 'ru' ? preview.description_ru
     : language === 'en' ? (preview.description_en || preview.description_uz)
-    : preview.description_uz;
+    : preview.description_uz)
+    || (language === 'ru' ? meta.titleTranslation_ru
+    : language === 'en' ? (meta.titleTranslation_en || meta.titleTranslation)
+    : meta.titleTranslation);
   const { saveStars: saveDialogueStars } = useStars('dialogue');
 
   // Font size

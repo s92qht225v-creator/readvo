@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import type { Language } from '../types/ui-state';
 import type { DialoguePreviewData } from './dialoguePreview.types';
-import { DialogueVocab } from './DialogueVocab';
+import type { VocabItem } from '@/services/glossary';
 
 interface DialoguePreviewBodyProps {
   preview: DialoguePreviewData;
@@ -20,6 +20,8 @@ interface DialoguePreviewBodyProps {
 
 const T = (uz: string, ru: string, en: string, l: Language) =>
   ({ uz, ru, en } as Record<string, string>)[l] ?? uz;
+
+const meaningOf = (v: VocabItem, l: Language) => (l === 'ru' ? v.ru : l === 'en' ? (v.en || v.uz) : v.uz);
 
 /**
  * The public, crawlable body of a dialogue page: a Dialog teaser (first N lines)
@@ -89,10 +91,18 @@ export function DialoguePreviewBody({ preview, language, isAuthed, onReveal, rev
         )}
       </div>
 
-      {/* Vocab — always in the DOM, hidden when the Dialog tab is active */}
-      <div hidden={tab !== 'vocab'}>
-        <DialogueVocab words={preview.vocab} language={language} />
-      </div>
+      {/* Vocab — a plain, crawlable list (the interactive flip-card trainer is
+          gated; this is just readable text for SEO + a preview). Always in the
+          DOM, hidden when the Dialog tab is active. */}
+      <ul className="dlg-vocab" hidden={tab !== 'vocab'}>
+        {preview.vocab.map((v, i) => (
+          <li className="dlg-vocab__row" key={i}>
+            <span className="dlg-vocab__zh" lang="zh-Hans">{v.zh}</span>
+            <span className="dlg-vocab__py">{v.py}</span>
+            <span className="dlg-vocab__mean">{meaningOf(v, language)}</span>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
