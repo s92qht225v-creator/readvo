@@ -65,8 +65,9 @@ export function DialoguePreviewBody({ preview, language, title, description, isA
         </div>
       </div>
 
-      {/* Title + SEO description — below the tab bar, shown on every tab */}
-      <div className="dlg-intro">
+      {/* Title + SEO description — below the tab bar, on the Dialog tab only
+          (kept in the DOM via `hidden` so it stays crawlable). */}
+      <div className="dlg-intro" hidden={tab !== 'dialog'}>
         <h2 className="dlg-intro__title">{title}</h2>
         {description && <p className="dlg-desc">{description}</p>}
       </div>
