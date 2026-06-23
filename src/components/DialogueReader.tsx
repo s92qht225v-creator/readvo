@@ -4,7 +4,6 @@ import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react'
 import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
-import { DialogueHero } from './DialogueHero';
 import { DialoguePreviewBody } from './DialoguePreviewBody';
 import { BannerMenu } from './BannerMenu';
 import { Paywall } from './Paywall';
@@ -461,36 +460,25 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
     <>
       <div className="dialogue-reader" style={{ fontSize: `${fontSize}%` }}>
 
-        {/* ── Hero — classic banner in the full reader, image hero on the public preview ── */}
-        {status === 'loaded' && dialogue ? (
-          <div className="dr-hero">
-            <div className="dr-hero__watermark">对话</div>
-            <div className="dr-hero__top-row">
-              <Link href={listPath || `${bookPath}/dialogues`} className="dr-back-btn" aria-label={({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-              </Link>
-              <BannerMenu />
-            </div>
-            <div className="dr-hero__body">
-              <div className="dr-hero__level">HSK {meta.level ?? 1} · {({ uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' } as Record<string, string>)[language]}</div>
-              <h1 className="dr-hero__title">{meta.title}</h1>
-              <div className="dr-hero__pinyin">{meta.pinyin}</div>
-              <div className="dr-hero__translation">— {language === 'ru' ? meta.titleTranslation_ru : language === 'en' ? (meta.titleTranslation_en || meta.titleTranslation) : meta.titleTranslation} —</div>
-            </div>
+        {/* ── Classic banner hero — same across the app ── */}
+        <div className="dr-hero">
+          <div className="dr-hero__watermark">对话</div>
+          <div className="dr-hero__top-row">
+            <Link href={listPath || `${bookPath}/dialogues`} className="dr-back-btn" aria-label={({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </Link>
+            <BannerMenu />
           </div>
-        ) : (
-          <>
-            <DialogueHero
-              image={preview.image}
-              title={meta.title}
-              pinyin={meta.pinyin}
-              level={meta.level ?? 1}
-              listPath={listPath || `${bookPath}/dialogues`}
-              language={language}
-            />
-            {description && <p className="dlg-desc">{description}</p>}
-          </>
-        )}
+          <div className="dr-hero__body">
+            <div className="dr-hero__level">HSK {meta.level ?? 1} · {({ uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' } as Record<string, string>)[language]}</div>
+            <h1 className="dr-hero__title">{meta.title}</h1>
+            <div className="dr-hero__pinyin">{meta.pinyin}</div>
+            <div className="dr-hero__translation">— {language === 'ru' ? meta.titleTranslation_ru : language === 'en' ? (meta.titleTranslation_en || meta.titleTranslation) : meta.titleTranslation} —</div>
+          </div>
+        </div>
+
+        {/* ── SEO description (public preview only, below the hero) ── */}
+        {status !== 'loaded' && description && <p className="dlg-desc">{description}</p>}
 
         {/* ── Public preview — until the user clicks "Read & Listen" ── */}
         {status !== 'loaded' && status !== 'error' && !(status === 'locked' && revealRequested) && (

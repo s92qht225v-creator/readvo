@@ -38,12 +38,20 @@ export async function generateMetadata({ params }: PageParams) {
   const hanzi = dialogue ? dialogue.title.replace(/[？！。，、；：""''（）…—]+/g, '') : '';
   const flatPinyin = dialogue ? stripPinyinTones(dialogue.pinyin) : '';
   const dialogueLabel = ({ uz: 'Xitoy tili dialogi', ru: 'Диалог китайского языка', en: 'Chinese Dialogue' } as Record<string, string>)[locale] || 'Chinese Dialogue';
+  // Prefer a hand-written SEO description for this dialogue when present.
+  const customDescription = dialogue
+    ? (locale === 'ru' ? dialogue.description_ru
+      : locale === 'en' ? (dialogue.description_en || dialogue.description_uz)
+      : dialogue.description_uz)
+    : undefined;
 
   return {
     title: dialogue
       ? `${hanzi} ${flatPinyin} — "${translation}" ${dialogueLabel} | HSK ${num}`
       : ({ uz: `HSK ${num} xitoy tili dialogi`, ru: `Диалог HSK ${num} китайского языка`, en: `HSK ${num} Chinese Dialogue` } as Record<string, string>)[locale] || `HSK ${num} xitoy tili dialogi`,
-    description: dialogue
+    description: customDescription
+      ? customDescription
+      : dialogue
       ? ({
           uz: `HSK ${num} xitoy tili dialogi: ${dialogue.title} (${dialogue.pinyin}) — ${dialogue.titleTranslation}. Pinyin va tarjima bilan o'qing.`,
           ru: `Диалог китайского языка HSK ${num}: ${dialogue.title} (${dialogue.pinyin}) — ${dialogue.titleTranslation_ru}. Читайте с пиньинь и переводом.`,
