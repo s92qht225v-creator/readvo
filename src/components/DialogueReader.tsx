@@ -5,6 +5,7 @@ import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
 import { DialogueHero } from './DialogueHero';
 import { DialoguePreviewBody } from './DialoguePreviewBody';
+import { Paywall } from './Paywall';
 import type { DialoguePreviewData } from './dialoguePreview.types';
 // BannerMenu now lives inside DialogueHero.
 import { useAudioPlayer } from '../hooks/useAudioPlayer';
@@ -150,12 +151,14 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   const [dialogue, setDialogue] = useState<DialogueData | null>(null);
   const [status, setStatus] = useState<'loading' | 'loaded' | 'locked' | 'error'>('loading');
   const [reloadKey, setReloadKey] = useState(0);
+  // The public preview shows until the user clicks "Read & Listen". The full
+  // dialogue is fetched only on that explicit request (no auto-advance flash).
+  const [revealRequested, setRevealRequested] = useState(false);
 
   useEffect(() => {
-    // Wait until auth has resolved before fetching/deciding locked — avoids a
-    // spurious Paywall flash if getAccessToken() were transiently null during
-    // hydration. Re-runs when authLoading flips false.
-    if (authLoading) return;
+    // Only fetch the gated full dialogue after the user asks for it, and once
+    // auth has resolved (so getAccessToken() returns the real token).
+    if (authLoading || !revealRequested) return;
     let cancelled = false;
     (async () => {
       setStatus('loading');
@@ -178,7 +181,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
       }
     })();
     return () => { cancelled = true; };
-  }, [meta.book, meta.slug, getAccessToken, reloadKey, authLoading]);
+  }, [meta.book, meta.slug, getAccessToken, reloadKey, authLoading, revealRequested]);
 
   // ── Null-safe derived data (hooks must always run — dialogue may be null) ──
 
@@ -465,10 +468,19 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
 
         {description && <p className="dlg-desc">{description}</p>}
 
-        {/* ── Public preview (anonymous, loading, or locked): teaser + vocab ── */}
-        {status !== 'loaded' && status !== 'error' && (
-          <DialoguePreviewBody preview={preview} language={language} isAuthed={!!user} />
+        {/* ── Public preview — until the user clicks "Read & Listen" ── */}
+        {status !== 'loaded' && status !== 'error' && !(status === 'locked' && revealRequested) && (
+          <DialoguePreviewBody
+            preview={preview}
+            language={language}
+            isAuthed={!!user}
+            onReveal={() => setRevealRequested(true)}
+            revealing={revealRequested && status === 'loading'}
+          />
         )}
+
+        {/* ── Signed in but not subscribed: paywall after a reveal attempt ── */}
+        {status === 'locked' && revealRequested && <Paywall />}
 
         {/* ── Status: error ── */}
         {status === 'error' && (

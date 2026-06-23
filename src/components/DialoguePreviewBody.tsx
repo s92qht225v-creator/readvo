@@ -9,8 +9,13 @@ import { DialogueVocab } from './DialogueVocab';
 interface DialoguePreviewBodyProps {
   preview: DialoguePreviewData;
   language: Language;
-  /** True when a real user is signed in (gates the "subscribe" vs "log in" CTA target). */
+  /** True when a real user is signed in. Signed-in users reveal the full dialogue
+   *  in place via `onReveal`; anonymous users are sent to login by the CTA link. */
   isAuthed: boolean;
+  /** Called when a signed-in user clicks "Read & Listen" to load the full dialogue. */
+  onReveal: () => void;
+  /** True while the full dialogue is being fetched after a reveal click. */
+  revealing: boolean;
 }
 
 const T = (uz: string, ru: string, en: string, l: Language) =>
@@ -25,7 +30,7 @@ const T = (uz: string, ru: string, en: string, l: Language) =>
  * the vocab even while the Dialog tab is active. The gated lines + audio live in
  * the full reader, which replaces this body once a subscriber's content loads.
  */
-export function DialoguePreviewBody({ preview, language, isAuthed }: DialoguePreviewBodyProps) {
+export function DialoguePreviewBody({ preview, language, isAuthed, onReveal, revealing }: DialoguePreviewBodyProps) {
   const [tab, setTab] = useState<'dialog' | 'vocab'>('dialog');
 
   const trOf = (s: DialoguePreviewData['teaser'][number]) =>
@@ -71,9 +76,17 @@ export function DialoguePreviewBody({ preview, language, isAuthed }: DialoguePre
             <span>🔒 {T(`yana ${preview.hiddenCount} qator`, `ещё ${preview.hiddenCount} строк`, `${preview.hiddenCount} more lines`, language)}</span>
           </div>
         )}
-        <Link href={isAuthed ? '/payment' : '/login'} className="dlg-read-cta">
-          {T("O'qish va tinglash", 'Читать и слушать', 'Read & Listen', language)}
-        </Link>
+        {isAuthed ? (
+          <button type="button" className="dlg-read-cta" onClick={onReveal} disabled={revealing} aria-busy={revealing}>
+            {revealing
+              ? T('Yuklanmoqda…', 'Загрузка…', 'Loading…', language)
+              : T("O'qish va tinglash", 'Читать и слушать', 'Read & Listen', language)}
+          </button>
+        ) : (
+          <Link href="/login" className="dlg-read-cta">
+            {T("O'qish va tinglash", 'Читать и слушать', 'Read & Listen', language)}
+          </Link>
+        )}
       </div>
 
       {/* Vocab — always in the DOM, hidden when the Dialog tab is active */}
