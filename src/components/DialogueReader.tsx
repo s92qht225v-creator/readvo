@@ -118,14 +118,16 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   const { getAccessToken, user, isLoading: authLoading } = useAuth();
   const [language] = useLanguage();
 
+  // Localized title translation — used as the preview's H2 heading.
+  const titleTr = language === 'ru' ? meta.titleTranslation_ru
+    : language === 'en' ? (meta.titleTranslation_en || meta.titleTranslation)
+    : meta.titleTranslation;
   // Localized public description. Falls back to the title translation until a
   // real description_* is written for the dialogue, so the preview is never blank.
   const description = (language === 'ru' ? preview.description_ru
     : language === 'en' ? (preview.description_en || preview.description_uz)
     : preview.description_uz)
-    || (language === 'ru' ? meta.titleTranslation_ru
-    : language === 'en' ? (meta.titleTranslation_en || meta.titleTranslation)
-    : meta.titleTranslation);
+    || titleTr;
   const { saveStars: saveDialogueStars } = useStars('dialogue');
 
   // Font size
@@ -477,14 +479,14 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
           </div>
         </div>
 
-        {/* ── SEO description (public preview only, below the hero) ── */}
-        {status !== 'loaded' && description && <p className="dlg-desc">{description}</p>}
 
         {/* ── Public preview — until the user clicks "Read & Listen" ── */}
         {status !== 'loaded' && status !== 'error' && !(status === 'locked' && revealRequested) && (
           <DialoguePreviewBody
             preview={preview}
             language={language}
+            title={titleTr}
+            description={description}
             isAuthed={!!user}
             onReveal={() => setRevealRequested(true)}
             revealing={revealRequested && status === 'loading'}

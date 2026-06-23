@@ -9,6 +9,10 @@ import type { VocabItem } from '@/services/glossary';
 interface DialoguePreviewBodyProps {
   preview: DialoguePreviewData;
   language: Language;
+  /** Localized dialogue title (shown as the H2 heading above the description). */
+  title: string;
+  /** SEO description shown below the tab bar. */
+  description?: string;
   /** True when a real user is signed in. Signed-in users reveal the full dialogue
    *  in place via `onReveal`; anonymous users are sent to login by the CTA link. */
   isAuthed: boolean;
@@ -32,7 +36,7 @@ const meaningOf = (v: VocabItem, l: Language) => (l === 'ru' ? v.ru : l === 'en'
  * the vocab even while the Dialog tab is active. The gated lines + audio live in
  * the full reader, which replaces this body once a subscriber's content loads.
  */
-export function DialoguePreviewBody({ preview, language, isAuthed, onReveal, revealing }: DialoguePreviewBodyProps) {
+export function DialoguePreviewBody({ preview, language, title, description, isAuthed, onReveal, revealing }: DialoguePreviewBodyProps) {
   const [tab, setTab] = useState<'dialog' | 'vocab'>('dialog');
 
   const trOf = (s: DialoguePreviewData['teaser'][number]) =>
@@ -59,6 +63,12 @@ export function DialoguePreviewBody({ preview, language, isAuthed, onReveal, rev
             >{t.label}</button>
           ))}
         </div>
+      </div>
+
+      {/* Title + SEO description — below the tab bar, shown on every tab */}
+      <div className="dlg-intro">
+        <h2 className="dlg-intro__title">{title}</h2>
+        {description && <p className="dlg-desc">{description}</p>}
       </div>
 
       {/* Dialog teaser — always in the DOM, hidden when the Words tab is active */}
