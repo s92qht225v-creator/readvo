@@ -36,6 +36,35 @@ test('passes image, description and vocab through unchanged', () => {
   assert.equal(p.vocab[0].zh, '你好');
 });
 
+test('skips a leading greeting exchange so the teaser shows the real lines', () => {
+  const withGreetings = {
+    id: 'd', title: '', pinyin: '', titleTranslation: '', titleTranslation_ru: '', level: 1,
+    sections: [{ id: 's', type: 'text', heading: '', subheading: '', sentences: [
+      { id: '1', text_original: '你好！', pinyin: '', text_translation: '', text_translation_ru: '', speaker: 'A' },
+      { id: '2', text_original: '你好！', pinyin: '', text_translation: '', text_translation_ru: '', speaker: 'B' },
+      { id: '3', text_original: '你叫什么名字？', pinyin: '', text_translation: '', text_translation_ru: '', speaker: 'A' },
+      { id: '4', text_original: '我叫李明。', pinyin: '', text_translation: '', text_translation_ru: '', speaker: 'B' },
+    ] }],
+    vocab: [],
+  } as unknown as Parameters<typeof buildDialoguePreview>[0];
+  const p = buildDialoguePreview(withGreetings);
+  assert.deepEqual(p.teaser.map((s) => s.text_original), ['你叫什么名字？', '我叫李明。']);
+});
+
+test('keeps greetings when too few non-greeting lines remain', () => {
+  const allGreetings = {
+    id: 'd', title: '', pinyin: '', titleTranslation: '', titleTranslation_ru: '', level: 1,
+    sections: [{ id: 's', type: 'text', heading: '', subheading: '', sentences: [
+      { id: '1', text_original: '你好！', pinyin: '', text_translation: '', text_translation_ru: '', speaker: 'A' },
+      { id: '2', text_original: '你好！', pinyin: '', text_translation: '', text_translation_ru: '', speaker: 'B' },
+    ] }],
+    vocab: [],
+  } as unknown as Parameters<typeof buildDialoguePreview>[0];
+  const p = buildDialoguePreview(allGreetings);
+  assert.equal(p.teaser.length, 2);
+  assert.equal(p.teaser[0].text_original, '你好！');
+});
+
 test('handles a dialogue with no vocab and no sections gracefully', () => {
   const empty = { id: 'd', title: '', pinyin: '', titleTranslation: '', titleTranslation_ru: '', level: 1, sections: [] } as unknown as Parameters<typeof buildDialoguePreview>[0];
   const p = buildDialoguePreview(empty);

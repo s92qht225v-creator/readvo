@@ -4,14 +4,23 @@ import type { DialoguePreviewData, PreviewSentence } from '@/components/dialogue
 /** Number of dialogue lines shown publicly as a teaser. */
 export const TEASER_LINES = 2;
 
+/** Bare greetings — skipped at the start of a teaser so it surfaces the real exchange. */
+const GREETINGS = new Set(['你好', '您好', '你们好', '大家好', '喂', '嗨', '哈喽', '哈啰']);
+const stripPunct = (t: string) => t.replace(/[\s！!。.,，、；;：:？?~～…—]+/g, '');
+
 /**
  * Derive the public, crawlable slice from a fully-resolved dialogue.
- * Public = image, description, the first TEASER_LINES lines, and ALL vocab.
+ * Public = image, description, TEASER_LINES dialogue lines, and ALL vocab.
+ * Leading bare-greeting lines ("你好 / 你好") are skipped so the teaser shows the
+ * substantive exchange — but only when enough lines remain after the greetings.
  * Everything else (remaining lines, audio) stays gated and is never returned here.
  */
 export function buildDialoguePreview(d: DialoguePageResolved): DialoguePreviewData {
   const allSentences = (d.sections ?? []).flatMap((s) => s.sentences ?? []);
-  const teaser: PreviewSentence[] = allSentences.slice(0, TEASER_LINES).map((s) => ({
+  let start = 0;
+  while (start < allSentences.length && GREETINGS.has(stripPunct(allSentences[start].text_original ?? ''))) start++;
+  const source = allSentences.length - start >= TEASER_LINES ? allSentences.slice(start) : allSentences;
+  const teaser: PreviewSentence[] = source.slice(0, TEASER_LINES).map((s) => ({
     id: s.id,
     text_original: s.text_original,
     pinyin: s.pinyin,
