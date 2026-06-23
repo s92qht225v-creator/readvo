@@ -12784,7 +12784,9 @@ body {
 .dlg-preview { padding-bottom: 96px; } /* clear the fixed Read & Listen button */
 .dlg-intro { padding: 14px 18px 6px; }
 .dlg-intro__title { font-size: 20px; font-weight: 700; line-height: 1.25; margin: 0 0 8px; color: #1a1a1a; }
-.dlg-desc { margin: 0; background: #fff; border-radius: 12px; padding: 12px 14px; font-size: 15px; line-height: 1.6; color: #444; box-shadow: 0 6px 18px rgba(0,0,0,0.10); }
+/* Negative side margin = card padding, so the TEXT aligns with the title and
+   vocab at the 18px edge while the card itself extends wider behind it. */
+.dlg-desc { margin: 0 -14px; background: #fff; border-radius: 12px; padding: 12px 14px; font-size: 15px; line-height: 1.6; color: #444; box-shadow: 0 6px 18px rgba(0,0,0,0.10); }
 .dlg-teaser { margin-top: 6px; padding: 4px 18px; display: flex; flex-direction: column; gap: 10px; }
 .dlg-bubble { max-width: 82%; padding: 10px 14px; font-size: 18px; line-height: 1.45; box-shadow: 0 3px 10px rgba(0,0,0,0.10); }
 .dlg-bubble--a { align-self: flex-start; background: #fff; color: #1a1a1a; border-radius: 14px 14px 14px 4px; }
