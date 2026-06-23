@@ -1,6 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { loadBlogPosts } from '@/services/blog';
+import { loadDialoguesForBook } from '@/services';
 import { routing } from '@/i18n/routing';
+
+const HSK_BOOKS = ['hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6'];
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
 const locales = routing.locales;
@@ -25,18 +28,25 @@ function localeEntries(urlPath: string, opts: { changeFrequency: MetadataRoute.S
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Only publicly crawlable pages belong in the sitemap. All `/chinese/hsk*`
-  // content (dialogues, grammar, flashcards, karaoke, writing) sits behind the
-  // login wall — `src/proxy.ts` 307-redirects Googlebot to /login — so listing
-  // those URLs only advertises pages crawlers can never read. The crawlable
-  // surface is the marketing/landing pages: home, the `/chinese` catalog
-  // (public; the middleware only gates `/chinese/hsk*`), and the blog.
+  // Only publicly crawlable pages belong in the sitemap. The catalog/landing
+  // pages are public, as are the individual Chinese dialogue reader pages —
+  // each renders a public preview (hero + description + teaser + vocab) and
+  // gates only the full dialogue. Other `/chinese/*` reader content (flashcards,
+  // karaoke, writing) stays behind the login wall, so only its catalog is listed.
   const blogPosts = await loadBlogPosts();
 
   const entries: MetadataRoute.Sitemap = [];
 
   entries.push(...localeEntries('', { changeFrequency: 'monthly', priority: 1 }));
   entries.push(...localeEntries('/chinese/dialogues', { changeFrequency: 'weekly', priority: 0.9 }));
+
+  // Individual Chinese dialogue reader pages (public preview — crawlable).
+  for (const book of HSK_BOOKS) {
+    const dialogues = await loadDialoguesForBook(book);
+    for (const d of dialogues) {
+      entries.push(...localeEntries(`/chinese/dialogues/${book}/${d.slug}`, { changeFrequency: 'monthly', priority: 0.7 }));
+    }
+  }
   entries.push(...localeEntries('/chinese/writing', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/chinese/flashcards', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/chinese/karaoke', { changeFrequency: 'weekly', priority: 0.8 }));

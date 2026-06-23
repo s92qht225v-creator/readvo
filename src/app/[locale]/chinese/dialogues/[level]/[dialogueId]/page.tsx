@@ -59,6 +59,13 @@ export async function generateMetadata({ params }: PageParams) {
         'x-default': `/uz/chinese/dialogues/${level}/${dialogueId}`,
       },
     } : undefined,
+    openGraph: dialogue ? {
+      title: `${hanzi} — ${translation}`,
+      description: `HSK ${num} Chinese dialogue`,
+      type: 'article',
+      // Dialogue hero image when set; otherwise the root-layout default OG image applies.
+      ...(dialogue.image ? { images: [{ url: dialogue.image }] } : {}),
+    } : undefined,
   };
 }
 
