@@ -6,9 +6,9 @@
   "titleTranslation": "Ozish",
   "titleTranslation_ru": "Похудение",
   "titleTranslation_en": "Losing weight",
-  "description_uz": "«So'nggi paytlarda go'sht yemayapsanmi?» — ikki do'stning parhez va vazn yo'qotish haqidagi erkin suhbati. Bu suhbat odat haqida so'rash (最近, 吗), oddiy sabab aytish (因为, 在减肥) va daraja bildirishni (有一点) yoritadi. Tanish mavzu, foydali oziq-ovqat so'zlari (肉, 水果, 蔬菜) — va tabiiy bo'lguncha takrorlash uchun yetarlicha qisqa. Takrorlash va gapirishga ishonch hosil qilish uchun ideal.",
-  "description_ru": "«Ты в последнее время не ешь мясо?» — непринуждённый разговор двух друзей о диете и похудении. Этот диалог показывает, как спрашивать о привычках (最近, 吗), называть простые причины (因为, 在减肥) и выражать степень (有一点). Близкая тема, полезная лексика о еде (肉, 水果, 蔬菜) — и достаточно короткий, чтобы повторять до естественности. Отлично для шэдоуинга и уверенности в речи.",
-  "description_en": "«You don't eat meat these days?» — A casual chat between two friends about dieting and losing weight. This exchange highlights asking about habits (最近, 吗), giving simple reasons (因为, 在减肥), and expressing degrees (有一点). Relatable topic, useful food vocabulary (肉, 水果, 蔬菜)—and short enough to repeat until natural. Perfect for shadowing and building speaking confidence.",
+  "description_uz": "«So'nggi paytlarda go'sht yemayapsanmi?» — ikki do'stning parhez va vazn yo'qotish haqidagi erkin suhbati. Bu suhbat odat haqida so'rash, oddiy sabab aytish va daraja bildirishni yoritadi. Tanish mavzu, foydali oziq-ovqat so'zlari — va tabiiy bo'lguncha takrorlash uchun yetarlicha qisqa. Takrorlash va gapirishga ishonch hosil qilish uchun ideal.",
+  "description_ru": "«Ты в последнее время не ешь мясо?» — непринуждённый разговор двух друзей о диете и похудении. Этот диалог показывает, как спрашивать о привычках, называть простые причины и выражать степень. Близкая тема, полезная лексика о еде — и достаточно короткий, чтобы повторять до естественности. Отлично для шэдоуинга и уверенности в речи.",
+  "description_en": "«You don't eat meat these days?» — A casual chat between two friends about dieting and losing weight. This exchange highlights asking about habits, giving simple reasons, and expressing degrees. Relatable topic, useful food vocabulary—and short enough to repeat until natural. Perfect for shadowing and building speaking confidence.",
   "category_uz": "Ovqat va turmush tarzi",
   "category_ru": "Еда и образ жизни",
   "category_en": "Food & Lifestyle",
@@ -29,12 +29,68 @@
           "text_translation_en": "Aren't you eating meat lately?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 3], "p": "zuìjìn", "t": "yaqinda", "tr": "недавно" },
-            { "i": [3, 4], "p": "bù", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [4, 5], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
-            { "i": [5, 6], "p": "ròu", "t": "go'sht", "tr": "мясо" },
-            { "i": [6, 7], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "zuìjìn",
+              "t": "yaqinda",
+              "tr": "недавно"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ròu",
+              "t": "go'sht",
+              "tr": "мясо"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ]
         },
         {
@@ -46,10 +102,48 @@
           "text_translation_en": "Right. I'm losing weight.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "duì", "t": "to'g'ri", "tr": "правильно", "h": 1, "l": 1 },
-            { "i": [2, 3], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [3, 4], "p": "zài", "t": "(-yapti)", "tr": "(прогрессив)", "h": 1, "l": 7 },
-            { "i": [4, 6], "p": "jiǎnféi", "t": "ozmoq", "tr": "худеть" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "duì",
+              "t": "to'g'ri",
+              "tr": "правильно",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "zài",
+              "t": "(-yapti)",
+              "tr": "(прогрессив)",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "jiǎnféi",
+              "t": "ozmoq",
+              "tr": "худеть"
+            }
           ]
         },
         {
@@ -61,11 +155,55 @@
           "text_translation_en": "Why? You're not fat!",
           "speaker": "A",
           "words": [
-            { "i": [0, 3], "p": "wèishénme", "t": "nega", "tr": "почему" },
-            { "i": [4, 5], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [5, 6], "p": "bú", "t": "emas", "tr": "не", "h": 1, "l": 2 },
-            { "i": [6, 7], "p": "pàng", "t": "semiz", "tr": "толстый" },
-            { "i": [7, 8], "p": "a", "t": "(ta'kid)", "tr": "(восклицание)" }
+            {
+              "i": [
+                0,
+                3
+              ],
+              "p": "wèishénme",
+              "t": "nega",
+              "tr": "почему"
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "bú",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "pàng",
+              "t": "semiz",
+              "tr": "толстый"
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "a",
+              "t": "(ta'kid)",
+              "tr": "(восклицание)"
+            }
           ]
         },
         {
@@ -77,10 +215,44 @@
           "text_translation_en": "I want to be a bit thinner.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "wǒ", "t": "men", "tr": "я", "h": 1, "l": 2 },
-            { "i": [1, 2], "p": "xiǎng", "t": "xohlamoq", "tr": "хотеть" },
-            { "i": [2, 3], "p": "shòu", "t": "ozg'in", "tr": "худой" },
-            { "i": [3, 5], "p": "yì diǎn", "t": "bir oz", "tr": "немного" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "xiǎng",
+              "t": "xohlamoq",
+              "tr": "хотеть"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "shòu",
+              "t": "ozg'in",
+              "tr": "худой"
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "yì diǎn",
+              "t": "bir oz",
+              "tr": "немного"
+            }
           ]
         },
         {
@@ -92,10 +264,50 @@
           "text_translation_en": "What do you eat now?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 3], "p": "xiànzài", "t": "hozir", "tr": "сейчас", "h": 1, "l": 5 },
-            { "i": [3, 4], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
-            { "i": [4, 6], "p": "shénme", "t": "nima", "tr": "что", "h": 1, "l": 3 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "xiànzài",
+              "t": "hozir",
+              "tr": "сейчас",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "shénme",
+              "t": "nima",
+              "tr": "что",
+              "h": 1,
+              "l": 3
+            }
           ]
         },
         {
@@ -107,10 +319,46 @@
           "text_translation_en": "I eat fruit and vegetables.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "chī", "t": "yemoq", "tr": "есть", "h": 1, "l": 11 },
-            { "i": [1, 3], "p": "shuǐguǒ", "t": "meva", "tr": "фрукты" },
-            { "i": [3, 4], "p": "hé", "t": "va", "tr": "и", "h": 1, "l": 4 },
-            { "i": [4, 6], "p": "shūcài", "t": "sabzavot", "tr": "овощи" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "shuǐguǒ",
+              "t": "meva",
+              "tr": "фрукты"
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "hé",
+              "t": "va",
+              "tr": "и",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "shūcài",
+              "t": "sabzavot",
+              "tr": "овощи"
+            }
           ]
         },
         {
@@ -122,9 +370,37 @@
           "text_translation_en": "Are you hungry?",
           "speaker": "A",
           "words": [
-            { "i": [0, 1], "p": "nǐ", "t": "sen", "tr": "ты", "h": 1, "l": 1 },
-            { "i": [1, 2], "p": "è", "t": "och", "tr": "голодный" },
-            { "i": [2, 3], "p": "ma", "t": "(so'roq)", "tr": "(вопрос)", "h": 1, "l": 2 }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "è",
+              "t": "och",
+              "tr": "голодный"
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "ma",
+              "t": "(so'roq)",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
           ]
         },
         {
@@ -136,8 +412,26 @@
           "text_translation_en": "A little.",
           "speaker": "B",
           "words": [
-            { "i": [0, 1], "p": "yǒu", "t": "bor", "tr": "есть", "h": 1, "l": 4 },
-            { "i": [1, 3], "p": "yì diǎn", "t": "bir oz", "tr": "немного" }
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "есть",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "yì diǎn",
+              "t": "bir oz",
+              "tr": "немного"
+            }
           ]
         }
       ]
