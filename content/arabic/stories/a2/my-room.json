@@ -225,7 +225,12 @@
       "text_translation_ru": "Я счастлив в ней.",
       "text_translation_en": "I am happy in it.",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/s22.mp3",
-      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/female/s22.mp3"
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/female/s22.mp3",
+      "ar_m": "أَنَا سَعِيدٌ فِيهَا.",
+      "translit_m": "anā saʿīdun fīhā.",
+      "ar_f": "أَنَا سَعِيدَةٌ فِيهَا.",
+      "translit_f": "anā saʿīdatun fīhā.",
+      "text_translation_ru_f": "Я счастлива в ней."
     }
   ]
 }
