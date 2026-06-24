@@ -239,294 +239,336 @@
       "translit": "abyaḍ",
       "uz": "oq",
       "ru": "белый",
-      "en": "white"
+      "en": "white",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w01.mp3"
     },
     {
-      "ar": "أَجْلِسُ",
-      "translit": "ajlisu",
-      "uz": "o'tiraman",
-      "ru": "я сижу",
-      "en": "I sit"
+      "ar": "يَجْلِسُ",
+      "translit": "yajlisu",
+      "uz": "o'tirmoq",
+      "ru": "сидеть",
+      "en": "to sit",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w02.mp3"
     },
     {
       "ar": "أَزْرَق",
       "translit": "azraq",
       "uz": "ko'k",
       "ru": "синий",
-      "en": "blue"
+      "en": "blue",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w03.mp3"
     },
     {
       "ar": "أَصْفَر",
       "translit": "aṣfar",
       "uz": "sariq",
       "ru": "жёлтый",
-      "en": "yellow"
+      "en": "yellow",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w04.mp3"
     },
     {
-      "ar": "أَكْتُبُ",
-      "translit": "aktubu",
-      "uz": "yozaman",
-      "ru": "я пишу",
-      "en": "I write"
+      "ar": "يَكْتُبُ",
+      "translit": "yaktubu",
+      "uz": "yozmoq",
+      "ru": "писать",
+      "en": "to write",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w05.mp3"
     },
     {
-      "ar": "أَقْرَأُ",
-      "translit": "aqraʾu",
-      "uz": "o'qiyman",
-      "ru": "я читаю",
-      "en": "I read"
+      "ar": "يَقْرَأُ",
+      "translit": "yaqraʾu",
+      "uz": "o'qimoq",
+      "ru": "читать",
+      "en": "to read",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w06.mp3"
     },
     {
       "ar": "أَنَا",
       "translit": "anā",
       "uz": "men",
       "ru": "я",
-      "en": "I"
+      "en": "I",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w07.mp3"
     },
     {
-      "ar": "أُحِبُّ",
-      "translit": "uḥibbu",
-      "uz": "yaxshi ko'raman",
-      "ru": "я люблю",
-      "en": "I like / love"
+      "ar": "يُحِبُّ",
+      "translit": "yuḥibbu",
+      "uz": "yoqtirmoq / sevmoq",
+      "ru": "любить",
+      "en": "to like / love",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w08.mp3"
     },
     {
       "ar": "بِجَانِبِ",
       "translit": "bijānibi",
       "uz": "yonida",
       "ru": "рядом с",
-      "en": "next to"
+      "en": "next to",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w09.mp3"
     },
     {
       "ar": "بَيْت",
       "translit": "bayt",
       "uz": "uy",
       "ru": "дом",
-      "en": "house"
+      "en": "house",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w10.mp3"
     },
     {
       "ar": "تَحْتَ",
       "translit": "taḥta",
       "uz": "ostida",
       "ru": "под",
-      "en": "under"
+      "en": "under",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w11.mp3"
     },
     {
       "ar": "جَدِيد",
       "translit": "jadīd",
       "uz": "yangi",
       "ru": "новый",
-      "en": "new"
+      "en": "new",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w12.mp3"
     },
     {
       "ar": "جَمِيل",
       "translit": "jamīl",
       "uz": "chiroyli",
       "ru": "красивый",
-      "en": "beautiful"
+      "en": "beautiful",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w13.mp3"
     },
     {
       "ar": "جِدَار",
       "translit": "jidār",
       "uz": "devor",
       "ru": "стена",
-      "en": "wall"
+      "en": "wall",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w14.mp3"
     },
     {
       "ar": "حَدِيقَة",
       "translit": "ḥadīqah",
       "uz": "bog'",
       "ru": "сад",
-      "en": "garden"
+      "en": "garden",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w15.mp3"
     },
     {
       "ar": "خَشَبِيّ",
       "translit": "khashabī",
       "uz": "yog'och",
       "ru": "деревянный",
-      "en": "wooden"
+      "en": "wooden",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w16.mp3"
     },
     {
       "ar": "دَافِئ",
       "translit": "dāfiʾ",
       "uz": "iliq",
       "ru": "тёплый",
-      "en": "warm"
+      "en": "warm",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w17.mp3"
     },
     {
       "ar": "دَفْتَر",
       "translit": "daftar",
       "uz": "daftar",
       "ru": "тетрадь",
-      "en": "notebook"
+      "en": "notebook",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w18.mp3"
     },
     {
       "ar": "سَاعَة",
       "translit": "sāʿah",
       "uz": "soat",
       "ru": "часы",
-      "en": "clock"
+      "en": "clock",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w19.mp3"
     },
     {
       "ar": "سَرِير",
       "translit": "sarīr",
       "uz": "karavot",
       "ru": "кровать",
-      "en": "bed"
+      "en": "bed",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w20.mp3"
     },
     {
       "ar": "سَعِيد",
       "translit": "saʿīd",
       "uz": "baxtli",
       "ru": "счастливый",
-      "en": "happy"
+      "en": "happy",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w21.mp3"
     },
     {
       "ar": "صَغِير",
       "translit": "ṣaghīr",
       "uz": "kichik",
       "ru": "маленький",
-      "en": "small"
+      "en": "small",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w22.mp3"
     },
     {
       "ar": "صُورَة",
       "translit": "ṣūrah",
       "uz": "rasm",
       "ru": "картина",
-      "en": "picture"
+      "en": "picture",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w23.mp3"
     },
     {
       "ar": "عَلَى",
       "translit": "ʿalā",
       "uz": "ustida",
       "ru": "на",
-      "en": "on"
+      "en": "on",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w24.mp3"
     },
     {
       "ar": "فَوْقَ",
       "translit": "fawqa",
       "uz": "tepasida",
       "ru": "над",
-      "en": "above"
+      "en": "above",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w25.mp3"
     },
     {
       "ar": "فِي",
       "translit": "fī",
       "uz": "ichida",
       "ru": "в",
-      "en": "in"
+      "en": "in",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w26.mp3"
     },
     {
       "ar": "قَلَم",
       "translit": "qalam",
       "uz": "ruchka",
       "ru": "ручка",
-      "en": "pen"
+      "en": "pen",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w27.mp3"
     },
     {
       "ar": "كَبِير",
       "translit": "kabīr",
       "uz": "katta",
       "ru": "большой",
-      "en": "big"
+      "en": "big",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w28.mp3"
     },
     {
       "ar": "كِتَاب",
       "translit": "kitāb",
       "uz": "kitob",
       "ru": "книга",
-      "en": "book"
+      "en": "book",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w29.mp3"
     },
     {
       "ar": "كُرْسِي",
       "translit": "kursī",
       "uz": "stul",
       "ru": "стул",
-      "en": "chair"
+      "en": "chair",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w30.mp3"
     },
     {
       "ar": "لِحَاف",
       "translit": "liḥāf",
       "uz": "ko'rpa",
       "ru": "одеяло",
-      "en": "blanket"
+      "en": "blanket",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w31.mp3"
     },
     {
-      "ar": "لَيْسَتْ",
-      "translit": "laysat",
+      "ar": "لَيْسَ",
+      "translit": "laysa",
       "uz": "emas",
       "ru": "не (является)",
-      "en": "is not"
+      "en": "is not",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w32.mp3"
     },
     {
       "ar": "لَكِنَّ",
       "translit": "lākinna",
       "uz": "lekin",
       "ru": "но",
-      "en": "but"
+      "en": "but",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w33.mp3"
     },
     {
       "ar": "مَكْتَب",
       "translit": "maktab",
       "uz": "yozuv stoli",
       "ru": "письменный стол",
-      "en": "desk"
+      "en": "desk",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w34.mp3"
     },
     {
       "ar": "مَكَان",
       "translit": "makān",
       "uz": "joy",
       "ru": "место",
-      "en": "place"
+      "en": "place",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w35.mp3"
     },
     {
       "ar": "مُفَضَّل",
       "translit": "mufaḍḍal",
       "uz": "sevimli",
       "ru": "любимый",
-      "en": "favorite"
+      "en": "favorite",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w36.mp3"
     },
     {
       "ar": "مِنَ النَّافِذَةِ",
       "translit": "mina n-nāfidhati",
       "uz": "derazadan",
       "ru": "из окна",
-      "en": "out of the window"
+      "en": "out of the window",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w37.mp3"
     },
     {
       "ar": "نَاعِم",
       "translit": "nāʿim",
       "uz": "yumshoq",
       "ru": "мягкий",
-      "en": "soft"
+      "en": "soft",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w38.mp3"
     },
     {
       "ar": "نَافِذَة",
       "translit": "nāfidhah",
       "uz": "deraza",
       "ru": "окно",
-      "en": "window"
+      "en": "window",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w39.mp3"
     },
     {
       "ar": "وَ",
       "translit": "wa",
       "uz": "va",
       "ru": "и",
-      "en": "and"
+      "en": "and",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w40.mp3"
     },
     {
       "ar": "وِسَادَة",
       "translit": "wisādah",
       "uz": "yostiq",
       "ru": "подушка",
-      "en": "pillow"
+      "en": "pillow",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w41.mp3"
     },
     {
       "ar": "يُطِلُّ عَلَى",
       "translit": "yuṭillu ʿalā",
       "uz": "...ga qaraydi",
       "ru": "выходит на",
-      "en": "overlooks"
+      "en": "overlooks",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w42.mp3"
     }
   ]
 }

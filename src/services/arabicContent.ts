@@ -26,6 +26,7 @@ export interface ArabicVocab {
   uz: string;
   ru: string;
   en: string;
+  audio_url?: string; // curated recording (e.g. ElevenLabs); falls back to TTS
 }
 
 export interface ArabicDialogue {

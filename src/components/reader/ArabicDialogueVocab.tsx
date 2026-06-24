@@ -10,6 +10,7 @@ export interface ArabicVocabItem {
   uz: string;
   ru: string;
   en: string;
+  audio_url?: string; // curated recording (e.g. ElevenLabs); falls back to TTS
 }
 
 const meaningOf = (v: ArabicVocabItem, l: Language) => (l === 'ru' ? v.ru : l === 'en' ? (v.en || v.uz) : v.uz);
@@ -40,13 +41,14 @@ export function ArabicDialogueVocab({ words, language }: { words: ArabicVocabIte
     };
   }, []);
 
-  const playWord = async (ar: string) => {
+  const playWord = async (v: ArabicVocabItem) => {
     const a = audioRef.current;
     if (!a) return;
-    setBusy(ar);
+    setBusy(v.ar);
     setAudioError(false);
     try {
-      const url = await resolveTtsUrlAr(ar);
+      // Prefer a curated recording (ElevenLabs); fall back to TTS otherwise.
+      const url = v.audio_url ?? await resolveTtsUrlAr(v.ar);
       if (!url) throw new Error('no url');
       a.src = url;
       await a.play();
@@ -79,7 +81,7 @@ export function ArabicDialogueVocab({ words, language }: { words: ArabicVocabIte
                 <button
                   type="button"
                   className="dr-flip__audio"
-                  onClick={(e) => { e.stopPropagation(); void playWord(v.ar); }}
+                  onClick={(e) => { e.stopPropagation(); void playWord(v); }}
                   aria-label={`${audioLabel}: ${v.translit}`}
                   aria-busy={busy === v.ar}
                   disabled={busy === v.ar}
