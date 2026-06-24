@@ -35,6 +35,10 @@ export interface DialoguePage {
   description_uz?: string;
   description_ru?: string;
   description_en?: string;
+  /** Short topical category shown above the description (per locale). */
+  category_uz?: string;
+  category_ru?: string;
+  category_en?: string;
   sections: {
     id: string;
     type: string;

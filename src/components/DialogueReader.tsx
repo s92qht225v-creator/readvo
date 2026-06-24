@@ -122,6 +122,10 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   const titleTr = language === 'ru' ? meta.titleTranslation_ru
     : language === 'en' ? (meta.titleTranslation_en || meta.titleTranslation)
     : meta.titleTranslation;
+  // Localized category label (kicker above the title). Absent → no label.
+  const category = language === 'ru' ? preview.category_ru
+    : language === 'en' ? (preview.category_en || preview.category_uz)
+    : preview.category_uz;
   // Localized public description. Falls back to the title translation until a
   // real description_* is written for the dialogue, so the preview is never blank.
   const description = (language === 'ru' ? preview.description_ru
@@ -486,6 +490,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
             preview={preview}
             language={language}
             title={titleTr}
+            category={category}
             description={description}
             isAuthed={!!user}
             onReveal={() => setRevealRequested(true)}

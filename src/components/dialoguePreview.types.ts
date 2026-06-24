@@ -17,6 +17,9 @@ export interface DialoguePreviewData {
   description_uz?: string;
   description_ru?: string;
   description_en?: string;
+  category_uz?: string;
+  category_ru?: string;
+  category_en?: string;
   /** First N dialogue lines shown to everyone. */
   teaser: PreviewSentence[];
   /** Number of lines hidden behind the gate (for the "yana N qator" divider). */

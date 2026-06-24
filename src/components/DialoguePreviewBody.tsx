@@ -10,6 +10,8 @@ interface DialoguePreviewBodyProps {
   language: Language;
   /** Localized dialogue title (H2 heading above the description). */
   title: string;
+  /** Localized category label (kicker above the title). */
+  category?: string;
   /** SEO description shown under the hero. */
   description?: string;
   /** True when a real user is signed in. Signed-in users reveal the full dialogue
@@ -32,7 +34,7 @@ const meaningOf = (v: VocabItem, l: Language) => (l === 'ru' ? v.ru : l === 'en'
  * full vocab list. The gated lines + audio live in the full reader, which
  * replaces this body once a subscriber taps the floating "Read & Listen".
  */
-export function DialoguePreviewBody({ preview, language, title, description, isAuthed, onReveal, revealing }: DialoguePreviewBodyProps) {
+export function DialoguePreviewBody({ preview, language, title, category, description, isAuthed, onReveal, revealing }: DialoguePreviewBodyProps) {
   const ctaLabel = revealing
     ? T('Yuklanmoqda…', 'Загрузка…', 'Loading…', language)
     : T("O'qish va tinglash", 'Читать и слушать', 'Read & Listen', language);
@@ -40,8 +42,9 @@ export function DialoguePreviewBody({ preview, language, title, description, isA
   return (
     <>
       <div className="dlg-preview">
-        {/* Title + SEO description, under the hero */}
+        {/* Category kicker + title + SEO description, under the hero */}
         <div className="dlg-intro">
+          {category && <div className="dlg-category">{category}</div>}
           <h2 className="dlg-intro__title">{title}</h2>
           {description && <p className="dlg-desc">{description}</p>}
         </div>
