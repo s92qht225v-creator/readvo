@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { setRequestLocale } from 'next-intl/server';
+import { Suspense } from 'react';
 import { ArabicStoryCatalog } from '@/components/catalog/ArabicStoryCatalog';
+import { loadArabicStoryCatalog } from '@/services/arabicContent';
 import { breadcrumbJsonLd, jsonLdScript } from '@/utils/jsonLd';
 
 export const revalidate = 3600;
@@ -35,6 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ArabicStoryPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const catalog = loadArabicStoryCatalog();
   const homeLabel = ({ uz: 'Bosh sahifa', ru: 'Главная', en: 'Home' } as Record<string, string>)[locale] || 'Home';
   const storiesLabel = ({ uz: 'Hikoyalar', ru: 'Истории', en: 'Stories' } as Record<string, string>)[locale] || 'Stories';
   const jsonLd = jsonLdScript([
@@ -48,7 +51,9 @@ export default async function ArabicStoryPage({ params }: { params: Promise<{ lo
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <ArabicStoryCatalog />
+      <Suspense>
+        <ArabicStoryCatalog catalog={catalog} />
+      </Suspense>
     </>
   );
 }
