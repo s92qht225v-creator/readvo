@@ -243,8 +243,8 @@
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w01.mp3"
     },
     {
-      "ar": "يَجْلِسُ",
-      "translit": "yajlisu",
+      "ar": "جَلَسَ",
+      "translit": "jalasa",
       "uz": "o'tirmoq",
       "ru": "сидеть",
       "en": "to sit",
@@ -267,16 +267,16 @@
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w04.mp3"
     },
     {
-      "ar": "يَكْتُبُ",
-      "translit": "yaktubu",
+      "ar": "كَتَبَ",
+      "translit": "kataba",
       "uz": "yozmoq",
       "ru": "писать",
       "en": "to write",
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w05.mp3"
     },
     {
-      "ar": "يَقْرَأُ",
-      "translit": "yaqraʾu",
+      "ar": "قَرَأَ",
+      "translit": "qaraʾa",
       "uz": "o'qimoq",
       "ru": "читать",
       "en": "to read",
@@ -291,8 +291,8 @@
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w07.mp3"
     },
     {
-      "ar": "يُحِبُّ",
-      "translit": "yuḥibbu",
+      "ar": "أَحَبَّ",
+      "translit": "aḥabba",
       "uz": "yoqtirmoq / sevmoq",
       "ru": "любить",
       "en": "to like / love",
