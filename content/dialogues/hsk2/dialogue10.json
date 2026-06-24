@@ -6,6 +6,12 @@
   "titleTranslation": "Do'stni kutish",
   "titleTranslation_ru": "Ждать друга",
   "titleTranslation_en": "Waiting for a Friend",
+  "description_uz": "«Kimni kutyapsan?» — kechikayotgan do'stini kutayotgan ikki kishining suhbati. Bu dialog vaqt aytish, kim haqida so'rash va kechikishni izohlashni o'rgatadi. Tanish mavzu, kundalik foydali so'zlar — takrorlash uchun qisqa. Eshitish va ravon gapirish uchun mukammal.",
+  "description_ru": "«Кого ты ждёшь?» — разговор двух человек, ожидающих опаздывающего друга. Этот диалог учит называть время, спрашивать о ком-то и объяснять опоздание. Близкая тема, полезная повседневная лексика — короткий для повторения. Идеально для тренировки слуха и беглой речи.",
+  "description_en": "«Who are you waiting for?» — two people waiting on a friend who's running late. This dialogue teaches telling the time, asking about someone, and explaining a delay. Familiar topic, useful everyday vocabulary—short enough to repeat. Ideal for listening practice and fluency.",
+  "category_uz": "Uchrashuv va do'stlar",
+  "category_ru": "Встречи и друзья",
+  "category_en": "Meeting Up",
   "level": 2,
   "tag": "kundalik",
   "dateAdded": "2026-06-16",
@@ -17,7 +23,10 @@
     "堵车",
     "多久",
     "大概",
-    { "zh": "点", "py": "diǎn" },
+    {
+      "zh": "点",
+      "py": "diǎn"
+    },
     "咖啡"
   ],
   "sections": [

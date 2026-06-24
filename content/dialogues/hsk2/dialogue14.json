@@ -6,13 +6,22 @@
   "titleTranslation": "Tug'ilgan kun",
   "titleTranslation_ru": "День рождения",
   "titleTranslation_en": "Birthday",
+  "description_uz": "«Ertaga sening tug'ilgan kuning-a?» — ikki do'stning bayramni nishonlash, mehmonlar va sovg'a haqidagi suhbati. Bu dialog reja so'rash, vaqtni aniqlash va yoqtirgan narsa haqida gapirishni mashq qiladi. Iliq mavzu va kundalik foydali so'zlar. Takrorlash va tabiiy ohangda gapirishni mustahkamlash uchun juda mos.",
+  "description_ru": "«Завтра ведь твой день рождения?» — разговор двух друзей о праздновании, гостях и подарке. Этот диалог отрабатывает, как спрашивать о планах, уточнять время и говорить о том, что нравится. Тёплая тема и полезная повседневная лексика. Прекрасно подходит для повторения и закрепления естественной интонации.",
+  "description_en": "«Tomorrow's your birthday, isn't it?» — two friends chatting about celebrating, guests, and a gift. This dialogue practises asking about plans, pinning down a time, and talking about what someone likes. A warm topic with useful everyday words. Ideal for repeating and locking in natural intonation.",
+  "category_uz": "Tug'ilgan kun",
+  "category_ru": "День рождения",
+  "category_en": "Birthday",
   "level": 2,
   "tag": "reja",
   "dateAdded": "2026-06-16",
   "vocab": [
     "生日",
     "打算",
-    { "zh": "过", "py": "guò" },
+    {
+      "zh": "过",
+      "py": "guò"
+    },
     "请",
     "做饭",
     "开始",

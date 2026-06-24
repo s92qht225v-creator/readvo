@@ -6,6 +6,12 @@
   "titleTranslation": "Kitob olish",
   "titleTranslation_ru": "Взять книгу",
   "titleTranslation_en": "Borrowing a Book",
+  "description_uz": "«Qo'lingda nima bor?» — ikki do'stning kutubxonadan olingan kitob haqidagi suhbati. Bu dialog egalikni aytish, miqdor bildirish va muddat haqida so'rashni o'rgatadi. Tanish mavzu, o'qish uchun foydali so'zlar — takrorlash uchun qisqa. Shadowing va rol o'ynash uchun ajoyib.",
+  "description_ru": "«Что у тебя в руках?» — разговор двух друзей о книге, взятой в библиотеке. Этот диалог учит говорить о принадлежности, указывать количество и спрашивать о сроках. Близкая тема, полезная лексика для учёбы — короткий для повторения. Отлично для шэдоуинга и ролевых игр.",
+  "description_en": "«What's in your hand?» — two friends talking about a book borrowed from the library. This dialogue teaches expressing possession, stating amounts, and asking about deadlines. Familiar topic, vocabulary for reading—short enough to repeat. Great for shadowing and role-play.",
+  "category_uz": "Kutubxona va kitoblar",
+  "category_ru": "Библиотека и книги",
+  "category_en": "Library & Books",
   "level": 2,
   "tag": "dars",
   "dateAdded": "2026-06-16",
@@ -15,7 +21,10 @@
     "借",
     "而且",
     "页",
-    { "zh": "还", "py": "huán" },
+    {
+      "zh": "还",
+      "py": "huán"
+    },
     "当然"
   ],
   "sections": [
