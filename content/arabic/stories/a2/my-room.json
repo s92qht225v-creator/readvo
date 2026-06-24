@@ -1,0 +1,33 @@
+{
+  "id": "my-room",
+  "level": "a2",
+  "title": "غُرْفَتِي",
+  "translit": "Ghurfatī",
+  "titleTranslation_uz": "Mening xonam",
+  "titleTranslation_ru": "Моя комната",
+  "titleTranslation_en": "My Room",
+  "sentences": [
+    { "id": "s1", "ar": "هَذِهِ غُرْفَتِي.", "translit": "Hādhihi ghurfatī.", "text_translation_uz": "Bu mening xonam.", "text_translation_ru": "Это моя комната.", "text_translation_en": "This is my room." },
+    { "id": "s2", "ar": "هِيَ صَغِيرَةٌ لَكِنَّهَا جَمِيلَةٌ.", "translit": "Hiya ṣaghīratun lākinnahā jamīlatun.", "text_translation_uz": "U kichkina, lekin chiroyli.", "text_translation_ru": "Она маленькая, но красивая.", "text_translation_en": "It is small, but it is beautiful." },
+    { "id": "s3", "ar": "فِي الغُرْفَةِ سَرِيرٌ كَبِيرٌ.", "translit": "Fī l-ghurfati sarīrun kabīrun.", "text_translation_uz": "Xonada katta karavot bor.", "text_translation_ru": "В комнате большая кровать.", "text_translation_en": "In the room there is a big bed." },
+    { "id": "s4", "ar": "عَلَى السَّرِيرِ وِسَادَةٌ وَلِحَافٌ.", "translit": "ʿalā s-sarīri wisādatun wa-liḥāfun.", "text_translation_uz": "Karavotda yostiq va ko'rpa bor.", "text_translation_ru": "На кровати подушка и одеяло.", "text_translation_en": "On the bed there is a pillow and a blanket." },
+    { "id": "s5", "ar": "الوِسَادَةُ نَاعِمَةٌ وَاللِّحَافُ دَافِئٌ.", "translit": "al-wisādatu nāʿimatun wa-l-liḥāfu dāfiʾun.", "text_translation_uz": "Yostiq yumshoq, ko'rpa esa issiq.", "text_translation_ru": "Подушка мягкая, а одеяло тёплое.", "text_translation_en": "The pillow is soft and the blanket is warm." },
+    { "id": "s6", "ar": "بِجَانِبِ السَّرِيرِ مَكْتَبٌ.", "translit": "bijānibi s-sarīri maktabun.", "text_translation_uz": "Karavot yonida stol bor.", "text_translation_ru": "Рядом с кроватью стол.", "text_translation_en": "Next to the bed there is a desk." },
+    { "id": "s7", "ar": "المَكْتَبُ خَشَبِيٌّ وَصَغِيرٌ.", "translit": "al-maktabu khashabiyyun wa-ṣaghīrun.", "text_translation_uz": "Stol yog'ochdan va kichkina.", "text_translation_ru": "Стол деревянный и маленький.", "text_translation_en": "The desk is wooden and small." },
+    { "id": "s8", "ar": "عَلَى المَكْتَبِ كِتَابٌ وَقَلَمٌ وَدَفْتَرٌ.", "translit": "ʿalā l-maktabi kitābun wa-qalamun wa-daftarun.", "text_translation_uz": "Stolda kitob, ruchka va daftar bor.", "text_translation_ru": "На столе книга, ручка и тетрадь.", "text_translation_en": "On the desk there is a book, a pen and a notebook." },
+    { "id": "s9", "ar": "الكِتَابُ جَدِيدٌ.", "translit": "al-kitābu jadīdun.", "text_translation_uz": "Kitob yangi.", "text_translation_ru": "Книга новая.", "text_translation_en": "The book is new." },
+    { "id": "s10", "ar": "القَلَمُ أَزْرَقُ.", "translit": "al-qalamu azraqu.", "text_translation_uz": "Ruchka ko'k.", "text_translation_ru": "Ручка синяя.", "text_translation_en": "The pen is blue." },
+    { "id": "s11", "ar": "الدَّفْتَرُ أَبْيَضُ.", "translit": "ad-daftaru abyaḍu.", "text_translation_uz": "Daftar oq.", "text_translation_ru": "Тетрадь белая.", "text_translation_en": "The notebook is white." },
+    { "id": "s12", "ar": "أَكْتُبُ فِي الدَّفْتَرِ.", "translit": "aktubu fī d-daftari.", "text_translation_uz": "Men daftarga yozaman.", "text_translation_ru": "Я пишу в тетради.", "text_translation_en": "I write in the notebook." },
+    { "id": "s13", "ar": "وَأَقْرَأُ الكِتَابَ.", "translit": "wa-aqraʾu l-kitāba.", "text_translation_uz": "Va kitobni o'qiyman.", "text_translation_ru": "И читаю книгу.", "text_translation_en": "And I read the book." },
+    { "id": "s14", "ar": "تَحْتَ المَكْتَبِ كُرْسِيٌّ أَصْفَرُ.", "translit": "taḥta l-maktabi kursiyyun aṣfaru.", "text_translation_uz": "Stol ostida sariq stul bor.", "text_translation_ru": "Под столом жёлтый стул.", "text_translation_en": "Under the desk there is a yellow chair." },
+    { "id": "s15", "ar": "أَجْلِسُ عَلَى الكُرْسِيِّ.", "translit": "ajlisu ʿalā l-kursiyyi.", "text_translation_uz": "Men stulga o'tiraman.", "text_translation_ru": "Я сижу на стуле.", "text_translation_en": "I sit on the chair." },
+    { "id": "s16", "ar": "فِي الغُرْفَةِ نَافِذَةٌ كَبِيرَةٌ.", "translit": "fī l-ghurfati nāfidhatun kabīratun.", "text_translation_uz": "Xonada katta deraza bor.", "text_translation_ru": "В комнате большое окно.", "text_translation_en": "In the room there is a big window." },
+    { "id": "s17", "ar": "النَّافِذَةُ تُطِلُّ عَلَى الحَدِيقَةِ.", "translit": "an-nāfidhatu tuṭillu ʿalā l-ḥadīqati.", "text_translation_uz": "Deraza bog'ga qaraydi.", "text_translation_ru": "Окно выходит в сад.", "text_translation_en": "The window overlooks the garden." },
+    { "id": "s18", "ar": "أُحِبُّ النَّظَرَ مِنَ النَّافِذَةِ.", "translit": "uḥibbu n-naẓara mina n-nāfidhati.", "text_translation_uz": "Men derazadan qarashni yaxshi ko'raman.", "text_translation_ru": "Я люблю смотреть из окна.", "text_translation_en": "I love looking out of the window." },
+    { "id": "s19", "ar": "وَعَلَى الجِدَارِ سَاعَةٌ وَصُورَةٌ.", "translit": "wa-ʿalā l-jidāri sāʿatun wa-ṣūratun.", "text_translation_uz": "Devorda soat va rasm bor.", "text_translation_ru": "А на стене часы и картина.", "text_translation_en": "And on the wall there is a clock and a picture." },
+    { "id": "s20", "ar": "الصُّورَةُ فَوْقَ السَّرِيرِ.", "translit": "aṣ-ṣūratu fawqa s-sarīri.", "text_translation_uz": "Rasm karavot tepasida.", "text_translation_ru": "Картина над кроватью.", "text_translation_en": "The picture is above the bed." },
+    { "id": "s21", "ar": "غُرْفَتِي لَيْسَتْ كَبِيرَةً، لَكِنَّهَا مَكَانِي المُفَضَّلُ.", "translit": "ghurfatī laysat kabīratan, lākinnahā makānī l-mufaḍḍalu.", "text_translation_uz": "Mening xonam katta emas, lekin u mening sevimli joyim.", "text_translation_ru": "Моя комната не большая, но это моё любимое место.", "text_translation_en": "My room is not big, but it is my favorite place." },
+    { "id": "s22", "ar": "أَنَا سَعِيدٌ فِيهَا.", "translit": "anā saʿīdun fīhā.", "text_translation_uz": "Men unda baxtliman.", "text_translation_ru": "Я счастлив в ней.", "text_translation_en": "I am happy in it." }
+  ]
+}

@@ -97,6 +97,56 @@ export function loadArabicDialogueCatalog(): Record<string, ArabicDialogueCardMe
   return out;
 }
 
+// ── Stories ──────────────────────────────────────────────────────────────────
+// A story is structurally a no-speaker, non-gendered dialogue, so it reuses the
+// ArabicDialogue / ArabicDialogueCardMeta shapes. Content lives under
+// content/arabic/stories/{level}/{slug}.json.
+export type ArabicStory = ArabicDialogue;
+
+const STORY_ROOT = path.join(process.cwd(), 'content', 'arabic', 'stories');
+
+/** Load one Arabic story, or null if missing/invalid. */
+export function loadArabicStory(level: string, slug: string): ArabicStory | null {
+  if (!LEVELS.includes(level) || !/^[\w-]+$/.test(slug)) return null;
+  const file = path.join(STORY_ROOT, level, `${slug}.json`);
+  if (!fs.existsSync(file)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(file, 'utf-8')) as ArabicStory;
+  } catch {
+    return null;
+  }
+}
+
+/** List every (level, slug) for generateStaticParams. */
+export function listArabicStories(): { level: string; slug: string }[] {
+  const out: { level: string; slug: string }[] = [];
+  for (const level of LEVELS) {
+    const dir = path.join(STORY_ROOT, level);
+    if (!fs.existsSync(dir)) continue;
+    for (const f of fs.readdirSync(dir)) {
+      if (f.endsWith('.json')) out.push({ level, slug: f.replace(/\.json$/, '') });
+    }
+  }
+  return out;
+}
+
+/** Load catalog metadata for every Arabic story, grouped by CEFR level. */
+export function loadArabicStoryCatalog(): Record<string, ArabicDialogueCardMeta[]> {
+  const out: Record<string, ArabicDialogueCardMeta[]> = { a1: [], a2: [], b1: [], b2: [], c1: [], c2: [] };
+  for (const { level, slug } of listArabicStories()) {
+    const d = loadArabicStory(level, slug);
+    if (!d) continue;
+    out[level].push({
+      id: d.id, slug, level,
+      title: d.title, translit: d.translit,
+      titleTranslation_uz: d.titleTranslation_uz,
+      titleTranslation_ru: d.titleTranslation_ru,
+      titleTranslation_en: d.titleTranslation_en,
+    });
+  }
+  return out;
+}
+
 // ── Flashcards ───────────────────────────────────────────────────────────────
 
 export interface ArabicFlashcard {

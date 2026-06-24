@@ -10,7 +10,7 @@ const LOCALES = new Set(routing.locales);
 // Chinese dialogue reader pages are NOT gated here: they render a public,
 // crawlable preview (hero + description + teaser + vocab) and gate only the
 // full dialogue + audio client-side. Everything else stays login-gated.
-const PROTECTED_PATTERN = /^\/chinese\/(hsk|karaoke\/.|flashcards\/.|writing\/.)|^\/arabic\/dialogues\/[^/]+\/.|^\/arabic\/flashcards\/./;
+const PROTECTED_PATTERN = /^\/chinese\/(hsk|karaoke\/.|flashcards\/.|writing\/.)|^\/arabic\/dialogues\/[^/]+\/.|^\/arabic\/story\/[^/]+\/.|^\/arabic\/flashcards\/./;
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
