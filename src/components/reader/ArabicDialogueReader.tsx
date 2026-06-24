@@ -15,6 +15,8 @@ import { resolveTtsUrlAr } from '@/utils/ttsAudioAr';
 import type { Language } from '@/types/ui-state';
 
 export interface ArabicDialogueMeta {
+  /** Content type: 'dialogue' (default) or 'story' — selects the gated content API. */
+  kind?: 'dialogue' | 'story';
   level: string;
   slug: string;
   title: string;
@@ -81,7 +83,7 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
       try {
         const token = await getAccessToken();
         if (!token) { if (!cancelled) setStatus('locked'); return; }
-        const res = await fetch(`/api/content/arabic/dialogue/${meta.level}/${meta.slug}`, {
+        const res = await fetch(`/api/content/arabic/${meta.kind === 'story' ? 'story' : 'dialogue'}/${meta.level}/${meta.slug}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (cancelled) return;
