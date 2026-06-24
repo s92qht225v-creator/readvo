@@ -60,9 +60,17 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
 
   const vocab = dialogue?.vocab ?? [];
   const hasVocab = vocab.length > 0;
+  const isStory = meta.kind === 'story';
 
   // A dialogue is gendered iff any sentence carries both gender wordings.
   const isGendered = (dialogue?.sentences ?? []).some((s) => s.ar_m && s.ar_f);
+  // A story has no gendered wording, but can still offer a male/female narrator
+  // when both recordings exist — the FAB then only swaps the voice, not the text.
+  const hasFemaleAudio = (dialogue?.sentences ?? []).some((s) => s.audio_url_f);
+  const showGenderFab = isGendered || hasFemaleAudio;
+  // Stories always show the tab bar (Story | Words); dialogues only when they
+  // carry vocabulary. The Words tab shows a placeholder until vocab is authored.
+  const showTabs = hasVocab || isStory;
 
   // Google ar-XA Chirp 3 HD voice per (mode, speaker): two distinct voices each.
   const voiceFor = (speaker: 'A' | 'B' | undefined): string =>
@@ -143,11 +151,13 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
 
         {status === 'loading' && <div className="loading-spinner" />}
         {status === 'error' && <div style={{ textAlign: 'center', padding: 32, color: '#999' }}>Could not load.</div>}
-        {status === 'loaded' && dialogue && hasVocab && (
+        {status === 'loaded' && dialogue && showTabs && (
           <div className="dr-tabs">
             <div className="dr-tabs__inner">
               <button type="button" className={`dr-tabs__tab ${tab === 'dialog' ? 'dr-tabs__tab--active' : ''}`} onClick={() => setTab('dialog')} aria-pressed={tab === 'dialog'}>
-                {({ uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' } as Record<string, string>)[language]}
+                {(isStory
+                  ? { uz: 'Hikoya', ru: 'История', en: 'Story' }
+                  : { uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' } as Record<string, string>)[language]}
               </button>
               <button type="button" className={`dr-tabs__tab ${tab === 'words' ? 'dr-tabs__tab--active' : ''}`} onClick={() => setTab('words')} aria-pressed={tab === 'words'}>
                 {({ uz: "So'zlar", ru: 'Слова', en: 'Words' } as Record<string, string>)[language]}
@@ -159,14 +169,19 @@ export function ArabicDialogueReader({ meta }: { meta: ArabicDialogueMeta }) {
         {status === 'loaded' && dialogue && tab === 'words' && hasVocab && (
           <ArabicDialogueVocab words={vocab} language={language} />
         )}
+        {status === 'loaded' && dialogue && tab === 'words' && !hasVocab && (
+          <p className="dialogues__empty">
+            {({ uz: 'Tez kunda', ru: 'Скоро', en: 'Coming soon' } as Record<string, string>)[language]}
+          </p>
+        )}
 
-        {status === 'loaded' && dialogue && (tab === 'dialog' || !hasVocab) && (
+        {status === 'loaded' && dialogue && (tab === 'dialog' || !showTabs) && (
           <ReaderCore
             config={arabicScriptConfig}
             sentences={sentences}
             resolveAudio={resolveAudio}
             labels={{ translation: ({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language] }}
-            fabExtra={isGendered ? (
+            fabExtra={showGenderFab ? (
               <button
                 type="button"
                 className="ar-gender-fab"
