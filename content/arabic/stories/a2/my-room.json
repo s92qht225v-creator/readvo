@@ -232,5 +232,301 @@
       "translit_f": "anā saʿīdatun fīhā.",
       "text_translation_ru_f": "Я счастлива в ней."
     }
+  ],
+  "vocab": [
+    {
+      "ar": "أَبْيَض",
+      "translit": "abyaḍ",
+      "uz": "oq",
+      "ru": "белый",
+      "en": "white"
+    },
+    {
+      "ar": "أَجْلِسُ",
+      "translit": "ajlisu",
+      "uz": "o'tiraman",
+      "ru": "я сижу",
+      "en": "I sit"
+    },
+    {
+      "ar": "أَزْرَق",
+      "translit": "azraq",
+      "uz": "ko'k",
+      "ru": "синий",
+      "en": "blue"
+    },
+    {
+      "ar": "أَصْفَر",
+      "translit": "aṣfar",
+      "uz": "sariq",
+      "ru": "жёлтый",
+      "en": "yellow"
+    },
+    {
+      "ar": "أَكْتُبُ",
+      "translit": "aktubu",
+      "uz": "yozaman",
+      "ru": "я пишу",
+      "en": "I write"
+    },
+    {
+      "ar": "أَقْرَأُ",
+      "translit": "aqraʾu",
+      "uz": "o'qiyman",
+      "ru": "я читаю",
+      "en": "I read"
+    },
+    {
+      "ar": "أَنَا",
+      "translit": "anā",
+      "uz": "men",
+      "ru": "я",
+      "en": "I"
+    },
+    {
+      "ar": "أُحِبُّ",
+      "translit": "uḥibbu",
+      "uz": "yaxshi ko'raman",
+      "ru": "я люблю",
+      "en": "I like / love"
+    },
+    {
+      "ar": "بِجَانِبِ",
+      "translit": "bijānibi",
+      "uz": "yonida",
+      "ru": "рядом с",
+      "en": "next to"
+    },
+    {
+      "ar": "بَيْت",
+      "translit": "bayt",
+      "uz": "uy",
+      "ru": "дом",
+      "en": "house"
+    },
+    {
+      "ar": "تَحْتَ",
+      "translit": "taḥta",
+      "uz": "ostida",
+      "ru": "под",
+      "en": "under"
+    },
+    {
+      "ar": "جَدِيد",
+      "translit": "jadīd",
+      "uz": "yangi",
+      "ru": "новый",
+      "en": "new"
+    },
+    {
+      "ar": "جَمِيل",
+      "translit": "jamīl",
+      "uz": "chiroyli",
+      "ru": "красивый",
+      "en": "beautiful"
+    },
+    {
+      "ar": "جِدَار",
+      "translit": "jidār",
+      "uz": "devor",
+      "ru": "стена",
+      "en": "wall"
+    },
+    {
+      "ar": "حَدِيقَة",
+      "translit": "ḥadīqah",
+      "uz": "bog'",
+      "ru": "сад",
+      "en": "garden"
+    },
+    {
+      "ar": "خَشَبِيّ",
+      "translit": "khashabī",
+      "uz": "yog'och",
+      "ru": "деревянный",
+      "en": "wooden"
+    },
+    {
+      "ar": "دَافِئ",
+      "translit": "dāfiʾ",
+      "uz": "iliq",
+      "ru": "тёплый",
+      "en": "warm"
+    },
+    {
+      "ar": "دَفْتَر",
+      "translit": "daftar",
+      "uz": "daftar",
+      "ru": "тетрадь",
+      "en": "notebook"
+    },
+    {
+      "ar": "سَاعَة",
+      "translit": "sāʿah",
+      "uz": "soat",
+      "ru": "часы",
+      "en": "clock"
+    },
+    {
+      "ar": "سَرِير",
+      "translit": "sarīr",
+      "uz": "karavot",
+      "ru": "кровать",
+      "en": "bed"
+    },
+    {
+      "ar": "سَعِيد",
+      "translit": "saʿīd",
+      "uz": "baxtli",
+      "ru": "счастливый",
+      "en": "happy"
+    },
+    {
+      "ar": "صَغِير",
+      "translit": "ṣaghīr",
+      "uz": "kichik",
+      "ru": "маленький",
+      "en": "small"
+    },
+    {
+      "ar": "صُورَة",
+      "translit": "ṣūrah",
+      "uz": "rasm",
+      "ru": "картина",
+      "en": "picture"
+    },
+    {
+      "ar": "عَلَى",
+      "translit": "ʿalā",
+      "uz": "ustida",
+      "ru": "на",
+      "en": "on"
+    },
+    {
+      "ar": "فَوْقَ",
+      "translit": "fawqa",
+      "uz": "tepasida",
+      "ru": "над",
+      "en": "above"
+    },
+    {
+      "ar": "فِي",
+      "translit": "fī",
+      "uz": "ichida",
+      "ru": "в",
+      "en": "in"
+    },
+    {
+      "ar": "قَلَم",
+      "translit": "qalam",
+      "uz": "ruchka",
+      "ru": "ручка",
+      "en": "pen"
+    },
+    {
+      "ar": "كَبِير",
+      "translit": "kabīr",
+      "uz": "katta",
+      "ru": "большой",
+      "en": "big"
+    },
+    {
+      "ar": "كِتَاب",
+      "translit": "kitāb",
+      "uz": "kitob",
+      "ru": "книга",
+      "en": "book"
+    },
+    {
+      "ar": "كُرْسِي",
+      "translit": "kursī",
+      "uz": "stul",
+      "ru": "стул",
+      "en": "chair"
+    },
+    {
+      "ar": "لِحَاف",
+      "translit": "liḥāf",
+      "uz": "ko'rpa",
+      "ru": "одеяло",
+      "en": "blanket"
+    },
+    {
+      "ar": "لَيْسَتْ",
+      "translit": "laysat",
+      "uz": "emas",
+      "ru": "не (является)",
+      "en": "is not"
+    },
+    {
+      "ar": "لَكِنَّ",
+      "translit": "lākinna",
+      "uz": "lekin",
+      "ru": "но",
+      "en": "but"
+    },
+    {
+      "ar": "مَكْتَب",
+      "translit": "maktab",
+      "uz": "yozuv stoli",
+      "ru": "письменный стол",
+      "en": "desk"
+    },
+    {
+      "ar": "مَكَان",
+      "translit": "makān",
+      "uz": "joy",
+      "ru": "место",
+      "en": "place"
+    },
+    {
+      "ar": "مُفَضَّل",
+      "translit": "mufaḍḍal",
+      "uz": "sevimli",
+      "ru": "любимый",
+      "en": "favorite"
+    },
+    {
+      "ar": "مِنَ النَّافِذَةِ",
+      "translit": "mina n-nāfidhati",
+      "uz": "derazadan",
+      "ru": "из окна",
+      "en": "out of the window"
+    },
+    {
+      "ar": "نَاعِم",
+      "translit": "nāʿim",
+      "uz": "yumshoq",
+      "ru": "мягкий",
+      "en": "soft"
+    },
+    {
+      "ar": "نَافِذَة",
+      "translit": "nāfidhah",
+      "uz": "deraza",
+      "ru": "окно",
+      "en": "window"
+    },
+    {
+      "ar": "وَ",
+      "translit": "wa",
+      "uz": "va",
+      "ru": "и",
+      "en": "and"
+    },
+    {
+      "ar": "وِسَادَة",
+      "translit": "wisādah",
+      "uz": "yostiq",
+      "ru": "подушка",
+      "en": "pillow"
+    },
+    {
+      "ar": "يُطِلُّ عَلَى",
+      "translit": "yuṭillu ʿalā",
+      "uz": "...ga qaraydi",
+      "ru": "выходит на",
+      "en": "overlooks"
+    }
   ]
 }
