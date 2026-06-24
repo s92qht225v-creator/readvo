@@ -27,6 +27,7 @@ export interface ArabicVocab {
   ru: string;
   en: string;
   audio_url?: string; // curated recording (e.g. ElevenLabs); falls back to TTS
+  gender?: 'm' | 'f'; // grammatical gender, shown for nouns only
 }
 
 export interface ArabicDialogue {

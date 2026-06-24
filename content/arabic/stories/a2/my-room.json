@@ -312,7 +312,8 @@
       "uz": "uy",
       "ru": "дом",
       "en": "house",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w10.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w10.mp3",
+      "gender": "m"
     },
     {
       "ar": "تَحْتَ",
@@ -344,7 +345,8 @@
       "uz": "devor",
       "ru": "стена",
       "en": "wall",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w14.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w14.mp3",
+      "gender": "m"
     },
     {
       "ar": "حَدِيقَة",
@@ -352,7 +354,8 @@
       "uz": "bog'",
       "ru": "сад",
       "en": "garden",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w15.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w15.mp3",
+      "gender": "f"
     },
     {
       "ar": "خَشَبِيّ",
@@ -376,7 +379,8 @@
       "uz": "daftar",
       "ru": "тетрадь",
       "en": "notebook",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w18.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w18.mp3",
+      "gender": "m"
     },
     {
       "ar": "سَاعَة",
@@ -384,7 +388,8 @@
       "uz": "soat",
       "ru": "часы",
       "en": "clock",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w19.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w19.mp3",
+      "gender": "f"
     },
     {
       "ar": "سَرِير",
@@ -392,7 +397,8 @@
       "uz": "karavot",
       "ru": "кровать",
       "en": "bed",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w20.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w20.mp3",
+      "gender": "m"
     },
     {
       "ar": "سَعِيد",
@@ -416,7 +422,8 @@
       "uz": "rasm",
       "ru": "картина",
       "en": "picture",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w23.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w23.mp3",
+      "gender": "f"
     },
     {
       "ar": "عَلَى",
@@ -448,7 +455,8 @@
       "uz": "ruchka",
       "ru": "ручка",
       "en": "pen",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w27.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w27.mp3",
+      "gender": "m"
     },
     {
       "ar": "كَبِير",
@@ -464,7 +472,8 @@
       "uz": "kitob",
       "ru": "книга",
       "en": "book",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w29.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w29.mp3",
+      "gender": "m"
     },
     {
       "ar": "كُرْسِي",
@@ -472,7 +481,8 @@
       "uz": "stul",
       "ru": "стул",
       "en": "chair",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w30.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w30.mp3",
+      "gender": "m"
     },
     {
       "ar": "لِحَاف",
@@ -480,7 +490,8 @@
       "uz": "ko'rpa",
       "ru": "одеяло",
       "en": "blanket",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w31.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w31.mp3",
+      "gender": "m"
     },
     {
       "ar": "لَيْسَ",
@@ -504,7 +515,8 @@
       "uz": "yozuv stoli",
       "ru": "письменный стол",
       "en": "desk",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w34.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w34.mp3",
+      "gender": "m"
     },
     {
       "ar": "مَكَان",
@@ -512,7 +524,8 @@
       "uz": "joy",
       "ru": "место",
       "en": "place",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w35.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w35.mp3",
+      "gender": "m"
     },
     {
       "ar": "مُفَضَّل",
@@ -544,7 +557,8 @@
       "uz": "deraza",
       "ru": "окно",
       "en": "window",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w39.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w39.mp3",
+      "gender": "f"
     },
     {
       "ar": "وَ",
@@ -560,7 +574,8 @@
       "uz": "yostiq",
       "ru": "подушка",
       "en": "pillow",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w41.mp3"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/my-room/omar/words/w41.mp3",
+      "gender": "f"
     },
     {
       "ar": "يُطِلُّ عَلَى",

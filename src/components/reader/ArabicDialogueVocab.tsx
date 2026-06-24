@@ -11,6 +11,7 @@ export interface ArabicVocabItem {
   ru: string;
   en: string;
   audio_url?: string; // curated recording (e.g. ElevenLabs); falls back to TTS
+  gender?: 'm' | 'f'; // grammatical gender, shown for nouns only
 }
 
 const meaningOf = (v: ArabicVocabItem, l: Language) => (l === 'ru' ? v.ru : l === 'en' ? (v.en || v.uz) : v.uz);
@@ -90,7 +91,7 @@ export function ArabicDialogueVocab({ words, language }: { words: ArabicVocabIte
                     ? <span className="dr-flip__audio-spinner" aria-hidden="true" />
                     : <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.05A4.5 4.5 0 0 0 16.5 12z" /></svg>}
                 </button>
-                <span className="dr-flip__translit">{v.translit}</span>
+                <span className="dr-flip__translit">{v.translit}{v.gender && <span className="dr-flip__gender"> ({v.gender})</span>}</span>
                 <span className="dr-flip__ar" lang="ar" dir="rtl">{v.ar}</span>
               </div>
               <div className="dr-flip__face dr-flip__back">

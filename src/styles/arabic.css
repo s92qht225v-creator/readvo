@@ -87,6 +87,7 @@
   text-align: center;
 }
 .dr-flip__translit { font-size: 14px; color: var(--color-accent, #2E8B57); font-style: italic; }
+.dr-flip__gender { color: #9aa0a6; font-style: normal; font-weight: 600; }
 
 /* Green re-theme of the shared (red) dialogue chrome, scoped to Arabic pages. */
 .theme-ar .dr-tabs { background: linear-gradient(180deg, #25734B 0%, #1A5236 100%); }
