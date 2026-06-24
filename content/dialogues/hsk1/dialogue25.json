@@ -6,6 +6,12 @@
   "titleTranslation": "Uying qayerda?",
   "titleTranslation_ru": "Где твой дом?",
   "titleTranslation_en": "Where is your home?",
+  "description_uz": "«Uying qayerda?» — ikki kishi uy va oila haqida tanishuv suhbatini olib boradi. Bu suhbat joy so'rash (你家在哪儿？), oila a'zolari sonini aniqlash (你家有几口人？, 四口人) va a'zolarni sanashni (爸爸、妈妈、弟弟和我) o'rgatadi. Hajmi haqida savol (你家大吗？) va inkor (不大) ham bor. Tanishuvga doir tabiiy mavzu — rol o'ynash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Где твой дом?» — двое знакомятся и говорят о доме и семье. Этот диалог учит спрашивать о месте (你家在哪儿？), узнавать число членов семьи (你家有几口人？, 四口人) и перечислять их (爸爸、妈妈、弟弟和我). Есть и вопрос о размере (你家大吗？), и отрицание (不大). Естественная тема для знакомства — отлично для ролевой игры и уверенности в речи.",
+  "description_en": "«Where is your home?» — Two people get acquainted by talking about home and family. This dialogue teaches asking about place (你家在哪儿？), finding out family size (你家有几口人？, 四口人), and listing members (爸爸、妈妈、弟弟和我). It also covers a question about size (你家大吗？) and a negation (不大). A natural getting-to-know-you topic—perfect for role-play and speaking confidence.",
+  "category_uz": "Oila",
+  "category_ru": "Семья",
+  "category_en": "Family",
   "level": 1,
   "sections": [
     {

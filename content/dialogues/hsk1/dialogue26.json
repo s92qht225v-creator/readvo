@@ -6,6 +6,12 @@
   "titleTranslation": "Xitoy tilini o'rganish qiyinmi?",
   "titleTranslation_ru": "Трудно учить китайский?",
   "titleTranslation_en": "Is learning Chinese hard?",
+  "description_uz": "«Xitoy tilini o'rganish qiyinmi?» — ikki kishi til o'rganish tajribasini muhokama qiladi. Bu suhbat davomiylik haqida so'rash (你学中文多久了？, 学了半年), affirmativ-negativ savol bermoq (难不难？) va imkoniyatni aytishni (你会写字吗？, 会一点) o'rgatadi. Tanish va rag'batlantiruvchi mavzu — tinglash va shadowing orqali takrorlash uchun ideal.",
+  "description_ru": "«Учить китайский трудно?» — двое обсуждают опыт изучения языка. Этот диалог учит спрашивать о длительности (你学中文多久了？, 学了半年), задавать утвердительно-отрицательный вопрос (难不难？) и говорить об умении (你会写字吗？, 会一点). Близкая и мотивирующая тема — отлично для аудирования и повторения через шэдоуинг.",
+  "description_en": "«Is learning Chinese hard?» — Two people compare notes on their language-learning experience. This dialogue teaches asking about duration (你学中文多久了？, 学了半年), forming an affirmative-negative question (难不难？), and talking about ability (你会写字吗？, 会一点). A relatable, encouraging topic—ideal for listening and repeating through shadowing.",
+  "category_uz": "Ta'lim",
+  "category_ru": "Учёба",
+  "category_en": "Learning & Study",
   "level": 1,
   "sections": [
     {

@@ -6,6 +6,12 @@
   "titleTranslation": "Hojatxona qayerda?",
   "titleTranslation_ru": "Где туалет?",
   "titleTranslation_en": "Where is the restroom?",
+  "description_uz": "«Hojatxona qayerda?» — binoda yo'l so'rash haqidagi suhbat. Bu dialog xushmuomalalik bilan so'rash (请问), joyni aytish (洗手间在三楼) va yo'nalish ko'rsatishni (电梯在那边) o'rgatadi. Qavat va jihozlar bilan ishlash uchun foydali (三楼, 电梯). Sayohat va kundalik vaziyatlar uchun zarur — rol o'ynash va shadowing uchun ajoyib.",
+  "description_ru": "«Где туалет?» — разговор о поиске дороги в здании. Этот диалог учит вежливо спрашивать (请问), называть место (洗手间在三楼) и указывать направление (电梯在那边). Полезно для этажей и объектов (三楼, 电梯). Нужно в путешествиях и повседневных ситуациях — отлично для ролевой игры и шэдоуинга.",
+  "description_en": "«Where is the restroom?» — a chat about finding your way in a building. This dialogue teaches asking politely (请问), naming a place (洗手间在三楼), and pointing out direction (电梯在那边). Useful for floors and facilities (三楼, 电梯). Essential for travel and daily situations—great for role-play and shadowing.",
+  "category_uz": "Yo'l so'rash",
+  "category_ru": "Поиск дороги",
+  "category_en": "Asking Directions",
   "level": 1,
   "sections": [
     {

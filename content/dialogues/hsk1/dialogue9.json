@@ -6,6 +6,12 @@
   "titleTranslation": "Telefon raqamingiz necha?",
   "titleTranslation_ru": "Какой у тебя номер телефона?",
   "titleTranslation_en": "What's your phone number?",
+  "description_uz": "«Telefon raqaming nechi?» — telefon raqamini almashish haqidagi suhbat. Bu mashq raqam so'rash (你的电话号码是多少？), uni aytish (我的电话号码是…) va qaytarishni so'rashni (请再说一遍) o'rgatadi. Sonlar va xushmuomalalik iboralari bilan ishlash uchun foydali (谢谢, 不客气). Real almashinuv uchun ideal — tinglash va takrorlash uchun ajoyib.",
+  "description_ru": "«Какой у тебя номер телефона?» — разговор об обмене номерами. Это упражнение учит спрашивать номер (你的电话号码是多少？), называть его (我的电话号码是…) и просить повторить (请再说一遍). Полезно для чисел и вежливых фраз (谢谢, 不客气). Идеально для реального обмена — отлично для аудирования и повторения.",
+  "description_en": "«What's your phone number?» — a conversation about exchanging numbers. This exercise teaches asking for a number (你的电话号码是多少？), giving it (我的电话号码是…), and asking for a repeat (请再说一遍). Useful for digits and polite phrases (谢谢, 不客气). Ideal for a real exchange—great for listening and repetition.",
+  "category_uz": "Telefon raqami",
+  "category_ru": "Номер телефона",
+  "category_en": "Phone Numbers",
   "level": 1,
   "sections": [
     {

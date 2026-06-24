@@ -6,6 +6,12 @@
   "titleTranslation": "Sen Xitoymisan?",
   "titleTranslation_ru": "Ты Китаец?",
   "titleTranslation_en": "Are you Chinese?",
+  "description_uz": "«Sen Xitoylikmisan?» — ikki notanish odamning qisqa tanishuvi. Bu suhbat millat haqida so'rash va javob berishni (你是…吗？, 我是…), suhbatni qaytarib so'rashni (你呢？) va davlat nomlari bilan ishlashni (中国人, 乌兹别克斯坦人) o'rgatadi. Birinchi tanishuv uchun eng zarur iboralar, kundalik salomlashish bilan (你好) yakunlanadi. Tabiiy bo'lguncha takrorlash va rol o'ynash uchun ajoyib.",
+  "description_ru": "«Ты китаец?» — короткое знакомство двух незнакомцев. Этот диалог учит спрашивать и называть национальность (你是…吗？, 我是…), возвращать вопрос собеседнику (你呢？) и работать с названиями стран (中国人, 乌兹别克斯坦人). Самые нужные фразы для первого знакомства, с завершающим приветствием (你好). Отлично подходит для шэдоуинга и ролевой игры до естественности.",
+  "description_en": "«Are you Chinese?» — a brief first meeting between two strangers. This dialogue teaches asking and stating nationality (你是…吗？, 我是…), bouncing the question back (你呢？), and handling country names (中国人, 乌兹别克斯坦人). The essential phrases for a first introduction, wrapped up with a friendly greeting (你好). Great for shadowing and role-play until it feels natural.",
+  "category_uz": "Tanishuv",
+  "category_ru": "Знакомство",
+  "category_en": "Introductions",
   "level": 1,
   "sections": [
     {

@@ -6,6 +6,12 @@
   "titleTranslation": "Juda shovqin ekan",
   "titleTranslation_ru": "Слишком шумно",
   "titleTranslation_en": "It's too noisy",
+  "description_uz": "«Juda shovqinli» — ikki kishi gapni eshitish qiyinligi haqida suhbatlashadi. Bu suhbat imkoniyatni 得/不 bilan so'rash (你听得清吗？, 听不清), holatni ta'kidlash (这里太吵了, 很吵) va yechim taklif qilishni (我们出去说吧) o'rgatadi. Rozilik so'zi (对) ham bor. Hayotiy va foydali vaziyat — rol o'ynash va og'zaki nutq uchun ajoyib.",
+  "description_ru": "«Слишком шумно» — двое говорят о том, что трудно расслышать. Этот диалог учит спрашивать о возможности через 得/不 (你听得清吗？, 听不清), подчёркивать состояние (这里太吵了, 很吵) и предлагать решение (我们出去说吧). Есть и слово согласия (对). Жизненная и полезная ситуация — отлично для ролевой игры и устной речи.",
+  "description_en": "«It's too noisy» — Two people talk about struggling to hear each other. This dialogue teaches asking about ability with 得/不 (你听得清吗？, 听不清), emphasizing a state (这里太吵了, 很吵), and proposing a fix (我们出去说吧). It also has an agreement word (对). A lifelike, useful situation—great for role-play and spoken Chinese.",
+  "category_uz": "Kundalik hayot",
+  "category_ru": "Повседневная жизнь",
+  "category_en": "Everyday Life",
   "level": 1,
   "sections": [
     {

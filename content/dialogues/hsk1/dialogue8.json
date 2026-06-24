@@ -6,6 +6,12 @@
   "titleTranslation": "Qayerdasan?",
   "titleTranslation_ru": "Ты где?",
   "titleTranslation_en": "Where are you?",
+  "description_uz": "«Qayerdasan?» — telefon orqali joylashuv haqidagi suhbat. Bu dialog kim qayerdaligini so'rash (你在哪儿？), joyni aytish (我在学校) va inkor bilan aniqlashtirishni (不, 我在图书馆) o'rgatadi. Joy nomlari bilan ishlash uchun foydali (教室, 图书馆). Hayotiy telefon vaziyati — rol o'ynash va gapirishga ishonch uchun ajoyib.",
+  "description_ru": "«Ты где?» — телефонный разговор о местоположении. Этот диалог учит спрашивать, кто где (你在哪儿？), называть место (我在学校) и уточнять через отрицание (不, 我在图书馆). Полезно для названий мест (教室, 图书馆). Жизненная телефонная ситуация — отлично для ролевой игры и уверенности в речи.",
+  "description_en": "«Where are you?» — a phone call about location. This dialogue teaches asking where someone is (你在哪儿？), naming a place (我在学校), and clarifying with a negative (不, 我在图书馆). Useful for place names (教室, 图书馆). A real-life phone situation—great for role-play and speaking confidence.",
+  "category_uz": "Joylashuv",
+  "category_ru": "Местоположение",
+  "category_en": "Location",
   "level": 1,
   "sections": [
     {

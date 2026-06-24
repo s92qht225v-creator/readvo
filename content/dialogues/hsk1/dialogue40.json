@@ -6,6 +6,12 @@
   "titleTranslation": "Ovqat buyurtma berish",
   "titleTranslation_ru": "Заказ еды",
   "titleTranslation_en": "Ordering food",
+  "description_uz": "«Ofitsiant, buyurtma beramiz.» — mehmon restoranda taom buyurtma qiladi. Bu suhbat ofitsiantni chaqirishni (服务员, 点菜), bir porsiya so'rashni (来一份大盘鸡) va achchiq yeya olasanmi deb so'rashni (能吃辣吗) mashq qiladi. Foydali taom so'zlari — «katta tovoqdagi tovuq» (大盘鸡) va «sovuq» (冰的). Restoran dialoglarini rol o'ynash uchun ajoyib.",
+  "description_ru": "«Официант, мы хотим заказать.» — гость заказывает еду в ресторане. Этот диалог тренирует, как позвать официанта (服务员, 点菜), заказать порцию (来一份大盘鸡) и спросить, можешь ли ты есть острое (能吃辣吗). Полезная лексика о еде — «курица в большой тарелке» (大盘鸡) и «холодный» (冰的). Отлично для ролевой игры ресторанных диалогов.",
+  "description_en": "«Waiter, we'd like to order.» — a guest orders a meal at a restaurant. This dialogue practises calling the waiter (服务员, 点菜), ordering a portion (来一份大盘鸡), and asking whether you can eat spicy food (能吃辣吗). Useful food words appear—«big-plate chicken» (大盘鸡) and «cold» (冰的). Great for role-playing restaurant exchanges.",
+  "category_uz": "Restoranda",
+  "category_ru": "В ресторане",
+  "category_en": "At the Restaurant",
   "level": 1,
   "sections": [
     {

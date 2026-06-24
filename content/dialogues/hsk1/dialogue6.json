@@ -6,6 +6,12 @@
   "titleTranslation": "Banan necha pul?",
   "titleTranslation_ru": "Сколько стоят бананы?",
   "titleTranslation_en": "How much are bananas?",
+  "description_uz": "«Banan bormi?» — bozorda meva sotib olish haqidagi qisqa suhbat. Bu dialog mahsulot borligini so'rash (有…吗？), narxni so'rash (多少钱) va o'lchov bilan javob berishni (五块钱一斤) o'rgatadi. Hayotiy xarid mavzusi, kerakli so'zlar bilan (香蕉, 块钱). Real vaziyatlar uchun ideal — rol o'ynash va takrorlash uchun ajoyib.",
+  "description_ru": "«Бананы есть?» — короткий разговор о покупке фруктов на рынке. Этот диалог учит спрашивать о наличии товара (有…吗？), узнавать цену (多少钱) и отвечать с мерой (五块钱一斤). Жизненная тема покупок с нужными словами (香蕉, 块钱). Идеально для реальных ситуаций — отлично для ролевой игры и повторения.",
+  "description_en": "«Do you have bananas?» — a short market exchange about buying fruit. This dialogue teaches asking if an item is in stock (有…吗？), asking the price (多少钱), and answering with a measure (五块钱一斤). A real-life shopping topic with the words you need (香蕉, 块钱). Ideal for real situations—great for role-play and repetition.",
+  "category_uz": "Bozor va xarid",
+  "category_ru": "Рынок и покупки",
+  "category_en": "Market & Shopping",
   "level": 1,
   "sections": [
     {

@@ -6,6 +6,12 @@
   "titleTranslation": "Soat necha bo'ldi?",
   "titleTranslation_ru": "Который час?",
   "titleTranslation_en": "What time is it?",
+  "description_uz": "«Hozir soat necha?» — vaqt va kun tartibi haqidagi suhbat. Bu mashq soatni so'rash (现在几点？), aniq vaqtni aytish (三点) va kunlik ishlar vaqtini bog'lashni (你几点上课？, 我四点上课) o'rgatadi. Sanoq va kundalik harakatlar bilan ishlash uchun foydali (上课, 下课). Tartibli va aniq namuna — shadowing va takrorlash uchun qulay.",
+  "description_ru": "«Который сейчас час?» — разговор о времени и распорядке дня. Это упражнение учит спрашивать время (现在几点？), называть точный час (三点) и связывать его с делами дня (你几点上课？, 我四点上课). Полезно для чисел и повседневных действий (上课, 下课). Чёткий образец — удобно для шэдоуинга и повторения.",
+  "description_en": "«What time is it now?» — a chat about time and the daily schedule. This exercise teaches asking the time (现在几点？), stating an exact hour (三点), and tying it to daily activities (你几点上课？, 我四点上课). Useful for numbers and everyday actions (上课, 下课). A clear, orderly pattern—handy for shadowing and repetition.",
+  "category_uz": "Vaqt va jadval",
+  "category_ru": "Время и расписание",
+  "category_en": "Time & Schedule",
   "level": 1,
   "sections": [
     {

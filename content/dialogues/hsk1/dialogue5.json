@@ -6,6 +6,12 @@
   "titleTranslation": "Xitoycha gaplasha olasanmi?",
   "titleTranslation_ru": "Ты умеешь говорить по-китайски?",
   "titleTranslation_en": "Can you speak Chinese?",
+  "description_uz": "«Xitoy tilida gapira olasanmi?» — qobiliyat va tillar haqidagi qisqa suhbat. Bu mashq imkoniyat haqida so'rash (你会说…吗？), daraja bildirish (我会说一点) va inkor qilishni (我不会说) o'rgatadi. Til nomlari bilan ishlash uchun foydali (中文, 乌兹别克语). Tanish va kerakli mavzu — gapirishga ishonch va shadowing uchun qulay.",
+  "description_ru": "«Ты умеешь говорить по-китайски?» — короткий разговор о навыках и языках. Это упражнение учит спрашивать об умении (你会说…吗？), выражать степень (我会说一点) и отрицать (我不会说). Полезно для работы с названиями языков (中文, 乌兹别克语). Знакомая и нужная тема — удобно для уверенности в речи и шэдоуинга.",
+  "description_en": "«Can you speak Chinese?» — a short exchange about skills and languages. This exercise teaches asking about ability (你会说…吗？), expressing degree (我会说一点), and saying you can't (我不会说). Useful for handling language names (中文, 乌兹别克语). A familiar, needed topic—handy for speaking confidence and shadowing.",
+  "category_uz": "Tillar",
+  "category_ru": "Языки",
+  "category_en": "Languages",
   "level": 1,
   "sections": [
     {

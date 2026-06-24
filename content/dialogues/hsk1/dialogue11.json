@@ -6,6 +6,12 @@
   "titleTranslation": "Nima yegingiz keladi?",
   "titleTranslation_ru": "Что хочешь поесть?",
   "titleTranslation_en": "What do you want to eat?",
+  "description_uz": "«Nima yeging keladi?» — ikki do'stning ovqat tanlash haqidagi suhbati. Bu mashq ochlik haqida so'rash (你饿吗？), xohishni bildirish (我想吃面条) va ichimlik tanlashni (你喝什么？, 我喝可乐) o'rgatadi. Ovqat so'zlari bilan ishlash uchun foydali (面条, 米饭). Tanish va mazali mavzu — shadowing va rol o'ynash uchun ajoyib.",
+  "description_ru": "«Что ты хочешь поесть?» — разговор двух друзей о выборе еды. Это упражнение учит спрашивать о голоде (你饿吗？), выражать желание (我想吃面条) и выбирать напиток (你喝什么？, 我喝可乐). Полезно для слов о еде (面条, 米饭). Знакомая и аппетитная тема — отлично для шэдоуинга и ролевой игры.",
+  "description_en": "«What do you want to eat?» — two friends deciding what to order. This exercise teaches asking about hunger (你饿吗？), expressing a wish (我想吃面条), and choosing a drink (你喝什么？, 我喝可乐). Useful for food words (面条, 米饭). A familiar, tasty topic—great for shadowing and role-play.",
+  "category_uz": "Ovqat buyurtma",
+  "category_ru": "Заказ еды",
+  "category_en": "Ordering Food",
   "level": 1,
   "sections": [
     {

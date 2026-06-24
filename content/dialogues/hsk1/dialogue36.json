@@ -6,6 +6,12 @@
   "titleTranslation": "Noto'g'ri terdingiz",
   "titleTranslation_ru": "Вы ошиблись номером",
   "titleTranslation_en": "You dialed the wrong number",
+  "description_uz": "«Allo, kim kerak edi?» — telefonga noto'g'ri raqamga tushib qolgan odam javob beradi. Bu suhbat telefonda javob berishni (喂), kimligini so'rashni (你哪位) va kimnidir so'rashni (请问是小李吗) mashq qiladi. «Noto'g'ri terdingiz» (你打错了), «kechirasiz» (不好意思) va «hechqisi yo'q» (没关系) ham bor. Telefon odatlarini rol o'ynash uchun qisqa va foydali.",
+  "description_ru": "«Алло, кто это?» — человек отвечает на звонок, попавший не туда. Этот диалог тренирует ответ по телефону (喂), вопрос «кто это» (你哪位) и вопрос о ком-то (请问是小李吗). Есть «вы ошиблись номером» (你打错了), «извините» (不好意思) и «ничего страшного» (没关系). Короткий и полезный для разыгрывания телефонного этикета.",
+  "description_en": "«Hello, who's this?» — someone answers a call that came to the wrong number. This dialogue practises answering the phone (喂), asking who's calling (你哪位), and asking after someone (请问是小李吗). It also has «you dialled the wrong number» (你打错了), «sorry» (不好意思), and «no problem» (没关系). Short and useful for role-playing phone etiquette.",
+  "category_uz": "Telefon suhbati",
+  "category_ru": "Телефонный разговор",
+  "category_en": "Phone Calls",
   "level": 1,
   "sections": [
     {

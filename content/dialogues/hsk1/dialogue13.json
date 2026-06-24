@@ -6,6 +6,12 @@
   "titleTranslation": "Yoshingiz nechida?",
   "titleTranslation_ru": "Сколько тебе лет?",
   "titleTranslation_en": "How old are you?",
+  "description_uz": "«Necha yoshdasan?» — ikki yangi tanish bir-birining yoshini so'rashyapti. Bu suhbat yosh haqida so'rash (你多大), yoshni aytish (我二十二岁) va savolni qaytarishni (你呢) mashq qildiradi, hamda taqqoslash iborasini (差不多大) o'rgatadi. Sodda, har kuni kerak bo'ladigan mavzu — va tabiiy bo'lguncha takrorlash uchun yetarlicha qisqa. Rol o'ynash va gapirishga ishonch hosil qilish uchun ideal.",
+  "description_ru": "«Сколько тебе лет?» — двое только что познакомившихся спрашивают друг друга о возрасте. Этот диалог тренирует, как спрашивать о возрасте (你多大), называть его (我二十二岁) и возвращать вопрос (你呢), а также выражение сравнения (差不多大). Простая, повседневная тема — и достаточно короткий, чтобы повторять до естественности. Отлично для ролевой игры и уверенности в речи.",
+  "description_en": "«How old are you?» — two new acquaintances ask each other's age. This exchange practises asking about age (你多大), giving it (我二十二岁), and bouncing the question back (你呢), plus a handy comparison phrase (差不多大). A simple, everyday topic—and short enough to repeat until it feels natural. Perfect for role-play and building speaking confidence.",
+  "category_uz": "Tanishuv",
+  "category_ru": "Знакомство",
+  "category_en": "Getting Acquainted",
   "level": 1,
   "sections": [
     {

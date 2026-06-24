@@ -6,6 +6,12 @@
   "titleTranslation": "Soyabon oldingmi?",
   "titleTranslation_ru": "Ты взял зонт?",
   "titleTranslation_en": "Did you bring an umbrella?",
+  "description_uz": "«Soyabon olib keldingmi?» — ikki do'st yomg'ir va tashqariga chiqish haqida gaplashadi. Bu suhbat ob-havo haqida so'rash (外面下雨吗？), tasdiqlash (是的) va o'tgan zamonni 了 bilan ifodalashni (带伞了吗？, 带了) o'rgatadi. Oxirida birga ketishni taklif qilish (那我们走吧) ham bor. Kundalik, foydali vaziyat — rol o'ynash va takrorlash orqali eslab qolish uchun ideal.",
+  "description_ru": "«Ты взял зонт?» — два друга говорят о дожде и о том, что пора выходить. Этот диалог учит спрашивать о погоде (外面下雨吗？), подтверждать (是的) и выражать прошедшее действие через 了 (带伞了吗？, 带了). В конце есть и предложение идти вместе (那我们走吧). Бытовая, полезная ситуация — отлично для ролевой игры и запоминания через повторение.",
+  "description_en": "«Did you bring an umbrella?» — Two friends talk about the rain and heading out. This dialogue teaches asking about the weather (外面下雨吗？), confirming (是的), and marking a completed action with 了 (带伞了吗？, 带了). It even ends with a suggestion to go together (那我们走吧). A useful everyday situation—ideal for role-play and memorizing through repetition.",
+  "category_uz": "Ob-havo",
+  "category_ru": "Погода",
+  "category_en": "Weather",
   "level": 1,
   "sections": [
     {

@@ -6,6 +6,12 @@
   "titleTranslation": "Bu mening Wechатим emas",
   "titleTranslation_ru": "Это не мой WeChat",
   "titleTranslation_en": "That's not my WeChat",
+  "description_uz": "«Bu sening WeChating emas» — ikki kishi yuborilmagan xabar va noto'g'ri kontakt haqida gaplashadi. Bu suhbat o'tgan harakatni aytish (我早上给你发信息了), olmaganini bildirish (我没收到) va qayta urinishni (那我再发一遍) o'rgatadi. Tegishlilik savoli (这是你的微信吗？) va inkor (不是) ham bor. Zamonaviy, foydali mavzu — shadowing va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Это не твой WeChat» — двое говорят о неполученном сообщении и неверном контакте. Этот диалог учит называть прошедшее действие (我早上给你发信息了), сообщать, что не получил (我没收到), и пробовать снова (那我再发一遍). Есть и вопрос о принадлежности (这是你的微信吗？), и отрицание (不是). Современная, полезная тема — отлично для шэдоуинга и уверенности в речи.",
+  "description_en": "«That's not my WeChat» — Two people sort out a message that never arrived and a wrong contact. This dialogue teaches stating a past action (我早上给你发信息了), reporting non-receipt (我没收到), and trying again (那我再发一遍). It also covers a possession question (这是你的微信吗？) and a negation (不是). A modern, useful topic—ideal for shadowing and building speaking confidence.",
+  "category_uz": "Texnologiya",
+  "category_ru": "Технологии",
+  "category_en": "Technology",
   "level": 1,
   "sections": [
     {

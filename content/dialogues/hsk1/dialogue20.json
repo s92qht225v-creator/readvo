@@ -6,6 +6,12 @@
   "titleTranslation": "Telefonimning zaryadi tugadi",
   "titleTranslation_ru": "У моего телефона сел заряд",
   "titleTranslation_en": "My phone died",
+  "description_uz": "«Telefonim o'chib qoldi.» — bir do'st boshqasidan zaryadlagich so'rayapti. Bu suhbat muammoni aytish (我的手机没电了), narsa bor-yo'qligini so'rash (有充电器吗, 没有) va yordam taklif qilishni (用我的吧) mashq qildiradi, hamda muloyim minnatdorchilik iboralarini (谢谢, 不客气) o'rgatadi. Tanish kundalik mavzu — va tabiiy bo'lguncha takrorlash uchun yetarlicha qisqa. Shadowing va gapirishga ishonch hosil qilish uchun ideal.",
+  "description_ru": "«У меня телефон разрядился.» — один друг просит у другого зарядку. Этот диалог тренирует, как сообщить о проблеме (我的手机没电了), спросить о наличии вещи (有充电器吗, 没有) и предложить помощь (用我的吧), а также вежливые формулы благодарности (谢谢, 不客气). Близкая повседневная тема — и достаточно короткий, чтобы повторять до естественности. Отлично для шэдоуинга и уверенности в речи.",
+  "description_en": "«My phone died.» — one friend asks another for a charger. This exchange practises stating a problem (我的手机没电了), asking if someone has something (有充电器吗, 没有), and offering help (用我的吧), plus polite thank-you phrases (谢谢, 不客气). A familiar everyday topic—and short enough to repeat until it feels natural. Perfect for shadowing and building speaking confidence.",
+  "category_uz": "Kundalik muammolar",
+  "category_ru": "Бытовые ситуации",
+  "category_en": "Everyday Problems",
   "level": 1,
   "sections": [
     {
