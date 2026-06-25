@@ -13,6 +13,7 @@ export function TelegramFAB() {
   if (
     pathname?.includes('/karaoke/') ||
     pathname?.includes('/dialogues/') ||
+    pathname?.includes('/story/') ||
     pathname?.includes('/flashcards/') ||
     pathname?.includes('/writing/')
   ) {
