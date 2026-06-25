@@ -92,8 +92,14 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   // Build the study session from the user's review state: cards that are DUE
   // plus a capped number of NEW cards. Falls back to a plain shuffle (no
   // persistence) if the user has no token.
+  //
+  // Built ONCE per mount — `builtRef` guards against the effect re-running
+  // (deck.words / other deps aren't always referentially stable), which would
+  // otherwise rebuild the session on every grade and wipe the in-session queue.
+  const builtRef = useRef(false);
   useEffect(() => {
-    if (authLoading) return;
+    if (authLoading || builtRef.current) return;
+    builtRef.current = true;
     let cancelled = false;
     (async () => {
       const token = await getAccessToken();
