@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useSearchParams } from 'next/navigation';
 import { useRequireAuth } from '../../hooks/useRequireAuth';
+import { useAuth } from '../../hooks/useAuth';
 import { useLanguage } from '../../hooks/useLanguage';
 import { CatalogHeader } from './CatalogHeader';
 import { PageFooter } from '../PageFooter';
@@ -102,6 +103,26 @@ export function FlashcardsCatalog({ writingSets, writingSetsHsk2L2, writingSetsH
 
   const [topicSearch, setTopicSearch] = useState('');
 
+  // "Due today" summary — count the user's flashcard review states that are due.
+  const { getAccessToken } = useAuth();
+  const [dueCount, setDueCount] = useState<number | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const token = await getAccessToken();
+      if (!token || cancelled) return;
+      try {
+        const res = await fetch('/api/flashcards/reviews', { headers: { Authorization: `Bearer ${token}` } });
+        const data = await res.json();
+        if (cancelled) return;
+        const now = Date.now();
+        const due = (data.reviews ?? []).filter((r: { due_at: string }) => new Date(r.due_at).getTime() <= now).length;
+        setDueCount(due);
+      } catch { /* ignore */ }
+    })();
+    return () => { cancelled = true; };
+  }, [getAccessToken]);
+
   // Meta Pixel / Yandex / GA4: debounced topic-search tracking (parity with LanguagePage)
   useEffect(() => {
     const q = topicSearch.trim();
@@ -118,6 +139,25 @@ export function FlashcardsCatalog({ writingSets, writingSetsHsk2L2, writingSetsH
   return (
     <main className="home">
       <CatalogHeader currentTab="flashcards" hskLevel={flashcardHskLevel} />
+
+      {dueCount != null && dueCount > 0 && (
+        <div style={{ maxWidth: 520, margin: '12px auto 0', padding: '0 16px' }}>
+          <div style={{
+            display: 'flex', alignItems: 'center', gap: 10,
+            background: '#dcfce7', border: '1px solid #86efac', borderRadius: 6,
+            padding: '10px 14px', color: '#15803d', fontSize: 14, fontWeight: 600,
+          }}>
+            <span style={{ fontSize: 18 }}>🔁</span>
+            <span>
+              {({
+                uz: `Bugun takrorlash uchun ${dueCount} ta karta tayyor — istalgan to'plamni oching`,
+                ru: `${dueCount} карточек готовы к повторению — откройте любую колоду`,
+                en: `${dueCount} cards due for review today — open any deck`,
+              } as Record<string, string>)[language]}
+            </span>
+          </div>
+        </div>
+      )}
 
       {/* HSK level pills + Topics button */}
       <div className={`lp__seg-bar lp__seg-bar--col`}>
