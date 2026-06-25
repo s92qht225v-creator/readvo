@@ -55,11 +55,11 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       return saved === 'uz-zh' ? 'native' : 'cn';
     } catch { return 'cn'; }
   });
-  // Exit animation: 'back' (→ bottom of the stack, on "repeat") or 'pass' (off
-  // the top, on know/easy). `cardKey` remounts the flip card per advance so the
-  // incoming card starts at rest instead of animating back from the exit pose.
+  // Exit animation of the front card: 'back' (→ bottom of the stack, on
+  // "repeat") or 'pass' (off the top, on know/easy). Cards keep stable keys so
+  // the stack reorders continuously — the next card promotes forward as the
+  // graded one leaves.
   const [exitAnim, setExitAnim] = useState<'back' | 'pass' | null>(null);
-  const [cardKey, setCardKey] = useState(0);
   const cardRef = useRef<HTMLDivElement>(null);
   const pinyinBtnRef = useRef<HTMLButtonElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -194,14 +194,94 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       });
       setExitAnim(null);
       setIsFlipped(false);
-      setCardKey((k) => k + 1);
       isProcessingRef.current = false;
-    }, 300);
+    }, 320);
   }, [queue, cardId]);
 
-  const translation = currentCard
-    ? (language === 'ru' && currentCard.text_translation_ru ? currentCard.text_translation_ru : language === 'en' && currentCard.text_translation_en ? currentCard.text_translation_en : currentCard.text_translation)
-    : '';
+  // Render one card layer in the stack. idx 0 = front (interactive, flippable);
+  // idx 1/2 = peeking cards behind. The front card animates out on grade while
+  // the rest promote forward (continuous, stable keys).
+  const renderCard = (card: FlashcardWord, idx: number) => {
+    const isFront = idx === 0;
+    const flipped = isFront ? isFlipped : false;
+    const tr = language === 'ru' && card.text_translation_ru ? card.text_translation_ru
+      : language === 'en' && card.text_translation_en ? card.text_translation_en
+      : card.text_translation;
+
+    let tf: string; let opacity: number; let z: number;
+    if (isFront && exitAnim) {
+      if (exitAnim === 'back') { tf = 'translateY(56px) scale(0.78) rotate(-4deg)'; opacity = 0.12; z = 1; }
+      else { tf = 'translateY(-70px) scale(0.96)'; opacity = 0; z = 6; }
+    } else {
+      const slot = exitAnim ? Math.max(0, idx - 1) : idx;
+      const ty = slot === 0 ? 0 : slot === 1 ? 10 : 20;
+      const sc = slot === 0 ? 1 : slot === 1 ? 0.95 : 0.9;
+      opacity = slot === 0 ? 1 : slot === 1 ? 0.9 : 0.8;
+      z = 5 - slot;
+      tf = `translateY(${ty}px) scale(${sc})`;
+    }
+    const interactive = isFront && !exitAnim;
+    const audioBtn = (bg: string) => card.audio_url ? (
+      <button type="button" onClick={(e) => { e.stopPropagation(); playAudio(card.audio_url!); }}
+        style={{ position: 'absolute', bottom: 12, right: 12, width: 36, height: 36, borderRadius: '50%', border: 'none', background: bg, color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
+      </button>
+    ) : null;
+
+    return (
+      <div
+        key={cardId(card)}
+        role={interactive ? 'button' : undefined}
+        tabIndex={interactive ? 0 : -1}
+        aria-hidden={!isFront}
+        aria-label={interactive ? ({ uz: 'Kartani aylantirish', ru: 'Перевернуть карточку', en: 'Flip card' } as Record<string, string>)[language] : undefined}
+        onClick={interactive ? () => { setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } : undefined}
+        onKeyDown={interactive ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } } : undefined}
+        style={{
+          position: 'absolute', inset: 0, cursor: interactive ? 'pointer' : 'default',
+          zIndex: z, opacity,
+          transformStyle: 'preserve-3d',
+          transition: 'transform 0.32s cubic-bezier(0.22,0.61,0.36,1), opacity 0.32s ease',
+          transform: `${tf} rotateY(${flipped ? 180 : 0}deg)`,
+        }}
+      >
+        {/* Front */}
+        <div style={{ position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', background: '#fff', borderRadius: 3, border: '1px solid #e0e0e6', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+          {direction === 'cn' ? (
+            <>
+              <div lang="zh-Hans" style={{ fontSize: 52, fontWeight: 300, color: '#1a1a2e' }}>{card.text_original}</div>
+              {isPinyinVisible && <div style={{ fontSize: 16, color: '#dc2626', marginTop: 8 }}>{card.pinyin}</div>}
+            </>
+          ) : (
+            <div style={{ fontSize: tr.length > 20 ? 18 : 22, fontWeight: 600, color: '#1a1a2e', textAlign: 'center', lineHeight: 1.2, wordBreak: 'break-word' }}>{tr}</div>
+          )}
+          {isFront && (
+            <div style={{ fontSize: 11, color: '#ccc', marginTop: 16 }}>
+              {({ uz: 'bosing — javobni ko\'ring', ru: 'нажмите — посмотрите ответ', en: 'tap to see answer' } as Record<string, string>)[language]}
+            </div>
+          )}
+          {direction === 'cn' && audioBtn('#dc2626')}
+        </div>
+        {/* Back */}
+        <div style={{ position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)', background: 'linear-gradient(135deg, #dc2626, #b91c1c)', borderRadius: 3, boxShadow: '0 4px 20px rgba(0,0,0,0.12)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+          {direction === 'cn' ? (
+            <>
+              <div lang="zh-Hans" style={{ fontSize: 22, fontWeight: 300, color: '#fca5a5' }}>{card.text_original}</div>
+              <div style={{ fontSize: tr.length > 20 ? 22 : tr.length > 12 ? 28 : 36, fontWeight: 600, color: '#fff', marginTop: 10, textAlign: 'center', lineHeight: 1.2, wordBreak: 'break-word' }}>{tr}</div>
+              <div style={{ fontSize: 15, color: '#fca5a5', marginTop: 10 }}>{card.pinyin}</div>
+            </>
+          ) : (
+            <>
+              {isPinyinVisible && <div style={{ fontSize: 15, color: '#fca5a5' }}>{card.pinyin}</div>}
+              <div lang="zh-Hans" style={{ fontSize: 48, fontWeight: 300, color: '#fff', marginTop: 4 }}>{card.text_original}</div>
+              <div style={{ fontSize: 18, color: '#fca5a5', marginTop: 8, textAlign: 'center' }}>{tr}</div>
+            </>
+          )}
+          {audioBtn('rgba(255,255,255,0.2)')}
+        </div>
+      </div>
+    );
+  };
 
   if (authLoading) return <div className="loading-spinner" />;
   const isFreeContent = deck.id.startsWith('topic-') || deck.words[0]?.lesson === 1;
@@ -277,100 +357,10 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
             </div>
 
 
-            {/* Card (tap to flip) */}
-            <div ref={cardRef} style={{ perspective: 800, width: '100%', height: 260, position: 'relative' }}>
-              {/* faint stack behind, so the "send to back" exit lands somewhere */}
-              {queue.length > 1 && (
-                <div aria-hidden="true" style={{ position: 'absolute', inset: 0, transform: 'translateY(8px) scale(0.96)', background: '#fff', borderRadius: 3, border: '1px solid #ececf0', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }} />
-              )}
-              {queue.length > 2 && (
-                <div aria-hidden="true" style={{ position: 'absolute', inset: 0, transform: 'translateY(15px) scale(0.92)', background: '#fff', borderRadius: 3, border: '1px solid #f1f1f5', boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }} />
-              )}
-              <div
-                key={cardKey}
-                role="button"
-                tabIndex={0}
-                aria-label={({ uz: 'Kartani aylantirish', ru: 'Перевернуть карточку', en: 'Flip card' } as Record<string, string>)[language]}
-                onClick={() => { setIsFlipped((f) => !f); dismissTip('flashcard-tour'); }}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } }}
-                style={{
-                  position: 'absolute', inset: 0, cursor: 'pointer',
-                  transformStyle: 'preserve-3d',
-                  transition: 'transform 0.3s ease, opacity 0.3s ease',
-                  transform: `${exitAnim === 'back' ? 'translateY(46px) scale(0.8)' : exitAnim === 'pass' ? 'translateY(-46px) scale(0.92)' : ''} rotateY(${isFlipped ? 180 : 0}deg)`,
-                  opacity: exitAnim === 'pass' ? 0 : exitAnim === 'back' ? 0.25 : 1,
-                }}
-              >
-                  {/* Front */}
-                  <div style={{
-                    position: 'absolute', width: '100%', height: '100%',
-                    backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
-                    background: '#fff', borderRadius: 3, border: '1px solid #e0e0e6',
-                    boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                    display: 'flex', flexDirection: 'column',
-                    alignItems: 'center', justifyContent: 'center', padding: 20,
-                  }}>
-                    {direction === 'cn' ? (
-                      <>
-                        <div lang="zh-Hans" style={{ fontSize: 52, fontWeight: 300, color: '#1a1a2e' }}>{currentCard.text_original}</div>
-                        {isPinyinVisible && (
-                          <div style={{ fontSize: 16, color: '#dc2626', marginTop: 8 }}>{currentCard.pinyin}</div>
-                        )}
-                      </>
-                    ) : (
-                      <div style={{ fontSize: translation.length > 20 ? 18 : 22, fontWeight: 600, color: '#1a1a2e', textAlign: 'center', lineHeight: 1.2, wordBreak: 'break-word' }}>{translation}</div>
-                    )}
-                    <div style={{ fontSize: 11, color: '#ccc', marginTop: 16 }}>
-                      {({ uz: 'bosing — javobni ko\'ring', ru: 'нажмите — посмотрите ответ', en: 'tap to see answer' } as Record<string, string>)[language]}
-                    </div>
-                    {currentCard.audio_url && direction === 'cn' && (
-                      <button
-                        type="button"
-                        onClick={(e) => { e.stopPropagation(); playAudio(currentCard.audio_url!); }}
-                        style={{ position: 'absolute', bottom: 12, right: 12, width: 36, height: 36, borderRadius: '50%', border: 'none', background: '#dc2626', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                      >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
-                      </button>
-                    )}
-                  </div>
-
-                  {/* Back */}
-                  <div style={{
-                    position: 'absolute', width: '100%', height: '100%',
-                    backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
-                    transform: 'rotateY(180deg)',
-                    background: 'linear-gradient(135deg, #dc2626, #b91c1c)',
-                    borderRadius: 3, boxShadow: '0 4px 20px rgba(0,0,0,0.12)',
-                    display: 'flex', flexDirection: 'column',
-                    alignItems: 'center', justifyContent: 'center', padding: 20,
-                  }}>
-                    {direction === 'cn' ? (
-                      <>
-                        <div lang="zh-Hans" style={{ fontSize: 22, fontWeight: 300, color: '#fca5a5' }}>{currentCard.text_original}</div>
-                        <div style={{ fontSize: translation.length > 20 ? 22 : translation.length > 12 ? 28 : 36, fontWeight: 600, color: '#fff', marginTop: 10, textAlign: 'center', lineHeight: 1.2, wordBreak: 'break-word' }}>{translation}</div>
-                        <div style={{ fontSize: 15, color: '#fca5a5', marginTop: 10 }}>{currentCard.pinyin}</div>
-                      </>
-                    ) : (
-                      <>
-                        {isPinyinVisible && (
-                          <div style={{ fontSize: 15, color: '#fca5a5' }}>{currentCard.pinyin}</div>
-                        )}
-                        <div lang="zh-Hans" style={{ fontSize: 48, fontWeight: 300, color: '#fff', marginTop: 4 }}>{currentCard.text_original}</div>
-                        <div style={{ fontSize: 18, color: '#fca5a5', marginTop: 8, textAlign: 'center' }}>{translation}</div>
-                      </>
-                    )}
-                    {currentCard.audio_url && (
-                      <button
-                        type="button"
-                        onClick={(e) => { e.stopPropagation(); playAudio(currentCard.audio_url!); }}
-                        style={{ position: 'absolute', bottom: 12, right: 12, width: 36, height: 36, borderRadius: '50%', border: 'none', background: 'rgba(255,255,255,0.2)', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                      >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </div>
+            {/* Card stack — tap the front to flip; grading reorders the deck */}
+            <div ref={cardRef} style={{ perspective: 900, width: '100%', height: 260, position: 'relative' }}>
+              {queue.slice(0, 3).map((c, i) => renderCard(c, i))}
+            </div>
 
             {/* Grade buttons: I know / Easy on top, I don't know full-width below */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 18 }}>
