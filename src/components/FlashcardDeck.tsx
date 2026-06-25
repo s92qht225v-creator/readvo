@@ -55,21 +55,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       return saved === 'uz-zh' ? 'native' : 'cn';
     } catch { return 'cn'; }
   });
-  // Exit animation of the front card: 'back' (→ bottom of the stack, on
-  // "repeat") or 'pass' (off the top, on know/easy). Cards keep stable keys so
-  // the stack reorders continuously — the next card promotes forward as the
-  // graded one leaves.
-  const [exitAnim, setExitAnim] = useState<'back' | 'pass' | null>(null);
-  // Honor the OS "reduce motion" setting — swap cards instantly, no slide.
-  const [reduceMotion, setReduceMotion] = useState(false);
-  useEffect(() => {
-    if (typeof window === 'undefined' || !window.matchMedia) return;
-    const m = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setReduceMotion(m.matches);
-    const fn = () => setReduceMotion(m.matches);
-    m.addEventListener?.('change', fn);
-    return () => m.removeEventListener?.('change', fn);
-  }, []);
   const cardRef = useRef<HTMLDivElement>(null);
   const pinyinBtnRef = useRef<HTMLButtonElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -193,52 +178,22 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       setReviewedCount(reviewedRef.current.size);
     }
 
-    // Animate the card out, then advance the queue. "again" drops it to the
-    // back of the stack; know/easy passes it off the top.
-    setExitAnim(g === 'again' ? 'back' : 'pass');
-    setTimeout(() => {
-      setQueue((prev) => {
-        if (prev.length === 0) return prev;
-        const [first, ...rest] = prev;
-        return g === 'again' ? [...rest, first] : rest;
-      });
-      setExitAnim(null);
-      setIsFlipped(false);
-      isProcessingRef.current = false;
-    }, reduceMotion ? 0 : 320);
-  }, [queue, cardId, reduceMotion]);
+    // Advance the queue: "again" re-queues to the back, know/easy drops it.
+    setIsFlipped(false);
+    setQueue((prev) => {
+      if (prev.length === 0) return prev;
+      const [first, ...rest] = prev;
+      return g === 'again' ? [...rest, first] : rest;
+    });
+    isProcessingRef.current = false;
+  }, [queue, cardId]);
 
-  // Render one card layer in the stack. idx 0 = front (interactive, flippable);
-  // idx 1/2 = peeking cards behind. The front card animates out on grade while
-  // the rest promote forward (continuous, stable keys).
-  const renderCard = (card: FlashcardWord, idx: number) => {
-    const isFront = idx === 0;
-    const flipped = isFront ? isFlipped : false;
+  // Render the current card as a tap-to-flip card (no movement animation).
+  const renderCard = (card: FlashcardWord) => {
+    const flipped = isFlipped;
     const tr = language === 'ru' && card.text_translation_ru ? card.text_translation_ru
       : language === 'en' && card.text_translation_en ? card.text_translation_en
       : card.text_translation;
-
-    let tf: string; let opacity: number; let z: number; let shadow: string;
-    if (isFront && exitAnim) {
-      if (exitAnim === 'back') { tf = 'translateY(58px) scale(0.78) rotate(-4deg)'; opacity = 0.12; z = 1; shadow = '0 4px 12px rgba(0,0,0,0.12)'; }
-      else { tf = 'translateY(-72px) scale(1.04)'; opacity = 0; z = 6; shadow = '0 26px 55px rgba(0,0,0,0.28)'; } // lift up & away
-    } else {
-      const slot = exitAnim ? Math.max(0, idx - 1) : idx;
-      const ty = slot === 0 ? 0 : slot === 1 ? 10 : 20;
-      const sc = slot === 0 ? 1 : slot === 1 ? 0.95 : 0.9;
-      opacity = slot === 0 ? 1 : slot === 1 ? 0.9 : 0.8;
-      z = 5 - slot;
-      tf = `translateY(${ty}px) scale(${sc})`;
-      shadow = slot === 0 ? '0 12px 30px rgba(0,0,0,0.13)' : slot === 1 ? '0 6px 18px rgba(0,0,0,0.08)' : '0 3px 12px rgba(0,0,0,0.06)';
-    }
-    // Spring (gentle overshoot) while settling/promoting; quicker ease while leaving.
-    const transition = reduceMotion
-      ? 'none'
-      : exitAnim && isFront
-        ? 'transform 0.30s cubic-bezier(0.4,0,1,1), opacity 0.30s ease, box-shadow 0.30s ease'
-        : 'transform 0.34s cubic-bezier(0.34,1.4,0.5,1), opacity 0.30s ease, box-shadow 0.34s ease';
-    const faceTransition = reduceMotion ? undefined : 'box-shadow 0.32s ease';
-    const interactive = isFront && !exitAnim;
     const audioBtn = (bg: string) => card.audio_url ? (
       <button type="button" onClick={(e) => { e.stopPropagation(); playAudio(card.audio_url!); }}
         style={{ position: 'absolute', bottom: 12, right: 12, width: 36, height: 36, borderRadius: '50%', border: 'none', background: bg, color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -249,22 +204,20 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     return (
       <div
         key={cardId(card)}
-        role={interactive ? 'button' : undefined}
-        tabIndex={interactive ? 0 : -1}
-        aria-hidden={!isFront}
-        aria-label={interactive ? ({ uz: 'Kartani aylantirish', ru: 'Перевернуть карточку', en: 'Flip card' } as Record<string, string>)[language] : undefined}
-        onClick={interactive ? () => { setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } : undefined}
-        onKeyDown={interactive ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } } : undefined}
+        role="button"
+        tabIndex={0}
+        aria-label={({ uz: 'Kartani aylantirish', ru: 'Перевернуть карточку', en: 'Flip card' } as Record<string, string>)[language]}
+        onClick={() => { setIsFlipped((f) => !f); dismissTip('flashcard-tour'); }}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } }}
         style={{
-          position: 'absolute', inset: 0, cursor: interactive ? 'pointer' : 'default',
-          zIndex: z, opacity,
-          transformStyle: 'preserve-3d', willChange: 'transform, opacity',
-          transition,
-          transform: `${tf} rotateY(${flipped ? 180 : 0}deg)`,
+          position: 'absolute', inset: 0, cursor: 'pointer',
+          transformStyle: 'preserve-3d',
+          transition: 'transform 0.4s',
+          transform: `rotateY(${flipped ? 180 : 0}deg)`,
         }}
       >
         {/* Front */}
-        <div style={{ position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', background: '#fff', borderRadius: 3, border: '1px solid #e0e0e6', boxShadow: shadow, transition: faceTransition, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+        <div style={{ position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', background: '#fff', borderRadius: 3, border: '1px solid #e0e0e6', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
           {direction === 'cn' ? (
             <>
               <div lang="zh-Hans" style={{ fontSize: 52, fontWeight: 300, color: '#1a1a2e' }}>{card.text_original}</div>
@@ -273,15 +226,13 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
           ) : (
             <div style={{ fontSize: tr.length > 20 ? 18 : 22, fontWeight: 600, color: '#1a1a2e', textAlign: 'center', lineHeight: 1.2, wordBreak: 'break-word' }}>{tr}</div>
           )}
-          {isFront && (
-            <div style={{ fontSize: 11, color: '#ccc', marginTop: 16 }}>
-              {({ uz: 'bosing — javobni ko\'ring', ru: 'нажмите — посмотрите ответ', en: 'tap to see answer' } as Record<string, string>)[language]}
-            </div>
-          )}
+          <div style={{ fontSize: 11, color: '#ccc', marginTop: 16 }}>
+            {({ uz: 'bosing — javobni ko\'ring', ru: 'нажмите — посмотрите ответ', en: 'tap to see answer' } as Record<string, string>)[language]}
+          </div>
           {direction === 'cn' && audioBtn('#dc2626')}
         </div>
         {/* Back */}
-        <div style={{ position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)', background: 'linear-gradient(135deg, #dc2626, #b91c1c)', borderRadius: 3, boxShadow: shadow, transition: faceTransition, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+        <div style={{ position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)', background: 'linear-gradient(135deg, #dc2626, #b91c1c)', borderRadius: 3, boxShadow: '0 4px 20px rgba(0,0,0,0.12)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
           {direction === 'cn' ? (
             <>
               <div lang="zh-Hans" style={{ fontSize: 22, fontWeight: 300, color: '#fca5a5' }}>{card.text_original}</div>
@@ -375,9 +326,9 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
             </div>
 
 
-            {/* Card stack — tap the front to flip; grading reorders the deck */}
+            {/* Card — tap to flip */}
             <div ref={cardRef} style={{ perspective: 900, width: '100%', height: 260, position: 'relative' }}>
-              {queue.slice(0, 3).map((c, i) => renderCard(c, i))}
+              {renderCard(currentCard)}
             </div>
 
             {/* Grade buttons: I know / Easy on top, I don't know full-width below */}
