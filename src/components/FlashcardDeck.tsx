@@ -10,7 +10,7 @@ import { useAuth } from '../hooks/useAuth';
 import { useTrial } from '../hooks/useTrial';
 import { usePrimeAudioToken } from '../hooks/useAudioToken';
 import { protectAudioUrlSync } from '../lib/audio/token-client';
-import type { Grade } from '../lib/srs';
+import { newCardState, schedule, type Grade, type CardState } from '../lib/srs';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
@@ -46,6 +46,8 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const [againCount, setAgainCount] = useState(0);
   const reviewedRef = useRef<Set<string>>(new Set());
   const tokenRef = useRef<string | null>(null);
+  // Per-card SRS state (from the server), used to show each grade's next interval.
+  const stateRef = useRef<Map<string, CardState>>(new Map());
 
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPinyinVisible, setIsPinyinVisible] = useState(true);
@@ -116,7 +118,10 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
             headers: { Authorization: `Bearer ${token}` },
           });
           const data = await res.json();
-          byId = new Map((data.reviews ?? []).map((r: { card_id: string; due_at: string }) => [r.card_id, r]));
+          type Row = { card_id: string; due_at: string; ease: number; interval_days: number; reps: number; lapses: number };
+          const rows: Row[] = data.reviews ?? [];
+          byId = new Map(rows.map((r) => [r.card_id, r]));
+          stateRef.current = new Map(rows.map((r) => [r.card_id, { reps: r.reps, lapses: r.lapses, ease: r.ease, intervalDays: r.interval_days, dueAt: r.due_at }]));
         } catch { /* offline → treat all as new */ }
         if (cancelled) return;
         const now = Date.now();
@@ -145,6 +150,17 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const isComplete = phase === 'review' && queue.length === 0;
   const pct = sessionTotal > 0 ? Math.round((reviewedCount / sessionTotal) * 100) : 0;
 
+  // Next interval (in days) each grade would schedule for the current card,
+  // so the buttons can show "in N days".
+  const curState = currentCard ? (stateRef.current.get(cardId(currentCard)) ?? newCardState()) : null;
+  const goodDays = curState ? schedule(curState, 'good').intervalDays : 1;
+  const easyDays = curState ? schedule(curState, 'easy').intervalDays : 4;
+  const daysLabel = (n: number) => ({
+    uz: `${n} kundan keyin`,
+    ru: `через ${n} дн.`,
+    en: `in ${n} ${n === 1 ? 'day' : 'days'}`,
+  } as Record<string, string>)[language];
+
   // Grade the current card: persist + re-schedule, then advance the queue.
   // "Again" re-queues the card to the back so it reappears this session.
   const grade = useCallback((g: Grade) => {
@@ -160,10 +176,15 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       }).catch(() => {});
     }
 
+    // Keep the local state in sync so the next interval shown on the buttons
+    // stays accurate (e.g. for a re-queued "again" card).
+    const id = cardId(card);
+    stateRef.current.set(id, schedule(stateRef.current.get(id) ?? newCardState(), g));
+
     if (g === 'again') {
       setAgainCount((c) => c + 1);
     } else {
-      reviewedRef.current.add(cardId(card));
+      reviewedRef.current.add(id);
       setReviewedCount(reviewedRef.current.size);
     }
 
@@ -250,13 +271,13 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
 
   const swipeOpacity = Math.min(Math.abs(dragX) / SWIPE_THRESHOLD, 1);
   const swipeLabel = dragX > SWIPE_THRESHOLD
-    ? ({ uz: 'Yaxshi ✓', ru: 'Хорошо ✓', en: 'Good ✓' } as Record<string, string>)[language]
+    ? ({ uz: 'Bilaman ✓', ru: 'Знаю ✓', en: 'I know ✓' } as Record<string, string>)[language]
     : dragX < -SWIPE_THRESHOLD
-      ? ({ uz: 'Qayta ↺', ru: 'Заново ↺', en: 'Again ↺' } as Record<string, string>)[language]
+      ? ({ uz: 'Bilmayman 🔁', ru: 'Не знаю 🔁', en: "I don't know 🔁" } as Record<string, string>)[language]
       : dragX > 0
-        ? ({ uz: 'Yaxshi?', ru: 'Хорошо?', en: 'Good?' } as Record<string, string>)[language]
+        ? ({ uz: 'Bilaman?', ru: 'Знаю?', en: 'I know?' } as Record<string, string>)[language]
         : dragX < 0
-          ? ({ uz: 'Qayta?', ru: 'Заново?', en: 'Again?' } as Record<string, string>)[language]
+          ? ({ uz: 'Bilmayman?', ru: 'Не знаю?', en: "I don't know?" } as Record<string, string>)[language]
           : '';
   const swipeBg = dragX > SWIPE_THRESHOLD ? '#dcfce7' : dragX < -SWIPE_THRESHOLD ? '#fee2e2' : '#f5f5f8';
   const swipeBorder = dragX > SWIPE_THRESHOLD ? '#22c55e' : dragX < -SWIPE_THRESHOLD ? '#ef4444' : '#e0e0e6';
@@ -451,34 +472,39 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
                       </button>
                     )}
-                    <div style={{ fontSize: 11, color: '#fca5a580', marginTop: 16 }}>{({ uz: '← qayta | yaxshi →', ru: '← заново | хорошо →', en: '← again | good →' } as Record<string, string>)[language]}</div>
+                    <div style={{ fontSize: 11, color: '#fca5a580', marginTop: 16 }}>{({ uz: '← bilmayman | bilaman →', ru: '← не знаю | знаю →', en: "← don't know | know →" } as Record<string, string>)[language]}</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Grade buttons */}
-            <div style={{ display: 'flex', gap: 8, marginTop: 18 }}>
+            {/* Grade buttons: I know / Easy on top, I don't know full-width below */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 18 }}>
+              <div style={{ display: 'flex', gap: 8 }}>
+                <button
+                  onClick={() => grade('good')}
+                  style={{ flex: 1, padding: '10px 8px', border: '2px solid #86efac', borderRadius: 3, background: '#fff', color: '#16a34a', cursor: 'pointer', fontFamily: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}
+                  type="button"
+                >
+                  <span style={{ fontSize: 14, fontWeight: 600 }}>✓ {({ uz: 'Bilaman', ru: 'Знаю', en: 'I know' } as Record<string, string>)[language]}</span>
+                  <span style={{ fontSize: 11, opacity: 0.75 }}>{daysLabel(goodDays)}</span>
+                </button>
+                <button
+                  onClick={() => grade('easy')}
+                  style={{ flex: 1, padding: '10px 8px', border: '2px solid #93c5fd', borderRadius: 3, background: '#fff', color: '#2563eb', cursor: 'pointer', fontFamily: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}
+                  type="button"
+                >
+                  <span style={{ fontSize: 14, fontWeight: 600 }}>⚡ {({ uz: 'Oson', ru: 'Легко', en: 'Easy' } as Record<string, string>)[language]}</span>
+                  <span style={{ fontSize: 11, opacity: 0.75 }}>{daysLabel(easyDays)}</span>
+                </button>
+              </div>
               <button
                 onClick={() => grade('again')}
-                style={{ flex: 1, padding: 12, border: '2px solid #fca5a5', borderRadius: 3, background: '#fff', color: '#ef4444', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+                style={{ width: '100%', padding: '10px 8px', border: '2px solid #fca5a5', borderRadius: 3, background: '#fff', color: '#ef4444', cursor: 'pointer', fontFamily: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}
                 type="button"
               >
-                ↺ {({ uz: 'Qayta', ru: 'Заново', en: 'Again' } as Record<string, string>)[language]}
-              </button>
-              <button
-                onClick={() => grade('good')}
-                style={{ flex: 1, padding: 12, border: '2px solid #86efac', borderRadius: 3, background: '#fff', color: '#16a34a', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
-                type="button"
-              >
-                {({ uz: 'Yaxshi', ru: 'Хорошо', en: 'Good' } as Record<string, string>)[language]} ✓
-              </button>
-              <button
-                onClick={() => grade('easy')}
-                style={{ flex: 1, padding: 12, border: '2px solid #93c5fd', borderRadius: 3, background: '#fff', color: '#2563eb', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
-                type="button"
-              >
-                {({ uz: 'Oson', ru: 'Легко', en: 'Easy' } as Record<string, string>)[language]} ⚡
+                <span style={{ fontSize: 14, fontWeight: 600 }}>🔁 {({ uz: 'Bilmayman', ru: 'Не знаю', en: "I don't know" } as Record<string, string>)[language]}</span>
+                <span style={{ fontSize: 11, opacity: 0.75 }}>{({ uz: 'shu sessiyada qaytariladi', ru: 'повторить в этой сессии', en: 'repeat this session' } as Record<string, string>)[language]}</span>
               </button>
             </div>
           </div>
