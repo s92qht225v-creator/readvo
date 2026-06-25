@@ -55,8 +55,8 @@
 /* Gender toggle FAB (stacked above the play-all FAB; solid, not faded) */
 .ar-gender-fab {
   position: fixed;
-  bottom: 168px;
-  right: 24px;
+  bottom: 80px;
+  left: 24px;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -73,6 +73,9 @@
   z-index: 80;
 }
 .ar-gender-fab:active { transform: scale(0.94); }
+@media (max-width: 600px) {
+  .ar-gender-fab { bottom: 100px; }
+}
 
 /* ── Words tab (reuses the .dr-tabs / .dr-flip chrome, re-themed green) ── */
 .ar-vocab { padding-block: 16px; }
