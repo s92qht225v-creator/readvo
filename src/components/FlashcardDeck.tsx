@@ -60,6 +60,16 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   // the stack reorders continuously — the next card promotes forward as the
   // graded one leaves.
   const [exitAnim, setExitAnim] = useState<'back' | 'pass' | null>(null);
+  // Honor the OS "reduce motion" setting — swap cards instantly, no slide.
+  const [reduceMotion, setReduceMotion] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const m = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReduceMotion(m.matches);
+    const fn = () => setReduceMotion(m.matches);
+    m.addEventListener?.('change', fn);
+    return () => m.removeEventListener?.('change', fn);
+  }, []);
   const cardRef = useRef<HTMLDivElement>(null);
   const pinyinBtnRef = useRef<HTMLButtonElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -195,8 +205,8 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       setExitAnim(null);
       setIsFlipped(false);
       isProcessingRef.current = false;
-    }, 320);
-  }, [queue, cardId]);
+    }, reduceMotion ? 0 : 320);
+  }, [queue, cardId, reduceMotion]);
 
   // Render one card layer in the stack. idx 0 = front (interactive, flippable);
   // idx 1/2 = peeking cards behind. The front card animates out on grade while
@@ -208,10 +218,10 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       : language === 'en' && card.text_translation_en ? card.text_translation_en
       : card.text_translation;
 
-    let tf: string; let opacity: number; let z: number;
+    let tf: string; let opacity: number; let z: number; let shadow: string;
     if (isFront && exitAnim) {
-      if (exitAnim === 'back') { tf = 'translateY(56px) scale(0.78) rotate(-4deg)'; opacity = 0.12; z = 1; }
-      else { tf = 'translateY(-70px) scale(0.96)'; opacity = 0; z = 6; }
+      if (exitAnim === 'back') { tf = 'translateY(58px) scale(0.78) rotate(-4deg)'; opacity = 0.12; z = 1; shadow = '0 4px 12px rgba(0,0,0,0.12)'; }
+      else { tf = 'translateY(-72px) scale(1.04)'; opacity = 0; z = 6; shadow = '0 26px 55px rgba(0,0,0,0.28)'; } // lift up & away
     } else {
       const slot = exitAnim ? Math.max(0, idx - 1) : idx;
       const ty = slot === 0 ? 0 : slot === 1 ? 10 : 20;
@@ -219,7 +229,15 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       opacity = slot === 0 ? 1 : slot === 1 ? 0.9 : 0.8;
       z = 5 - slot;
       tf = `translateY(${ty}px) scale(${sc})`;
+      shadow = slot === 0 ? '0 12px 30px rgba(0,0,0,0.13)' : slot === 1 ? '0 6px 18px rgba(0,0,0,0.08)' : '0 3px 12px rgba(0,0,0,0.06)';
     }
+    // Spring (gentle overshoot) while settling/promoting; quicker ease while leaving.
+    const transition = reduceMotion
+      ? 'none'
+      : exitAnim && isFront
+        ? 'transform 0.30s cubic-bezier(0.4,0,1,1), opacity 0.30s ease, box-shadow 0.30s ease'
+        : 'transform 0.34s cubic-bezier(0.34,1.4,0.5,1), opacity 0.30s ease, box-shadow 0.34s ease';
+    const faceTransition = reduceMotion ? undefined : 'box-shadow 0.32s ease';
     const interactive = isFront && !exitAnim;
     const audioBtn = (bg: string) => card.audio_url ? (
       <button type="button" onClick={(e) => { e.stopPropagation(); playAudio(card.audio_url!); }}
@@ -240,13 +258,13 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
         style={{
           position: 'absolute', inset: 0, cursor: interactive ? 'pointer' : 'default',
           zIndex: z, opacity,
-          transformStyle: 'preserve-3d',
-          transition: 'transform 0.32s cubic-bezier(0.22,0.61,0.36,1), opacity 0.32s ease',
+          transformStyle: 'preserve-3d', willChange: 'transform, opacity',
+          transition,
           transform: `${tf} rotateY(${flipped ? 180 : 0}deg)`,
         }}
       >
         {/* Front */}
-        <div style={{ position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', background: '#fff', borderRadius: 3, border: '1px solid #e0e0e6', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+        <div style={{ position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', background: '#fff', borderRadius: 3, border: '1px solid #e0e0e6', boxShadow: shadow, transition: faceTransition, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
           {direction === 'cn' ? (
             <>
               <div lang="zh-Hans" style={{ fontSize: 52, fontWeight: 300, color: '#1a1a2e' }}>{card.text_original}</div>
@@ -263,7 +281,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
           {direction === 'cn' && audioBtn('#dc2626')}
         </div>
         {/* Back */}
-        <div style={{ position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)', background: 'linear-gradient(135deg, #dc2626, #b91c1c)', borderRadius: 3, boxShadow: '0 4px 20px rgba(0,0,0,0.12)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+        <div style={{ position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)', background: 'linear-gradient(135deg, #dc2626, #b91c1c)', borderRadius: 3, boxShadow: shadow, transition: faceTransition, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
           {direction === 'cn' ? (
             <>
               <div lang="zh-Hans" style={{ fontSize: 22, fontWeight: 300, color: '#fca5a5' }}>{card.text_original}</div>
