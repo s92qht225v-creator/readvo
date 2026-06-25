@@ -42,6 +42,6 @@ async function submit(urls) {
 
 const argv = process.argv.slice(2);
 const urls = argv.length ? argv : await sitemapUrls();
-console.log(`Submitting ${urls.length} URLs to IndexNow (${ENDPOINT})`);
+console.log(`Submitting ${urls.length} URLs to IndexNow (${ENDPOINTS.join(', ')})`);
 await submit(urls);
 console.log('Done.');
