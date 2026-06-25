@@ -43,7 +43,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const [queue, setQueue] = useState<FlashcardWord[]>([]);
   const [sessionTotal, setSessionTotal] = useState(0);
   const [reviewedCount, setReviewedCount] = useState(0); // unique cards passed (good/easy)
-  const [againCount, setAgainCount] = useState(0);
   const reviewedRef = useRef<Set<string>>(new Set());
   const tokenRef = useRef<string | null>(null);
   // Per-card SRS state (from the server), used to show each grade's next interval.
@@ -138,7 +137,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       if (cancelled) return;
       reviewedRef.current = new Set();
       setReviewedCount(0);
-      setAgainCount(0);
       setSessionTotal(session.length);
       setQueue(session);
       setPhase(session.length === 0 ? 'empty' : 'review');
@@ -181,9 +179,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     const id = cardId(card);
     stateRef.current.set(id, schedule(stateRef.current.get(id) ?? newCardState(), g));
 
-    if (g === 'again') {
-      setAgainCount((c) => c + 1);
-    } else {
+    if (g !== 'again') {
       reviewedRef.current.add(id);
       setReviewedCount(reviewedRef.current.size);
     }
@@ -356,18 +352,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
               </div>
             </div>
 
-            {/* Score indicators */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 14, alignItems: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: '#fee2e2', borderRadius: 3, padding: '5px 12px' }}>
-                <span style={{ fontSize: 12, color: '#ef4444' }}>↺</span>
-                <span style={{ fontSize: 13, fontWeight: 600, color: '#ef4444' }}>{againCount}</span>
-              </div>
-              <div style={{ fontSize: 11, color: '#ccc' }}>{({ uz: '← suring →', ru: '← листать →', en: '← swipe →' } as Record<string, string>)[language]}</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: '#dcfce7', borderRadius: 3, padding: '5px 12px' }}>
-                <span style={{ fontSize: 13, fontWeight: 600, color: '#16a34a' }}>{reviewedCount}</span>
-                <span style={{ fontSize: 12, color: '#16a34a' }}>✓</span>
-              </div>
-            </div>
 
             {/* Card with swipe */}
             <div
