@@ -6,9 +6,11 @@ import type { FlashcardDeckData, FlashcardWord } from '../types';
 import { useLanguage } from '../hooks/useLanguage';
 import { shuffleArray } from '../utils/shuffle';
 import { useRequireAuth } from '../hooks/useRequireAuth';
+import { useAuth } from '../hooks/useAuth';
 import { useTrial } from '../hooks/useTrial';
 import { usePrimeAudioToken } from '../hooks/useAudioToken';
 import { protectAudioUrlSync } from '../lib/audio/token-client';
+import type { Grade } from '../lib/srs';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
@@ -27,16 +29,25 @@ export interface FlashcardDeckProps {
 }
 
 const SWIPE_THRESHOLD = 80;
+const NEW_PER_SESSION = 20; // cap brand-new cards introduced per study session
 
 export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, backHref, lessonTitle, lessonPinyin, lessonTitleTranslation, lessonTitleTranslation_ru }) => {
   const { isLoading: authLoading } = useRequireAuth();
+  const { getAccessToken } = useAuth();
   const trial = useTrial();
-  const [cards, setCards] = useState<FlashcardWord[]>(() => shuffleArray([...deck.words]));
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isFlipped, setIsFlipped] = useState(false);
-  const [knownIds, setKnownIds] = useState<Set<string>>(new Set());
-  const [unknownIds, setUnknownIds] = useState<Set<string>>(new Set());
   const [language] = useLanguage();
+
+  // Spaced-repetition session queue. The current card is always queue[0];
+  // grading shifts it off (or re-queues it to the back on "Again").
+  const [phase, setPhase] = useState<'loading' | 'review' | 'empty'>('loading');
+  const [queue, setQueue] = useState<FlashcardWord[]>([]);
+  const [sessionTotal, setSessionTotal] = useState(0);
+  const [reviewedCount, setReviewedCount] = useState(0); // unique cards passed (good/easy)
+  const [againCount, setAgainCount] = useState(0);
+  const reviewedRef = useRef<Set<string>>(new Set());
+  const tokenRef = useRef<string | null>(null);
+
+  const [isFlipped, setIsFlipped] = useState(false);
   const [isPinyinVisible, setIsPinyinVisible] = useState(true);
   const [direction] = useState<'cn' | 'native'>(() => {
     try {
@@ -54,7 +65,8 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const isDraggingRef = useRef(false);
   const isProcessingRef = useRef(false);
 
-  // Prime the audio-proxy token so playback URLs can be rewritten synchronously.
+  const cardId = useCallback((w: FlashcardWord) => `${deck.id}:${w.id}`, [deck.id]);
+
   usePrimeAudioToken();
 
   // Audio playback
@@ -64,12 +76,11 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     audioRef.current = el;
     el.play().catch(() => {});
   }, []);
-
   useEffect(() => {
     return () => { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } };
   }, []);
 
-  // Analytics: track flashcard view
+  // Analytics
   useEffect(() => {
     trackAll('ViewContent', 'flashcard_view', 'flashcard_view', {
       content_name: `Flashcards: ${deck.title}`,
@@ -78,44 +89,96 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     });
   }, [deck.title]);
 
-  const totalCards = cards.length;
-  const reviewedCount = knownIds.size + unknownIds.size;
-  const isComplete = reviewedCount >= totalCards && totalCards > 0;
-  const currentCard = cards[currentIndex];
-  const pct = totalCards > 0 ? Math.round((reviewedCount / totalCards) * 100) : 0;
+  // Build the study session from the user's review state: cards that are DUE
+  // plus a capped number of NEW cards. Falls back to a plain shuffle (no
+  // persistence) if the user has no token.
+  useEffect(() => {
+    if (authLoading) return;
+    let cancelled = false;
+    (async () => {
+      const token = await getAccessToken();
+      if (cancelled) return;
+      tokenRef.current = token;
 
-  const handleKnow = useCallback(() => {
-    if (!currentCard || isProcessingRef.current) return;
+      let session: FlashcardWord[];
+      if (!token) {
+        session = shuffleArray([...deck.words]);
+      } else {
+        let byId = new Map<string, { due_at: string }>();
+        try {
+          const res = await fetch(`/api/flashcards/reviews?prefix=${encodeURIComponent(deck.id + ':')}`, {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+          const data = await res.json();
+          byId = new Map((data.reviews ?? []).map((r: { card_id: string; due_at: string }) => [r.card_id, r]));
+        } catch { /* offline → treat all as new */ }
+        if (cancelled) return;
+        const now = Date.now();
+        const due: FlashcardWord[] = [];
+        const fresh: FlashcardWord[] = [];
+        for (const w of deck.words) {
+          const r = byId.get(cardId(w));
+          if (!r) fresh.push(w);
+          else if (new Date(r.due_at).getTime() <= now) due.push(w);
+        }
+        session = [...shuffleArray(due), ...shuffleArray(fresh).slice(0, NEW_PER_SESSION)];
+      }
+
+      if (cancelled) return;
+      reviewedRef.current = new Set();
+      setReviewedCount(0);
+      setAgainCount(0);
+      setSessionTotal(session.length);
+      setQueue(session);
+      setPhase(session.length === 0 ? 'empty' : 'review');
+    })();
+    return () => { cancelled = true; };
+  }, [authLoading, deck.id, deck.words, getAccessToken, cardId]);
+
+  const currentCard = queue[0];
+  const isComplete = phase === 'review' && queue.length === 0;
+  const pct = sessionTotal > 0 ? Math.round((reviewedCount / sessionTotal) * 100) : 0;
+
+  // Grade the current card: persist + re-schedule, then advance the queue.
+  // "Again" re-queues the card to the back so it reappears this session.
+  const grade = useCallback((g: Grade) => {
+    const card = queue[0];
+    if (!card || isProcessingRef.current) return;
     isProcessingRef.current = true;
-    setKnownIds((prev) => new Set(prev).add(currentCard.id));
+
+    if (tokenRef.current) {
+      fetch('/api/flashcards/reviews', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${tokenRef.current}` },
+        body: JSON.stringify({ card_id: cardId(card), grade: g }),
+      }).catch(() => {});
+    }
+
+    if (g === 'again') {
+      setAgainCount((c) => c + 1);
+    } else {
+      reviewedRef.current.add(cardId(card));
+      setReviewedCount(reviewedRef.current.size);
+    }
+
     setIsFlipped(false);
     setDragX(0);
     dragXRef.current = 0;
     setTimeout(() => {
-      setCurrentIndex((prev) => prev + 1);
+      setQueue((prev) => {
+        if (prev.length === 0) return prev;
+        const [first, ...rest] = prev;
+        return g === 'again' ? [...rest, first] : rest;
+      });
       isProcessingRef.current = false;
     }, 100);
-  }, [currentCard]);
-
-  const handleUnknown = useCallback(() => {
-    if (!currentCard || isProcessingRef.current) return;
-    isProcessingRef.current = true;
-    setUnknownIds((prev) => new Set(prev).add(currentCard.id));
-    setIsFlipped(false);
-    setDragX(0);
-    dragXRef.current = 0;
-    setTimeout(() => {
-      setCurrentIndex((prev) => prev + 1);
-      isProcessingRef.current = false;
-    }, 100);
-  }, [currentCard]);
+  }, [queue, cardId]);
 
   const handleSwipe = useCallback((dir: 'left' | 'right') => {
-    if (dir === 'right') handleKnow();
-    else handleUnknown();
-  }, [handleKnow, handleUnknown]);
+    grade(dir === 'right' ? 'good' : 'again');
+  }, [grade]);
 
-  // Touch handlers — use refs to avoid stale closures (Bug 2 fix)
+  // Touch handlers
   const onTouchStart = useCallback((e: React.TouchEvent) => {
     startX.current = e.touches[0].clientX;
     dragXRef.current = 0;
@@ -139,7 +202,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     dragXRef.current = 0;
   }, [handleSwipe]);
 
-  // Mouse handlers — attach move/up to document to fix Bug 3 (onMouseLeave accidental swipe)
+  // Mouse handlers
   const onDocMouseMove = useCallback((e: MouseEvent) => {
     if (!isDraggingRef.current) return;
     const dx = e.clientX - startX.current;
@@ -156,7 +219,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     setDragX(0);
     dragXRef.current = 0;
   }, [handleSwipe]);
-
   const onMouseDown = useCallback((e: React.MouseEvent) => {
     startX.current = e.clientX;
     dragXRef.current = 0;
@@ -164,39 +226,17 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
     setIsDragging(true);
     e.preventDefault();
   }, []);
-
-  // Cleanup document listeners on unmount
   useEffect(() => {
     if (!isDragging) return;
-
     const handleMouseMove = (e: MouseEvent) => onDocMouseMove(e);
     const handleMouseUp = () => endMouseDrag();
-
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
-
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
     };
   }, [endMouseDrag, isDragging, onDocMouseMove]);
-
-  const handleRestartUnknown = useCallback(() => {
-    const unknownCards = cards.filter((c) => unknownIds.has(c.id));
-    setCards(shuffleArray(unknownCards));
-    setCurrentIndex(0);
-    setIsFlipped(false);
-    setKnownIds(new Set());
-    setUnknownIds(new Set());
-  }, [cards, unknownIds]);
-
-  const handleRestartAll = useCallback(() => {
-    setCards(shuffleArray([...deck.words]));
-    setCurrentIndex(0);
-    setIsFlipped(false);
-    setKnownIds(new Set());
-    setUnknownIds(new Set());
-  }, [deck.words]);
 
   const translation = currentCard
     ? (language === 'ru' && currentCard.text_translation_ru ? currentCard.text_translation_ru : language === 'en' && currentCard.text_translation_en ? currentCard.text_translation_en : currentCard.text_translation)
@@ -204,20 +244,19 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
 
   const swipeOpacity = Math.min(Math.abs(dragX) / SWIPE_THRESHOLD, 1);
   const swipeLabel = dragX > SWIPE_THRESHOLD
-    ? ({ uz: 'Bilaman ✓', ru: 'Знаю ✓', en: 'I know ✓' } as Record<string, string>)[language]
+    ? ({ uz: 'Yaxshi ✓', ru: 'Хорошо ✓', en: 'Good ✓' } as Record<string, string>)[language]
     : dragX < -SWIPE_THRESHOLD
-      ? ({ uz: 'Bilmayman ✗', ru: 'Не знаю ✗', en: "Don't know ✗" } as Record<string, string>)[language]
+      ? ({ uz: 'Qayta ↺', ru: 'Заново ↺', en: 'Again ↺' } as Record<string, string>)[language]
       : dragX > 0
-        ? ({ uz: 'Bilaman?', ru: 'Знаю?', en: 'I know?' } as Record<string, string>)[language]
+        ? ({ uz: 'Yaxshi?', ru: 'Хорошо?', en: 'Good?' } as Record<string, string>)[language]
         : dragX < 0
-          ? ({ uz: 'Bilmayman?', ru: 'Не знаю?', en: "Don't know?" } as Record<string, string>)[language]
+          ? ({ uz: 'Qayta?', ru: 'Заново?', en: 'Again?' } as Record<string, string>)[language]
           : '';
   const swipeBg = dragX > SWIPE_THRESHOLD ? '#dcfce7' : dragX < -SWIPE_THRESHOLD ? '#fee2e2' : '#f5f5f8';
   const swipeBorder = dragX > SWIPE_THRESHOLD ? '#22c55e' : dragX < -SWIPE_THRESHOLD ? '#ef4444' : '#e0e0e6';
   const swipeColor = dragX > SWIPE_THRESHOLD ? '#16a34a' : dragX < -SWIPE_THRESHOLD ? '#ef4444' : '#999';
 
   if (authLoading) return <div className="loading-spinner" />;
-  // Topic decks have no lesson field — treat as free; lesson 1 is always free
   const isFreeContent = deck.id.startsWith('topic-') || deck.words[0]?.lesson === 1;
   const showPaywall = trial?.isTrialExpired && !isFreeContent;
 
@@ -241,23 +280,34 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
           </div>
         </div>
 
-        {isComplete ? (
+        {phase === 'loading' ? (
+          <div className="loading-spinner" />
+        ) : phase === 'empty' ? (
+          <div className="hanzi-done">
+            <div className="hanzi-done__title">
+              {({ uz: 'Hammasi takrorlangan! 🎉', ru: 'Всё повторено! 🎉', en: 'All caught up! 🎉' } as Record<string, string>)[language]}
+            </div>
+            <div className="hanzi-done__stats">
+              {({ uz: 'Bu to\'plamda hozircha takrorlash uchun karta yo\'q. Keyinroq qaytib keling.', ru: 'В этой колоде пока нечего повторять. Загляните позже.', en: 'Nothing to review in this deck right now. Come back later.' } as Record<string, string>)[language]}
+            </div>
+            <div className="hanzi-done__buttons">
+              <Link href={backHref ?? '/chinese/flashcards'} className="hanzi-done__back-btn">
+                {({ uz: 'To\'plamlarga qaytish', ru: 'К колодам', en: 'Back to decks' } as Record<string, string>)[language]}
+              </Link>
+            </div>
+          </div>
+        ) : isComplete ? (
           <div className="hanzi-done">
             <div className="hanzi-done__title">
               {({ uz: 'Barakalla! 🎉', ru: 'Отлично! 🎉', en: 'Well done! 🎉' } as Record<string, string>)[language]}
             </div>
             <div className="hanzi-done__stats">
-              {({ uz: `Bilaman: ${knownIds.size} · Bilmayman: ${unknownIds.size}`, ru: `Знаю: ${knownIds.size} · Не знаю: ${unknownIds.size}`, en: `Know: ${knownIds.size} · Don't know: ${unknownIds.size}` } as Record<string, string>)[language]}
+              {({ uz: `${reviewedCount} ta karta takrorlandi`, ru: `Повторено карточек: ${reviewedCount}`, en: `${reviewedCount} cards reviewed` } as Record<string, string>)[language]}
             </div>
             <div className="hanzi-done__buttons">
-              {unknownIds.size > 0 && (
-                <button className="hanzi-done__restart-btn" onClick={handleRestartUnknown} type="button">
-                  {({ uz: `Bilmaganlarni takrorlash (${unknownIds.size})`, ru: `Повторить незнакомые (${unknownIds.size})`, en: `Review unknown (${unknownIds.size})` } as Record<string, string>)[language]}
-                </button>
-              )}
-              <button className="hanzi-done__back-btn" onClick={handleRestartAll} type="button">
-                {({ uz: 'Boshidan boshlash', ru: 'Начать сначала', en: 'Restart all' } as Record<string, string>)[language]}
-              </button>
+              <Link href={backHref ?? '/chinese/flashcards'} className="hanzi-done__back-btn">
+                {({ uz: 'To\'plamlarga qaytish', ru: 'К колодам', en: 'Back to decks' } as Record<string, string>)[language]}
+              </Link>
             </div>
           </div>
         ) : currentCard ? (
@@ -265,7 +315,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
             {/* Progress */}
             <div style={{ marginBottom: 14 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: '#6b7177', marginBottom: 4 }}>
-                <span>{Math.min(currentIndex + 1, totalCards)} / {totalCards}</span>
+                <span>{reviewedCount} / {sessionTotal}</span>
                 <span>{pct}%</span>
               </div>
               <div style={{ height: 4, background: '#f5f5f8', borderRadius: 3, overflow: 'hidden' }}>
@@ -281,19 +331,13 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
 
             {/* Score indicators */}
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 14, alignItems: 'center' }}>
-              <div style={{
-                display: 'flex', alignItems: 'center', gap: 6,
-                background: '#fee2e2', borderRadius: 3, padding: '5px 12px',
-              }}>
-                <span style={{ fontSize: 12, color: '#ef4444' }}>✗</span>
-                <span style={{ fontSize: 13, fontWeight: 600, color: '#ef4444' }}>{unknownIds.size}</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: '#fee2e2', borderRadius: 3, padding: '5px 12px' }}>
+                <span style={{ fontSize: 12, color: '#ef4444' }}>↺</span>
+                <span style={{ fontSize: 13, fontWeight: 600, color: '#ef4444' }}>{againCount}</span>
               </div>
               <div style={{ fontSize: 11, color: '#ccc' }}>{({ uz: '← suring →', ru: '← листать →', en: '← swipe →' } as Record<string, string>)[language]}</div>
-              <div style={{
-                display: 'flex', alignItems: 'center', gap: 6,
-                background: '#dcfce7', borderRadius: 3, padding: '5px 12px',
-              }}>
-                <span style={{ fontSize: 13, fontWeight: 600, color: '#16a34a' }}>{knownIds.size}</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: '#dcfce7', borderRadius: 3, padding: '5px 12px' }}>
+                <span style={{ fontSize: 13, fontWeight: 600, color: '#16a34a' }}>{reviewedCount}</span>
                 <span style={{ fontSize: 12, color: '#16a34a' }}>✓</span>
               </div>
             </div>
@@ -307,28 +351,19 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
               style={{ userSelect: 'none', touchAction: 'pan-y' }}
             >
               <div ref={cardRef} style={{ perspective: 800, width: '100%', height: 260, position: 'relative', cursor: 'pointer' }}>
-                {/* Swipe indicator */}
                 {Math.abs(dragX) > 20 && (
                   <div style={{
-                    position: 'absolute',
-                    top: 16,
+                    position: 'absolute', top: 16,
                     left: dragX < -SWIPE_THRESHOLD ? 'auto' : 16,
                     right: dragX < -SWIPE_THRESHOLD ? 16 : 'auto',
-                    zIndex: 10,
-                    padding: '6px 16px',
-                    borderRadius: 3,
-                    background: swipeBg,
-                    border: `2px solid ${swipeBorder}`,
-                    fontSize: 13,
-                    fontWeight: 700,
-                    color: swipeColor,
-                    opacity: swipeOpacity,
-                    pointerEvents: 'none',
+                    zIndex: 10, padding: '6px 16px', borderRadius: 3,
+                    background: swipeBg, border: `2px solid ${swipeBorder}`,
+                    fontSize: 13, fontWeight: 700, color: swipeColor,
+                    opacity: swipeOpacity, pointerEvents: 'none',
                   }}>
                     {swipeLabel}
                   </div>
                 )}
-
 
                 <div
                   role="button"
@@ -346,10 +381,8 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                   {/* Front */}
                   <div style={{
                     position: 'absolute', width: '100%', height: '100%',
-                    backfaceVisibility: 'hidden',
-                    WebkitBackfaceVisibility: 'hidden',
-                    background: '#fff', borderRadius: 3,
-                    border: '1px solid #e0e0e6',
+                    backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
+                    background: '#fff', borderRadius: 3, border: '1px solid #e0e0e6',
                     boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
                     display: 'flex', flexDirection: 'column',
                     alignItems: 'center', justifyContent: 'center', padding: 20,
@@ -381,12 +414,10 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                   {/* Back */}
                   <div style={{
                     position: 'absolute', width: '100%', height: '100%',
-                    backfaceVisibility: 'hidden',
-                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)',
                     background: 'linear-gradient(135deg, #dc2626, #b91c1c)',
-                    borderRadius: 3,
-                    boxShadow: '0 4px 20px rgba(0,0,0,0.12)',
+                    borderRadius: 3, boxShadow: '0 4px 20px rgba(0,0,0,0.12)',
                     display: 'flex', flexDirection: 'column',
                     alignItems: 'center', justifyContent: 'center', padding: 20,
                   }}>
@@ -414,38 +445,36 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
                       </button>
                     )}
-                    <div style={{ fontSize: 11, color: '#fca5a580', marginTop: 16 }}>{({ uz: '← bilmayman | bilaman →', ru: '← не знаю | знаю →', en: "← don't know | know →" } as Record<string, string>)[language]}</div>
+                    <div style={{ fontSize: 11, color: '#fca5a580', marginTop: 16 }}>{({ uz: '← qayta | yaxshi →', ru: '← заново | хорошо →', en: '← again | good →' } as Record<string, string>)[language]}</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Action buttons */}
-            <div style={{ display: 'flex', gap: 10, marginTop: 18 }}>
+            {/* Grade buttons */}
+            <div style={{ display: 'flex', gap: 8, marginTop: 18 }}>
               <button
-                onClick={handleUnknown}
-                style={{
-                  flex: 1, padding: 12, border: '2px solid #fca5a5', borderRadius: 3,
-                  background: '#fff', color: '#ef4444', fontSize: 14, fontWeight: 600,
-                  cursor: 'pointer', fontFamily: 'inherit',
-                }}
+                onClick={() => grade('again')}
+                style={{ flex: 1, padding: 12, border: '2px solid #fca5a5', borderRadius: 3, background: '#fff', color: '#ef4444', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
                 type="button"
               >
-                ✗ {({ uz: 'Bilmayman', ru: 'Не знаю', en: "Don't know" } as Record<string, string>)[language]}
+                ↺ {({ uz: 'Qayta', ru: 'Заново', en: 'Again' } as Record<string, string>)[language]}
               </button>
               <button
-                onClick={handleKnow}
-                style={{
-                  flex: 1, padding: 12, border: '2px solid #86efac', borderRadius: 3,
-                  background: '#fff', color: '#16a34a', fontSize: 14, fontWeight: 600,
-                  cursor: 'pointer', fontFamily: 'inherit',
-                }}
+                onClick={() => grade('good')}
+                style={{ flex: 1, padding: 12, border: '2px solid #86efac', borderRadius: 3, background: '#fff', color: '#16a34a', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
                 type="button"
               >
-                {({ uz: 'Bilaman', ru: 'Знаю', en: 'I know' } as Record<string, string>)[language]} ✓
+                {({ uz: 'Yaxshi', ru: 'Хорошо', en: 'Good' } as Record<string, string>)[language]} ✓
+              </button>
+              <button
+                onClick={() => grade('easy')}
+                style={{ flex: 1, padding: 12, border: '2px solid #93c5fd', borderRadius: 3, background: '#fff', color: '#2563eb', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+                type="button"
+              >
+                {({ uz: 'Oson', ru: 'Легко', en: 'Easy' } as Record<string, string>)[language]} ⚡
               </button>
             </div>
-
           </div>
         ) : null}
 
@@ -467,8 +496,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
         lang={language}
         steps={[
           { tipId: 'fc-tap', targetRef: cardRef, text: { uz: 'Tarjimani ko\'rish uchun kartani bosing', ru: 'Нажмите на карточку, чтобы увидеть перевод', en: 'Tap the card to see the translation' } },
-          { tipId: 'fc-swipe-left', targetRef: cardRef, text: { uz: 'So\'zni bilmasangiz chapga suring', ru: 'Свайп влево, если вы не знаете слово', en: 'Swipe left if you don\'t know the word' } },
-          { tipId: 'fc-swipe-right', targetRef: cardRef, text: { uz: 'So\'zni bilsangiz o\'ngga suring', ru: 'Свайп вправо, если вы знаете слово', en: 'Swipe right if you know the word' } },
+          { tipId: 'fc-grade', targetRef: cardRef, text: { uz: 'Bilsangiz "Yaxshi", bilmasangiz "Qayta" — eslab qolganingizga qarab kartalar takrorlanadi', ru: 'Знаете — «Хорошо», нет — «Заново». Карточки возвращаются по мере запоминания', en: 'Grade Good if you knew it, Again if not — cards come back based on how well you remember' } },
           { tipId: 'fc-pinyin', targetRef: pinyinBtnRef, text: { uz: 'Pinyinni yoqish/o\'chirish', ru: 'Нажмите, чтобы вкл/выкл пиньинь', en: 'Toggle pinyin on/off' }, forceAbove: true },
         ] as TourStep[]}
       />
