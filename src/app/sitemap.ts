@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import type { MetadataRoute } from 'next';
 import { loadBlogPosts } from '@/services/blog';
 import { loadDialoguesForBook } from '@/services';
@@ -8,6 +10,17 @@ const HSK_BOOKS = ['hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6'];
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
 const locales = routing.locales;
 
+/** Last-modified time of a dialogue's source JSON (real freshness signal for
+ *  crawlers). `id` is `{book}-dialogueN`; the file is `dialogueN.json`. */
+function dialogueMtime(book: string, id: string): Date | undefined {
+  const file = path.join(process.cwd(), 'content', 'dialogues', book, `${id.replace(`${book}-`, '')}.json`);
+  try {
+    return fs.statSync(file).mtime;
+  } catch {
+    return undefined;
+  }
+}
+
 /** Build alternates.languages object for a given path */
 function langAlternates(urlPath: string): Record<string, string> {
   const alts: Record<string, string> = {};
@@ -17,12 +30,13 @@ function langAlternates(urlPath: string): Record<string, string> {
 }
 
 /** Create a sitemap entry for each locale with hreflang alternates */
-function localeEntries(urlPath: string, opts: { changeFrequency: MetadataRoute.Sitemap[0]['changeFrequency']; priority: number }): MetadataRoute.Sitemap {
+function localeEntries(urlPath: string, opts: { changeFrequency: MetadataRoute.Sitemap[0]['changeFrequency']; priority: number; lastModified?: Date }): MetadataRoute.Sitemap {
   const alternates = { languages: langAlternates(urlPath) };
   return locales.map((locale) => ({
     url: `${siteUrl}/${locale}${urlPath}`,
     changeFrequency: opts.changeFrequency,
     priority: opts.priority,
+    ...(opts.lastModified ? { lastModified: opts.lastModified } : {}),
     alternates,
   }));
 }
@@ -38,15 +52,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
   entries.push(...localeEntries('', { changeFrequency: 'monthly', priority: 1 }));
-  entries.push(...localeEntries('/chinese/dialogues', { changeFrequency: 'weekly', priority: 0.9 }));
 
   // Individual Chinese dialogue reader pages (public preview — crawlable).
+  // Track the newest dialogue change so the catalog carries a real lastModified.
+  let newestDialogue: Date | undefined;
+  const dialogueEntries: MetadataRoute.Sitemap = [];
   for (const book of HSK_BOOKS) {
     const dialogues = await loadDialoguesForBook(book);
     for (const d of dialogues) {
-      entries.push(...localeEntries(`/chinese/dialogues/${book}/${d.slug}`, { changeFrequency: 'monthly', priority: 0.7 }));
+      const lastModified = dialogueMtime(book, d.id);
+      if (lastModified && (!newestDialogue || lastModified > newestDialogue)) newestDialogue = lastModified;
+      dialogueEntries.push(...localeEntries(`/chinese/dialogues/${book}/${d.slug}`, { changeFrequency: 'monthly', priority: 0.7, lastModified }));
     }
   }
+  entries.push(...localeEntries('/chinese/dialogues', { changeFrequency: 'weekly', priority: 0.9, lastModified: newestDialogue }));
+  entries.push(...dialogueEntries);
   entries.push(...localeEntries('/chinese/writing', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/chinese/flashcards', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/chinese/karaoke', { changeFrequency: 'weekly', priority: 0.8 }));
