@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Language } from '../types/ui-state';
 import { resolveTtsUrl } from '@/utils/ttsAudio';
 
@@ -23,6 +23,11 @@ type Dir = 'zh-native' | 'native-zh';
  *  - native → 汉字: front = meaning, back = pinyin + 汉字 (+audio). (recall the Chinese)
  */
 export function DialogueVocab({ words, language }: { words: VocabItem[]; language: Language }) {
+  // Show vocab alphabetically by pinyin (tone marks ignored for ordering).
+  const sorted = useMemo(() => {
+    const key = (v: VocabItem) => (v.py || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    return [...words].sort((a, b) => key(a).localeCompare(key(b)));
+  }, [words]);
   const [open, setOpen] = useState<number | null>(null);
   const [dir, setDir] = useState<Dir>('zh-native');
   // zh of the word whose audio is currently resolving/buffering (spinner), and
@@ -101,7 +106,7 @@ export function DialogueVocab({ words, language }: { words: VocabItem[]; languag
         ))}
       </div>
       <div className="dr-flips">
-        {words.map((v, i) => (
+        {sorted.map((v, i) => (
           <div
             key={i}
             className={`dr-flip ${open === i ? 'dr-flip--open' : ''}`}
