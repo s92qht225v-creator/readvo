@@ -156,9 +156,9 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
   const goodDays = curState ? schedule(curState, 'good').intervalDays : 1;
   const easyDays = curState ? schedule(curState, 'easy').intervalDays : 4;
   const daysLabel = (n: number) => ({
-    uz: `${n} kundan keyin`,
-    ru: `через ${n} дн.`,
-    en: `in ${n} ${n === 1 ? 'day' : 'days'}`,
+    uz: `${n} kundan keyin qaytarish`,
+    ru: `повторить через ${n} дн.`,
+    en: `repeat in ${n} ${n === 1 ? 'day' : 'days'}`,
   } as Record<string, string>)[language];
 
   // Grade the current card: persist + re-schedule, then advance the queue.
@@ -480,24 +480,22 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
 
             {/* Grade buttons: I know / Easy on top, I don't know full-width below */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 18 }}>
-              <div style={{ display: 'flex', gap: 8 }}>
-                <button
-                  onClick={() => grade('good')}
-                  style={{ flex: 1, padding: '10px 8px', border: 'none', borderRadius: 3, background: '#16a34a', color: '#fff', cursor: 'pointer', fontFamily: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}
-                  type="button"
-                >
-                  <span style={{ fontSize: 14, fontWeight: 600 }}>{({ uz: 'Bilaman', ru: 'Знаю', en: 'I know' } as Record<string, string>)[language]}</span>
-                  <span style={{ fontSize: 11, opacity: 0.85 }}>{daysLabel(goodDays)}</span>
-                </button>
-                <button
-                  onClick={() => grade('easy')}
-                  style={{ flex: 1, padding: '10px 8px', border: 'none', borderRadius: 3, background: '#2563eb', color: '#fff', cursor: 'pointer', fontFamily: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}
-                  type="button"
-                >
-                  <span style={{ fontSize: 14, fontWeight: 600 }}>{({ uz: 'Oson', ru: 'Легко', en: 'Easy' } as Record<string, string>)[language]}</span>
-                  <span style={{ fontSize: 11, opacity: 0.85 }}>{daysLabel(easyDays)}</span>
-                </button>
-              </div>
+              <button
+                onClick={() => grade('good')}
+                style={{ width: '100%', padding: '10px 8px', border: 'none', borderRadius: 3, background: '#16a34a', color: '#fff', cursor: 'pointer', fontFamily: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}
+                type="button"
+              >
+                <span style={{ fontSize: 14, fontWeight: 600 }}>{({ uz: 'Bilaman', ru: 'Знаю', en: 'I know' } as Record<string, string>)[language]}</span>
+                <span style={{ fontSize: 11, opacity: 0.85 }}>{daysLabel(goodDays)}</span>
+              </button>
+              <button
+                onClick={() => grade('easy')}
+                style={{ width: '100%', padding: '10px 8px', border: 'none', borderRadius: 3, background: '#2563eb', color: '#fff', cursor: 'pointer', fontFamily: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}
+                type="button"
+              >
+                <span style={{ fontSize: 14, fontWeight: 600 }}>{({ uz: 'Oson', ru: 'Легко', en: 'Easy' } as Record<string, string>)[language]}</span>
+                <span style={{ fontSize: 11, opacity: 0.85 }}>{daysLabel(easyDays)}</span>
+              </button>
               <button
                 onClick={() => grade('again')}
                 style={{ width: '100%', padding: '10px 8px', border: 'none', borderRadius: 3, background: '#dc2626', color: '#fff', cursor: 'pointer', fontFamily: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}
