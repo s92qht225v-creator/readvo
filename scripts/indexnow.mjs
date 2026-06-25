@@ -12,7 +12,10 @@ const HOST = 'blim.uz';
 const KEY = '09861250e06736c9fca9f92c10955b08';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const SITEMAP = `https://${HOST}/sitemap.xml`;
-const ENDPOINT = 'https://api.indexnow.org/indexnow';
+// Post to Bing and Yandex directly — both are IndexNow partners and share
+// submissions with the rest of the network. (The api.indexnow.org aggregator
+// also works, but rejects until it has independently re-fetched the key file.)
+const ENDPOINTS = ['https://www.bing.com/indexnow', 'https://yandex.com/indexnow'];
 
 async function sitemapUrls() {
   const res = await fetch(SITEMAP);
@@ -23,15 +26,17 @@ async function sitemapUrls() {
 
 async function submit(urls) {
   // IndexNow accepts up to 10,000 URLs per request.
-  for (let i = 0; i < urls.length; i += 10000) {
-    const batch = urls.slice(i, i + 10000);
-    const res = await fetch(ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json; charset=utf-8' },
-      body: JSON.stringify({ host: HOST, key: KEY, keyLocation: KEY_LOCATION, urlList: batch }),
-    });
-    const body = await res.text();
-    console.log(`batch ${i / 10000 + 1}: ${batch.length} urls -> HTTP ${res.status} ${body || '(empty = accepted)'}`);
+  for (const endpoint of ENDPOINTS) {
+    for (let i = 0; i < urls.length; i += 10000) {
+      const batch = urls.slice(i, i + 10000);
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: JSON.stringify({ host: HOST, key: KEY, keyLocation: KEY_LOCATION, urlList: batch }),
+      });
+      const body = (await res.text()).trim();
+      console.log(`${endpoint}: ${batch.length} urls -> HTTP ${res.status} ${body || '(empty = accepted)'}`);
+    }
   }
 }
 
