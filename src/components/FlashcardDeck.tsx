@@ -28,7 +28,6 @@ export interface FlashcardDeckProps {
   lessonTitleTranslation_ru?: string;
 }
 
-const SWIPE_THRESHOLD = 80;
 const NEW_PER_SESSION = 20; // cap brand-new cards introduced per study session
 
 export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, backHref, lessonTitle, lessonPinyin, lessonTitleTranslation, lessonTitleTranslation_ru }) => {
@@ -56,14 +55,14 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       return saved === 'uz-zh' ? 'native' : 'cn';
     } catch { return 'cn'; }
   });
-  const [dragX, setDragX] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
+  // Exit animation: 'back' (→ bottom of the stack, on "repeat") or 'pass' (off
+  // the top, on know/easy). `cardKey` remounts the flip card per advance so the
+  // incoming card starts at rest instead of animating back from the exit pose.
+  const [exitAnim, setExitAnim] = useState<'back' | 'pass' | null>(null);
+  const [cardKey, setCardKey] = useState(0);
   const cardRef = useRef<HTMLDivElement>(null);
   const pinyinBtnRef = useRef<HTMLButtonElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const startX = useRef(0);
-  const dragXRef = useRef(0);
-  const isDraggingRef = useRef(false);
   const isProcessingRef = useRef(false);
 
   const cardId = useCallback((w: FlashcardWord) => `${deck.id}:${w.id}`, [deck.id]);
@@ -184,100 +183,25 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
       setReviewedCount(reviewedRef.current.size);
     }
 
-    setIsFlipped(false);
-    setDragX(0);
-    dragXRef.current = 0;
+    // Animate the card out, then advance the queue. "again" drops it to the
+    // back of the stack; know/easy passes it off the top.
+    setExitAnim(g === 'again' ? 'back' : 'pass');
     setTimeout(() => {
       setQueue((prev) => {
         if (prev.length === 0) return prev;
         const [first, ...rest] = prev;
         return g === 'again' ? [...rest, first] : rest;
       });
+      setExitAnim(null);
+      setIsFlipped(false);
+      setCardKey((k) => k + 1);
       isProcessingRef.current = false;
-    }, 100);
+    }, 300);
   }, [queue, cardId]);
-
-  const handleSwipe = useCallback((dir: 'left' | 'right') => {
-    grade(dir === 'right' ? 'good' : 'again');
-  }, [grade]);
-
-  // Touch handlers
-  const onTouchStart = useCallback((e: React.TouchEvent) => {
-    startX.current = e.touches[0].clientX;
-    dragXRef.current = 0;
-    isDraggingRef.current = true;
-    setIsDragging(true);
-  }, []);
-  const onTouchMove = useCallback((e: React.TouchEvent) => {
-    if (!isDraggingRef.current) return;
-    const dx = e.touches[0].clientX - startX.current;
-    dragXRef.current = dx;
-    setDragX(dx);
-  }, []);
-  const onTouchEnd = useCallback(() => {
-    if (!isDraggingRef.current) return;
-    const dx = dragXRef.current;
-    isDraggingRef.current = false;
-    setIsDragging(false);
-    if (dx > SWIPE_THRESHOLD) handleSwipe('right');
-    else if (dx < -SWIPE_THRESHOLD) handleSwipe('left');
-    setDragX(0);
-    dragXRef.current = 0;
-  }, [handleSwipe]);
-
-  // Mouse handlers
-  const onDocMouseMove = useCallback((e: MouseEvent) => {
-    if (!isDraggingRef.current) return;
-    const dx = e.clientX - startX.current;
-    dragXRef.current = dx;
-    setDragX(dx);
-  }, []);
-  const endMouseDrag = useCallback(() => {
-    if (!isDraggingRef.current) return;
-    const dx = dragXRef.current;
-    isDraggingRef.current = false;
-    setIsDragging(false);
-    if (dx > SWIPE_THRESHOLD) handleSwipe('right');
-    else if (dx < -SWIPE_THRESHOLD) handleSwipe('left');
-    setDragX(0);
-    dragXRef.current = 0;
-  }, [handleSwipe]);
-  const onMouseDown = useCallback((e: React.MouseEvent) => {
-    startX.current = e.clientX;
-    dragXRef.current = 0;
-    isDraggingRef.current = true;
-    setIsDragging(true);
-    e.preventDefault();
-  }, []);
-  useEffect(() => {
-    if (!isDragging) return;
-    const handleMouseMove = (e: MouseEvent) => onDocMouseMove(e);
-    const handleMouseUp = () => endMouseDrag();
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, [endMouseDrag, isDragging, onDocMouseMove]);
 
   const translation = currentCard
     ? (language === 'ru' && currentCard.text_translation_ru ? currentCard.text_translation_ru : language === 'en' && currentCard.text_translation_en ? currentCard.text_translation_en : currentCard.text_translation)
     : '';
-
-  const swipeOpacity = Math.min(Math.abs(dragX) / SWIPE_THRESHOLD, 1);
-  const swipeLabel = dragX > SWIPE_THRESHOLD
-    ? ({ uz: 'Bilaman ✓', ru: 'Знаю ✓', en: 'I know ✓' } as Record<string, string>)[language]
-    : dragX < -SWIPE_THRESHOLD
-      ? ({ uz: 'Bilmayman 🔁', ru: 'Не знаю 🔁', en: "I don't know 🔁" } as Record<string, string>)[language]
-      : dragX > 0
-        ? ({ uz: 'Bilaman?', ru: 'Знаю?', en: 'I know?' } as Record<string, string>)[language]
-        : dragX < 0
-          ? ({ uz: 'Bilmayman?', ru: 'Не знаю?', en: "I don't know?" } as Record<string, string>)[language]
-          : '';
-  const swipeBg = dragX > SWIPE_THRESHOLD ? '#dcfce7' : dragX < -SWIPE_THRESHOLD ? '#fee2e2' : '#f5f5f8';
-  const swipeBorder = dragX > SWIPE_THRESHOLD ? '#22c55e' : dragX < -SWIPE_THRESHOLD ? '#ef4444' : '#e0e0e6';
-  const swipeColor = dragX > SWIPE_THRESHOLD ? '#16a34a' : dragX < -SWIPE_THRESHOLD ? '#ef4444' : '#999';
 
   if (authLoading) return <div className="loading-spinner" />;
   const isFreeContent = deck.id.startsWith('topic-') || deck.words[0]?.lesson === 1;
@@ -353,42 +277,30 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
             </div>
 
 
-            {/* Card with swipe */}
-            <div
-              onTouchStart={onTouchStart}
-              onTouchMove={onTouchMove}
-              onTouchEnd={onTouchEnd}
-              onMouseDown={onMouseDown}
-              style={{ userSelect: 'none', touchAction: 'pan-y' }}
-            >
-              <div ref={cardRef} style={{ perspective: 800, width: '100%', height: 260, position: 'relative', cursor: 'pointer' }}>
-                {Math.abs(dragX) > 20 && (
-                  <div style={{
-                    position: 'absolute', top: 16,
-                    left: dragX < -SWIPE_THRESHOLD ? 'auto' : 16,
-                    right: dragX < -SWIPE_THRESHOLD ? 16 : 'auto',
-                    zIndex: 10, padding: '6px 16px', borderRadius: 3,
-                    background: swipeBg, border: `2px solid ${swipeBorder}`,
-                    fontSize: 13, fontWeight: 700, color: swipeColor,
-                    opacity: swipeOpacity, pointerEvents: 'none',
-                  }}>
-                    {swipeLabel}
-                  </div>
-                )}
-
-                <div
-                  role="button"
-                  tabIndex={0}
-                  aria-label={({ uz: 'Kartani aylantirish', ru: 'Перевернуть карточку', en: 'Flip card' } as Record<string, string>)[language]}
-                  onClick={() => { if (!isDragging && Math.abs(dragX) < 5) { setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } }}
-                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } }}
-                  style={{
-                    width: '100%', height: '100%',
-                    transformStyle: 'preserve-3d',
-                    transition: dragX !== 0 ? 'none' : 'transform 0.45s',
-                    transform: `translateX(${dragX}px) rotate(${dragX * 0.03}deg) rotateY(${isFlipped ? 180 : 0}deg)`,
-                  }}
-                >
+            {/* Card (tap to flip) */}
+            <div ref={cardRef} style={{ perspective: 800, width: '100%', height: 260, position: 'relative' }}>
+              {/* faint stack behind, so the "send to back" exit lands somewhere */}
+              {queue.length > 1 && (
+                <div aria-hidden="true" style={{ position: 'absolute', inset: 0, transform: 'translateY(8px) scale(0.96)', background: '#fff', borderRadius: 3, border: '1px solid #ececf0', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }} />
+              )}
+              {queue.length > 2 && (
+                <div aria-hidden="true" style={{ position: 'absolute', inset: 0, transform: 'translateY(15px) scale(0.92)', background: '#fff', borderRadius: 3, border: '1px solid #f1f1f5', boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }} />
+              )}
+              <div
+                key={cardKey}
+                role="button"
+                tabIndex={0}
+                aria-label={({ uz: 'Kartani aylantirish', ru: 'Перевернуть карточку', en: 'Flip card' } as Record<string, string>)[language]}
+                onClick={() => { setIsFlipped((f) => !f); dismissTip('flashcard-tour'); }}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setIsFlipped((f) => !f); dismissTip('flashcard-tour'); } }}
+                style={{
+                  position: 'absolute', inset: 0, cursor: 'pointer',
+                  transformStyle: 'preserve-3d',
+                  transition: 'transform 0.3s ease, opacity 0.3s ease',
+                  transform: `${exitAnim === 'back' ? 'translateY(46px) scale(0.8)' : exitAnim === 'pass' ? 'translateY(-46px) scale(0.92)' : ''} rotateY(${isFlipped ? 180 : 0}deg)`,
+                  opacity: exitAnim === 'pass' ? 0 : exitAnim === 'back' ? 0.25 : 1,
+                }}
+              >
                   {/* Front */}
                   <div style={{
                     position: 'absolute', width: '100%', height: '100%',
@@ -456,11 +368,9 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, bookPath, ba
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8.5v7a4.49 4.49 0 0 0 2.5-3.5zM14 3.23v2.06a6.51 6.51 0 0 1 0 13.42v2.06A8.51 8.51 0 0 0 14 3.23z"/></svg>
                       </button>
                     )}
-                    <div style={{ fontSize: 11, color: '#fca5a580', marginTop: 16 }}>{({ uz: '← bilmayman | bilaman →', ru: '← не знаю | знаю →', en: "← don't know | know →" } as Record<string, string>)[language]}</div>
                   </div>
                 </div>
               </div>
-            </div>
 
             {/* Grade buttons: I know / Easy on top, I don't know full-width below */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 18 }}>
