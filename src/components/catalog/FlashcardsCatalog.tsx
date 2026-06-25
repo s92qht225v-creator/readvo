@@ -8,16 +8,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { useLanguage } from '../../hooks/useLanguage';
 import { CatalogHeader } from './CatalogHeader';
 import { PageFooter } from '../PageFooter';
-import type { WritingSetMeta } from './types';
 import { trackAll } from '@/utils/analytics';
-
-// Props kept for the page that renders this (writing-set data), though the
-// Flashcards tab now shows only topic decks.
-interface Props {
-  writingSets: WritingSetMeta[];
-  writingSetsHsk2L2: WritingSetMeta[];
-  writingSetsHsk3: WritingSetMeta[];
-}
 
 const TOPIC_ITEMS = [
   { uz: 'Oila', ru: 'Семья', en: 'Family', icon: '👨‍👩‍👧', slug: 'family' },
@@ -50,7 +41,7 @@ const TOPIC_ITEMS = [
   { uz: "His-tuyg'ular", ru: 'Эмоции', en: 'Emotions', icon: '😊', slug: 'emotions' },
 ];
 
-export function FlashcardsCatalog(_props: Props) {
+export function FlashcardsCatalog() {
   const { isLoading } = useRequireAuth();
   const [language] = useLanguage();
   const [topicSearch, setTopicSearch] = useState('');
