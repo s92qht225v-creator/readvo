@@ -1,0 +1,87 @@
+{
+  "slug": "hsk-1-word-list",
+  "title": "HSK 1 so'zlar ro'yxati: Mandarin tilini boshlovchilar uchun 150 ta so'z",
+  "title_ru": "Список слов HSK 1: 150 слов для начинающих изучать китайский",
+  "title_en": "The Complete HSK 1 Word List: 150 Words for Mandarin Beginners",
+  "description": "To'liq HSK 1 so'zlar ro'yxati — 150 ta so'z pinyin va tarjima bilan, kategoriyalarga bo'lingan. Boshlovchilar uchun birinchi qadam.",
+  "description_ru": "Полный список слов HSK 1 — 150 слов с пиньинь и переводом, по категориям. Первый шаг для начинающих.",
+  "description_en": "The complete HSK 1 word list — 150 words with pinyin and translations, grouped by category. The beginner's first milestone.",
+  "date": "2026-06-25",
+  "intro": "Agar siz endigina xitoy tilini o'rganishni boshlayotgan bo'lsangiz, HSK 1 so'zlar ro'yxati — sizning birinchi muhim bosqichingiz. HSK (Hanyu Shuiping Kaoshi) — xitoy tilining rasmiy bilim darajasi imtihoni bo'lib, 1-daraja har bir boshlovchi boshlanadigan nuqtadir. Taxminan 3–6 oylik o'qish (~150 soat) uchun mo'ljallangan HSK 1 sizning oddiy so'z va gaplarni tushunish hamda ishlatishingizni tekshiradi. Eng yaxshi tomoni: imtihondan o'tish uchun atigi 150 ta so'zni o'zlashtirishingiz kifoya.",
+  "intro_ru": "Если вы только начинаете учить китайский, список слов HSK 1 — ваш первый важный рубеж. HSK (Hanyu Shuiping Kaoshi) — официальный экзамен на знание китайского языка, и Уровень 1 — это точка, с которой начинает каждый новичок. Рассчитанный примерно на 3–6 месяцев обучения (~150 часов), HSK 1 проверяет умение понимать и использовать простые слова и предложения. Самое приятное: чтобы сдать, нужно освоить всего 150 слов.",
+  "intro_en": "If you're just starting your Mandarin Chinese journey, the HSK 1 word list is your first major milestone. HSK (Hanyu Shuiping Kaoshi) is the official Chinese proficiency test, and Level 1 is where every beginner begins. Designed for learners with about 3–6 months of study (~150 hours), HSK 1 tests your ability to understand and use simple Chinese words and sentences. The best part: you only need to master 150 words to pass.",
+  "sections": [
+    {
+      "heading": "HSK 1 so'zlar ro'yxatida nima bor?",
+      "heading_ru": "Что входит в список слов HSK 1?",
+      "heading_en": "What's on the HSK 1 Word List?",
+      "body": "Bu 150 ta so'z kundalik hayotning eng kerakli sohalarini qamrab oladi — salomlashish, sonlar, oila, ovqat, vaqt va asosiy harakatlar. Quyida ular kategoriyalarga bo'lib berilgan.",
+      "body_ru": "Эти 150 слов охватывают самое необходимое в повседневной жизни — приветствия, числа, семью, еду, время и базовые действия. Ниже они разбиты по категориям.",
+      "body_en": "These 150 words cover everyday essentials—greetings, numbers, family, food, time, and basic actions. Here's a breakdown by category."
+    },
+    {
+      "heading": "👤 Olmoshlar",
+      "heading_ru": "👤 Местоимения",
+      "heading_en": "👤 Pronouns",
+      "body": "| 汉字 | Pinyin | Ma'no |\n| 我 | wǒ | men |\n| 你 | nǐ | sen |\n| 他 / 她 | tā | u (erkak/ayol) |\n| 我们 | wǒmen | biz |\n| 这 | zhè | bu |\n| 那 | nà | u, o'sha |\n| 谁 | shéi | kim |\n| 什么 | shénme | nima |\n| 哪 | nǎ | qaysi |",
+      "body_ru": "| 汉字 | Pinyin | Значение |\n| 我 | wǒ | я |\n| 你 | nǐ | ты |\n| 他 / 她 | tā | он / она |\n| 我们 | wǒmen | мы |\n| 这 | zhè | это, этот |\n| 那 | nà | то, тот |\n| 谁 | shéi | кто |\n| 什么 | shénme | что |\n| 哪 | nǎ | какой |",
+      "body_en": "| 汉字 | Pinyin | Meaning |\n| 我 | wǒ | I, me |\n| 你 | nǐ | you |\n| 他 / 她 | tā | he / she |\n| 我们 | wǒmen | we |\n| 这 | zhè | this |\n| 那 | nà | that |\n| 谁 | shéi | who |\n| 什么 | shénme | what |\n| 哪 | nǎ | which |"
+    },
+    {
+      "heading": "🔢 Sonlar va sanoq so'zlari",
+      "heading_ru": "🔢 Числа и счётные слова",
+      "heading_en": "🔢 Numbers & Measure Words",
+      "body": "| 汉字 | Pinyin | Ma'no |\n| 零 | líng | nol |\n| 一 | yī | bir |\n| 二 | èr | ikki |\n| 三 | sān | uch |\n| 四 | sì | to'rt |\n| 五 | wǔ | besh |\n| 六 | liù | olti |\n| 七 | qī | yetti |\n| 八 | bā | sakkiz |\n| 九 | jiǔ | to'qqiz |\n| 十 | shí | o'n |\n| 个 | gè | umumiy sanoq so'zi |\n| 岁 | suì | yosh (yil) |\n| 块 | kuài | pul birligi (yuan) |",
+      "body_ru": "| 汉字 | Pinyin | Значение |\n| 零 | líng | ноль |\n| 一 | yī | один |\n| 二 | èr | два |\n| 三 | sān | три |\n| 四 | sì | четыре |\n| 五 | wǔ | пять |\n| 六 | liù | шесть |\n| 七 | qī | семь |\n| 八 | bā | восемь |\n| 九 | jiǔ | девять |\n| 十 | shí | десять |\n| 个 | gè | универсальное счётное слово |\n| 岁 | suì | лет (возраст) |\n| 块 | kuài | денежная единица (юань) |",
+      "body_en": "| 汉字 | Pinyin | Meaning |\n| 零 | líng | 0 |\n| 一 | yī | 1 |\n| 二 | èr | 2 |\n| 三 | sān | 3 |\n| 四 | sì | 4 |\n| 五 | wǔ | 5 |\n| 六 | liù | 6 |\n| 七 | qī | 7 |\n| 八 | bā | 8 |\n| 九 | jiǔ | 9 |\n| 十 | shí | 10 |\n| 个 | gè | generic measure word |\n| 岁 | suì | years (age) |\n| 块 | kuài | unit of money |"
+    },
+    {
+      "heading": "🏠 Otlar: odamlar, joylar va narsalar",
+      "heading_ru": "🏠 Существительные: люди, места и вещи",
+      "heading_en": "🏠 Nouns: People, Places & Things",
+      "body": "**Oila**\n\n| 汉字 | Pinyin | Ma'no |\n| 爸爸 | bàba | ota |\n| 妈妈 | māma | ona |\n| 儿子 | érzi | o'g'il |\n| 女儿 | nǚ'ér | qiz (farzand) |\n\n**Odamlar**\n\n| 汉字 | Pinyin | Ma'no |\n| 老师 | lǎoshī | o'qituvchi |\n| 学生 | xuésheng | o'quvchi |\n| 朋友 | péngyou | do'st |\n| 医生 | yīshēng | shifokor |\n\n**Joylar**\n\n| 汉字 | Pinyin | Ma'no |\n| 学校 | xuéxiào | maktab |\n| 医院 | yīyuàn | kasalxona |\n| 商店 | shāngdiàn | do'kon |\n| 饭店 | fàndiàn | restoran |\n\n**Ovqat**\n\n| 汉字 | Pinyin | Ma'no |\n| 米饭 | mǐfàn | guruch |\n| 水果 | shuǐguǒ | meva |\n| 苹果 | píngguǒ | olma |\n| 茶 | chá | choy |\n| 水 | shuǐ | suv |\n\n**Boshqa narsalar**\n\n| 汉字 | Pinyin | Ma'no |\n| 电脑 | diànnǎo | kompyuter |\n| 电视 | diànshì | televizor |\n| 飞机 | fēijī | samolyot |\n| 出租车 | chūzūchē | taksi |",
+      "body_ru": "**Семья**\n\n| 汉字 | Pinyin | Значение |\n| 爸爸 | bàba | папа |\n| 妈妈 | māma | мама |\n| 儿子 | érzi | сын |\n| 女儿 | nǚ'ér | дочь |\n\n**Люди**\n\n| 汉字 | Pinyin | Значение |\n| 老师 | lǎoshī | учитель |\n| 学生 | xuésheng | ученик, студент |\n| 朋友 | péngyou | друг |\n| 医生 | yīshēng | врач |\n\n**Места**\n\n| 汉字 | Pinyin | Значение |\n| 学校 | xuéxiào | школа |\n| 医院 | yīyuàn | больница |\n| 商店 | shāngdiàn | магазин |\n| 饭店 | fàndiàn | ресторан |\n\n**Еда**\n\n| 汉字 | Pinyin | Значение |\n| 米饭 | mǐfàn | рис |\n| 水果 | shuǐguǒ | фрукты |\n| 苹果 | píngguǒ | яблоко |\n| 茶 | chá | чай |\n| 水 | shuǐ | вода |\n\n**Прочие вещи**\n\n| 汉字 | Pinyin | Значение |\n| 电脑 | diànnǎo | компьютер |\n| 电视 | diànshì | телевизор |\n| 飞机 | fēijī | самолёт |\n| 出租车 | chūzūchē | такси |",
+      "body_en": "**Family**\n\n| 汉字 | Pinyin | Meaning |\n| 爸爸 | bàba | father |\n| 妈妈 | māma | mother |\n| 儿子 | érzi | son |\n| 女儿 | nǚ'ér | daughter |\n\n**People**\n\n| 汉字 | Pinyin | Meaning |\n| 老师 | lǎoshī | teacher |\n| 学生 | xuésheng | student |\n| 朋友 | péngyou | friend |\n| 医生 | yīshēng | doctor |\n\n**Places**\n\n| 汉字 | Pinyin | Meaning |\n| 学校 | xuéxiào | school |\n| 医院 | yīyuàn | hospital |\n| 商店 | shāngdiàn | store |\n| 饭店 | fàndiàn | restaurant |\n\n**Food**\n\n| 汉字 | Pinyin | Meaning |\n| 米饭 | mǐfàn | rice |\n| 水果 | shuǐguǒ | fruit |\n| 苹果 | píngguǒ | apple |\n| 茶 | chá | tea |\n| 水 | shuǐ | water |\n\n**Common Things**\n\n| 汉字 | Pinyin | Meaning |\n| 电脑 | diànnǎo | computer |\n| 电视 | diànshì | TV |\n| 飞机 | fēijī | airplane |\n| 出租车 | chūzūchē | taxi |"
+    },
+    {
+      "heading": "⚡ Asosiy fe'llar",
+      "heading_ru": "⚡ Ключевые глаголы",
+      "heading_en": "⚡ Key Verbs",
+      "body": "| 汉字 | Pinyin | Ma'no |\n| 吃 | chī | yemoq |\n| 喝 | hē | ichmoq |\n| 看 | kàn | qaramoq |\n| 听 | tīng | eshitmoq |\n| 去 | qù | bormoq |\n| 来 | lái | kelmoq |\n| 回 | huí | qaytmoq |\n| 坐 | zuò | o'tirmoq |\n| 是 | shì | bo'lmoq (—dir) |\n| 有 | yǒu | bor bo'lmoq |\n| 想 | xiǎng | xohlamoq, o'ylamoq |\n| 喜欢 | xǐhuan | yoqtirmoq |\n| 说话 | shuōhuà | gapirmoq |\n| 读 | dú | o'qimoq |\n| 写 | xiě | yozmoq |\n| 谢谢 | xièxie | rahmat |\n| 对不起 | duìbuqǐ | kechirasiz |\n| 再见 | zàijiàn | xayr |",
+      "body_ru": "| 汉字 | Pinyin | Значение |\n| 吃 | chī | есть |\n| 喝 | hē | пить |\n| 看 | kàn | смотреть |\n| 听 | tīng | слушать |\n| 去 | qù | идти, ехать |\n| 来 | lái | приходить |\n| 回 | huí | возвращаться |\n| 坐 | zuò | сидеть |\n| 是 | shì | быть, являться |\n| 有 | yǒu | иметь, есть |\n| 想 | xiǎng | хотеть, думать |\n| 喜欢 | xǐhuan | нравиться |\n| 说话 | shuōhuà | говорить |\n| 读 | dú | читать |\n| 写 | xiě | писать |\n| 谢谢 | xièxie | спасибо |\n| 对不起 | duìbuqǐ | извините |\n| 再见 | zàijiàn | до свидания |",
+      "body_en": "| 汉字 | Pinyin | Meaning |\n| 吃 | chī | eat |\n| 喝 | hē | drink |\n| 看 | kàn | look, watch |\n| 听 | tīng | listen |\n| 去 | qù | go |\n| 来 | lái | come |\n| 回 | huí | return |\n| 坐 | zuò | sit |\n| 是 | shì | to be |\n| 有 | yǒu | to have |\n| 想 | xiǎng | want, think |\n| 喜欢 | xǐhuan | like |\n| 说话 | shuōhuà | speak |\n| 读 | dú | read |\n| 写 | xiě | write |\n| 谢谢 | xièxie | thank you |\n| 对不起 | duìbuqǐ | sorry |\n| 再见 | zàijiàn | goodbye |"
+    },
+    {
+      "heading": "🎨 Sifat va ravishlar",
+      "heading_ru": "🎨 Прилагательные и наречия",
+      "heading_en": "🎨 Adjectives & Adverbs",
+      "body": "| 汉字 | Pinyin | Ma'no |\n| 好 | hǎo | yaxshi |\n| 大 | dà | katta |\n| 小 | xiǎo | kichik |\n| 多 | duō | ko'p |\n| 少 | shǎo | kam |\n| 冷 | lěng | sovuq |\n| 热 | rè | issiq |\n| 高兴 | gāoxìng | xursand |\n| 漂亮 | piàoliang | chiroyli |\n| 很 | hěn | juda |\n| 太 | tài | juda (ortiqcha) |\n| 都 | dōu | hammasi |\n| 不 / 没 | bù / méi | emas, yo'q |",
+      "body_ru": "| 汉字 | Pinyin | Значение |\n| 好 | hǎo | хороший |\n| 大 | dà | большой |\n| 小 | xiǎo | маленький |\n| 多 | duō | много |\n| 少 | shǎo | мало |\n| 冷 | lěng | холодный |\n| 热 | rè | горячий, жаркий |\n| 高兴 | gāoxìng | радостный |\n| 漂亮 | piàoliang | красивый |\n| 很 | hěn | очень |\n| 太 | tài | слишком |\n| 都 | dōu | все |\n| 不 / 没 | bù / méi | не, нет |",
+      "body_en": "| 汉字 | Pinyin | Meaning |\n| 好 | hǎo | good |\n| 大 | dà | big |\n| 小 | xiǎo | small |\n| 多 | duō | many |\n| 少 | shǎo | few |\n| 冷 | lěng | cold |\n| 热 | rè | hot |\n| 高兴 | gāoxìng | happy |\n| 漂亮 | piàoliang | beautiful |\n| 很 | hěn | very |\n| 太 | tài | too |\n| 都 | dōu | all |\n| 不 / 没 | bù / méi | negation (not) |"
+    },
+    {
+      "heading": "HSK 1 so'zlarini o'zlashtirishning 3 maslahati",
+      "heading_ru": "3 совета, как освоить слова HSK 1",
+      "heading_en": "3 Tips to Master the HSK 1 Word List",
+      "body": "**1. Avval pinyinni o'rganing.** Har bir so'z pinyin (lotin yozuvidagi talaffuz) bilan beriladi. Uni erta o'zlashtiring — bu sizning talaffuz tayanchingiz.\n\n**2. So'zlarni kontekstda mashq qiling.** So'zni yakka holda bilish yetarli emas. Sodda gaplarni o'rganing: 我爱喝茶 (Wǒ ài hē chá) — Men choy ichishni yaxshi ko'raman. HSK 1 — bu real muloqot haqida!\n\n**3. Takroriy mashqdan foydalaning.** Fleshkartalar yoki ilovalar so'zlarni to'g'ri vaqtda takrorlashga yordam beradi, shunda ularni unutmaysiz. Blim ilovasidagi HSK 1 fleshkartalari aynan shu 150 ta so'zni audio bilan o'rganishga yordam beradi.",
+      "body_ru": "**1. Сначала выучите пиньинь.** Каждое слово даётся с пиньинь (запись произношения латиницей). Освойте его пораньше — это ваша опора в произношении.\n\n**2. Практикуйте слова в контексте.** Знать слово отдельно недостаточно. Учите простые предложения: 我爱喝茶 (Wǒ ài hē chá) — Я люблю пить чай. HSK 1 — это про реальное общение!\n\n**3. Используйте интервальное повторение.** Карточки и приложения помогают повторять слова в нужный момент, чтобы не забывать их. Карточки HSK 1 в приложении Blim помогают выучить именно эти 150 слов с аудио.",
+      "body_en": "**1. Learn pinyin first.** Each word comes with pinyin (the romanized pronunciation). Master it early—it's your pronunciation anchor.\n\n**2. Practice in context.** Knowing the word alone isn't enough. Learn simple sentences like 我爱喝茶 (Wǒ ài hē chá) — I love drinking tea. The HSK 1 test is about real communication!\n\n**3. Use spaced repetition.** Flashcards and apps help you review words at the right time so you don't forget them. Blim's HSK 1 flashcards help you learn these exact 150 words with audio."
+    },
+    {
+      "heading": "Kerak bo'ladigan grammatika asoslari",
+      "heading_ru": "Основы грамматики, которые тоже понадобятся",
+      "heading_en": "Grammar Basics You'll Also Need",
+      "body": "HSK 1 imtihoni bu 150 ta so'zni sodda gaplarda ishlatishni talab qiladi. Asosiy grammatika nuqtalari:\n\n* **Ega–fe'l–to'ldiruvchi:** 我爱你 (Wǒ ài nǐ) — Men seni sevaman\n* **Inkor:** 我不是老师 (Wǒ bú shì lǎoshī) — Men o'qituvchi emasman\n* **吗 bilan savol:** 你好吗？(Nǐ hǎo ma?) — Yaxshimisiz?\n* **的 bilan egalik:** 我的书 (Wǒ de shū) — Mening kitobim",
+      "body_ru": "Экзамен HSK 1 ожидает, что вы будете использовать эти 150 слов в простых предложениях. Ключевые моменты грамматики:\n\n* **Подлежащее–глагол–дополнение:** 我爱你 (Wǒ ài nǐ) — Я тебя люблю\n* **Отрицание:** 我不是老师 (Wǒ bú shì lǎoshī) — Я не учитель\n* **Вопрос с 吗:** 你好吗？(Nǐ hǎo ma?) — Как дела?\n* **Принадлежность с 的:** 我的书 (Wǒ de shū) — Моя книга",
+      "body_en": "The HSK 1 test expects you to use these 150 words in simple sentences. Key grammar points:\n\n* **Subject–Verb–Object:** 我爱你 (Wǒ ài nǐ) — I love you\n* **Negation:** 我不是老师 (Wǒ bú shì lǎoshī) — I'm not a teacher\n* **Questions with 吗:** 你好吗？(Nǐ hǎo ma?) — How are you?\n* **Possession with 的:** 我的书 (Wǒ de shū) — My book"
+    },
+    {
+      "heading": "Tayyormisiz?",
+      "heading_ru": "Готовы начать?",
+      "heading_en": "Ready to Start?",
+      "body": "HSK 1 so'zlar ro'yxati — Mandarin ravonligi sari birinchi qadamingiz. Atigi 150 ta so'z bilan siz o'zingizni tanishtira olasiz, ovqat buyurtma qila olasiz, oddiy savollar bera olasiz va kundalik vaziyatlarda muloqot qila olasiz. Muntazam o'qing, har kuni mashq qiling — va HSK 1 dan tez orada o'tasiz. 加油！(Jiāyóu! — Davom eting!)",
+      "body_ru": "Список слов HSK 1 — ваш первый шаг к свободному владению китайским. Всего с 150 словами вы сможете представиться, заказать еду, задавать простые вопросы и ориентироваться в повседневных ситуациях. Учите регулярно, практикуйтесь каждый день — и вы скоро сдадите HSK 1. 加油！(Jiāyóu! — Не сдавайтесь!)",
+      "body_en": "The HSK 1 word list is your first step toward Mandarin fluency. With just 150 words, you'll be able to introduce yourself, order food, ask basic questions, and navigate everyday situations. Learn consistently, practice daily, and you'll pass HSK 1 in no time. 加油！(Jiāyóu! — Keep going!)"
+    }
+  ]
+}
