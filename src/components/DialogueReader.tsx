@@ -618,19 +618,16 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                                     })}
                                   </div>
                                 </div>
-                                {showTranslation && (
-                                  <div className="dr-line-tr">
-                                    {group.map((s, si) => {
-                                      const tr = language === 'ru' ? s.text_translation_ru : language === 'en' ? (s.text_translation_en || s.text_translation) : s.text_translation;
-                                      const isActive = displaySentenceId === s.id;
-                                      return (
-                                        <span key={si} style={isActive ? { color: '#dc2626' } : undefined}>
-                                          {si > 0 ? ' ' : ''}{tr}
-                                        </span>
-                                      );
-                                    })}
-                                  </div>
-                                )}
+                                {showTranslation && (() => {
+                                  // Tap-to-reveal: show only the active line's
+                                  // translation, one at a time (matches the
+                                  // Arabic reader). Tapping another line moves
+                                  // the reveal; re-tapping the same line hides it.
+                                  const active = group.find(s => s.id === displaySentenceId);
+                                  if (!active) return null;
+                                  const tr = language === 'ru' ? active.text_translation_ru : language === 'en' ? (active.text_translation_en || active.text_translation) : active.text_translation;
+                                  return <div className="dr-line-tr">{tr}</div>;
+                                })()}
                               </div>
                             );
                           })}
