@@ -26,18 +26,19 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
   // uses its own <Audio> element, cleaned up by the effect below.)
   useEffect(() => () => { stopAllAudio(); }, []);
 
-  // The translation reveal is "sticky": it follows the active/playing line but
-  // does NOT clear when audio stops, so the last line's translation stays
-  // visible after a tap or after Play All finishes. Reset only when the
-  // translation toggle is switched off. Uses React's "adjust state during
-  // render" pattern so it never lags a frame or triggers an extra effect pass.
+  // The per-line aid reveal is "sticky": it follows the active/playing line but
+  // does NOT clear when audio stops, so the last line's transliteration/
+  // translation stay visible after a tap or after Play All finishes. Drives both
+  // the translation and the transliteration (secondary aid) per-line reveal.
+  // Reset only when both are off (so the next enable starts clean). Uses React's
+  // "adjust state during render" pattern so it never lags a frame.
   const [revealedId, setRevealedId] = useState<string | null>(null);
   const [prevActiveId, setPrevActiveId] = useState<string | null>(activeId);
   if (activeId !== prevActiveId) {
     setPrevActiveId(activeId);
     if (activeId) setRevealedId(activeId);
   }
-  if (!showTranslation && revealedId !== null) setRevealedId(null);
+  if (!showTranslation && !showSecondaryAid && revealedId !== null) setRevealedId(null);
 
   // ── Font size (A-/A+) ──────────────────────────────────────────────────────
   // Percentage applied to the lines container; shared key with the other readers.
@@ -127,7 +128,7 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
               className={`reader-core__sentence ${activeId === s.id ? 'reader-core__sentence--active' : ''}`}
               onClick={() => onSentence(s)}
             >
-              {config.renderSentence(s, { showPrimaryAid, showSecondaryAid })}
+              {config.renderSentence(s, { showPrimaryAid, showSecondaryAid: showSecondaryAid && revealedId === s.id })}
             </span>
             {showTranslation && revealedId === s.id && <div className="reader-core__translation" dir="auto">{s.translation}</div>}
           </div>
