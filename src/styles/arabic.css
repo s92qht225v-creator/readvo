@@ -35,6 +35,12 @@
 .ar-fc__btn { flex: 1; padding: 14px; border: none; border-radius: 8px; font-size: 1em; font-weight: 600; cursor: pointer; }
 .ar-fc__btn--no { background: #fee2e2; color: #b91c1c; }
 .ar-fc__btn--yes { background: #16a34a; color: #fff; }
+/* Full-width "move to back of the stack" button below the know/don't-know row.
+   Override the actions-row `flex: 1` (which would stretch it in the column). */
+.ar-fc__btn--back { flex: 0 0 auto; width: 100%; max-width: 420px; background: #eef2f7; color: #475569; }
+/* Green "due for review" dot on a catalog level card. */
+.ar-fc-card { position: relative; }
+.ar-fc__due-dot { position: absolute; top: 12px; inset-inline-end: 12px; width: 10px; height: 10px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.18); }
 .ar-fc__done { display: flex; flex-direction: column; align-items: center; gap: 14px; padding-block: 40px; }
 .ar-fc__done-title { font-size: 1.6em; font-weight: 700; }
 .ar-fc__done-stats { color: #666; }

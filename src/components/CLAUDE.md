@@ -33,6 +33,12 @@
 - **Persistence** (server-authoritative): `GET/POST /api/flashcards/reviews` (JWT auth) → Supabase `flashcard_reviews` (`user_id, card_id, ease, interval_days, reps, lapses, due_at, last_grade`, PK `(user_id, card_id)`, RLS service-role-only). `card_id = ${deck.id}:${word.id}`; the POST re-schedules via the shared `srs` lib.
 - Pinyin toggle, UZ/RU/EN translations, optional per-card TTS audio. Deck JSON from `content/flashcards/{bookId}.json`; topic decks from `content/flashcards/topics/*.json`.
 
+### Arabic Flashcards (spaced repetition)
+- **Catalog** (`ArabicFlashcardsCatalog.tsx`, `/arabic/flashcards`): level cards (A1–C2). Each level shows a **green dot** (`.ar-fc__due-dot`) when the user has ≥1 card **due for repeat now** — no "N due" text. Due levels computed client-side from `GET /api/flashcards/reviews?prefix=ar:` (logged-out users see no dots; catalog itself is public).
+- **Deck** (`ArabicFlashcardDeck.tsx`, `/arabic/flashcards/[level]`): keeps the original flip-card UI (Arabic + harakat toggle + transliteration + 🔊 audio → flip to meaning). Runs a **2-grade SRS session** — the stack = cards **due now** + never-seen cards (a card with no review row counts as due immediately; "Due only" semantics), built **once** via `builtRef`. Controls: **I don't know** / **I know** row + a **full-width "Move to back of the stack"** button (`.ar-fc__btn--back`) that re-queues the current card within the session (no schedule write). Grading removes the card and persists.
+- **Scheduler** (`src/lib/arabicSrs.ts`, pure + tested): `dontKnow → 1d` (reset); `know → 4d` first time / after a reset, else `×2.5` (cap 365d). NOT the Chinese SM-2.
+- **Persistence**: `POST /api/arabic/flashcards/reviews` (JWT) writes into the **shared `flashcard_reviews` table** with an `ar:{level}:{cardId}` card_id prefix (so it never collides with Chinese SM-2 rows; `ease`/`lapses` are written as constants, unused). Reads reuse the generic `GET /api/flashcards/reviews?prefix=…`.
+
 ### Dialogue Reader
 - Accessible from Language Page → Matn tab → Dialoglar card → `/chinese/hsk1/dialogues`
 - Dialogues are short A/B conversations using vocabulary from the corresponding HSK level

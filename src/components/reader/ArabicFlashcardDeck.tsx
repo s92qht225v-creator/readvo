@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Link } from '@/i18n/navigation';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useRequireAuth } from '@/hooks/useRequireAuth';
@@ -11,6 +11,7 @@ import { PageFooter } from '@/components/PageFooter';
 import { stripHarakat } from '@/lib/reader/harakat';
 import { resolveTtsUrlAr } from '@/utils/ttsAudioAr';
 import { useAudioPlayer } from '@/hooks/useAudioPlayer';
+import type { ArabicGrade } from '@/lib/arabicSrs';
 import '@/styles/arabic.css';
 import type { Language } from '@/types/ui-state';
 
@@ -25,28 +26,47 @@ export function ArabicFlashcardDeck({ level }: { level: string }) {
   const [language] = useLanguage();
   const { play } = useAudioPlayer();
 
-  const [deck, setDeck] = useState<Deck | null>(null);
   const [status, setStatus] = useState<'loading' | 'loaded' | 'locked' | 'error'>('loading');
-  const [idx, setIdx] = useState(0);
+  // The session "stack": cards that are due now plus never-seen cards, built
+  // once on load. null = not built yet. Grading removes a card; "move to back"
+  // re-queues it within the session.
+  const [queue, setQueue] = useState<Card[] | null>(null);
   const [flipped, setFlipped] = useState(false);
   const [showHarakat, setShowHarakat] = useState(true);
-  const [known, setKnown] = useState(0);
-  const [done, setDone] = useState(false);
+  const [reviewed, setReviewed] = useState(0);
+  const builtRef = useRef(false);
+
+  const cardId = useCallback((c: Card) => `ar:${level}:${c.id}`, [level]);
 
   useEffect(() => {
     if (authLoading) return;
     let cancelled = false;
     (async () => {
       setStatus('loading');
+      const token = await getAccessToken();
+      if (!token) { if (!cancelled) setStatus('locked'); return; }
       try {
-        const token = await getAccessToken();
-        if (!token) { if (!cancelled) setStatus('locked'); return; }
-        const res = await fetch(`/api/content/arabic/flashcards/${level}`, { headers: { Authorization: `Bearer ${token}` } });
+        const [deckRes, revRes] = await Promise.all([
+          fetch(`/api/content/arabic/flashcards/${level}`, { headers: { Authorization: `Bearer ${token}` } }),
+          fetch(`/api/flashcards/reviews?prefix=ar:${level}:`, { headers: { Authorization: `Bearer ${token}` } }),
+        ]);
         if (cancelled) return;
-        if (res.status === 401 || res.status === 402) { setStatus('locked'); return; }
-        if (!res.ok) { setStatus('error'); return; }
-        const data = await res.json();
-        setDeck(data.deck as Deck);
+        if (deckRes.status === 401 || deckRes.status === 402) { setStatus('locked'); return; }
+        if (!deckRes.ok) { setStatus('error'); return; }
+        const deck = (await deckRes.json()).deck as Deck;
+        const dueByCard: Record<string, number> = {};
+        if (revRes.ok) {
+          for (const r of ((await revRes.json()).reviews ?? []) as { card_id: string; due_at: string }[]) {
+            dueByCard[r.card_id] = new Date(r.due_at).getTime();
+          }
+        }
+        const now = Date.now();
+        // "Due only": a never-seen card (no row) counts as due immediately.
+        const stack = deck.cards.filter((c) => {
+          const due = dueByCard[`ar:${level}:${c.id}`];
+          return due === undefined || due <= now;
+        });
+        if (!builtRef.current) { builtRef.current = true; setQueue(stack); }
         setStatus('loaded');
       } catch {
         if (!cancelled) setStatus('error');
@@ -55,17 +75,29 @@ export function ArabicFlashcardDeck({ level }: { level: string }) {
     return () => { cancelled = true; };
   }, [level, getAccessToken, authLoading]);
 
-  const cards = deck?.cards ?? [];
-  const card = cards[idx];
+  const card = queue?.[0];
 
-  const advance = useCallback((wasKnown: boolean) => {
-    if (wasKnown) setKnown((k) => k + 1);
+  const grade = useCallback((g: ArabicGrade) => {
+    const c = queue?.[0];
+    if (!c) return;
     setFlipped(false);
-    if (idx + 1 >= cards.length) setDone(true);
-    else setIdx((i) => i + 1);
-  }, [idx, cards.length]);
+    setReviewed((n) => n + 1);
+    setQueue((q) => (q ? q.slice(1) : q));
+    void (async () => {
+      const token = await getAccessToken();
+      if (!token) return;
+      void fetch('/api/arabic/flashcards/reviews', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+        body: JSON.stringify({ card_id: cardId(c), grade: g }),
+      });
+    })();
+  }, [queue, getAccessToken, cardId]);
 
-  const restart = useCallback(() => { setIdx(0); setFlipped(false); setKnown(0); setDone(false); }, []);
+  const moveToBack = useCallback(() => {
+    setFlipped(false);
+    setQueue((q) => (q && q.length > 1 ? [...q.slice(1), q[0]] : q));
+  }, []);
 
   const speak = useCallback(async (text: string) => {
     const url = await resolveTtsUrlAr(text);
@@ -73,6 +105,9 @@ export function ArabicFlashcardDeck({ level }: { level: string }) {
   }, [play]);
 
   if (authLoading) return <div className="loading-spinner" />;
+
+  const total = (queue?.length ?? 0) + reviewed;
+  const t = (uz: string, ru: string, en: string) => ({ uz, ru, en } as Record<string, string>)[language];
 
   return (
     <>
@@ -86,17 +121,17 @@ export function ArabicFlashcardDeck({ level }: { level: string }) {
             <BannerMenu />
           </div>
           <div className="dr-hero__body">
-            <div className="dr-hero__level">{level.toUpperCase()} · {({ uz: 'Fleshkartalar', ru: 'Флешкарты', en: 'Flashcards' } as Record<string, string>)[language]}</div>
+            <div className="dr-hero__level">{level.toUpperCase()} · {t('Fleshkartalar', 'Флешкарты', 'Flashcards')}</div>
           </div>
         </div>
 
         {status === 'loading' && <div className="loading-spinner" />}
         {status === 'error' && <div style={{ textAlign: 'center', padding: 32, color: '#999' }}>Could not load.</div>}
 
-        {status === 'loaded' && deck && !done && card && (
+        {status === 'loaded' && card && (
           <section className="home__content ar-fc">
-            <div className="ar-fc__progress"><div className="ar-fc__progress-bar" style={{ width: `${(idx / cards.length) * 100}%` }} /></div>
-            <div className="ar-fc__count">{idx + 1} / {cards.length}</div>
+            <div className="ar-fc__progress"><div className="ar-fc__progress-bar" style={{ width: total ? `${(reviewed / total) * 100}%` : '0%' }} /></div>
+            <div className="ar-fc__count">{queue?.length} {t('qoldi', 'осталось', 'left')}</div>
 
             <div className="ar-fc__card-wrap" onClick={() => setFlipped((f) => !f)}>
               <div className={`ar-fc__card ${flipped ? 'ar-fc__card--flipped' : ''}`}>
@@ -112,9 +147,10 @@ export function ArabicFlashcardDeck({ level }: { level: string }) {
             </div>
 
             <div className="ar-fc__actions">
-              <button type="button" className="ar-fc__btn ar-fc__btn--no" onClick={() => advance(false)}>{({ uz: 'Bilmayman', ru: 'Не знаю', en: "Don't know" } as Record<string, string>)[language]}</button>
-              <button type="button" className="ar-fc__btn ar-fc__btn--yes" onClick={() => advance(true)}>{({ uz: 'Bilaman', ru: 'Знаю', en: 'Know' } as Record<string, string>)[language]}</button>
+              <button type="button" className="ar-fc__btn ar-fc__btn--no" onClick={() => grade('dontKnow')}>{t('Bilmayman', 'Не знаю', "Don't know")}</button>
+              <button type="button" className="ar-fc__btn ar-fc__btn--yes" onClick={() => grade('know')}>{t('Bilaman', 'Знаю', 'Know')}</button>
             </div>
+            <button type="button" className="ar-fc__btn ar-fc__btn--back" onClick={moveToBack}>{t('Oxiriga oʻtkazish', 'В конец стопки', 'Move to back of stack')}</button>
 
             <nav className="story__bottom-bar">
               <div className="story__bottom-bar-inner">
@@ -124,11 +160,17 @@ export function ArabicFlashcardDeck({ level }: { level: string }) {
           </section>
         )}
 
-        {status === 'loaded' && done && (
+        {status === 'loaded' && queue && queue.length === 0 && (
           <section className="home__content ar-fc__done">
-            <div className="ar-fc__done-title">{({ uz: 'Tugadi!', ru: 'Готово!', en: 'Done!' } as Record<string, string>)[language]}</div>
-            <div className="ar-fc__done-stats">{known} / {cards.length} {({ uz: 'bilingan', ru: 'известно', en: 'known' } as Record<string, string>)[language]}</div>
-            <button type="button" className="ar-fc__btn ar-fc__btn--yes" onClick={restart}>{({ uz: 'Qaytadan', ru: 'Заново', en: 'Restart' } as Record<string, string>)[language]}</button>
+            <div className="ar-fc__done-title">
+              {reviewed > 0 ? t('Tugadi!', 'Готово!', 'Done!') : t('Hozircha takrorlash yoʻq', 'Пока нечего повторять', 'Nothing to repeat right now')}
+            </div>
+            {reviewed > 0 && (
+              <div className="ar-fc__done-stats">{reviewed} {t('ta karta koʻrildi', 'карточек просмотрено', 'cards reviewed')}</div>
+            )}
+            <Link href="/arabic/flashcards" className="ar-fc__btn ar-fc__btn--yes" style={{ textDecoration: 'none', textAlign: 'center' }}>
+              {t('Fleshkartalar', 'К флешкартам', 'Back to flashcards')}
+            </Link>
           </section>
         )}
         <PageFooter />
