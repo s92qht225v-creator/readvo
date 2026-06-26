@@ -33,11 +33,19 @@ export function AudioChoiceExercise({ card, deck, language, onAudio, onResult }:
   }, [card.id, deck, language, correct]);
 
   const [picked, setPicked] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const play = async () => {
+    if (loading) return;
+    setLoading(true);
+    try { await onAudio?.(); } finally { setLoading(false); }
+  };
 
   // Best-effort auto-play once per card (mobile may block until the play button
   // is tapped). Component is keyed by card id, so this runs once per card.
   useEffect(() => {
-    onAudio?.();
+    const t = setTimeout(() => { void play(); }, 0);
+    return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -50,8 +58,10 @@ export function AudioChoiceExercise({ card, deck, language, onAudio, onResult }:
   return (
     <div className="fc-quiz">
       <div className="fc-quiz__prompt">
-        <button type="button" className="fc-quiz__bigplay" onClick={onAudio} aria-label="Play audio">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+        <button type="button" className="fc-quiz__bigplay" onClick={play} disabled={loading} aria-label="Play audio">
+          {loading
+            ? <span className="fc-quiz__spinner" />
+            : <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>}
         </button>
       </div>
 

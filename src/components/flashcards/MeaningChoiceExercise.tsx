@@ -25,7 +25,7 @@ export interface ExerciseProps {
   deck: readonly FlashcardWord[];   // pool for distractors
   language: Language;
   showPinyin: boolean;
-  onAudio?: () => void;
+  onAudio?: () => void | Promise<void>;
   onResult: (correct: boolean) => void;
 }
 

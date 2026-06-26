@@ -56,11 +56,20 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
 
   usePrimeAudioToken();
 
+  // Resolves once the clip actually starts playing (or fails / times out), so
+  // callers can show a loading spinner until then.
   const playAudio = useCallback((url: string) => {
     if (audioRef.current) audioRef.current.pause();
     const el = new Audio(protectAudioUrlSync(url));
     audioRef.current = el;
-    el.play().catch(() => {});
+    return new Promise<void>((resolve) => {
+      let done = false;
+      const finish = () => { if (!done) { done = true; resolve(); } };
+      el.onplaying = finish;
+      el.onerror = finish;
+      el.play().catch(finish);
+      setTimeout(finish, 6000);
+    });
   }, []);
   // Play a card's audio: recorded `audio_url` when present, otherwise MiMo TTS
   // (cached). Lets the listening rung work on every card even though recorded
@@ -69,9 +78,9 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
     // Synchronous path (recorded audio or already-prefetched TTS) keeps play()
     // inside the user gesture so mobile doesn't block it.
     const ready = w.audio_url ?? ttsUrlsRef.current[w.id];
-    if (ready) { playAudio(ready); return; }
+    if (ready) { await playAudio(ready); return; }
     const url = await resolveTtsUrl(w.text_original);
-    if (url) { ttsUrlsRef.current[w.id] = url; playAudio(url); }
+    if (url) { ttsUrlsRef.current[w.id] = url; await playAudio(url); }
   }, [playAudio]);
   useEffect(() => () => { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } }, []);
 
