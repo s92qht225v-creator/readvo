@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { MeaningChoiceExercise, type ExerciseProps } from './MeaningChoiceExercise';
 import { PinyinChoiceExercise } from './PinyinChoiceExercise';
-import { PinyinTypeExercise } from './PinyinTypeExercise';
+import { PinyinUnscrambleExercise } from './PinyinUnscrambleExercise';
 import { AudioChoiceExercise } from './AudioChoiceExercise';
 
 /**
@@ -13,7 +13,7 @@ import { AudioChoiceExercise } from './AudioChoiceExercise';
  * dropping them into POOL. When we formalize the strict ladder, this is where
  * the per-card stage → exercise mapping will live instead of the random pick.
  */
-const POOL: React.FC<ExerciseProps>[] = [MeaningChoiceExercise, PinyinChoiceExercise, PinyinTypeExercise, AudioChoiceExercise];
+const POOL: React.FC<ExerciseProps>[] = [MeaningChoiceExercise, PinyinChoiceExercise, PinyinUnscrambleExercise, AudioChoiceExercise];
 
 export function LadderExercise(props: ExerciseProps) {
   const [Exercise] = useState(() => POOL[Math.floor(Math.random() * POOL.length)]);
