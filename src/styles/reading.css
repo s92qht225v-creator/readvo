@@ -12833,3 +12833,24 @@ body {
 /* Reverse direction (meaning → pinyin): prompt is the meaning, options are pinyin. */
 .fc-quiz__meaning { font-size: 1.6em; font-weight: 600; color: #1a1a2e; text-align: center; line-height: 1.25; }
 .fc-quiz__option--pinyin { font-size: 1.2em; }
+
+/* Type-the-pinyin rung. Input + revealed answer share the pinyin option size
+   (1.2em) so answers look consistent across rungs. */
+.fc-quiz__type { display: flex; flex-direction: column; gap: 12px; }
+.fc-quiz__input {
+  width: 100%; padding: 14px 16px; border: 1px solid #e0e0e6; border-radius: 8px;
+  font-family: inherit; font-size: 1.2em; text-align: center; color: #1a1a2e; background: #fff;
+}
+.fc-quiz__input--correct { border-color: #16a34a; background: #dcfce7; color: #15803d; }
+.fc-quiz__input--wrong { border-color: #dc2626; background: #fee2e2; color: #b91c1c; }
+.fc-quiz__answer { text-align: center; font-size: 1.2em; font-weight: 600; color: #15803d; }
+.fc-quiz__type-actions { display: flex; gap: 10px; }
+.fc-quiz__skip {
+  flex: 0 0 auto; padding: 14px 16px; border: 1px solid #e0e0e6; border-radius: 8px;
+  background: #fff; color: #6b7177; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.fc-quiz__check {
+  flex: 1; padding: 14px 16px; border: none; border-radius: 8px;
+  background: #16a34a; color: #fff; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+}
+.fc-quiz__check:disabled { opacity: 0.5; cursor: default; }
