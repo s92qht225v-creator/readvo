@@ -13,6 +13,7 @@ import type { ArabicGrade } from '../lib/arabicSrs';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
+import { MeaningChoiceExercise } from './flashcards/MeaningChoiceExercise';
 import { trackAll } from '@/utils/analytics';
 import '@/styles/arabic.css';
 
@@ -37,11 +38,13 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
   const [phase, setPhase] = useState<'loading' | 'review' | 'empty'>('loading');
   const [queue, setQueue] = useState<FlashcardWord[]>([]);
   const [reviewed, setReviewed] = useState(0);
-  const [isFlipped, setIsFlipped] = useState(false);
   const [isPinyinVisible, setIsPinyinVisible] = useState(true);
   const tokenRef = useRef<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const builtRef = useRef(false);
+  // Cards answered wrong at least once this session → when they're finally
+  // gotten right they schedule sooner ('dontKnow') instead of 'know'.
+  const missedRef = useRef<Set<string>>(new Set());
 
   const cardId = useCallback((w: FlashcardWord) => `${deck.id}:${w.id}`, [deck.id]);
 
@@ -91,6 +94,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
         const due = dueByCard[cardId(w)];
         return due === undefined || due <= now;
       });
+      missedRef.current = new Set();
       setQueue(stack);
       setPhase(stack.length === 0 ? 'empty' : 'review');
     })();
@@ -100,33 +104,33 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
   const card = queue[0];
   const t = (uz: string, ru: string, en: string) => ({ uz, ru, en } as Record<string, string>)[language];
 
-  const grade = useCallback((g: ArabicGrade) => {
+  // Exercise outcome: correct → schedule + drop from the session; wrong → mark
+  // missed and re-queue to the back so it comes around again this session.
+  const onResult = useCallback((correct: boolean) => {
     const w = queue[0];
     if (!w) return;
-    setIsFlipped(false);
-    setReviewed((n) => n + 1);
-    setQueue((q) => q.slice(1));
-    if (tokenRef.current) {
-      fetch('/api/flashcards/reviews', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${tokenRef.current}` },
-        body: JSON.stringify({ card_id: cardId(w), grade: g }),
-      }).catch(() => {});
+    const id = cardId(w);
+    if (correct) {
+      const g: ArabicGrade = missedRef.current.has(id) ? 'dontKnow' : 'know';
+      setReviewed((n) => n + 1);
+      setQueue((q) => q.slice(1));
+      if (tokenRef.current) {
+        fetch('/api/flashcards/reviews', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${tokenRef.current}` },
+          body: JSON.stringify({ card_id: id, grade: g }),
+        }).catch(() => {});
+      }
+    } else {
+      missedRef.current.add(id);
+      setQueue((q) => (q.length > 1 ? [...q.slice(1), q[0]] : q));
     }
   }, [queue, cardId]);
-
-  const moveToBack = useCallback(() => {
-    setIsFlipped(false);
-    setQueue((q) => (q.length > 1 ? [...q.slice(1), q[0]] : q));
-  }, []);
 
   if (authLoading) return <div className="loading-spinner" />;
   const isFreeContent = deck.id.startsWith('topic-') || deck.words[0]?.lesson === 1;
   const showPaywall = trial?.isTrialExpired && !isFreeContent;
   const total = queue.length + reviewed;
-
-  const tr = (w: FlashcardWord) => (language === 'ru' && w.text_translation_ru ? w.text_translation_ru
-    : language === 'en' && w.text_translation_en ? w.text_translation_en : w.text_translation);
 
   return (
     <>
@@ -155,26 +159,15 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
             <div className="ar-fc__progress"><div className="ar-fc__progress-bar" style={{ width: total ? `${(reviewed / total) * 100}%` : '0%' }} /></div>
             <div className="ar-fc__count">{queue.length} {t('qoldi', 'осталось', 'left')}</div>
 
-            <div className="ar-fc__card-wrap" onClick={() => setIsFlipped((f) => !f)}>
-              <div className={`ar-fc__card ${isFlipped ? 'ar-fc__card--flipped' : ''}`}>
-                <div className="ar-fc__face ar-fc__face--front">
-                  <div lang="zh-Hans" style={{ fontSize: '2.6em', fontWeight: 300, color: '#1a1a2e' }}>{card.text_original}</div>
-                  {isPinyinVisible && <div style={{ fontSize: '1em', color: '#dc2626', marginTop: 4 }}>{card.pinyin}</div>}
-                  {card.audio_url && (
-                    <button type="button" className="ar-fc__audio" onClick={(e) => { e.stopPropagation(); playAudio(card.audio_url!); }} aria-label="Play">🔊</button>
-                  )}
-                </div>
-                <div className="ar-fc__face ar-fc__face--back">
-                  <div className="ar-fc__answer">{tr(card)}</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="ar-fc__actions">
-              <button type="button" className="ar-fc__btn ar-fc__btn--no" onClick={() => grade('dontKnow')}>{t('Bilmayman', 'Не знаю', "Don't know")}</button>
-              <button type="button" className="ar-fc__btn ar-fc__btn--yes" onClick={() => grade('know')}>{t('Bilaman', 'Знаю', 'Know')}</button>
-            </div>
-            <button type="button" className="ar-fc__btn ar-fc__btn--back" onClick={moveToBack}>{t('Oxiriga oʻtkazish', 'В конец стопки', 'Move to back of stack')}</button>
+            <MeaningChoiceExercise
+              key={cardId(card)}
+              card={card}
+              deck={deck.words}
+              language={language}
+              showPinyin={isPinyinVisible}
+              onAudio={() => { if (card.audio_url) playAudio(card.audio_url); }}
+              onResult={onResult}
+            />
 
             <nav className="story__bottom-bar">
               <div className="story__bottom-bar-inner">
