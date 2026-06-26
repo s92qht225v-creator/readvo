@@ -12830,6 +12830,6 @@ body {
 .fc-quiz__option:disabled { cursor: default; }
 .fc-quiz__option--correct { background: #dcfce7; border-color: #16a34a; color: #15803d; }
 .fc-quiz__option--wrong { background: #fee2e2; border-color: #dc2626; color: #b91c1c; }
-/* Reverse direction (meaning → 汉字): prompt is the meaning, options are 汉字. */
+/* Reverse direction (meaning → pinyin): prompt is the meaning, options are pinyin. */
 .fc-quiz__meaning { font-size: 1.6em; font-weight: 600; color: #1a1a2e; text-align: center; line-height: 1.25; }
-.fc-quiz__option--hanzi { font-size: 1.7em; font-weight: 300; }
+.fc-quiz__option--pinyin { font-size: 1.2em; }
