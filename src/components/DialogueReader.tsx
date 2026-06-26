@@ -309,6 +309,19 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   const displaySentenceId = audioSentenceId ?? activeSentenceId;
   const activeSentence = displaySentenceId ? allSentences.find(s => s.id === displaySentenceId) : null;
 
+  // The translation reveal is "sticky": it follows the active/playing line but
+  // does NOT clear when audio stops, so the last line's translation stays
+  // visible after a tap or after Play All finishes. Reset only when the
+  // translation toggle is switched off. Uses React's "adjust state during
+  // render" pattern so it never lags a frame or triggers an extra effect pass.
+  const [revealedId, setRevealedId] = useState<string | null>(null);
+  const [prevDisplayId, setPrevDisplayId] = useState<string | null>(displaySentenceId);
+  if (displaySentenceId !== prevDisplayId) {
+    setPrevDisplayId(displaySentenceId);
+    if (displaySentenceId) setRevealedId(displaySentenceId);
+  }
+  if (!showTranslation && revealedId !== null) setRevealedId(null);
+
   // When a tapped line's audio finishes, drop its highlight so the line
   // returns to its resting colour. We watch the per-sentence player for a
   // playing → stopped transition and clear the matching selection. Focus mode
@@ -623,7 +636,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                                   // translation, one at a time (matches the
                                   // Arabic reader). Tapping another line moves
                                   // the reveal; re-tapping the same line hides it.
-                                  const active = group.find(s => s.id === displaySentenceId);
+                                  const active = group.find(s => s.id === revealedId);
                                   if (!active) return null;
                                   const tr = language === 'ru' ? active.text_translation_ru : language === 'en' ? (active.text_translation_en || active.text_translation) : active.text_translation;
                                   return <div className="dr-line-tr">{tr}</div>;

@@ -20,6 +20,19 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
   const [activeId, setActiveId] = useState<string | null>(null);
   const { play, stop } = useAudioPlayer();
 
+  // The translation reveal is "sticky": it follows the active/playing line but
+  // does NOT clear when audio stops, so the last line's translation stays
+  // visible after a tap or after Play All finishes. Reset only when the
+  // translation toggle is switched off. Uses React's "adjust state during
+  // render" pattern so it never lags a frame or triggers an extra effect pass.
+  const [revealedId, setRevealedId] = useState<string | null>(null);
+  const [prevActiveId, setPrevActiveId] = useState<string | null>(activeId);
+  if (activeId !== prevActiveId) {
+    setPrevActiveId(activeId);
+    if (activeId) setRevealedId(activeId);
+  }
+  if (!showTranslation && revealedId !== null) setRevealedId(null);
+
   // ── Font size (A-/A+) ──────────────────────────────────────────────────────
   // Percentage applied to the lines container; shared key with the other readers.
   const [fontSize, setFontSize] = useState(() => {
@@ -110,7 +123,7 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
             >
               {config.renderSentence(s, { showPrimaryAid, showSecondaryAid })}
             </span>
-            {showTranslation && activeId === s.id && <div className="reader-core__translation" dir="auto">{s.translation}</div>}
+            {showTranslation && revealedId === s.id && <div className="reader-core__translation" dir="auto">{s.translation}</div>}
           </div>
         ))}
       </div>
