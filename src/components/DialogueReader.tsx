@@ -332,19 +332,18 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   const displaySentenceId = audioSentenceId ?? activeSentenceId;
   const activeSentence = displaySentenceId ? allSentences.find(s => s.id === displaySentenceId) : null;
 
-  // The per-line aid reveal is "sticky": it follows the active/playing line but
-  // does NOT clear when audio stops, so the last line's pinyin/translation stay
-  // visible after a tap or after Play All finishes. Drives BOTH the translation
-  // and pinyin per-line reveal. Reset only when both aids are off (so the next
-  // enable starts clean). Uses React's "adjust state during render" pattern so
-  // it never lags a frame or triggers an extra effect pass.
+  // The per-line aid reveal is "sticky": it follows the active/playing line and
+  // PERSISTS — it does not clear when audio stops or when an aid is toggled off.
+  // So toggling pinyin/translation back on while the same line is still active
+  // re-shows it for that line (each aid's own toggle gates whether it renders).
+  // Drives BOTH the translation and pinyin per-line reveal. Uses React's "adjust
+  // state during render" pattern so it never lags a frame.
   const [revealedId, setRevealedId] = useState<string | null>(null);
   const [prevDisplayId, setPrevDisplayId] = useState<string | null>(displaySentenceId);
   if (displaySentenceId !== prevDisplayId) {
     setPrevDisplayId(displaySentenceId);
     if (displaySentenceId) setRevealedId(displaySentenceId);
   }
-  if (!showTranslation && !showPinyin && revealedId !== null) setRevealedId(null);
 
   // When a tapped line's audio finishes, drop its highlight so the line
   // returns to its resting colour. We watch the per-sentence player for a
