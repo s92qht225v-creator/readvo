@@ -296,6 +296,11 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
     if (audioRef.current && isPlaying) { audioRef.current.pause(); setIsPlaying(false); setAudioActive(false); }
     const ready = s.audio_url ?? ttsUrls[s.id];
     if (ready) { sentenceAudio.play(s.id, ready); return; }
+    // No URL yet (TTS not prefetched — slow connection or first load): stop the
+    // current clip NOW so it doesn't keep playing while we resolve the new URL.
+    // A line that's actually playing always has a resolved URL, so it never
+    // reaches here — the tap-same-line toggle in play() is preserved.
+    sentenceAudio.stop();
     void resolveTtsUrl(s.text_original).then(url => {
       if (!url) return;
       setTtsUrls(prev => (prev[s.id] ? prev : { ...prev, [s.id]: url }));
