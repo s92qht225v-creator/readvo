@@ -53,7 +53,7 @@ export function PinyinTypeExercise({ card, language, onResult }: ExerciseProps) 
       <div className="fc-quiz__type">
         <input
           className={`fc-quiz__input ${result ? `fc-quiz__input--${result}` : ''}`}
-          type="text" inputMode="text" autoCapitalize="off" autoCorrect="off" autoComplete="off" spellCheck={false} autoFocus
+          type="text" inputMode="text" autoCapitalize="off" autoCorrect="off" autoComplete="off" spellCheck={false}
           placeholder={L('pinyin yozing…', 'введите пиньинь…', 'type the pinyin…', language)}
           value={value}
           disabled={!!result}
