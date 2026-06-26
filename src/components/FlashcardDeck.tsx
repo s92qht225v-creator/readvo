@@ -13,7 +13,7 @@ import type { ArabicGrade } from '../lib/arabicSrs';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
-import { MeaningChoiceExercise } from './flashcards/MeaningChoiceExercise';
+import { LadderExercise } from './flashcards/LadderExercise';
 import { trackAll } from '@/utils/analytics';
 import '@/styles/arabic.css';
 
@@ -159,7 +159,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
             <div className="ar-fc__progress"><div className="ar-fc__progress-bar" style={{ width: total ? `${(reviewed / total) * 100}%` : '0%' }} /></div>
             <div className="ar-fc__count">{queue.length} {t('qoldi', 'осталось', 'left')}</div>
 
-            <MeaningChoiceExercise
+            <LadderExercise
               key={cardId(card)}
               card={card}
               deck={deck.words}
