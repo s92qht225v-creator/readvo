@@ -110,7 +110,7 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
             >
               {config.renderSentence(s, { showPrimaryAid, showSecondaryAid })}
             </span>
-            {showTranslation && <div className="reader-core__translation" dir="auto">{s.translation}</div>}
+            {showTranslation && activeId === s.id && <div className="reader-core__translation" dir="auto">{s.translation}</div>}
           </div>
         ))}
       </div>
