@@ -12844,17 +12844,18 @@ body {
 .fc-quiz__prompt-meaning { font-size: 1.05em; color: #6b7177; text-align: center; }
 .fc-quiz__answer { text-align: center; font-size: 1.2em; font-weight: 600; color: #15803d; }
 
-/* Unscramble rung: tap toned-letter tiles into order. */
-.fc-scramble__built {
-  min-height: 56px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center;
-  padding: 10px; border: 1px dashed #d0d0d8; border-radius: 8px;
+/* Unscramble rung: scrambled letters act as a keyboard that types into a plain
+   text answer line (no box, no cursor); backspace returns letters to the keys. */
+.fc-kb__answer {
+  font-size: 1.7em; text-align: center; color: #1a1a2e; min-height: 1.4em;
+  padding-bottom: 8px; border-bottom: 2px solid #e0e0e6; letter-spacing: 0.05em; white-space: pre;
 }
-.fc-scramble__built--correct { border-color: #16a34a; background: #dcfce7; }
-.fc-scramble__built--wrong { border-color: #dc2626; background: #fee2e2; }
-.fc-scramble__placeholder { color: #aaa; font-size: 14px; }
-.fc-scramble__tray { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.fc-kb__answer--correct { color: #15803d; border-color: #16a34a; }
+.fc-kb__answer--wrong { color: #b91c1c; border-color: #dc2626; }
+.fc-kb__keys { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .fc-tile {
   min-width: 38px; padding: 10px 12px; border: 1px solid #e0e0e6; border-radius: 8px; background: #fff;
   font-family: inherit; font-size: 1.3em; color: #1a1a2e; cursor: pointer;
 }
-.fc-tile:disabled { cursor: default; }
+.fc-tile:disabled { cursor: default; opacity: 0.5; }
+.fc-tile--back { color: #6b7177; }

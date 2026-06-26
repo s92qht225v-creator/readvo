@@ -6,15 +6,17 @@ import type { Language } from '@/types/ui-state';
 import { shuffleArray } from '../../utils/shuffle';
 
 /**
- * Ladder rung — unscramble: show 汉字 + meaning, rebuild the pinyin from its
- * scrambled letters. Letters keep their tone marks (composed NFC, so ǐ/ā are
- * single tiles), so tones are tested by placement, no keyboard needed. Tap a
- * tray tile to place it, a placed tile to take it back; auto-checks when full.
+ * Ladder rung — unscramble: show 汉字 + meaning, rebuild the pinyin. The
+ * scrambled letters act as a "keyboard": tap a key and it types into a plain
+ * text answer line (no box, no cursor) and leaves the keyboard; backspace
+ * removes the last letter and returns it to the keyboard. Letters keep their
+ * tone marks (composed NFC → ǐ/ā are single keys), so tones come for free with
+ * no real keyboard. Auto-checks when the answer is full.
  */
 
 interface Tile { id: number; ch: string; }
 
-// Composed (so toned vowels are single chars) and stripped of spaces/apostrophes.
+// Composed (toned vowels are single chars) and stripped of spaces/apostrophes.
 const clean = (s: string) => s.normalize('NFC').replace(/[\s'·]/g, '');
 
 const meaningOf = (card: { text_translation: string; text_translation_ru?: string; text_translation_en?: string }, l: Language) =>
@@ -33,29 +35,27 @@ export function PinyinUnscrambleExercise({ card, language, onResult }: ExerciseP
   }, [card.id]);
 
   const byId = useMemo(() => new Map(tiles.map((t) => [t.id, t])), [tiles]);
-  const [placed, setPlaced] = useState<number[]>([]);
+  const [typed, setTyped] = useState<number[]>([]);
   const [result, setResult] = useState<null | 'correct' | 'wrong'>(null);
 
-  const tray = tiles.filter((t) => !placed.includes(t.id));
+  const keys = tiles.filter((t) => !typed.includes(t.id));
+  const answer = typed.map((id) => byId.get(id)!.ch).join('');
 
-  const place = (id: number) => {
+  const press = (id: number) => {
     if (result) return;
-    const next = [...placed, id];
-    setPlaced(next);
+    const next = [...typed, id];
+    setTyped(next);
     if (next.length === tiles.length) {
-      const built = next.map((i) => byId.get(i)!.ch).join('');
-      const ok = built === correct;
+      const ok = next.map((i) => byId.get(i)!.ch).join('') === correct;
       setResult(ok ? 'correct' : 'wrong');
       setTimeout(() => onResult(ok), ok ? 700 : 1500);
     }
   };
 
-  const take = (id: number) => {
-    if (result) return;
-    setPlaced(placed.filter((x) => x !== id));
+  const backspace = () => {
+    if (result || typed.length === 0) return;
+    setTyped(typed.slice(0, -1));
   };
-
-  const L = (uz: string, ru: string, en: string) => ({ uz, ru, en } as Record<string, string>)[language];
 
   return (
     <div className="fc-quiz">
@@ -64,21 +64,17 @@ export function PinyinUnscrambleExercise({ card, language, onResult }: ExerciseP
         <div className="fc-quiz__prompt-meaning">{meaning}</div>
       </div>
 
-      <div className={`fc-scramble__built ${result ? `fc-scramble__built--${result}` : ''}`}>
-        {placed.length === 0 && (
-          <span className="fc-scramble__placeholder">{L('harflarni tartibga soling', 'соберите по буквам', 'tap the letters in order')}</span>
-        )}
-        {placed.map((id) => (
-          <button key={id} type="button" className="fc-tile" onClick={() => take(id)} disabled={!!result}>{byId.get(id)!.ch}</button>
-        ))}
+      <div className={`fc-kb__answer ${result ? `fc-kb__answer--${result}` : ''}`}>
+        {answer || ' '}
       </div>
 
       {result === 'wrong' && <div className="fc-quiz__answer">{card.pinyin}</div>}
 
-      <div className="fc-scramble__tray">
-        {tray.map((t) => (
-          <button key={t.id} type="button" className="fc-tile" onClick={() => place(t.id)} disabled={!!result}>{t.ch}</button>
+      <div className="fc-kb__keys">
+        {keys.map((t) => (
+          <button key={t.id} type="button" className="fc-tile" onClick={() => press(t.id)} disabled={!!result}>{t.ch}</button>
         ))}
+        <button type="button" className="fc-tile fc-tile--back" onClick={backspace} disabled={!!result || typed.length === 0} aria-label="Backspace">⌫</button>
       </div>
     </div>
   );
