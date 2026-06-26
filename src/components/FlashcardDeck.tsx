@@ -43,6 +43,11 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
   const tokenRef = useRef<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const builtRef = useRef(false);
+  // Prefetched TTS URLs (by word id) for cards without recorded audio, so a tap
+  // can play synchronously inside the user gesture (mobile blocks play() after
+  // an await). Warmed on deck load.
+  const ttsUrlsRef = useRef<Record<string, string>>({});
+  const prefetchedRef = useRef(false);
   // Cards answered wrong at least once this session → when they're finally
   // gotten right they schedule sooner ('dontKnow') instead of 'know'.
   const missedRef = useRef<Set<string>>(new Set());
@@ -61,11 +66,31 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
   // (cached). Lets the listening rung work on every card even though recorded
   // audio is sparse for topic decks.
   const playCardAudio = useCallback(async (w: FlashcardWord) => {
-    if (w.audio_url) { playAudio(w.audio_url); return; }
+    // Synchronous path (recorded audio or already-prefetched TTS) keeps play()
+    // inside the user gesture so mobile doesn't block it.
+    const ready = w.audio_url ?? ttsUrlsRef.current[w.id];
+    if (ready) { playAudio(ready); return; }
     const url = await resolveTtsUrl(w.text_original);
-    if (url) playAudio(url);
+    if (url) { ttsUrlsRef.current[w.id] = url; playAudio(url); }
   }, [playAudio]);
   useEffect(() => () => { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } }, []);
+
+  // Warm TTS for words without recorded audio so the listening rung (and the 🔊
+  // on other rungs) plays instantly on tap. Sequential, once per deck.
+  useEffect(() => {
+    if (prefetchedRef.current || !deck.words.length) return;
+    prefetchedRef.current = true;
+    let cancelled = false;
+    (async () => {
+      for (const w of deck.words) {
+        if (w.audio_url || !w.text_original?.trim() || ttsUrlsRef.current[w.id]) continue;
+        const url = await resolveTtsUrl(w.text_original);
+        if (cancelled) return;
+        if (url) ttsUrlsRef.current[w.id] = url;
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [deck.words]);
 
   useEffect(() => {
     trackAll('ViewContent', 'flashcard_view', 'flashcard_view', {
