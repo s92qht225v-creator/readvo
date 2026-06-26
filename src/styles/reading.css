@@ -12836,6 +12836,7 @@ body {
 
 /* Type-the-pinyin rung. Input + revealed answer share the pinyin option size
    (1.2em) so answers look consistent across rungs. */
+.fc-quiz__prompt-meaning { font-size: 1.05em; color: #6b7177; text-align: center; }
 .fc-quiz__type { display: flex; flex-direction: column; gap: 12px; }
 .fc-quiz__input {
   width: 100%; padding: 14px 16px; border: 1px solid #e0e0e6; border-radius: 8px;

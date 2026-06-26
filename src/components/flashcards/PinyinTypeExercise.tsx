@@ -24,6 +24,9 @@ const L = (uz: string, ru: string, en: string, lang: Language) => ({ uz, ru, en 
 
 export function PinyinTypeExercise({ card, language, onResult }: ExerciseProps) {
   const correct = card.pinyin;
+  const meaning = language === 'ru' && card.text_translation_ru ? card.text_translation_ru
+    : language === 'en' && card.text_translation_en ? card.text_translation_en
+      : card.text_translation;
   const [value, setValue] = useState('');
   const [result, setResult] = useState<null | 'correct' | 'wrong'>(null);
 
@@ -44,6 +47,7 @@ export function PinyinTypeExercise({ card, language, onResult }: ExerciseProps) 
     <div className="fc-quiz">
       <div className="fc-quiz__prompt">
         <div lang="zh-Hans" className="fc-quiz__hanzi">{card.text_original}</div>
+        <div className="fc-quiz__prompt-meaning">{meaning}</div>
       </div>
 
       <div className="fc-quiz__type">
