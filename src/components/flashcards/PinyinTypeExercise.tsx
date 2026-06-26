@@ -30,17 +30,13 @@ export function PinyinTypeExercise({ card, language, onResult }: ExerciseProps) 
   const [value, setValue] = useState('');
   const [result, setResult] = useState<null | 'correct' | 'wrong'>(null);
 
+  // Check works even on an empty box: empty or wrong → reveal the answer and the
+  // card comes back this session (this replaces the old "skip" button).
   const submit = () => {
-    if (result || !value.trim()) return;
-    const ok = normPinyin(value) === normPinyin(correct);
+    if (result) return;
+    const ok = !!value.trim() && normPinyin(value) === normPinyin(correct);
     setResult(ok ? 'correct' : 'wrong');
     setTimeout(() => onResult(ok), ok ? 700 : 1500);
-  };
-
-  const skip = () => {
-    if (result) return;
-    setResult('wrong');
-    setTimeout(() => onResult(false), 1500);
   };
 
   return (
@@ -62,10 +58,7 @@ export function PinyinTypeExercise({ card, language, onResult }: ExerciseProps) 
         />
         {result === 'wrong' && <div className="fc-quiz__answer">{correct}</div>}
         <div className="fc-quiz__type-actions">
-          <button type="button" className="fc-quiz__skip" onClick={skip} disabled={!!result}>
-            {L('Bilmadim', 'Не знаю', 'Skip', language)}
-          </button>
-          <button type="button" className="fc-quiz__check" onClick={submit} disabled={!!result || !value.trim()}>
+          <button type="button" className="fc-quiz__check" onClick={submit} disabled={!!result}>
             {L('Tekshirish', 'Проверить', 'Check', language)}
           </button>
         </div>
