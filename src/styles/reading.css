@@ -2602,11 +2602,12 @@ body {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Once the user has adjusted the size, the pill fades to a faint, transparent
-   state when idle so it stops sitting on the text — still visible and tappable,
-   just out of the way. The :hover rule above still reveals it fully on desktop. */
+/* After the user adjusts size, return to the transparent idle chrome
+   (no white pill), while keeping controls clearly visible/tappable. */
 .dr-font-controls--idle {
-  opacity: 0.2;
+  opacity: 0.65;
+  background: transparent;
+  box-shadow: none;
 }
 
 .dr-font-divider {
