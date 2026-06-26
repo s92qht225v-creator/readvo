@@ -38,7 +38,7 @@ export function PinyinUnscrambleExercise({ card, language, onResult }: ExerciseP
   const [typed, setTyped] = useState<number[]>([]);
   const [result, setResult] = useState<null | 'correct' | 'wrong'>(null);
 
-  const keys = tiles.filter((t) => !typed.includes(t.id));
+  const used = new Set(typed);
   const answer = typed.map((id) => byId.get(id)!.ch).join('');
 
   const press = (id: number) => {
@@ -71,8 +71,16 @@ export function PinyinUnscrambleExercise({ card, language, onResult }: ExerciseP
       {result === 'wrong' && <div className="fc-quiz__answer">{card.pinyin}</div>}
 
       <div className="fc-kb__keys">
-        {keys.map((t) => (
-          <button key={t.id} type="button" className="fc-tile" onClick={() => press(t.id)} disabled={!!result}>{t.ch}</button>
+        {tiles.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            className={`fc-tile ${used.has(t.id) ? 'fc-tile--used' : ''}`}
+            onClick={() => press(t.id)}
+            disabled={used.has(t.id) || !!result}
+          >
+            {t.ch}
+          </button>
         ))}
         <button type="button" className="fc-tile fc-tile--back" onClick={backspace} disabled={!!result || typed.length === 0} aria-label="Backspace">⌫</button>
       </div>
