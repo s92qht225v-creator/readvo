@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 import { getUserIdFromJWT } from '@/lib/jwt';
-import { newCardState, schedule, type CardState, type Grade } from '@/lib/srs';
+import { scheduleArabic, type ArabicGrade } from '@/lib/arabicSrs';
 
 /**
  * Flashcard spaced-repetition review API.
@@ -38,9 +38,10 @@ export async function GET(request: NextRequest) {
   return NextResponse.json({ reviews: data });
 }
 
-const GRADES = new Set<Grade>(['again', 'good', 'easy']);
+const GRADES = new Set<ArabicGrade>(['know', 'dontKnow']);
 
-/** POST: grade a card → schedule + persist. Body: { card_id, grade }. */
+/** POST: grade a card with the shared 2-grade scheduler → schedule + persist.
+ *  Body: { card_id, grade: 'know' | 'dontKnow' }. */
 export async function POST(request: NextRequest) {
   const userId = userIdFrom(request);
   if (!userId) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
@@ -53,24 +54,22 @@ export async function POST(request: NextRequest) {
   const admin = getSupabaseAdmin();
   const { data: existing } = await admin
     .from('flashcard_reviews')
-    .select('ease, interval_days, reps, lapses, due_at')
+    .select('interval_days, reps')
     .eq('user_id', userId)
     .eq('card_id', card_id)
     .maybeSingle();
 
   const now = new Date();
-  const prev: CardState = existing
-    ? { reps: existing.reps, lapses: existing.lapses, ease: existing.ease, intervalDays: existing.interval_days, dueAt: existing.due_at }
-    : newCardState(now);
-  const next = schedule(prev, grade as Grade, now);
+  const prev = existing ? { intervalDays: existing.interval_days, reps: existing.reps } : null;
+  const next = scheduleArabic(prev, grade as ArabicGrade, now);
 
   const { error } = await admin.from('flashcard_reviews').upsert({
     user_id: userId,
     card_id,
-    ease: next.ease,
+    ease: 2.5,          // unused by the 2-grade scheduler; column is shared
     interval_days: next.intervalDays,
     reps: next.reps,
-    lapses: next.lapses,
+    lapses: 0,
     due_at: next.dueAt,
     last_grade: grade,
     updated_at: now.toISOString(),

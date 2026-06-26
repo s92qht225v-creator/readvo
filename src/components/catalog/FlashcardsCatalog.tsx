@@ -46,21 +46,27 @@ export function FlashcardsCatalog() {
   const [language] = useLanguage();
   const [topicSearch, setTopicSearch] = useState('');
 
-  // "Due today" summary — count the user's flashcard review states that are due.
+  // Which topics have at least one card due for repeat now → show a green dot
+  // (card_id = `topic-{slug}:{wordId}`).
   const { getAccessToken } = useAuth();
-  const [dueCount, setDueCount] = useState<number | null>(null);
+  const [dueTopics, setDueTopics] = useState<Set<string>>(new Set());
   useEffect(() => {
     let cancelled = false;
     (async () => {
       const token = await getAccessToken();
       if (!token || cancelled) return;
       try {
-        const res = await fetch('/api/flashcards/reviews', { headers: { Authorization: `Bearer ${token}` } });
-        const data = await res.json();
-        if (cancelled) return;
+        const res = await fetch('/api/flashcards/reviews?prefix=topic-', { headers: { Authorization: `Bearer ${token}` } });
+        if (!res.ok || cancelled) return;
         const now = Date.now();
-        const due = (data.reviews ?? []).filter((r: { due_at: string }) => new Date(r.due_at).getTime() <= now).length;
-        setDueCount(due);
+        const due = new Set<string>();
+        for (const r of ((await res.json()).reviews ?? []) as { card_id: string; due_at: string }[]) {
+          if (new Date(r.due_at).getTime() <= now) {
+            const slug = r.card_id.split(':')[0].replace(/^topic-/, '');
+            if (slug) due.add(slug);
+          }
+        }
+        if (!cancelled) setDueTopics(due);
       } catch { /* ignore */ }
     })();
     return () => { cancelled = true; };
@@ -90,25 +96,6 @@ export function FlashcardsCatalog() {
     <main className="home">
       <CatalogHeader currentTab="flashcards" />
 
-      {dueCount != null && dueCount > 0 && (
-        <div style={{ maxWidth: 520, margin: '12px auto 0', padding: '0 16px' }}>
-          <div style={{
-            display: 'flex', alignItems: 'center', gap: 10,
-            background: '#dcfce7', border: '1px solid #86efac', borderRadius: 6,
-            padding: '10px 14px', color: '#15803d', fontSize: 14, fontWeight: 600,
-          }}>
-            <span style={{ fontSize: 18 }}>🔁</span>
-            <span>
-              {({
-                uz: `Bugun takrorlash uchun ${dueCount} ta karta tayyor`,
-                ru: `${dueCount} карточек готовы к повторению`,
-                en: `${dueCount} cards due for review today`,
-              } as Record<string, string>)[language]}
-            </span>
-          </div>
-        </div>
-      )}
-
       <section className="home__content">
         <div className="dialogues__search">
           <svg className="dialogues__search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -130,12 +117,17 @@ export function FlashcardsCatalog() {
               href={`/chinese/flashcards/topics/${topic.slug}`}
               prefetch={false}
               style={{
+                position: 'relative',
                 background: '#fff', borderRadius: 10, padding: '14px',
                 boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
                 display: 'flex', alignItems: 'center', gap: 10,
                 textDecoration: 'none', color: 'inherit',
               }}
             >
+              {dueTopics.has(topic.slug) && (
+                <span aria-label={({ uz: 'Takrorlash vaqti', ru: 'Пора повторить', en: 'Due for review' } as Record<string, string>)[language]}
+                  style={{ position: 'absolute', top: 8, insetInlineEnd: 8, width: 9, height: 9, borderRadius: '50%', background: '#16a34a', boxShadow: '0 0 0 3px rgba(22,163,74,0.18)' }} />
+              )}
               <span style={{ fontSize: 22 }}>{topic.icon}</span>
               <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e' }}>
                 {(topic as Record<string, string>)[language] ?? topic.uz}
