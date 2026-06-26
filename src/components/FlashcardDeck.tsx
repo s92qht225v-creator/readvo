@@ -56,32 +56,50 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
 
   usePrimeAudioToken();
 
-  // Resolves once the clip actually starts playing (or fails / times out), so
-  // callers can show a loading spinner until then.
-  const playAudio = useCallback((url: string) => {
+  // Last-resort fallback: browser speech. Works inside a tap gesture without an
+  // awaited URL, so a tap always makes sound even if the network/audio fails.
+  const speak = useCallback((text: string) => {
+    try {
+      const synth = typeof window !== 'undefined' ? window.speechSynthesis : null;
+      if (!synth) return;
+      synth.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'zh-CN';
+      u.rate = 0.9;
+      synth.speak(u);
+    } catch { /* ignore */ }
+  }, []);
+
+  // Try to play a URL. Resolves true once it actually plays, false on error /
+  // autoplay-block / timeout (and pauses the element so it can't sneak in after
+  // a fallback). Callers await this to drive the loading spinner.
+  const playUrl = useCallback((url: string) => new Promise<boolean>((resolve) => {
     if (audioRef.current) audioRef.current.pause();
     const el = new Audio(protectAudioUrlSync(url));
     audioRef.current = el;
-    return new Promise<void>((resolve) => {
-      let done = false;
-      const finish = () => { if (!done) { done = true; resolve(); } };
-      el.onplaying = finish;
-      el.onerror = finish;
-      el.play().catch(finish);
-      setTimeout(finish, 6000);
-    });
-  }, []);
-  // Play a card's audio: recorded `audio_url` when present, otherwise MiMo TTS
-  // (cached). Lets the listening rung work on every card even though recorded
-  // audio is sparse for topic decks.
+    let done = false;
+    const finish = (ok: boolean) => { if (done) return; done = true; if (!ok) el.pause(); resolve(ok); };
+    el.onplaying = () => finish(true);
+    el.onerror = () => finish(false);
+    el.play().catch(() => finish(false));
+    setTimeout(() => finish(false), 6000);
+  }), []);
+
+  // Fail-proof card audio: recorded audio / prefetched TTS → on any failure,
+  // browser speech. Keeps play() in the tap gesture so mobile can't block it.
   const playCardAudio = useCallback(async (w: FlashcardWord) => {
-    // Synchronous path (recorded audio or already-prefetched TTS) keeps play()
-    // inside the user gesture so mobile doesn't block it.
     const ready = w.audio_url ?? ttsUrlsRef.current[w.id];
-    if (ready) { await playAudio(ready); return; }
-    const url = await resolveTtsUrl(w.text_original);
-    if (url) { ttsUrlsRef.current[w.id] = url; await playAudio(url); }
-  }, [playAudio]);
+    if (ready) {
+      if (await playUrl(ready)) return;
+      speak(w.text_original);
+      return;
+    }
+    // No ready URL yet: speak now (in the gesture), resolve MiMo TTS in the
+    // background so the next play uses the better audio.
+    if (audioRef.current) audioRef.current.pause();
+    speak(w.text_original);
+    void resolveTtsUrl(w.text_original).then((url) => { if (url) ttsUrlsRef.current[w.id] = url; });
+  }, [playUrl, speak]);
   useEffect(() => () => { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } }, []);
 
   // Warm TTS for words without recorded audio so the listening rung (and the 🔊
