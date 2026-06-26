@@ -9,6 +9,7 @@ import { useAuth } from '../hooks/useAuth';
 import { useTrial } from '../hooks/useTrial';
 import { usePrimeAudioToken } from '../hooks/useAudioToken';
 import { protectAudioUrlSync } from '../lib/audio/token-client';
+import { resolveTtsUrl } from '@/utils/ttsAudio';
 import type { ArabicGrade } from '../lib/arabicSrs';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
@@ -56,6 +57,14 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
     audioRef.current = el;
     el.play().catch(() => {});
   }, []);
+  // Play a card's audio: recorded `audio_url` when present, otherwise MiMo TTS
+  // (cached). Lets the listening rung work on every card even though recorded
+  // audio is sparse for topic decks.
+  const playCardAudio = useCallback(async (w: FlashcardWord) => {
+    if (w.audio_url) { playAudio(w.audio_url); return; }
+    const url = await resolveTtsUrl(w.text_original);
+    if (url) playAudio(url);
+  }, [playAudio]);
   useEffect(() => () => { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } }, []);
 
   useEffect(() => {
@@ -165,7 +174,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
               deck={deck.words}
               language={language}
               showPinyin={isPinyinVisible}
-              onAudio={() => { if (card.audio_url) playAudio(card.audio_url); }}
+              onAudio={() => playCardAudio(card)}
               onResult={onResult}
             />
 

@@ -12830,6 +12830,12 @@ body {
 .fc-quiz__option:disabled { cursor: default; }
 .fc-quiz__option--correct { background: #dcfce7; border-color: #16a34a; color: #15803d; }
 .fc-quiz__option--wrong { background: #fee2e2; border-color: #dc2626; color: #b91c1c; }
+/* Listening rung: big play button as the prompt. */
+.fc-quiz__bigplay {
+  width: 84px; height: 84px; border-radius: 50%; border: none; padding-left: 4px;
+  background: #dc2626; color: #fff; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(220, 38, 38, 0.3);
+}
 /* Reverse direction (meaning → pinyin): prompt is the meaning, options are pinyin. */
 .fc-quiz__meaning { font-size: 1.6em; font-weight: 600; color: #1a1a2e; text-align: center; line-height: 1.25; }
 .fc-quiz__option--pinyin { font-size: 1.2em; }
