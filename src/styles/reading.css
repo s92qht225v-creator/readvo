@@ -2572,8 +2572,7 @@ body {
 
 .dr-font-controls {
   position: fixed;
-  left: 16px;
-  right: auto;
+  right: 16px;
   top: 58%;
   transform: translateY(-50%);
   display: flex;
