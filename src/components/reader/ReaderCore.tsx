@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import '@/styles/arabic.css';
-import { useAudioPlayer } from '@/hooks/useAudioPlayer';
+import { useAudioPlayer, stopAllAudio } from '@/hooks/useAudioPlayer';
 import type { ScriptConfig, ReaderSentence } from '@/lib/reader/scriptConfig';
 
 interface ReaderCoreProps {
@@ -19,6 +19,12 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
   const [showTranslation, setShowTranslation] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
   const { play, stop } = useAudioPlayer();
+
+  // Stop the shared (singleton) tap player when the reader unmounts —
+  // client-side navigation doesn't fire `beforeunload`, so otherwise a
+  // tapped line keeps playing on the next page. (The "play all" sequence
+  // uses its own <Audio> element, cleaned up by the effect below.)
+  useEffect(() => () => { stopAllAudio(); }, []);
 
   // The translation reveal is "sticky": it follows the active/playing line but
   // does NOT clear when audio stops, so the last line's translation stays

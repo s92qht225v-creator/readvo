@@ -8,7 +8,7 @@ import { DialoguePreviewBody } from './DialoguePreviewBody';
 import { BannerMenu } from './BannerMenu';
 import { Paywall } from './Paywall';
 import type { DialoguePreviewData } from './dialoguePreview.types';
-import { useAudioPlayer } from '../hooks/useAudioPlayer';
+import { useAudioPlayer, stopAllAudio } from '../hooks/useAudioPlayer';
 import { protectAudioUrlSync } from '../lib/audio/token-client';
 import { resolveTtsUrl } from '../utils/ttsAudio';
 import { RubyText } from './RubyText';
@@ -147,6 +147,13 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
   const sentenceAudio = useAudioPlayer();
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Stop the shared (singleton) sentence player when the reader unmounts.
+  // Client-side navigation away from the page does not fire `beforeunload`,
+  // so without this the tapped-line audio keeps playing on the next page.
+  // The full-track / TTS-sequence players are <Audio> elements cleaned up by
+  // their own effects; only the global tap player needs this.
+  useEffect(() => () => { stopAllAudio(); }, []);
   const firstLineRef = useRef<HTMLDivElement | null>(null);
   const translationBtnRef = useRef<HTMLButtonElement | null>(null);
   const focusBtnRef = useRef<HTMLButtonElement | null>(null);
