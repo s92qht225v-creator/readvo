@@ -5,12 +5,12 @@
 .reader-core__speaker { font-weight: 700; color: var(--color-accent, #dc2626); margin-inline-end: 6px; }
 .reader-core__sentence { cursor: pointer; line-height: 2.2; }
 .reader-core__sentence--active { color: var(--color-accent, #dc2626); }
-.reader-core__translation { color: #666; font-style: italic; margin-block-start: 4px; }
+.reader-core__translation { color: #666; font-style: italic; margin-block-start: 4px; font-size: 0.8em; }
 
 /* Arabic script specifics */
 .reader-core--arabic { direction: rtl; text-align: right; font-family: var(--font-arabic), serif; }
 .reader-core--arabic .ar-text { font-size: 1.6em; }
-.reader-core--arabic .ar-translit { display: block; font-family: var(--font-pinyin), sans-serif; font-size: 0.85em; color: #888; font-style: italic; }
+.reader-core--arabic .ar-translit { display: block; font-family: var(--font-pinyin), sans-serif; font-size: 0.7em; color: #888; font-style: italic; }
 
 /* Chinese proof config (used only in dev/proof, not the live reader) */
 .reader-core--chinese { direction: ltr; }

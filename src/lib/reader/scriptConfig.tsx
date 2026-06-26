@@ -39,10 +39,10 @@ export const arabicScriptConfig: ScriptConfig = {
   secondaryAidLabel: 'Translit',
   renderSentence: (s, { showPrimaryAid, showSecondaryAid }) => (
     <span className="ar-sentence">
-      <span className="ar-text">{showPrimaryAid ? s.text : stripHarakat(s.text)}</span>
       {showSecondaryAid && s.translit && (
         <span className="ar-translit" dir="ltr">{s.translit}</span>
       )}
+      <span className="ar-text">{showPrimaryAid ? s.text : stripHarakat(s.text)}</span>
     </span>
   ),
 };
