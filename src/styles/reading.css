@@ -2579,34 +2579,34 @@ body {
   flex-direction: column;
   gap: 0;
   z-index: 89;
-  background: transparent;
+  background-color: transparent;
   border-radius: 999px;
   box-shadow: none;
   padding: 6px 4px;
   /* Touch devices don't get the :hover reveal, so keep the pill discoverable. */
   opacity: 0.65;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 @media (hover: hover) {
   .dr-font-controls:hover {
     opacity: 1;
-    background: #fff;
+    background-color: #fff;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   }
 }
 
 .dr-font-controls--active {
   opacity: 1;
-  background: #fff;
+  background-color: #fff;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* After the user adjusts size, return to the transparent idle chrome
    (no white pill), while keeping controls clearly visible/tappable. */
-.dr-font-controls--idle {
+.dr-font-controls.dr-font-controls--idle {
   opacity: 0.65;
-  background: transparent;
+  background-color: transparent;
   box-shadow: none;
 }
 
