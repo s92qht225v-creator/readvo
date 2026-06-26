@@ -51,8 +51,10 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
   });
   useEffect(() => { localStorage.setItem('readvo-font-size', String(fontSize)); }, [fontSize]);
   const [fontActive, setFontActive] = useState(false);
+  const [fontEngaged, setFontEngaged] = useState(false);
   const fontTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const flashFont = useCallback(() => {
+    setFontEngaged(true);
     setFontActive(true);
     if (fontTimerRef.current) clearTimeout(fontTimerRef.current);
     fontTimerRef.current = setTimeout(() => setFontActive(false), 1500);
@@ -135,7 +137,7 @@ export function ReaderCore({ config, sentences, resolveAudio, labels, fabExtra }
         ))}
       </div>
 
-      <div className={`dr-font-controls${fontActive ? ' dr-font-controls--active' : ''}`}>
+      <div className={`dr-font-controls${fontActive ? ' dr-font-controls--active' : ''}${fontEngaged && !fontActive ? ' dr-font-controls--idle' : ''}`}>
         <button className="dr-font-btn" onClick={() => { setFontSize((s) => Math.min(s + 10, 160)); flashFont(); }} type="button" aria-label="Increase font size">A+</button>
         <div className="dr-font-divider" />
         <button className="dr-font-btn" onClick={() => { setFontSize((s) => Math.max(s - 10, 80)); flashFont(); }} type="button" aria-label="Decrease font size">A-</button>

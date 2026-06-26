@@ -159,6 +159,17 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   const focusBtnRef = useRef<HTMLButtonElement | null>(null);
   const pinyinBtnRef = useRef<HTMLButtonElement | null>(null);
   const fontControlsRef = useRef<HTMLDivElement | null>(null);
+  // Font pill: flash visible on adjust, then fade fully out when idle (once the
+  // user has used it at least once — keeps it discoverable until then).
+  const [fontActive, setFontActive] = useState(false);
+  const [fontEngaged, setFontEngaged] = useState(false);
+  const fontTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const flashFont = useCallback(() => {
+    setFontEngaged(true);
+    setFontActive(true);
+    if (fontTimerRef.current) clearTimeout(fontTimerRef.current);
+    fontTimerRef.current = setTimeout(() => setFontActive(false), 1500);
+  }, []);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isAudioLoading, setIsAudioLoading] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -690,10 +701,10 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                   </div>
                 </nav>
 
-                <div ref={fontControlsRef} className="dr-font-controls">
-                  <button className="dr-font-btn" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
+                <div ref={fontControlsRef} className={`dr-font-controls${fontActive ? ' dr-font-controls--active' : ''}${fontEngaged && !fontActive ? ' dr-font-controls--idle' : ''}`}>
+                  <button className="dr-font-btn" onClick={() => { setFontSize(s => Math.min(s + 10, 150)); flashFont(); }} type="button">A+</button>
                   <div className="dr-font-divider" />
-                  <button className="dr-font-btn" onClick={() => setFontSize(s => Math.max(s - 10, 80))} type="button">A-</button>
+                  <button className="dr-font-btn" onClick={() => { setFontSize(s => Math.max(s - 10, 80)); flashFont(); }} type="button">A-</button>
                 </div>
               </>
             )}

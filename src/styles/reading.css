@@ -2602,6 +2602,13 @@ body {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Once the user has adjusted the size, the pill fades fully out when idle so it
+   stops sitting on the text. It stays tappable (opacity 0 keeps pointer events)
+   and the :hover rule above still reveals it on desktop. */
+.dr-font-controls--idle {
+  opacity: 0;
+}
+
 .dr-font-divider {
   height: 1px;
   background: transparent;
