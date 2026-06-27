@@ -7,14 +7,6 @@
   "words": [
     {
       "id": "tp-col-01",
-      "text_original": "颜色",
-      "pinyin": "yánsè",
-      "text_translation": "rang",
-      "text_translation_ru": "цвет",
-      "text_translation_en": "color"
-    },
-    {
-      "id": "tp-col-02",
       "text_original": "红色",
       "pinyin": "hóngsè",
       "text_translation": "qizil",
@@ -22,12 +14,20 @@
       "text_translation_en": "red"
     },
     {
+      "id": "tp-col-02",
+      "text_original": "橙色",
+      "pinyin": "chéngsè",
+      "text_translation": "to'q sariq",
+      "text_translation_ru": "оранжевый",
+      "text_translation_en": "orange"
+    },
+    {
       "id": "tp-col-03",
-      "text_original": "蓝色",
-      "pinyin": "lánsè",
-      "text_translation": "ko'k (moviy)",
-      "text_translation_ru": "синий; голубой",
-      "text_translation_en": "blue"
+      "text_original": "黄色",
+      "pinyin": "huángsè",
+      "text_translation": "sariq",
+      "text_translation_ru": "жёлтый",
+      "text_translation_en": "yellow"
     },
     {
       "id": "tp-col-04",
@@ -39,38 +39,22 @@
     },
     {
       "id": "tp-col-05",
-      "text_original": "黄色",
-      "pinyin": "huángsè",
-      "text_translation": "sariq",
-      "text_translation_ru": "жёлтый",
-      "text_translation_en": "yellow"
+      "text_original": "蓝色",
+      "pinyin": "lánsè",
+      "text_translation": "ko'k",
+      "text_translation_ru": "синий",
+      "text_translation_en": "blue"
     },
     {
       "id": "tp-col-06",
-      "text_original": "白色",
-      "pinyin": "báisè",
-      "text_translation": "oq",
-      "text_translation_ru": "белый",
-      "text_translation_en": "white"
+      "text_original": "紫色",
+      "pinyin": "zǐsè",
+      "text_translation": "binafsha",
+      "text_translation_ru": "фиолетовый",
+      "text_translation_en": "purple"
     },
     {
       "id": "tp-col-07",
-      "text_original": "黑色",
-      "pinyin": "hēisè",
-      "text_translation": "qora",
-      "text_translation_ru": "чёрный",
-      "text_translation_en": "black"
-    },
-    {
-      "id": "tp-col-08",
-      "text_original": "橙色",
-      "pinyin": "chéngsè",
-      "text_translation": "to'q sariq; apelsin rangi",
-      "text_translation_ru": "оранжевый",
-      "text_translation_en": "orange"
-    },
-    {
-      "id": "tp-col-09",
       "text_original": "粉色",
       "pinyin": "fěnsè",
       "text_translation": "pushti",
@@ -78,12 +62,28 @@
       "text_translation_en": "pink"
     },
     {
+      "id": "tp-col-08",
+      "text_original": "棕色",
+      "pinyin": "zōngsè",
+      "text_translation": "jigarrang",
+      "text_translation_ru": "коричневый",
+      "text_translation_en": "brown"
+    },
+    {
+      "id": "tp-col-09",
+      "text_original": "黑色",
+      "pinyin": "hēisè",
+      "text_translation": "qora",
+      "text_translation_ru": "чёрный",
+      "text_translation_en": "black"
+    },
+    {
       "id": "tp-col-10",
-      "text_original": "紫色",
-      "pinyin": "zǐsè",
-      "text_translation": "binafsha",
-      "text_translation_ru": "фиолетовый",
-      "text_translation_en": "purple"
+      "text_original": "白色",
+      "pinyin": "báisè",
+      "text_translation": "oq",
+      "text_translation_ru": "белый",
+      "text_translation_en": "white"
     },
     {
       "id": "tp-col-11",
@@ -95,59 +95,35 @@
     },
     {
       "id": "tp-col-12",
-      "text_original": "棕色",
-      "pinyin": "zōngsè",
-      "text_translation": "jigarrang",
-      "text_translation_ru": "коричневый",
-      "text_translation_en": "brown"
+      "text_original": "金色",
+      "pinyin": "jīnsè",
+      "text_translation": "oltin rang",
+      "text_translation_ru": "золотой",
+      "text_translation_en": "gold"
     },
     {
       "id": "tp-col-13",
-      "text_original": "红",
-      "pinyin": "hóng",
-      "text_translation": "qizil (rang sifati)",
-      "text_translation_ru": "красный (прил.)",
-      "text_translation_en": "red (adj.)"
+      "text_original": "银色",
+      "pinyin": "yínsè",
+      "text_translation": "kumush rang",
+      "text_translation_ru": "серебряный",
+      "text_translation_en": "silver"
     },
     {
       "id": "tp-col-14",
-      "text_original": "蓝",
-      "pinyin": "lán",
-      "text_translation": "ko'k (rang sifati)",
-      "text_translation_ru": "синий (прил.)",
-      "text_translation_en": "blue (adj.)"
+      "text_original": "米色",
+      "pinyin": "mǐsè",
+      "text_translation": "bej rang; krem rang",
+      "text_translation_ru": "бежевый",
+      "text_translation_en": "beige; cream"
     },
     {
       "id": "tp-col-15",
-      "text_original": "绿",
-      "pinyin": "lǜ",
-      "text_translation": "yashil (rang sifati)",
-      "text_translation_ru": "зелёный (прил.)",
-      "text_translation_en": "green (adj.)"
-    },
-    {
-      "id": "tp-col-16",
-      "text_original": "黄",
-      "pinyin": "huáng",
-      "text_translation": "sariq (rang sifati)",
-      "text_translation_ru": "жёлтый (прил.)",
-      "text_translation_en": "yellow (adj.)"
-    },
-    {
-      "id": "tp-col-17",
-      "text_original": "白",
-      "pinyin": "bái",
-      "text_translation": "oq (rang sifati)",
-      "text_translation_ru": "белый (прил.)",
-      "text_translation_en": "white (adj.)"
-    },
-    {
-      "id": "tp-col-18",
-      "text_original": "黑",
-      "pinyin": "hēi",
-      "text_translation": "qora (rang sifati)",
-      "text_translation_ru": "чёрный (прил.)",
-      "text_translation_en": "black (adj.)"
+      "text_original": "咖啡色",
+      "pinyin": "kāfēisè",
+      "text_translation": "qahva rang",
+      "text_translation_ru": "кофейный",
+      "text_translation_en": "coffee; brown"
     }
   ],
   "title_en": "Colors"
