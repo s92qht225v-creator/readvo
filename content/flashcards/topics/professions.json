@@ -9,18 +9,16 @@
       "id": "tp-prof-01",
       "text_original": "老师",
       "pinyin": "lǎoshī",
-      "text_translation": "o'qituvchi; muallim",
-      "text_translation_ru": "учитель; преподаватель",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/laoshi.mp3",
+      "text_translation": "o'qituvchi",
+      "text_translation_ru": "учитель",
       "text_translation_en": "teacher"
     },
     {
       "id": "tp-prof-02",
       "text_original": "学生",
       "pinyin": "xuésheng",
-      "text_translation": "talaba; o'quvchi",
-      "text_translation_ru": "студент; ученик",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%201-1/xuesheng.mp3",
+      "text_translation": "o'quvchi; talaba",
+      "text_translation_ru": "ученик; студент",
       "text_translation_en": "student"
     },
     {
@@ -28,8 +26,7 @@
       "text_original": "医生",
       "pinyin": "yīshēng",
       "text_translation": "shifokor; doktor",
-      "text_translation_ru": "врач; доктор",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2012-1/yisheng.mp3",
+      "text_translation_ru": "врач",
       "text_translation_en": "doctor"
     },
     {
@@ -42,30 +39,38 @@
     },
     {
       "id": "tp-prof-05",
-      "text_original": "工人",
-      "pinyin": "gōngrén",
-      "text_translation": "ishchi",
-      "text_translation_ru": "рабочий",
-      "text_translation_en": "worker"
+      "text_original": "律师",
+      "pinyin": "lǜshī",
+      "text_translation": "advokat; yurist",
+      "text_translation_ru": "адвокат; юрист",
+      "text_translation_en": "lawyer"
     },
     {
       "id": "tp-prof-06",
-      "text_original": "司机",
-      "pinyin": "sījī",
-      "text_translation": "haydovchi",
-      "text_translation_ru": "водитель; шофёр",
-      "text_translation_en": "driver"
+      "text_original": "会计",
+      "pinyin": "kuàijì",
+      "text_translation": "buxgalter",
+      "text_translation_ru": "бухгалтер",
+      "text_translation_en": "accountant"
     },
     {
       "id": "tp-prof-07",
-      "text_original": "厨师",
-      "pinyin": "chúshī",
-      "text_translation": "oshpaz",
-      "text_translation_ru": "повар; кулинар",
-      "text_translation_en": "chef; cook"
+      "text_original": "经理",
+      "pinyin": "jīnglǐ",
+      "text_translation": "menejer; boshqaruvchi",
+      "text_translation_ru": "менеджер; управляющий",
+      "text_translation_en": "manager"
     },
     {
       "id": "tp-prof-08",
+      "text_original": "司机",
+      "pinyin": "sījī",
+      "text_translation": "haydovchi",
+      "text_translation_ru": "водитель",
+      "text_translation_en": "driver"
+    },
+    {
+      "id": "tp-prof-09",
       "text_original": "警察",
       "pinyin": "jǐngchá",
       "text_translation": "politsiyachi",
@@ -73,70 +78,36 @@
       "text_translation_en": "police officer"
     },
     {
-      "id": "tp-prof-09",
-      "text_original": "商人",
-      "pinyin": "shāngrén",
-      "text_translation": "tadbirkor; savdogar",
-      "text_translation_ru": "бизнесмен; торговец",
-      "text_translation_en": "businessman; merchant"
-    },
-    {
       "id": "tp-prof-10",
-      "text_original": "服务员",
-      "pinyin": "fúwùyuán",
-      "text_translation": "ofitsiant; xizmatchi",
-      "text_translation_ru": "официант; обслуживающий персонал",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%2011-3/fuwuyuan.mp3",
-      "text_translation_en": "waiter; attendant"
+      "text_original": "厨师",
+      "pinyin": "chúshī",
+      "text_translation": "oshpaz",
+      "text_translation_ru": "повар",
+      "text_translation_en": "chef; cook"
     },
     {
       "id": "tp-prof-11",
-      "text_original": "记者",
-      "pinyin": "jìzhě",
-      "text_translation": "jurnalist",
-      "text_translation_ru": "журналист",
-      "text_translation_en": "journalist; reporter"
+      "text_original": "歌手",
+      "pinyin": "gēshǒu",
+      "text_translation": "qo'shiqchi",
+      "text_translation_ru": "певец",
+      "text_translation_en": "singer"
     },
     {
       "id": "tp-prof-12",
-      "text_original": "运动员",
-      "pinyin": "yùndòngyuán",
-      "text_translation": "sportchi",
-      "text_translation_ru": "спортсмен",
-      "text_translation_en": "athlete"
+      "text_original": "演员",
+      "pinyin": "yǎnyuán",
+      "text_translation": "aktyor; artist",
+      "text_translation_ru": "актёр; артист",
+      "text_translation_en": "actor; performer"
     },
     {
       "id": "tp-prof-13",
-      "text_original": "演员",
-      "pinyin": "yǎnyuán",
-      "text_translation": "aktyor",
-      "text_translation_ru": "актёр; актриса",
-      "text_translation_en": "actor; actress"
-    },
-    {
-      "id": "tp-prof-14",
-      "text_original": "律师",
-      "pinyin": "lǜshī",
-      "text_translation": "advokat; huquqshunos",
-      "text_translation_ru": "адвокат; юрист",
-      "text_translation_en": "lawyer"
-    },
-    {
-      "id": "tp-prof-15",
-      "text_original": "工作",
-      "pinyin": "gōngzuò",
-      "text_translation": "ish; ishlamoq",
-      "text_translation_ru": "работа; работать",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/HSK%203-1/gongzuo.mp3",
-      "text_translation_en": "to work"
-    },
-    {
-      "id": "tp-prof-16",
-      "text_original": "职业",
-      "pinyin": "zhíyè",
-      "text_translation": "kasb; mutaxassislik",
-      "text_translation_ru": "профессия; специальность",
-      "text_translation_en": "profession; occupation"
+      "text_original": "服务员",
+      "pinyin": "fúwùyuán",
+      "text_translation": "ofitsiant; xizmat ko'rsatuvchi",
+      "text_translation_ru": "официант; обслуживающий персонал",
+      "text_translation_en": "waiter; waitress; service staff"
     }
   ],
   "title_en": "Professions"
