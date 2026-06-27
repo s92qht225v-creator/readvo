@@ -53,8 +53,11 @@ export function playCorrect() {
 
 export function playWrong() {
   if (muted) return;
-  tone(196, 0, 0.2, 'sine', 0.18);
-  tone(146, 0.06, 0.24, 'sine', 0.14);
+  // "Uh-oh" two-note (loud + fuller): two triangle notes with a low sine body.
+  tone(330, 0, 0.17, 'triangle', 0.27);
+  tone(165, 0, 0.17, 'sine', 0.14);
+  tone(262, 0.15, 0.28, 'triangle', 0.29);
+  tone(131, 0.15, 0.28, 'sine', 0.14);
 }
 
 export function playComplete() {
