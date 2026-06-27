@@ -128,7 +128,6 @@ export function FlashcardsCatalog() {
                 <span aria-label={({ uz: 'Takrorlash vaqti', ru: 'Пора повторить', en: 'Due for review' } as Record<string, string>)[language]}
                   style={{ position: 'absolute', top: 8, insetInlineEnd: 8, width: 9, height: 9, borderRadius: '50%', background: '#16a34a', boxShadow: '0 0 0 3px rgba(22,163,74,0.18)' }} />
               )}
-              <span style={{ fontSize: 22 }}>{topic.icon}</span>
               <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e' }}>
                 {(topic as Record<string, string>)[language] ?? topic.uz}
               </div>
