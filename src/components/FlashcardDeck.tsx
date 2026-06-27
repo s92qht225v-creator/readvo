@@ -28,6 +28,21 @@ export interface FlashcardDeckProps {
   lessonTitleTranslation_ru?: string;
 }
 
+type LadderItem = { word: FlashcardWord; stage: number };
+
+// Drop the current card (index 0) and re-insert `item` at a random spot among
+// the rest — NOT at the very back — so cards at different stages interleave
+// (the same review type doesn't come in a row). Never index 0 → no immediate
+// repeat. A lone remaining card just stays.
+function requeue(q: LadderItem[], item: LadderItem): LadderItem[] {
+  const rest = q.slice(1);
+  if (rest.length === 0) return [item];
+  const at = 1 + Math.floor(Math.random() * rest.length); // 1..rest.length
+  const next = rest.slice();
+  next.splice(at, 0, item);
+  return next;
+}
+
 export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, lessonTitle, lessonPinyin, lessonTitleTranslation, lessonTitleTranslation_ru }) => {
   const { isLoading: authLoading } = useRequireAuth();
   const { getAccessToken } = useAuth();
@@ -181,12 +196,12 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
     setAttempt((a) => a + 1); // force the next exercise to mount fresh
     if (!correct) {
       missedRef.current.add(id);
-      setQueue((q) => [...q.slice(1), { word: cur.word, stage: cur.stage }]);
+      setQueue((q) => requeue(q, { word: cur.word, stage: cur.stage }));
       return;
     }
     setSteps((n) => n + 1);
     if (cur.stage < STAGE_COUNT) {
-      setQueue((q) => [...q.slice(1), { word: cur.word, stage: cur.stage + 1 }]);
+      setQueue((q) => requeue(q, { word: cur.word, stage: cur.stage + 1 }));
       return;
     }
     // Graduated: passed every stage → schedule (sooner if it was ever missed).
