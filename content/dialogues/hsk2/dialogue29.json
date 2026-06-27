@@ -30,7 +30,8 @@
     "收据",
     "以内",
     "查",
-    "快递"
+    "快递",
+    "信息"
   ],
   "sections": [
     {
@@ -194,11 +195,11 @@
         },
         {
           "id": "d29-s18",
-          "text_original": "五天以内。您可以上网查快递。",
-          "pinyin": "Wǔ tiān yǐ nèi. Nín kě yǐ shàng wǎng chá kuài dì.",
-          "text_translation": "Besh kun ichida. Internetdan yetkazmani tekshira olasiz.",
-          "text_translation_ru": "В течение пяти дней. Можете отследить посылку онлайн.",
-          "text_translation_en": "Within five days. You can track the delivery online.",
+          "text_original": "五天以内。您可以上网查快递信息。",
+          "pinyin": "Wǔ tiān yǐ nèi. Nín kě yǐ shàng wǎng chá kuài dì xìnxī.",
+          "text_translation": "Besh kun ichida. Internetdan yetkazma ma'lumotlarini tekshira olasiz.",
+          "text_translation_ru": "В течение пяти дней. Можете посмотреть информацию о посылке онлайн.",
+          "text_translation_en": "Within five days. You can look up the delivery information online.",
           "speaker": "B"
         },
         {
