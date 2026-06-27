@@ -14,7 +14,7 @@ import type { ArabicGrade } from '../lib/arabicSrs';
 import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
-import { LadderExercise } from './flashcards/LadderExercise';
+import { LadderExercise, STAGE_COUNT } from './flashcards/LadderExercise';
 import { trackAll } from '@/utils/analytics';
 import '@/styles/arabic.css';
 
@@ -34,11 +34,16 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
   const trial = useTrial();
   const [language] = useLanguage();
 
-  // Session "stack": cards due now + never-seen cards, built once. Grading
-  // removes a card; "move to back" re-queues it within the session.
+  // Strict-ladder session. Each due/new card must climb all STAGE_COUNT review
+  // types (in order) before it graduates. The queue holds {word, stage}; a card
+  // re-queues to the back on every answer (interleaved), advancing a stage on a
+  // correct one and graduating (leaving + scheduling) after the last stage.
   const [phase, setPhase] = useState<'loading' | 'review' | 'empty'>('loading');
-  const [queue, setQueue] = useState<FlashcardWord[]>([]);
-  const [reviewed, setReviewed] = useState(0);
+  const [queue, setQueue] = useState<{ word: FlashcardWord; stage: number }[]>([]);
+  const [steps, setSteps] = useState(0);       // correct answers (progress)
+  const [graduated, setGraduated] = useState(0);
+  const [cardCount, setCardCount] = useState(0);
+  const [attempt, setAttempt] = useState(0);   // bumps every answer → fresh exercise mount
   const [isPinyinVisible, setIsPinyinVisible] = useState(true);
   const tokenRef = useRef<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -156,42 +161,51 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
         return due === undefined || due <= now;
       });
       missedRef.current = new Set();
-      setQueue(stack);
+      setCardCount(stack.length);
+      setQueue(stack.map((w) => ({ word: w, stage: 1 })));
       setPhase(stack.length === 0 ? 'empty' : 'review');
     })();
     return () => { cancelled = true; };
   }, [authLoading, deck.id, deck.words, getAccessToken, cardId]);
 
-  const card = queue[0];
+  const current = queue[0];
   const t = (uz: string, ru: string, en: string) => ({ uz, ru, en } as Record<string, string>)[language];
 
-  // Exercise outcome: correct → schedule + drop from the session; wrong → mark
-  // missed and re-queue to the back so it comes around again this session.
+  // Outcome: correct → advance a stage (re-queue to back) or, after the last
+  // stage, graduate (leave + schedule). Wrong → mark missed, re-queue at the
+  // SAME stage (no progress lost) so it comes back this session.
   const onResult = useCallback((correct: boolean) => {
-    const w = queue[0];
-    if (!w) return;
-    const id = cardId(w);
-    if (correct) {
-      const g: ArabicGrade = missedRef.current.has(id) ? 'dontKnow' : 'know';
-      setReviewed((n) => n + 1);
-      setQueue((q) => q.slice(1));
-      if (tokenRef.current) {
-        fetch('/api/flashcards/reviews', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${tokenRef.current}` },
-          body: JSON.stringify({ card_id: id, grade: g }),
-        }).catch(() => {});
-      }
-    } else {
+    const cur = queue[0];
+    if (!cur) return;
+    const id = cardId(cur.word);
+    setAttempt((a) => a + 1); // force the next exercise to mount fresh
+    if (!correct) {
       missedRef.current.add(id);
-      setQueue((q) => (q.length > 1 ? [...q.slice(1), q[0]] : q));
+      setQueue((q) => [...q.slice(1), { word: cur.word, stage: cur.stage }]);
+      return;
+    }
+    setSteps((n) => n + 1);
+    if (cur.stage < STAGE_COUNT) {
+      setQueue((q) => [...q.slice(1), { word: cur.word, stage: cur.stage + 1 }]);
+      return;
+    }
+    // Graduated: passed every stage → schedule (sooner if it was ever missed).
+    setGraduated((n) => n + 1);
+    setQueue((q) => q.slice(1));
+    if (tokenRef.current) {
+      const g: ArabicGrade = missedRef.current.has(id) ? 'dontKnow' : 'know';
+      fetch('/api/flashcards/reviews', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${tokenRef.current}` },
+        body: JSON.stringify({ card_id: id, grade: g }),
+      }).catch(() => {});
     }
   }, [queue, cardId]);
 
   if (authLoading) return <div className="loading-spinner" />;
   const isFreeContent = deck.id.startsWith('topic-') || deck.words[0]?.lesson === 1;
   const showPaywall = trial?.isTrialExpired && !isFreeContent;
-  const total = queue.length + reviewed;
+  const stepsTotal = cardCount * STAGE_COUNT;
 
   return (
     <>
@@ -215,18 +229,19 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
 
         {phase === 'loading' && <div className="loading-spinner" />}
 
-        {phase === 'review' && card && (
+        {phase === 'review' && current && (
           <section className="home__content ar-fc">
-            <div className="ar-fc__progress"><div className="ar-fc__progress-bar" style={{ width: total ? `${(reviewed / total) * 100}%` : '0%' }} /></div>
-            <div className="ar-fc__count">{queue.length} {t('qoldi', 'осталось', 'left')}</div>
+            <div className="ar-fc__progress"><div className="ar-fc__progress-bar" style={{ width: stepsTotal ? `${(steps / stepsTotal) * 100}%` : '0%' }} /></div>
+            <div className="ar-fc__count">{graduated} / {cardCount}</div>
 
             <LadderExercise
-              key={cardId(card)}
-              card={card}
+              key={`${cardId(current.word)}:${current.stage}:${attempt}`}
+              stage={current.stage}
+              card={current.word}
               deck={deck.words}
               language={language}
               showPinyin={isPinyinVisible}
-              onAudio={() => playCardAudio(card)}
+              onAudio={() => playCardAudio(current.word)}
               onResult={onResult}
             />
 
@@ -241,10 +256,10 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
         {(phase === 'empty' || (phase === 'review' && queue.length === 0)) && (
           <section className="home__content ar-fc__done">
             <div className="ar-fc__done-title">
-              {reviewed > 0 ? t('Barakalla! 🎉', 'Отлично! 🎉', 'Well done! 🎉') : t('Hozircha takrorlash yoʻq', 'Пока нечего повторять', 'Nothing to repeat right now')}
+              {graduated > 0 ? t('Barakalla! 🎉', 'Отлично! 🎉', 'Well done! 🎉') : t('Hozircha takrorlash yoʻq', 'Пока нечего повторять', 'Nothing to repeat right now')}
             </div>
-            {reviewed > 0 && (
-              <div className="ar-fc__done-stats">{reviewed} {t('ta karta koʻrildi', 'карточек просмотрено', 'cards reviewed')}</div>
+            {graduated > 0 && (
+              <div className="ar-fc__done-stats">{graduated} {t('ta soʻz oʻrganildi', 'слов выучено', 'words learned')}</div>
             )}
             <Link href={backHref ?? '/chinese/flashcards'} className="ar-fc__btn ar-fc__btn--yes" style={{ textDecoration: 'none', textAlign: 'center' }}>
               {t('Toʻplamlarga qaytish', 'К колодам', 'Back to decks')}
