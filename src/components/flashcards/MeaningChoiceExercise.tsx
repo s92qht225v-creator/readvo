@@ -52,8 +52,8 @@ export function MeaningChoiceExercise({ card, deck, language, showPinyin, onAudi
     setPicked(opt);
     const isCorrect = opt === correct;
     playResult(isCorrect);
-    // Short pause so the learner sees the green/red feedback before advancing.
-    setTimeout(() => onResult(isCorrect), isCorrect ? 650 : 1150);
+    // Pause so the learner can see the green/red feedback before advancing.
+    setTimeout(() => onResult(isCorrect), isCorrect ? 1000 : 1800);
   };
 
   return (

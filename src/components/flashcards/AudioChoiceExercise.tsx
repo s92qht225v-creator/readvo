@@ -55,7 +55,7 @@ export function AudioChoiceExercise({ card, deck, language, onAudio, onResult }:
     setPicked(opt);
     const isCorrect = opt === correct;
     playResult(isCorrect);
-    setTimeout(() => onResult(isCorrect), isCorrect ? 650 : 1150);
+    setTimeout(() => onResult(isCorrect), isCorrect ? 1000 : 1800);
   };
 
   return (

@@ -45,8 +45,10 @@ function tone(freq: number, start: number, dur: number, type: OscillatorType = '
 
 export function playCorrect() {
   if (muted) return;
-  tone(660, 0, 0.12, 'sine', 0.16);
-  tone(990, 0.085, 0.16, 'sine', 0.16);
+  // Soft harp strum (C–E–G chord, slightly staggered).
+  tone(523, 0, 0.5, 'sine', 0.1);
+  tone(659, 0.03, 0.5, 'sine', 0.1);
+  tone(784, 0.06, 0.5, 'sine', 0.1);
 }
 
 export function playWrong() {

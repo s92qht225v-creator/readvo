@@ -50,7 +50,7 @@ export function PinyinUnscrambleExercise({ card, language, onResult }: ExerciseP
       const ok = next.map((i) => byId.get(i)!.ch).join('') === correct;
       setResult(ok ? 'correct' : 'wrong');
       playResult(ok);
-      setTimeout(() => onResult(ok), ok ? 700 : 1500);
+      setTimeout(() => onResult(ok), ok ? 1000 : 1900);
     }
   };
 
