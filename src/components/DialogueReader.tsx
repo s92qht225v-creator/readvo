@@ -633,9 +633,11 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                                       const pairs = alignPinyinToText(s.text_original, s.pinyin);
                                       const sActive = displaySentenceId === s.id;
                                       const sPlaying = audioSentenceId === s.id;
-                                      // Pinyin reveals one line at a time, like the
-                                      // translation: only the tapped/active line shows it.
-                                      const sPinyin = showPinyin && revealedId === s.id;
+                                      // Pinyin follows the global toggle — when it's
+                                      // on, every line shows it (users preferred this
+                                      // over the per-line reveal). Translation stays
+                                      // per-line (tap to reveal one at a time).
+                                      const sPinyin = showPinyin;
                                       return pairs.map((pair, ci) => {
                                         const isPunct = /[，。？！、,.\s]/.test(pair.char);
                                         return (
