@@ -29,6 +29,9 @@ export interface DialoguePage {
   tag?: string;
   dateAdded?: string;
   audio_url?: string;
+  /** Opt-in: dictation uses pinyin-syllable tiles instead of Han characters
+   *  (HSK 1 prototype). */
+  dictationPinyin?: boolean;
   /** Hero image URL (Supabase). Absent → branded placeholder is used. */
   image?: string;
   /** Public SEO description, per locale. Absent → falls back to title translation. */

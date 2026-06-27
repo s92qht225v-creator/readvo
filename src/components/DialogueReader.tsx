@@ -96,6 +96,9 @@ export interface DialogueMeta {
   titleTranslation: string;
   titleTranslation_ru: string;
   titleTranslation_en?: string;
+  /** Opt-in: dictation tiles are pinyin syllables instead of Han characters
+   *  (HSK 1 prototype). Set per-dialogue via `dictationPinyin` in the JSON. */
+  dictationPinyin?: boolean;
 }
 
 interface DialogueReaderProps {
@@ -761,7 +764,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
             {/* ── GRAMMATIKA TAB ── */}
             {activeTab === 'dictation' && (
               <div className="dr-panel">
-                <DialogueDictation lines={dictationLines} language={language} level={meta.level} />
+                <DialogueDictation lines={dictationLines} language={language} level={meta.level} pinyinTiles={meta.dictationPinyin} />
               </div>
             )}
 

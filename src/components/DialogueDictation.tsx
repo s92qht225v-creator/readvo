@@ -8,6 +8,7 @@ import type { Language } from '../types/ui-state';
 import { shuffleArray } from '@/utils/shuffle';
 import { resolveTtsUrl } from '@/utils/ttsAudio';
 import { hanChars, normalizeHan } from '@/utils/hanziNormalize';
+import { alignPinyinToText } from '@/utils/rubyText';
 
 export interface DictationLine {
   id: string;
@@ -30,7 +31,7 @@ const T = (language: Language, uz: string, ru: string, en: string) =>
  *   - type:  type the characters with a Chinese keyboard (HSK 5/6 default).
  * Bespoke, self-contained (no test engine), styled with the reader's `dr-*` look.
  */
-export function DialogueDictation({ lines, language, level = 1 }: { lines: DictationLine[]; language: Language; level?: number }) {
+export function DialogueDictation({ lines, language, level = 1, pinyinTiles = false }: { lines: DictationLine[]; language: Language; level?: number; pinyinTiles?: boolean }) {
   // HSK 5/6 default to typing; lower levels stay on tiles. The mode is session-
   // level (persists across lines), toggled via the fallback link when level≥5.
   const [mode, setMode] = useState<'tiles' | 'type'>(level >= 5 ? 'type' : 'tiles');
@@ -67,6 +68,19 @@ export function DialogueDictation({ lines, language, level = 1 }: { lines: Dicta
   const chars = useMemo(() => (line ? Array.from(line.zh).filter(isHan) : []), [line]);
   const target = chars.join('');
 
+  // The tiles the learner arranges. Normally one per Han CHARACTER. In
+  // pinyin-tile mode (HSK 1 prototype) it's instead one per toned pinyin
+  // SYLLABLE — the learner reconstructs the *sound*, not the characters.
+  // alignPinyinToText splits compound pinyin per character (明天 → míng·tiān).
+  const lineTokens = useCallback((l: DictationLine | undefined): string[] => {
+    if (!l) return [];
+    if (!pinyinTiles) return Array.from(l.zh).filter(isHan);
+    return alignPinyinToText(l.zh, l.pinyin)
+      .filter(p => p.pinyin && isHan(p.char[0]))
+      .map(p => p.pinyin as string);
+  }, [pinyinTiles]);
+  const tokens = useMemo(() => lineTokens(line), [line, lineTokens]);
+
   const playLine = useCallback(async (l: DictationLine | undefined) => {
     if (!l) return;
     const a = audioRef.current;
@@ -84,14 +98,14 @@ export function DialogueDictation({ lines, language, level = 1 }: { lines: Dicta
   // avoid setState-in-effect cascading renders.
   const enterLine = useCallback((i: number) => {
     const l = lines[i];
-    const cs = l ? Array.from(l.zh).filter(isHan) : [];
+    const cs = lineTokens(l);
     setPlaced([]);
     setTray(shuffleArray(cs.map((_, k) => k)));
     setTyped('');
     setStatus('idle');
     setMistakes(0);
     void playLine(l);
-  }, [lines, playLine]);
+  }, [lines, playLine, lineTokens]);
 
   const start = () => { setPhase('play'); setIdx(0); enterLine(0); };
 
@@ -105,9 +119,11 @@ export function DialogueDictation({ lines, language, level = 1 }: { lines: Dicta
   // Score a candidate answer order: green when complete + correct, red when
   // complete + wrong, idle while still incomplete.
   const evaluate = (arr: number[]) => {
-    if (arr.length !== chars.length) { setStatus('idle'); return; }
-    const answer = arr.map(i => chars[i]).join('');
-    if (answer === target) {
+    if (arr.length !== tokens.length) { setStatus('idle'); return; }
+    // Compare the arranged sequence to the correct order. Identical tokens
+    // (repeated syllables/chars) are interchangeable, which is fine.
+    const answer = arr.map(i => tokens[i]).join('');
+    if (answer === tokens.join('')) {
       setStatus('correct');
       setResults(prev => { const n = prev.slice(); n[idx] = mistakes === 0; return n; });
     } else {
@@ -164,13 +180,13 @@ export function DialogueDictation({ lines, language, level = 1 }: { lines: Dicta
   const switchMode = (m: 'tiles' | 'type') => {
     setMode(m);
     setPlaced([]);
-    setTray(shuffleArray(chars.map((_, k) => k)));
+    setTray(shuffleArray(tokens.map((_, k) => k)));
     setTyped('');
     setStatus('idle');
   };
 
   const reveal = () => {
-    setPlaced(chars.map((_, i) => i)); // ordered tiles = correct
+    setPlaced(tokens.map((_, i) => i)); // ordered tiles = correct
     setTray([]);
     setStatus('revealed');
     setResults(prev => { const n = prev.slice(); n[idx] = false; return n; });
@@ -201,10 +217,15 @@ export function DialogueDictation({ lines, language, level = 1 }: { lines: Dicta
         <div className="dr-dict__ear" aria-hidden="true">🎧</div>
         <h3 className="dr-dict__heading">{T(language, 'Diktant', 'Диктант', 'Dictation')}</h3>
         <p className="dr-dict__intro">
-          {T(language,
-            'Gapni eshiting va ierogliflarni to\'g\'ri tartibda joylang.',
-            'Послушайте фразу и расставьте иероглифы в правильном порядке.',
-            'Listen to the line, then put the characters in the right order.')}
+          {pinyinTiles
+            ? T(language,
+                'Gapni eshiting va pinyin bo\'g\'inlarini to\'g\'ri tartibda joylang.',
+                'Послушайте фразу и расставьте слоги пиньинь в правильном порядке.',
+                'Listen to the line, then put the pinyin syllables in the right order.')
+            : T(language,
+                'Gapni eshiting va ierogliflarni to\'g\'ri tartibda joylang.',
+                'Послушайте фразу и расставьте иероглифы в правильном порядке.',
+                'Listen to the line, then put the characters in the right order.')}
         </p>
         <button type="button" className="dr-dict__btn dr-dict__btn--primary" onClick={start}>
           {T(language, 'Boshlash', 'Начать', 'Start')}
@@ -263,7 +284,8 @@ export function DialogueDictation({ lines, language, level = 1 }: { lines: Dicta
                   <SortablePlacedTile
                     key={tileId}
                     id={tileId}
-                    char={chars[tileId]}
+                    token={tokens[tileId]}
+                    py={pinyinTiles}
                     onTap={() => tapPlaced(pos)}
                     disabled={done}
                   />
@@ -276,8 +298,8 @@ export function DialogueDictation({ lines, language, level = 1 }: { lines: Dicta
           {!done && (
             <div className="dr-dict__tray">
               {tray.map(tileId => (
-                <button key={tileId} type="button" className="dr-dict__tile" onClick={() => tapTray(tileId)}>
-                  {chars[tileId]}
+                <button key={tileId} type="button" className={`dr-dict__tile${pinyinTiles ? ' dr-dict__tile--py' : ''}`} onClick={() => tapTray(tileId)}>
+                  {tokens[tileId]}
                 </button>
               ))}
             </div>
@@ -374,8 +396,8 @@ export function DialogueDictation({ lines, language, level = 1 }: { lines: Dicta
 
 /** A placed answer tile: draggable to reorder (dnd-kit sortable), tappable to
  *  remove. `disabled` (after the line is solved) freezes both. */
-function SortablePlacedTile({ id, char, onTap, disabled }: {
-  id: number; char: string; onTap: () => void; disabled: boolean;
+function SortablePlacedTile({ id, token, py, onTap, disabled }: {
+  id: number; token: string; py: boolean; onTap: () => void; disabled: boolean;
 }) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id, disabled });
   const style: CSSProperties = {
@@ -390,13 +412,13 @@ function SortablePlacedTile({ id, char, onTap, disabled }: {
       ref={setNodeRef}
       type="button"
       style={style}
-      className="dr-dict__tile dr-dict__tile--placed"
+      className={`dr-dict__tile dr-dict__tile--placed${py ? ' dr-dict__tile--py' : ''}`}
       onClick={onTap}
       disabled={disabled}
       {...attributes}
       {...listeners}
     >
-      {char}
+      {token}
     </button>
   );
 }

@@ -1129,6 +1129,15 @@ body {
   background: #fff;
 }
 .dr-dict__tile:disabled { cursor: default; opacity: 0.9; }
+/* Pinyin-syllable tiles (HSK 1 dictation): wider, since syllables are
+   multi-letter; smaller weight than the big single hanzi. */
+.dr-dict__tile--py {
+  min-width: 44px;
+  width: auto;
+  padding: 0 14px;
+  font-size: 18px;
+  font-weight: 500;
+}
 
 .dr-dict__feedback { font-size: 14px; font-weight: 600; text-align: center; }
 .dr-dict__feedback--wrong { color: #dc2626; }
