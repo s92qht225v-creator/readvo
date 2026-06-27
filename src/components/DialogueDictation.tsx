@@ -161,6 +161,23 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
     evaluate(nextPlaced); // re-check: a reorder can complete or fix the answer
   };
 
+  // ── Pinyin keyboard model (pinyinTiles mode) ──
+  // The scrambled syllables act as a keyboard: keys stay in fixed positions
+  // (tray order, never reshuffled), tapping appends the syllable to the answer
+  // line and dims the key in place, backspace pops the last one. No drag, no
+  // mid-sequence insert — you rebuild the line left-to-right.
+  const pressKey = (id: number) => {
+    if (status === 'correct' || status === 'revealed' || placed.includes(id)) return;
+    const next = [...placed, id];
+    setPlaced(next);
+    evaluate(next);
+  };
+  const backspaceKey = () => {
+    if (status === 'correct' || status === 'revealed' || placed.length === 0) return;
+    setStatus('idle');
+    setPlaced(p => p.slice(0, -1));
+  };
+
   // Typing mode: check the typed line against the target (Han-only, trad→simp).
   const checkTyped = () => {
     if (status === 'correct' || status === 'revealed') return;
@@ -273,6 +290,40 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
       </button>
 
       {mode === 'tiles' ? (
+        pinyinTiles ? (
+          <>
+            {/* Pinyin keyboard: the answer is a compact text line; the
+                scrambled syllables below stay in place and dim when used. */}
+            <div className={`dr-dict__answer dr-dict__answer--text${status !== 'idle' ? ` dr-dict__answer--${status}` : ''}`}>
+              {placed.length === 0
+                ? <span className="dr-dict__answer-hint">{T(language, 'Bo\'g\'inlarni bosing', 'Нажимайте слоги', 'Tap the syllables')}</span>
+                : placed.map(id => tokens[id]).join(' ')}
+            </div>
+
+            {!done && (
+              <div className="dr-dict__tray">
+                {tray.map(id => (
+                  <button
+                    key={id}
+                    type="button"
+                    className={`dr-dict__tile dr-dict__tile--py${placed.includes(id) ? ' dr-dict__tile--used' : ''}`}
+                    onClick={() => pressKey(id)}
+                    disabled={placed.includes(id)}
+                  >
+                    {tokens[id]}
+                  </button>
+                ))}
+                <button type="button" className="dr-dict__tile dr-dict__tile--back" onClick={backspaceKey} disabled={placed.length === 0} aria-label="Backspace">⌫</button>
+              </div>
+            )}
+
+            {status === 'wrong' && (
+              <div className="dr-dict__feedback dr-dict__feedback--wrong">
+                {T(language, 'Tartib noto\'g\'ri — ⌫ bilan tuzating', 'Неверный порядок — исправьте через ⌫', 'Wrong order — fix it with ⌫')}
+              </div>
+            )}
+          </>
+        ) : (
         <>
           {/* Answer slots — drag a placed tile to reorder, tap it to remove */}
           <DndContext sensors={sensors} collisionDetection={closestCenter} onDragStart={onDragStart} onDragEnd={onDragEnd}>
@@ -311,6 +362,7 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
             </div>
           )}
         </>
+        )
       ) : (
         <>
           {/* Typing input — learner types the line with a Chinese IME. A
