@@ -4,6 +4,7 @@ import React, { useMemo, useState } from 'react';
 import type { ExerciseProps } from './MeaningChoiceExercise';
 import type { Language } from '@/types/ui-state';
 import { shuffleArray } from '../../utils/shuffle';
+import { playResult } from '@/utils/sfx';
 
 /**
  * Ladder rung — unscramble: show 汉字 + meaning, rebuild the pinyin. The
@@ -48,6 +49,7 @@ export function PinyinUnscrambleExercise({ card, language, onResult }: ExerciseP
     if (next.length === tiles.length) {
       const ok = next.map((i) => byId.get(i)!.ch).join('') === correct;
       setResult(ok ? 'correct' : 'wrong');
+      playResult(ok);
       setTimeout(() => onResult(ok), ok ? 700 : 1500);
     }
   };

@@ -4,6 +4,7 @@ import React, { useMemo, useState } from 'react';
 import type { FlashcardWord } from '../../types';
 import type { Language } from '@/types/ui-state';
 import { shuffleArray } from '../../utils/shuffle';
+import { playResult } from '@/utils/sfx';
 
 /**
  * Ladder exercise #1 — recognition: show 汉字 (+ pinyin/audio), pick the correct
@@ -50,6 +51,7 @@ export function MeaningChoiceExercise({ card, deck, language, showPinyin, onAudi
     if (picked) return;
     setPicked(opt);
     const isCorrect = opt === correct;
+    playResult(isCorrect);
     // Short pause so the learner sees the green/red feedback before advancing.
     setTimeout(() => onResult(isCorrect), isCorrect ? 650 : 1150);
   };

@@ -15,6 +15,8 @@ import { Paywall } from './Paywall';
 import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
 import { LadderExercise, STAGE_COUNT } from './flashcards/LadderExercise';
+import { Confetti } from './flashcards/Confetti';
+import { unlockSfx, isMuted, setMuted, playComplete } from '@/utils/sfx';
 import { trackAll } from '@/utils/analytics';
 import '@/styles/arabic.css';
 
@@ -60,6 +62,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
   const [cardCount, setCardCount] = useState(0);
   const [attempt, setAttempt] = useState(0);   // bumps every answer → fresh exercise mount
   const [isPinyinVisible, setIsPinyinVisible] = useState(true);
+  const [muted, setMutedState] = useState(() => isMuted());
   const tokenRef = useRef<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const builtRef = useRef(false);
@@ -121,6 +124,13 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
     void resolveTtsUrl(w.text_original).then((url) => { if (url) ttsUrlsRef.current[w.id] = url; });
   }, [playUrl, speak]);
   useEffect(() => () => { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } }, []);
+
+  // Unlock Web Audio for the sound effects on the first user gesture (iOS).
+  useEffect(() => {
+    const unlock = () => { unlockSfx(); window.removeEventListener('pointerdown', unlock); };
+    window.addEventListener('pointerdown', unlock);
+    return () => window.removeEventListener('pointerdown', unlock);
+  }, []);
 
   // Warm TTS for words without recorded audio so the listening rung (and the 🔊
   // on other rungs) plays instantly on tap. Sequential, once per deck.
@@ -207,6 +217,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
     // Graduated: passed every stage → schedule (sooner if it was ever missed).
     setGraduated((n) => n + 1);
     setQueue((q) => q.slice(1));
+    if (queue.length === 1) playComplete(); // this was the last card → session done
     if (tokenRef.current) {
       const g: ArabicGrade = missedRef.current.has(id) ? 'dontKnow' : 'know';
       fetch('/api/flashcards/reviews', {
@@ -263,6 +274,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
             <nav className="story__bottom-bar">
               <div className="story__bottom-bar-inner">
                 <button className={`reader__nav-toggle ${isPinyinVisible ? 'reader__nav-toggle--active' : ''}`} onClick={() => setIsPinyinVisible((p) => !p)} type="button">Pinyin</button>
+                <button className="reader__nav-toggle" onClick={() => { const m = !muted; setMuted(m); setMutedState(m); }} type="button" aria-label="Sound on/off">{muted ? '🔇' : '🔊'}</button>
               </div>
             </nav>
           </section>
@@ -270,6 +282,7 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
 
         {(phase === 'empty' || (phase === 'review' && queue.length === 0)) && (
           <section className="home__content ar-fc__done">
+            {graduated > 0 && <Confetti />}
             <div className="ar-fc__done-title">
               {graduated > 0 ? t('Barakalla! 🎉', 'Отлично! 🎉', 'Well done! 🎉') : t('Hozircha takrorlash yoʻq', 'Пока нечего повторять', 'Nothing to repeat right now')}
             </div>

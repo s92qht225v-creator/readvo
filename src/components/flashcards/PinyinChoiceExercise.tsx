@@ -3,6 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import type { ExerciseProps } from './MeaningChoiceExercise';
 import { shuffleArray } from '../../utils/shuffle';
+import { playResult } from '@/utils/sfx';
 
 /**
  * Ladder rung — reverse recognition (sound): show the meaning, pick the correct
@@ -32,7 +33,9 @@ export function PinyinChoiceExercise({ card, deck, language, onResult }: Exercis
   const choose = (opt: string) => {
     if (picked) return;
     setPicked(opt);
-    setTimeout(() => onResult(opt === correct), opt === correct ? 650 : 1150);
+    const isCorrect = opt === correct;
+    playResult(isCorrect);
+    setTimeout(() => onResult(isCorrect), isCorrect ? 650 : 1150);
   };
 
   return (

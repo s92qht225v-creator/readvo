@@ -12868,3 +12868,18 @@ body {
 /* Used keys stay in place (no reflow → no mis-taps), just dimmed. */
 .fc-tile.fc-tile--used { opacity: 0.3; background: #f1f3f5; border-color: #ececef; }
 .fc-tile--back { color: #6b7177; }
+
+/* ── Flashcard polish: motion + confetti ──────────────────────────────────── */
+@keyframes fc-slidein { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
+.fc-quiz { animation: fc-slidein 0.24s ease both; }
+@keyframes fc-pop { 0% { transform: scale(1); } 40% { transform: scale(1.06); } 100% { transform: scale(1); } }
+@keyframes fc-shake { 10%, 90% { transform: translateX(-1px); } 20%, 80% { transform: translateX(3px); } 30%, 50%, 70% { transform: translateX(-5px); } 40%, 60% { transform: translateX(5px); } }
+.fc-quiz__option--correct, .fc-kb__answer--correct { animation: fc-pop 0.32s ease; }
+.fc-quiz__option--wrong, .fc-kb__answer--wrong { animation: fc-shake 0.4s ease; }
+.ar-fc__progress-bar { transition: width 0.3s ease; }
+.fc-confetti { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 60; }
+.fc-confetti__p { position: absolute; top: -16px; border-radius: 2px; animation-name: fc-fall; animation-timing-function: linear; animation-fill-mode: forwards; }
+@keyframes fc-fall { to { transform: translateY(108vh) rotate(var(--rot)); opacity: 0.85; } }
+@media (prefers-reduced-motion: reduce) {
+  .fc-quiz, .fc-quiz__option--correct, .fc-quiz__option--wrong, .fc-kb__answer--correct, .fc-kb__answer--wrong, .fc-confetti__p { animation: none; }
+}

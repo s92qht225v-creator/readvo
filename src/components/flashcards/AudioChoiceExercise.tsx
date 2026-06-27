@@ -5,6 +5,7 @@ import type { ExerciseProps } from './MeaningChoiceExercise';
 import type { FlashcardWord } from '../../types';
 import type { Language } from '@/types/ui-state';
 import { shuffleArray } from '../../utils/shuffle';
+import { playResult } from '@/utils/sfx';
 
 /**
  * Ladder rung — listening: hear the Chinese (recorded audio or TTS), pick the
@@ -52,7 +53,9 @@ export function AudioChoiceExercise({ card, deck, language, onAudio, onResult }:
   const choose = (opt: string) => {
     if (picked) return;
     setPicked(opt);
-    setTimeout(() => onResult(opt === correct), opt === correct ? 650 : 1150);
+    const isCorrect = opt === correct;
+    playResult(isCorrect);
+    setTimeout(() => onResult(isCorrect), isCorrect ? 650 : 1150);
   };
 
   return (
