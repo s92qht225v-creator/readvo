@@ -80,7 +80,7 @@
           "id": "d25-s2",
           "text_original": "我家在上海。",
           "pinyin": "Wǒ jiā zài Shànghǎi.",
-          "text_translation": "Mening uyim Shanxayda.",
+          "text_translation": "Uyim Shanxayda.",
           "text_translation_ru": "Мой дом в Шанхае.",
           "speaker": "B",
           "words": [
@@ -302,14 +302,14 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue4.mp3",
-          "text_translation_en": "Four. Dad, mom, my younger brother, and me."
+          "text_translation_en": "Four people: dad, mom, my younger brother, and me."
         },
         {
           "id": "d25-s5",
           "text_original": "你家大吗？",
           "pinyin": "Nǐ jiā dà ma?",
           "text_translation": "Uying kattami?",
-          "text_translation_ru": "У тебя дом большой?",
+          "text_translation_ru": "У тебя большой дом?",
           "speaker": "A",
           "words": [
             {
