@@ -94,13 +94,13 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue2.mp3",
-          "text_translation_en": "Yes."
+          "text_translation_en": "Yes, it is."
         },
         {
           "id": "d23-s3",
           "text_original": "你带伞了吗？",
           "pinyin": "Nǐ dài sǎn le ma?",
-          "text_translation": "Soyabon olganmisan?",
+          "text_translation": "Soyabon olib keldingmi?",
           "text_translation_ru": "Ты взял зонт?",
           "speaker": "A",
           "words": [
@@ -163,7 +163,7 @@
           "id": "d23-s4",
           "text_original": "带了。",
           "pinyin": "Dài le.",
-          "text_translation": "Olganman.",
+          "text_translation": "Olib keldim.",
           "text_translation_ru": "Взял.",
           "speaker": "B",
           "words": [
@@ -249,7 +249,7 @@
           "id": "d23-s6",
           "text_original": "好。",
           "pinyin": "Hǎo.",
-          "text_translation": "Yaxshi.",
+          "text_translation": "Ho'p.",
           "text_translation_ru": "Хорошо.",
           "speaker": "B",
           "words": [
@@ -266,7 +266,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue6.mp3",
-          "text_translation_en": "OK."
+          "text_translation_en": "Okay."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue.mp3"
