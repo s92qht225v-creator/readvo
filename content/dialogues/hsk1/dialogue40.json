@@ -126,7 +126,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue2.mp3",
-          "text_translation_en": "Hello, what would you like today?"
+          "text_translation_en": "Hello, what would you like to eat today?"
         },
         {
           "id": "d40-s3",
@@ -174,7 +174,7 @@
           "text_original": "大盘鸡很辣，你能吃辣吗？",
           "pinyin": "Dàpánjī hěn là, nǐ néng chī là ma?",
           "text_translation": "Dapanji juda achchiq, achchiq yeya olasizmi?",
-          "text_translation_ru": "Дапаньцзи очень острое, ты можешь есть острое?",
+          "text_translation_ru": "Дапаньцзи очень острое, вы можете есть острое?",
           "speaker": "B",
           "words": [
             {
@@ -261,14 +261,14 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue4.mp3",
-          "text_translation_en": "Dapanji is very spicy, can you eat spicy food?"
+          "text_translation_en": "Dapanji is very spicy, can you eat spicy?"
         },
         {
           "id": "d40-s5",
           "text_original": "我能吃辣，再来一瓶冰的百事可乐。",
           "pinyin": "Wǒ néng chī là, zài lái yì píng bīng de Bǎishì Kělè.",
-          "text_translation": "Achchiq yeya olaman, yana bitta sovuq Pepsi ham ob keling.",
-          "text_translation_ru": "Могу есть острое, и ещё бутылку холодного Пепси.",
+          "text_translation": "Achchiq yeya olaman, bitta muzdek Pepsi ham olib keling.",
+          "text_translation_ru": "Я могу есть острое, ещё принесите бутылку холодного Пепси.",
           "speaker": "A",
           "words": [
             {
@@ -362,7 +362,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue5.mp3",
-          "text_translation_en": "Yes, I can. And a bottle of cold Pepsi."
+          "text_translation_en": "Yes, I can. And bring a bottle of cold Pepsi."
         },
         {
           "id": "d40-s6",
