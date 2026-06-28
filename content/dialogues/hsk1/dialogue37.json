@@ -72,7 +72,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue1.mp3",
-          "text_translation_en": "Are you here?"
+          "text_translation_en": "Have you arrived?"
         },
         {
           "id": "d37-s2",
@@ -104,7 +104,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue2.mp3",
-          "text_translation_en": "Yes, I'm here."
+          "text_translation_en": "Yes, I have."
         },
         {
           "id": "d37-s3",
@@ -176,8 +176,8 @@
           "id": "d37-s5",
           "text_original": "等我一下。",
           "pinyin": "Děng wǒ yíxià.",
-          "text_translation": "Biroz kutib tur.",
-          "text_translation_ru": "Подожди меня.",
+          "text_translation": "Meni biroz kutib tur.",
+          "text_translation_ru": "Подожди меня немного.",
           "speaker": "A",
           "words": [
             {
@@ -211,7 +211,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue5.mp3",
-          "text_translation_en": "Wait for me."
+          "text_translation_en": "Wait for me a moment."
         },
         {
           "id": "d37-s6",
