@@ -198,8 +198,8 @@
           "id": "d27-s5",
           "text_original": "我明天还你。",
           "pinyin": "Wǒ míngtiān huán nǐ.",
-          "text_translation": "Ertaga qaytaraman.",
-          "text_translation_ru": "Я завтра верну.",
+          "text_translation": "Senga ertaga qaytaraman.",
+          "text_translation_ru": "Я верну тебе завтра.",
           "speaker": "A",
           "words": [
             {
@@ -246,7 +246,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20xianjin%20ma/dialogue5.mp3",
-          "text_translation_en": "I'll return it tomorrow."
+          "text_translation_en": "I'll return it to you tomorrow."
         },
         {
           "id": "d27-s6",
