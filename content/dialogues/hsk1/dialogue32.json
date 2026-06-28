@@ -72,7 +72,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue1.mp3",
-          "text_translation_en": "Why are you so late?"
+          "text_translation_en": "Why are you only just arriving?"
         },
         {
           "id": "d32-s2",
@@ -113,7 +113,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue2.mp3",
-          "text_translation_en": "Sorry, there was traffic."
+          "text_translation_en": "Sorry, there was a traffic jam on the way."
         },
         {
           "id": "d32-s3",
@@ -187,7 +187,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue3.mp3",
-          "text_translation_en": "I waited for you a long time."
+          "text_translation_en": "I've been waiting for you for a long time."
         },
         {
           "id": "d32-s4",
