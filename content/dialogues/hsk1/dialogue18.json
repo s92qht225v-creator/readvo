@@ -25,8 +25,8 @@
           "id": "d18-s1",
           "text_original": "你明天有空吗？",
           "pinyin": "Nǐ míngtiān yǒu kòng ma?",
-          "text_translation": "Ertaga vaqting bormi?",
-          "text_translation_ru": "У тебя завтра есть время?",
+          "text_translation": "Ertaga bo'sh vaqting bormi?",
+          "text_translation_ru": "У тебя завтра есть свободное время?",
           "speaker": "A",
           "words": [
             {
@@ -90,8 +90,8 @@
           "id": "d18-s2",
           "text_original": "有。",
           "pinyin": "Yǒu.",
-          "text_translation": "Ha, bor.",
-          "text_translation_ru": "Да, есть.",
+          "text_translation": "Bor.",
+          "text_translation_ru": "Есть.",
           "speaker": "B",
           "words": [
             {
@@ -113,8 +113,8 @@
           "id": "d18-s3",
           "text_original": "我们一起吃饭吧。",
           "pinyin": "Wǒmen yìqǐ chīfàn ba.",
-          "text_translation": "Kel, birga ovqatlanamiz.",
-          "text_translation_ru": "Давай поедим вместе.",
+          "text_translation": "Birga ovqat yeylik.",
+          "text_translation_ru": "Давай вместе поедим.",
           "speaker": "A",
           "words": [
             {
@@ -167,7 +167,7 @@
           "id": "d18-s4",
           "text_original": "好。",
           "pinyin": "Hǎo.",
-          "text_translation": "Mayli.",
+          "text_translation": "Xo'p.",
           "text_translation_ru": "Хорошо.",
           "speaker": "B",
           "words": [
@@ -190,8 +190,8 @@
           "id": "d18-s5",
           "text_original": "中午还是晚上？",
           "pinyin": "Zhōngwǔ háishi wǎnshang?",
-          "text_translation": "Tushlikdami yoki kechqurun?",
-          "text_translation_ru": "Днём или вечером?",
+          "text_translation": "Tushdami yoki kechdami?",
+          "text_translation_ru": "В обед или вечером?",
           "speaker": "A",
           "words": [
             {
@@ -233,7 +233,7 @@
           "id": "d18-s6",
           "text_original": "晚上吧。",
           "pinyin": "Wǎnshang ba.",
-          "text_translation": "Kechqurun.",
+          "text_translation": "Kechda.",
           "text_translation_ru": "Вечером.",
           "speaker": "B",
           "words": [
