@@ -25,7 +25,7 @@
           "text_original": "你去哪儿？",
           "pinyin": "Nǐ qù nǎr?",
           "text_translation": "Qayerga ketyapsan?",
-          "text_translation_ru": "Куда идёшь?",
+          "text_translation_ru": "Куда ты идёшь?",
           "speaker": "A",
           "words": [
             {
@@ -69,7 +69,7 @@
           "id": "d15-s2",
           "text_original": "我去超市。",
           "pinyin": "Wǒ qù chāoshì.",
-          "text_translation": "Men supermarketga ketyapman.",
+          "text_translation": "Supermarketga ketyapman.",
           "text_translation_ru": "Я иду в супермаркет.",
           "speaker": "B",
           "words": [
@@ -112,8 +112,8 @@
           "id": "d15-s3",
           "text_original": "买什么？",
           "pinyin": "Mǎi shénme?",
-          "text_translation": "Nima olasan?",
-          "text_translation_ru": "Что покупаешь?",
+          "text_translation": "Nima sotib olgani?",
+          "text_translation_ru": "Купить что?",
           "speaker": "A",
           "words": [
             {
@@ -140,13 +140,13 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue3.mp3",
-          "text_translation_en": "What are you buying?"
+          "text_translation_en": "To buy what?"
         },
         {
           "id": "d15-s4",
           "text_original": "买衣服。",
           "pinyin": "Mǎi yīfu.",
-          "text_translation": "Kiyim olaman.",
+          "text_translation": "Kiyim sotib olgani.",
           "text_translation_ru": "Купить одежду.",
           "speaker": "B",
           "words": [
@@ -174,13 +174,13 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue4.mp3",
-          "text_translation_en": "Buying clothes."
+          "text_translation_en": "To buy clothes."
         },
         {
           "id": "d15-s5",
           "text_original": "买什么衣服？",
           "pinyin": "Mǎi shénme yīfu?",
-          "text_translation": "Qanaqa kiyim olasan?",
+          "text_translation": "Qanday kiyim sotib olgani?",
           "text_translation_ru": "Купить какую одежду?",
           "speaker": "A",
           "words": [
@@ -219,13 +219,13 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue5.mp3",
-          "text_translation_en": "What kind of clothes?"
+          "text_translation_en": "To buy what kind of clothes?"
         },
         {
           "id": "d15-s6",
           "text_original": "买一件T恤。",
           "pinyin": "Mǎi yí jiàn T xù.",
-          "text_translation": "Bitta futbolka olaman.",
+          "text_translation": "Bir dona futbolka sotib olgani.",
           "text_translation_ru": "Купить одну футболку.",
           "speaker": "B",
           "words": [
@@ -260,14 +260,14 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue6.mp3",
-          "text_translation_en": "A T-shirt."
+          "text_translation_en": "To buy a T-shirt."
         },
         {
           "id": "d15-s7",
           "text_original": "我们一起去吧。",
           "pinyin": "Wǒmen yìqǐ qù ba.",
-          "text_translation": "Birga boraylik.",
-          "text_translation_ru": "Давай вместе сходим.",
+          "text_translation": "Keling, birga boramiz.",
+          "text_translation_ru": "Давай пойдём вместе.",
           "speaker": "A",
           "words": [
             {
@@ -320,8 +320,8 @@
           "id": "d15-s8",
           "text_original": "好啊。",
           "pinyin": "Hǎo a.",
-          "text_translation": "Yaxshi.",
-          "text_translation_ru": "Хорошо.",
+          "text_translation": "Mayli!",
+          "text_translation_ru": "Хорошо!",
           "speaker": "B",
           "words": [
             {
@@ -346,7 +346,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue8.mp3",
-          "text_translation_en": "Sure."
+          "text_translation_en": "Okay!"
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue.mp3"
