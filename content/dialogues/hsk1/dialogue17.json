@@ -255,10 +255,10 @@
         },
         {
           "id": "d17-s7",
-          "text_original": "那你早点休息。",
-          "pinyin": "Nà nǐ zǎo diǎn xiūxi.",
-          "text_translation": "Unda ertaroq dam oling.",
-          "text_translation_ru": "Тогда ложись пораньше.",
+          "text_original": "那你好好休息。",
+          "pinyin": "Nà nǐ hǎohǎo xiūxi.",
+          "text_translation": "Unda yaxshilab dam oling.",
+          "text_translation_ru": "Тогда хорошенько отдохни.",
           "speaker": "A",
           "words": [
             {
@@ -286,22 +286,11 @@
             {
               "i": [
                 2,
-                3
-              ],
-              "p": "zǎo",
-              "t": "erta",
-              "tr": "рано"
-            },
-            {
-              "i": [
-                3,
                 4
               ],
-              "p": "diǎn",
-              "t": "biroz",
-              "tr": "немного",
-              "h": 1,
-              "l": 6
+              "p": "hǎohǎo",
+              "t": "yaxshilab",
+              "tr": "хорошенько"
             },
             {
               "i": [
@@ -315,8 +304,7 @@
               "l": 5
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20lei%20ma/dialogue7.mp3",
-          "text_translation_en": "Then get some rest early."
+          "text_translation_en": "Then get a good rest."
         },
         {
           "id": "d17-s8",
