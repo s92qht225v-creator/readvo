@@ -80,8 +80,8 @@
           "id": "d17-s2",
           "text_original": "在家。",
           "pinyin": "Zài jiā.",
-          "text_translation": "Uydaman.",
-          "text_translation_ru": "Дома.",
+          "text_translation": "Ha, uydaman.",
+          "text_translation_ru": "Да, дома.",
           "speaker": "B",
           "words": [
             {
@@ -187,14 +187,14 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20lei%20ma/dialogue4.mp3",
-          "text_translation_en": "Resting."
+          "text_translation_en": "I'm resting."
         },
         {
           "id": "d17-s5",
           "text_original": "累吗？",
           "pinyin": "Lèi ma?",
           "text_translation": "Charchadingmi?",
-          "text_translation_ru": "Устала?",
+          "text_translation_ru": "Устал(а)?",
           "speaker": "A",
           "words": [
             {
@@ -226,7 +226,7 @@
           "text_original": "很累。",
           "pinyin": "Hěn lèi.",
           "text_translation": "Juda charchadim.",
-          "text_translation_ru": "Очень устала.",
+          "text_translation_ru": "Очень.",
           "speaker": "B",
           "words": [
             {
@@ -257,7 +257,7 @@
           "id": "d17-s7",
           "text_original": "那你好好休息。",
           "pinyin": "Nà nǐ hǎohǎo xiūxi.",
-          "text_translation": "Unda yaxshilab dam oling.",
+          "text_translation": "Unda yaxshilab dam ol.",
           "text_translation_ru": "Тогда хорошенько отдохни.",
           "speaker": "A",
           "words": [
@@ -304,13 +304,13 @@
               "l": 5
             }
           ],
-          "text_translation_en": "Then get a good rest."
+          "text_translation_en": "Then get some good rest."
         },
         {
           "id": "d17-s8",
           "text_original": "好。",
           "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
+          "text_translation": "Mayli.",
           "text_translation_ru": "Хорошо.",
           "speaker": "B",
           "words": [
@@ -327,7 +327,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20lei%20ma/dialogue8.mp3",
-          "text_translation_en": "OK."
+          "text_translation_en": "Okay."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20lei%20ma/dialogue.mp3"
