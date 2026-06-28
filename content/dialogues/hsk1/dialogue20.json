@@ -24,8 +24,8 @@
           "id": "d20-s1",
           "text_original": "我的手机没电了。",
           "pinyin": "Wǒ de shǒujī méi diàn le.",
-          "text_translation": "Telefonimning zaryadi tugadi.",
-          "text_translation_ru": "У моего телефона сел заряд.",
+          "text_translation": "Telefonimning quvvati tugab qoldi.",
+          "text_translation_ru": "У меня разрядился телефон.",
           "speaker": "A",
           "words": [
             {
@@ -94,14 +94,14 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue1.mp3",
-          "text_translation_en": "My phone is out of battery."
+          "text_translation_en": "My phone is out of charge."
         },
         {
           "id": "d20-s2",
           "text_original": "有充电器吗？",
           "pinyin": "Yǒu chōngdiànqì ma?",
-          "text_translation": "Zaryadkang bormi?",
-          "text_translation_ru": "У тебя есть зарядка?",
+          "text_translation": "Zaryadlagiching bormi?",
+          "text_translation_ru": "У тебя есть зарядное устройство?",
           "speaker": "B",
           "words": [
             {
@@ -160,14 +160,14 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20de%20shouji%20mei%20dian%20le/dialogue3.mp3",
-          "text_translation_en": "No."
+          "text_translation_en": "No, I don't."
         },
         {
           "id": "d20-s4",
           "text_original": "用我的吧。",
           "pinyin": "Yòng wǒ de ba.",
-          "text_translation": "Menikini ishlat.",
-          "text_translation_ru": "Пользуйся моей.",
+          "text_translation": "Menikidan foydalana qol.",
+          "text_translation_ru": "Воспользуйся моим.",
           "speaker": "B",
           "words": [
             {
@@ -244,7 +244,7 @@
           "text_original": "不客气。",
           "pinyin": "Bú kèqi.",
           "text_translation": "Arzimaydi.",
-          "text_translation_ru": "Не за что.",
+          "text_translation_ru": "Пожалуйста.",
           "speaker": "B",
           "words": [
             {
