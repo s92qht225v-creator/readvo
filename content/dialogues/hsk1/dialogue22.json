@@ -24,7 +24,7 @@
           "id": "d22-s1",
           "text_original": "你冷吗？",
           "pinyin": "Nǐ lěng ma?",
-          "text_translation": "Sovqatyapsanmi?",
+          "text_translation": "Sovqotyapsanmi?",
           "text_translation_ru": "Тебе холодно?",
           "speaker": "A",
           "words": [
@@ -138,14 +138,14 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20leng%20ma/dialogue3.mp3",
-          "text_translation_en": "Want me to turn on the AC?"
+          "text_translation_en": "Shall I turn on the air conditioner?"
         },
         {
           "id": "d22-s4",
           "text_original": "好。",
           "pinyin": "Hǎo.",
-          "text_translation": "Yaxshi.",
-          "text_translation_ru": "Хорошо.",
+          "text_translation": "Ha, mayli.",
+          "text_translation_ru": "Да, пожалуйста.",
           "speaker": "B",
           "words": [
             {
@@ -161,14 +161,14 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20leng%20ma/dialogue4.mp3",
-          "text_translation_en": "OK."
+          "text_translation_en": "Yes, please."
         },
         {
           "id": "d22-s5",
           "text_original": "开了。",
           "pinyin": "Kāi le.",
           "text_translation": "Yoqdim.",
-          "text_translation_ru": "Включил.",
+          "text_translation_ru": "Уже включил(а).",
           "speaker": "A",
           "words": [
             {
