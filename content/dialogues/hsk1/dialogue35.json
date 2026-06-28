@@ -24,8 +24,8 @@
           "id": "d35-s1",
           "text_original": "你什么时候走？",
           "pinyin": "Nǐ shénme shíhou zǒu?",
-          "text_translation": "Sen qachon ketasan?",
-          "text_translation_ru": "Когда уезжаешь?",
+          "text_translation": "Qachon ketyapsan?",
+          "text_translation_ru": "Когда ты уезжаешь?",
           "speaker": "A",
           "words": [
             {
@@ -192,7 +192,7 @@
           "text_original": "几点的飞机？我送你。",
           "pinyin": "Jǐ diǎn de fēijī? Wǒ sòng nǐ.",
           "text_translation": "Samalyot nechchida? Men kuzatib qo'yaman.",
-          "text_translation_ru": "Во сколько рейс? Я тебя провожу.",
+          "text_translation_ru": "Во сколько у тебя самолёт? Я тебя провожу.",
           "speaker": "A",
           "words": [
             {
@@ -306,7 +306,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue6.mp3",
-          "text_translation_en": "Eight in the morning."
+          "text_translation_en": "At eight o'clock in the morning."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue.mp3"
