@@ -24,8 +24,8 @@
           "id": "d31-s1",
           "text_original": "你听得清吗？",
           "pinyin": "Nǐ tīng de qīng ma?",
-          "text_translation": "Senga eshitilyaptimi?",
-          "text_translation_ru": "Тебе слышно?",
+          "text_translation": "Meni yaxshi eshityapsanmi?",
+          "text_translation_ru": "Ты меня хорошо слышишь?",
           "speaker": "A",
           "words": [
             {
@@ -81,14 +81,14 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue1.mp3",
-          "text_translation_en": "Can you hear clearly?"
+          "text_translation_en": "Can you hear me clearly?"
         },
         {
           "id": "d31-s2",
           "text_original": "听不清。",
           "pinyin": "Tīng bu qīng.",
-          "text_translation": "Eshitilmayapti.",
-          "text_translation_ru": "Не слышно.",
+          "text_translation": "Yo'q, yaxshi eshitmayapman.",
+          "text_translation_ru": "Нет, плохо слышу.",
           "speaker": "B",
           "words": [
             {
@@ -124,7 +124,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue2.mp3",
-          "text_translation_en": "I can't hear clearly."
+          "text_translation_en": "No, I can't."
         },
         {
           "id": "d31-s3",
@@ -182,7 +182,7 @@
           "id": "d31-s4",
           "text_original": "对，很吵。",
           "pinyin": "Duì, hěn chǎo.",
-          "text_translation": "Ha, juda shovqin ekan.",
+          "text_translation": "Ha, juda shovqin.",
           "text_translation_ru": "Да, очень шумно.",
           "speaker": "B",
           "words": [
@@ -219,14 +219,14 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue4.mp3",
-          "text_translation_en": "Yes, very noisy."
+          "text_translation_en": "Yes, it is. It's very noisy."
         },
         {
           "id": "d31-s5",
           "text_original": "我们出去说吧。",
           "pinyin": "Wǒmen chūqù shuō ba.",
-          "text_translation": "Tashqariga chiqib gaplashaylik.",
-          "text_translation_ru": "Давай выйдем поговорим.",
+          "text_translation": "Kel, tashqariga chiqib gaplashaylik.",
+          "text_translation_ru": "Давай выйдем и поговорим.",
           "speaker": "A",
           "words": [
             {
@@ -273,13 +273,13 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue5.mp3",
-          "text_translation_en": "Let's go outside to talk."
+          "text_translation_en": "Let's go outside and talk."
         },
         {
           "id": "d31-s6",
           "text_original": "好。",
           "pinyin": "Hǎo.",
-          "text_translation": "Yaxshi.",
+          "text_translation": "Xo'p.",
           "text_translation_ru": "Хорошо.",
           "speaker": "B",
           "words": [
@@ -296,7 +296,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue6.mp3",
-          "text_translation_en": "OK."
+          "text_translation_en": "Okay."
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue.mp3"
