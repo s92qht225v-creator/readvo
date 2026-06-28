@@ -74,7 +74,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue1.mp3",
-          "text_translation_en": "How do you get to school?"
+          "text_translation_en": "How do you go to school?"
         },
         {
           "id": "d19-s2",
@@ -117,7 +117,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue2.mp3",
-          "text_translation_en": "I take the bus."
+          "text_translation_en": "I go by bus."
         },
         {
           "id": "d19-s3",
@@ -160,7 +160,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue3.mp3",
-          "text_translation_en": "Is school far?"
+          "text_translation_en": "Is the school far?"
         },
         {
           "id": "d19-s4",
@@ -192,7 +192,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue4.mp3",
-          "text_translation_en": "Not far."
+          "text_translation_en": "No, it isn't."
         },
         {
           "id": "d19-s5",
