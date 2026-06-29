@@ -182,7 +182,7 @@
             }
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xiangjiao%20duoshao%20qian/dialogue4.mp3",
-          "text_translation_en": "Five yuan per jin."
+          "text_translation_en": "Five yuan per 0.5 kg"
         },
         {
           "id": "d6-s5",
@@ -214,6 +214,11 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xiangjiao%20duoshao%20qian/dialogue.mp3",
   "vocab": [
+    "香蕉",
+    "有",
+    "多少",
+    "钱",
+    "块钱",
     "斤"
   ]
 }
