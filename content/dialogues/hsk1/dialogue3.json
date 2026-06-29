@@ -206,5 +206,11 @@
   ],
   "tag": "tanishuv",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xihuan%20zhongguo%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xihuan%20zhongguo%20ma/dialogue.mp3",
+  "vocab": [
+    "喜欢",
+    "中国",
+    "什么",
+    "菜"
+  ]
 }
