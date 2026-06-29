@@ -6,7 +6,7 @@
   "titleTranslation": "Kiyim sotib olish",
   "titleTranslation_ru": "Покупка одежды",
   "titleTranslation_en": "Buying Clothes",
-  "description_uz": "«Qaysi rang yoqadi?» — do'kondagi ikki kishining kiyim tanlash haqidagi suhbati. Bu dialog rang aytish, narxni muhokama qilish va arzonroqini so'rashni o'rgatadi. Tanish mavzu, do'konda asqotadigan foydali so'zlar. Rol o'ynash va gapirishga ishonch hosil qilish uchun ajoyib.",
+  "description_uz": "«Qaysi rang yoqadi?» — kiyim do'konida xaridor va sotuvchi o'rtasida suhbat. Bu dialog rang aytish, narxni muhokama qilish va arzonroqini so'rashni o'rgatadi. Tanish mavzu, do'konda asqotadigan foydali so'zlar. Rol o'ynash va gapirishga ishonch hosil qilish uchun ajoyib.",
   "description_ru": "«Какой цвет тебе нравится?» — разговор двух людей в магазине о выборе одежды. Этот диалог учит называть цвета, обсуждать цену и просить что-нибудь подешевле. Близкая тема, полезная лексика для магазина. Отлично для ролевых игр и уверенности в речи.",
   "description_en": "«What color do you like?» — two people in a shop talking through a clothing choice. This dialogue teaches naming colors, discussing price, and asking for something cheaper. Familiar topic, useful shopping vocabulary. Great for role-play and building speaking confidence.",
   "category_uz": "Xarid va kiyim",
@@ -95,7 +95,7 @@
           "text_original": "我想买一件衣服。",
           "pinyin": "Wǒ xiǎng mǎi yí jiàn yīfu.",
           "text_translation": "Men bitta kiyim sotib olmoqchiman.",
-          "text_translation_ru": "Я хочу купить одну вещь.",
+          "text_translation_ru": "Я хочу купить одну одежду.",
           "text_translation_en": "I want to buy a piece of clothing.",
           "speaker": "B",
           "words": [
@@ -155,7 +155,7 @@
           "id": "d5-s3",
           "text_original": "你喜欢什么颜色？",
           "pinyin": "Nǐ xǐhuan shénme yánsè?",
-          "text_translation": "Qanday rang yoqadi?",
+          "text_translation": "Sizga qanday rang yoqadi?",
           "text_translation_ru": "Какой цвет вам нравится?",
           "text_translation_en": "What color do you like?",
           "speaker": "A",
@@ -299,7 +299,7 @@
           "pinyin": "Hěn hǎokàn, dànshì yǒu diǎnr guì.",
           "text_translation": "Juda chiroyli, lekin biroz qimmat.",
           "text_translation_ru": "Очень красиво, но немного дорого.",
-          "text_translation_en": "It looks good, but it is a little expensive.",
+          "text_translation_en": "It is pretty, but it is a little expensive.",
           "speaker": "A",
           "words": [
             {
@@ -562,9 +562,9 @@
           "id": "d5-s10",
           "text_original": "那件也很好看。我可以试一试吗？",
           "pinyin": "Nà jiàn yě hěn hǎokàn. Wǒ kěyǐ shì yi shì ma?",
-          "text_translation": "U ham juda chiroyli. Kiyib ko'rsam bo'ladimi?",
+          "text_translation": "U ham juda chiroyli ekan. Kiyib ko'rsam bo'ladimi?",
           "text_translation_ru": "Та тоже очень красивая. Можно примерить?",
-          "text_translation_en": "That one also looks good. Can I try it on?",
+          "text_translation_en": "That one is also pretty. Can I try it on?",
           "speaker": "B",
           "words": [
             {
