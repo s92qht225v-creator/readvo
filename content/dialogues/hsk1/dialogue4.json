@@ -308,5 +308,13 @@
   ],
   "tag": "telefon",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20telegram%20ma/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20telegram%20ma/dialogue.mp3",
+  "vocab": [
+    "有",
+    "纸飞机",
+    "没有",
+    "微信",
+    "加",
+    "可以"
+  ]
 }
