@@ -24,7 +24,7 @@
           "id": "d11-s1",
           "text_original": "你饿吗？",
           "pinyin": "Nǐ è ma?",
-          "text_translation": "Qorningiz ochmi?",
+          "text_translation": "Qorning ochmi?",
           "text_translation_ru": "Ты голоден?",
           "speaker": "A",
           "words": [
@@ -101,8 +101,8 @@
           "id": "d11-s3",
           "text_original": "你想吃什么？",
           "pinyin": "Nǐ xiǎng chī shénme?",
-          "text_translation": "Nima yegingiz keladi?",
-          "text_translation_ru": "Что хочешь поесть?",
+          "text_translation": "Nima yegin kelyapti?",
+          "text_translation_ru": "Что ты хочешь кушать?",
           "speaker": "A",
           "words": [
             {
@@ -157,7 +157,7 @@
           "id": "d11-s4",
           "text_original": "我想吃面条。你呢？",
           "pinyin": "Wǒ xiǎng chī miàntiáo. Nǐ ne?",
-          "text_translation": "Men lag'mon yegim keladi. Siz-chi?",
+          "text_translation": "Men lapsha yegim kelyapti. Senchi?",
           "text_translation_ru": "Я хочу лапшу. А ты?",
           "speaker": "B",
           "words": [
@@ -233,8 +233,8 @@
           "id": "d11-s5",
           "text_original": "我想吃米饭。你喝什么？",
           "pinyin": "Wǒ xiǎng chī mǐfàn. Nǐ hē shénme?",
-          "text_translation": "Men guruch yegim keladi. Nima ichasiz?",
-          "text_translation_ru": "Я хочу рис. Что будешь пить?",
+          "text_translation": "Men guruch yegim kelyapti. Sen nima ichasan?",
+          "text_translation_ru": "Что ты хочешь пить?",
           "speaker": "A",
           "words": [
             {
@@ -366,7 +366,7 @@
           "text_original": "我也喝可乐。",
           "pinyin": "Wǒ yě hē kělè.",
           "text_translation": "Men ham kola ichaman.",
-          "text_translation_ru": "Я тоже колу.",
+          "text_translation_ru": "Я тоже буду колу.",
           "speaker": "A",
           "words": [
             {
