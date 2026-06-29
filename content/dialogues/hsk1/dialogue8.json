@@ -434,6 +434,14 @@
   "dateAdded": "2026-02-22",
   "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue.mp3",
   "vocab": [
-    "学校"
+    "喂",
+    "哪儿",
+    "学校",
+    "教室",
+    "图书馆",
+    "几点",
+    "回",
+    "家",
+    "等"
   ]
 }
