@@ -20,18 +20,9 @@
     "手机",
     "桌子",
     "只",
-    "杯子",
     "书包",
-    "怎么办",
-    "别着急",
-    "打电话",
     "听",
-    "响",
-    "后口袋",
-    "以后",
-    "上课",
-    "时候",
-    "放好"
+    "后口袋"
   ],
   "sections": [
     {
@@ -42,44 +33,44 @@
       "sentences": [
         {
           "id": "d6-s1",
-          "text_original": "你在找什么？",
-          "pinyin": "Nǐ zài zhǎo shén me?",
-          "text_translation": "Nima qidiryapsan?",
-          "text_translation_ru": "Что ты ищешь?",
-          "text_translation_en": "What are you looking for?",
+          "text_original": "你在干什么？",
+          "pinyin": "Nǐ zài gàn shénme?",
+          "text_translation": "Nima qilyapsan?",
+          "text_translation_ru": "Что ты делаешь?",
+          "text_translation_en": "What are you doing?",
           "speaker": "A"
         },
         {
           "id": "d6-s2",
-          "text_original": "我在找我的手机。",
-          "pinyin": "Wǒ zài zhǎo wǒ de shǒu jī.",
-          "text_translation": "Telefonimni qidiryapman.",
-          "text_translation_ru": "Я ищу свой телефон.",
-          "text_translation_en": "I'm looking for my phone.",
+          "text_original": "我在找手机。你看见了吗？",
+          "pinyin": "Wǒ zài zhǎo shǒujī. Nǐ kànjiàn le ma?",
+          "text_translation": "Telefonimni qidiryapman. Ko'rmadingmi?",
+          "text_translation_ru": "Я ищу телефон. Ты его не видел?",
+          "text_translation_en": "I'm looking for my phone. Have you seen it?",
           "speaker": "B"
         },
         {
           "id": "d6-s3",
-          "text_original": "你看桌子上了吗？",
-          "pinyin": "Nǐ kàn zhuō zi shàng le ma?",
-          "text_translation": "Stol ustiga qaradingmi?",
-          "text_translation_ru": "Ты смотрел на столе?",
-          "text_translation_en": "Did you look on the table?",
+          "text_original": "没有。",
+          "pinyin": "Méiyǒu.",
+          "text_translation": "Yo'q.",
+          "text_translation_ru": "Нет.",
+          "text_translation_en": "No.",
           "speaker": "A"
         },
         {
           "id": "d6-s4",
-          "text_original": "看了，不在。桌子上只有书和杯子。",
-          "pinyin": "Kàn le, bú zài. Zhuō zi shàng zhǐ yǒu shū hé bēi zi.",
-          "text_translation": "Qaradim, yo'q. Stol ustida faqat kitob va stakan bor.",
-          "text_translation_ru": "Смотрел, нет. На столе только книги и чашка.",
-          "text_translation_en": "I did, it's not there. There are only books and a cup on the table.",
+          "text_original": "刚才还在桌子上。现在桌子上只有一本书。",
+          "pinyin": "Gāngcái hái zài zhuōzi shàng. Xiànzài zhuōzi shàng zhǐyǒu yì běn shū.",
+          "text_translation": "Hozirgina stol ustida edi. Endi stol ustida faqat bitta kitob bor.",
+          "text_translation_ru": "Только что был на столе. Сейчас на столе только одна книга.",
+          "text_translation_en": "It was just on the table. Now there's only one book on the table.",
           "speaker": "B"
         },
         {
           "id": "d6-s5",
           "text_original": "书包里呢？",
-          "pinyin": "Shū bāo lǐ ne?",
+          "pinyin": "Shūbāo lǐ ne?",
           "text_translation": "Sumkang ichida-chi?",
           "text_translation_ru": "А в рюкзаке?",
           "text_translation_en": "What about in your backpack?",
@@ -87,66 +78,39 @@
         },
         {
           "id": "d6-s6",
-          "text_original": "书包里也没有。怎么办？",
-          "pinyin": "Shū bāo lǐ yě méi yǒu. Zěn me bàn?",
-          "text_translation": "Sumkada ham yo'q. Nima qilaman?",
-          "text_translation_ru": "В рюкзаке тоже нет. Что делать?",
-          "text_translation_en": "It's not in the backpack either. What should I do?",
+          "text_original": "没有。你帮我打个电话吧。",
+          "pinyin": "Méiyǒu. Nǐ bāng wǒ dǎ ge diànhuà ba.",
+          "text_translation": "Yo'q. Menga qo'ng'iroq qilib ber.",
+          "text_translation_ru": "Нет. Позвони на него, пожалуйста.",
+          "text_translation_en": "No. Give it a call for me.",
           "speaker": "B"
         },
         {
           "id": "d6-s7",
-          "text_original": "别着急。我给你打电话。",
-          "pinyin": "Bié zháo jí. Wǒ gěi nǐ dǎ diàn huà.",
-          "text_translation": "Xavotir olma. Men senga qo'ng'iroq qilaman.",
-          "text_translation_ru": "Не волнуйся. Я позвоню тебе.",
-          "text_translation_en": "Don't worry. I'll call your phone.",
+          "text_original": "好，你听……",
+          "pinyin": "Hǎo, nǐ tīng……",
+          "text_translation": "Mayli, eshit……",
+          "text_translation_ru": "Хорошо, послушай……",
+          "text_translation_en": "Okay, listen…",
           "speaker": "A"
         },
         {
           "id": "d6-s8",
-          "text_original": "好，你打吧。",
-          "pinyin": "Hǎo, nǐ dǎ ba.",
-          "text_translation": "Mayli, qo'ng'iroq qil.",
-          "text_translation_ru": "Хорошо, звони.",
-          "text_translation_en": "Okay, go ahead and call.",
+          "text_original": "咦？找到了，它在我后口袋里！",
+          "pinyin": "Yí? Zhǎodào le, tā zài wǒ hòu kǒudài lǐ!",
+          "text_translation": "Voy? Topdim, orqa cho'ntagimda ekan!",
+          "text_translation_ru": "Ой? Нашёл, он в заднем кармане!",
+          "text_translation_en": "Huh? Found it, it's in my back pocket!",
           "speaker": "B"
         },
         {
           "id": "d6-s9",
-          "text_original": "你听，手机在响。",
-          "pinyin": "Nǐ tīng, shǒu jī zài xiǎng.",
-          "text_translation": "Eshit, telefon jiringlayapti.",
-          "text_translation_ru": "Послушай, телефон звонит.",
-          "text_translation_en": "Listen, the phone is ringing.",
+          "text_original": "哈哈！你真搞笑！",
+          "pinyin": "Hāhā! Nǐ zhēn gǎoxiào!",
+          "text_translation": "Haha! Juda kulgilisan!",
+          "text_translation_ru": "Ха-ха! Ты такой смешной!",
+          "text_translation_en": "Haha! You're so funny!",
           "speaker": "A"
-        },
-        {
-          "id": "d6-s10",
-          "text_original": "啊！在我后口袋里。找到了！",
-          "pinyin": "A! Zài wǒ hòu kǒu dài lǐ. Zhǎo dào le!",
-          "text_translation": "Voy! Orqa cho'ntagimda ekan. Topdim!",
-          "text_translation_ru": "А! Он в заднем кармане. Нашёл!",
-          "text_translation_en": "Ah! It's in my back pocket. Found it!",
-          "speaker": "B"
-        },
-        {
-          "id": "d6-s11",
-          "text_original": "以后上课的时候，手机要放好。",
-          "pinyin": "Yǐ hòu shàng kè de shí hòu, shǒu jī yào fàng hǎo.",
-          "text_translation": "Bundan keyin dars vaqtida telefonni yaxshilab joyiga qo'y.",
-          "text_translation_ru": "В следующий раз на уроке убирай телефон как следует.",
-          "text_translation_en": "From now on, during class, put your phone away properly.",
-          "speaker": "A"
-        },
-        {
-          "id": "d6-s12",
-          "text_original": "知道了。谢谢你。",
-          "pinyin": "Zhī dào le. Xiè xiè nǐ.",
-          "text_translation": "Tushundim. Rahmat.",
-          "text_translation_ru": "Понял. Спасибо.",
-          "text_translation_en": "Got it. Thank you.",
-          "speaker": "B"
         }
       ]
     }
