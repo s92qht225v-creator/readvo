@@ -329,5 +329,20 @@
   ],
   "tag": "reja",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xianzai%20ji%20dian/dialogue.mp3"
+  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/xianzai%20ji%20dian/dialogue.mp3",
+  "vocab": [
+    "现在",
+    "几",
+    {
+      "zh": "点",
+      "py": "diǎn",
+      "uz": "soat (vaqt)",
+      "ru": "час (о времени)",
+      "en": "o'clock"
+    },
+    "上课",
+    "下课",
+    "你",
+    "我"
+  ]
 }
