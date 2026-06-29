@@ -70,11 +70,14 @@ export async function POST(req: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'mimo-v2-tts',
+        // MiMo renamed the model + voice (the old mimo-v2-tts / default_zh
+        // now 400 with "Not supported model" / "Unknown voice"). Current
+        // models: mimo-v2.5-tts; voices: mimo_default, 冰糖, 茉莉, … .
+        model: 'mimo-v2.5-tts',
         messages: [{ role: 'assistant', content }],
         audio: {
           format: 'wav',
-          voice: 'default_zh',
+          voice: 'mimo_default',
         },
       }),
     });
