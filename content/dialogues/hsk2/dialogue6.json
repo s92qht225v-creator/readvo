@@ -62,7 +62,7 @@
           "id": "d6-s4",
           "text_original": "刚才还在桌子上。现在桌子上只有一本书。",
           "pinyin": "Gāngcái hái zài zhuōzi shàng. Xiànzài zhuōzi shàng zhǐyǒu yì běn shū.",
-          "text_translation": "Hozirgina stol ustida edi. Endi stol ustida faqat bitta kitob bor.",
+          "text_translation": "Hozirgina stol ustida edi. Endi stol ustida bitta kitob turibdi.",
           "text_translation_ru": "Только что был на столе. Сейчас на столе только одна книга.",
           "text_translation_en": "It was just on the table. Now there's only one book on the table.",
           "speaker": "B"
@@ -71,7 +71,7 @@
           "id": "d6-s5",
           "text_original": "书包里呢？",
           "pinyin": "Shūbāo lǐ ne?",
-          "text_translation": "Sumkang ichida-chi?",
+          "text_translation": "Sumkang ichidachi?",
           "text_translation_ru": "А в рюкзаке?",
           "text_translation_en": "What about in your backpack?",
           "speaker": "A"
@@ -80,8 +80,8 @@
           "id": "d6-s6",
           "text_original": "没有。你帮我打个电话吧。",
           "pinyin": "Méiyǒu. Nǐ bāng wǒ dǎ ge diànhuà ba.",
-          "text_translation": "Yo'q. Menga qo'ng'iroq qilib ber.",
-          "text_translation_ru": "Нет. Позвони на него, пожалуйста.",
+          "text_translation": "Yo'q. Menga qo'ng'iroq qilib yubor.",
+          "text_translation_ru": "Нет. Позвони мне, пожалуйста.",
           "text_translation_en": "No. Give it a call for me.",
           "speaker": "B"
         },
@@ -107,7 +107,7 @@
           "id": "d6-s9",
           "text_original": "哈哈！你真搞笑！",
           "pinyin": "Hāhā! Nǐ zhēn gǎoxiào!",
-          "text_translation": "Haha! Juda kulgilisan!",
+          "text_translation": "Haha! Juda kulgilisanda!",
           "text_translation_ru": "Ха-ха! Ты такой смешной!",
           "text_translation_en": "Haha! You're so funny!",
           "speaker": "A"
