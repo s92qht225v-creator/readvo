@@ -52,15 +52,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'TTS not configured' }, { status: 503 });
   }
 
-  // Build content with style tag
-  let content = text;
-  if (style !== undefined) {
-    // Admin-provided style: use it (empty string = no style tag)
-    if (style) content = `<style>${style}</style>${text}`;
-  } else {
-    // Default learner style
-    content = `<style>语速缓慢，吐字清晰，适合语言学习者</style>${text}`;
-  }
+  // MiMo-V2.5 pacing/style is steered by a natural-language instruction in a
+  // separate `user`-role message — NOT a <style> tag inside the assistant text
+  // (that tag is essentially ignored, which is why everything sounded fast).
+  // The target text goes in the assistant message. `style` lets the admin pass
+  // a custom instruction; '' = no instruction (natural pace); undefined =
+  // default learner pace.
+  const DEFAULT_INSTRUCTION = '请用缓慢的语速、清晰地朗读，适合语言学习者。';
+  const instruction = style !== undefined ? style : DEFAULT_INSTRUCTION;
+  const messages = instruction
+    ? [{ role: 'user', content: instruction }, { role: 'assistant', content: text }]
+    : [{ role: 'assistant', content: text }];
 
   try {
     const response = await fetch('https://api.xiaomimimo.com/v1/chat/completions', {
@@ -74,7 +76,7 @@ export async function POST(req: NextRequest) {
         // now 400 with "Not supported model" / "Unknown voice"). Current
         // models: mimo-v2.5-tts; voices: mimo_default, 冰糖, 茉莉, … .
         model: 'mimo-v2.5-tts',
-        messages: [{ role: 'assistant', content }],
+        messages,
         audio: {
           format: 'wav',
           voice: 'mimo_default',
