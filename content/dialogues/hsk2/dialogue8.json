@@ -45,7 +45,7 @@
           "id": "d8-s2",
           "text_original": "听懂了一点儿，但是我还有几个问题。",
           "pinyin": "Tīng dǒng le yì diǎnr, dàn shì wǒ hái yǒu jǐ gè wèn tí.",
-          "text_translation": "Biroz tushundim, lekin menda hali bir nechta savol bor.",
+          "text_translation": "Biroz tushundim, lekin menda hali ham bir nechta savol bor.",
           "text_translation_ru": "Немного понял, но у меня всё ещё есть несколько вопросов.",
           "text_translation_en": "I understood a little, but I still have a few questions.",
           "speaker": "B"
@@ -54,7 +54,7 @@
           "id": "d8-s3",
           "text_original": "你为什么不问老师？",
           "pinyin": "Nǐ wèi shén me bù wèn lǎo shī?",
-          "text_translation": "Nega o'qituvchidan so'ramaysan?",
+          "text_translation": "Nega o'qituvchidan so'ramayapsan?",
           "text_translation_ru": "Почему ты не спросишь учителя?",
           "text_translation_en": "Why don't you ask the teacher?",
           "speaker": "A"
@@ -63,7 +63,7 @@
           "id": "d8-s4",
           "text_original": "我想问，可是下课以后老师很忙。",
           "pinyin": "Wǒ xiǎng wèn, kě shì xià kè yǐ hòu lǎo shī hěn máng.",
-          "text_translation": "So'ramoqchiman, lekin darsdan keyin o'qituvchi juda band.",
+          "text_translation": "So'ramoqchiman, lekin darsdan keyin o'qituvchi juda band ekan.",
           "text_translation_ru": "Я хочу спросить, но после урока учитель очень занят.",
           "text_translation_en": "I want to ask, but after class the teacher is very busy.",
           "speaker": "B"
@@ -99,7 +99,7 @@
           "id": "d8-s8",
           "text_original": "我知道，这个字读“新”。",
           "pinyin": "Wǒ zhī dào, zhè ge zì dú \"xīn\".",
-          "text_translation": "Bilaman, bu iyeroglif \"xīn\" deb o'qiladi.",
+          "text_translation": "Men bilaman, bu iyeroglif \"xin\" deb o'qiladi.",
           "text_translation_ru": "Я знаю, этот иероглиф читается как «xīn».",
           "text_translation_en": "I know, this character is read as \"xīn\".",
           "speaker": "B"
@@ -108,18 +108,18 @@
           "id": "d8-s9",
           "text_original": "谢谢。你中文学得很好。",
           "pinyin": "Xiè xie. Nǐ Zhōng wén xué de hěn hǎo.",
-          "text_translation": "Rahmat. Sen xitoy tilini juda yaxshi o'rganyapsan.",
+          "text_translation": "Rahmat. Sen xitoy tilini juda yaxshi o'rganyapsan ekan.",
           "text_translation_ru": "Спасибо. Ты очень хорошо учишь китайский.",
           "text_translation_en": "Thanks. You're learning Chinese very well.",
           "speaker": "A"
         },
         {
           "id": "d8-s10",
-          "text_original": "没有，我还要多练习。",
-          "pinyin": "Méi yǒu, wǒ hái yào duō liàn xí.",
-          "text_translation": "Yo'q, men hali ko'proq mashq qilishim kerak.",
-          "text_translation_ru": "Нет, мне ещё нужно больше практиковаться.",
-          "text_translation_en": "No, I still need to practice more.",
+          "text_original": "哪里哪里，我还有好多东西要学习。",
+          "pinyin": "Nǎli nǎli, wǒ hái yǒu hǎoduō dōngxi yào xuéxí.",
+          "text_translation": "Yo'g'e. Men hali juda ko'p narsa o'rganishim kerak.",
+          "text_translation_ru": "Да что ты, мне ещё многому нужно учиться.",
+          "text_translation_en": "Not at all, I still have a lot to learn.",
           "speaker": "B"
         }
       ]
