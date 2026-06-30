@@ -76,7 +76,7 @@
           "id": "d10-s5",
           "text_original": "现在已经三点十分了。",
           "pinyin": "Xiàn zài yǐ jīng sān diǎn shí fēn le.",
-          "text_translation": "Hozir allaqachon uchdan o'n daqiqa o'tdi.",
+          "text_translation": "Hozir uchdan o'n daqiqa o'tdi bo'ldi.",
           "text_translation_ru": "Сейчас уже три часа десять минут.",
           "text_translation_en": "It's already ten past three now.",
           "speaker": "A"
@@ -112,8 +112,8 @@
           "id": "d10-s9",
           "text_original": "那他还要多久？",
           "pinyin": "Nà tā hái yào duō jiǔ?",
-          "text_translation": "Unda u yana qancha vaqt kerak?",
-          "text_translation_ru": "Тогда сколько ему ещё нужно?",
+          "text_translation": "Unda unga yana qancha vaqt kerak ekan?",
+          "text_translation_ru": "Тогда сколько времени ему ещё нужно?",
           "text_translation_en": "So how much longer will he be?",
           "speaker": "A"
         },
