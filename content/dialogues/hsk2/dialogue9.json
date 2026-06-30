@@ -47,8 +47,8 @@
           "id": "d9-s2",
           "text_original": "是一本中文书。",
           "pinyin": "Shì yì běn Zhōng wén shū.",
-          "text_translation": "Bu xitoycha kitob.",
-          "text_translation_ru": "Это книга на китайском.",
+          "text_translation": "Bu Xitoycha kitob.",
+          "text_translation_ru": "Это книга на Китайском.",
           "text_translation_en": "It's a Chinese book.",
           "speaker": "B"
         },
@@ -65,7 +65,7 @@
           "id": "d9-s4",
           "text_original": "不是，我从图书馆借的。",
           "pinyin": "Bú shì, wǒ cóng tú shū guǎn jiè de.",
-          "text_translation": "Yo'q, men kutubxonadan oldim.",
+          "text_translation": "Yo'q, kutubxonadan oldim.",
           "text_translation_ru": "Нет, я взял её в библиотеке.",
           "text_translation_en": "No, I borrowed it from the library.",
           "speaker": "B"
@@ -74,7 +74,7 @@
           "id": "d9-s5",
           "text_original": "这本书怎么样？",
           "pinyin": "Zhè běn shū zěn me yàng?",
-          "text_translation": "Bu kitob qanday?",
+          "text_translation": "Kitob qanday ekan?",
           "text_translation_ru": "Как эта книга?",
           "text_translation_en": "How is this book?",
           "speaker": "A"
@@ -101,7 +101,7 @@
           "id": "d9-s8",
           "text_original": "我已经看了三十页。",
           "pinyin": "Wǒ yǐ jīng kàn le sān shí yè.",
-          "text_translation": "Men allaqachon o'ttiz bet o'qidim.",
+          "text_translation": "Men o'ttiz bet o'qidim bo'ldim.",
           "text_translation_ru": "Я уже прочитал тридцать страниц.",
           "text_translation_en": "I've already read thirty pages.",
           "speaker": "B"
