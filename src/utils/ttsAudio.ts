@@ -13,9 +13,12 @@
 const cache = new Map<string, string>();
 const inflight = new Map<string, Promise<string | null>>();
 
-export async function resolveTtsUrl(text: string): Promise<string | null> {
-  const key = (text ?? '').trim();
-  if (!key) return null;
+export async function resolveTtsUrl(text: string, voice?: string): Promise<string | null> {
+  const raw = (text ?? '').trim();
+  if (!raw) return null;
+  // Cache key includes the voice so per-speaker dialogue lines never share a
+  // cached URL (and a voice change fetches a fresh, distinct URL).
+  const key = voice ? `${voice}:${raw}` : raw;
 
   const cached = cache.get(key);
   if (cached) return cached;
@@ -28,7 +31,7 @@ export async function resolveTtsUrl(text: string): Promise<string | null> {
       const res = await fetch('/api/tts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: key }),
+        body: JSON.stringify(voice ? { text: raw, voice } : { text: raw }),
       });
       if (!res.ok) return null;
 

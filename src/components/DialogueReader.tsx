@@ -117,6 +117,13 @@ const TABS = [
   { id: 'practice', uz: 'Mashq', ru: 'Практика', en: 'Practice' },
 ];
 
+// Per-speaker TTS voices so A/B (and the occasional C) sound like different
+// people. Mapped to MiMo voices; an unmapped speaker → undefined → the route's
+// default voice. Keep in sync with the re-warm scripts.
+const DIALOGUE_VOICE: Record<string, string> = { A: '茉莉', B: '白桦', C: '苏打' };
+const voiceFor = (s: { speaker?: string }): string | undefined =>
+  (s.speaker && DIALOGUE_VOICE[s.speaker]) || undefined;
+
 export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueReaderProps) {
   const { getAccessToken, user, isLoading: authLoading } = useAuth();
   const [language] = useLanguage();
@@ -231,7 +238,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
     let cancelled = false;
     (async () => {
       for (const s of missing) {
-        const url = await resolveTtsUrl(s.text_original);
+        const url = await resolveTtsUrl(s.text_original, voiceFor(s));
         if (cancelled) return;
         if (url) setTtsUrls(prev => (prev[s.id] ? prev : { ...prev, [s.id]: url }));
       }
@@ -281,7 +288,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
     if (!s) { seqActiveRef.current = false; setIsPlaying(false); setIsAudioLoading(false); setAudioActive(false); setActiveSentenceId(null); return; }
     seqIdxRef.current = idx;
     setActiveSentenceId(s.id);
-    const url = s.audio_url ?? ttsUrls[s.id] ?? await resolveTtsUrl(s.text_original);
+    const url = s.audio_url ?? ttsUrls[s.id] ?? await resolveTtsUrl(s.text_original, voiceFor(s));
     if (!seqActiveRef.current) return;
     const a = seqAudioRef.current;
     if (!a) return;
@@ -315,7 +322,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
     // A line that's actually playing always has a resolved URL, so it never
     // reaches here — the tap-same-line toggle in play() is preserved.
     sentenceAudio.stop();
-    void resolveTtsUrl(s.text_original).then(url => {
+    void resolveTtsUrl(s.text_original, voiceFor(s)).then(url => {
       if (!url) return;
       setTtsUrls(prev => (prev[s.id] ? prev : { ...prev, [s.id]: url }));
       sentenceAudio.play(s.id, url);

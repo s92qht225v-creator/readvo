@@ -4,11 +4,22 @@ import { getSupabaseAdmin } from '@/lib/supabase-server';
 const BUCKET = 'audio';
 const TTS_PREFIX = 'tts/grammar';
 
-/** Deterministic file path from Chinese text */
-function storagePath(text: string): string {
+// MiMo voices → ascii-safe path slugs (Chinese voice names would percent-encode
+// in the storage URL). The cache key includes the voice so per-speaker dialogue
+// audio never collides (the old text-only key made A's and B's shared short
+// lines overwrite each other). The DEFAULT voice keeps the original flat path
+// so existing cached audio (grammar, flashcards) isn't orphaned.
+const DEFAULT_VOICE = 'mimo_default';
+const VOICE_SLUG: Record<string, string> = {
+  mimo_default: 'mimo_default', '冰糖': 'bingtang', '茉莉': 'moli', '苏打': 'suda',
+  '白桦': 'baihua', Mia: 'Mia', Chloe: 'Chloe', Milo: 'Milo', Dean: 'Dean',
+};
+
+/** Deterministic file path from Chinese text + voice */
+function storagePath(text: string, voice: string): string {
   // Use hex encoding of the text to avoid URL-encoding issues
   const hex = Buffer.from(text, 'utf-8').toString('hex');
-  return `${TTS_PREFIX}/${hex}.wav`;
+  return voice === DEFAULT_VOICE ? `${TTS_PREFIX}/${hex}.wav` : `${TTS_PREFIX}/${VOICE_SLUG[voice]}/${hex}.wav`;
 }
 
 /** Public URL for a file in the audio bucket */
@@ -26,17 +37,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
   }
 
-  const { text, style, skipCache } = await req.json();
+  const { text, style, voice: rawVoice, skipCache } = await req.json();
 
   if (!text || typeof text !== 'string') {
     return NextResponse.json({ error: 'No text provided' }, { status: 400 });
   }
 
+  // Validate voice against the known MiMo voices; unknown → default.
+  const voice = typeof rawVoice === 'string' && VOICE_SLUG[rawVoice] ? rawVoice : DEFAULT_VOICE;
+
   const supabase = getSupabaseAdmin();
 
   // 1. Check Supabase cache (skip when admin requests fresh generation)
   if (!skipCache) {
-    const path = storagePath(text);
+    const path = storagePath(text, voice);
     const { data: existing, error: dlError } = await supabase.storage
       .from(BUCKET)
       .download(path);
@@ -58,7 +72,7 @@ export async function POST(req: NextRequest) {
   // The target text goes in the assistant message. `style` lets the admin pass
   // a custom instruction; '' = no instruction (natural pace); undefined =
   // default learner pace.
-  const DEFAULT_INSTRUCTION = '请用缓慢的语速、清晰地朗读，适合语言学习者。';
+  const DEFAULT_INSTRUCTION = '请用适当放慢、清晰的语速朗读，适合语言学习者。';
   const instruction = style !== undefined ? style : DEFAULT_INSTRUCTION;
   const messages = instruction
     ? [{ role: 'user', content: instruction }, { role: 'assistant', content: text }]
@@ -79,7 +93,7 @@ export async function POST(req: NextRequest) {
         messages,
         audio: {
           format: 'wav',
-          voice: 'mimo_default',
+          voice,
         },
       }),
     });
@@ -102,7 +116,7 @@ export async function POST(req: NextRequest) {
     }
 
     // 3. Upload to Supabase Storage
-    const path = storagePath(text);
+    const path = storagePath(text, voice);
     const audioBuffer = Buffer.from(audioBase64, 'base64');
     const { error: uploadError } = await supabase.storage
       .from(BUCKET)
