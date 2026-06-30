@@ -24,983 +24,129 @@
       "sentences": [
         {
           "id": "d1-s1",
-          "text_original": "你爸爸做什么工作？",
-          "pinyin": "Nǐ bàba zuò shénme gōngzuò?",
-          "text_translation": "Otang nima ish qiladi?",
-          "text_translation_ru": "Кем работает твой папа?",
-          "text_translation_en": "What job does your father do?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "bàba",
-              "t": "ota",
-              "tr": "папа",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "zuò",
-              "t": "qilmoq",
-              "tr": "делать",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "shénme",
-              "t": "nima",
-              "tr": "что",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "gōngzuò",
-              "t": "ish",
-              "tr": "работа",
-              "h": 2
-            }
-          ]
+          "text_original": "你爸爸在哪儿工作？",
+          "pinyin": "Nǐ bà ba zài nǎr gōng zuò?",
+          "text_translation": "Dadang qayerda ishlaydi?",
+          "text_translation_ru": "Где работает твой папа?",
+          "text_translation_en": "Where does your dad work?",
+          "speaker": "A"
         },
         {
           "id": "d1-s2",
-          "text_original": "我爸爸是医生。",
-          "pinyin": "Wǒ bàba shì yīshēng.",
-          "text_translation": "Otam shifokor.",
-          "text_translation_ru": "Мой папа врач.",
-          "text_translation_en": "My father is a doctor.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "bàba",
-              "t": "ota",
-              "tr": "папа",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "shì",
-              "t": "bo'lmoq",
-              "tr": "быть",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "yīshēng",
-              "t": "shifokor",
-              "tr": "врач",
-              "h": 2
-            }
-          ]
-        },
-        {
-          "id": "d1-s3",
-          "text_original": "他在哪儿工作？",
-          "pinyin": "Tā zài nǎr gōngzuò?",
-          "text_translation": "U qayerda ishlaydi?",
-          "text_translation_ru": "Где он работает?",
-          "text_translation_en": "Where does he work?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "tā",
-              "t": "u",
-              "tr": "он",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "zài",
-              "t": "-da",
-              "tr": "в",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "nǎr",
-              "t": "qayer",
-              "tr": "где",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "gōngzuò",
-              "t": "ishlamoq",
-              "tr": "работать",
-              "h": 2
-            }
-          ]
-        },
-        {
-          "id": "d1-s4",
           "text_original": "他在医院工作。",
-          "pinyin": "Tā zài yīyuàn gōngzuò.",
+          "pinyin": "Tā zài yī yuàn gōng zuò.",
           "text_translation": "U kasalxonada ishlaydi.",
           "text_translation_ru": "Он работает в больнице.",
           "text_translation_en": "He works at a hospital.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "tā",
-              "t": "u",
-              "tr": "он",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "zài",
-              "t": "-da",
-              "tr": "в",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "yīyuàn",
-              "t": "kasalxona",
-              "tr": "больница",
-              "h": 2
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "gōngzuò",
-              "t": "ishlamoq",
-              "tr": "работать",
-              "h": 2
-            }
-          ]
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s3",
+          "text_original": "你妈妈呢？她也在医院工作吗？",
+          "pinyin": "Nǐ mā ma ne? Tā yě zài yī yuàn gōng zuò ma?",
+          "text_translation": "Onang-chi? U ham kasalxonada ishlaydimi?",
+          "text_translation_ru": "А твоя мама? Она тоже работает в больнице?",
+          "text_translation_en": "And your mom? Does she also work at a hospital?",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s4",
+          "text_original": "不是。她是老师，她在学校工作。",
+          "pinyin": "Bú shì. Tā shì lǎo shī, tā zài xué xiào gōng zuò.",
+          "text_translation": "Yo'q. U o'qituvchi, maktabda ishlaydi.",
+          "text_translation_ru": "Нет. Она учительница, работает в школе.",
+          "text_translation_en": "No. She's a teacher; she works at a school.",
+          "speaker": "B"
         },
         {
           "id": "d1-s5",
-          "text_original": "你妈妈呢？",
-          "pinyin": "Nǐ māma ne?",
-          "text_translation": "Onangchi?",
-          "text_translation_ru": "А твоя мама?",
-          "text_translation_en": "What about your mother?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "māma",
-              "t": "ona",
-              "tr": "мама",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "ne",
-              "t": "-chi",
-              "tr": "а",
-              "h": 1,
-              "l": 3
-            }
-          ]
+          "text_original": "她教什么？",
+          "pinyin": "Tā jiāo shén me?",
+          "text_translation": "U nima o'qitadi?",
+          "text_translation_ru": "Что она преподаёт?",
+          "text_translation_en": "What does she teach?",
+          "speaker": "A"
         },
         {
           "id": "d1-s6",
-          "text_original": "她也在医院工作吗？",
-          "pinyin": "Tā yě zài yīyuàn gōngzuò ma?",
-          "text_translation": "U ham kasalxonada ishlaydimi?",
-          "text_translation_ru": "Она тоже работает в больнице?",
-          "text_translation_en": "Does she also work at a hospital?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "tā",
-              "t": "u (ayol)",
-              "tr": "она",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "yě",
-              "t": "ham",
-              "tr": "тоже",
-              "h": 1,
-              "l": 3
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "zài",
-              "t": "-da",
-              "tr": "в",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "yīyuàn",
-              "t": "kasalxona",
-              "tr": "больница",
-              "h": 2
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "gōngzuò",
-              "t": "ishlamoq",
-              "tr": "работать",
-              "h": 2
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "ma",
-              "t": "-mi (savol)",
-              "tr": "ли (вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ]
+          "text_original": "她教中文。她学生都很喜欢她。",
+          "pinyin": "Tā jiāo Zhōng wén. Tā xué sheng dōu hěn xǐ huan tā.",
+          "text_translation": "U Xitoy tili o'qitadi. O'quvchilari uni juda yaxshi ko'rishadi.",
+          "text_translation_ru": "Она преподаёт китайский. Её ученики её очень любят.",
+          "text_translation_en": "She teaches Chinese. Her students all like her a lot.",
+          "speaker": "B"
         },
         {
           "id": "d1-s7",
-          "text_original": "不是。",
-          "pinyin": "Bú shì.",
-          "text_translation": "Yo'q.",
-          "text_translation_ru": "Нет.",
-          "text_translation_en": "No.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "bú shì",
-              "t": "yo'q",
-              "tr": "нет",
-              "h": 1,
-              "l": 2
-            }
-          ]
+          "text_original": "你以后想做什么工作？",
+          "pinyin": "Nǐ yǐ hòu xiǎng zuò shén me gōng zuò?",
+          "text_translation": "Kelajakda qanday ishni qilmoqchisan?",
+          "text_translation_ru": "Кем ты хочешь работать в будущем?",
+          "text_translation_en": "What job do you want to do in the future?",
+          "speaker": "A"
         },
         {
           "id": "d1-s8",
-          "text_original": "她是老师，在学校工作。",
-          "pinyin": "Tā shì lǎoshī, zài xuéxiào gōngzuò.",
-          "text_translation": "U o'qituvchi, maktabda ishlaydi.",
-          "text_translation_ru": "Она учительница, работает в школе.",
-          "text_translation_en": "She is a teacher and works at a school.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "tā",
-              "t": "u (ayol)",
-              "tr": "она",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "shì",
-              "t": "bo'lmoq",
-              "tr": "быть",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "lǎoshī",
-              "t": "o'qituvchi",
-              "tr": "учитель",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "zài",
-              "t": "-da",
-              "tr": "в",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "xuéxiào",
-              "t": "maktab",
-              "tr": "школа",
-              "h": 1,
-              "l": 8
-            },
-            {
-              "i": [
-                8,
-                10
-              ],
-              "p": "gōngzuò",
-              "t": "ishlamoq",
-              "tr": "работать",
-              "h": 2
-            }
-          ]
+          "text_original": "我想做老师，因为我喜欢帮助别人。",
+          "pinyin": "Wǒ xiǎng zuò lǎo shī, yīn wèi wǒ xǐ huan bāng zhù bié ren.",
+          "text_translation": "Men o'qituvchi bo'lmoqchiman, chunki boshqalarga yordam berishni yoqtiraman.",
+          "text_translation_ru": "Я хочу стать учителем, потому что люблю помогать другим.",
+          "text_translation_en": "I want to be a teacher, because I like helping others.",
+          "speaker": "B"
         },
         {
           "id": "d1-s9",
-          "text_original": "她教什么？",
-          "pinyin": "Tā jiāo shénme?",
-          "text_translation": "U nimadan dars beradi?",
-          "text_translation_ru": "Что она преподаёт?",
-          "text_translation_en": "What does she teach?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "tā",
-              "t": "u (ayol)",
-              "tr": "она",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "jiāo",
-              "t": "dars bermoq",
-              "tr": "преподавать",
-              "h": 2
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "shénme",
-              "t": "nima",
-              "tr": "что",
-              "h": 1,
-              "l": 2
-            }
-          ]
+          "text_original": "你呢？你想做什么？",
+          "pinyin": "Nǐ ne? Nǐ xiǎng zuò shén me?",
+          "text_translation": "Sen-chi? Sen nima qilmoqchisan?",
+          "text_translation_ru": "А ты? Кем ты хочешь стать?",
+          "text_translation_en": "And you? What do you want to do?",
+          "speaker": "B"
         },
         {
           "id": "d1-s10",
-          "text_original": "她教中文。",
-          "pinyin": "Tā jiāo Zhōngwén.",
-          "text_translation": "U Xitoy tilidan dars beradi.",
-          "text_translation_ru": "Она преподаёт Китайский.",
-          "text_translation_en": "She teaches Chinese.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "tā",
-              "t": "u (ayol)",
-              "tr": "она",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "jiāo",
-              "t": "dars bermoq",
-              "tr": "преподавать",
-              "h": 2
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "Zhōngwén",
-              "t": "xitoy tili",
-              "tr": "китайский язык",
-              "h": 2
-            }
-          ]
-        },
-        {
-          "id": "d1-s11",
-          "text_original": "她的学生都很喜欢她。",
-          "pinyin": "Tā de xuésheng dōu hěn xǐhuan tā.",
-          "text_translation": "Uning o'quvchilarining hammasi uni juda yaxshi ko'rishadi.",
-          "text_translation_ru": "Её ученики все очень любят её.",
-          "text_translation_en": "Her students all like her very much.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "tā",
-              "t": "u (ayol)",
-              "tr": "она",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "de",
-              "t": "egalik",
-              "tr": "притяж.",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "xuésheng",
-              "t": "o'quvchi",
-              "tr": "ученик",
-              "h": 1,
-              "l": 8
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "dōu",
-              "t": "barchasi",
-              "tr": "все",
-              "h": 1,
-              "l": 3
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "hěn",
-              "t": "juda",
-              "tr": "очень",
-              "h": 1,
-              "l": 3
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "xǐhuan",
-              "t": "yoqtirmoq",
-              "tr": "нравиться",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "tā",
-              "t": "u (ayol)",
-              "tr": "она",
-              "h": 1,
-              "l": 2
-            }
-          ]
-        },
-        {
-          "id": "d1-s12",
-          "text_original": "你以后想做什么工作？",
-          "pinyin": "Nǐ yǐhòu xiǎng zuò shénme gōngzuò?",
-          "text_translation": "Kelajakda nima ish qilmoqchisan?",
-          "text_translation_ru": "Кем ты хочешь стать в будущем?",
-          "text_translation_en": "What job do you want to do in the future?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "yǐhòu",
-              "t": "kelajakda",
-              "tr": "в будущем",
-              "h": 2
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "zuò",
-              "t": "qilmoq",
-              "tr": "делать",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "shénme",
-              "t": "nima",
-              "tr": "что",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "gōngzuò",
-              "t": "ish",
-              "tr": "работа",
-              "h": 2
-            }
-          ]
-        },
-        {
-          "id": "d1-s13",
-          "text_original": "我想做老师，因为我喜欢帮助别人。",
-          "pinyin": "Wǒ xiǎng zuò lǎoshī, yīnwèi wǒ xǐhuan bāngzhù biéren.",
-          "text_translation": "Men o'qituvchi bo'lmoqchiman, chunki boshqalarga yordam berishni yoqtiraman.",
-          "text_translation_ru": "Я хочу стать учителем, потому что люблю помогать другим.",
-          "text_translation_en": "I want to be a teacher because I like helping others.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "zuò",
-              "t": "bo'lmoq / qilmoq",
-              "tr": "стать",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "lǎoshī",
-              "t": "o'qituvchi",
-              "tr": "учитель",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "yīnwèi",
-              "t": "chunki",
-              "tr": "потому что",
-              "h": 2
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                9,
-                11
-              ],
-              "p": "xǐhuan",
-              "t": "yoqtirmoq",
-              "tr": "нравиться",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                11,
-                13
-              ],
-              "p": "bāngzhù",
-              "t": "yordam bermoq",
-              "tr": "помогать",
-              "h": 2
-            },
-            {
-              "i": [
-                13,
-                15
-              ],
-              "p": "biéren",
-              "t": "boshqalar",
-              "tr": "другие",
-              "h": 2
-            }
-          ]
-        },
-        {
-          "id": "d1-s14",
-          "text_original": "很好！",
-          "pinyin": "Hěn hǎo!",
-          "text_translation": "Juda yaxshi!",
-          "text_translation_ru": "Очень хорошо!",
-          "text_translation_en": "Very good!",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hěn",
-              "t": "juda",
-              "tr": "очень",
-              "h": 1,
-              "l": 3
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            }
-          ]
-        },
-        {
-          "id": "d1-s15",
           "text_original": "我想做医生。",
-          "pinyin": "Wǒ xiǎng zuò yīshēng.",
+          "pinyin": "Wǒ xiǎng zuò yī shēng.",
           "text_translation": "Men shifokor bo'lmoqchiman.",
           "text_translation_ru": "Я хочу стать врачом.",
           "text_translation_en": "I want to be a doctor.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "zuò",
-              "t": "bo'lmoq",
-              "tr": "стать",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "yīshēng",
-              "t": "shifokor",
-              "tr": "врач",
-              "h": 2
-            }
-          ]
+          "speaker": "A"
         },
         {
-          "id": "d1-s16",
+          "id": "d1-s11",
           "text_original": "为什么？",
-          "pinyin": "Wèishénme?",
+          "pinyin": "Wèi shén me?",
           "text_translation": "Nega?",
           "text_translation_ru": "Почему?",
           "text_translation_en": "Why?",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                3
-              ],
-              "p": "wèishénme",
-              "t": "nega",
-              "tr": "почему",
-              "h": 2
-            }
-          ]
+          "speaker": "B"
         },
         {
-          "id": "d1-s17",
-          "text_original": "因为我也想帮助别人。",
-          "pinyin": "Yīnwèi wǒ yě xiǎng bāngzhù biéren.",
-          "text_translation": "Chunki men ham boshqalarga yordam bermoqchiman.",
-          "text_translation_ru": "Потому что я тоже хочу помогать другим.",
-          "text_translation_en": "Because I also want to help others.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "yīnwèi",
-              "t": "chunki",
-              "tr": "потому что",
-              "h": 2
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "yě",
-              "t": "ham",
-              "tr": "тоже",
-              "h": 1,
-              "l": 3
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "bāngzhù",
-              "t": "yordam bermoq",
-              "tr": "помогать",
-              "h": 2
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "biéren",
-              "t": "boshqalar",
-              "tr": "другие",
-              "h": 2
-            }
-          ]
+          "id": "d1-s12",
+          "text_original": "因为我也喜欢帮助别人。",
+          "pinyin": "Yīn wèi wǒ yě xǐ huan bāng zhù bié ren.",
+          "text_translation": "Chunki men ham boshqalarga yordam berishni yoqtiraman.",
+          "text_translation_ru": "Потому что я тоже люблю помогать другим.",
+          "text_translation_en": "Because I also like helping others.",
+          "speaker": "A"
+        },
+        {
+          "id": "d1-s13",
+          "text_original": "那我们一起努力吧！",
+          "pinyin": "Nà wǒ men yì qǐ nǔ lì ba!",
+          "text_translation": "Unda birga harakat qilaylik!",
+          "text_translation_ru": "Тогда давай вместе постараемся!",
+          "text_translation_en": "Then let's work hard together!",
+          "speaker": "B"
+        },
+        {
+          "id": "d1-s14",
+          "text_original": "好！",
+          "pinyin": "Hǎo!",
+          "text_translation": "Yaxshi!",
+          "text_translation_ru": "Хорошо!",
+          "text_translation_en": "Okay!",
+          "speaker": "A"
         }
       ]
     }
