@@ -32,6 +32,9 @@ export interface DialoguePage {
   /** Opt-in: dictation uses pinyin-syllable tiles instead of Han characters
    *  (HSK 1 prototype). */
   dictationPinyin?: boolean;
+  /** Per-dialogue speaker→MiMo-voice override (e.g. swap A/B genders for one
+   *  dialogue). Merged over the global DIALOGUE_VOICE map. */
+  voices?: Record<string, string>;
   /** Hero image URL (Supabase). Absent → branded placeholder is used. */
   image?: string;
   /** Public SEO description, per locale. Absent → falls back to title translation. */

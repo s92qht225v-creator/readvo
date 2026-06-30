@@ -99,6 +99,10 @@ export interface DialogueMeta {
   /** Opt-in: dictation tiles are pinyin syllables instead of Han characters
    *  (HSK 1 prototype). Set per-dialogue via `dictationPinyin` in the JSON. */
   dictationPinyin?: boolean;
+  /** Per-dialogue speaker→MiMo-voice override (e.g. swap A/B genders for one
+   *  dialogue). Merged over the global DIALOGUE_VOICE map. Set via `voices`
+   *  in the JSON. */
+  voices?: Record<string, string>;
 }
 
 interface DialogueReaderProps {
@@ -121,12 +125,18 @@ const TABS = [
 // people. Mapped to MiMo voices; an unmapped speaker → undefined → the route's
 // default voice. Keep in sync with the re-warm scripts.
 const DIALOGUE_VOICE: Record<string, string> = { A: '茉莉', B: '白桦', C: '苏打' };
-const voiceFor = (s: { speaker?: string }): string | undefined =>
-  (s.speaker && DIALOGUE_VOICE[s.speaker]) || undefined;
+const voiceForWith = (
+  s: { speaker?: string },
+  override?: Record<string, string>,
+): string | undefined =>
+  (s.speaker && ((override && override[s.speaker]) || DIALOGUE_VOICE[s.speaker])) || undefined;
 
 export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueReaderProps) {
   const { getAccessToken, user, isLoading: authLoading } = useAuth();
   const [language] = useLanguage();
+
+  // Resolve a sentence's TTS voice, honouring this dialogue's per-speaker override.
+  const voiceFor = (s: { speaker?: string }) => voiceForWith(s, meta.voices);
 
   // Localized title translation — used as the preview's H2 heading.
   const titleTr = language === 'ru' ? meta.titleTranslation_ru
