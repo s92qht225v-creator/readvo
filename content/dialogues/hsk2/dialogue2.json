@@ -60,11 +60,11 @@
         },
         {
           "id": "d2-s5",
-          "text_original": "我想吃面条，听说这家的很好吃。",
-          "pinyin": "Wǒ xiǎng chī miàn tiáo, tīng shuō zhè jiā de hěn hǎo chī.",
-          "text_translation": "Men ugra yemoqchiman, eshitishimcha bu yerniki juda mazali.",
-          "text_translation_ru": "Я хочу лапшу, говорят, здесь она очень вкусная.",
-          "text_translation_en": "I want noodles; I heard the ones here are really good.",
+          "text_original": "我想吃面条，听说这家的面条很好吃。",
+          "pinyin": "Wǒ xiǎng chī miàn tiáo, tīng shuō zhè jiā de miàn tiáo hěn hǎo chī.",
+          "text_translation": "Men ugra yemoqchiman, eshitishimcha bu yerning ugrasi juda mazali.",
+          "text_translation_ru": "Я хочу лапшу, говорят, лапша здесь очень вкусная.",
+          "text_translation_en": "I want noodles; I heard the noodles here are really good.",
           "speaker": "A"
         },
         {
