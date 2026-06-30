@@ -80,7 +80,7 @@
           "id": "d15-s4",
           "text_original": "早上人很多，有时候没有座位。",
           "pinyin": "Zǎo shang rén hěn duō, yǒu shí hou méi yǒu zuò wèi.",
-          "text_translation": "Ertalab odam ko'p, ba'zan o'rin bo'lmaydi.",
+          "text_translation": "Ertalab odam ko'p, ba'zan o'tirgani joy bo'lmaydi.",
           "text_translation_ru": "Утром много людей, иногда нет свободных мест.",
           "text_translation_en": "There are a lot of people in the morning; sometimes there are no seats.",
           "speaker": "B"
@@ -107,7 +107,7 @@
           "id": "d15-s7",
           "text_original": "那很近啊。你为什么不走路？",
           "pinyin": "Nà hěn jìn a. Nǐ wèi shén me bù zǒu lù?",
-          "text_translation": "U holda juda yaqin-ku. Nega piyoda yurmaysan?",
+          "text_translation": "Unday bo'lsa juda yaqin ekan. Nega piyoda yurmaysan?",
           "text_translation_ru": "Это же близко. Почему ты не ходишь пешком?",
           "text_translation_en": "That's close. Why don't you walk?",
           "speaker": "A"
@@ -116,7 +116,7 @@
           "id": "d15-s8",
           "text_original": "走路要三十分钟，太久了。坐地铁只要十分钟。",
           "pinyin": "Zǒu lù yào sān shí fēn zhōng, tài jiǔ le. Zuò dì tiě zhǐ yào shí fēn zhōng.",
-          "text_translation": "Piyoda yurish o'ttiz daqiqa, juda uzoq. Metroda atigi o'n daqiqa.",
+          "text_translation": "Piyoda borishga o'ttiz daqiqa ketadi, juda uzoq. Metroda atigi o'n daqiqa.",
           "text_translation_ru": "Пешком тридцать минут — слишком долго. На метро всего десять минут.",
           "text_translation_en": "Walking takes thirty minutes, too long. The subway only takes ten minutes.",
           "speaker": "B"
@@ -170,7 +170,7 @@
           "id": "d15-s14",
           "text_original": "买车太贵了，而且停车也很难。",
           "pinyin": "Mǎi chē tài guì le, ér qiě tíng chē yě hěn nán.",
-          "text_translation": "Mashina olish juda qimmat, va to'xtatish ham qiyin.",
+          "text_translation": "Mashina sotib olish qimmat, va to'xtashga joy topish ham qiyin.",
           "text_translation_ru": "Покупать машину слишком дорого, и парковаться тоже трудно.",
           "text_translation_en": "Buying a car is too expensive, and parking is also difficult.",
           "speaker": "B"
@@ -179,7 +179,7 @@
           "id": "d15-s15",
           "text_original": "那你周末怎么出门？",
           "pinyin": "Nà nǐ zhōu mò zěn me chū mén?",
-          "text_translation": "Unda dam olish kunlari qanday tashqariga chiqasan?",
+          "text_translation": "Unda dam olish kunlari u bu joyga qanday borasan?",
           "text_translation_ru": "А как ты выходишь из дома на выходных?",
           "text_translation_en": "Then how do you get around on weekends?",
           "speaker": "A"
