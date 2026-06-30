@@ -27,836 +27,117 @@
           "text_original": "你饿了吗？",
           "pinyin": "Nǐ è le ma?",
           "text_translation": "Qorning ochdimi?",
-          "text_translation_ru": "Ты голоден?",
+          "text_translation_ru": "Ты проголодался?",
           "text_translation_en": "Are you hungry?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "è",
-              "t": "och",
-              "tr": "голодный",
-              "h": 2
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "le",
-              "t": "o'tgan zamon zarrachasi",
-              "tr": "частица сов. вида",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "ma",
-              "t": "-mi (savol)",
-              "tr": "ли (вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ]
+          "speaker": "A"
         },
         {
           "id": "d2-s2",
-          "text_original": "有一点儿饿。我们去吃饭吧。",
-          "pinyin": "Yǒu yìdiǎnr è. Wǒmen qù chīfàn ba.",
-          "text_translation": "Bir oz och. Yuringlar, ovqatlanamiz.",
-          "text_translation_ru": "Немного. Пойдём поедим.",
-          "text_translation_en": "I'm a little hungry. Let's go eat.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                4
-              ],
-              "p": "yǒu yìdiǎnr",
-              "t": "bir oz",
-              "tr": "немного",
-              "h": 2
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "è",
-              "t": "och",
-              "tr": "голодный",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                9,
-                11
-              ],
-              "p": "chīfàn",
-              "t": "ovqat yemoq",
-              "tr": "есть, кушать",
-              "h": 2
-            },
-            {
-              "i": [
-                11,
-                12
-              ],
-              "p": "ba",
-              "t": "taklif zarrachasi",
-              "tr": "частица предложения",
-              "h": 1,
-              "l": 4
-            }
-          ]
+          "text_original": "有一点儿。我们去吃饭吧。",
+          "pinyin": "Yǒu yì diǎnr. Wǒ men qù chī fàn ba.",
+          "text_translation": "Bir oz. Yur, ovqatlanaylik.",
+          "text_translation_ru": "Немного. Давай пойдём поедим.",
+          "text_translation_en": "A little. Let's go eat.",
+          "speaker": "B"
         },
         {
           "id": "d2-s3",
           "text_original": "你想吃什么？",
-          "pinyin": "Nǐ xiǎng chī shénme?",
-          "text_translation": "Nima yegin kelyapti?",
-          "text_translation_ru": "Что ты хочешь есть?",
+          "pinyin": "Nǐ xiǎng chī shén me?",
+          "text_translation": "Nima yemoqchisan?",
+          "text_translation_ru": "Что ты хочешь съесть?",
           "text_translation_en": "What do you want to eat?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "shénme",
-              "t": "nima",
-              "tr": "что",
-              "h": 1,
-              "l": 2
-            }
-          ]
+          "speaker": "A"
         },
         {
           "id": "d2-s4",
           "text_original": "我想吃米饭和鸡肉。你呢？",
-          "pinyin": "Wǒ xiǎng chī mǐfàn hé jīròu. Nǐ ne?",
-          "text_translation": "Men guruch va tovuq go'shti yegim kelyapti. Senchi?",
+          "pinyin": "Wǒ xiǎng chī mǐ fàn hé jī ròu. Nǐ ne?",
+          "text_translation": "Men guruch va tovuq go'shti yemoqchiman. Sen-chi?",
           "text_translation_ru": "Я хочу рис и курицу. А ты?",
-          "text_translation_en": "I want to eat rice and chicken. What about you?",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "mǐfàn",
-              "t": "guruch",
-              "tr": "рис",
-              "h": 2
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "hé",
-              "t": "va",
-              "tr": "и",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "jīròu",
-              "t": "tovuq go'shti",
-              "tr": "курятина",
-              "h": 2
-            },
-            {
-              "i": [
-                9,
-                10
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                10,
-                11
-              ],
-              "p": "ne",
-              "t": "-chi",
-              "tr": "а",
-              "h": 1,
-              "l": 3
-            }
-          ]
+          "text_translation_en": "I want rice and chicken. And you?",
+          "speaker": "B"
         },
         {
           "id": "d2-s5",
-          "text_original": "我想吃面条。这里的面条很好吃。",
-          "pinyin": "Wǒ xiǎng chī miàntiáo. Zhèlǐ de miàntiáo hěn hǎochī.",
-          "text_translation": "Men lapsha yegim kelyapti. Bu yerning lapshasi juda mazali.",
-          "text_translation_ru": "Я хочу лапшу. Здешняя лапша очень вкусная.",
-          "text_translation_en": "I want to eat noodles. The noodles here are delicious.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "miàntiáo",
-              "t": "lag'mon",
-              "tr": "лапша",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "zhèlǐ",
-              "t": "bu yer",
-              "tr": "здесь",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "de",
-              "t": "egalik",
-              "tr": "притяж.",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                9,
-                11
-              ],
-              "p": "miàntiáo",
-              "t": "lag'mon",
-              "tr": "лапша",
-              "h": 2
-            },
-            {
-              "i": [
-                11,
-                12
-              ],
-              "p": "hěn",
-              "t": "juda",
-              "tr": "очень",
-              "h": 1,
-              "l": 3
-            },
-            {
-              "i": [
-                12,
-                14
-              ],
-              "p": "hǎochī",
-              "t": "mazali",
-              "tr": "вкусный",
-              "h": 2
-            }
-          ]
+          "text_original": "我想吃面条，听说这家的很好吃。",
+          "pinyin": "Wǒ xiǎng chī miàn tiáo, tīng shuō zhè jiā de hěn hǎo chī.",
+          "text_translation": "Men ugra yemoqchiman, eshitishimcha bu yerniki juda mazali.",
+          "text_translation_ru": "Я хочу лапшу, говорят, здесь она очень вкусная.",
+          "text_translation_en": "I want noodles; I heard the ones here are really good.",
+          "speaker": "A"
         },
         {
           "id": "d2-s6",
           "text_original": "你喝什么？",
-          "pinyin": "Nǐ hē shénme?",
-          "text_translation": "Sen nima ichasan?",
-          "text_translation_ru": "Что ты будешь пить?",
-          "text_translation_en": "What do you want to drink?",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "hē",
-              "t": "ichmoq",
-              "tr": "пить",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "shénme",
-              "t": "nima",
-              "tr": "что",
-              "h": 1,
-              "l": 2
-            }
-          ]
+          "pinyin": "Nǐ hē shén me?",
+          "text_translation": "Nima ichasan?",
+          "text_translation_ru": "Что будешь пить?",
+          "text_translation_en": "What will you drink?",
+          "speaker": "B"
         },
         {
           "id": "d2-s7",
           "text_original": "我要一杯茶。你呢？",
           "pinyin": "Wǒ yào yì bēi chá. Nǐ ne?",
-          "text_translation": "Men bir piyola choy istayman. Senchi?",
-          "text_translation_ru": "Я хочу чашку чая. А ты?",
-          "text_translation_en": "I want a cup of tea. What about you?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "yào",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 2
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "yì bēi",
-              "t": "bir piyola",
-              "tr": "одна чашка",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "chá",
-              "t": "choy",
-              "tr": "чай",
-              "h": 1,
-              "l": 7
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "ne",
-              "t": "-chi",
-              "tr": "а",
-              "h": 1,
-              "l": 3
-            }
-          ]
+          "text_translation": "Men bir piyola choy olaman. Sen-chi?",
+          "text_translation_ru": "Я возьму чашку чая. А ты?",
+          "text_translation_en": "I'll have a cup of tea. And you?",
+          "speaker": "A"
         },
         {
           "id": "d2-s8",
           "text_original": "我要一杯水。",
           "pinyin": "Wǒ yào yì bēi shuǐ.",
-          "text_translation": "Menga bir stakan suv.",
-          "text_translation_ru": "Я хочу стакан воды.",
-          "text_translation_en": "I want a glass of water.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "yào",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 2
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "yì bēi",
-              "t": "bir stakan",
-              "tr": "один стакан",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "shuǐ",
-              "t": "suv",
-              "tr": "вода",
-              "h": 1,
-              "l": 7
-            }
-          ]
+          "text_translation": "Men bir stakan suv olaman.",
+          "text_translation_ru": "Я возьму стакан воды.",
+          "text_translation_en": "I'll have a glass of water.",
+          "speaker": "B"
         },
         {
           "id": "d2-s9",
-          "text_original": "服务员,我们要点菜。",
-          "pinyin": "Fúwùyuán, wǒmen yào diǎn cài.",
+          "text_original": "服务员，我们要点菜。",
+          "pinyin": "Fú wù yuán, wǒ men yào diǎn cài.",
           "text_translation": "Ofitsiant, biz buyurtma bermoqchimiz.",
           "text_translation_ru": "Официант, мы хотим сделать заказ.",
-          "text_translation_en": "Waiter, we want to order.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                3
-              ],
-              "p": "fúwùyuán",
-              "t": "ofitsiant",
-              "tr": "официант",
-              "h": 2
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "yào",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 2
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "diǎn cài",
-              "t": "taom buyurmoq",
-              "tr": "заказать блюдо",
-              "h": 2
-            }
-          ]
+          "text_translation_en": "Waiter, we'd like to order.",
+          "speaker": "A"
         },
         {
           "id": "d2-s10",
-          "text_original": "好的,你们要什么？",
-          "pinyin": "Hǎo de, nǐmen yào shénme?",
-          "text_translation": "Yaxshi, nima istaysizlar?",
-          "text_translation_ru": "Хорошо, что вы будете?",
-          "text_translation_en": "Okay, what would you like?",
-          "speaker": "C",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "hǎo de",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "nǐmen",
-              "t": "sizlar",
-              "tr": "вы",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "yào",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "shénme",
-              "t": "nima",
-              "tr": "что",
-              "h": 1,
-              "l": 2
-            }
-          ]
+          "text_original": "好的，你们要什么？",
+          "pinyin": "Hǎo de, nǐ men yào shén me?",
+          "text_translation": "Yaxshi, nima olasizlar?",
+          "text_translation_ru": "Хорошо, что будете заказывать?",
+          "text_translation_en": "Sure, what would you like?",
+          "speaker": "C"
         },
         {
           "id": "d2-s11",
           "text_original": "我要一碗面条和一杯茶。",
-          "pinyin": "Wǒ yào yì wǎn miàntiáo hé yì bēi chá.",
-          "text_translation": "Bir kosa lapsha va bir piyola choy.",
-          "text_translation_ru": "Я хочу одну миску лапши и одну чашку чая.",
-          "text_translation_en": "I want one bowl of noodles and one cup of tea.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "yào",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 2
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "yì wǎn",
-              "t": "bir kosa",
-              "tr": "одна миска",
-              "h": 2
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "miàntiáo",
-              "t": "lag'mon",
-              "tr": "лапша",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "hé",
-              "t": "va",
-              "tr": "и",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "yì bēi",
-              "t": "bir piyola",
-              "tr": "одна чашка",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                9,
-                10
-              ],
-              "p": "chá",
-              "t": "choy",
-              "tr": "чай",
-              "h": 1,
-              "l": 7
-            }
-          ]
+          "pinyin": "Wǒ yào yì wǎn miàn tiáo hé yì bēi chá.",
+          "text_translation": "Men bir kosa ugra va bir piyola choy olaman.",
+          "text_translation_ru": "Я возьму миску лапши и чашку чая.",
+          "text_translation_en": "I'll have a bowl of noodles and a cup of tea.",
+          "speaker": "A"
         },
         {
           "id": "d2-s12",
-          "text_original": "我要米饭、鸡肉和一杯水。",
-          "pinyin": "Wǒ yào mǐfàn, jīròu hé yì bēi shuǐ.",
-          "text_translation": "Menga guruch, tovuq go'shti va bir stakan suv.",
-          "text_translation_ru": "Я хочу рис, курицу и стакан воды.",
-          "text_translation_en": "I want rice, chicken, and a glass of water.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "yào",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 2
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "mǐfàn",
-              "t": "guruch",
-              "tr": "рис",
-              "h": 2
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "jīròu",
-              "t": "tovuq go'shti",
-              "tr": "курятина",
-              "h": 2
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "hé",
-              "t": "va",
-              "tr": "и",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                8,
-                10
-              ],
-              "p": "yì bēi",
-              "t": "bir stakan",
-              "tr": "один стакан",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                10,
-                11
-              ],
-              "p": "shuǐ",
-              "t": "suv",
-              "tr": "вода",
-              "h": 1,
-              "l": 7
-            }
-          ]
+          "text_original": "我要一碗米饭、一份鸡肉和一杯水。",
+          "pinyin": "Wǒ yào yì wǎn mǐ fàn, yí fèn jī ròu hé yì bēi shuǐ.",
+          "text_translation": "Men bir kosa guruch, bir porsiya tovuq go'shti va bir stakan suv olaman.",
+          "text_translation_ru": "Я возьму миску риса, порцию курицы и стакан воды.",
+          "text_translation_en": "I'll have a bowl of rice, a portion of chicken, and a glass of water.",
+          "speaker": "B"
+        },
+        {
+          "id": "d2-s13",
+          "text_original": "好的，请稍等。",
+          "pinyin": "Hǎo de, qǐng shāo děng.",
+          "text_translation": "Yaxshi, biroz kuting.",
+          "text_translation_ru": "Хорошо, подождите немного.",
+          "text_translation_en": "Sure, please wait a moment.",
+          "speaker": "C"
         }
       ]
     }
