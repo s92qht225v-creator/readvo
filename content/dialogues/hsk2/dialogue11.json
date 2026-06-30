@@ -82,8 +82,8 @@
         },
         {
           "id": "d11-s6",
-          "text_original": "不用，我自己可以去。",
-          "pinyin": "Bú yòng, wǒ zì jǐ kě yǐ qù.",
+          "text_original": "不用，我自己去。",
+          "pinyin": "Bú yòng, wǒ zì jǐ qù.",
           "text_translation": "Shart emas, o'zim bora olaman.",
           "text_translation_ru": "Не нужно, я сам могу пойти.",
           "text_translation_en": "No need, I can go by myself.",
@@ -112,7 +112,7 @@
           "text_original": "那很高。你最好马上去医院。",
           "pinyin": "Nà hěn gāo. Nǐ zuì hǎo mǎ shàng qù yī yuàn.",
           "text_translation": "Bu juda baland. Darhol kasalxonaga borganing ma'qul.",
-          "text_translation_ru": "Это высокая. Тебе лучше сразу пойти в больницу.",
+          "text_translation_ru": "Это высоко. Тебе лучше сразу пойти в больницу.",
           "text_translation_en": "That's high. You'd better go to the hospital right away.",
           "speaker": "A"
         },
@@ -129,8 +129,8 @@
           "id": "d11-s11",
           "text_original": "前面路口右转，走五分钟就到了。",
           "pinyin": "Qián miàn lù kǒu yòu zhuǎn, zǒu wǔ fēn zhōng jiù dào le.",
-          "text_translation": "Oldindagi chorrahada o'ngga buriling, besh daqiqa yursangiz yetib borasiz.",
-          "text_translation_ru": "На перекрёстке впереди поверни направо, через пять минут дойдёшь.",
+          "text_translation": "Oldindagi chorrahada o'ngga burilib, besh daqiqa yursang yetib borasan.",
+          "text_translation_ru": "На следующем перекрёстке направо, пять минут пешком — и ты на месте.",
           "text_translation_en": "Turn right at the intersection ahead, walk five minutes and you're there.",
           "speaker": "A"
         },
