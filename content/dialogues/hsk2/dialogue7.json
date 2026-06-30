@@ -38,7 +38,7 @@
           "id": "d7-s1",
           "text_original": "你今天想运动吗？",
           "pinyin": "Nǐ jīn tiān xiǎng yùn dòng ma?",
-          "text_translation": "Bugun sport bilan shug'ullanmoqchimisan?",
+          "text_translation": "Bugun sport bilan shug'ullanishni xoxlaysanmi?",
           "text_translation_ru": "Хочешь сегодня позаниматься спортом?",
           "text_translation_en": "Do you want to exercise today?",
           "speaker": "A"
@@ -56,7 +56,7 @@
           "id": "d7-s3",
           "text_original": "你为什么累？",
           "pinyin": "Nǐ wèi shén me lèi?",
-          "text_translation": "Nega charchagansan?",
+          "text_translation": "Nega charchading?",
           "text_translation_ru": "Почему ты устал?",
           "text_translation_en": "Why are you tired?",
           "speaker": "A"
@@ -74,16 +74,16 @@
           "id": "d7-s5",
           "text_original": "那我们今天不跑步，我们走路好吗？",
           "pinyin": "Nà wǒ men jīn tiān bù pǎo bù, wǒ men zǒu lù hǎo ma?",
-          "text_translation": "Unda bugun yugurmaylik, piyoda yuramizmi?",
+          "text_translation": "Unda bugun yugurmaymiz, bugun yuramiz bo'ladimi?",
           "text_translation_ru": "Тогда давай сегодня не бегать, а пройдёмся пешком, хорошо?",
-          "text_translation_en": "Then let's not run today, let's walk instead, okay?",
+          "text_translation_en": "Then let's not run today, let's walk, okay?",
           "speaker": "A"
         },
         {
           "id": "d7-s6",
           "text_original": "好。走路不太累。",
           "pinyin": "Hǎo. Zǒu lù bú tài lèi.",
-          "text_translation": "Mayli. Piyoda yurish unchalik charchatmaydi.",
+          "text_translation": "Bo'ladi. Yurish unchalik charchatmaydi.",
           "text_translation_ru": "Хорошо. Ходьба не очень утомляет.",
           "text_translation_en": "Okay. Walking isn't too tiring.",
           "speaker": "B"
@@ -137,7 +137,7 @@
           "id": "d7-s12",
           "text_original": "好。我带水，你也带水。",
           "pinyin": "Hǎo. Wǒ dài shuǐ, nǐ yě dài shuǐ.",
-          "text_translation": "Mayli. Men suv olaman, sen ham suv ol.",
+          "text_translation": "Mayli. Men suv olib kelaman, sen ham suv olib kel.",
           "text_translation_ru": "Хорошо. Я возьму воду, ты тоже возьми воду.",
           "text_translation_en": "Okay. I'll bring water, you bring water too.",
           "speaker": "B"
