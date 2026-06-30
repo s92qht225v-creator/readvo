@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import crypto from 'crypto';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 const BUCKET = 'audio';
@@ -22,10 +23,18 @@ function storagePath(text: string, voice: string): string {
   return voice === DEFAULT_VOICE ? `${TTS_PREFIX}/${hex}.wav` : `${TTS_PREFIX}/${VOICE_SLUG[voice]}/${hex}.wav`;
 }
 
-/** Public URL for a file in the audio bucket */
-function publicUrl(path: string): string {
+/** Short content hash → cache-buster query param. When a line is regenerated
+ *  its bytes change, so `?v=` changes, so the browser/CDN fetch the new clip
+ *  instead of serving a stale copy at the same path (overwrites reuse the URL). */
+function ver(buf: Buffer): string {
+  return crypto.createHash('sha1').update(buf).digest('hex').slice(0, 10);
+}
+
+/** Public URL for a file in the audio bucket (with optional cache-buster). */
+function publicUrl(path: string, v?: string): string {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  return `${supabaseUrl}/storage/v1/object/public/${BUCKET}/${encodeURIComponent(path).replace(/%2F/g, '/')}`;
+  const base = `${supabaseUrl}/storage/v1/object/public/${BUCKET}/${encodeURIComponent(path).replace(/%2F/g, '/')}`;
+  return v ? `${base}?v=${v}` : base;
 }
 
 export async function POST(req: NextRequest) {
@@ -56,7 +65,8 @@ export async function POST(req: NextRequest) {
       .download(path);
 
     if (existing && !dlError) {
-      return NextResponse.json({ url: publicUrl(path) });
+      const buf = Buffer.from(await existing.arrayBuffer());
+      return NextResponse.json({ url: publicUrl(path, ver(buf)) });
     }
   }
 
@@ -130,7 +140,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ audio: audioBase64 });
     }
 
-    return NextResponse.json({ url: publicUrl(path) });
+    return NextResponse.json({ url: publicUrl(path, ver(audioBuffer)) });
   } catch (error) {
     console.error('TTS fetch error:', error);
     return NextResponse.json({ error: 'TTS request failed' }, { status: 500 });
