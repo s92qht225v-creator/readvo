@@ -82,6 +82,22 @@ export default function proxy(request: NextRequest) {
     return NextResponse.redirect(dest, 301);
   }
 
+  // Redirect renamed dialogue slugs to their current slug (301 permanent).
+  // Key: `hsk{level}/{old-slug}` → new slug. Add an entry when a dialogue's
+  // slug changes so old/shared links keep working.
+  const RENAMED_DIALOGUE_SLUGS: Record<string, string> = {
+    'hsk2/at-the-restaurant': 'are-you-hungry',
+  };
+  const dlgRename = pathname.match(/^\/(uz|ru|en)\/chinese\/dialogues\/(hsk\d)\/([^/]+)\/?$/);
+  if (dlgRename) {
+    const newSlug = RENAMED_DIALOGUE_SLUGS[`${dlgRename[2]}/${dlgRename[3]}`];
+    if (newSlug) {
+      const dest = request.nextUrl.clone();
+      dest.pathname = `/${dlgRename[1]}/chinese/dialogues/${dlgRename[2]}/${newSlug}`;
+      return NextResponse.redirect(dest, 301);
+    }
+  }
+
   // Redirect legacy book-first dialogue URLs to section-first (301 permanent)
   const dlgReader = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk(\d)\/dialogues\/(.+)$/);
   if (dlgReader) {
