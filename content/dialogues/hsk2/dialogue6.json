@@ -20,12 +20,10 @@
     "手机",
     "桌子",
     "书包",
-    "别着急",
     "打电话",
     "声音",
     "抽屉",
-    "找到",
-    "刚才"
+    "找到"
   ],
   "sections": [
     {
@@ -54,60 +52,51 @@
         },
         {
           "id": "d6-s3",
-          "text_original": "没有。你放在哪儿了？",
-          "pinyin": "Méi yǒu. Nǐ fàng zài nǎr le?",
-          "text_translation": "Yo'q. Qayerga qo'ygan eding?",
-          "text_translation_ru": "Нет. Куда ты его положил?",
-          "text_translation_en": "No. Where did you put it?",
+          "text_original": "没有。你看一下桌子上。",
+          "pinyin": "Méi yǒu. Nǐ kàn yí xià zhuō zi shàng.",
+          "text_translation": "Yo'q. Stol ustiga qarab ko'r.",
+          "text_translation_ru": "Нет. Посмотри на столе.",
+          "text_translation_en": "No. Take a look on the table.",
           "speaker": "A"
         },
         {
           "id": "d6-s4",
-          "text_original": "我刚才放在桌子上了。",
-          "pinyin": "Wǒ gāng cái fàng zài zhuō zi shàng le.",
-          "text_translation": "Hozirgina stol ustiga qo'ygandim.",
-          "text_translation_ru": "Я только что положил его на стол.",
-          "text_translation_en": "I just put it on the table.",
-          "speaker": "B"
-        },
-        {
-          "id": "d6-s5",
           "text_original": "桌子上没有啊。",
           "pinyin": "Zhuō zi shàng méi yǒu a.",
           "text_translation": "Stol ustida yo'q-ku.",
           "text_translation_ru": "На столе его нет.",
           "text_translation_en": "It's not on the table.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s5",
+          "text_original": "那可能在你包里。",
+          "pinyin": "Nà kě néng zài nǐ bāo lǐ.",
+          "text_translation": "Unda sumkangda bo'lsa kerak.",
+          "text_translation_ru": "Тогда, наверное, в твоей сумке.",
+          "text_translation_en": "Then it might be in your bag.",
           "speaker": "A"
         },
         {
           "id": "d6-s6",
-          "text_original": "那可能在书包里。",
-          "pinyin": "Nà kě néng zài shū bāo lǐ.",
-          "text_translation": "Unda ryukzak ichida bo'lsa kerak.",
-          "text_translation_ru": "Тогда, наверное, в рюкзаке.",
-          "text_translation_en": "Then it might be in the backpack.",
-          "speaker": "B"
-        },
-        {
-          "id": "d6-s7",
           "text_original": "书包里也没有。",
           "pinyin": "Shū bāo lǐ yě méi yǒu.",
           "text_translation": "Ryukzakda ham yo'q.",
           "text_translation_ru": "В рюкзаке тоже нет.",
           "text_translation_en": "It's not in the backpack either.",
+          "speaker": "B"
+        },
+        {
+          "id": "d6-s7",
+          "text_original": "你等一下，我给你打个电话。",
+          "pinyin": "Nǐ děng yí xià, wǒ gěi nǐ dǎ ge diàn huà.",
+          "text_translation": "Bir oz kut, men senga qo'ng'iroq qilaman.",
+          "text_translation_ru": "Подожди немного, я тебе позвоню.",
+          "text_translation_en": "Wait a moment, I'll give you a call.",
           "speaker": "A"
         },
         {
           "id": "d6-s8",
-          "text_original": "别着急，我给你打个电话。",
-          "pinyin": "Bié zháo jí, wǒ gěi nǐ dǎ ge diàn huà.",
-          "text_translation": "Xavotir olma, men senga qo'ng'iroq qilaman.",
-          "text_translation_ru": "Не волнуйся, я тебе позвоню.",
-          "text_translation_en": "Don't worry, I'll give you a call.",
-          "speaker": "A"
-        },
-        {
-          "id": "d6-s9",
           "text_original": "好，你打吧。",
           "pinyin": "Hǎo, nǐ dǎ ba.",
           "text_translation": "Yaxshi, qo'ng'iroq qil.",
@@ -116,7 +105,7 @@
           "speaker": "B"
         },
         {
-          "id": "d6-s10",
+          "id": "d6-s9",
           "text_original": "你听，好像有声音。",
           "pinyin": "Nǐ tīng, hǎo xiàng yǒu shēng yīn.",
           "text_translation": "Eshit, tovush chiqayotganga o'xshaydi.",
@@ -125,7 +114,7 @@
           "speaker": "A"
         },
         {
-          "id": "d6-s11",
+          "id": "d6-s10",
           "text_original": "在哪儿？",
           "pinyin": "Zài nǎr?",
           "text_translation": "Qayerda?",
@@ -134,7 +123,7 @@
           "speaker": "B"
         },
         {
-          "id": "d6-s12",
+          "id": "d6-s11",
           "text_original": "在你后面的抽屉里！",
           "pinyin": "Zài nǐ hòu miàn de chōu ti lǐ!",
           "text_translation": "Orqangdagi tortmaning ichida!",
@@ -143,7 +132,7 @@
           "speaker": "A"
         },
         {
-          "id": "d6-s13",
+          "id": "d6-s12",
           "text_original": "找到了！谢谢你！",
           "pinyin": "Zhǎo dào le! Xiè xie nǐ!",
           "text_translation": "Topdim! Rahmat senga!",
@@ -152,7 +141,7 @@
           "speaker": "B"
         },
         {
-          "id": "d6-s14",
+          "id": "d6-s13",
           "text_original": "不客气。",
           "pinyin": "Bú kè qi.",
           "text_translation": "Arzimaydi.",
