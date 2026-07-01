@@ -1,11 +1,11 @@
 {
   "id": "hsk2-dialogue3",
-  "slug": "weather-and-plans",
-  "title": "天气和计划",
-  "pinyin": "Tiānqì hé jìhuà",
-  "titleTranslation": "Ob-havo va rejalar",
-  "titleTranslation_ru": "Погода и планы",
-  "titleTranslation_en": "Weather and Plans",
+  "slug": "how-is-the-weather-tomorrow",
+  "title": "明天天气怎么样？",
+  "pinyin": "Míngtiān tiānqì zěnmeyàng?",
+  "titleTranslation": "Ertaga havo qanday?",
+  "titleTranslation_ru": "Какая завтра погода?",
+  "titleTranslation_en": "How's the weather tomorrow?",
   "description_uz": "«Bugun havo qanaqa?» — ikki do'stning ob-havo va kunlik rejalar haqidagi suhbati. Bu dialog ob-havoni tasvirlash, reja taklif qilish va chastota bildirishni o'rgatadi. Tanish mavzu, foydali kundalik so'zlar — har kuni asqotadi. Shadowing va ravon gapirish uchun ajoyib.",
   "description_ru": "«Какая сегодня погода?» — разговор двух друзей о погоде и планах на день. Этот диалог учит описывать погоду, предлагать план и говорить о частоте действий. Близкая тема, полезная повседневная лексика — пригодится каждый день. Отлично для шэдоуинга и беглой речи.",
   "description_en": "«How's the weather today?» — two friends chatting about the weather and their plans for the day. This dialogue teaches describing weather, suggesting plans, and talking about frequency. Familiar topic, useful everyday vocabulary—handy every single day. Great for shadowing and building fluency.",
@@ -16,23 +16,18 @@
   "tag": "ob-havo",
   "dateAdded": "2026-05-30",
   "vocab": [
-    "今天",
     "天气",
-    "冷",
     "下雨",
+    "冷",
     "公园",
-    "时候",
-    "咖啡店",
-    "学习",
-    "中文",
-    "每天",
-    "都",
-    "每隔一天",
-    "觉得",
-    "难",
-    "有意思",
-    "以后",
-    "面条"
+    "电视",
+    "好玩",
+    "衣服",
+    "商场",
+    "火车站",
+    "后面",
+    "地铁",
+    "见"
   ],
   "sections": [
     {
@@ -43,825 +38,129 @@
       "sentences": [
         {
           "id": "d3-s1",
-          "text_original": "今天天气怎么样？",
-          "pinyin": "Jīntiān tiānqì zěnme yàng?",
-          "text_translation": "Bugun ob-havo qanday?",
-          "text_translation_ru": "Какая сегодня погода?",
-          "text_translation_en": "How is the weather today?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "jīntiān",
-              "t": "bugun",
-              "tr": "сегодня",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "tiānqì",
-              "t": "ob-havo",
-              "tr": "погода",
-              "h": 1
-            },
-            {
-              "i": [
-                4,
-                7
-              ],
-              "p": "zěnme yàng",
-              "t": "qanday",
-              "tr": "как, какой",
-              "h": 1
-            }
-          ]
+          "text_original": "今天下雨。明天天气怎么样？",
+          "pinyin": "Jīn tiān xià yǔ. Míng tiān tiān qì zěn me yàng?",
+          "text_translation": "Bugun yomg'ir yog'yapti. Ertaga havo qanday bo'ladi?",
+          "text_translation_ru": "Сегодня идёт дождь. Какая завтра будет погода?",
+          "text_translation_en": "It's raining today. What will the weather be like tomorrow?",
+          "speaker": "A"
         },
         {
           "id": "d3-s2",
-          "text_original": "今天很冷,还下雨。",
-          "pinyin": "Jīntiān hěn lěng, hái xià yǔ.",
-          "text_translation": "Bugun juda sovuq, yana yomg'ir ham yog'yapti.",
-          "text_translation_ru": "Сегодня очень холодно, и идёт дождь.",
-          "text_translation_en": "Today is very cold, and it is also raining.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "jīntiān",
-              "t": "bugun",
-              "tr": "сегодня",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "hěn",
-              "t": "juda",
-              "tr": "очень",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "lěng",
-              "t": "sovuq",
-              "tr": "холодно",
-              "h": 1
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "hái",
-              "t": "yana, hali ham",
-              "tr": "ещё, также",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "xià yǔ",
-              "t": "yomg'ir yog'moq",
-              "tr": "идёт дождь",
-              "h": 1
-            }
-          ]
+          "text_original": "明天天气很好，不冷不热。",
+          "pinyin": "Míng tiān tiān qì hěn hǎo, bù lěng bú rè.",
+          "text_translation": "Ertaga havo yaxshi bo'ladi, na sovuq, na issiq.",
+          "text_translation_ru": "Завтра погода хорошая, не холодно и не жарко.",
+          "text_translation_en": "Tomorrow the weather is nice, neither cold nor hot.",
+          "speaker": "B"
         },
         {
           "id": "d3-s3",
-          "text_original": "那我们还去公园吗？",
-          "pinyin": "Nà wǒmen hái qù gōngyuán ma?",
-          "text_translation": "Unda biz hali ham parkka boramizmi?",
-          "text_translation_ru": "Тогда мы всё ещё пойдём в парк?",
-          "text_translation_en": "Then are we still going to the park?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nà",
-              "t": "unda, u holda",
-              "tr": "тогда",
-              "h": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "hái",
-              "t": "hali ham",
-              "tr": "всё ещё",
-              "h": 2
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "gōngyuán",
-              "t": "park",
-              "tr": "парк",
-              "h": 2
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "ma",
-              "t": "-mi (savol)",
-              "tr": "ли (вопрос)",
-              "h": 1
-            }
-          ]
+          "text_original": "那我们明天去哪里玩？",
+          "pinyin": "Nà wǒ men míng tiān qù nǎ lǐ wán?",
+          "text_translation": "Unda ertaga qayerga sayr qilgani boramiz?",
+          "text_translation_ru": "Тогда куда мы завтра пойдём гулять?",
+          "text_translation_en": "Then where should we go to hang out tomorrow?",
+          "speaker": "A"
         },
         {
           "id": "d3-s4",
-          "text_original": "不去了。下雨的时候,去公园不太好。",
-          "pinyin": "Bú qù le. Xià yǔ de shíhou, qù gōngyuán bú tài hǎo.",
-          "text_translation": "Yo'q, bormaymiz. Yomg'ir yog'ayotgan paytda parkka borish unchalik yaxshi emas.",
-          "text_translation_ru": "Не пойдём. Когда идёт дождь, в парк ходить не очень хорошо.",
-          "text_translation_en": "No. When it rains, going to the park is not very good.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "bú",
-              "t": "yo'q, emas",
-              "tr": "не",
-              "h": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "le",
-              "t": "o'tgan zamon zarrachasi",
-              "tr": "частица сов. вида",
-              "h": 1
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "xià yǔ",
-              "t": "yomg'ir yog'moq",
-              "tr": "идёт дождь",
-              "h": 1
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "de",
-              "t": "ot yasovchi",
-              "tr": "частица",
-              "h": 1
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "shíhou",
-              "t": "vaqt, payt",
-              "tr": "время, момент",
-              "h": 2
-            },
-            {
-              "i": [
-                10,
-                11
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1
-            },
-            {
-              "i": [
-                11,
-                13
-              ],
-              "p": "gōngyuán",
-              "t": "park",
-              "tr": "парк",
-              "h": 2
-            },
-            {
-              "i": [
-                13,
-                14
-              ],
-              "p": "bú",
-              "t": "yo'q, emas",
-              "tr": "не",
-              "h": 1
-            },
-            {
-              "i": [
-                14,
-                15
-              ],
-              "p": "tài",
-              "t": "juda, ortiqcha",
-              "tr": "слишком, очень",
-              "h": 2
-            },
-            {
-              "i": [
-                15,
-                16
-              ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1
-            }
-          ]
+          "text_original": "我们去公园踢足球吧。",
+          "pinyin": "Wǒ men qù gōng yuán tī zú qiú ba.",
+          "text_translation": "Yur, bog'ga futbol o'ynagani boramiz.",
+          "text_translation_ru": "Давай пойдём в парк играть в футбол.",
+          "text_translation_en": "Let's go to the park and play football.",
+          "speaker": "B"
         },
         {
           "id": "d3-s5",
-          "text_original": "那我们做什么？",
-          "pinyin": "Nà wǒmen zuò shénme?",
-          "text_translation": "Unda biz nima qilamiz?",
-          "text_translation_ru": "Тогда что будем делать?",
-          "text_translation_en": "Then what shall we do?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nà",
-              "t": "unda, u holda",
-              "tr": "тогда",
-              "h": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "zuò",
-              "t": "qilmoq",
-              "tr": "делать",
-              "h": 1
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "shénme",
-              "t": "nima",
-              "tr": "что",
-              "h": 1
-            }
-          ]
+          "text_original": "我不会踢足球。",
+          "pinyin": "Wǒ bú huì tī zú qiú.",
+          "text_translation": "Men futbol o'ynashni bilmayman.",
+          "text_translation_ru": "Я не умею играть в футбол.",
+          "text_translation_en": "I can't play football.",
+          "speaker": "A"
         },
         {
           "id": "d3-s6",
-          "text_original": "我们去咖啡店学习中文吧。",
-          "pinyin": "Wǒmen qù kāfēi diàn xuéxí Zhōngwén ba.",
-          "text_translation": "Yuringlar, kafega borib Xitoy tili o'rganamiz.",
-          "text_translation_ru": "Пойдём в кафе учить китайский.",
-          "text_translation_en": "Let's go to a café to study Chinese.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                6
-              ],
-              "p": "kāfēi diàn",
-              "t": "kafe",
-              "tr": "кафе",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "xuéxí",
-              "t": "o'rganmoq",
-              "tr": "учиться",
-              "h": 1
-            },
-            {
-              "i": [
-                8,
-                10
-              ],
-              "p": "Zhōngwén",
-              "t": "xitoy tili",
-              "tr": "китайский язык",
-              "h": 1
-            },
-            {
-              "i": [
-                10,
-                11
-              ],
-              "p": "ba",
-              "t": "taklif zarrachasi",
-              "tr": "частица предложения",
-              "h": 1
-            }
-          ]
+          "text_original": "那我们在家看电视可以吗？",
+          "pinyin": "Nà wǒ men zài jiā kàn diàn shì kě yǐ ma?",
+          "text_translation": "Unda uyda televizor ko'rsak bo'ladimi?",
+          "text_translation_ru": "Тогда, может, посмотрим телевизор дома?",
+          "text_translation_en": "Then can we watch TV at home?",
+          "speaker": "B"
         },
         {
           "id": "d3-s7",
-          "text_original": "好。你每天都学习中文吗？",
-          "pinyin": "Hǎo. Nǐ měi tiān dōu xuéxí Zhōngwén ma?",
-          "text_translation": "Yaxshi. Sen har kuni xitoy tilini o'rganasanmi?",
-          "text_translation_ru": "Хорошо. Ты каждый день учишь китайский?",
-          "text_translation_en": "Okay. Do you study Chinese every day?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "yaxshi, mayli",
-              "tr": "хорошо",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "měi tiān",
-              "t": "har kuni",
-              "tr": "каждый день",
-              "h": 2
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "dōu",
-              "t": "hammasi, har doim",
-              "tr": "все, всё",
-              "h": 1
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "xuéxí",
-              "t": "o'rganmoq",
-              "tr": "учиться",
-              "h": 1
-            },
-            {
-              "i": [
-                8,
-                10
-              ],
-              "p": "Zhōngwén",
-              "t": "xitoy tili",
-              "tr": "китайский язык",
-              "h": 1
-            },
-            {
-              "i": [
-                10,
-                11
-              ],
-              "p": "ma",
-              "t": "-mi (savol)",
-              "tr": "ли (вопрос)",
-              "h": 1
-            }
-          ]
+          "text_original": "在家不好玩，我们去买衣服吧。",
+          "pinyin": "Zài jiā bù hǎo wán, wǒ men qù mǎi yī fu ba.",
+          "text_translation": "Uyda qiziq emas, yur, kiyim olgani boramiz.",
+          "text_translation_ru": "Дома неинтересно, давай пойдём покупать одежду.",
+          "text_translation_en": "Staying home is boring; let's go shopping for clothes.",
+          "speaker": "A"
         },
         {
           "id": "d3-s8",
-          "text_original": "不是。我每隔一天学习中文。",
-          "pinyin": "Bú shì. Wǒ měi gé yì tiān xuéxí Zhōngwén.",
-          "text_translation": "Yo'q. Men Xitoy tilini kun ora o'rganaman.",
-          "text_translation_ru": "Нет. Я учу китайский через день.",
-          "text_translation_en": "No. I study Chinese every other day.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "bú shì",
-              "t": "yo'q, emas",
-              "tr": "нет, не так",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1
-            },
-            {
-              "i": [
-                4,
-                8
-              ],
-              "p": "měi gé yì tiān",
-              "t": "kun oralatib, bir kun oralab",
-              "tr": "через день",
-              "h": 2
-            },
-            {
-              "i": [
-                8,
-                10
-              ],
-              "p": "xuéxí",
-              "t": "o'rganmoq",
-              "tr": "учиться",
-              "h": 1
-            },
-            {
-              "i": [
-                10,
-                12
-              ],
-              "p": "Zhōngwén",
-              "t": "xitoy tili",
-              "tr": "китайский язык",
-              "h": 1
-            }
-          ]
+          "text_original": "去哪个商场买衣服？",
+          "pinyin": "Qù nǎ ge shāng chǎng mǎi yī fu?",
+          "text_translation": "Qaysi savdo markaziga kiyim olgani boramiz?",
+          "text_translation_ru": "В какой торговый центр пойдём за одеждой?",
+          "text_translation_en": "Which mall should we go to for clothes?",
+          "speaker": "B"
         },
         {
           "id": "d3-s9",
-          "text_original": "你觉得中文难吗？",
-          "pinyin": "Nǐ juéde Zhōngwén nán ma?",
-          "text_translation": "Seningcha Xitoy tili qiyinmi?",
-          "text_translation_ru": "Тебе китайский кажется сложным?",
-          "text_translation_en": "Do you think Chinese is difficult?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "juéde",
-              "t": "his qilmoq, hisoblamoq",
-              "tr": "считать, чувствовать",
-              "h": 2
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "Zhōngwén",
-              "t": "xitoy tili",
-              "tr": "китайский язык",
-              "h": 1
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "nán",
-              "t": "qiyin",
-              "tr": "трудный",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "ma",
-              "t": "-mi (savol)",
-              "tr": "ли (вопрос)",
-              "h": 1
-            }
-          ]
+          "text_original": "火车站后面的那个商场。",
+          "pinyin": "Huǒ chē zhàn hòu miàn de nà ge shāng chǎng.",
+          "text_translation": "Temir yo'l vokzali orqasidagi haligi savdo markaziga.",
+          "text_translation_ru": "В тот торговый центр за железнодорожным вокзалом.",
+          "text_translation_en": "The mall behind the train station.",
+          "speaker": "A"
         },
         {
           "id": "d3-s10",
-          "text_original": "有一点儿难,但是很有意思。",
-          "pinyin": "Yǒu yìdiǎnr nán, dànshì hěn yǒu yìsi.",
-          "text_translation": "Bir oz qiyin, lekin juda qiziqarli.",
-          "text_translation_ru": "Немного сложный, но очень интересный.",
-          "text_translation_en": "It is a little difficult, but very interesting.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                4
-              ],
-              "p": "yǒu yìdiǎnr",
-              "t": "bir oz",
-              "tr": "немного",
-              "h": 2
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "nán",
-              "t": "qiyin",
-              "tr": "трудный",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "dànshì",
-              "t": "lekin",
-              "tr": "но",
-              "h": 2
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "hěn",
-              "t": "juda",
-              "tr": "очень",
-              "h": 1
-            },
-            {
-              "i": [
-                9,
-                12
-              ],
-              "p": "yǒu yìsi",
-              "t": "qiziqarli",
-              "tr": "интересный",
-              "h": 2
-            }
-          ]
+          "text_original": "我们怎么去？坐地铁吗？",
+          "pinyin": "Wǒ men zěn me qù? Zuò dì tiě ma?",
+          "text_translation": "Qanday boramiz? Metrodami?",
+          "text_translation_ru": "Как мы поедем? На метро?",
+          "text_translation_en": "How do we get there? By subway?",
+          "speaker": "B"
         },
         {
           "id": "d3-s11",
-          "text_original": "学习以后,我们去吃饭,好吗？",
-          "pinyin": "Xuéxí yǐhòu, wǒmen qù chīfàn, hǎo ma?",
-          "text_translation": "O'qib bo'lgach, ovqatlangani boramiz, bo'ladimi?",
-          "text_translation_ru": "После учёбы пойдём поедим, хорошо?",
-          "text_translation_en": "After studying, shall we go eat?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "xuéxí",
-              "t": "o'rganmoq",
-              "tr": "учиться",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "yǐhòu",
-              "t": "keyin, so'ng",
-              "tr": "после, потом",
-              "h": 2
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1
-            },
-            {
-              "i": [
-                8,
-                10
-              ],
-              "p": "chīfàn",
-              "t": "ovqat yemoq",
-              "tr": "есть, кушать",
-              "h": 2
-            },
-            {
-              "i": [
-                11,
-                12
-              ],
-              "p": "hǎo",
-              "t": "yaxshi, mayli",
-              "tr": "хорошо",
-              "h": 1
-            },
-            {
-              "i": [
-                12,
-                13
-              ],
-              "p": "ma",
-              "t": "-mi (savol)",
-              "tr": "ли (вопрос)",
-              "h": 1
-            }
-          ]
+          "text_original": "坐公共汽车吧，很近。",
+          "pinyin": "Zuò gōng gòng qì chē ba, hěn jìn.",
+          "text_translation": "Avtobusda boraylik, juda yaqin.",
+          "text_translation_ru": "Давай на автобусе, это близко.",
+          "text_translation_en": "Let's take the bus, it's very close.",
+          "speaker": "A"
         },
         {
           "id": "d3-s12",
-          "text_original": "好。我想吃面条。",
-          "pinyin": "Hǎo. Wǒ xiǎng chī miàntiáo.",
-          "text_translation": "Yaxshi. Men lapsha yegim kelyapti.",
-          "text_translation_ru": "Хорошо. Я хочу лапшу.",
-          "text_translation_en": "Okay. I want to eat noodles.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "yaxshi, mayli",
-              "tr": "хорошо",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "miàntiáo",
-              "t": "lag'mon",
-              "tr": "лапша",
-              "h": 2
-            }
-          ]
+          "text_original": "我们明天几点见？",
+          "pinyin": "Wǒ men míng tiān jǐ diǎn jiàn?",
+          "text_translation": "Ertaga soat nechada uchrashamiz?",
+          "text_translation_ru": "Во сколько мы завтра встретимся?",
+          "text_translation_en": "What time shall we meet tomorrow?",
+          "speaker": "B"
+        },
+        {
+          "id": "d3-s13",
+          "text_original": "上午十点在火车站见，可以吗？",
+          "pinyin": "Shàng wǔ shí diǎn zài huǒ chē zhàn jiàn, kě yǐ ma?",
+          "text_translation": "Ertalab soat o'nda temir yo'l vokzalida uchrashsak, bo'ladimi?",
+          "text_translation_ru": "Давай встретимся в десять утра на вокзале, хорошо?",
+          "text_translation_en": "Let's meet at ten in the morning at the train station, okay?",
+          "speaker": "A"
+        },
+        {
+          "id": "d3-s14",
+          "text_original": "可以，明天十点见！",
+          "pinyin": "Kě yǐ, míng tiān shí diǎn jiàn!",
+          "text_translation": "Bo'ladi, ertaga soat o'nda ko'rishamiz!",
+          "text_translation_ru": "Хорошо, до завтра в десять!",
+          "text_translation_en": "Okay, see you at ten tomorrow!",
+          "speaker": "B"
         }
       ]
     }

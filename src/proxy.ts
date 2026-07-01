@@ -87,6 +87,7 @@ export default function proxy(request: NextRequest) {
   // slug changes so old/shared links keep working.
   const RENAMED_DIALOGUE_SLUGS: Record<string, string> = {
     'hsk2/at-the-restaurant': 'are-you-hungry',
+    'hsk2/weather-and-plans': 'how-is-the-weather-tomorrow',
   };
   const dlgRename = pathname.match(/^\/(uz|ru|en)\/chinese\/dialogues\/(hsk\d)\/([^/]+)\/?$/);
   if (dlgRename) {
