@@ -140,15 +140,6 @@
           "text_translation_ru": "Спасибо, и еда готова. Скорее попробуй.",
           "text_translation_en": "Thanks, the food's ready too. Hurry and taste it.",
           "speaker": "B"
-        },
-        {
-          "id": "d21-s13",
-          "text_original": "嗯。很好吃。",
-          "pinyin": "Ń. Hěn hǎo chī.",
-          "text_translation": "Hmm. Juda mazali.",
-          "text_translation_ru": "Мм. Очень вкусно.",
-          "text_translation_en": "Mmm. It's delicious.",
-          "speaker": "A"
         }
       ]
     }
