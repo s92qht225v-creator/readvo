@@ -45,7 +45,7 @@
           "id": "d9-s2",
           "text_original": "我去图书馆。你呢？",
           "pinyin": "Wǒ qù tú shū guǎn. Nǐ ne?",
-          "text_translation": "Kutubxonaga ketyapman. Sen-chi?",
+          "text_translation": "Kutubxonaga ketyapman. Senchi?",
           "text_translation_ru": "Я иду в библиотеку. А ты?",
           "text_translation_en": "I'm going to the library. And you?",
           "speaker": "B"
@@ -72,7 +72,7 @@
           "id": "d9-s5",
           "text_original": "我还书。你呢？",
           "pinyin": "Wǒ huán shū. Nǐ ne?",
-          "text_translation": "Men kitob qaytaraman. Sen-chi?",
+          "text_translation": "Men kitob qaytaraman. Senchi?",
           "text_translation_ru": "Я возвращаю книгу. А ты?",
           "text_translation_en": "I'm returning a book. And you?",
           "speaker": "A"
@@ -81,7 +81,7 @@
           "id": "d9-s6",
           "text_original": "我借书。我想借一本中文书。",
           "pinyin": "Wǒ jiè shū. Wǒ xiǎng jiè yì běn Zhōng wén shū.",
-          "text_translation": "Men kitob olaman. Bitta Xitoy tili kitobini olmoqchiman.",
+          "text_translation": "Men kitob olaman. Bitta Xitoy tili kitobi olmoqchiman.",
           "text_translation_ru": "Я беру книгу. Хочу взять книгу на китайском.",
           "text_translation_en": "I'm borrowing a book. I want to borrow a Chinese book.",
           "speaker": "B"
@@ -99,7 +99,7 @@
           "id": "d9-s8",
           "text_original": "不知道，我也第一次去。",
           "pinyin": "Bù zhī dào, wǒ yě dì yī cì qù.",
-          "text_translation": "Bilmayman, men ham birinchi marta boryapman.",
+          "text_translation": "Bilmayman, men ham birinchi marta ketyapman.",
           "text_translation_ru": "Не знаю, я тоже иду впервые.",
           "text_translation_en": "I don't know, it's my first time going too.",
           "speaker": "B"
@@ -117,7 +117,7 @@
           "id": "d9-s10",
           "text_original": "简单的故事书。",
           "pinyin": "Jiǎn dān de gù shi shū.",
-          "text_translation": "Oddiy hikoya kitobini.",
+          "text_translation": "Oddiy hikoya kitobi.",
           "text_translation_ru": "Простую книгу с рассказами.",
           "text_translation_en": "A simple storybook.",
           "speaker": "B"
