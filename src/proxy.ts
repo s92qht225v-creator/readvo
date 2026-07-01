@@ -88,6 +88,7 @@ export default function proxy(request: NextRequest) {
   const RENAMED_DIALOGUE_SLUGS: Record<string, string> = {
     'hsk2/at-the-restaurant': 'are-you-hungry',
     'hsk2/weather-and-plans': 'how-is-the-weather-tomorrow',
+    'hsk2/at-the-hotel': 'how-much-per-night',
   };
   const dlgRename = pathname.match(/^\/(uz|ru|en)\/chinese\/dialogues\/(hsk\d)\/([^/]+)\/?$/);
   if (dlgRename) {
