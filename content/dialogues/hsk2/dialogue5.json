@@ -1,11 +1,11 @@
 {
   "id": "hsk2-dialogue5",
   "slug": "buying-clothes",
-  "title": "买衣服",
-  "pinyin": "Mǎi yīfu",
-  "titleTranslation": "Kiyim sotib olish",
-  "titleTranslation_ru": "Покупка одежды",
-  "titleTranslation_en": "Buying Clothes",
+  "title": "我想买一条裤子",
+  "pinyin": "Wǒ xiǎng mǎi yì tiáo kùzi",
+  "titleTranslation": "Men shim sotib olmoqchiman",
+  "titleTranslation_ru": "Я хочу купить брюки",
+  "titleTranslation_en": "I want to buy pants",
   "description_uz": "«Qaysi rang yoqadi?» — kiyim do'konida xaridor va sotuvchi o'rtasida suhbat. Bu dialog rang aytish, narxni muhokama qilish va arzonroqini so'rashni o'rgatadi. Tanish mavzu, do'konda asqotadigan foydali so'zlar. Rol o'ynash va gapirishga ishonch hosil qilish uchun ajoyib.",
   "description_ru": "«Какой цвет тебе нравится?» — разговор двух людей в магазине о выборе одежды. Этот диалог учит называть цвета, обсуждать цену и просить что-нибудь подешевле. Близкая тема, полезная лексика для магазина. Отлично для ролевых игр и уверенности в речи.",
   "description_en": "«What color do you like?» — two people in a shop talking through a clothing choice. This dialogue teaches naming colors, discussing price, and asking for something cheaper. Familiar topic, useful shopping vocabulary. Great for role-play and building speaking confidence.",
@@ -16,21 +16,11 @@
   "tag": "xarid",
   "dateAdded": "2026-06-04",
   "vocab": [
-    "买",
-    "一件",
-    "衣服",
-    "喜欢",
+    "裤子",
     "颜色",
     "蓝色",
-    "怎么样",
-    "好看",
-    "贵",
-    "便宜",
-    "左边",
-    "试一试",
     "试衣间",
-    "前面",
-    "再"
+    "合适"
   ],
   "sections": [
     {
@@ -42,744 +32,146 @@
         {
           "id": "d5-s1",
           "text_original": "你想买什么？",
-          "pinyin": "Nǐ xiǎng mǎi shénme?",
+          "pinyin": "Nǐ xiǎng mǎi shén me?",
           "text_translation": "Nima sotib olmoqchisiz?",
           "text_translation_ru": "Что вы хотите купить?",
-          "text_translation_en": "What do you want to buy?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "mǎi",
-              "t": "sotib olmoq",
-              "tr": "покупать",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "shén me",
-              "t": "nima",
-              "tr": "что",
-              "h": 1
-            }
-          ]
+          "text_translation_en": "What would you like to buy?",
+          "speaker": "B"
         },
         {
           "id": "d5-s2",
-          "text_original": "我想买一件衣服。",
-          "pinyin": "Wǒ xiǎng mǎi yí jiàn yīfu.",
-          "text_translation": "Men bitta kiyim sotib olmoqchiman.",
-          "text_translation_ru": "Я хочу купить одежду.",
-          "text_translation_en": "I want to buy a piece of clothing.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "mǎi",
-              "t": "sotib olmoq",
-              "tr": "покупать",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "yí jiàn",
-              "t": "bitta (dona)",
-              "tr": "одна штука",
-              "h": 2
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "yī fu",
-              "t": "kiyim",
-              "tr": "одежда",
-              "h": 1
-            }
-          ]
+          "text_original": "我想买一条裤子。",
+          "pinyin": "Wǒ xiǎng mǎi yì tiáo kù zi.",
+          "text_translation": "Men bitta shim sotib olmoqchiman.",
+          "text_translation_ru": "Я хочу купить брюки.",
+          "text_translation_en": "I want to buy a pair of pants.",
+          "speaker": "A"
         },
         {
           "id": "d5-s3",
           "text_original": "你喜欢什么颜色？",
-          "pinyin": "Nǐ xǐhuan shénme yánsè?",
-          "text_translation": "Sizga qanday rang yoqadi?",
+          "pinyin": "Nǐ xǐ huan shén me yán sè?",
+          "text_translation": "Qanaqa rang yoqadi?",
           "text_translation_ru": "Какой цвет вам нравится?",
           "text_translation_en": "What color do you like?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "xǐ huan",
-              "t": "yoqmoq, yaxshi ko'rmoq",
-              "tr": "нравиться",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "shén me",
-              "t": "qanday",
-              "tr": "какой",
-              "h": 1
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "yán sè",
-              "t": "rang",
-              "tr": "цвет",
-              "h": 2
-            }
-          ]
+          "speaker": "B"
         },
         {
           "id": "d5-s4",
-          "text_original": "我喜欢蓝色。那件蓝色的衣服怎么样？",
-          "pinyin": "Wǒ xǐhuan lán sè. Nà jiàn lán sè de yīfu zěnme yàng?",
-          "text_translation": "Menga ko'k rang yoqadi. Anavi ko'k kiyim qanaqa?",
-          "text_translation_ru": "Мне нравится синий. Как насчёт той синей одежды?",
-          "text_translation_en": "I like blue. How about that blue one?",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "xǐ huan",
-              "t": "yoqmoq",
-              "tr": "нравиться",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "lán sè",
-              "t": "ko'k rang",
-              "tr": "синий цвет",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "nà jiàn",
-              "t": "anavi (dona)",
-              "tr": "та (штука)",
-              "h": 2
-            },
-            {
-              "i": [
-                8,
-                10
-              ],
-              "p": "lán sè",
-              "t": "ko'k",
-              "tr": "синий",
-              "h": 2
-            },
-            {
-              "i": [
-                10,
-                11
-              ],
-              "p": "de",
-              "t": "(egalik)",
-              "tr": "(притяж.)",
-              "h": 1
-            },
-            {
-              "i": [
-                11,
-                13
-              ],
-              "p": "yī fu",
-              "t": "kiyim",
-              "tr": "одежда",
-              "h": 1
-            },
-            {
-              "i": [
-                13,
-                16
-              ],
-              "p": "zěn me yàng",
-              "t": "qanaqa",
-              "tr": "как, каков",
-              "h": 1
-            }
-          ]
+          "text_original": "黑色或者蓝色都可以。",
+          "pinyin": "Hēi sè huò zhě lán sè dōu kě yǐ.",
+          "text_translation": "Qora yoki ko'k — ikkalasi ham bo'ladi.",
+          "text_translation_ru": "Чёрный или синий — оба подойдут.",
+          "text_translation_en": "Black or blue, either is fine.",
+          "speaker": "A"
         },
         {
           "id": "d5-s5",
-          "text_original": "很好看，但是有点儿贵。",
-          "pinyin": "Hěn hǎokàn, dànshì yǒu diǎnr guì.",
-          "text_translation": "Juda chiroyli, lekin biroz qimmat.",
-          "text_translation_ru": "Очень красиво, но немного дорого.",
-          "text_translation_en": "It is pretty, but it is a little expensive.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hěn",
-              "t": "juda",
-              "tr": "очень",
-              "h": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "hǎo kàn",
-              "t": "chiroyli",
-              "tr": "красивый",
-              "h": 1
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "dàn shì",
-              "t": "lekin",
-              "tr": "но",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                9
-              ],
-              "p": "yǒu diǎn er",
-              "t": "biroz",
-              "tr": "немного",
-              "h": 2
-            },
-            {
-              "i": [
-                9,
-                10
-              ],
-              "p": "guì",
-              "t": "qimmat",
-              "tr": "дорогой",
-              "h": 2
-            }
-          ]
+          "text_original": "这条黑色的怎么样？",
+          "pinyin": "Zhè tiáo hēi sè de zěn me yàng?",
+          "text_translation": "Mana bu qorasi qanday?",
+          "text_translation_ru": "Как насчёт этих чёрных?",
+          "text_translation_en": "How about these black ones?",
+          "speaker": "B"
         },
         {
           "id": "d5-s6",
-          "text_original": "多少钱？",
-          "pinyin": "Duōshao qián?",
-          "text_translation": "Qancha turadi?",
-          "text_translation_ru": "Сколько стоит?",
-          "text_translation_en": "How much is it?",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "duō shǎo",
-              "t": "qancha",
-              "tr": "сколько",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "qián",
-              "t": "pul",
-              "tr": "деньги",
-              "h": 1
-            }
-          ]
+          "text_original": "看起来不错，可以试一下吗？",
+          "pinyin": "Kàn qǐ lái bú cuò, kě yǐ shì yí xià ma?",
+          "text_translation": "Yaxshi ko'rinadi, kiyib ko'rsam bo'ladimi?",
+          "text_translation_ru": "Выглядят неплохо, можно примерить?",
+          "text_translation_en": "They look nice, can I try them on?",
+          "speaker": "A"
         },
         {
           "id": "d5-s7",
-          "text_original": "三百块。",
-          "pinyin": "Sān bǎi kuài.",
-          "text_translation": "Uch yuz yuan.",
-          "text_translation_ru": "Триста юаней.",
-          "text_translation_en": "Three hundred yuan.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "sān bǎi",
-              "t": "uch yuz",
-              "tr": "триста",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "kuài",
-              "t": "yuan (pul birligi)",
-              "tr": "юань",
-              "h": 1
-            }
-          ]
+          "text_original": "当然可以。试衣间在那边。",
+          "pinyin": "Dāng rán kě yǐ. Shì yī jiān zài nà biān.",
+          "text_translation": "Albatta. Kiyinish xonasi anavi tomonda.",
+          "text_translation_ru": "Конечно. Примерочная вон там.",
+          "text_translation_en": "Of course. The fitting room is over there.",
+          "speaker": "B"
         },
         {
           "id": "d5-s8",
-          "text_original": "太贵了。有没有便宜一点儿的？",
-          "pinyin": "Tài guì le. Yǒu méiyǒu piányi yìdiǎnr de?",
-          "text_translation": "Juda qimmat. Arzonroq bormi?",
-          "text_translation_ru": "Слишком дорого. Есть подешевле?",
-          "text_translation_en": "Too expensive. Is there a cheaper one?",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "tài",
-              "t": "juda (haddan ortiq)",
-              "tr": "слишком",
-              "h": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "guì",
-              "t": "qimmat",
-              "tr": "дорогой",
-              "h": 2
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "liǎo",
-              "t": "(yuklama)",
-              "tr": "(частица)",
-              "h": 1
-            },
-            {
-              "i": [
-                4,
-                7
-              ],
-              "p": "yǒu méi yǒu",
-              "t": "bormi",
-              "tr": "есть ли",
-              "h": 1
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "pián yi",
-              "t": "arzon",
-              "tr": "дешёвый",
-              "h": 2
-            },
-            {
-              "i": [
-                9,
-                12
-              ],
-              "p": "yì diǎn ér",
-              "t": "ozgina",
-              "tr": "немного",
-              "h": 1
-            },
-            {
-              "i": [
-                12,
-                13
-              ],
-              "p": "de",
-              "t": "...nikisi",
-              "tr": "тот, который",
-              "h": 1
-            }
-          ]
+          "text_original": "这条裤子有点儿小。",
+          "pinyin": "Zhè tiáo kù zi yǒu diǎnr xiǎo.",
+          "text_translation": "Bu shim biroz kichik ekan.",
+          "text_translation_ru": "Эти брюки немного малы.",
+          "text_translation_en": "These pants are a bit small.",
+          "speaker": "A"
         },
         {
           "id": "d5-s9",
-          "text_original": "有。左边那件两百块。",
-          "pinyin": "Yǒu. Zuǒbian nà jiàn liǎng bǎi kuài.",
-          "text_translation": "Bor. Chap tomondagi anavi ikki yuz yuan.",
-          "text_translation_ru": "Есть. Та, что слева, двести юаней.",
-          "text_translation_en": "Yes. The one on the left is two hundred yuan.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "yǒu",
-              "t": "bor",
-              "tr": "есть",
-              "h": 1
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "zuǒ biān",
-              "t": "chap tomon",
-              "tr": "слева",
-              "h": 2
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "nà jiàn",
-              "t": "anavi dona",
-              "tr": "та штука",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "liǎng bǎi",
-              "t": "ikki yuz",
-              "tr": "двести",
-              "h": 1
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "kuài",
-              "t": "yuan",
-              "tr": "юань",
-              "h": 1
-            }
-          ]
+          "text_original": "那您试一下这条大一点的。",
+          "pinyin": "Nà nín shì yí xià zhè tiáo dà yì diǎn de.",
+          "text_translation": "Unda mana bu kattaroq shimni kiyib ko'ring.",
+          "text_translation_ru": "Тогда примерьте эти, побольше.",
+          "text_translation_en": "Then try these slightly bigger ones.",
+          "speaker": "B"
         },
         {
           "id": "d5-s10",
-          "text_original": "那件也很好看。我可以试一试吗？",
-          "pinyin": "Nà jiàn yě hěn hǎokàn. Wǒ kěyǐ shì yi shì ma?",
-          "text_translation": "U ham juda chiroyli ekan. Kiyib ko'rsam bo'ladimi?",
-          "text_translation_ru": "Та тоже очень красивая. Можно примерить?",
-          "text_translation_en": "That one is also pretty. Can I try it on?",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "nà jiàn",
-              "t": "anavi dona",
-              "tr": "та штука",
-              "h": 2
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "yě",
-              "t": "ham",
-              "tr": "тоже",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "hěn",
-              "t": "juda",
-              "tr": "очень",
-              "h": 1
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "hǎo kàn",
-              "t": "chiroyli",
-              "tr": "красивый",
-              "h": 1
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1
-            },
-            {
-              "i": [
-                8,
-                10
-              ],
-              "p": "kě yǐ",
-              "t": "mumkin, bo'ladi",
-              "tr": "можно",
-              "h": 2
-            },
-            {
-              "i": [
-                10,
-                13
-              ],
-              "p": "shì yi shì",
-              "t": "kiyib ko'rmoq, sinab ko'rmoq",
-              "tr": "примерить, попробовать",
-              "h": 2
-            },
-            {
-              "i": [
-                13,
-                14
-              ],
-              "p": "ma",
-              "t": "(so'roq yuklamasi)",
-              "tr": "(вопрос. частица)",
-              "h": 1
-            }
-          ]
+          "text_original": "好，这条很合适。多少钱？",
+          "pinyin": "Hǎo, zhè tiáo hěn hé shì. Duō shao qián?",
+          "text_translation": "Yaxshi, bu juda mos keldi. Qancha turadi?",
+          "text_translation_ru": "Хорошо, эти как раз впору. Сколько стоят?",
+          "text_translation_en": "Okay, these fit well. How much are they?",
+          "speaker": "A"
         },
         {
           "id": "d5-s11",
-          "text_original": "可以。试衣间在前面。",
-          "pinyin": "Kěyǐ. Shìyījiān zài qiánmiàn.",
-          "text_translation": "Bo'ladi. Kiyib ko'rish xonasi oldinda.",
-          "text_translation_ru": "Можно. Примерочная впереди.",
-          "text_translation_en": "Yes. The fitting room is in front.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "kě yǐ",
-              "t": "mumkin",
-              "tr": "можно",
-              "h": 2
-            },
-            {
-              "i": [
-                3,
-                6
-              ],
-              "p": "shì yī jiān",
-              "t": "kiyim kiyib ko'rish xonasi",
-              "tr": "примерочная",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "zài",
-              "t": "-da (joylashgan)",
-              "tr": "находиться",
-              "h": 1
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "qián miàn",
-              "t": "oldinda",
-              "tr": "впереди",
-              "h": 1
-            }
-          ]
+          "text_original": "一百八十块。",
+          "pinyin": "Yì bǎi bā shí kuài.",
+          "text_translation": "Bir yuz sakson yuan.",
+          "text_translation_ru": "Сто восемьдесят юаней.",
+          "text_translation_en": "One hundred eighty yuan.",
+          "speaker": "B"
         },
         {
           "id": "d5-s12",
-          "text_original": "谢谢。我试完以后再买。",
-          "pinyin": "Xièxie. Wǒ shì wán yǐhòu zài mǎi.",
-          "text_translation": "Rahmat. Kiyib ko'rganimdan keyin sotib olaman.",
-          "text_translation_ru": "Спасибо. Куплю после примерки.",
-          "text_translation_en": "Thank you. I will buy it after trying it on.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "xiè xiè",
-              "t": "rahmat",
-              "tr": "спасибо",
-              "h": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "shì",
-              "t": "kiyib ko'rmoq",
-              "tr": "примерять",
-              "h": 2
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "wán",
-              "t": "tugatmoq",
-              "tr": "закончить",
-              "h": 2
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "yǐ hòu",
-              "t": "keyin",
-              "tr": "после",
-              "h": 2
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "zài",
-              "t": "keyin, yana",
-              "tr": "потом, ещё",
-              "h": 2
-            },
-            {
-              "i": [
-                9,
-                10
-              ],
-              "p": "mǎi",
-              "t": "sotib olmoq",
-              "tr": "покупать",
-              "h": 1
-            }
-          ]
+          "text_original": "这件还有别的颜色吗？",
+          "pinyin": "Zhè jiàn hái yǒu bié de yán sè ma?",
+          "text_translation": "Buningdan boshqa rangi ham bormi?",
+          "text_translation_ru": "А есть другие цвета?",
+          "text_translation_en": "Do these come in other colors?",
+          "speaker": "A"
+        },
+        {
+          "id": "d5-s13",
+          "text_original": "还有蓝色和灰色。",
+          "pinyin": "Hái yǒu lán sè hé huī sè.",
+          "text_translation": "Ko'k va kulrang ham bor.",
+          "text_translation_ru": "Есть ещё синий и серый.",
+          "text_translation_en": "We also have blue and gray.",
+          "speaker": "B"
+        },
+        {
+          "id": "d5-s14",
+          "text_original": "不用了，黑色就好。",
+          "pinyin": "Bú yòng le, hēi sè jiù hǎo.",
+          "text_translation": "Kerak emas, qorasi bo'laveradi.",
+          "text_translation_ru": "Не нужно, чёрные подойдут.",
+          "text_translation_en": "No need, black is fine.",
+          "speaker": "A"
+        },
+        {
+          "id": "d5-s15",
+          "text_original": "好的，给您。",
+          "pinyin": "Hǎo de, gěi nín.",
+          "text_translation": "Yaxshi, mana sizga.",
+          "text_translation_ru": "Хорошо, вот, пожалуйста.",
+          "text_translation_en": "Alright, here you go.",
+          "speaker": "B"
+        },
+        {
+          "id": "d5-s16",
+          "text_original": "谢谢！",
+          "pinyin": "Xiè xie!",
+          "text_translation": "Rahmat!",
+          "text_translation_ru": "Спасибо!",
+          "text_translation_en": "Thank you!",
+          "speaker": "A"
         }
       ]
     }
