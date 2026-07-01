@@ -119,11 +119,11 @@
         },
         {
           "id": "d3-s10",
-          "text_original": "我们怎么去？坐地铁吗？",
-          "pinyin": "Wǒ men zěn me qù? Zuò dì tiě ma?",
-          "text_translation": "Qanday boramiz? Metrodami?",
-          "text_translation_ru": "Как мы поедем? На метро?",
-          "text_translation_en": "How do we get there? By subway?",
+          "text_original": "我们坐地铁去吗？",
+          "pinyin": "Wǒ men zuò dì tiě qù ma?",
+          "text_translation": "Metroda boramizmi?",
+          "text_translation_ru": "Мы поедем на метро?",
+          "text_translation_en": "Shall we go by subway?",
           "speaker": "B"
         },
         {
@@ -146,11 +146,11 @@
         },
         {
           "id": "d3-s13",
-          "text_original": "上午十点在火车站见，可以吗？",
-          "pinyin": "Shàng wǔ shí diǎn zài huǒ chē zhàn jiàn, kě yǐ ma?",
-          "text_translation": "Ertalab soat o'nda temir yo'l vokzalida uchrashsak, bo'ladimi?",
-          "text_translation_ru": "Давай встретимся в десять утра на вокзале, хорошо?",
-          "text_translation_en": "Let's meet at ten in the morning at the train station, okay?",
+          "text_original": "上午十点在公交车站见，可以吗？",
+          "pinyin": "Shàng wǔ shí diǎn zài gōng jiāo chē zhàn jiàn, kě yǐ ma?",
+          "text_translation": "Ertalab soat o'nda avtobus bekatida uchrashsak, bo'ladimi?",
+          "text_translation_ru": "Давай встретимся в десять утра на автобусной остановке, хорошо?",
+          "text_translation_en": "Let's meet at ten in the morning at the bus stop, okay?",
           "speaker": "A"
         },
         {
