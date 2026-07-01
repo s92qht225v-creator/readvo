@@ -1,11 +1,11 @@
 {
   "id": "hsk2-dialogue25",
-  "slug": "new-job",
-  "title": "工作",
-  "pinyin": "Gōngzuò",
-  "titleTranslation": "Ish",
-  "titleTranslation_ru": "Работа",
-  "titleTranslation_en": "Work",
+  "slug": "did-you-find-a-job",
+  "title": "你找到工作了吗？",
+  "pinyin": "Nǐ zhǎodào gōngzuò le ma?",
+  "titleTranslation": "Ish topdingmi?",
+  "titleTranslation_ru": "Ты нашёл работу?",
+  "titleTranslation_en": "Did you find a job?",
   "description_uz": "«Ish topdingmi? Hozir kichik kompaniyada ishlayapman.» — yangi ish haqidagi do'stona suhbat. Bu dialog kasb, ish vaqti va hamkasblar haqida so'rash, his-tuyg'u bildirishni mashq qiladi. Tanish mavzu, foydali ish so'zlari — tabiiy bo'lguncha takrorlash uchun qisqa. Shadowing va gapirish uchun ajoyib.",
   "description_ru": "«Ты нашёл работу? Сейчас работаю в небольшой компании.» — дружеский разговор о новой работе. Этот диалог тренирует, как спрашивать о профессии, рабочем графике и коллегах и выражать чувства. Знакомая тема, полезная рабочая лексика — короткий, чтобы повторять до естественности. Отлично для шэдоуинга и речи.",
   "description_en": "«Did you find a job? I'm at a small company now.» — a friendly chat about a new job. This dialogue practices asking about someone's profession, working hours, and colleagues, and expressing how you feel. Familiar topic, useful work vocabulary—short enough to repeat until natural. Great for shadowing and speaking.",
@@ -23,13 +23,10 @@
     "有意思",
     "上班",
     "下班",
-    "常常",
+    "休息",
     "同事",
     "相处",
-    "友好",
-    "地铁",
-    "方便",
-    "虽然"
+    "友好"
   ],
   "sections": [
     {
@@ -44,16 +41,16 @@
           "pinyin": "Nǐ zhǎo dào gōng zuò le ma?",
           "text_translation": "Ish topdingmi?",
           "text_translation_ru": "Ты нашёл работу?",
-          "text_translation_en": "Have you found a job?",
+          "text_translation_en": "Did you find a job?",
           "speaker": "A"
         },
         {
           "id": "d25-s2",
-          "text_original": "找到了。我现在在一家小公司工作。",
-          "pinyin": "Zhǎo dào le. Wǒ xiàn zài zài yì jiā xiǎo gōng sī gōng zuò.",
-          "text_translation": "Topdim. Hozir kichik bir kompaniyada ishlayman.",
-          "text_translation_ru": "Нашёл. Сейчас работаю в небольшой компании.",
-          "text_translation_en": "I did. I'm now working at a small company.",
+          "text_original": "找到了。我在一家小公司工作。",
+          "pinyin": "Zhǎo dào le. Wǒ zài yì jiā xiǎo gōng sī gōng zuò.",
+          "text_translation": "Topdim. Men kichik bir kompaniyada ishlayapman.",
+          "text_translation_ru": "Нашёл. Я работаю в маленькой компании.",
+          "text_translation_en": "I did. I work at a small company.",
           "speaker": "B"
         },
         {
@@ -62,23 +59,23 @@
           "pinyin": "Zuò shén me gōng zuò?",
           "text_translation": "Qanaqa ish qilasan?",
           "text_translation_ru": "Кем работаешь?",
-          "text_translation_en": "What do you do?",
+          "text_translation_en": "What kind of work do you do?",
           "speaker": "A"
         },
         {
           "id": "d25-s4",
           "text_original": "我做助理。",
           "pinyin": "Wǒ zuò zhù lǐ.",
-          "text_translation": "Yordamchi bo'lib ishlayman.",
+          "text_translation": "Men yordamchi bo'lib ishlayman.",
           "text_translation_ru": "Я работаю ассистентом.",
-          "text_translation_en": "I work as an assistant.",
+          "text_translation_en": "I'm an assistant.",
           "speaker": "B"
         },
         {
           "id": "d25-s5",
           "text_original": "工作辛苦吗？",
           "pinyin": "Gōng zuò xīn kǔ ma?",
-          "text_translation": "Ish qiyinmi?",
+          "text_translation": "Ish og'irmi?",
           "text_translation_ru": "Работа тяжёлая?",
           "text_translation_en": "Is the work tiring?",
           "speaker": "A"
@@ -87,7 +84,7 @@
           "id": "d25-s6",
           "text_original": "有一点辛苦，但是很有意思。",
           "pinyin": "Yǒu yì diǎn xīn kǔ, dàn shì hěn yǒu yì si.",
-          "text_translation": "Birozgina qiyin, lekin juda qiziqarli.",
+          "text_translation": "Biroz og'ir, lekin juda qiziqarli.",
           "text_translation_ru": "Немного тяжело, но очень интересно.",
           "text_translation_en": "A bit tiring, but very interesting.",
           "speaker": "B"
@@ -97,16 +94,16 @@
           "text_original": "你每天几点上班？",
           "pinyin": "Nǐ měi tiān jǐ diǎn shàng bān?",
           "text_translation": "Har kuni soat nechada ishga borasan?",
-          "text_translation_ru": "Во сколько ты каждый день начинаешь работу?",
-          "text_translation_en": "What time do you start work each day?",
+          "text_translation_ru": "Во сколько ты каждый день идёшь на работу?",
+          "text_translation_en": "What time do you start work every day?",
           "speaker": "A"
         },
         {
           "id": "d25-s8",
           "text_original": "早上九点上班，下午六点下班。",
           "pinyin": "Zǎo shang jiǔ diǎn shàng bān, xià wǔ liù diǎn xià bān.",
-          "text_translation": "Ertalab to'qqizda ishga, tushdan keyin oltida ishdan chiqaman.",
-          "text_translation_ru": "В девять утра на работу, в шесть вечера с работы.",
+          "text_translation": "Ertalab soat to'qqizda ishga boraman, kechqurun soat oltida qaytaman.",
+          "text_translation_ru": "Начинаю в девять утра, заканчиваю в шесть вечера.",
           "text_translation_en": "I start at nine in the morning and finish at six in the evening.",
           "speaker": "B"
         },
@@ -114,18 +111,18 @@
           "id": "d25-s9",
           "text_original": "中午休息吗？",
           "pinyin": "Zhōng wǔ xiū xi ma?",
-          "text_translation": "Tushda dam olasanmi?",
+          "text_translation": "Tushlikda dam olasanmi?",
           "text_translation_ru": "В обед отдыхаешь?",
-          "text_translation_en": "Do you take a break at noon?",
+          "text_translation_en": "Do you get a break at noon?",
           "speaker": "A"
         },
         {
           "id": "d25-s10",
-          "text_original": "休息一个小时。我常常和同事一起吃饭。",
-          "pinyin": "Xiū xi yí ge xiǎo shí. Wǒ cháng cháng hé tóng shì yì qǐ chī fàn.",
-          "text_translation": "Bir soat dam olaman. Ko'pincha hamkasblar bilan birga ovqatlanaman.",
-          "text_translation_ru": "Отдыхаю час. Я часто обедаю вместе с коллегами.",
-          "text_translation_en": "I rest for an hour. I often eat with my colleagues.",
+          "text_original": "休息一个小时，常常和同事一起吃饭。",
+          "pinyin": "Xiū xi yí gè xiǎo shí, cháng cháng hé tóng shì yì qǐ chī fàn.",
+          "text_translation": "Bir soat dam olaman, ko'pincha hamkasblar bilan birga ovqatlanaman.",
+          "text_translation_ru": "Отдыхаю час, часто обедаю вместе с коллегами.",
+          "text_translation_en": "I get an hour break, and I often eat with colleagues.",
           "speaker": "B"
         },
         {
@@ -139,47 +136,11 @@
         },
         {
           "id": "d25-s12",
-          "text_original": "很好。他们都很友好。",
-          "pinyin": "Hěn hǎo. Tā men dōu hěn yǒu hǎo.",
-          "text_translation": "Juda yaxshi. Hammasi juda do'stona.",
-          "text_translation_ru": "Очень. Они все дружелюбные.",
-          "text_translation_en": "Very. They're all friendly.",
-          "speaker": "B"
-        },
-        {
-          "id": "d25-s13",
-          "text_original": "公司离你家远不远？",
-          "pinyin": "Gōng sī lí nǐ jiā yuǎn bu yuǎn?",
-          "text_translation": "Kompaniya uyingdan uzoqmi?",
-          "text_translation_ru": "Компания далеко от твоего дома?",
-          "text_translation_en": "Is the company far from your home?",
-          "speaker": "A"
-        },
-        {
-          "id": "d25-s14",
-          "text_original": "不远。坐地铁二十分钟。",
-          "pinyin": "Bù yuǎn. Zuò dì tiě èr shí fēn zhōng.",
-          "text_translation": "Uzoq emas. Metroda yigirma daqiqa.",
-          "text_translation_ru": "Недалеко. Двадцать минут на метро.",
-          "text_translation_en": "Not far. Twenty minutes by subway.",
-          "speaker": "B"
-        },
-        {
-          "id": "d25-s15",
-          "text_original": "那很方便。你喜欢你的工作吗？",
-          "pinyin": "Nà hěn fāng biàn. Nǐ xǐ huan nǐ de gōng zuò ma?",
-          "text_translation": "Bu juda qulay. Ishingni yoqtirasanmi?",
-          "text_translation_ru": "Это очень удобно. Тебе нравится твоя работа?",
-          "text_translation_en": "That's convenient. Do you like your job?",
-          "speaker": "A"
-        },
-        {
-          "id": "d25-s16",
-          "text_original": "很喜欢。虽然累，但是很开心。",
-          "pinyin": "Hěn xǐ huan. Suī rán lèi, dàn shì hěn kāi xīn.",
-          "text_translation": "Juda yoqtiraman. Charchasam ham, juda xursandman.",
-          "text_translation_ru": "Очень нравится. Хоть и устаю, но очень рад.",
-          "text_translation_en": "I love it. Even though it's tiring, I'm very happy.",
+          "text_original": "很好，他们都很友好。",
+          "pinyin": "Hěn hǎo, tā men dōu hěn yǒu hǎo.",
+          "text_translation": "Juda yaxshi, ularning barchasi juda samimiy.",
+          "text_translation_ru": "Очень хорошо, они все очень дружелюбные.",
+          "text_translation_en": "Very good, they're all very friendly.",
           "speaker": "B"
         }
       ]

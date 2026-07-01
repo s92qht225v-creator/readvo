@@ -101,6 +101,7 @@ export default function proxy(request: NextRequest) {
     'hsk2/renting-an-apartment': 'how-big-an-apartment',
     'hsk2/having-a-pet': 'do-you-have-a-pet',
     'hsk2/shopping-for-clothes': 'i-bought-a-new-phone',
+    'hsk2/new-job': 'did-you-find-a-job',
   };
   const dlgRename = pathname.match(/^\/(uz|ru|en)\/chinese\/dialogues\/(hsk\d)\/([^/]+)\/?$/);
   if (dlgRename) {
