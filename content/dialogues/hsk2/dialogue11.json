@@ -1,11 +1,11 @@
 {
   "id": "hsk2-dialogue11",
-  "slug": "seeing-a-doctor",
-  "title": "看病",
-  "pinyin": "Kàn bìng",
-  "titleTranslation": "Shifokorga borish",
-  "titleTranslation_ru": "Идти к врачу",
-  "titleTranslation_en": "Seeing a Doctor",
+  "slug": "have-you-taken-medicine",
+  "title": "你吃药了吗？",
+  "pinyin": "Nǐ chī yào le ma?",
+  "titleTranslation": "Dori ichdingmi?",
+  "titleTranslation_ru": "Ты принял лекарство?",
+  "titleTranslation_en": "Have you taken any medicine?",
   "description_uz": "«Nima bo'ldi? Rangda yo'qsan.» — kasal bo'lib qolgan do'sti haqida tashvishlanayotgan suhbat. Bu dialog kasallik belgilarini aytish, yordam taklif qilish va yo'l so'rashni o'rgatadi. Tanish mavzu, shifokorga borishda kerak bo'ladigan foydali so'zlar. Rol o'ynash va gapirishga ishonch hosil qilish uchun ajoyib.",
   "description_ru": "«Что случилось? Ты бледный.» — разговор о друге, который заболел. Этот диалог учит описывать симптомы, предлагать помощь и спрашивать дорогу. Близкая тема, полезная лексика для визита к врачу. Отлично для ролевых игр и уверенности в речи.",
   "description_en": "«What's wrong? You look pale.» — a worried exchange about a friend who's fallen ill. This dialogue teaches describing symptoms, offering help, and asking for directions. Familiar topic, vocabulary you'll need at the doctor's. Great for role-play and building speaking confidence.",
@@ -24,9 +24,9 @@
     "自己",
     "度",
     "高",
-    "马上",
-    "路口",
-    "右转"
+    "坐车",
+    "医院",
+    "快点"
   ],
   "sections": [
     {
@@ -64,11 +64,11 @@
         },
         {
           "id": "d11-s4",
-          "text_original": "没有。我想去医院看一下。",
-          "pinyin": "Méi yǒu. Wǒ xiǎng qù yī yuàn kàn yí xià.",
-          "text_translation": "Yo'q. Kasalxonaga borib ko'rsatmoqchiman.",
-          "text_translation_ru": "Нет. Я хочу сходить в больницу провериться.",
-          "text_translation_en": "No. I want to go to the hospital to get checked.",
+          "text_original": "没有。我想去一下医院。",
+          "pinyin": "Méi yǒu. Wǒ xiǎng qù yí xià yī yuàn.",
+          "text_translation": "Yo'q. Kasalxonaga borib kelmoqchiman.",
+          "text_translation_ru": "Нет. Я хочу сходить в больницу.",
+          "text_translation_en": "No. I want to go to the hospital.",
           "speaker": "B"
         },
         {
@@ -84,9 +84,9 @@
           "id": "d11-s6",
           "text_original": "不用，我自己去。",
           "pinyin": "Bú yòng, wǒ zì jǐ qù.",
-          "text_translation": "Shart emas, o'zim bora olaman.",
-          "text_translation_ru": "Не нужно, я сам могу пойти.",
-          "text_translation_en": "No need, I can go by myself.",
+          "text_translation": "Shart emas, o'zim boraman.",
+          "text_translation_ru": "Не нужно, я сам пойду.",
+          "text_translation_en": "No need, I'll go by myself.",
           "speaker": "B"
         },
         {
@@ -109,38 +109,38 @@
         },
         {
           "id": "d11-s9",
-          "text_original": "那很高。你最好马上去医院。",
-          "pinyin": "Nà hěn gāo. Nǐ zuì hǎo mǎ shàng qù yī yuàn.",
-          "text_translation": "Bu juda baland. Darhol kasalxonaga borganing ma'qul.",
-          "text_translation_ru": "Это высоко. Тебе лучше сразу пойти в больницу.",
-          "text_translation_en": "That's high. You'd better go to the hospital right away.",
+          "text_original": "那很高。你最好快点去吧。",
+          "pinyin": "Nà hěn gāo. Nǐ zuì hǎo kuài diǎn qù ba.",
+          "text_translation": "Bu juda baland. Tezroq borganing ma'qul.",
+          "text_translation_ru": "Это высоко. Тебе лучше поскорее пойти.",
+          "text_translation_en": "That's high. You'd better go quickly.",
           "speaker": "A"
         },
         {
           "id": "d11-s10",
-          "text_original": "好。你知道医院怎么走吗？",
-          "pinyin": "Hǎo. Nǐ zhī dào yī yuàn zěn me zǒu ma?",
-          "text_translation": "Mayli. Kasalxonaga qanday borishni bilasanmi?",
-          "text_translation_ru": "Хорошо. Ты знаешь, как пройти в больницу?",
-          "text_translation_en": "Okay. Do you know how to get to the hospital?",
+          "text_original": "好。医院远不远？",
+          "pinyin": "Hǎo. Yī yuàn yuǎn bu yuǎn?",
+          "text_translation": "Mayli. Kasalxona uzoqmi?",
+          "text_translation_ru": "Хорошо. Больница далеко?",
+          "text_translation_en": "Okay. Is the hospital far?",
           "speaker": "B"
         },
         {
           "id": "d11-s11",
-          "text_original": "前面路口右转，走五分钟就到了。",
-          "pinyin": "Qián miàn lù kǒu yòu zhuǎn, zǒu wǔ fēn zhōng jiù dào le.",
-          "text_translation": "Oldindagi chorrahada o'ngga burilib, besh daqiqa yursang yetib borasan.",
-          "text_translation_ru": "На следующем перекрёстке направо, пять минут пешком — и ты на месте.",
-          "text_translation_en": "Turn right at the intersection ahead, walk five minutes and you're there.",
+          "text_original": "不远，坐车十分钟就到。",
+          "pinyin": "Bù yuǎn, zuò chē shí fēn zhōng jiù dào.",
+          "text_translation": "Uzoq emas, mashinada o'n daqiqada yetib borasan.",
+          "text_translation_ru": "Не далеко, на машине десять минут — и ты на месте.",
+          "text_translation_en": "Not far, ten minutes by car and you're there.",
           "speaker": "A"
         },
         {
           "id": "d11-s12",
-          "text_original": "谢谢！我走了。",
-          "pinyin": "Xiè xie! Wǒ zǒu le.",
-          "text_translation": "Rahmat! Men ketdim.",
-          "text_translation_ru": "Спасибо! Я пошёл.",
-          "text_translation_en": "Thanks! I'm off.",
+          "text_original": "谢谢，我走了。",
+          "pinyin": "Xiè xie, wǒ zǒu le.",
+          "text_translation": "Rahmat, men ketdim.",
+          "text_translation_ru": "Спасибо, я пошёл.",
+          "text_translation_en": "Thanks, I'm off.",
           "speaker": "B"
         }
       ]
