@@ -1,11 +1,11 @@
 {
   "id": "hsk2-dialogue12",
-  "slug": "asking-for-directions",
-  "title": "问路",
-  "pinyin": "Wèn lù",
-  "titleTranslation": "Yo'l so'rash",
-  "titleTranslation_ru": "Спросить дорогу",
-  "titleTranslation_en": "Asking for Directions",
+  "slug": "is-there-a-bank-nearby",
+  "title": "附近有银行吗？",
+  "pinyin": "Fùjìn yǒu yínháng ma?",
+  "titleTranslation": "Yaqin atrofda bank bormi?",
+  "titleTranslation_ru": "Есть ли поблизости банк?",
+  "titleTranslation_en": "Is there a bank nearby?",
   "description_uz": "«Bu yerga yaqin atrofda bank bormi?» — ko'chada notanish odamdan yo'l so'rab, bankka qanday borishni aniqlayotgan suhbat. Bu dialog joy haqida so'rash, masofani aniqlash va «to'g'ri yuring, chapga buriling» kabi yo'l-yo'riq ko'rsatkichlarini mashq qiladi. Foydali kundalik so'zlar va aniq tuzilma. Yo'lda ishonchli gapirish uchun takrorlab o'rganishga ideal.",
   "description_ru": "«Здесь поблизости есть банк?» — разговор о том, как спросить дорогу у прохожего и добраться до банка. Этот диалог отрабатывает, как спрашивать о месте, уточнять расстояние и понимать указания «идите прямо, поверните налево». Полезная повседневная лексика и чёткая структура. Отлично подходит для шэдоуинга, чтобы уверенно ориентироваться в городе.",
   "description_en": "«Is there a bank near here?» — a conversation about asking a passerby for directions and finding the way to the bank. This dialogue drills asking about a place, checking distance, and following instructions like «go straight, turn left». Useful everyday vocabulary and a clear structure. Perfect for shadowing until navigating a city feels natural.",
@@ -16,7 +16,6 @@
   "tag": "transport",
   "dateAdded": "2026-06-16",
   "vocab": [
-    "请问",
     "附近",
     "银行",
     "大概",
@@ -24,7 +23,8 @@
     "红绿灯",
     "左转",
     "米",
-    "右边"
+    "右边",
+    "告诉"
   ],
   "sections": [
     {
@@ -35,10 +35,10 @@
       "sentences": [
         {
           "id": "d12-s1",
-          "text_original": "你好，请问这附近有银行吗？",
-          "pinyin": "Nǐ hǎo, qǐng wèn zhè fù jìn yǒu yín háng ma?",
-          "text_translation": "Salom, kechirasiz, shu yaqin atrofda bank bormi?",
-          "text_translation_ru": "Здравствуйте, скажите, есть ли рядом банк?",
+          "text_original": "你好，请问附近有银行吗？",
+          "pinyin": "Nǐ hǎo, qǐng wèn fù jìn yǒu yín háng ma?",
+          "text_translation": "Salom, kechirasiz, yaqin atrofda bank bormi?",
+          "text_translation_ru": "Здравствуйте, скажите, есть ли поблизости банк?",
           "text_translation_en": "Hello, excuse me, is there a bank nearby?",
           "speaker": "A"
         },
@@ -71,11 +71,11 @@
         },
         {
           "id": "d12-s5",
-          "text_original": "怎么走？",
-          "pinyin": "Zěn me zǒu?",
-          "text_translation": "Qanday borish kerak?",
-          "text_translation_ru": "Как пройти?",
-          "text_translation_en": "How do I get there?",
+          "text_original": "你能告诉我怎么去吗？",
+          "pinyin": "Nǐ néng gào su wǒ zěn me qù ma?",
+          "text_translation": "Menga qanday borishni aytib bera olasizmi?",
+          "text_translation_ru": "Вы можете рассказать мне, как пройти?",
+          "text_translation_en": "Could you tell me how to get there?",
           "speaker": "A"
         },
         {
@@ -116,11 +116,29 @@
         },
         {
           "id": "d12-s10",
-          "text_original": "不客气，慢走。",
-          "pinyin": "Bú kè qi, màn zǒu.",
-          "text_translation": "Arzimaydi, ehtiyot bo'ling.",
-          "text_translation_ru": "Не за что, счастливого пути.",
-          "text_translation_en": "You're welcome, take care.",
+          "text_original": "不客气。",
+          "pinyin": "Bú kè qi.",
+          "text_translation": "Arzimaydi.",
+          "text_translation_ru": "Не за что.",
+          "text_translation_en": "You're welcome.",
+          "speaker": "B"
+        },
+        {
+          "id": "d12-s11",
+          "text_original": "对了，银行几点关门？",
+          "pinyin": "Duì le, yín háng jǐ diǎn guān mén?",
+          "text_translation": "Aytgancha, bank soat nechada yopiladi?",
+          "text_translation_ru": "Кстати, во сколько закрывается банк?",
+          "text_translation_en": "By the way, what time does the bank close?",
+          "speaker": "A"
+        },
+        {
+          "id": "d12-s12",
+          "text_original": "下午五点，你快去吧。",
+          "pinyin": "Xià wǔ wǔ diǎn, nǐ kuài qù ba.",
+          "text_translation": "Kunduzi soat beshda, tezroq boring.",
+          "text_translation_ru": "В пять часов дня, поторопитесь.",
+          "text_translation_en": "Five in the afternoon, you'd better hurry.",
           "speaker": "B"
         }
       ]
