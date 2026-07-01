@@ -1,11 +1,11 @@
 {
   "id": "hsk2-dialogue14",
-  "slug": "birthday-plans",
-  "title": "生日",
-  "pinyin": "Shēngrì",
-  "titleTranslation": "Tug'ilgan kun",
-  "titleTranslation_ru": "День рождения",
-  "titleTranslation_en": "Birthday",
+  "slug": "is-tomorrow-your-birthday",
+  "title": "明天是你的生日吗？",
+  "pinyin": "Míngtiān shì nǐ de shēngrì ma?",
+  "titleTranslation": "Ertaga sening tug'ilgan kuningmi?",
+  "titleTranslation_ru": "Завтра твой день рождения?",
+  "titleTranslation_en": "Is tomorrow your birthday?",
   "voices": {
     "A": "白桦",
     "B": "茉莉"
@@ -29,9 +29,6 @@
     "请",
     "做饭",
     "开始",
-    "早",
-    "玩",
-    "生日蛋糕",
     "一束花"
   ],
   "sections": [
@@ -133,60 +130,6 @@
         },
         {
           "id": "d14-s11",
-          "text_original": "好。我给你买一个生日蛋糕。",
-          "pinyin": "Hǎo. Wǒ gěi nǐ mǎi yí ge shēng rì dàn gāo.",
-          "text_translation": "Yaxshi. Senga tug'ilgan kun torti olib kelaman.",
-          "text_translation_ru": "Хорошо. Я куплю тебе торт ко дню рождения.",
-          "text_translation_en": "Okay. I'll buy you a birthday cake.",
-          "speaker": "A"
-        },
-        {
-          "id": "d14-s12",
-          "text_original": "不用买，我买了。",
-          "pinyin": "Bú yòng mǎi, wǒ mǎi le.",
-          "text_translation": "Sotib olishing shart emas, men oldim.",
-          "text_translation_ru": "Не нужно покупать, я уже купил.",
-          "text_translation_en": "No need to buy one, I already did.",
-          "speaker": "B"
-        },
-        {
-          "id": "d14-s13",
-          "text_original": "那我给你准备一个礼物。",
-          "pinyin": "Nà wǒ gěi nǐ zhǔn bèi yí ge lǐ wù.",
-          "text_translation": "Unda men senga sovg'a tayyorlab qo'yaman.",
-          "text_translation_ru": "Тогда я приготовлю тебе подарок.",
-          "text_translation_en": "Then I'll prepare a gift for you.",
-          "speaker": "A"
-        },
-        {
-          "id": "d14-s14",
-          "text_original": "真的吗？太开心了！",
-          "pinyin": "Zhēn de ma? Tài kāi xīn le!",
-          "text_translation": "Rostdanmi? Juda xursandman!",
-          "text_translation_ru": "Правда? Я так рад!",
-          "text_translation_en": "Really? I'm so happy!",
-          "speaker": "B"
-        },
-        {
-          "id": "d14-s15",
-          "text_original": "你喜欢什么？",
-          "pinyin": "Nǐ xǐ huan shén me?",
-          "text_translation": "Nimani yoqtirasan?",
-          "text_translation_ru": "Что тебе нравится?",
-          "text_translation_en": "What do you like?",
-          "speaker": "A"
-        },
-        {
-          "id": "d14-s16",
-          "text_original": "我喜欢花。",
-          "pinyin": "Wǒ xǐ huan huā.",
-          "text_translation": "Men gulni yoqtiraman.",
-          "text_translation_ru": "Я люблю цветы.",
-          "text_translation_en": "I like flowers.",
-          "speaker": "B"
-        },
-        {
-          "id": "d14-s17",
           "text_original": "好，我送你一束花。",
           "pinyin": "Hǎo, wǒ sòng nǐ yí shù huā.",
           "text_translation": "Yaxshi, senga bir dasta gul sovg'a qilaman.",
@@ -195,12 +138,12 @@
           "speaker": "A"
         },
         {
-          "id": "d14-s18",
-          "text_original": "谢谢你！明天见！",
-          "pinyin": "Xiè xie nǐ! Míng tiān jiàn!",
-          "text_translation": "Rahmat! Ertaga ko'rishguncha!",
-          "text_translation_ru": "Спасибо! До завтра!",
-          "text_translation_en": "Thank you! See you tomorrow!",
+          "id": "d14-s12",
+          "text_original": "真的吗？太开心了！明天见！",
+          "pinyin": "Zhēn de ma? Tài kāi xīn le! Míng tiān jiàn!",
+          "text_translation": "Rostdanmi? Juda xursandman! Ertaga ko'rishguncha!",
+          "text_translation_ru": "Правда? Я так рад! До завтра!",
+          "text_translation_en": "Really? I'm so happy! See you tomorrow!",
           "speaker": "B"
         }
       ]
