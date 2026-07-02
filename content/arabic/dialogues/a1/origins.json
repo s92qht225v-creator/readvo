@@ -68,7 +68,8 @@
       "text_translation_uz": "Assalomu alaykum.",
       "text_translation_ru": "Мир вам.",
       "text_translation_en": "Peace be upon you.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/darsho/s1.mp3?v=500ba09372"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s1.mp3?v=911ceef3a1",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/female/s1.mp3?v=43c5fe96ef"
     },
     {
       "id": "s2",
@@ -80,7 +81,8 @@
       "text_translation_uz": "Va alaykum assalom.",
       "text_translation_ru": "И вам мир.",
       "text_translation_en": "And peace be upon you.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s2.mp3?v=21a60fcdfc"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s2.mp3?v=2bad2069b7",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/female/s2.mp3?v=529358fac2"
     },
     {
       "id": "s3",
@@ -92,7 +94,8 @@
       "text_translation_uz": "Qayerdansan?",
       "text_translation_ru": "Откуда ты?",
       "text_translation_en": "Where are you from?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/darsho/s3.mp3?v=862b1eb29c"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s3.mp3?v=525d03c36d",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/female/s3.mp3?v=ada6e0682a"
     },
     {
       "id": "s4",
@@ -104,7 +107,8 @@
       "text_translation_uz": "Men O'zbekistondanman. Sen-chi?",
       "text_translation_ru": "Я из Узбекистана. А ты?",
       "text_translation_en": "I'm from Uzbekistan. And you?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s4.mp3?v=313b6ffbfc"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s4.mp3?v=3d7a610a7c",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/female/s4.mp3?v=83d893b58e"
     },
     {
       "id": "s5",
@@ -116,7 +120,8 @@
       "text_translation_uz": "Men Misrdanman.",
       "text_translation_ru": "Я из Египта.",
       "text_translation_en": "I'm from Egypt.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/darsho/s5.mp3?v=5a4f4046a4"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s5.mp3?v=6f900ba96a",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/female/s5.mp3?v=cf6927e25c"
     },
     {
       "id": "s6",
@@ -128,7 +133,8 @@
       "text_translation_uz": "Xush kelibsiz!",
       "text_translation_ru": "Добро пожаловать!",
       "text_translation_en": "Welcome!",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s6.mp3?v=377d3e2f59"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s6.mp3?v=ce08231b3b",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/female/s6.mp3?v=6b63d34be5"
     }
   ]
 }

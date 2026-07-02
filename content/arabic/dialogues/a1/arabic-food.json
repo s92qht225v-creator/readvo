@@ -89,7 +89,8 @@
       "text_translation_uz": "Arab taomini yoqtirasanmi?",
       "text_translation_ru": "Ты любишь арабскую еду?",
       "text_translation_en": "Do you like Arabic food?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/darsho/s1.mp3?v=1e2e8ab86d"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/omar/s1.mp3?v=42bd24fc51",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/female/s1.mp3?v=b79bc760f3"
     },
     {
       "id": "s2",
@@ -101,7 +102,8 @@
       "text_translation_uz": "Ha, arab taomini juda yoqtiraman! Sen-chi?",
       "text_translation_ru": "Да, я очень люблю арабскую еду! А ты?",
       "text_translation_en": "Yes, I love Arabic food a lot! And you?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/omar/s2.mp3?v=58cbfd666a"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/omar/s2.mp3?v=3ca54ada82",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/female/s2.mp3?v=188412510e"
     },
     {
       "id": "s3",
@@ -113,7 +115,8 @@
       "text_translation_uz": "Men tovuq va guruchni jondan yaxshi koʻraman! U juda mazali.",
       "text_translation_ru": "Я обожаю курицу и рис! Это очень вкусно.",
       "text_translation_en": "I adore chicken and rice! It's very delicious.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/darsho/s3.mp3?v=a339e482b9"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/omar/s3.mp3?v=1727558f6d",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/female/s3.mp3?v=ec62d718d3"
     },
     {
       "id": "s4",
@@ -125,7 +128,8 @@
       "text_translation_uz": "Ajoyib! Yoqimli ishtaha!",
       "text_translation_ru": "Отлично! Приятного аппетита!",
       "text_translation_en": "Excellent! Bon appétit!",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/omar/s4.mp3?v=06aa3d5138"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/omar/s4.mp3?v=4c08dfedbf",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/female/s4.mp3?v=56b7ab6fae"
     }
   ]
 }

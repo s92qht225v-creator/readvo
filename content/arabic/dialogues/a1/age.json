@@ -75,7 +75,8 @@
       "text_translation_uz": "Kechirasiz, necha yoshdasan?",
       "text_translation_ru": "Извини, сколько тебе лет?",
       "text_translation_en": "Excuse me, how old are you?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/darsho/s1.mp3?v=d1ceff07bb"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/omar/s1.mp3?v=3b8549a7b2",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/female/s1.mp3?v=df93fc9389"
     },
     {
       "id": "s2",
@@ -87,7 +88,8 @@
       "text_translation_uz": "Men yigirma yoshdaman. Sen-chi?",
       "text_translation_ru": "Мне двадцать лет. А тебе?",
       "text_translation_en": "I'm twenty years old. And you?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/omar/s2.mp3?v=2a51ea5623"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/omar/s2.mp3?v=0181799e15",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/female/s2.mp3?v=f59e4e5224"
     },
     {
       "id": "s3",
@@ -99,7 +101,8 @@
       "text_translation_uz": "Men yigirma besh yoshdaman.",
       "text_translation_ru": "Мне двадцать пять лет.",
       "text_translation_en": "I'm twenty-five years old.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/darsho/s3.mp3?v=6ddd425069"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/omar/s3.mp3?v=a013cb562a",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/female/s3.mp3?v=6817a98c60"
     },
     {
       "id": "s4",
@@ -111,7 +114,8 @@
       "text_translation_uz": "Mashaalloh! Umring uzoq boʻlsin!",
       "text_translation_ru": "Машаллах! Долгих лет жизни!",
       "text_translation_en": "Mashallah! May you have a long life!",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/omar/s4.mp3?v=93b1e85a19"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/omar/s4.mp3?v=02204549eb",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/female/s4.mp3?v=91ff56b085"
     }
   ]
 }

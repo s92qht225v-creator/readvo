@@ -82,7 +82,8 @@
       "text_translation_uz": "Senda telefon bormi?",
       "text_translation_ru": "У тебя есть телефон?",
       "text_translation_en": "Do you have a phone?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/darsho/s1.mp3?v=858c625336"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/omar/s1.mp3?v=1cc803a5f2",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/female/s1.mp3?v=eb4cacba54"
     },
     {
       "id": "s2",
@@ -94,7 +95,8 @@
       "text_translation_uz": "Ha, menda yangi telefon bor. Sen-chi?",
       "text_translation_ru": "Да, у меня есть новый телефон. А у тебя?",
       "text_translation_en": "Yes, I have a new phone. And you?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/omar/s2.mp3?v=f7d3023d1e"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/omar/s2.mp3?v=7e21f0b373",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/female/s2.mp3?v=e20006a0ed"
     },
     {
       "id": "s3",
@@ -106,7 +108,8 @@
       "text_translation_uz": "Yoʻq, menda telefon yoʻq, menda kompyuter bor.",
       "text_translation_ru": "Нет, у меня нет телефона, у меня есть компьютер.",
       "text_translation_en": "No, I don't have a phone, I have a computer.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/darsho/s3.mp3?v=91bc464094"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/omar/s3.mp3?v=af4e8c2cb3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/female/s3.mp3?v=fb5eb0284c"
     },
     {
       "id": "s4",
@@ -118,7 +121,8 @@
       "text_translation_uz": "Bu ish uchun juda zoʻr!",
       "text_translation_ru": "Это отлично для работы!",
       "text_translation_en": "That's excellent for work!",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/omar/s4.mp3?v=6a4c7f8b3e"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/omar/s4.mp3?v=b9dc286bac",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/female/s4.mp3?v=be32c4e3b1"
     }
   ]
 }

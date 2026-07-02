@@ -61,7 +61,8 @@
       "text_translation_uz": "Assalomu alaykum.",
       "text_translation_ru": "Мир вам.",
       "text_translation_en": "Peace be upon you.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/darsho/s1.mp3?v=5b51ab472e"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s1.mp3?v=db30ff6895",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/female/s1.mp3?v=9ee043264c"
     },
     {
       "id": "s2",
@@ -73,7 +74,8 @@
       "text_translation_uz": "Va alaykum assalom.",
       "text_translation_ru": "И вам мир.",
       "text_translation_en": "And peace be upon you.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s2.mp3?v=181efbbcac"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s2.mp3?v=3f1aeea4d9",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/female/s2.mp3?v=dcca4f3c20"
     },
     {
       "id": "s3",
@@ -85,7 +87,8 @@
       "text_translation_uz": "Isming nima?",
       "text_translation_ru": "Как тебя зовут?",
       "text_translation_en": "What's your name?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/darsho/s3.mp3?v=d81c15634d"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s3.mp3?v=caa9a393dd",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/female/s3.mp3?v=d41f3bcdc3"
     },
     {
       "id": "s4",
@@ -100,7 +103,8 @@
       "text_translation_uz_f": "Mening ismim Aisha. Sening isming nima?",
       "text_translation_ru_f": "Меня зовут Аиша. А как тебя зовут?",
       "text_translation_en_f": "My name is Aisha. And what's your name?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s4.mp3?v=3dcfd72b2e"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s4.mp3?v=09a29dc0b5",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/female/s4.mp3?v=231d94ce2f"
     },
     {
       "id": "s5",
@@ -115,7 +119,8 @@
       "text_translation_uz_f": "Mening ismim Fotima. Tanishganimdan xursandman.",
       "text_translation_ru_f": "Меня зовут Фатима. Приятно познакомиться.",
       "text_translation_en_f": "My name is Fatima. Nice to meet you.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/darsho/s5.mp3?v=9019c8ef61"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s5.mp3?v=05e8c84d60",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/female/s5.mp3?v=38cb6c0ba5"
     },
     {
       "id": "s6",
@@ -127,7 +132,8 @@
       "text_translation_uz": "Men ham.",
       "text_translation_ru": "Я тоже.",
       "text_translation_en": "Me too.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s6.mp3?v=ed6fd62d64"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s6.mp3?v=1da1c043c3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/female/s6.mp3?v=b4a73cf04a"
     }
   ]
 }

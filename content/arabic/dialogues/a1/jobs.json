@@ -78,7 +78,8 @@
       "text_translation_uz_f": "Kasbing nima, singlim?",
       "text_translation_ru_f": "Кем ты работаешь, сестра?",
       "text_translation_en_f": "What's your job, my sister?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/darsho/s1.mp3?v=dabe84aaa5"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/omar/s1.mp3?v=8b58f4fa03",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/female/s1.mp3?v=8d5804f9a2"
     },
     {
       "id": "s2",
@@ -91,7 +92,8 @@
       "text_translation_ru": "Я переводчик. А ты, чем занимаешься?",
       "text_translation_en": "I'm an interpreter. And you, what do you do?",
       "text_translation_ru_f": "Я переводчица. А ты, чем занимаешься?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/omar/s2.mp3?v=9136213231"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/omar/s2.mp3?v=2badd87778",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/female/s2.mp3?v=c2d3000946"
     },
     {
       "id": "s3",
@@ -104,7 +106,8 @@
       "text_translation_ru": "Я учитель в школе.",
       "text_translation_en": "I'm a teacher in a school.",
       "text_translation_ru_f": "Я учительница в школе.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/darsho/s3.mp3?v=15da8c8462"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/omar/s3.mp3?v=6711c4554e",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/female/s3.mp3?v=5c5fd44215"
     },
     {
       "id": "s4",
@@ -116,7 +119,8 @@
       "text_translation_uz": "Bu juda chiroyli kasb!",
       "text_translation_ru": "Это очень красивая работа!",
       "text_translation_en": "That's a very nice job!",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/omar/s4.mp3?v=1393bd35f6"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/omar/s4.mp3?v=fe2ddebb99",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/female/s4.mp3?v=f3f70938f6"
     }
   ]
 }

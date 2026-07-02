@@ -75,7 +75,8 @@
       "text_translation_uz": "Kechirasiz, hojatxona qayerda?",
       "text_translation_ru": "Извините, где туалет?",
       "text_translation_en": "Excuse me, where is the bathroom?",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/darsho/s1.mp3?v=7b7dd38450"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/omar/s1.mp3?v=72b5781615",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/female/s1.mp3?v=ddbfb3642d"
     },
     {
       "id": "s2",
@@ -87,7 +88,8 @@
       "text_translation_uz": "Hojatxona o'sha yerda, chap tomonda.",
       "text_translation_ru": "Туалет вон там, слева.",
       "text_translation_en": "The bathroom is over there, on the left.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/omar/s2.mp3?v=ac704fbf6c"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/omar/s2.mp3?v=5c7cebb9ca",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/female/s2.mp3?v=38d90d2abe"
     },
     {
       "id": "s3",
@@ -99,7 +101,8 @@
       "text_translation_uz": "Katta rahmat!",
       "text_translation_ru": "Большое спасибо!",
       "text_translation_en": "Thank you very much!",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/darsho/s3.mp3?v=d88faf71c4"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/omar/s3.mp3?v=88c6343739",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/female/s3.mp3?v=ca86976b4a"
     },
     {
       "id": "s4",
@@ -111,7 +114,8 @@
       "text_translation_uz": "Arzimaydi! Xayr.",
       "text_translation_ru": "Пожалуйста! До свидания.",
       "text_translation_en": "You're welcome! Goodbye.",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/omar/s4.mp3?v=64b544818e"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/omar/s4.mp3?v=f074ce0901",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/directions/female/s4.mp3?v=3b7139fcb0"
     }
   ]
 }
