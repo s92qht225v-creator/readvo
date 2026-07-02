@@ -555,7 +555,7 @@ body {
    the accent colour with a little breathing room above the characters —
    mirrors the dialogue reader's pinyin styling. */
 .wpreview-ex {
-  font-size: 26px;
+  font-size: 20px; /* match the .dlg-intro__title character size */
   line-height: 2.1;
 }
 .wpreview-ex ruby {
