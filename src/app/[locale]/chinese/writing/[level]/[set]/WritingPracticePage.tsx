@@ -133,11 +133,11 @@ export function WritingPracticePage({ setId, level, title, title_ru, words }: Pr
                 const radicalName = language === 'ru' ? w.radicalRu : language === 'en' ? (w.radicalEn || w.radicalUz) : w.radicalUz;
                 return (
                   <div className="dlg-intro" key={w.char}>
-                    <h3 className="dlg-intro__title" style={{ marginBottom: 6 }}>
-                      <span lang="zh-Hans">{w.char}</span> ({w.pinyin}) — {meaningOf(w)}
-                    </h3>
                     <div className="dlg-desc wpreview-card">
                       <span className="wpreview-ghost" lang="zh-Hans" aria-hidden="true">{w.char}</span>
+                      <h3 className="dlg-intro__title wpreview-card__title" style={{ margin: '0 0 4px' }}>
+                        <span lang="zh-Hans">{w.char}</span> ({w.pinyin}) — {meaningOf(w)}
+                      </h3>
                       <p style={{ margin: 0, fontSize: 13, color: '#888' }}>
                         {w.strokes} {T('chiziq', 'черт', 'strokes')}
                         {w.radical && <> · {T('kalit', 'ключ', 'radical')}: <span lang="zh-Hans">{w.radical}</span>{radicalName ? ` (${radicalName})` : ''}</>}
