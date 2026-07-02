@@ -18,7 +18,9 @@
       "translit_f": "Ismī ʿAliyāʾu.",
       "text_translation_uz_f": "Mening ismim Aliya.",
       "text_translation_ru_f": "Меня зовут Алия.",
-      "text_translation_en_f": "My name is Aliya."
+      "text_translation_en_f": "My name is Aliya.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s1.mp3?v=a973e51452",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s1.mp3?v=5b785d3af1"
     },
     {
       "id": "s2",
@@ -29,7 +31,9 @@
       "translit_m": "Anā ṭālibun.",
       "ar_f": "أَنَا طَالِبَةٌ.",
       "translit_f": "Anā ṭālibatun.",
-      "text_translation_ru_f": "Я студентка."
+      "text_translation_ru_f": "Я студентка.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s2.mp3?v=26b1539d74",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s2.mp3?v=c687ab6ce8"
     },
     {
       "id": "s3",
@@ -37,7 +41,9 @@
       "translit": "Askunu fī madīnatin ṣaghīratin.",
       "text_translation_uz": "Men kichik shaharda yashayman.",
       "text_translation_ru": "Я живу в маленьком городе.",
-      "text_translation_en": "I live in a small city."
+      "text_translation_en": "I live in a small city.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s3.mp3?v=b38033a2e2",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s3.mp3?v=60b5426bc4"
     },
     {
       "id": "s4",
@@ -45,7 +51,9 @@
       "translit": "al-yawma l-jawwu jamīlun.",
       "text_translation_uz": "Bugun havo chiroyli.",
       "text_translation_ru": "Сегодня прекрасная погода.",
-      "text_translation_en": "Today the weather is beautiful."
+      "text_translation_en": "Today the weather is beautiful.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s4.mp3?v=6602c585c9",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s4.mp3?v=a50b9198ed"
     },
     {
       "id": "s5",
@@ -58,7 +66,9 @@
       "translit_f": "Adhhabu ilā l-ḥadīqati maʿa ṣadīqatī ʿĀʾishata.",
       "text_translation_uz_f": "Men do'stim Aysha bilan bog'ga boraman.",
       "text_translation_ru_f": "Я иду в парк с моей подругой Аишей.",
-      "text_translation_en_f": "I go to the park with my friend Aisha."
+      "text_translation_en_f": "I go to the park with my friend Aisha.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s5.mp3?v=f617e0a644",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s5.mp3?v=b15da39aad"
     },
     {
       "id": "s6",
@@ -66,7 +76,9 @@
       "translit": "Naḥnu namshī wa-nataḥaddathu.",
       "text_translation_uz": "Biz yuramiz va suhbatlashamiz.",
       "text_translation_ru": "Мы гуляем и разговариваем.",
-      "text_translation_en": "We walk and talk."
+      "text_translation_en": "We walk and talk.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s6.mp3?v=eab8bb9731",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s6.mp3?v=258c6c816e"
     },
     {
       "id": "s7",
@@ -74,7 +86,9 @@
       "translit": "Fī l-ḥadīqati ashjārun wa-zuhūrun kathīratun.",
       "text_translation_uz": "Bog'da ko'plab daraxtlar va gullar bor.",
       "text_translation_ru": "В парке много деревьев и цветов.",
-      "text_translation_en": "In the park there are many trees and flowers."
+      "text_translation_en": "In the park there are many trees and flowers.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s7.mp3?v=4262029ebf",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s7.mp3?v=31db6a3ca6"
     },
     {
       "id": "s8",
@@ -82,7 +96,9 @@
       "translit": "Najlisu ʿalā maqʿadin.",
       "text_translation_uz": "Biz skameykaga o'tiramiz.",
       "text_translation_ru": "Мы садимся на скамейку.",
-      "text_translation_en": "We sit on a bench."
+      "text_translation_en": "We sit on a bench.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s8.mp3?v=4c471bbcc0",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s8.mp3?v=0651ea449f"
     },
     {
       "id": "s9",
@@ -95,7 +111,9 @@
       "translit_f": "ʿĀʾishatu tashrabu l-māʾa, wa-anā ākulu tuffāḥatan.",
       "text_translation_uz_f": "Aysha suv ichadi, men esa olma yeyman.",
       "text_translation_ru_f": "Аиша пьёт воду, а я ем яблоко.",
-      "text_translation_en_f": "Aisha drinks water, and I eat an apple."
+      "text_translation_en_f": "Aisha drinks water, and I eat an apple.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s9.mp3?v=4656cf93c3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s9.mp3?v=43b28badd3"
     },
     {
       "id": "s10",
@@ -103,7 +121,9 @@
       "translit": "Narā aṭfālan yalʿabūna bi-l-kurati.",
       "text_translation_uz": "Biz to'p bilan o'ynayotgan bolalarni ko'ramiz.",
       "text_translation_ru": "Мы видим детей, играющих с мячом.",
-      "text_translation_en": "We see children playing with the ball."
+      "text_translation_en": "We see children playing with the ball.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s10.mp3?v=a0530d381b",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s10.mp3?v=56cf187dee"
     },
     {
       "id": "s11",
@@ -111,7 +131,9 @@
       "translit": "Hum suʿadāʾu.",
       "text_translation_uz": "Ular xursand.",
       "text_translation_ru": "Они счастливы.",
-      "text_translation_en": "They are happy."
+      "text_translation_en": "They are happy.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s11.mp3?v=1a89993d17",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s11.mp3?v=59263dc7dd"
     },
     {
       "id": "s12",
@@ -119,7 +141,9 @@
       "translit": "Baʿda sāʿatin naʿūdu ilā l-bayti.",
       "text_translation_uz": "Bir soatdan keyin biz uyga qaytamiz.",
       "text_translation_ru": "Через час мы возвращаемся домой.",
-      "text_translation_en": "After an hour we return home."
+      "text_translation_en": "After an hour we return home.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s12.mp3?v=d9a7a4980e",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s12.mp3?v=6ec8a9b58d"
     },
     {
       "id": "s13",
@@ -130,7 +154,9 @@
       "translit_m": "Anā saʿīdun, wa-l-yawmu kāna jamīlan.",
       "ar_f": "أَنَا سَعِيدَةٌ، وَالْيَوْمُ كَانَ جَمِيلًا.",
       "translit_f": "Anā saʿīdatun, wa-l-yawmu kāna jamīlan.",
-      "text_translation_ru_f": "Я счастлива, и день был прекрасным."
+      "text_translation_ru_f": "Я счастлива, и день был прекрасным.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/s13.mp3?v=7d12101b61",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/female/s13.mp3?v=2dee9bc9e7"
     }
   ],
   "vocab": [
@@ -139,14 +165,16 @@
       "translit": "madīnatun",
       "uz": "shahar",
       "ru": "город",
-      "en": "city"
+      "en": "city",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w01.mp3?v=ffd5b2a49b"
     },
     {
       "ar": "حَدِيقَةٌ",
       "translit": "ḥadīqatun",
       "uz": "bog'",
       "ru": "парк",
-      "en": "park"
+      "en": "park",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w02.mp3?v=5d5f3341e3"
     },
     {
       "ar": "صَدِيقٌ",
@@ -154,70 +182,80 @@
       "uz": "do'st",
       "ru": "друг",
       "en": "friend",
-      "gender": "m"
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w03.mp3?v=5ef2a837c0"
     },
     {
       "ar": "شَجَرَةٌ",
       "translit": "shajaratun",
       "uz": "daraxt",
       "ru": "дерево",
-      "en": "tree"
+      "en": "tree",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w04.mp3?v=0e651072ec"
     },
     {
       "ar": "زَهْرَةٌ",
       "translit": "zahratun",
       "uz": "gul",
       "ru": "цветок",
-      "en": "flower"
+      "en": "flower",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w05.mp3?v=301caf1807"
     },
     {
       "ar": "مَقْعَدٌ",
       "translit": "maqʿadun",
       "uz": "skameyka",
       "ru": "скамейка",
-      "en": "bench"
+      "en": "bench",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w06.mp3?v=49d57e0dd6"
     },
     {
       "ar": "مَاءٌ",
       "translit": "māʾun",
       "uz": "suv",
       "ru": "вода",
-      "en": "water"
+      "en": "water",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w07.mp3?v=4a51144840"
     },
     {
       "ar": "تُفَّاحَةٌ",
       "translit": "tuffāḥatun",
       "uz": "olma",
       "ru": "яблоко",
-      "en": "apple"
+      "en": "apple",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w08.mp3?v=b1802b38a5"
     },
     {
       "ar": "طِفْلٌ",
       "translit": "ṭiflun",
       "uz": "bola",
       "ru": "ребёнок",
-      "en": "child"
+      "en": "child",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w09.mp3?v=b929f27abe"
     },
     {
       "ar": "كُرَةٌ",
       "translit": "kuratun",
       "uz": "to'p",
       "ru": "мяч",
-      "en": "ball"
+      "en": "ball",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w10.mp3?v=1895e9820c"
     },
     {
       "ar": "بَيْتٌ",
       "translit": "baytun",
       "uz": "uy",
       "ru": "дом",
-      "en": "house"
+      "en": "house",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w11.mp3?v=2fb6d1a6dc"
     },
     {
       "ar": "سَعِيدٌ",
       "translit": "saʿīdun",
       "uz": "xursand",
       "ru": "счастливый",
-      "en": "happy"
+      "en": "happy",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w12.mp3?v=6c6553481f"
     }
   ]
 }
