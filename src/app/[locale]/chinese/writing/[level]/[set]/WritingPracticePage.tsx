@@ -126,28 +126,32 @@ export function WritingPracticePage({ setId, level, title, title_ru, words }: Pr
                 </p>
               </div>
 
-              {/* Character list — plain, crawlable text */}
-              <ul className="dlg-vocab">
-                {words.map((w) => (
-                  <li className="dlg-vocab__row" key={w.char}>
-                    <span className="dlg-vocab__zh" lang="zh-Hans">{w.char}</span>
-                    <span className="dlg-vocab__py">{w.pinyin}</span>
-                    <span className="dlg-vocab__mean">
-                      {meaningOf(w)} · {w.strokes} {T('chiziq', 'черт', 'strokes')}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Example sentences — crawlable text */}
-              <div className="dlg-intro">
-                <h2 className="dlg-intro__title">{T('Misol gaplar', 'Примеры предложений', 'Example sentences')}</h2>
-                {words.filter((w) => w.ex).map((w) => (
-                  <p className="dlg-desc" key={`ex-${w.char}`}>
-                    <span lang="zh-Hans">{w.ex}</span> — {w.expy} — {exMeaningOf(w)}
-                  </p>
-                ))}
-              </div>
+              {/* One mini dictionary entry per character — heading + strokes/
+                  radical facts + example sentence. All plain, crawlable text. */}
+              {words.map((w) => {
+                const radicalName = language === 'ru' ? w.radicalRu : language === 'en' ? (w.radicalEn || w.radicalUz) : w.radicalUz;
+                return (
+                  <div className="dlg-intro" key={w.char}>
+                    <h3 className="dlg-intro__title" style={{ marginBottom: 6 }}>
+                      <span lang="zh-Hans">{w.char}</span> ({w.pinyin}) — {meaningOf(w)}
+                    </h3>
+                    <div className="dlg-desc">
+                      <p style={{ margin: 0, fontSize: 13, color: '#888' }}>
+                        {w.strokes} {T('chiziq', 'черт', 'strokes')}
+                        {w.radical && <> · {T('kalit', 'ключ', 'radical')}: <span lang="zh-Hans">{w.radical}</span>{radicalName ? ` (${radicalName})` : ''}</>}
+                      </p>
+                      {w.ex && (
+                        <p style={{ margin: '8px 0 0' }}>
+                          <span lang="zh-Hans">{w.ex}</span>
+                          <br />
+                          <span style={{ color: '#b91c1c', fontStyle: 'italic' }}>{w.expy}</span>
+                          {' — '}{exMeaningOf(w)}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             {/* Floating CTA: signed-in users reveal the practice in place,
