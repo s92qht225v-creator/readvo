@@ -577,6 +577,25 @@ body {
   .wpreview-ex-tr { display: block; margin-top: 2px; }
 }
 
+/* Ghost character: a big faint watermark of the card's own character in the
+   corner of the entry card (mirrors the hero's .dr-hero__watermark). The card
+   isolates a stacking context so the negative-z ghost sits above the white
+   background but below the text, and clips it at the rounded edges. */
+.wpreview-card { position: relative; overflow: hidden; isolation: isolate; }
+.wpreview-ghost {
+  position: absolute;
+  right: -6px;
+  bottom: -28px;
+  z-index: -1;
+  font-family: var(--font-cjk);
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.045);
+  pointer-events: none;
+  user-select: none;
+}
+
 .story__dialogue-line.story__sentence--active .story__dialogue-text,
 .story__dialogue-line.story__sentence--playing .story__dialogue-text {
   color: var(--color-accent);

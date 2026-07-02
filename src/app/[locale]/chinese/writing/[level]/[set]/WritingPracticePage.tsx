@@ -136,7 +136,8 @@ export function WritingPracticePage({ setId, level, title, title_ru, words }: Pr
                     <h3 className="dlg-intro__title" style={{ marginBottom: 6 }}>
                       <span lang="zh-Hans">{w.char}</span> ({w.pinyin}) — {meaningOf(w)}
                     </h3>
-                    <div className="dlg-desc">
+                    <div className="dlg-desc wpreview-card">
+                      <span className="wpreview-ghost" lang="zh-Hans" aria-hidden="true">{w.char}</span>
                       <p style={{ margin: 0, fontSize: 13, color: '#888' }}>
                         {w.strokes} {T('chiziq', 'черт', 'strokes')}
                         {w.radical && <> · {T('kalit', 'ключ', 'radical')}: <span lang="zh-Hans">{w.radical}</span>{radicalName ? ` (${radicalName})` : ''}</>}
