@@ -584,14 +584,15 @@ body {
 .wpreview-card { position: relative; overflow: hidden; isolation: isolate; }
 .wpreview-ghost {
   position: absolute;
-  right: -6px;
-  bottom: -28px;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   font-family: var(--font-cjk);
-  font-size: 120px;
+  font-size: 64px;
   font-weight: 700;
   line-height: 1;
-  color: rgba(0, 0, 0, 0.045);
+  color: rgba(0, 0, 0, 0.05);
   pointer-events: none;
   user-select: none;
 }
