@@ -1,6 +1,6 @@
 {
   "id": "a-day-in-the-park",
-  "level": "a1",
+  "level": "a2",
   "title": "يَوْمٌ فِي الْحَدِيقَةِ",
   "translit": "Yawmun fī l-ḥadīqati",
   "titleTranslation_uz": "Bog'da bir kun",
@@ -113,17 +113,90 @@
     }
   ],
   "vocab": [
-    { "ar": "مَدِينَةٌ", "translit": "madīnatun", "uz": "shahar", "ru": "город", "en": "city" },
-    { "ar": "حَدِيقَةٌ", "translit": "ḥadīqatun", "uz": "bog'", "ru": "парк", "en": "park" },
-    { "ar": "صَدِيقٌ", "translit": "ṣadīqun", "uz": "do'st", "ru": "друг", "en": "friend", "gender": "m" },
-    { "ar": "شَجَرَةٌ", "translit": "shajaratun", "uz": "daraxt", "ru": "дерево", "en": "tree" },
-    { "ar": "زَهْرَةٌ", "translit": "zahratun", "uz": "gul", "ru": "цветок", "en": "flower" },
-    { "ar": "مَقْعَدٌ", "translit": "maqʿadun", "uz": "skameyka", "ru": "скамейка", "en": "bench" },
-    { "ar": "مَاءٌ", "translit": "māʾun", "uz": "suv", "ru": "вода", "en": "water" },
-    { "ar": "تُفَّاحَةٌ", "translit": "tuffāḥatun", "uz": "olma", "ru": "яблоко", "en": "apple" },
-    { "ar": "طِفْلٌ", "translit": "ṭiflun", "uz": "bola", "ru": "ребёнок", "en": "child" },
-    { "ar": "كُرَةٌ", "translit": "kuratun", "uz": "to'p", "ru": "мяч", "en": "ball" },
-    { "ar": "بَيْتٌ", "translit": "baytun", "uz": "uy", "ru": "дом", "en": "house" },
-    { "ar": "سَعِيدٌ", "translit": "saʿīdun", "uz": "xursand", "ru": "счастливый", "en": "happy" }
+    {
+      "ar": "مَدِينَةٌ",
+      "translit": "madīnatun",
+      "uz": "shahar",
+      "ru": "город",
+      "en": "city"
+    },
+    {
+      "ar": "حَدِيقَةٌ",
+      "translit": "ḥadīqatun",
+      "uz": "bog'",
+      "ru": "парк",
+      "en": "park"
+    },
+    {
+      "ar": "صَدِيقٌ",
+      "translit": "ṣadīqun",
+      "uz": "do'st",
+      "ru": "друг",
+      "en": "friend",
+      "gender": "m"
+    },
+    {
+      "ar": "شَجَرَةٌ",
+      "translit": "shajaratun",
+      "uz": "daraxt",
+      "ru": "дерево",
+      "en": "tree"
+    },
+    {
+      "ar": "زَهْرَةٌ",
+      "translit": "zahratun",
+      "uz": "gul",
+      "ru": "цветок",
+      "en": "flower"
+    },
+    {
+      "ar": "مَقْعَدٌ",
+      "translit": "maqʿadun",
+      "uz": "skameyka",
+      "ru": "скамейка",
+      "en": "bench"
+    },
+    {
+      "ar": "مَاءٌ",
+      "translit": "māʾun",
+      "uz": "suv",
+      "ru": "вода",
+      "en": "water"
+    },
+    {
+      "ar": "تُفَّاحَةٌ",
+      "translit": "tuffāḥatun",
+      "uz": "olma",
+      "ru": "яблоко",
+      "en": "apple"
+    },
+    {
+      "ar": "طِفْلٌ",
+      "translit": "ṭiflun",
+      "uz": "bola",
+      "ru": "ребёнок",
+      "en": "child"
+    },
+    {
+      "ar": "كُرَةٌ",
+      "translit": "kuratun",
+      "uz": "to'p",
+      "ru": "мяч",
+      "en": "ball"
+    },
+    {
+      "ar": "بَيْتٌ",
+      "translit": "baytun",
+      "uz": "uy",
+      "ru": "дом",
+      "en": "house"
+    },
+    {
+      "ar": "سَعِيدٌ",
+      "translit": "saʿīdun",
+      "uz": "xursand",
+      "ru": "счастливый",
+      "en": "happy"
+    }
   ]
 }
