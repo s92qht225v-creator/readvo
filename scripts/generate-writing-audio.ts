@@ -37,6 +37,11 @@ function audioFileName(char: string, pinyin: string): string {
   return `${stripped}_${unicode}.mp3`;
 }
 
+// MiMo v2.5 pacing is steered by a natural-language instruction in a separate
+// user-role message (the old <style> tag inside the assistant content is
+// ignored). Mirrors the DEFAULT_INSTRUCTION in src/app/api/tts/route.ts.
+const DEFAULT_INSTRUCTION = '请用适当放慢、清晰的语速朗读，适合语言学习者。';
+
 async function generateTTS(text: string): Promise<Buffer | null> {
   try {
     const res = await fetch('https://api.xiaomimimo.com/v1/chat/completions', {
@@ -46,9 +51,12 @@ async function generateTTS(text: string): Promise<Buffer | null> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'mimo-v2-tts',
-        messages: [{ role: 'assistant', content: `<style>语速缓慢，吐字清晰，适合语言学习者</style>${text}` }],
-        audio: { format: 'mp3', voice: 'default_zh' },
+        model: 'mimo-v2.5-tts',
+        messages: [
+          { role: 'user', content: DEFAULT_INSTRUCTION },
+          { role: 'assistant', content: text },
+        ],
+        audio: { format: 'mp3', voice: 'mimo_default' },
       }),
     });
 
