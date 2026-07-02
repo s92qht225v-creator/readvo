@@ -12,12 +12,22 @@ const PROVIDER = 'google';
 const TTS_PREFIX = `ar/tts/${PROVIDER}`;
 const DEFAULT_VOICE = 'ar-XA-Chirp3-HD-Charon';
 
+// Chirp3-HD natively accepts `speakingRate` (confirmed: it measurably changes
+// clip duration, not silently ignored) — this paces speech through Google's
+// own generative model rather than resampling audio afterward, so it doesn't
+// introduce the pitch/robotic artifacts a post-processing slowdown would.
+// 0.85 reads noticeably calmer for A2 listeners without sounding unnatural.
+// Baked into the cache path (like PROVIDER) so a future rate change
+// regenerates fresh instead of silently mixing old/new-pace clips.
+const SPEAKING_RATE = 0.85;
+const RATE_SEGMENT = `r${String(SPEAKING_RATE).replace('.', '')}`;
+
 // Allow Google ar-XA voices: Chirp3-HD (newest, most natural), Wavenet, Standard.
 const VOICE_RE = /^ar-XA-(Chirp3-HD-[A-Za-z]+|Wavenet-[A-D]|Standard-[A-D])$/;
 
 function storagePath(text: string, voice: string): string {
   const hex = Buffer.from(text, 'utf-8').toString('hex');
-  return `${TTS_PREFIX}/${voice}/${hex}.mp3`;
+  return `${TTS_PREFIX}/${voice}/${RATE_SEGMENT}/${hex}.mp3`;
 }
 
 function publicUrl(path: string): string {
@@ -66,7 +76,7 @@ export async function POST(req: NextRequest) {
           // original fully-vowelized `text` so callers are unaffected.
           input: { text: stripTanwin(text) },
           voice: { languageCode: 'ar-XA', name: voice },
-          audioConfig: { audioEncoding: 'MP3' },
+          audioConfig: { audioEncoding: 'MP3', speakingRate: SPEAKING_RATE },
         }),
       },
     );
