@@ -12,6 +12,12 @@ const LOCALES = new Set(routing.locales);
 // full dialogue + audio client-side. Everything else stays login-gated.
 const PROTECTED_PATTERN = /^\/chinese\/(hsk|karaoke\/.|flashcards\/.|writing\/.)|^\/arabic\/dialogues\/[^/]+\/.|^\/arabic\/story\/[^/]+\/.|^\/arabic\/flashcards\/./;
 
+// SEO pilot: these otherwise-protected pages are publicly reachable and render
+// a crawlable preview (character list + login CTA) for anonymous visitors —
+// same pattern as the public dialogue-reader previews. The interactive
+// practice inside stays login-gated client-side.
+const PUBLIC_PREVIEW_PATHS = new Set(['/chinese/writing/hsk1/set1']);
+
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const host = request.headers.get('host') ?? '';
@@ -184,7 +190,7 @@ export default function proxy(request: NextRequest) {
     const localeMatch = pathname.match(/^\/([a-z]{2})(\/.*)?$/);
     if (localeMatch) {
       const pathWithoutLocale = localeMatch[2] || '/';
-      if (PROTECTED_PATTERN.test(pathWithoutLocale)) {
+      if (PROTECTED_PATTERN.test(pathWithoutLocale) && !PUBLIC_PREVIEW_PATHS.has(pathWithoutLocale)) {
         const hasAuth = request.cookies.get('blim-auth')?.value === '1';
         if (!hasAuth) {
           const locale = localeMatch[1];

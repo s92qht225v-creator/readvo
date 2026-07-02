@@ -73,6 +73,7 @@ export default async function WritingSetPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <WritingPracticePage
         setId={writingSet.id}
+        level={level}
         title={writingSet.title}
         title_ru={writingSet.title_ru}
         words={writingSet.words}
