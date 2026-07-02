@@ -7,12 +7,48 @@
   "titleTranslation_ru": "Знакомство",
   "titleTranslation_en": "Introductions",
   "vocab": [
-    { "ar": "اَلسَّلَامُ عَلَيْكُمْ", "translit": "As-salāmu ʿalaykum", "uz": "Assalomu alaykum", "ru": "Мир вам", "en": "Peace be upon you" },
-    { "ar": "مَا اسْمُكَ؟", "translit": "Mā ismuka?", "uz": "Isming nima?", "ru": "Как тебя зовут?", "en": "What's your name?" },
-    { "ar": "اِسْمٌ", "translit": "ism", "uz": "ism", "ru": "имя", "en": "name" },
-    { "ar": "اِسْمِي", "translit": "ismī", "uz": "mening ismim", "ru": "меня зовут (моё имя)", "en": "my name is" },
-    { "ar": "تَشَرَّفْتُ بِمَعْرِفَتِكَ", "translit": "Tasharraftu bi-maʿrifatika", "uz": "Tanishganimdan xursandman", "ru": "Приятно познакомиться", "en": "Nice to meet you" },
-    { "ar": "وَأَنَا أَيْضًا", "translit": "Wa anā ayḍan", "uz": "Men ham", "ru": "Я тоже", "en": "Me too" }
+    {
+      "ar": "اَلسَّلَامُ عَلَيْكُمْ",
+      "translit": "As-salāmu ʿalaykum",
+      "uz": "Assalomu alaykum",
+      "ru": "Мир вам",
+      "en": "Peace be upon you"
+    },
+    {
+      "ar": "مَا اسْمُكَ؟",
+      "translit": "Mā ismuka?",
+      "uz": "Isming nima?",
+      "ru": "Как тебя зовут?",
+      "en": "What's your name?"
+    },
+    {
+      "ar": "اِسْمٌ",
+      "translit": "ism",
+      "uz": "ism",
+      "ru": "имя",
+      "en": "name"
+    },
+    {
+      "ar": "اِسْمِي",
+      "translit": "ismī",
+      "uz": "mening ismim",
+      "ru": "меня зовут (моё имя)",
+      "en": "my name is"
+    },
+    {
+      "ar": "تَشَرَّفْتُ بِمَعْرِفَتِكَ",
+      "translit": "Tasharraftu bi-maʿrifatika",
+      "uz": "Tanishganimdan xursandman",
+      "ru": "Приятно познакомиться",
+      "en": "Nice to meet you"
+    },
+    {
+      "ar": "وَأَنَا أَيْضًا",
+      "translit": "Wa anā ayḍan",
+      "uz": "Men ham",
+      "ru": "Я тоже",
+      "en": "Me too"
+    }
   ],
   "sentences": [
     {
@@ -24,7 +60,8 @@
       "translit_f": "As-salāmu ʿalaykum.",
       "text_translation_uz": "Assalomu alaykum.",
       "text_translation_ru": "Мир вам.",
-      "text_translation_en": "Peace be upon you."
+      "text_translation_en": "Peace be upon you.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/darsho/s1.mp3?v=5b51ab472e"
     },
     {
       "id": "s2",
@@ -35,7 +72,8 @@
       "translit_f": "Wa ʿalaykumu as-salām.",
       "text_translation_uz": "Va alaykum assalom.",
       "text_translation_ru": "И вам мир.",
-      "text_translation_en": "And peace be upon you."
+      "text_translation_en": "And peace be upon you.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s2.mp3?v=181efbbcac"
     },
     {
       "id": "s3",
@@ -46,7 +84,8 @@
       "translit_f": "Mā ismuki?",
       "text_translation_uz": "Isming nima?",
       "text_translation_ru": "Как тебя зовут?",
-      "text_translation_en": "What's your name?"
+      "text_translation_en": "What's your name?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/darsho/s3.mp3?v=d81c15634d"
     },
     {
       "id": "s4",
@@ -60,7 +99,8 @@
       "text_translation_en": "My name is Ali. And what's your name?",
       "text_translation_uz_f": "Mening ismim Aisha. Sening isming nima?",
       "text_translation_ru_f": "Меня зовут Аиша. А как тебя зовут?",
-      "text_translation_en_f": "My name is Aisha. And what's your name?"
+      "text_translation_en_f": "My name is Aisha. And what's your name?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s4.mp3?v=3dcfd72b2e"
     },
     {
       "id": "s5",
@@ -74,7 +114,8 @@
       "text_translation_en": "My name is Ahmad. Nice to meet you.",
       "text_translation_uz_f": "Mening ismim Fotima. Tanishganimdan xursandman.",
       "text_translation_ru_f": "Меня зовут Фатима. Приятно познакомиться.",
-      "text_translation_en_f": "My name is Fatima. Nice to meet you."
+      "text_translation_en_f": "My name is Fatima. Nice to meet you.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/darsho/s5.mp3?v=9019c8ef61"
     },
     {
       "id": "s6",
@@ -85,7 +126,8 @@
       "translit_f": "Wa anā ayḍan.",
       "text_translation_uz": "Men ham.",
       "text_translation_ru": "Я тоже.",
-      "text_translation_en": "Me too."
+      "text_translation_en": "Me too.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/introductions/omar/s6.mp3?v=ed6fd62d64"
     }
   ]
 }

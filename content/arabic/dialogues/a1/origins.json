@@ -7,13 +7,55 @@
   "titleTranslation_ru": "Откуда ты?",
   "titleTranslation_en": "Where are you from?",
   "vocab": [
-    { "ar": "مِنْ أَيْنَ أَنْتَ؟", "translit": "Min ayna anta?", "uz": "Qayerdansan?", "ru": "Откуда ты?", "en": "Where are you from?" },
-    { "ar": "مِنْ", "translit": "min", "uz": "dan", "ru": "из", "en": "from" },
-    { "ar": "أَيْنَ", "translit": "ayna", "uz": "qayerda", "ru": "где", "en": "where" },
-    { "ar": "أَنَا مِنْ", "translit": "Anā min", "uz": "Men ...danman", "ru": "Я из", "en": "I am from" },
-    { "ar": "أُوزْبَكِسْتَان", "translit": "Ūzbakistān", "uz": "Oʻzbekiston", "ru": "Узбекистан", "en": "Uzbekistan" },
-    { "ar": "مِصْر", "translit": "Miṣr", "uz": "Misr", "ru": "Египет", "en": "Egypt" },
-    { "ar": "أَهْلًا وَسَهْلًا", "translit": "Ahlan wa sahlan", "uz": "Xush kelibsiz", "ru": "Добро пожаловать", "en": "Welcome" }
+    {
+      "ar": "مِنْ أَيْنَ أَنْتَ؟",
+      "translit": "Min ayna anta?",
+      "uz": "Qayerdansan?",
+      "ru": "Откуда ты?",
+      "en": "Where are you from?"
+    },
+    {
+      "ar": "مِنْ",
+      "translit": "min",
+      "uz": "dan",
+      "ru": "из",
+      "en": "from"
+    },
+    {
+      "ar": "أَيْنَ",
+      "translit": "ayna",
+      "uz": "qayerda",
+      "ru": "где",
+      "en": "where"
+    },
+    {
+      "ar": "أَنَا مِنْ",
+      "translit": "Anā min",
+      "uz": "Men ...danman",
+      "ru": "Я из",
+      "en": "I am from"
+    },
+    {
+      "ar": "أُوزْبَكِسْتَان",
+      "translit": "Ūzbakistān",
+      "uz": "Oʻzbekiston",
+      "ru": "Узбекистан",
+      "en": "Uzbekistan"
+    },
+    {
+      "ar": "مِصْر",
+      "translit": "Miṣr",
+      "uz": "Misr",
+      "ru": "Египет",
+      "en": "Egypt"
+    },
+    {
+      "ar": "أَهْلًا وَسَهْلًا",
+      "translit": "Ahlan wa sahlan",
+      "uz": "Xush kelibsiz",
+      "ru": "Добро пожаловать",
+      "en": "Welcome"
+    }
   ],
   "sentences": [
     {
@@ -25,7 +67,8 @@
       "translit_f": "As-salāmu ʿalaykum.",
       "text_translation_uz": "Assalomu alaykum.",
       "text_translation_ru": "Мир вам.",
-      "text_translation_en": "Peace be upon you."
+      "text_translation_en": "Peace be upon you.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/darsho/s1.mp3?v=500ba09372"
     },
     {
       "id": "s2",
@@ -36,7 +79,8 @@
       "translit_f": "Wa ʿalaykumu as-salām.",
       "text_translation_uz": "Va alaykum assalom.",
       "text_translation_ru": "И вам мир.",
-      "text_translation_en": "And peace be upon you."
+      "text_translation_en": "And peace be upon you.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s2.mp3?v=21a60fcdfc"
     },
     {
       "id": "s3",
@@ -47,7 +91,8 @@
       "translit_f": "Min ayna anti?",
       "text_translation_uz": "Qayerdansan?",
       "text_translation_ru": "Откуда ты?",
-      "text_translation_en": "Where are you from?"
+      "text_translation_en": "Where are you from?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/darsho/s3.mp3?v=862b1eb29c"
     },
     {
       "id": "s4",
@@ -58,7 +103,8 @@
       "translit_f": "Anā min Ūzbakistān. Wa anti?",
       "text_translation_uz": "Men O'zbekistondanman. Sen-chi?",
       "text_translation_ru": "Я из Узбекистана. А ты?",
-      "text_translation_en": "I'm from Uzbekistan. And you?"
+      "text_translation_en": "I'm from Uzbekistan. And you?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s4.mp3?v=313b6ffbfc"
     },
     {
       "id": "s5",
@@ -69,7 +115,8 @@
       "translit_f": "Anā min Miṣr.",
       "text_translation_uz": "Men Misrdanman.",
       "text_translation_ru": "Я из Египта.",
-      "text_translation_en": "I'm from Egypt."
+      "text_translation_en": "I'm from Egypt.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/darsho/s5.mp3?v=5a4f4046a4"
     },
     {
       "id": "s6",
@@ -80,7 +127,8 @@
       "translit_f": "Ahlan wa sahlan!",
       "text_translation_uz": "Xush kelibsiz!",
       "text_translation_ru": "Добро пожаловать!",
-      "text_translation_en": "Welcome!"
+      "text_translation_en": "Welcome!",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/origins/omar/s6.mp3?v=377d3e2f59"
     }
   ]
 }

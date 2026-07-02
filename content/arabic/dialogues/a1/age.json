@@ -7,14 +7,62 @@
   "titleTranslation_ru": "Сколько тебе лет?",
   "titleTranslation_en": "How Old Are You?",
   "vocab": [
-    { "ar": "لَوْ سَمَحْتَ", "translit": "Law samaḥta", "uz": "Iltimos, kechirasiz", "ru": "пожалуйста, извини", "en": "excuse me, please" },
-    { "ar": "كَمْ", "translit": "kam", "uz": "qancha, necha", "ru": "сколько", "en": "how much, how many" },
-    { "ar": "عُمْر", "translit": "ʿumr", "uz": "yosh, umr", "ru": "возраст", "en": "age" },
-    { "ar": "سَنَة", "translit": "sana", "uz": "yil", "ru": "год", "en": "year" },
-    { "ar": "عِشْرُونَ", "translit": "ʿishrūna", "uz": "yigirma", "ru": "двадцать", "en": "twenty" },
-    { "ar": "خَمْسَةٌ وَعِشْرُونَ", "translit": "khamsatun wa ʿishrūna", "uz": "yigirma besh", "ru": "двадцать пять", "en": "twenty-five" },
-    { "ar": "مَا شَاءَ اللَّهُ", "translit": "Mā shāʾa Allāhu", "uz": "Mashaalloh", "ru": "Машаллах", "en": "Mashallah (as God willed)" },
-    { "ar": "عُمْرٌ مَدِيدٌ", "translit": "ʿUmrun madīd", "uz": "uzoq umr", "ru": "долгая жизнь", "en": "a long life" }
+    {
+      "ar": "لَوْ سَمَحْتَ",
+      "translit": "Law samaḥta",
+      "uz": "Iltimos, kechirasiz",
+      "ru": "пожалуйста, извини",
+      "en": "excuse me, please"
+    },
+    {
+      "ar": "كَمْ",
+      "translit": "kam",
+      "uz": "qancha, necha",
+      "ru": "сколько",
+      "en": "how much, how many"
+    },
+    {
+      "ar": "عُمْر",
+      "translit": "ʿumr",
+      "uz": "yosh, umr",
+      "ru": "возраст",
+      "en": "age"
+    },
+    {
+      "ar": "سَنَة",
+      "translit": "sana",
+      "uz": "yil",
+      "ru": "год",
+      "en": "year"
+    },
+    {
+      "ar": "عِشْرُونَ",
+      "translit": "ʿishrūna",
+      "uz": "yigirma",
+      "ru": "двадцать",
+      "en": "twenty"
+    },
+    {
+      "ar": "خَمْسَةٌ وَعِشْرُونَ",
+      "translit": "khamsatun wa ʿishrūna",
+      "uz": "yigirma besh",
+      "ru": "двадцать пять",
+      "en": "twenty-five"
+    },
+    {
+      "ar": "مَا شَاءَ اللَّهُ",
+      "translit": "Mā shāʾa Allāhu",
+      "uz": "Mashaalloh",
+      "ru": "Машаллах",
+      "en": "Mashallah (as God willed)"
+    },
+    {
+      "ar": "عُمْرٌ مَدِيدٌ",
+      "translit": "ʿUmrun madīd",
+      "uz": "uzoq umr",
+      "ru": "долгая жизнь",
+      "en": "a long life"
+    }
   ],
   "sentences": [
     {
@@ -26,7 +74,8 @@
       "translit_f": "Law samaḥti, kam ʿumruki?",
       "text_translation_uz": "Kechirasiz, necha yoshdasan?",
       "text_translation_ru": "Извини, сколько тебе лет?",
-      "text_translation_en": "Excuse me, how old are you?"
+      "text_translation_en": "Excuse me, how old are you?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/darsho/s1.mp3?v=d1ceff07bb"
     },
     {
       "id": "s2",
@@ -37,7 +86,8 @@
       "translit_f": "ʿUmrī ʿishrūna sanatan. Wa anti?",
       "text_translation_uz": "Men yigirma yoshdaman. Sen-chi?",
       "text_translation_ru": "Мне двадцать лет. А тебе?",
-      "text_translation_en": "I'm twenty years old. And you?"
+      "text_translation_en": "I'm twenty years old. And you?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/omar/s2.mp3?v=2a51ea5623"
     },
     {
       "id": "s3",
@@ -48,7 +98,8 @@
       "translit_f": "ʿUmrī khamsatun wa ʿishrūna sanatan.",
       "text_translation_uz": "Men yigirma besh yoshdaman.",
       "text_translation_ru": "Мне двадцать пять лет.",
-      "text_translation_en": "I'm twenty-five years old."
+      "text_translation_en": "I'm twenty-five years old.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/darsho/s3.mp3?v=6ddd425069"
     },
     {
       "id": "s4",
@@ -59,7 +110,8 @@
       "translit_f": "Mā shāʾa Allāhu! ʿUmrun madīd!",
       "text_translation_uz": "Mashaalloh! Umring uzoq boʻlsin!",
       "text_translation_ru": "Машаллах! Долгих лет жизни!",
-      "text_translation_en": "Mashallah! May you have a long life!"
+      "text_translation_en": "Mashallah! May you have a long life!",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/age/omar/s4.mp3?v=93b1e85a19"
     }
   ]
 }

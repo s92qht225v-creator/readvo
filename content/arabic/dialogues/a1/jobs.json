@@ -7,14 +7,62 @@
   "titleTranslation_ru": "Кем ты работаешь?",
   "titleTranslation_en": "What's Your Job?",
   "vocab": [
-    { "ar": "عَمَل", "translit": "ʿamal", "uz": "ish, kasb", "ru": "работа", "en": "work, job" },
-    { "ar": "مَا عَمَلُكَ؟", "translit": "Mā ʿamaluka?", "uz": "Kasbing nima?", "ru": "Кем ты работаешь?", "en": "What's your job?" },
-    { "ar": "يَا أَخِي", "translit": "Yā akhī", "uz": "birodarim", "ru": "брат мой", "en": "my brother" },
-    { "ar": "مُتَرْجِم", "translit": "mutarjim", "uz": "tarjimon", "ru": "переводчик", "en": "interpreter, translator" },
-    { "ar": "مَاذَا تَعْمَلُ؟", "translit": "Māḏā taʿmalu?", "uz": "Nima ish qilasan?", "ru": "Чем ты занимаешься?", "en": "What do you do?" },
-    { "ar": "مُعَلِّم", "translit": "muʿallim", "uz": "oʻqituvchi", "ru": "учитель", "en": "teacher" },
-    { "ar": "مَدْرَسَة", "translit": "madrasa", "uz": "maktab", "ru": "школа", "en": "school" },
-    { "ar": "جَمِيل", "translit": "jamīl", "uz": "chiroyli, goʻzal", "ru": "красивый", "en": "beautiful, nice" }
+    {
+      "ar": "عَمَل",
+      "translit": "ʿamal",
+      "uz": "ish, kasb",
+      "ru": "работа",
+      "en": "work, job"
+    },
+    {
+      "ar": "مَا عَمَلُكَ؟",
+      "translit": "Mā ʿamaluka?",
+      "uz": "Kasbing nima?",
+      "ru": "Кем ты работаешь?",
+      "en": "What's your job?"
+    },
+    {
+      "ar": "يَا أَخِي",
+      "translit": "Yā akhī",
+      "uz": "birodarim",
+      "ru": "брат мой",
+      "en": "my brother"
+    },
+    {
+      "ar": "مُتَرْجِم",
+      "translit": "mutarjim",
+      "uz": "tarjimon",
+      "ru": "переводчик",
+      "en": "interpreter, translator"
+    },
+    {
+      "ar": "مَاذَا تَعْمَلُ؟",
+      "translit": "Māḏā taʿmalu?",
+      "uz": "Nima ish qilasan?",
+      "ru": "Чем ты занимаешься?",
+      "en": "What do you do?"
+    },
+    {
+      "ar": "مُعَلِّم",
+      "translit": "muʿallim",
+      "uz": "oʻqituvchi",
+      "ru": "учитель",
+      "en": "teacher"
+    },
+    {
+      "ar": "مَدْرَسَة",
+      "translit": "madrasa",
+      "uz": "maktab",
+      "ru": "школа",
+      "en": "school"
+    },
+    {
+      "ar": "جَمِيل",
+      "translit": "jamīl",
+      "uz": "chiroyli, goʻzal",
+      "ru": "красивый",
+      "en": "beautiful, nice"
+    }
   ],
   "sentences": [
     {
@@ -29,7 +77,8 @@
       "text_translation_en": "What's your job, my brother?",
       "text_translation_uz_f": "Kasbing nima, singlim?",
       "text_translation_ru_f": "Кем ты работаешь, сестра?",
-      "text_translation_en_f": "What's your job, my sister?"
+      "text_translation_en_f": "What's your job, my sister?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/darsho/s1.mp3?v=dabe84aaa5"
     },
     {
       "id": "s2",
@@ -41,7 +90,8 @@
       "text_translation_uz": "Men tarjimonman. Sen-chi, nima ish qilasan?",
       "text_translation_ru": "Я переводчик. А ты, чем занимаешься?",
       "text_translation_en": "I'm an interpreter. And you, what do you do?",
-      "text_translation_ru_f": "Я переводчица. А ты, чем занимаешься?"
+      "text_translation_ru_f": "Я переводчица. А ты, чем занимаешься?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/omar/s2.mp3?v=9136213231"
     },
     {
       "id": "s3",
@@ -53,7 +103,8 @@
       "text_translation_uz": "Men maktabda oʻqituvchiman.",
       "text_translation_ru": "Я учитель в школе.",
       "text_translation_en": "I'm a teacher in a school.",
-      "text_translation_ru_f": "Я учительница в школе."
+      "text_translation_ru_f": "Я учительница в школе.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/darsho/s3.mp3?v=15da8c8462"
     },
     {
       "id": "s4",
@@ -64,7 +115,8 @@
       "translit_f": "Hāḏā ʿamalun jamīlun jiddan!",
       "text_translation_uz": "Bu juda chiroyli kasb!",
       "text_translation_ru": "Это очень красивая работа!",
-      "text_translation_en": "That's a very nice job!"
+      "text_translation_en": "That's a very nice job!",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/jobs/omar/s4.mp3?v=1393bd35f6"
     }
   ]
 }

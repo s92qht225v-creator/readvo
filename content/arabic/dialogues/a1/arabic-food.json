@@ -7,16 +7,76 @@
   "titleTranslation_ru": "Арабская еда",
   "titleTranslation_en": "Arabic Food",
   "vocab": [
-    { "ar": "طَعَام", "translit": "ṭaʿām", "uz": "ovqat, taom", "ru": "еда", "en": "food" },
-    { "ar": "عَرَبِيّ", "translit": "ʿarabiyy", "uz": "arab, arabcha", "ru": "арабский", "en": "Arabic" },
-    { "ar": "هَلْ تُحِبُّ؟", "translit": "Hal tuḥibbu?", "uz": "yoqtirasanmi?", "ru": "ты любишь?", "en": "do you like?" },
-    { "ar": "كَثِيرًا", "translit": "kathīran", "uz": "koʻp, juda", "ru": "очень, много", "en": "a lot, very much" },
-    { "ar": "أَعْشَقُ", "translit": "aʿshaqu", "uz": "jondan yaxshi koʻraman", "ru": "обожаю", "en": "I adore" },
-    { "ar": "دَجَاج", "translit": "dajāj", "uz": "tovuq", "ru": "курица", "en": "chicken" },
-    { "ar": "أُرْز", "translit": "aruzz", "uz": "guruch", "ru": "рис", "en": "rice" },
-    { "ar": "لَذِيذ", "translit": "laḏīḏ", "uz": "mazali", "ru": "вкусный", "en": "delicious" },
-    { "ar": "مُمْتَاز", "translit": "mumtāz", "uz": "ajoyib, aʼlo", "ru": "отличный", "en": "excellent" },
-    { "ar": "صِحَّةٌ وَعَافِيَةٌ", "translit": "Ṣiḥḥatun wa ʿāfiya", "uz": "yoqimli ishtaha (sihat-salomatlik bilan)", "ru": "приятного аппетита", "en": "bon appétit, good health" }
+    {
+      "ar": "طَعَام",
+      "translit": "ṭaʿām",
+      "uz": "ovqat, taom",
+      "ru": "еда",
+      "en": "food"
+    },
+    {
+      "ar": "عَرَبِيّ",
+      "translit": "ʿarabiyy",
+      "uz": "arab, arabcha",
+      "ru": "арабский",
+      "en": "Arabic"
+    },
+    {
+      "ar": "هَلْ تُحِبُّ؟",
+      "translit": "Hal tuḥibbu?",
+      "uz": "yoqtirasanmi?",
+      "ru": "ты любишь?",
+      "en": "do you like?"
+    },
+    {
+      "ar": "كَثِيرًا",
+      "translit": "kathīran",
+      "uz": "koʻp, juda",
+      "ru": "очень, много",
+      "en": "a lot, very much"
+    },
+    {
+      "ar": "أَعْشَقُ",
+      "translit": "aʿshaqu",
+      "uz": "jondan yaxshi koʻraman",
+      "ru": "обожаю",
+      "en": "I adore"
+    },
+    {
+      "ar": "دَجَاج",
+      "translit": "dajāj",
+      "uz": "tovuq",
+      "ru": "курица",
+      "en": "chicken"
+    },
+    {
+      "ar": "أُرْز",
+      "translit": "aruzz",
+      "uz": "guruch",
+      "ru": "рис",
+      "en": "rice"
+    },
+    {
+      "ar": "لَذِيذ",
+      "translit": "laḏīḏ",
+      "uz": "mazali",
+      "ru": "вкусный",
+      "en": "delicious"
+    },
+    {
+      "ar": "مُمْتَاز",
+      "translit": "mumtāz",
+      "uz": "ajoyib, aʼlo",
+      "ru": "отличный",
+      "en": "excellent"
+    },
+    {
+      "ar": "صِحَّةٌ وَعَافِيَةٌ",
+      "translit": "Ṣiḥḥatun wa ʿāfiya",
+      "uz": "yoqimli ishtaha (sihat-salomatlik bilan)",
+      "ru": "приятного аппетита",
+      "en": "bon appétit, good health"
+    }
   ],
   "sentences": [
     {
@@ -28,7 +88,8 @@
       "translit_f": "Hal tuḥibbīna aṭ-ṭaʿāma al-ʿarabiyya?",
       "text_translation_uz": "Arab taomini yoqtirasanmi?",
       "text_translation_ru": "Ты любишь арабскую еду?",
-      "text_translation_en": "Do you like Arabic food?"
+      "text_translation_en": "Do you like Arabic food?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/darsho/s1.mp3?v=1e2e8ab86d"
     },
     {
       "id": "s2",
@@ -39,7 +100,8 @@
       "translit_f": "Naʿam, uḥibbu aṭ-ṭaʿāma al-ʿarabiyya kathīran! Wa anti?",
       "text_translation_uz": "Ha, arab taomini juda yoqtiraman! Sen-chi?",
       "text_translation_ru": "Да, я очень люблю арабскую еду! А ты?",
-      "text_translation_en": "Yes, I love Arabic food a lot! And you?"
+      "text_translation_en": "Yes, I love Arabic food a lot! And you?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/omar/s2.mp3?v=58cbfd666a"
     },
     {
       "id": "s3",
@@ -50,7 +112,8 @@
       "translit_f": "Anā aʿshaqu ad-dajāja wa-l-aruzza! Huwa laḏīḏun jiddan.",
       "text_translation_uz": "Men tovuq va guruchni jondan yaxshi koʻraman! U juda mazali.",
       "text_translation_ru": "Я обожаю курицу и рис! Это очень вкусно.",
-      "text_translation_en": "I adore chicken and rice! It's very delicious."
+      "text_translation_en": "I adore chicken and rice! It's very delicious.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/darsho/s3.mp3?v=a339e482b9"
     },
     {
       "id": "s4",
@@ -61,7 +124,8 @@
       "translit_f": "Mumtāzun! Ṣiḥḥatun wa ʿāfiya.",
       "text_translation_uz": "Ajoyib! Yoqimli ishtaha!",
       "text_translation_ru": "Отлично! Приятного аппетита!",
-      "text_translation_en": "Excellent! Bon appétit!"
+      "text_translation_en": "Excellent! Bon appétit!",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/arabic-food/omar/s4.mp3?v=06aa3d5138"
     }
   ]
 }

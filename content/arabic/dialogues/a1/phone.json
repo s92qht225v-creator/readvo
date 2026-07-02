@@ -7,15 +7,69 @@
   "titleTranslation_ru": "У тебя есть телефон?",
   "titleTranslation_en": "Do You Have a Phone?",
   "vocab": [
-    { "ar": "هَلْ", "translit": "hal", "uz": "...mi (soʻroq)", "ru": "ли (вопрос)", "en": "(yes/no question word)" },
-    { "ar": "عِنْدَكَ", "translit": "ʿindaka", "uz": "senda (bor)", "ru": "у тебя (есть)", "en": "you have" },
-    { "ar": "عِنْدِي", "translit": "ʿindī", "uz": "menda (bor)", "ru": "у меня (есть)", "en": "I have" },
-    { "ar": "هَاتِف", "translit": "hātif", "uz": "telefon", "ru": "телефон", "en": "phone" },
-    { "ar": "جَدِيد", "translit": "jadīd", "uz": "yangi", "ru": "новый", "en": "new" },
-    { "ar": "لَيْسَ عِنْدِي", "translit": "laysa ʿindī", "uz": "menda yoʻq", "ru": "у меня нет", "en": "I don't have" },
-    { "ar": "حَاسُوب", "translit": "ḥāsūb", "uz": "kompyuter", "ru": "компьютер", "en": "computer" },
-    { "ar": "مُمْتَاز", "translit": "mumtāz", "uz": "ajoyib, aʼlo", "ru": "отличный", "en": "excellent" },
-    { "ar": "عَمَل", "translit": "ʿamal", "uz": "ish", "ru": "работа", "en": "work" }
+    {
+      "ar": "هَلْ",
+      "translit": "hal",
+      "uz": "...mi (soʻroq)",
+      "ru": "ли (вопрос)",
+      "en": "(yes/no question word)"
+    },
+    {
+      "ar": "عِنْدَكَ",
+      "translit": "ʿindaka",
+      "uz": "senda (bor)",
+      "ru": "у тебя (есть)",
+      "en": "you have"
+    },
+    {
+      "ar": "عِنْدِي",
+      "translit": "ʿindī",
+      "uz": "menda (bor)",
+      "ru": "у меня (есть)",
+      "en": "I have"
+    },
+    {
+      "ar": "هَاتِف",
+      "translit": "hātif",
+      "uz": "telefon",
+      "ru": "телефон",
+      "en": "phone"
+    },
+    {
+      "ar": "جَدِيد",
+      "translit": "jadīd",
+      "uz": "yangi",
+      "ru": "новый",
+      "en": "new"
+    },
+    {
+      "ar": "لَيْسَ عِنْدِي",
+      "translit": "laysa ʿindī",
+      "uz": "menda yoʻq",
+      "ru": "у меня нет",
+      "en": "I don't have"
+    },
+    {
+      "ar": "حَاسُوب",
+      "translit": "ḥāsūb",
+      "uz": "kompyuter",
+      "ru": "компьютер",
+      "en": "computer"
+    },
+    {
+      "ar": "مُمْتَاز",
+      "translit": "mumtāz",
+      "uz": "ajoyib, aʼlo",
+      "ru": "отличный",
+      "en": "excellent"
+    },
+    {
+      "ar": "عَمَل",
+      "translit": "ʿamal",
+      "uz": "ish",
+      "ru": "работа",
+      "en": "work"
+    }
   ],
   "sentences": [
     {
@@ -27,7 +81,8 @@
       "translit_f": "Hal ʿindaki hātifun?",
       "text_translation_uz": "Senda telefon bormi?",
       "text_translation_ru": "У тебя есть телефон?",
-      "text_translation_en": "Do you have a phone?"
+      "text_translation_en": "Do you have a phone?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/darsho/s1.mp3?v=858c625336"
     },
     {
       "id": "s2",
@@ -38,7 +93,8 @@
       "translit_f": "Naʿam, ʿindī hātifun jadīdun. Wa anti?",
       "text_translation_uz": "Ha, menda yangi telefon bor. Sen-chi?",
       "text_translation_ru": "Да, у меня есть новый телефон. А у тебя?",
-      "text_translation_en": "Yes, I have a new phone. And you?"
+      "text_translation_en": "Yes, I have a new phone. And you?",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/omar/s2.mp3?v=f7d3023d1e"
     },
     {
       "id": "s3",
@@ -49,7 +105,8 @@
       "translit_f": "Lā, laysa ʿindī hātifun, ʿindī ḥāsūbun.",
       "text_translation_uz": "Yoʻq, menda telefon yoʻq, menda kompyuter bor.",
       "text_translation_ru": "Нет, у меня нет телефона, у меня есть компьютер.",
-      "text_translation_en": "No, I don't have a phone, I have a computer."
+      "text_translation_en": "No, I don't have a phone, I have a computer.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/darsho/s3.mp3?v=91bc464094"
     },
     {
       "id": "s4",
@@ -60,7 +117,8 @@
       "translit_f": "Hāḏā mumtāzun lil-ʿamal!",
       "text_translation_uz": "Bu ish uchun juda zoʻr!",
       "text_translation_ru": "Это отлично для работы!",
-      "text_translation_en": "That's excellent for work!"
+      "text_translation_en": "That's excellent for work!",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/dialogues/a1/phone/omar/s4.mp3?v=6a4c7f8b3e"
     }
   ]
 }
