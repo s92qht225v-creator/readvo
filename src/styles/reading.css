@@ -589,7 +589,7 @@ body {
   transform: translateY(-50%);
   z-index: -1;
   font-family: var(--font-cjk);
-  font-size: 64px;
+  font-size: 104px;
   font-weight: 700;
   line-height: 1;
   color: rgba(0, 0, 0, 0.05);
