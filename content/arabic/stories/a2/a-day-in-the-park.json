@@ -161,101 +161,414 @@
   ],
   "vocab": [
     {
-      "ar": "مَدِينَةٌ",
-      "translit": "madīnatun",
+      "ar": "اِسْم",
+      "translit": "ism",
+      "uz": "ism",
+      "ru": "имя",
+      "en": "name",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w01.mp3?v=c4f7ce282a"
+    },
+    {
+      "ar": "أَنَا",
+      "translit": "ʾanā",
+      "uz": "men",
+      "ru": "я",
+      "en": "I",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w02.mp3?v=d165375b37"
+    },
+    {
+      "ar": "طَالِب",
+      "translit": "ṭālib",
+      "uz": "talaba",
+      "ru": "студент",
+      "en": "student (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w03.mp3?v=3895a4e3b0"
+    },
+    {
+      "ar": "طَالِبَة",
+      "translit": "ṭālibah",
+      "uz": "talaba",
+      "ru": "студентка",
+      "en": "student (female)",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w04.mp3?v=7a03a1db32"
+    },
+    {
+      "ar": "سَكَنَ",
+      "translit": "sakana",
+      "uz": "yashamoq",
+      "ru": "жить",
+      "en": "to live",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w05.mp3?v=507bd5cd8e"
+    },
+    {
+      "ar": "فِي",
+      "translit": "fī",
+      "uz": "ichida",
+      "ru": "в",
+      "en": "in",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w06.mp3?v=3ceaae575f"
+    },
+    {
+      "ar": "مَدِينَة",
+      "translit": "madīnah",
       "uz": "shahar",
       "ru": "город",
       "en": "city",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w01.mp3?v=ffd5b2a49b"
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w07.mp3?v=36d9449d4f"
     },
     {
-      "ar": "حَدِيقَةٌ",
-      "translit": "ḥadīqatun",
+      "ar": "صَغِير",
+      "translit": "ṣaghīr",
+      "uz": "kichik",
+      "ru": "маленький",
+      "en": "small (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w08.mp3?v=d8bd574422"
+    },
+    {
+      "ar": "صَغِيرَة",
+      "translit": "ṣaghīrah",
+      "uz": "kichik",
+      "ru": "маленькая",
+      "en": "small (female)",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w09.mp3?v=2d6719fb0d"
+    },
+    {
+      "ar": "يَوْم",
+      "translit": "yawm",
+      "uz": "kun",
+      "ru": "день",
+      "en": "day",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w10.mp3?v=65fe52b91d"
+    },
+    {
+      "ar": "جَوّ",
+      "translit": "jaww",
+      "uz": "ob-havo",
+      "ru": "погода",
+      "en": "weather",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w11.mp3?v=52c95ad3c0"
+    },
+    {
+      "ar": "جَمِيل",
+      "translit": "jamīl",
+      "uz": "chiroyli",
+      "ru": "красивый",
+      "en": "beautiful, nice (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w12.mp3?v=20059938c0"
+    },
+    {
+      "ar": "جَمِيلَة",
+      "translit": "jamīlah",
+      "uz": "chiroyli",
+      "ru": "красивая",
+      "en": "beautiful, nice (female)",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w13.mp3?v=a8216c64fb"
+    },
+    {
+      "ar": "ذَهَبَ",
+      "translit": "dhahaba",
+      "uz": "bormoq",
+      "ru": "идти",
+      "en": "to go",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w14.mp3?v=7a8b0520a4"
+    },
+    {
+      "ar": "إِلَى",
+      "translit": "ilā",
+      "uz": "-ga",
+      "ru": "к",
+      "en": "to",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w15.mp3?v=6fcb978a11"
+    },
+    {
+      "ar": "حَدِيقَة",
+      "translit": "ḥadīqah",
       "uz": "bog'",
       "ru": "парк",
       "en": "park",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w02.mp3?v=5d5f3341e3"
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w16.mp3?v=9861343ab6"
     },
     {
-      "ar": "صَدِيقٌ",
-      "translit": "ṣadīqun",
+      "ar": "مَعَ",
+      "translit": "maʿa",
+      "uz": "bilan",
+      "ru": "с",
+      "en": "with",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w17.mp3?v=ac46ae2d7a"
+    },
+    {
+      "ar": "صَدِيق",
+      "translit": "ṣadīq",
       "uz": "do'st",
       "ru": "друг",
-      "en": "friend",
+      "en": "friend (male)",
       "gender": "m",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w03.mp3?v=5ef2a837c0"
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w18.mp3?v=a04510930c"
     },
     {
-      "ar": "شَجَرَةٌ",
-      "translit": "shajaratun",
-      "uz": "daraxt",
-      "ru": "дерево",
-      "en": "tree",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w04.mp3?v=0e651072ec"
+      "ar": "صَدِيقَة",
+      "translit": "ṣadīqah",
+      "uz": "do'st",
+      "ru": "подруга",
+      "en": "friend (female)",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w19.mp3?v=33f4f437ba"
     },
     {
-      "ar": "زَهْرَةٌ",
-      "translit": "zahratun",
-      "uz": "gul",
-      "ru": "цветок",
-      "en": "flower",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w05.mp3?v=301caf1807"
+      "ar": "نَحْنُ",
+      "translit": "naḥnu",
+      "uz": "biz",
+      "ru": "мы",
+      "en": "we",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w20.mp3?v=04f7337b5c"
     },
     {
-      "ar": "مَقْعَدٌ",
-      "translit": "maqʿadun",
+      "ar": "مَشَى",
+      "translit": "mashā",
+      "uz": "yurmoq",
+      "ru": "идти пешком",
+      "en": "to walk",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w21.mp3?v=a2078fb2bb"
+    },
+    {
+      "ar": "وَ",
+      "translit": "wa",
+      "uz": "va",
+      "ru": "и",
+      "en": "and",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w22.mp3?v=c0a99eb11b"
+    },
+    {
+      "ar": "تَحَدَّثَ",
+      "translit": "taḥaddatha",
+      "uz": "suhbatlashmoq",
+      "ru": "разговаривать",
+      "en": "to talk",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w23.mp3?v=37948480b4"
+    },
+    {
+      "ar": "شَجَر",
+      "translit": "shajar",
+      "uz": "daraxt(lar)",
+      "ru": "дерево / деревья",
+      "en": "tree(s)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w24.mp3?v=78d5881a96"
+    },
+    {
+      "ar": "زَهْر",
+      "translit": "zahr",
+      "uz": "gul(lar)",
+      "ru": "цветок / цветы",
+      "en": "flower(s)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w25.mp3?v=09fa557c22"
+    },
+    {
+      "ar": "كَثِير",
+      "translit": "kathīr",
+      "uz": "ko'p",
+      "ru": "много",
+      "en": "many, much",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w26.mp3?v=42e72a239f"
+    },
+    {
+      "ar": "جَلَسَ",
+      "translit": "jalasa",
+      "uz": "o'tirmoq",
+      "ru": "сидеть",
+      "en": "to sit",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w27.mp3?v=26bd4bd07a"
+    },
+    {
+      "ar": "عَلَى",
+      "translit": "ʿalā",
+      "uz": "ustida",
+      "ru": "на",
+      "en": "on",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w28.mp3?v=4e46c617f4"
+    },
+    {
+      "ar": "مَقْعَد",
+      "translit": "maqʿad",
       "uz": "skameyka",
       "ru": "скамейка",
       "en": "bench",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w06.mp3?v=49d57e0dd6"
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w29.mp3?v=6dccb433e0"
     },
     {
-      "ar": "مَاءٌ",
-      "translit": "māʾun",
+      "ar": "شَرِبَ",
+      "translit": "shariba",
+      "uz": "ichmoq",
+      "ru": "пить",
+      "en": "to drink",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w30.mp3?v=28dd284d4c"
+    },
+    {
+      "ar": "مَاء",
+      "translit": "māʾ",
       "uz": "suv",
       "ru": "вода",
       "en": "water",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w07.mp3?v=4a51144840"
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w31.mp3?v=7ba862af52"
     },
     {
-      "ar": "تُفَّاحَةٌ",
-      "translit": "tuffāḥatun",
+      "ar": "أَكَلَ",
+      "translit": "akala",
+      "uz": "yemoq",
+      "ru": "есть",
+      "en": "to eat",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w32.mp3?v=24ad040fee"
+    },
+    {
+      "ar": "تُفَّاحَة",
+      "translit": "tuffāḥah",
       "uz": "olma",
       "ru": "яблоко",
       "en": "apple",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w08.mp3?v=b1802b38a5"
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w33.mp3?v=83886900e9"
     },
     {
-      "ar": "طِفْلٌ",
-      "translit": "ṭiflun",
-      "uz": "bola",
-      "ru": "ребёнок",
-      "en": "child",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w09.mp3?v=b929f27abe"
+      "ar": "رَأَى",
+      "translit": "raʾā",
+      "uz": "ko'rmoq",
+      "ru": "видеть",
+      "en": "to see",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w34.mp3?v=016961f143"
     },
     {
-      "ar": "كُرَةٌ",
-      "translit": "kuratun",
+      "ar": "طِفْل",
+      "translit": "ṭifl",
+      "uz": "bola (o'g'il)",
+      "ru": "ребёнок (мальчик)",
+      "en": "child (boy)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w35.mp3?v=1af8fd8054"
+    },
+    {
+      "ar": "طِفْلَة",
+      "translit": "ṭiflah",
+      "uz": "bola (qiz)",
+      "ru": "ребёнок (девочка)",
+      "en": "child (girl)",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w36.mp3?v=802059cd8a"
+    },
+    {
+      "ar": "لَعِبَ",
+      "translit": "laʿiba",
+      "uz": "o'ynamoq",
+      "ru": "играть",
+      "en": "to play",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w37.mp3?v=459d9bbdaf"
+    },
+    {
+      "ar": "كُرَة",
+      "translit": "kurah",
       "uz": "to'p",
       "ru": "мяч",
       "en": "ball",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w10.mp3?v=1895e9820c"
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w38.mp3?v=f096b4cf93"
     },
     {
-      "ar": "بَيْتٌ",
-      "translit": "baytun",
-      "uz": "uy",
-      "ru": "дом",
-      "en": "house",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w11.mp3?v=2fb6d1a6dc"
+      "ar": "هُوَ",
+      "translit": "huwa",
+      "uz": "u (erkak)",
+      "ru": "он",
+      "en": "he",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w39.mp3?v=a9c03ec070"
     },
     {
-      "ar": "سَعِيدٌ",
-      "translit": "saʿīdun",
+      "ar": "هِيَ",
+      "translit": "hiya",
+      "uz": "u (ayol)",
+      "ru": "она",
+      "en": "she",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w40.mp3?v=61e0d5405f"
+    },
+    {
+      "ar": "هُمْ",
+      "translit": "hum",
+      "uz": "ular",
+      "ru": "они",
+      "en": "they",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w41.mp3?v=643cfbead0"
+    },
+    {
+      "ar": "سَعِيد",
+      "translit": "saʿīd",
       "uz": "xursand",
       "ru": "счастливый",
-      "en": "happy",
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w12.mp3?v=6c6553481f"
+      "en": "happy (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w42.mp3?v=9d20ca4915"
+    },
+    {
+      "ar": "سَعِيدَة",
+      "translit": "saʿīdah",
+      "uz": "xursand",
+      "ru": "счастливая",
+      "en": "happy (female)",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w43.mp3?v=8790c5f1a5"
+    },
+    {
+      "ar": "بَعْدَ",
+      "translit": "baʿda",
+      "uz": "-dan keyin",
+      "ru": "после",
+      "en": "after",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w44.mp3?v=f0a2cfdde6"
+    },
+    {
+      "ar": "سَاعَة",
+      "translit": "sāʿah",
+      "uz": "soat",
+      "ru": "час",
+      "en": "hour",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w45.mp3?v=372a8b5021"
+    },
+    {
+      "ar": "عَادَ",
+      "translit": "ʿāda",
+      "uz": "qaytmoq",
+      "ru": "возвращаться",
+      "en": "to return",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w46.mp3?v=42aca7e919"
+    },
+    {
+      "ar": "بَيْت",
+      "translit": "bayt",
+      "uz": "uy",
+      "ru": "дом",
+      "en": "house, home",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w47.mp3?v=167e7b5b1d"
+    },
+    {
+      "ar": "كَانَ",
+      "translit": "kāna",
+      "uz": "bo'lmoq / edi",
+      "ru": "быть (был)",
+      "en": "to be (was)",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/a-day-in-the-park/omar/words/w48.mp3?v=8f88339c3c"
     }
   ]
 }
