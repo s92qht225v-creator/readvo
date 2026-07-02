@@ -3,9 +3,9 @@
   "title": "Xitoy alifbosida nechta harf bor?",
   "title_ru": "Сколько букв в китайском алфавите?",
   "title_en": "How Many Letters Are in the Chinese Alphabet?",
-  "description": "Xitoy alifbosida nechta harf bor? Aslida alifbo yo'q — harflar o'rniga minglab ieroglif va pinyin tizimi ishlatiladi. Oddiy tushuntirish, misollar bilan.",
-  "description_ru": "Сколько букв в китайском алфавите? На самом деле алфавита нет — вместо букв тысячи иероглифов и система пиньинь. Объясняем просто, с примерами.",
-  "description_en": "How many letters are in the Chinese alphabet? There actually isn't one — instead of letters, Chinese uses thousands of characters and the pinyin system. A simple explanation with examples.",
+  "description": "Xitoy alifbosida nechta harf bor? Aslida alifbo yo'q — harflar o'rniga minglab ieroglif va pinyin tizimi ishlatiladi. Oddiy tushuntirish, jadval va misollar bilan.",
+  "description_ru": "Сколько букв в китайском алфавите? Короткий ответ: алфавита нет — вместо букв тысячи иероглифов и система пиньинь. Объясняем просто: таблицы, примеры и ответы на частые вопросы.",
+  "description_en": "How many letters are in the Chinese alphabet? There actually isn't one — instead of letters, Chinese uses thousands of characters and the pinyin system. A simple explanation with tables, examples and FAQ.",
   "date": "2026-03-13",
   "heroImage": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/Blog/Chinese/xitoy-tilida-alifbo-bormi.jpg",
   "heroImage_ru": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/Blog/Chinese/est-li-alfavit.jpg",
@@ -15,17 +15,25 @@
       "heading": "",
       "heading_ru": "",
       "heading_en": "",
-      "body": "Ko'pchilik Xitoy tilini o'rganishni boshlaganda birinchi: XITOY TILIDA ALIFBO bormi deb savol beradi?\n\nQisqa javob: yo'q, Xitoy tilida alifbo yo'q.\n\nXitoy tilida yozish uchun ierogliflar ishlatiladi. Bu belgilar 汉字 (hànzì) deb ataladi.",
-      "body_ru": "Многие люди, начиная изучать китайский язык, задают один и тот же вопрос: есть ли в китайском языке алфавит?\n\nКороткий ответ: нет, в китайском языке нет алфавита.\n\nДля письма в китайском языке используются иероглифы. Эти знаки называются 汉字 (hànzì).",
-      "body_en": "Many people who start learning Chinese ask the same question: Does the Chinese language have an alphabet?\n\nThe short answer is: No, Chinese does not have an alphabet.\n\nInstead of letters, Chinese writing uses characters called 汉字 (hànzì)."
+      "body": "Ko'pchilik Xitoy tilini o'rganishni boshlaganda birinchi: XITOY TILIDA ALIFBO bormi deb savol beradi?\n\nQisqa javob: yo'q, Xitoy tilida alifbo yo'q. Shuning uchun «Xitoy alifbosida nechta harf bor?» degan savolga aniq javob — **nol harf**: harflar o'rniga butunlay boshqa tizim ishlatiladi.\n\nXitoy tilida yozish uchun ierogliflar ishlatiladi. Bu belgilar 汉字 (hànzì) deb ataladi. Har bir ieroglif harf emas — u butun bir bo'g'in va ma'noni bildiradi.",
+      "body_ru": "Многие люди, начиная изучать китайский язык, задают один и тот же вопрос: есть ли в китайском языке алфавит?\n\nКороткий ответ: нет, в китайском языке нет алфавита. Поэтому на вопрос «сколько букв в китайском алфавите?» честный ответ — **ноль букв**: вместо букв используется совершенно другая система письма.\n\nДля письма в китайском языке используются иероглифы. Эти знаки называются 汉字 (hànzì). Каждый иероглиф — не буква: он обозначает целый слог и значение.",
+      "body_en": "Many people who start learning Chinese ask the same question: Does the Chinese language have an alphabet?\n\nThe short answer is: No, Chinese does not have an alphabet. So the honest answer to \"how many letters are in the Chinese alphabet?\" is **zero letters** — Chinese writing uses a completely different system.\n\nInstead of letters, Chinese writing uses characters called 汉字 (hànzì). Each character is not a letter: it represents a whole syllable and a meaning."
     },
     {
       "heading": "Xitoy yozuvi qanday ishlaydi?",
       "heading_ru": "Как работает китайская письменность?",
       "heading_en": "How Does Chinese Writing Work?",
-      "body": "Ko'pchilik tillarda so'zlar harflardan tuziladi. Masalan:\n\n* Inglizcha: water\n* O'zbekcha: suv\n\nBu so'zlar alifbodagi harflardan tuzilgan.\n\nXitoy tilida esa ko'pincha bitta belgi butun so'zni bildiradi.\n\nMasalan:\n\n* 我 (wǒ) — men\n* 你 (nǐ) — sen / siz\n* 水 (shuǐ) — suv\n* 吃 (chī) — yemoq",
-      "body_ru": "Во многих языках слова состоят из букв. Например:\n\n* Английский: water\n* Узбекский: suv\n\nЭти слова состоят из букв алфавита.\n\nВ китайском языке же часто один знак обозначает целое слово или значение.\n\nНапример:\n\n* 我 (wǒ) — я\n* 你 (nǐ) — ты / вы\n* 水 (shuǐ) — вода\n* 吃 (chī) — есть",
-      "body_en": "In many languages, words are made from letters. For example:\n\n* English: water\n* Uzbek: suv\n\nThese words are formed using letters of the alphabet.\n\nIn Chinese, however, one character often represents a whole word or meaning.\n\nFor example:\n\n* 我 (wǒ) — I / me\n* 你 (nǐ) — you\n* 水 (shuǐ) — water\n* 吃 (chī) — to eat"
+      "body": "Ko'pchilik tillarda so'zlar harflardan tuziladi. Masalan:\n\n* Inglizcha: water\n* O'zbekcha: suv\n\nBu so'zlar alifbodagi harflardan tuzilgan.\n\nXitoy tilida esa ko'pincha bitta belgi butun so'zni bildiradi.\n\nMasalan:\n\n* 我 (wǒ) — men\n* 你 (nǐ) — sen / siz\n* 水 (shuǐ) — suv\n* 吃 (chī) — yemoq\n\nKo'p so'zlar ikki ieroglifdan ham tuziladi: 老师 (lǎoshī) — o'qituvchi, 朋友 (péngyou) — do'st. Lekin baribir bu harflar emas: har bir belgi o'z ma'nosiga ega.",
+      "body_ru": "Во многих языках слова состоят из букв. Например:\n\n* Английский: water\n* Русский: вода\n\nЭти слова состоят из букв алфавита.\n\nВ китайском языке же часто один знак обозначает целое слово или значение.\n\nНапример:\n\n* 我 (wǒ) — я\n* 你 (nǐ) — ты / вы\n* 水 (shuǐ) — вода\n* 吃 (chī) — есть\n\nМногие слова состоят из двух иероглифов: 老师 (lǎoshī) — учитель, 朋友 (péngyou) — друг. Но это всё равно не буквы: каждый знак несёт собственное значение.",
+      "body_en": "In many languages, words are made from letters. For example:\n\n* English: water\n* Uzbek: suv\n\nThese words are formed using letters of the alphabet.\n\nIn Chinese, however, one character often represents a whole word or meaning.\n\nFor example:\n\n* 我 (wǒ) — I / me\n* 你 (nǐ) — you\n* 水 (shuǐ) — water\n* 吃 (chī) — to eat\n\nMany words are made of two characters: 老师 (lǎoshī) — teacher, 朋友 (péngyou) — friend. But these are still not letters: each character carries its own meaning."
+    },
+    {
+      "heading": "Ierogliflar nimadan tuziladi?",
+      "heading_ru": "Из чего состоят иероглифы?",
+      "heading_en": "What Are Characters Made Of?",
+      "body": "Ierogliflar tasodifiy chiziqlar emas — ular **kalitlar** (部首, bùshǒu) deb ataladigan kichik qismlardan tuziladi. Kalitlar ko'pincha ma'noga ishora qiladi.\n\nMasalan, «suv» kaliti 氵bor ierogliflar suvga aloqador bo'ladi:\n\n* 河 (hé) — daryo\n* 海 (hǎi) — dengiz\n* 湖 (hú) — ko'l\n\nJami 214 ta an'anaviy kalit bor. Ularni bilish yangi ierogliflarni eslab qolishni ancha osonlashtiradi: notanish belgi ichida tanish qismlarni ko'rasiz.\n\nHar bir ieroglif ma'lum tartibda yoziladigan **chiziqlardan** iborat: eng soddasi 一 (yī, «bir») bitta chiziq, murakkablari 20 dan ortiq chiziqdan tuziladi.",
+      "body_ru": "Иероглифы — не случайные линии. Они состоят из небольших частей, которые называются **ключами** или радикалами (部首, bùshǒu). Ключ часто подсказывает значение.\n\nНапример, иероглифы с ключом «вода» 氵связаны с водой:\n\n* 河 (hé) — река\n* 海 (hǎi) — море\n* 湖 (hú) — озеро\n\nВсего традиционно выделяют 214 ключей. Зная их, запоминать новые иероглифы гораздо легче: в незнакомом знаке вы видите знакомые части.\n\nКаждый иероглиф состоит из **черт**, которые пишутся в определённом порядке: самый простой 一 (yī, «один») — одна черта, сложные состоят из 20 и более черт.",
+      "body_en": "Characters are not random lines — they are built from smaller parts called **radicals** (部首, bùshǒu). A radical often hints at the meaning.\n\nFor example, characters with the \"water\" radical 氵are related to water:\n\n* 河 (hé) — river\n* 海 (hǎi) — sea\n* 湖 (hú) — lake\n\nThere are 214 traditional radicals. Knowing them makes memorizing new characters much easier: you start seeing familiar parts inside unfamiliar signs.\n\nEvery character is written with **strokes** in a fixed order: the simplest character 一 (yī, \"one\") is a single stroke, while complex ones have 20 strokes or more."
     },
     {
       "heading": "Unda xitoy yozuvi qanday o'rganiladi?",
@@ -35,17 +43,86 @@
       "imageAlt": "Pinyin tizimi",
       "imageAlt_ru": "Система пиньинь",
       "imageAlt_en": "Pinyin system",
-      "body": "Xitoy tilini o'rganishni osonlashtirish uchun pinyin (拼音) tizimi ishlatiladi.\n\nPinyin — bu xitoycha so'zlarning talaffuzini lotin harflari bilan yozish usuli.\n\nMasalan:\n\n* 你好 (nǐ hǎo) — salom\n* 中国 (zhōng guó) — Xitoy\n* 学生 (xuéshēng) — talaba\n\nPinyin yordamida siz:\n\n* so'zlarni to'g'ri o'qishni\n* talaffuzni\n* yangi so'zlarni tezroq o'rganishni\n\no'rganasiz.\n\nAmmo kundalik yozuvda xitoyliklar pinyin emas, ierogliflardan foydalanadi.",
-      "body_ru": "Чтобы облегчить изучение китайского языка, используется система пиньинь (拼音).\n\nПиньинь — это система записи китайского произношения с помощью латинских букв.\n\nНапример:\n\n* 你好 (nǐ hǎo) — здравствуйте\n* 中国 (zhōng guó) — Китай\n* 学生 (xuéshēng) — студент\n\nС помощью пиньиня можно:\n\n* правильно читать слова\n* изучать произношение\n* быстрее запоминать новые слова\n\nОднако в повседневной письменной речи китайцы используют не пиньинь, а иероглифы.",
-      "body_en": "To make learning Chinese easier, a system called pinyin (拼音) is used.\n\nPinyin is a system that writes the pronunciation of Chinese words using the Latin alphabet.\n\nFor example:\n\n* 你好 (nǐ hǎo) — hello\n* 中国 (zhōng guó) — China\n* 学生 (xuéshēng) — student\n\nWith the help of pinyin, you can:\n\n* read words correctly\n* learn pronunciation\n* memorize new vocabulary more easily\n\nHowever, in everyday writing Chinese people use characters, not pinyin."
+      "body": "Xitoy tilini o'rganishni osonlashtirish uchun pinyin (拼音) tizimi ishlatiladi.\n\nPinyin — bu xitoycha so'zlarning talaffuzini lotin harflari bilan yozish usuli. U 1958-yilda rasmiy qabul qilingan va bugungi kunda butun dunyoda Xitoy tilini o'qitishda ishlatiladi.\n\nMasalan:\n\n* 你好 (nǐ hǎo) — salom\n* 中国 (zhōng guó) — Xitoy\n* 学生 (xuéshēng) — talaba\n\nPinyin yordamida siz:\n\n* so'zlarni to'g'ri o'qishni\n* talaffuz va tonlarni\n* yangi so'zlarni tezroq o'rganishni\n\no'rganasiz.\n\nMuhim: pinyin — alifbo emas, balki talaffuz uchun yordamchi vosita. Kundalik yozuvda xitoyliklar pinyin emas, ierogliflardan foydalanadi.",
+      "body_ru": "Чтобы облегчить изучение китайского языка, используется система пиньинь (拼音).\n\nПиньинь — это система записи китайского произношения с помощью латинских букв. Она официально принята в 1958 году и сегодня используется во всём мире для обучения китайскому.\n\nНапример:\n\n* 你好 (nǐ hǎo) — здравствуйте\n* 中国 (zhōng guó) — Китай\n* 学生 (xuéshēng) — студент\n\nС помощью пиньиня можно:\n\n* правильно читать слова\n* освоить произношение и тоны\n* быстрее запоминать новые слова\n\nВажно: пиньинь — это не алфавит китайского языка, а вспомогательная система для произношения. В повседневной письменной речи китайцы используют не пиньинь, а иероглифы.",
+      "body_en": "To make learning Chinese easier, a system called pinyin (拼音) is used.\n\nPinyin is a system that writes the pronunciation of Chinese words using the Latin alphabet. It was officially adopted in 1958 and is used worldwide for teaching Chinese today.\n\nFor example:\n\n* 你好 (nǐ hǎo) — hello\n* 中国 (zhōng guó) — China\n* 学生 (xuéshēng) — student\n\nWith the help of pinyin, you can:\n\n* read words correctly\n* learn pronunciation and tones\n* memorize new vocabulary more easily\n\nImportant: pinyin is not a Chinese alphabet — it is a pronunciation aid. In everyday writing, Chinese people use characters, not pinyin."
+    },
+    {
+      "heading": "Xitoyliklar telefonda qanday yozadi?",
+      "heading_ru": "Как китайцы печатают на телефоне и компьютере?",
+      "heading_en": "How Do Chinese People Type?",
+      "body": "Qiziq savol: alifbo bo'lmasa, xitoyliklar telefonda qanday yozadi?\n\nJavob — pinyin orqali. Oddiy lotin klaviaturasida so'zning talaffuzi yoziladi, tizim esa mos ierogliflarni taklif qiladi.\n\nMasalan, **nihao** deb terilsa, klaviatura 你好 ni taklif qiladi — bir tegish bilan tayyor.\n\nShuning uchun pinyinni bilish nafaqat o'qish, balki yozish uchun ham asosiy ko'nikma hisoblanadi. Xitoyda hamma — maktab o'quvchisidan keksagacha — aynan shu usulda yozadi.",
+      "body_ru": "Интересный вопрос: если алфавита нет, как китайцы печатают на телефоне?\n\nОтвет — через пиньинь. На обычной латинской клавиатуре набирается произношение слова, а система предлагает подходящие иероглифы.\n\nНапример, если набрать **nihao**, клавиатура предложит 你好 — одно касание, и готово.\n\nПоэтому знание пиньиня — базовый навык не только для чтения, но и для набора текста. В Китае так печатают все: от школьников до пожилых людей.",
+      "body_en": "An interesting question: if there is no alphabet, how do Chinese people type on their phones?\n\nThe answer is pinyin. You type the pronunciation of a word on a regular Latin keyboard, and the system suggests matching characters.\n\nFor example, typing **nihao** makes the keyboard suggest 你好 — one tap and you're done.\n\nThat is why knowing pinyin is a core skill not just for reading but for typing too. Everyone in China types this way — from schoolchildren to grandparents."
     },
     {
       "heading": "Xitoy tilida nechta ieroglif bor?",
       "heading_ru": "Сколько иероглифов в китайском языке?",
       "heading_en": "How Many Characters Are There in Chinese?",
-      "body": "Xitoy tilida o'n minglab ierogliflar mavjud.\n\nAmmo kundalik hayot uchun hammasini bilish shart emas.\n\nMasalan:\n\n* HSK 1 — 150 ta so'z\n* HSK 2 — 300 ta so'z\n* HSK 3 — 600 ta so'z\n* HSK 4 — 1200 ta so'z\n* HSK 6 — 5000 ta so'z\n\nOddiy matnlarni o'qish uchun odatda 3000–4000 ieroglif yetarli bo'ladi.",
-      "body_ru": "В китайском языке существует десятки тысяч иероглифов.\n\nНо для повседневной жизни знать все не обязательно.\n\nНапример:\n\n* HSK 1 — 150 слов\n* HSK 2 — 300 слов\n* HSK 3 — 600 слов\n* HSK 4 — 1200 слов\n* HSK 6 — 5000 слов\n\nЧтобы читать обычные тексты, обычно достаточно знать 3000–4000 иероглифов.",
-      "body_en": "There are tens of thousands of Chinese characters.\n\nBut you do not need to know all of them for daily use.\n\nFor example:\n\n* HSK 1 — 150 words\n* HSK 2 — 300 words\n* HSK 3 — 600 words\n* HSK 4 — 1,200 words\n* HSK 6 — 5,000 words\n\nTo read ordinary texts, it is usually enough to know 3,000–4,000 characters."
+      "body": "Katta lug'atlarda 80 000 dan ortiq ieroglif qayd etilgan. Lekin bu raqamdan qo'rqmang: ularning aksariyati eski matnlarda uchraydigan kam ishlatiladigan belgilar.\n\nAmalda:\n\n| Ieroglif soni | Nimaga yetadi |\n| --- | --- |\n| ~500 | oddiy matnlarning ~75% ini tushunish |\n| ~1000 | kundalik matnlarning ~90% i |\n| ~2500 | gazeta va kitoblarning ~98% i |\n| 3000–4000 | erkin o'qish darajasi |\n\nHSK imtihonlari bo'yicha so'z boyligi:\n\n* HSK 1 — 150 ta so'z\n* HSK 2 — 300 ta so'z\n* HSK 3 — 600 ta so'z\n* HSK 4 — 1200 ta so'z\n* HSK 5 — 2500 ta so'z\n* HSK 6 — 5000 ta so'z\n\nYa'ni boshlash uchun bor-yo'g'i 150 ta so'z kifoya — bu bir necha haftalik mashg'ulot.",
+      "body_ru": "В больших словарях зафиксировано более 80 000 иероглифов. Но пугаться этой цифры не стоит: большинство из них — редкие знаки из старинных текстов.\n\nНа практике:\n\n| Иероглифов | Чего хватает |\n| --- | --- |\n| ~500 | понять ~75% простых текстов |\n| ~1000 | ~90% повседневных текстов |\n| ~2500 | ~98% газет и книг |\n| 3000–4000 | свободное чтение |\n\nСловарный запас по уровням HSK:\n\n* HSK 1 — 150 слов\n* HSK 2 — 300 слов\n* HSK 3 — 600 слов\n* HSK 4 — 1200 слов\n* HSK 5 — 2500 слов\n* HSK 6 — 5000 слов\n\nТо есть для старта достаточно всего 150 слов — это несколько недель занятий.",
+      "body_en": "Large dictionaries record more than 80,000 characters. But don't let that number scare you: most of them are rare signs from classical texts.\n\nIn practice:\n\n| Characters | What it covers |\n| --- | --- |\n| ~500 | ~75% of simple texts |\n| ~1000 | ~90% of everyday texts |\n| ~2500 | ~98% of newspapers and books |\n| 3,000–4,000 | fluent reading |\n\nVocabulary by HSK level:\n\n* HSK 1 — 150 words\n* HSK 2 — 300 words\n* HSK 3 — 600 words\n* HSK 4 — 1,200 words\n* HSK 5 — 2,500 words\n* HSK 6 — 5,000 words\n\nSo you only need 150 words to get started — that's a few weeks of study.",
+      "imageAlt": "HSK darajalari",
+      "imageAlt_ru": "Уровни HSK",
+      "imageAlt_en": "HSK levels"
+    },
+    {
+      "heading": "Qayerdan boshlash kerak?",
+      "heading_ru": "С чего начать изучение?",
+      "heading_en": "Where Should You Start?",
+      "body": "Alifbo yo'qligi Xitoy tilini o'rganib bo'lmaydi degani emas — shunchaki yondashuv boshqacha:\n\n* **Pinyin va tonlardan boshlang** — bu talaffuz poydevori\n* **Eng ko'p ishlatiladigan so'zlarni o'rganing** — HSK 1 ro'yxati aynan shu uchun tuzilgan\n* **Ierogliflarni yozib mashq qiling** — qo'l xotirasi eslab qolishga juda yordam beradi\n* **Dialoglarni tinglang va takrorlang** — til jonli nutqda o'rganiladi\n\nBlim'da bularning hammasi bor: audio bilan HSK dialoglari, fleshkartalar, ieroglif yozish mashqlari va karaoke. 7 kun bepul sinab ko'ring.",
+      "body_ru": "Отсутствие алфавита не значит, что китайский невозможно выучить — просто подход другой:\n\n* **Начните с пиньиня и тонов** — это фундамент произношения\n* **Учите самые частотные слова** — список HSK 1 составлен именно для этого\n* **Прописывайте иероглифы** — моторная память сильно помогает запоминанию\n* **Слушайте и повторяйте диалоги** — язык усваивается в живой речи\n\nВ Blim есть всё это: диалоги HSK с аудио, флешкарты, тренажёр написания иероглифов и караоке. Попробуйте 7 дней бесплатно.",
+      "body_en": "The lack of an alphabet doesn't mean Chinese is impossible to learn — the approach is just different:\n\n* **Start with pinyin and tones** — the foundation of pronunciation\n* **Learn the most frequent words first** — that's exactly what the HSK 1 list is for\n* **Practice writing characters by hand** — motor memory helps a lot\n* **Listen to and repeat dialogues** — language sticks through living speech\n\nBlim has all of this: HSK dialogues with audio, flashcards, character-writing practice and karaoke. Try it free for 7 days."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Xitoy alifbosida nechta harf bor?",
+      "q_ru": "Сколько букв в китайском алфавите?",
+      "q_en": "How many letters are in the Chinese alphabet?",
+      "a": "Hech qancha — Xitoy tilida alifbo yo'q. Yozuv uchun harflar emas, ierogliflar (汉字) ishlatiladi, talaffuzni o'rganish uchun esa lotin harflaridagi pinyin tizimi bor.",
+      "a_ru": "Нисколько — в китайском языке нет алфавита. Для письма используются не буквы, а иероглифы (汉字), а для изучения произношения существует система пиньинь на основе латинских букв.",
+      "a_en": "None — Chinese has no alphabet. Writing uses characters (汉字) instead of letters, and the pinyin system based on Latin letters is used to learn pronunciation."
+    },
+    {
+      "q": "Xitoy tilida alifbo bormi?",
+      "q_ru": "Есть ли в китайском языке алфавит?",
+      "q_en": "Does the Chinese language have an alphabet?",
+      "a": "Yo'q. Xitoy yozuvi logografik: har bir belgi bo'g'in va ma'noni bildiradi. Dunyodagi eng keng tarqalgan alifbosiz yozuv tizimi aynan shu.",
+      "a_ru": "Нет. Китайская письменность логографическая: каждый знак обозначает слог и значение. Это самая распространённая в мире система письма без алфавита.",
+      "a_en": "No. Chinese writing is logographic: each character represents a syllable and a meaning. It is the world's most widely used writing system without an alphabet."
+    },
+    {
+      "q": "Pinyin — bu Xitoy alifbosimi?",
+      "q_ru": "Пиньинь — это китайский алфавит?",
+      "q_en": "Is pinyin the Chinese alphabet?",
+      "a": "Yo'q, pinyin alifbo emas — bu talaffuzni lotin harflari bilan yozish tizimi. Xitoyliklar kundalik yozuvda pinyin ishlatmaydi, lekin telefonda yozishda va til o'rganishda undan foydalanadi.",
+      "a_ru": "Нет, пиньинь — не алфавит, а система записи произношения латинскими буквами. Китайцы не пишут на пиньине в повседневной жизни, но используют его для набора текста на телефоне и при изучении языка.",
+      "a_en": "No, pinyin is not an alphabet — it is a system for writing pronunciation with Latin letters. Chinese people don't write in pinyin day to day, but they use it for typing and for language learning."
+    },
+    {
+      "q": "Xitoy tilida nechta ieroglif bor?",
+      "q_ru": "Сколько всего иероглифов в китайском языке?",
+      "q_en": "How many characters are there in Chinese in total?",
+      "a": "Lug'atlarda 80 000 dan ortiq ieroglif bor, lekin erkin o'qish uchun 3000–4000 tasi yetarli. 1000 ta eng ko'p ishlatiladigan ieroglif kundalik matnlarning ~90% ini qamrab oladi.",
+      "a_ru": "В словарях более 80 000 иероглифов, но для свободного чтения достаточно 3000–4000. Первая тысяча самых частотных иероглифов покрывает около 90% повседневных текстов.",
+      "a_en": "Dictionaries list more than 80,000 characters, but 3,000–4,000 are enough for fluent reading. The 1,000 most frequent characters cover about 90% of everyday texts."
+    },
+    {
+      "q": "HSK 1 uchun nechta so'z kerak?",
+      "q_ru": "Сколько слов нужно знать для HSK 1?",
+      "q_en": "How many words do you need for HSK 1?",
+      "a": "HSK 1 uchun 150 ta so'z kifoya. Keyingi darajalar: HSK 2 — 300, HSK 3 — 600, HSK 4 — 1200, HSK 5 — 2500, HSK 6 — 5000 so'z.",
+      "a_ru": "Для HSK 1 достаточно 150 слов. Дальше: HSK 2 — 300, HSK 3 — 600, HSK 4 — 1200, HSK 5 — 2500, HSK 6 — 5000 слов.",
+      "a_en": "HSK 1 requires just 150 words. The next levels: HSK 2 — 300, HSK 3 — 600, HSK 4 — 1,200, HSK 5 — 2,500, HSK 6 — 5,000 words."
+    },
+    {
+      "q": "Alifbosiz Xitoy tilini o'rganish qiyinmi?",
+      "q_ru": "Трудно ли учить китайский без алфавита?",
+      "q_en": "Is it hard to learn Chinese without an alphabet?",
+      "a": "Boshida g'ayrioddiy tuyuladi, lekin pinyin talaffuzni osonlashtiradi, kalitlar (radikallar) esa ierogliflarni tizimli eslab qolishga yordam beradi. Grammatika esa ko'p tillarga qaraganda soddaroq: turlanish ham, zamon qo'shimchalari ham yo'q.",
+      "a_ru": "Поначалу непривычно, но пиньинь упрощает произношение, а ключи (радикалы) помогают системно запоминать иероглифы. Зато грамматика проще, чем во многих языках: нет ни склонений, ни спряжений.",
+      "a_en": "It feels unusual at first, but pinyin makes pronunciation approachable, and radicals help you memorize characters systematically. And the grammar is simpler than in many languages: no declensions, no conjugations."
     }
   ]
 }

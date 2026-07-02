@@ -10,15 +10,15 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
 const pageMeta: Record<string, { title: string; description: string }> = {
   uz: {
     title: 'Xitoy tilini onlayn o\'rganing',
-    description: 'Xitoy tilini online o\'rganing: HSK 1-6 dialoglar, fleshkartalar, karaoke va grammatika. Bepul boshlang!',
+    description: 'Xitoy va Arab tillarini onlayn o\'rganing: HSK 1-6 dialoglar, audio, pinyin, fleshkartalar, ieroglif yozish va karaoke. 7 kun bepul sinab ko\'ring!',
   },
   ru: {
     title: 'Изучайте китайский онлайн',
-    description: 'Изучайте китайский онлайн: HSK 1-6 диалоги, флешкарты, караоке и грамматика. Начните бесплатно!',
+    description: 'Изучайте китайский и арабский онлайн: диалоги HSK 1-6 с аудио и пиньинь, флешкарты, написание иероглифов и караоке. 7 дней бесплатно!',
   },
   en: {
     title: 'Learn Chinese Online',
-    description: 'Learn Chinese online: HSK 1-6 dialogues, flashcards, karaoke and grammar. Start for free!',
+    description: 'Learn Chinese and Arabic online: HSK 1-6 dialogues with audio and pinyin, flashcards, character writing practice and karaoke. Try 7 days free!',
   },
 };
 

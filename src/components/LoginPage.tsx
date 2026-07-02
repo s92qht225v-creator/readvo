@@ -6,21 +6,24 @@ import { useRouter } from '@/i18n/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import { useLanguage } from '@/hooks/useLanguage';
 
-const labels: Record<string, { google: string; telegram: string; or: string }> = {
+const labels: Record<string, { google: string; telegram: string; or: string; title: string }> = {
   uz: {
     google: 'Google orqali kirish',
     telegram: 'Telegram orqali kirish',
     or: 'yoki',
+    title: 'Blim hisobingizga kiring',
   },
   ru: {
     google: 'Войти через Google',
     telegram: 'Войти через Telegram',
     or: 'или',
+    title: 'Войдите в аккаунт Blim',
   },
   en: {
     google: 'Sign in with Google',
     telegram: 'Sign in with Telegram',
     or: 'or',
+    title: 'Sign in to your Blim account',
   },
 };
 
@@ -55,7 +58,10 @@ export function LoginPage() {
     }
   }, [isLoading, user, router]);
 
-  if (isLoading || user) {
+  // Only hide the form once we KNOW a user is signed in (redirect under way).
+  // Gating on `isLoading` too made the statically-rendered HTML just
+  // "Loading..." — crawlers saw an empty page with no H1/content.
+  if (user) {
     return (
       <div className="login-page">
         <div className="login-card">
@@ -69,6 +75,7 @@ export function LoginPage() {
     <div className="login-page">
       <div className="login-card">
         <Image src="/logo-red.svg" alt="Blim" width={100} height={34} className="login-logo" priority />
+        <h1 className="sr-only">{s.title}</h1>
 
         <button className="login-btn login-btn--google" onClick={() => loginWithGoogle(`/${language}/chinese/dialogues`)} type="button">
           <GoogleIcon />

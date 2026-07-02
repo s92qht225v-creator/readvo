@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { useRequireAuth } from '../../hooks/useRequireAuth';
 import { useAuth } from '../../hooks/useAuth';
 import { useLanguage } from '../../hooks/useLanguage';
 import { CatalogHeader } from './CatalogHeader';
@@ -42,7 +41,8 @@ const TOPIC_ITEMS = [
 ];
 
 export function FlashcardsCatalog() {
-  const { isLoading } = useRequireAuth();
+  // Public catalog — the content readers behind it are gated server-side by
+  // src/proxy.ts. Client auth gating blanked the SSG HTML for crawlers.
   const [language] = useLanguage();
   const [topicSearch, setTopicSearch] = useState('');
 
@@ -79,8 +79,6 @@ export function FlashcardsCatalog() {
     const t = setTimeout(() => trackAll('Search', 'search', 'search', { search_string: q }), 800);
     return () => clearTimeout(t);
   }, [topicSearch]);
-
-  if (isLoading) return <div className="loading-spinner" />;
 
   const tq = topicSearch.trim().toLowerCase();
   const filteredTopics = tq

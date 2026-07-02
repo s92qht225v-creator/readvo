@@ -14,6 +14,18 @@ export interface BlogSection {
   imageAlt_en?: string;
 }
 
+/** One FAQ entry — rendered as a visible Q&A block at the end of the post
+ *  AND emitted as FAQPage JSON-LD (Google requires the content to be visible
+ *  on the page for the rich result to qualify). */
+export interface BlogFaqItem {
+  q: string;
+  q_ru: string;
+  q_en?: string;
+  a: string;
+  a_ru: string;
+  a_en?: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -31,6 +43,7 @@ export interface BlogPost {
   intro_en?: string;
   published?: boolean;
   sections: BlogSection[];
+  faq?: BlogFaqItem[];
 }
 
 const blogDir = path.join(process.cwd(), 'content', 'blog');

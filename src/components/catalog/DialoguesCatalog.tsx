@@ -3,8 +3,7 @@
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { useSearchParams } from 'next/navigation';
-import { useRequireAuth } from '../../hooks/useRequireAuth';
+import { useClientSearchParam } from '../../hooks/useClientSearchParam';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useStars } from '../../hooks/useStars';
 import { CatalogHeader } from './CatalogHeader';
@@ -23,24 +22,36 @@ interface Props {
 }
 
 export function DialoguesCatalog({ dialogues, dialoguesHsk2, dialoguesHsk3, dialoguesHsk4, dialoguesHsk5, dialoguesHsk6 }: Props) {
-  const { isLoading } = useRequireAuth();
+  // This catalog is public: it lists titles/levels only, and clicking through
+  // to a reader hits the server-side auth gate in src/proxy.ts. No client
+  // auth gate here — it blanked the page for crawlers (SSG HTML was just a
+  // spinner) and bounced anonymous visitors who could have seen the catalog.
   const [language] = useLanguage();
   const { getStars: getDialogueStars } = useStars('dialogue');
-  const searchParams = useSearchParams();
 
   // Dialogue filters
   const [search, setSearch] = useState('');
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showBookmarked, setShowBookmarked] = useState(false);
-  const [dialogueHskLevel, setDialogueHskLevel] = useState<HskLevel>(parseHskLevel(searchParams.get('dialhsk')));
-  const [bookmarks, setBookmarks] = useState<Set<string>>(() => {
+  // HSK level deep-link (?dialhsk=N, used by reader back-buttons). Read
+  // client-side only — useSearchParams would opt the static page out of
+  // prerendering. SSG HTML always shows HSK 1.
+  const [dialogueHskLevel, setDialogueHskLevel] = useState<HskLevel>('1');
+  const dialhskParam = useClientSearchParam('dialhsk');
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time sync from the URL after mount
+    if (dialhskParam) setDialogueHskLevel(parseHskLevel(dialhskParam));
+  }, [dialhskParam]);
+  // localStorage is client-only; initializing state from it during hydration
+  // would mismatch the server HTML. Load after mount instead.
+  const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
+  useEffect(() => {
     try {
-      const saved = typeof window !== 'undefined' ? localStorage.getItem(BOOKMARK_KEY) : null;
-      return saved ? new Set(JSON.parse(saved)) : new Set();
-    } catch {
-      return new Set();
-    }
-  });
+      const saved = localStorage.getItem(BOOKMARK_KEY);
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time bootstrap from localStorage on mount
+      if (saved) setBookmarks(new Set(JSON.parse(saved)));
+    } catch {}
+  }, []);
 
   // Meta Pixel / Yandex / GA4: debounced dialogue-search tracking (parity with LanguagePage).
   useEffect(() => {
@@ -81,8 +92,6 @@ export function DialoguesCatalog({ dialogues, dialoguesHsk2, dialoguesHsk3, dial
     );
     return result;
   }, [search, activeDialogues, activeTag, showBookmarked, bookmarks]);
-
-  if (isLoading) return <div className="loading-spinner" />;
 
   return (
     <main className="home">

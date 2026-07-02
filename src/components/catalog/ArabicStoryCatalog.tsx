@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from '@/i18n/navigation';
-import { useSearchParams } from 'next/navigation';
+import { useClientSearchParam } from '@/hooks/useClientSearchParam';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageFooter } from '@/components/PageFooter';
 import { CEFR_LEVELS, type CefrLevel } from './types';
@@ -13,13 +13,17 @@ type Catalog = Record<string, ArabicDialogueCardMeta[]>;
 
 export function ArabicStoryCatalog({ catalog }: { catalog: Catalog }) {
   const [language] = useLanguage();
-  const searchParams = useSearchParams();
-  const [level, setLevel] = useState<CefrLevel>(() => {
-    const p = searchParams.get('storar');
-    if (p && CEFR_LEVELS.includes(p as CefrLevel)) return p as CefrLevel;
+  // ?storar=N deep-link read client-side only — useSearchParams would opt
+  // the static page out of prerendering (empty HTML for crawlers).
+  const [level, setLevel] = useState<CefrLevel>(
     // Default to the first level that actually has stories (A2 for now).
-    return CEFR_LEVELS.find((lv) => (catalog[lv]?.length ?? 0) > 0) ?? 'a1';
-  });
+    () => CEFR_LEVELS.find((lv) => (catalog[lv]?.length ?? 0) > 0) ?? 'a1',
+  );
+  const storarParam = useClientSearchParam('storar');
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time sync from the URL after mount
+    if (storarParam && CEFR_LEVELS.includes(storarParam as CefrLevel)) setLevel(storarParam as CefrLevel);
+  }, [storarParam]);
 
   const active = catalog[level] ?? [];
   const trOf = (d: ArabicDialogueCardMeta) =>

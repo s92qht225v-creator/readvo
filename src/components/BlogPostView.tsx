@@ -161,6 +161,21 @@ export function BlogPostView({ post }: Props) {
             {renderBody(language === 'ru' ? section.body_ru : language === 'en' ? (section.body_en || section.body) : section.body)}
           </section>
         ))}
+        {post.faq && post.faq.length > 0 && (
+          <section className="blog__section">
+            <h2 className="blog__section-heading">
+              {({ uz: 'Ko\'p beriladigan savollar', ru: 'Часто задаваемые вопросы', en: 'Frequently asked questions' } as Record<string, string>)[language]}
+            </h2>
+            {post.faq.map((item, i) => (
+              <div key={i} className="blog__faq-item">
+                <h3 className="blog__section-heading" style={{ fontSize: '1.05em' }}>
+                  {language === 'ru' ? item.q_ru : language === 'en' ? (item.q_en || item.q) : item.q}
+                </h3>
+                {renderBody(language === 'ru' ? item.a_ru : language === 'en' ? (item.a_en || item.a) : item.a)}
+              </div>
+            ))}
+          </section>
+        )}
       </article>
       <div className="blog__cta">
         <p className="blog__cta-text">

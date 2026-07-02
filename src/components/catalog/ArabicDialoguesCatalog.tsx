@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from '@/i18n/navigation';
-import { useSearchParams } from 'next/navigation';
+import { useClientSearchParam } from '@/hooks/useClientSearchParam';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PageFooter } from '@/components/PageFooter';
 import { CEFR_LEVELS, parseCefrLevel, type CefrLevel } from './types';
@@ -13,8 +13,14 @@ type Catalog = Record<string, ArabicDialogueCardMeta[]>;
 
 export function ArabicDialoguesCatalog({ catalog }: { catalog: Catalog }) {
   const [language] = useLanguage();
-  const searchParams = useSearchParams();
-  const [level, setLevel] = useState<CefrLevel>(parseCefrLevel(searchParams.get('dialar')));
+  // ?dialar=N deep-link read client-side only — useSearchParams would opt
+  // the static page out of prerendering (empty HTML for crawlers).
+  const [level, setLevel] = useState<CefrLevel>('a1');
+  const dialarParam = useClientSearchParam('dialar');
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time sync from the URL after mount
+    if (dialarParam) setLevel(parseCefrLevel(dialarParam));
+  }, [dialarParam]);
 
   const active = catalog[level] ?? [];
   const trOf = (d: ArabicDialogueCardMeta) =>

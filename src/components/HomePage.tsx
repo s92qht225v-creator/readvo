@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useMemo, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import { Link, useRouter } from '@/i18n/navigation';
-import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { PageFooter } from './PageFooter';
 import { useAuth } from '../hooks/useAuth';
@@ -440,13 +439,16 @@ export function HomePage() {
   const { user, isLoading, logout } = useAuth();
   const s = t[language];
   const router = useRouter();
-  const searchParams = useSearchParams();
   const hasMounted = useSyncExternalStore(
     () => () => {},
     () => true,
     () => false
   );
-  const isAdminParam = hasMounted && searchParams.get('admin') === 'true';
+  // Client-only param read: next/navigation's useSearchParams would opt this
+  // statically-rendered page out of prerendering (empty HTML for crawlers).
+  // hasMounted is false during SSR and the hydration render, so window is
+  // only touched client-side after hydration — no mismatch, no CSR bailout.
+  const isAdminParam = hasMounted && new URLSearchParams(window.location.search).get('admin') === 'true';
   const [savedAdminPassword, setSavedAdminPassword] = useState('');
   useEffect(() => {
     if (!isAdminParam || !hasMounted) return;

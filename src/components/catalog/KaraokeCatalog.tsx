@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { useRequireAuth } from '../../hooks/useRequireAuth';
 import { useLanguage } from '../../hooks/useLanguage';
 import { CatalogHeader } from './CatalogHeader';
 import { PageFooter } from '../PageFooter';
@@ -20,11 +19,10 @@ const karaokeItems = [
 ];
 
 export function KaraokeCatalog() {
-  const { isLoading } = useRequireAuth();
+  // Public catalog — the content readers behind it are gated server-side by
+  // src/proxy.ts. Client auth gating blanked the SSG HTML for crawlers.
   const [language] = useLanguage();
   const [karaokeSearch, setKaraokeSearch] = useState('');
-
-  if (isLoading) return <div className="loading-spinner" />;
 
   return (
     <main className="home">

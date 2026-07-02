@@ -58,7 +58,26 @@ export default async function BlogPostPage({ params }: PageParams) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://blim.uz';
   const title = locale === 'ru' ? post.title_ru : locale === 'en' ? (post.title_en || post.title) : post.title;
   const description = locale === 'ru' ? post.description_ru : locale === 'en' ? (post.description_en || post.description) : post.description;
+  // FAQPage rich-result schema — only when the post carries a visible FAQ
+  // block (Google requires the Q&A to be visible on the page). Answers in
+  // JSON-LD must be plain text, so strip the light markdown the renderer
+  // supports (bold/italic).
+  const stripMd = (s: string) => s.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\*([^*]+)\*/g, '$1');
+  const faqJsonLd = post.faq?.length
+    ? [{
+        '@type': 'FAQPage',
+        mainEntity: post.faq.map((f) => ({
+          '@type': 'Question',
+          name: locale === 'ru' ? f.q_ru : locale === 'en' ? (f.q_en || f.q) : f.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: stripMd(locale === 'ru' ? f.a_ru : locale === 'en' ? (f.a_en || f.a) : f.a),
+          },
+        })),
+      }]
+    : [];
   const jsonLd = jsonLdScript([
+    ...faqJsonLd,
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
       { name: 'Blog', path: `/${locale}/blog` },

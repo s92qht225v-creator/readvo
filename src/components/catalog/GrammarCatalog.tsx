@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { useRequireAuth } from '../../hooks/useRequireAuth';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useStars } from '../../hooks/useStars';
 import { CatalogHeader } from './CatalogHeader';
@@ -29,7 +28,8 @@ const grammarItems = [
 ];
 
 export function GrammarCatalog() {
-  const { isLoading } = useRequireAuth();
+  // Public catalog — the content readers behind it are gated server-side by
+  // src/proxy.ts. Client auth gating blanked the SSG HTML for crawlers.
   const [language] = useLanguage();
   const { getStars: getGrammarStars } = useStars('grammar');
   const [grammarSearch, setGrammarSearch] = useState('');
@@ -41,8 +41,6 @@ export function GrammarCatalog() {
     const t = setTimeout(() => trackAll('Search', 'search', 'search', { search_string: q }), 800);
     return () => clearTimeout(t);
   }, [grammarSearch]);
-
-  if (isLoading) return <div className="loading-spinner" />;
 
   const gq = grammarSearch.trim().toLowerCase();
   const filteredGrammar = gq

@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { useSearchParams } from 'next/navigation';
-import { useRequireAuth } from '../../hooks/useRequireAuth';
+import { useClientSearchParam } from '../../hooks/useClientSearchParam';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useStars } from '../../hooks/useStars';
 import { CatalogHeader } from './CatalogHeader';
@@ -24,15 +23,22 @@ interface Props {
 }
 
 export function WritingCatalog({ writingSets, writingSetsHsk2, writingSetsHsk2L2, writingSetsHsk3, writingSetsHsk4, writingSetsHsk5, writingSetsHsk6 }: Props) {
-  const { isLoading } = useRequireAuth();
+  // Public catalog — practice pages behind it are gated server-side by
+  // src/proxy.ts. Client auth gating blanked the SSG HTML for crawlers.
   const [language] = useLanguage();
   const { getStars: getWritingStars } = useStars('writing');
-  const searchParams = useSearchParams();
 
   // Writing tab state. HSK 3.0 is hidden — writing shows HSK 2.0 levels 1-6
   // only, so the version is pinned to '2.0' (no version toggle).
   const [hskVersion] = useState<'3.0' | '2.0'>('2.0');
-  const [writingHskLevel, setWritingHskLevel] = useState<HskLevel>(parseHskLevel(searchParams.get('hsk')));
+  // ?hsk=N deep-link read client-side only (useSearchParams would opt the
+  // static page out of prerendering). SSG HTML shows HSK 1.
+  const [writingHskLevel, setWritingHskLevel] = useState<HskLevel>('1');
+  const hskParam = useClientSearchParam('hsk');
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time sync from the URL after mount
+    if (hskParam) setWritingHskLevel(parseHskLevel(hskParam));
+  }, [hskParam]);
   const [writingSearch, setWritingSearch] = useState('');
 
   // On the Writing tab, warm the stroke data for the first character of each
@@ -57,8 +63,6 @@ export function WritingCatalog({ writingSets, writingSetsHsk2, writingSetsHsk2L2
     const t = setTimeout(() => trackAll('Search', 'search', 'search', { search_string: q }), 800);
     return () => clearTimeout(t);
   }, [writingSearch]);
-
-  if (isLoading) return <div className="loading-spinner" />;
 
   const activeSets = hskVersion === '3.0' ? writingSets
     : writingHskLevel === '6' ? writingSetsHsk6
