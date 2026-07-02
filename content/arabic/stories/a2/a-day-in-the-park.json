@@ -9,19 +9,27 @@
   "sentences": [
     {
       "id": "s1",
-      "ar": "اِسْمِي عَلِيٌّ.",
-      "translit": "Ismī ʿAliyyun.",
       "text_translation_uz": "Mening ismim Ali.",
       "text_translation_ru": "Меня зовут Али.",
-      "text_translation_en": "My name is Ali."
+      "text_translation_en": "My name is Ali.",
+      "ar_m": "اِسْمِي عَلِيٌّ.",
+      "translit_m": "Ismī ʿAliyyun.",
+      "ar_f": "اِسْمِي عَلِيَاءُ.",
+      "translit_f": "Ismī ʿAliyāʾu.",
+      "text_translation_uz_f": "Mening ismim Aliya.",
+      "text_translation_ru_f": "Меня зовут Алия.",
+      "text_translation_en_f": "My name is Aliya."
     },
     {
       "id": "s2",
-      "ar": "أَنَا طَالِبٌ.",
-      "translit": "Anā ṭālibun.",
       "text_translation_uz": "Men talabaman.",
       "text_translation_ru": "Я студент.",
-      "text_translation_en": "I am a student."
+      "text_translation_en": "I am a student.",
+      "ar_m": "أَنَا طَالِبٌ.",
+      "translit_m": "Anā ṭālibun.",
+      "ar_f": "أَنَا طَالِبَةٌ.",
+      "translit_f": "Anā ṭālibatun.",
+      "text_translation_ru_f": "Я студентка."
     },
     {
       "id": "s3",
@@ -41,11 +49,16 @@
     },
     {
       "id": "s5",
-      "ar": "أَذْهَبُ إِلَى الْحَدِيقَةِ مَعَ صَدِيقِي عُمَرَ.",
-      "translit": "Adhhabu ilā l-ḥadīqati maʿa ṣadīqī ʿUmara.",
       "text_translation_uz": "Men do'stim Umar bilan bog'ga boraman.",
       "text_translation_ru": "Я иду в парк с моим другом Омаром.",
-      "text_translation_en": "I go to the park with my friend Omar."
+      "text_translation_en": "I go to the park with my friend Omar.",
+      "ar_m": "أَذْهَبُ إِلَى الْحَدِيقَةِ مَعَ صَدِيقِي عُمَرَ.",
+      "translit_m": "Adhhabu ilā l-ḥadīqati maʿa ṣadīqī ʿUmara.",
+      "ar_f": "أَذْهَبُ إِلَى الْحَدِيقَةِ مَعَ صَدِيقَتِي عَائِشَةَ.",
+      "translit_f": "Adhhabu ilā l-ḥadīqati maʿa ṣadīqatī ʿĀʾishata.",
+      "text_translation_uz_f": "Men do'stim Aysha bilan bog'ga boraman.",
+      "text_translation_ru_f": "Я иду в парк с моей подругой Аишей.",
+      "text_translation_en_f": "I go to the park with my friend Aisha."
     },
     {
       "id": "s6",
@@ -73,11 +86,16 @@
     },
     {
       "id": "s9",
-      "ar": "عُمَرُ يَشْرَبُ الْمَاءَ، وَأَنَا آكُلُ تُفَّاحَةً.",
-      "translit": "ʿUmaru yashrabu l-māʾa, wa-anā ākulu tuffāḥatan.",
       "text_translation_uz": "Umar suv ichadi, men esa olma yeyman.",
       "text_translation_ru": "Омар пьёт воду, а я ем яблоко.",
-      "text_translation_en": "Omar drinks water, and I eat an apple."
+      "text_translation_en": "Omar drinks water, and I eat an apple.",
+      "ar_m": "عُمَرُ يَشْرَبُ الْمَاءَ، وَأَنَا آكُلُ تُفَّاحَةً.",
+      "translit_m": "ʿUmaru yashrabu l-māʾa, wa-anā ākulu tuffāḥatan.",
+      "ar_f": "عَائِشَةُ تَشْرَبُ الْمَاءَ، وَأَنَا آكُلُ تُفَّاحَةً.",
+      "translit_f": "ʿĀʾishatu tashrabu l-māʾa, wa-anā ākulu tuffāḥatan.",
+      "text_translation_uz_f": "Aysha suv ichadi, men esa olma yeyman.",
+      "text_translation_ru_f": "Аиша пьёт воду, а я ем яблоко.",
+      "text_translation_en_f": "Aisha drinks water, and I eat an apple."
     },
     {
       "id": "s10",
@@ -105,11 +123,14 @@
     },
     {
       "id": "s13",
-      "ar": "أَنَا سَعِيدٌ، وَالْيَوْمُ كَانَ جَمِيلًا.",
-      "translit": "Anā saʿīdun, wa-l-yawmu kāna jamīlan.",
       "text_translation_uz": "Men xursandman, va kun chiroyli o'tdi.",
       "text_translation_ru": "Я счастлив, и день был прекрасным.",
-      "text_translation_en": "I am happy, and the day was beautiful."
+      "text_translation_en": "I am happy, and the day was beautiful.",
+      "ar_m": "أَنَا سَعِيدٌ، وَالْيَوْمُ كَانَ جَمِيلًا.",
+      "translit_m": "Anā saʿīdun, wa-l-yawmu kāna jamīlan.",
+      "ar_f": "أَنَا سَعِيدَةٌ، وَالْيَوْمُ كَانَ جَمِيلًا.",
+      "translit_f": "Anā saʿīdatun, wa-l-yawmu kāna jamīlan.",
+      "text_translation_ru_f": "Я счастлива, и день был прекрасным."
     }
   ],
   "vocab": [
