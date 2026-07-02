@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
+import { stripTanwin } from '@/lib/reader/harakat';
 
 const BUCKET = 'audio';
 // Google Cloud TTS with native `ar-XA` Arabic voices. Unlike OpenAI's models
@@ -59,7 +60,11 @@ export async function POST(req: NextRequest) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          input: { text },
+          // Strip tanwin (case-ending nunation) before synthesis so the
+          // voice reads it like natural spoken MSA rather than formal
+          // recitation. The cache key (`path`, below) stays keyed to the
+          // original fully-vowelized `text` so callers are unaffected.
+          input: { text: stripTanwin(text) },
           voice: { languageCode: 'ar-XA', name: voice },
           audioConfig: { audioEncoding: 'MP3' },
         }),

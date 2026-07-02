@@ -1,0 +1,129 @@
+{
+  "id": "a-day-in-the-park",
+  "level": "a1",
+  "title": "يَوْمٌ فِي الْحَدِيقَةِ",
+  "translit": "Yawmun fī l-ḥadīqati",
+  "titleTranslation_uz": "Bog'da bir kun",
+  "titleTranslation_ru": "День в парке",
+  "titleTranslation_en": "A Day in the Park",
+  "sentences": [
+    {
+      "id": "s1",
+      "ar": "اِسْمِي عَلِيٌّ.",
+      "translit": "Ismī ʿAliyyun.",
+      "text_translation_uz": "Mening ismim Ali.",
+      "text_translation_ru": "Меня зовут Али.",
+      "text_translation_en": "My name is Ali."
+    },
+    {
+      "id": "s2",
+      "ar": "أَنَا طَالِبٌ.",
+      "translit": "Anā ṭālibun.",
+      "text_translation_uz": "Men talabaman.",
+      "text_translation_ru": "Я студент.",
+      "text_translation_en": "I am a student."
+    },
+    {
+      "id": "s3",
+      "ar": "أَسْكُنُ فِي مَدِينَةٍ صَغِيرَةٍ.",
+      "translit": "Askunu fī madīnatin ṣaghīratin.",
+      "text_translation_uz": "Men kichik shaharda yashayman.",
+      "text_translation_ru": "Я живу в маленьком городе.",
+      "text_translation_en": "I live in a small city."
+    },
+    {
+      "id": "s4",
+      "ar": "الْيَوْمَ الْجَوُّ جَمِيلٌ.",
+      "translit": "al-yawma l-jawwu jamīlun.",
+      "text_translation_uz": "Bugun havo chiroyli.",
+      "text_translation_ru": "Сегодня прекрасная погода.",
+      "text_translation_en": "Today the weather is beautiful."
+    },
+    {
+      "id": "s5",
+      "ar": "أَذْهَبُ إِلَى الْحَدِيقَةِ مَعَ صَدِيقِي عُمَرَ.",
+      "translit": "Adhhabu ilā l-ḥadīqati maʿa ṣadīqī ʿUmara.",
+      "text_translation_uz": "Men do'stim Umar bilan bog'ga boraman.",
+      "text_translation_ru": "Я иду в парк с моим другом Омаром.",
+      "text_translation_en": "I go to the park with my friend Omar."
+    },
+    {
+      "id": "s6",
+      "ar": "نَحْنُ نَمْشِي وَنَتَحَدَّثُ.",
+      "translit": "Naḥnu namshī wa-nataḥaddathu.",
+      "text_translation_uz": "Biz yuramiz va suhbatlashamiz.",
+      "text_translation_ru": "Мы гуляем и разговариваем.",
+      "text_translation_en": "We walk and talk."
+    },
+    {
+      "id": "s7",
+      "ar": "فِي الْحَدِيقَةِ أَشْجَارٌ وَزُهُورٌ كَثِيرَةٌ.",
+      "translit": "Fī l-ḥadīqati ashjārun wa-zuhūrun kathīratun.",
+      "text_translation_uz": "Bog'da ko'plab daraxtlar va gullar bor.",
+      "text_translation_ru": "В парке много деревьев и цветов.",
+      "text_translation_en": "In the park there are many trees and flowers."
+    },
+    {
+      "id": "s8",
+      "ar": "نَجْلِسُ عَلَى مَقْعَدٍ.",
+      "translit": "Najlisu ʿalā maqʿadin.",
+      "text_translation_uz": "Biz skameykaga o'tiramiz.",
+      "text_translation_ru": "Мы садимся на скамейку.",
+      "text_translation_en": "We sit on a bench."
+    },
+    {
+      "id": "s9",
+      "ar": "عُمَرُ يَشْرَبُ الْمَاءَ، وَأَنَا آكُلُ تُفَّاحَةً.",
+      "translit": "ʿUmaru yashrabu l-māʾa, wa-anā ākulu tuffāḥatan.",
+      "text_translation_uz": "Umar suv ichadi, men esa olma yeyman.",
+      "text_translation_ru": "Омар пьёт воду, а я ем яблоко.",
+      "text_translation_en": "Omar drinks water, and I eat an apple."
+    },
+    {
+      "id": "s10",
+      "ar": "نَرَى أَطْفَالًا يَلْعَبُونَ بِالْكُرَةِ.",
+      "translit": "Narā aṭfālan yalʿabūna bi-l-kurati.",
+      "text_translation_uz": "Biz to'p bilan o'ynayotgan bolalarni ko'ramiz.",
+      "text_translation_ru": "Мы видим детей, играющих с мячом.",
+      "text_translation_en": "We see children playing with the ball."
+    },
+    {
+      "id": "s11",
+      "ar": "هُمْ سُعَدَاءُ.",
+      "translit": "Hum suʿadāʾu.",
+      "text_translation_uz": "Ular xursand.",
+      "text_translation_ru": "Они счастливы.",
+      "text_translation_en": "They are happy."
+    },
+    {
+      "id": "s12",
+      "ar": "بَعْدَ سَاعَةٍ نَعُودُ إِلَى الْبَيْتِ.",
+      "translit": "Baʿda sāʿatin naʿūdu ilā l-bayti.",
+      "text_translation_uz": "Bir soatdan keyin biz uyga qaytamiz.",
+      "text_translation_ru": "Через час мы возвращаемся домой.",
+      "text_translation_en": "After an hour we return home."
+    },
+    {
+      "id": "s13",
+      "ar": "أَنَا سَعِيدٌ، وَالْيَوْمُ كَانَ جَمِيلًا.",
+      "translit": "Anā saʿīdun, wa-l-yawmu kāna jamīlan.",
+      "text_translation_uz": "Men xursandman, va kun chiroyli o'tdi.",
+      "text_translation_ru": "Я счастлив, и день был прекрасным.",
+      "text_translation_en": "I am happy, and the day was beautiful."
+    }
+  ],
+  "vocab": [
+    { "ar": "مَدِينَةٌ", "translit": "madīnatun", "uz": "shahar", "ru": "город", "en": "city" },
+    { "ar": "حَدِيقَةٌ", "translit": "ḥadīqatun", "uz": "bog'", "ru": "парк", "en": "park" },
+    { "ar": "صَدِيقٌ", "translit": "ṣadīqun", "uz": "do'st", "ru": "друг", "en": "friend", "gender": "m" },
+    { "ar": "شَجَرَةٌ", "translit": "shajaratun", "uz": "daraxt", "ru": "дерево", "en": "tree" },
+    { "ar": "زَهْرَةٌ", "translit": "zahratun", "uz": "gul", "ru": "цветок", "en": "flower" },
+    { "ar": "مَقْعَدٌ", "translit": "maqʿadun", "uz": "skameyka", "ru": "скамейка", "en": "bench" },
+    { "ar": "مَاءٌ", "translit": "māʾun", "uz": "suv", "ru": "вода", "en": "water" },
+    { "ar": "تُفَّاحَةٌ", "translit": "tuffāḥatun", "uz": "olma", "ru": "яблоко", "en": "apple" },
+    { "ar": "طِفْلٌ", "translit": "ṭiflun", "uz": "bola", "ru": "ребёнок", "en": "child" },
+    { "ar": "كُرَةٌ", "translit": "kuratun", "uz": "to'p", "ru": "мяч", "en": "ball" },
+    { "ar": "بَيْتٌ", "translit": "baytun", "uz": "uy", "ru": "дом", "en": "house" },
+    { "ar": "سَعِيدٌ", "translit": "saʿīdun", "uz": "xursand", "ru": "счастливый", "en": "happy" }
+  ]
+}
