@@ -7,6 +7,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { BannerMenu } from '@/components/BannerMenu';
 import { PageFooter } from '@/components/PageFooter';
 import { HanziWriterPractice } from '@/components/HanziWriterPractice';
+import { RubyText } from '@/components/RubyText';
 import { WritingTest } from '@/components/WritingTest';
 import type { HanziWord } from '@/services/writing';
 import { trackAll } from '@/utils/analytics';
@@ -140,11 +141,11 @@ export function WritingPracticePage({ setId, level, title, title_ru, words }: Pr
                         {w.strokes} {T('chiziq', 'черт', 'strokes')}
                         {w.radical && <> · {T('kalit', 'ключ', 'radical')}: <span lang="zh-Hans">{w.radical}</span>{radicalName ? ` (${radicalName})` : ''}</>}
                       </p>
-                      {w.ex && (
-                        <p style={{ margin: '8px 0 0' }}>
-                          <span lang="zh-Hans">{w.ex}</span>
-                          <br />
-                          <span style={{ color: '#b91c1c', fontStyle: 'italic' }}>{w.expy}</span>
+                      {w.ex && w.expy && (
+                        <p style={{ margin: '10px 0 0', fontSize: 15 }}>
+                          <span lang="zh-Hans" style={{ fontSize: 26, lineHeight: 2 }}>
+                            <RubyText text={w.ex} pinyin={w.expy} showPinyin />
+                          </span>
                           {' — '}{exMeaningOf(w)}
                         </p>
                       )}
