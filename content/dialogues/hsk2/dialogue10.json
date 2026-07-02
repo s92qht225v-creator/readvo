@@ -39,7 +39,7 @@
           "text_translation": "Qayerdasan?",
           "text_translation_ru": "Ты где?",
           "text_translation_en": "Where are you?",
-          "speaker": "A"
+          "speaker": "B"
         },
         {
           "id": "d10-s2",
@@ -48,7 +48,7 @@
           "text_translation": "Yo'l chetidan o'tyapman, deyarli yetib keldim.",
           "text_translation_ru": "Я перехожу дорогу, уже почти пришёл.",
           "text_translation_en": "I'm crossing the street, I'm almost there.",
-          "speaker": "B"
+          "speaker": "A"
         },
         {
           "id": "d10-s3",
@@ -57,7 +57,7 @@
           "text_translation": "Tezroq, men seni allaqachon yigirma daqiqa kutdim.",
           "text_translation_ru": "Быстрее, я уже жду тебя двадцать минут.",
           "text_translation_en": "Hurry up, I've already been waiting for you for twenty minutes.",
-          "speaker": "A"
+          "speaker": "B"
         },
         {
           "id": "d10-s4",
@@ -66,7 +66,7 @@
           "text_translation": "Kechirasan, yo'lda tirbandlik bo'ldi.",
           "text_translation_ru": "Извини, на дороге пробка.",
           "text_translation_en": "Sorry, there was traffic on the way.",
-          "speaker": "B"
+          "speaker": "A"
         },
         {
           "id": "d10-s5",
@@ -75,7 +75,7 @@
           "text_translation": "Hechqisi yo'q, men kafe eshigi oldida seni kutaman.",
           "text_translation_ru": "Ничего, я жду тебя у входа в кафе.",
           "text_translation_en": "No worries, I'll wait for you outside the café.",
-          "speaker": "A"
+          "speaker": "B"
         },
         {
           "id": "d10-s6",
@@ -84,7 +84,7 @@
           "text_translation": "Yaxshi, men ko'k rangli kiyim kiyganman.",
           "text_translation_ru": "Хорошо, на мне синяя одежда.",
           "text_translation_en": "Okay, I'm wearing blue clothes.",
-          "speaker": "B"
+          "speaker": "A"
         },
         {
           "id": "d10-s7",
@@ -93,7 +93,7 @@
           "text_translation": "Men oq rangli kiyim kiyganman.",
           "text_translation_ru": "На мне белая одежда.",
           "text_translation_en": "I'm wearing white clothes.",
-          "speaker": "A"
+          "speaker": "B"
         },
         {
           "id": "d10-s8",
@@ -102,7 +102,7 @@
           "text_translation": "Men seni ko'rdim.",
           "text_translation_ru": "Я тебя увидел.",
           "text_translation_en": "I can see you.",
-          "speaker": "B"
+          "speaker": "A"
         },
         {
           "id": "d10-s9",
@@ -111,7 +111,7 @@
           "text_translation": "Ovqatlandingmi?",
           "text_translation_ru": "Ты поел?",
           "text_translation_en": "Have you eaten?",
-          "speaker": "A"
+          "speaker": "B"
         },
         {
           "id": "d10-s10",
@@ -120,7 +120,7 @@
           "text_translation": "Hali yemaganman, sen-chi?",
           "text_translation_ru": "Ещё не ел, а ты?",
           "text_translation_en": "Not yet, what about you?",
-          "speaker": "B"
+          "speaker": "A"
         },
         {
           "id": "d10-s11",
@@ -129,7 +129,7 @@
           "text_translation": "Men ham yemaganman, pitsani yoqtirasanmi?",
           "text_translation_ru": "Я тоже не ел, ты любишь пиццу?",
           "text_translation_en": "I haven't eaten either; do you like pizza?",
-          "speaker": "A"
+          "speaker": "B"
         },
         {
           "id": "d10-s12",
@@ -138,7 +138,7 @@
           "text_translation": "Yoqtiraman.",
           "text_translation_ru": "Люблю.",
           "text_translation_en": "I do.",
-          "speaker": "B"
+          "speaker": "A"
         }
       ]
     }
