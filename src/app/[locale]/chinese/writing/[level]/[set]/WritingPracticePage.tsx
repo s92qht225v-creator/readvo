@@ -143,7 +143,7 @@ export function WritingPracticePage({ setId, level, title, title_ru, words }: Pr
                       </p>
                       {w.ex && w.expy && (
                         <p style={{ margin: '10px 0 0', fontSize: 15 }}>
-                          <span lang="zh-Hans" style={{ fontSize: 26, lineHeight: 2 }}>
+                          <span className="wpreview-ex" lang="zh-Hans">
                             <RubyText text={w.ex} pinyin={w.expy} showPinyin />
                           </span>
                           {' — '}{exMeaningOf(w)}

@@ -551,6 +551,26 @@ body {
   padding-bottom: 0.15em;
 }
 
+/* Writing-set preview example sentence: larger characters, pinyin ruby in
+   the accent colour with a little breathing room above the characters —
+   mirrors the dialogue reader's pinyin styling. */
+.wpreview-ex {
+  font-size: 26px;
+  line-height: 2.1;
+}
+.wpreview-ex ruby {
+  ruby-position: over;
+  ruby-align: center;
+  margin: 0 0.1em;
+}
+.wpreview-ex rt {
+  font-family: var(--font-pinyin);
+  font-size: 0.5em;
+  color: var(--color-accent);
+  font-weight: normal;
+  padding-bottom: 0.28em;
+}
+
 .story__dialogue-line.story__sentence--active .story__dialogue-text,
 .story__dialogue-line.story__sentence--playing .story__dialogue-text {
   color: var(--color-accent);
