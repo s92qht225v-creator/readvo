@@ -146,7 +146,8 @@ export function WritingPracticePage({ setId, level, title, title_ru, words }: Pr
                           <span className="wpreview-ex" lang="zh-Hans">
                             <RubyText text={w.ex} pinyin={w.expy} showPinyin />
                           </span>
-                          {' — '}{exMeaningOf(w)}
+                          <span className="wpreview-ex-dash"> — </span>
+                          <span className="wpreview-ex-tr">{exMeaningOf(w)}</span>
                         </p>
                       )}
                     </div>

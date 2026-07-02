@@ -570,6 +570,12 @@ body {
   font-weight: normal;
   padding-bottom: 0.28em;
 }
+/* On mobile, stack the translation under the Chinese example sentence
+   (the inline dash + translation crowd the line on narrow screens). */
+@media (max-width: 600px) {
+  .wpreview-ex-dash { display: none; }
+  .wpreview-ex-tr { display: block; margin-top: 2px; }
+}
 
 .story__dialogue-line.story__sentence--active .story__dialogue-text,
 .story__dialogue-line.story__sentence--playing .story__dialogue-text {
