@@ -112,11 +112,17 @@ export function WritingPracticePage({ setId, level, title, title_ru, words }: Pr
                 <div className="dlg-category">{hskLabel} · {T('Yozish', 'Письмо', 'Writing')}</div>
                 <h2 className="dlg-intro__title">{setTitle} — {T('10 ta ieroglif', '10 иероглифов', '10 characters')}</h2>
                 <p className="dlg-desc">
-                  {T(
-                    `${hskLabel} darajasining eng ko'p ishlatiladigan ierogliflari: pinyin, ma'nosi, chiziqlar soni va misol gaplar bilan. Har bir belgini interaktiv tarzda, chiziqma-chiziq yozishni mashq qilish uchun kiring.`,
-                    `Самые употребительные иероглифы уровня ${hskLabel}: с пиньинь, значением, числом черт и примерами. Войдите, чтобы тренировать написание каждого знака черта за чертой.`,
-                    `The most frequent ${hskLabel} characters — with pinyin, meaning, stroke count and example sentences. Sign in to practice writing each character stroke by stroke.`,
-                  )}
+                  {(() => {
+                    // Include the set's own characters so every set page's
+                    // intro text is unique (duplicated intros across ~40 set
+                    // pages would look templated to search engines).
+                    const charList = words.map((w) => w.char).join('、');
+                    return T(
+                      `Ushbu to'plamda ${hskLabel} darajasidagi ${words.length} ta ieroglif bor: ${charList} — har biri pinyin, ma'nosi, chiziqlar soni va misol gap bilan. Har bir belgini interaktiv tarzda, chiziqma-chiziq yozishni mashq qilish uchun kiring.`,
+                      `В этом наборе ${words.length} иероглифов уровня ${hskLabel}: ${charList} — каждый с пиньинь, значением, числом черт и примером. Войдите, чтобы тренировать написание каждого знака черта за чертой.`,
+                      `This set covers ${words.length} ${hskLabel} characters: ${charList} — each with pinyin, meaning, stroke count and an example sentence. Sign in to practice writing each character stroke by stroke.`,
+                    );
+                  })()}
                 </p>
               </div>
 
