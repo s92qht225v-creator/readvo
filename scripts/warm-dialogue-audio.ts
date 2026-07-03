@@ -1,7 +1,12 @@
 /**
  * Pre-warm MiMo TTS for a dialogue's lines (per-speaker voices), mirroring
  * /api/tts exactly so the cache paths match what the reader fetches.
- * Usage: npx tsx scripts/warm-dialogue-audio.ts content/dialogues/hsk2/dialogue24.json
+ * Overwrites (upsert) so re-running REGENERATES a fresh take.
+ *
+ * Usage:
+ *   npx tsx scripts/warm-dialogue-audio.ts content/dialogues/hsk2/dialogue24.json
+ *   # optional: only (re)warm lines containing any of these substrings
+ *   npx tsx scripts/warm-dialogue-audio.ts <file.json> "写，但是" "我在学英语"
  */
 import { createClient } from '@supabase/supabase-js';
 import { config } from 'dotenv';
@@ -38,9 +43,11 @@ async function gen(text: string, voice?: string): Promise<Buffer | null> {
 async function main() {
   const file = process.argv[2];
   const d = JSON.parse(readFileSync(file, 'utf-8'));
-  const sentences = d.sections.flatMap((s: { sentences: { text_original: string; speaker?: string }[] }) => s.sentences);
+  let sentences = d.sections.flatMap((s: { sentences: { text_original: string; speaker?: string }[] }) => s.sentences);
+  const filters = process.argv.slice(3);
+  if (filters.length) sentences = sentences.filter((s: { text_original?: string }) => filters.some((f) => (s.text_original || '').includes(f)));
   const override = d.voices as Record<string, string> | undefined;
-  console.log(`Warming ${sentences.length} lines from ${file}\n`);
+  console.log(`Warming ${sentences.length} lines from ${file}${filters.length ? ` (filtered: ${filters.join(', ')})` : ''}\n`);
   for (const s of sentences) {
     const voice = s.speaker ? (override?.[s.speaker] || DIALOGUE_VOICE[s.speaker]) : undefined;
     const text = (s.text_original || '').trim();
