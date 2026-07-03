@@ -40,6 +40,38 @@ async function gen(text: string, voice?: string): Promise<Buffer | null> {
   return b64 ? Buffer.from(b64, 'base64') : null;
 }
 
+const OPENAI = process.env.OPENAI_API_KEY;
+const norm = (s: string) => s.replace(/[。，、！？.?\s!,]/g, '');
+/** Transcribe a clip; used to reject MiMo hallucinations (it sometimes appends
+ *  an extra sentence to short lines → the take runs much longer than the text). */
+async function heard(buf: Buffer): Promise<string> {
+  if (!OPENAI) return '';
+  const fd = new FormData();
+  fd.append('file', new Blob([new Uint8Array(buf)], { type: 'audio/wav' }), 'a.wav');
+  fd.append('model', 'gpt-4o-transcribe');
+  fd.append('language', 'zh');
+  const res = await fetch('https://api.openai.com/v1/audio/transcriptions', { method: 'POST', headers: { Authorization: `Bearer ${OPENAI}` }, body: fd });
+  if (!res.ok) return '';
+  return ((await res.json()).text ?? '').trim();
+}
+/** Generate + verify, retrying MiMo up to `tries` times until the transcript
+ *  isn't padded with hallucinated extra content (length guard survives trad↔simp). */
+async function genVerified(text: string, voice?: string, tries = 5): Promise<Buffer | null> {
+  const want = norm(text);
+  let last: Buffer | null = null;
+  for (let i = 0; i < tries; i++) {
+    const buf = await gen(text, voice);
+    if (!buf) continue;
+    last = buf;
+    if (!OPENAI) return buf;
+    const h = norm(await heard(buf));
+    if (h.length <= want.length + 2) return buf; // no hallucinated tail
+    process.stdout.write(`[reject:+${h.length - want.length}ch] `);
+    await new Promise((r) => setTimeout(r, 300));
+  }
+  return last; // best effort
+}
+
 async function main() {
   const file = process.argv[2];
   const d = JSON.parse(readFileSync(file, 'utf-8'));
@@ -53,7 +85,7 @@ async function main() {
     const text = (s.text_original || '').trim();
     if (!text) continue;
     process.stdout.write(`[${s.speaker}/${voice}] ${text} ... `);
-    const buf = await gen(text, voice);
+    const buf = await genVerified(text, voice);
     if (!buf) { console.log('FAIL'); continue; }
     const path = storagePath(text, voice);
     const { error } = await supabase.storage.from(BUCKET).upload(path, buf, { contentType: 'audio/wav', upsert: true });
