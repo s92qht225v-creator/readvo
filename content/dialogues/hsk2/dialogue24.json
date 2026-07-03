@@ -1,14 +1,14 @@
 {
   "id": "hsk2-dialogue24",
-  "slug": "studying-languages",
-  "title": "学习",
-  "pinyin": "Xuéxí",
-  "titleTranslation": "O'qish",
-  "titleTranslation_ru": "Учёба",
-  "titleTranslation_en": "Studying",
-  "description_uz": "«So'nggi paytlarda nima o'rganyapsan? Men xitoy tilini qiyin deb bilaman.» — til o'rganayotgan ikki do'stning suhbati. Bu dialog nima o'rganishni so'rash, qiyinchiliklarni aytish va birga o'rganishni taklif qilishni mashq qiladi. Yaqin mavzu, foydali o'quv so'zlari — takrorlab o'rganish uchun ideal. Gapirishga ishonch berish uchun ajoyib.",
-  "description_ru": "«Что ты учишь в последнее время? Я нахожу китайский трудным.» — разговор двух друзей, которые учат языки. Этот диалог тренирует, как спрашивать, что человек изучает, говорить о трудностях и предлагать учиться вместе. Близкая тема, полезная учебная лексика — идеально для повторения. Отлично для уверенности в речи.",
-  "description_en": "«What are you learning lately? I find Chinese hard.» — a chat between two friends who are studying languages. This dialogue practices asking what someone is learning, talking about difficulties, and offering to study together. Relatable topic, useful study vocabulary—perfect for repetition. Great for building speaking confidence.",
+  "slug": "how-long-do-you-study-every-day",
+  "title": "你每天学多久？",
+  "pinyin": "Nǐ měi tiān xué duō jiǔ?",
+  "titleTranslation": "Har kuni qancha o'qiysan?",
+  "titleTranslation_ru": "Сколько ты занимаешься каждый день?",
+  "titleTranslation_en": "How long do you study every day?",
+  "description_uz": "«So'nggi paytlarda nima o'rganyapsan?» — til o'rganayotgan ikki do'stning suhbati. Bu dialog nima o'rganishni so'rash, xitoy tilining qiyin tomonlarini (yozuv va talaffuz) aytish, har kuni qancha o'qishni so'rash va grammatika haqida gaplashishni mashq qiladi. Kundalik mavzu, foydali o'quv so'zlari — takrorlab o'rganish uchun ideal.",
+  "description_ru": "«Что ты учишь в последнее время?» — разговор двух друзей, изучающих языки. Диалог тренирует, как спросить, что человек учит, рассказать о трудностях китайского (письмо и произношение), сколько занимаешься каждый день и обсудить грамматику. Близкая тема и полезная учебная лексика — идеально для повторения.",
+  "description_en": "«What are you studying lately?» — a chat between two friends learning languages. This dialogue practices asking what someone studies, describing what's hard about Chinese (writing and pronunciation), how long you study each day, and talking about grammar. Relatable topic with useful study vocabulary—perfect for repetition.",
   "category_uz": "O'qish va til",
   "category_ru": "Учёба и языки",
   "category_en": "Studying & Languages",
@@ -18,16 +18,15 @@
   "vocab": [
     "最近",
     "英语",
+    "中文",
     "写字",
     "发音",
+    "多久",
+    "小时",
     "汉字",
     "没关系",
     "慢慢",
-    "听歌",
-    "有用",
-    "帮助",
-    "试试",
-    "教"
+    "语法"
   ],
   "sections": [
     {
@@ -40,7 +39,7 @@
           "id": "d24-s1",
           "text_original": "你最近在学什么？",
           "pinyin": "Nǐ zuì jìn zài xué shén me?",
-          "text_translation": "Yaqinda nima o'rganyapsan?",
+          "text_translation": "So'nggi paytlarda nima o'rganyapsan?",
           "text_translation_ru": "Что ты учишь в последнее время?",
           "text_translation_en": "What have you been studying lately?",
           "speaker": "A"
@@ -110,20 +109,20 @@
         },
         {
           "id": "d24-s9",
-          "text_original": "写。但是我写得不好。",
-          "pinyin": "Xiě. Dàn shì wǒ xiě de bù hǎo.",
-          "text_translation": "Yozaman. Lekin yaxshi yoza olmayman.",
-          "text_translation_ru": "Пишу. Но пишу плохо.",
-          "text_translation_en": "I do. But I don't write them well.",
+          "text_original": "写，但是我写得不好。",
+          "pinyin": "Xiě, dàn shì wǒ xiě de bù hǎo.",
+          "text_translation": "Yozaman, lekin yaxshi yoza olmayman.",
+          "text_translation_ru": "Пишу, но пишу плохо.",
+          "text_translation_en": "I do, but I don't write them well.",
           "speaker": "A"
         },
         {
           "id": "d24-s10",
-          "text_original": "没关系。慢慢学，慢慢写。",
-          "pinyin": "Méi guān xi. Màn man xué, màn man xiě.",
-          "text_translation": "Zarari yo'q. Asta-sekin o'rgan, asta-sekin yoz.",
-          "text_translation_ru": "Ничего страшного. Учись потихоньку, пиши потихоньку.",
-          "text_translation_en": "It's okay. Learn slowly, write slowly.",
+          "text_original": "没关系，慢慢学。",
+          "pinyin": "Méi guān xi, màn man xué.",
+          "text_translation": "Zarari yo'q, asta-sekin o'rgan.",
+          "text_translation_ru": "Ничего страшного, учись потихоньку.",
+          "text_translation_en": "It's okay, learn slowly.",
           "speaker": "B"
         },
         {
@@ -137,47 +136,11 @@
         },
         {
           "id": "d24-s12",
-          "text_original": "还可以。我每天都听英语歌。",
-          "pinyin": "Hái kě yǐ. Wǒ měi tiān dōu tīng Yīng yǔ gē.",
-          "text_translation": "Yomon emas. Har kuni ingliz qo'shiqlarini tinglayman.",
-          "text_translation_ru": "Неплохо. Я каждый день слушаю английские песни.",
-          "text_translation_en": "Not bad. I listen to English songs every day.",
-          "speaker": "B"
-        },
-        {
-          "id": "d24-s13",
-          "text_original": "听歌有用吗？",
-          "pinyin": "Tīng gē yǒu yòng ma?",
-          "text_translation": "Qo'shiq tinglash foydalimi?",
-          "text_translation_ru": "Слушать песни полезно?",
-          "text_translation_en": "Is listening to songs useful?",
-          "speaker": "A"
-        },
-        {
-          "id": "d24-s14",
-          "text_original": "有用。听歌可以帮助学习。",
-          "pinyin": "Yǒu yòng. Tīng gē kě yǐ bāng zhù xué xí.",
-          "text_translation": "Foydali. Qo'shiq tinglash o'qishga yordam beradi.",
-          "text_translation_ru": "Полезно. Песни помогают в учёбе.",
-          "text_translation_en": "It is. Listening to songs can help you learn.",
-          "speaker": "B"
-        },
-        {
-          "id": "d24-s15",
-          "text_original": "我也想试试。你教我好吗？",
-          "pinyin": "Wǒ yě xiǎng shì shi. Nǐ jiāo wǒ hǎo ma?",
-          "text_translation": "Men ham sinab ko'rmoqchiman. Menga o'rgatasanmi?",
-          "text_translation_ru": "Я тоже хочу попробовать. Научишь меня?",
-          "text_translation_en": "I want to try it too. Will you teach me?",
-          "speaker": "A"
-        },
-        {
-          "id": "d24-s16",
-          "text_original": "好啊！我们一起学！",
-          "pinyin": "Hǎo a! Wǒ men yì qǐ xué!",
-          "text_translation": "Mayli! Birga o'rganamiz!",
-          "text_translation_ru": "Хорошо! Будем учиться вместе!",
-          "text_translation_en": "Sure! Let's study together!",
+          "text_original": "还可以，我觉得英语语法很难。",
+          "pinyin": "Hái kě yǐ, wǒ jué de Yīng yǔ yǔ fǎ hěn nán.",
+          "text_translation": "Yomon emas, ingliz tili grammatikasi juda qiyin deb o'ylayman.",
+          "text_translation_ru": "Неплохо, но думаю, английская грамматика очень сложная.",
+          "text_translation_en": "Not bad, but I think English grammar is very hard.",
           "speaker": "B"
         }
       ]
