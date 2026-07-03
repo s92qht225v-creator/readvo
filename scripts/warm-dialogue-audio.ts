@@ -1,0 +1,58 @@
+/**
+ * Pre-warm MiMo TTS for a dialogue's lines (per-speaker voices), mirroring
+ * /api/tts exactly so the cache paths match what the reader fetches.
+ * Usage: npx tsx scripts/warm-dialogue-audio.ts content/dialogues/hsk2/dialogue24.json
+ */
+import { createClient } from '@supabase/supabase-js';
+import { config } from 'dotenv';
+import { readFileSync } from 'fs';
+import crypto from 'crypto';
+config({ path: '.env.local' });
+
+const MIMO = process.env.MIMO_API_KEY!;
+const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
+const BUCKET = 'audio';
+const DEFAULT_INSTRUCTION = '请用适当放慢、清晰的语速朗读，适合语言学习者。';
+const DIALOGUE_VOICE: Record<string, string> = { A: '茉莉', B: '白桦', C: '苏打' };
+const VOICE_SLUG: Record<string, string> = { '冰糖': 'bingtang', '茉莉': 'moli', '苏打': 'suda', '白桦': 'baihua' };
+
+function storagePath(text: string, voice?: string): string {
+  const hex = Buffer.from(text, 'utf-8').toString('hex');
+  return voice && VOICE_SLUG[voice] ? `tts/grammar/${VOICE_SLUG[voice]}/${hex}.wav` : `tts/grammar/${hex}.wav`;
+}
+
+async function gen(text: string, voice?: string): Promise<Buffer | null> {
+  const res = await fetch('https://api.xiaomimimo.com/v1/chat/completions', {
+    method: 'POST', headers: { 'api-key': MIMO, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: 'mimo-v2.5-tts',
+      messages: [{ role: 'user', content: DEFAULT_INSTRUCTION }, { role: 'assistant', content: text }],
+      audio: { format: 'wav', voice: voice || 'mimo_default' },
+    }),
+  });
+  if (!res.ok) { console.error(`  gen ${res.status} for "${text}"`); return null; }
+  const b64 = (await res.json()).choices?.[0]?.message?.audio?.data;
+  return b64 ? Buffer.from(b64, 'base64') : null;
+}
+
+async function main() {
+  const file = process.argv[2];
+  const d = JSON.parse(readFileSync(file, 'utf-8'));
+  const sentences = d.sections.flatMap((s: { sentences: { text_original: string; speaker?: string }[] }) => s.sentences);
+  const override = d.voices as Record<string, string> | undefined;
+  console.log(`Warming ${sentences.length} lines from ${file}\n`);
+  for (const s of sentences) {
+    const voice = s.speaker ? (override?.[s.speaker] || DIALOGUE_VOICE[s.speaker]) : undefined;
+    const text = (s.text_original || '').trim();
+    if (!text) continue;
+    process.stdout.write(`[${s.speaker}/${voice}] ${text} ... `);
+    const buf = await gen(text, voice);
+    if (!buf) { console.log('FAIL'); continue; }
+    const path = storagePath(text, voice);
+    const { error } = await supabase.storage.from(BUCKET).upload(path, buf, { contentType: 'audio/wav', upsert: true });
+    console.log(error ? `UPLOAD ERR ${error.message}` : `OK (${(buf.length / 1024).toFixed(0)}KB)`);
+    await new Promise((r) => setTimeout(r, 300));
+  }
+  console.log('\nDone.');
+}
+main();
