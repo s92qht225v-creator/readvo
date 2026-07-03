@@ -1,0 +1,319 @@
+{
+  "id": "at-the-library",
+  "level": "a2",
+  "title": "فِي الْمَكْتَبَةِ",
+  "translit": "Fī l-maktabati",
+  "titleTranslation_uz": "Kutubxonada",
+  "titleTranslation_ru": "В библиотеке",
+  "titleTranslation_en": "At the Library",
+  "sentences": [
+    {
+      "id": "s1",
+      "ar_m": "الْيَوْمَ أَذْهَبُ إِلَى الْمَكْتَبَةِ مَعَ صَدِيقِي أَحْمَدَ.",
+      "translit_m": "al-yawma adhhabu ilā l-maktabati maʿa ṣadīqī Aḥmada.",
+      "ar_f": "الْيَوْمَ أَذْهَبُ إِلَى الْمَكْتَبَةِ مَعَ صَدِيقَتِي فَاطِمَةَ.",
+      "translit_f": "al-yawma adhhabu ilā l-maktabati maʿa ṣadīqatī Fāṭimata.",
+      "text_translation_uz": "Bugun do'stim Ahmad bilan kutubxonaga boraman.",
+      "text_translation_ru": "Сегодня я иду в библиотеку с моим другом Ахмадом.",
+      "text_translation_en": "Today I go to the library with my friend Ahmad.",
+      "text_translation_uz_f": "Bugun dugonam Fotima bilan kutubxonaga boraman.",
+      "text_translation_ru_f": "Сегодня я иду в библиотеку с моей подругой Фатимой.",
+      "text_translation_en_f": "Today I go to the library with my friend Fatima.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/s1.mp3?v=05b2559669",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/female/s1.mp3?v=9ffe63937d"
+    },
+    {
+      "id": "s2",
+      "ar": "الْمَكْتَبَةُ هَادِئَةٌ وَكَبِيرَةٌ.",
+      "translit": "al-maktabatu hādiʾatun wa-kabīratun.",
+      "text_translation_uz": "Kutubxona tinch va katta.",
+      "text_translation_ru": "Библиотека тихая и большая.",
+      "text_translation_en": "The library is quiet and big.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/s2.mp3?v=663e161831",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/female/s2.mp3?v=0f866d8f30"
+    },
+    {
+      "id": "s3",
+      "ar": "نَرَى كُتُبًا كَثِيرَةً.",
+      "translit": "narā kutuban kathīratan.",
+      "text_translation_uz": "Biz ko'plab kitoblarni ko'ramiz.",
+      "text_translation_ru": "Мы видим много книг.",
+      "text_translation_en": "We see many books.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/s3.mp3?v=54cac33650",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/female/s3.mp3?v=90c6529486"
+    },
+    {
+      "id": "s4",
+      "ar_m": "أَحْمَدُ يَقْرَأُ كِتَابًا عَنِ الْحَيَوَانَاتِ، وَأَنَا أَقْرَأُ كِتَابًا عَنِ السَّيَّارَاتِ.",
+      "translit_m": "Aḥmadu yaqraʾu kitāban ʿani l-ḥayawānāti, wa-anā aqraʾu kitāban ʿani s-sayyārāti.",
+      "ar_f": "فَاطِمَةُ تَقْرَأُ كِتَابًا عَنِ الْحَيَوَانَاتِ، وَأَنَا أَقْرَأُ كِتَابًا عَنِ السَّيَّارَاتِ.",
+      "translit_f": "Fāṭimatu taqraʾu kitāban ʿani l-ḥayawānāti, wa-anā aqraʾu kitāban ʿani s-sayyārāti.",
+      "text_translation_uz": "Ahmad hayvonlar haqidagi kitobni o'qiydi, men esa mashinalar haqidagi kitobni o'qiyman.",
+      "text_translation_ru": "Ахмад читает книгу о животных, а я читаю книгу о машинах.",
+      "text_translation_en": "Ahmad reads a book about animals, and I read a book about cars.",
+      "text_translation_uz_f": "Fotima hayvonlar haqidagi kitobni o'qiydi, men esa mashinalar haqidagi kitobni o'qiyman.",
+      "text_translation_ru_f": "Фатима читает книгу о животных, а я читаю книгу о машинах.",
+      "text_translation_en_f": "Fatima reads a book about animals, and I read a book about cars.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/s4.mp3?v=6870143a61",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/female/s4.mp3?v=bee2c7bfd3"
+    },
+    {
+      "id": "s5",
+      "ar": "بَعْدَ سَاعَةٍ أَسْتَعِيرُ كِتَابًا، ثُمَّ نَخْرُجُ مِنَ الْمَكْتَبَةِ وَنَعُودُ إِلَى الْبَيْتِ.",
+      "translit": "baʿda sāʿatin astaʿīru kitāban, thumma nakhruju mina l-maktabati wa-naʿūdu ilā l-bayti.",
+      "text_translation_uz": "Bir soatdan keyin kitob ijaraga olaman, so'ng kutubxonadan chiqib uyga qaytamiz.",
+      "text_translation_ru": "Через час я беру книгу, затем мы выходим из библиотеки и возвращаемся домой.",
+      "text_translation_en": "After an hour I borrow a book, then we leave the library and return home.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/s5.mp3?v=eda8e52132",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/female/s5.mp3?v=4b51b33aa1"
+    },
+    {
+      "id": "s6",
+      "ar": "فِي الْمَسَاءِ أَكْتُبُ وَاجِبِي.",
+      "translit": "fī l-masāʾi aktubu wājibī.",
+      "text_translation_uz": "Kechqurun uy vazifamni bajaraman.",
+      "text_translation_ru": "Вечером я делаю домашнее задание.",
+      "text_translation_en": "In the evening I do my homework.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/s6.mp3?v=45b947ee81",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/female/s6.mp3?v=027ecf1073"
+    }
+  ],
+  "vocab": [
+    {
+      "ar": "الْيَوْم",
+      "translit": "al-yawm",
+      "uz": "bugun",
+      "ru": "сегодня",
+      "en": "today",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w01.mp3?v=f119388187"
+    },
+    {
+      "ar": "ذَهَبَ",
+      "translit": "dhahaba",
+      "uz": "bormoq",
+      "ru": "идти",
+      "en": "to go",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w02.mp3?v=5b85b57b3d"
+    },
+    {
+      "ar": "مَكْتَبَة",
+      "translit": "maktabah",
+      "uz": "kutubxona",
+      "ru": "библиотека",
+      "en": "library",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w03.mp3?v=04765aea04"
+    },
+    {
+      "ar": "مَعَ",
+      "translit": "maʿa",
+      "uz": "bilan",
+      "ru": "с",
+      "en": "with",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w04.mp3?v=08d4a67764"
+    },
+    {
+      "ar": "صَدِيق",
+      "translit": "ṣadīq",
+      "uz": "do'st",
+      "ru": "друг",
+      "en": "friend (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w05.mp3?v=04e2039f6a"
+    },
+    {
+      "ar": "صَدِيقَة",
+      "translit": "ṣadīqah",
+      "uz": "dugona",
+      "ru": "подруга",
+      "en": "friend (female)",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w06.mp3?v=9fbf78a50e"
+    },
+    {
+      "ar": "هَادِئ",
+      "translit": "hādiʾ",
+      "uz": "tinch",
+      "ru": "тихий",
+      "en": "quiet (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w07.mp3?v=6d0b9e4aca"
+    },
+    {
+      "ar": "كَبِير",
+      "translit": "kabīr",
+      "uz": "katta",
+      "ru": "большой",
+      "en": "big (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w08.mp3?v=7cf3fc03f3"
+    },
+    {
+      "ar": "رَأَى",
+      "translit": "raʾā",
+      "uz": "ko'rmoq",
+      "ru": "видеть",
+      "en": "to see",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w09.mp3?v=7a179d382a"
+    },
+    {
+      "ar": "كِتَاب",
+      "translit": "kitāb",
+      "uz": "kitob",
+      "ru": "книга",
+      "en": "book",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w10.mp3?v=809b1c936b"
+    },
+    {
+      "ar": "كَثِير",
+      "translit": "kathīr",
+      "uz": "ko'p",
+      "ru": "много",
+      "en": "many, much",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w11.mp3?v=dec9b493b0"
+    },
+    {
+      "ar": "قَرَأَ",
+      "translit": "qaraʾa",
+      "uz": "o'qimoq",
+      "ru": "читать",
+      "en": "to read",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w12.mp3?v=f22d7470a9"
+    },
+    {
+      "ar": "عَنْ",
+      "translit": "ʿan",
+      "uz": "haqida",
+      "ru": "о",
+      "en": "about",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w13.mp3?v=1c29e78b2f"
+    },
+    {
+      "ar": "حَيَوَان",
+      "translit": "ḥayawān",
+      "uz": "hayvon",
+      "ru": "животное",
+      "en": "animal",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w14.mp3?v=28fa122dec"
+    },
+    {
+      "ar": "سَيَّارَة",
+      "translit": "sayyārah",
+      "uz": "mashina",
+      "ru": "машина",
+      "en": "car",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w15.mp3?v=dad687a6ee"
+    },
+    {
+      "ar": "بَعْدَ",
+      "translit": "baʿda",
+      "uz": "-dan keyin",
+      "ru": "после",
+      "en": "after",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w16.mp3?v=d89d0223ae"
+    },
+    {
+      "ar": "سَاعَة",
+      "translit": "sāʿah",
+      "uz": "soat",
+      "ru": "час",
+      "en": "hour",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w17.mp3?v=db60c858fe"
+    },
+    {
+      "ar": "اِسْتَعَارَ",
+      "translit": "istaʿāra",
+      "uz": "ijaraga olmoq",
+      "ru": "брать взаймы",
+      "en": "to borrow",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w18.mp3?v=81293cf5df"
+    },
+    {
+      "ar": "ثُمَّ",
+      "translit": "thumma",
+      "uz": "so'ng",
+      "ru": "затем",
+      "en": "then",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w19.mp3?v=28c00da0bf"
+    },
+    {
+      "ar": "خَرَجَ",
+      "translit": "kharaja",
+      "uz": "chiqmoq",
+      "ru": "выходить",
+      "en": "to go out",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w20.mp3?v=98ba7df4bf"
+    },
+    {
+      "ar": "مِنْ",
+      "translit": "min",
+      "uz": "-dan",
+      "ru": "из",
+      "en": "from",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w21.mp3?v=b1222d7219"
+    },
+    {
+      "ar": "عَادَ",
+      "translit": "ʿāda",
+      "uz": "qaytmoq",
+      "ru": "возвращаться",
+      "en": "to return",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w22.mp3?v=8d9abf26ca"
+    },
+    {
+      "ar": "بَيْت",
+      "translit": "bayt",
+      "uz": "uy",
+      "ru": "дом",
+      "en": "house, home",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w23.mp3?v=8e27cda4bc"
+    },
+    {
+      "ar": "مَسَاء",
+      "translit": "masāʾ",
+      "uz": "kechqurun",
+      "ru": "вечер",
+      "en": "evening",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w24.mp3?v=65dae263b9"
+    },
+    {
+      "ar": "كَتَبَ",
+      "translit": "kataba",
+      "uz": "yozmoq",
+      "ru": "писать",
+      "en": "to write",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w25.mp3?v=453591c800"
+    },
+    {
+      "ar": "وَاجِب",
+      "translit": "wājib",
+      "uz": "uy vazifasi",
+      "ru": "домашнее задание",
+      "en": "homework, duty",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w26.mp3?v=1decfc5293"
+    },
+    {
+      "ar": "أَنَا",
+      "translit": "anā",
+      "uz": "men",
+      "ru": "я",
+      "en": "I",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w27.mp3?v=07bd2a6f92"
+    },
+    {
+      "ar": "نَحْنُ",
+      "translit": "naḥnu",
+      "uz": "biz",
+      "ru": "мы",
+      "en": "we",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-library/omar/words/w28.mp3?v=6e123a9d7f"
+    }
+  ]
+}
