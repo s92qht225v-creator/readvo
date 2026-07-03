@@ -48,12 +48,15 @@ def upload(path, data):
 def main():
     fpath = sys.argv[1]
     only_missing = '--only-missing' in sys.argv
+    only_ids = next((set(a.split('=', 1)[1].split(',')) for a in sys.argv if a.startswith('--only=')), None)
     d = json.load(open(fpath))
     level, slug = d['level'], d['id']
     base = f"ar/stories/{level}/{slug}"
 
     for s in d['sentences']:
         sid = s['id']
+        if only_ids and sid not in only_ids:
+            continue
         male_text = s.get('ar_m') or s.get('ar')
         female_text = s.get('ar_f') or s.get('ar')
         if not (only_missing and s.get('audio_url')):
@@ -65,6 +68,8 @@ def main():
         time.sleep(0.3)
 
     for i, w in enumerate(d.get('vocab', []), start=1):
+        if only_ids:
+            break  # sentence-only regeneration; leave vocab untouched
         if only_missing and w.get('audio_url'):
             continue
         print(f"  [w{i:02d}] {strip(w['ar'])}")
