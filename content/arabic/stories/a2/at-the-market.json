@@ -1,0 +1,373 @@
+{
+  "id": "at-the-market",
+  "level": "a2",
+  "title": "فِي السُّوقِ",
+  "translit": "Fī s-sūqi",
+  "titleTranslation_uz": "Bozorda",
+  "titleTranslation_ru": "На рынке",
+  "titleTranslation_en": "At the Market",
+  "sentences": [
+    {
+      "id": "s1",
+      "ar_m": "اِسْمِي مُحَمَّدٌ.",
+      "translit_m": "Ismī Muḥammadun.",
+      "ar_f": "اِسْمِي فَاطِمَةُ.",
+      "translit_f": "Ismī Fāṭimatu.",
+      "text_translation_uz": "Mening ismim Muhammad.",
+      "text_translation_ru": "Меня зовут Мухаммад.",
+      "text_translation_en": "My name is Muhammad.",
+      "text_translation_uz_f": "Mening ismim Fotima.",
+      "text_translation_ru_f": "Меня зовут Фатима.",
+      "text_translation_en_f": "My name is Fatima.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/s1.mp3?v=9a9695fe9a",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/female/s1.mp3?v=49eb9f736c"
+    },
+    {
+      "id": "s2",
+      "ar_m": "أَنَا طَالِبٌ.",
+      "translit_m": "Anā ṭālibun.",
+      "ar_f": "أَنَا طَالِبَةٌ.",
+      "translit_f": "Anā ṭālibatun.",
+      "text_translation_uz": "Men talabaman.",
+      "text_translation_ru": "Я студент.",
+      "text_translation_en": "I am a student.",
+      "text_translation_ru_f": "Я студентка.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/s2.mp3?v=353ea3039f",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/female/s2.mp3?v=8acdae7d4b"
+    },
+    {
+      "id": "s3",
+      "ar_m": "الْيَوْمَ أَذْهَبُ إِلَى السُّوقِ مَعَ أَبِي.",
+      "translit_m": "al-yawma adhhabu ilā s-sūqi maʿa abī.",
+      "ar_f": "الْيَوْمَ أَذْهَبُ إِلَى السُّوقِ مَعَ أُمِّي.",
+      "translit_f": "al-yawma adhhabu ilā s-sūqi maʿa ummī.",
+      "text_translation_uz": "Bugun otam bilan bozorga boraman.",
+      "text_translation_ru": "Сегодня я иду на рынок с отцом.",
+      "text_translation_en": "Today I go to the market with my father.",
+      "text_translation_uz_f": "Bugun onam bilan bozorga boraman.",
+      "text_translation_ru_f": "Сегодня я иду на рынок с мамой.",
+      "text_translation_en_f": "Today I go to the market with my mother.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/s3.mp3?v=0313505dc3",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/female/s3.mp3?v=010aafefc7"
+    },
+    {
+      "id": "s4",
+      "ar": "السُّوقُ كَبِيرٌ وَنَظِيفٌ.",
+      "translit": "as-sūqu kabīrun wa-naẓīfun.",
+      "text_translation_uz": "Bozor katta va toza.",
+      "text_translation_ru": "Рынок большой и чистый.",
+      "text_translation_en": "The market is big and clean.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/s4.mp3?v=5f98308c6d",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/female/s4.mp3?v=381131ab85"
+    },
+    {
+      "id": "s5",
+      "ar": "نَرَى فَوَاكِهَ وَخُضْرَوَاتٍ كَثِيرَةً.",
+      "translit": "narā fawākiha wa-khuḍrawātin kathīratan.",
+      "text_translation_uz": "Biz ko'plab meva va sabzavotlarni ko'ramiz.",
+      "text_translation_ru": "Мы видим много фруктов и овощей.",
+      "text_translation_en": "We see many fruits and vegetables.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/s5.mp3?v=92d1c486a2",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/female/s5.mp3?v=c08f14fd9c"
+    },
+    {
+      "id": "s6",
+      "ar_m": "أَبِي يَشْتَرِي تُفَّاحًا وَمَوْزًا وَخُبْزًا.",
+      "translit_m": "abī yashtarī tuffāḥan wa-mawzan wa-khubzan.",
+      "ar_f": "أُمِّي تَشْتَرِي تُفَّاحًا وَمَوْزًا وَخُبْزًا.",
+      "translit_f": "ummī tashtarī tuffāḥan wa-mawzan wa-khubzan.",
+      "text_translation_uz": "Otam olma, banan va non sotib oladi.",
+      "text_translation_ru": "Мой отец покупает яблоки, бананы и хлеб.",
+      "text_translation_en": "My father buys apples, bananas, and bread.",
+      "text_translation_uz_f": "Onam olma, banan va non sotib oladi.",
+      "text_translation_ru_f": "Моя мама покупает яблоки, бананы и хлеб.",
+      "text_translation_en_f": "My mother buys apples, bananas, and bread.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/s6.mp3?v=b990a2ab1d",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/female/s6.mp3?v=ef02d18ef7"
+    },
+    {
+      "id": "s7",
+      "ar": "أَنَا أَشْرَبُ الْمَاءَ.",
+      "translit": "anā ashrabu l-māʾa.",
+      "text_translation_uz": "Men suv ichaman.",
+      "text_translation_ru": "Я пью воду.",
+      "text_translation_en": "I drink water.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/s7.mp3?v=fe31cc84ab",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/female/s7.mp3?v=46255ff511"
+    },
+    {
+      "id": "s8",
+      "ar": "بَعْدَ ذَلِكَ نَعُودُ إِلَى الْبَيْتِ.",
+      "translit": "baʿda dhālika naʿūdu ilā l-bayti.",
+      "text_translation_uz": "Shundan so'ng biz uyga qaytamiz.",
+      "text_translation_ru": "После этого мы возвращаемся домой.",
+      "text_translation_en": "After that we return home.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/s8.mp3?v=77eb35e1b4",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/female/s8.mp3?v=0ff826c1a4"
+    },
+    {
+      "id": "s9",
+      "ar_m": "أَنَا سَعِيدٌ، وَأَبِي سَعِيدٌ أَيْضًا.",
+      "translit_m": "anā saʿīdun, wa-abī saʿīdun ayḍan.",
+      "ar_f": "أَنَا سَعِيدَةٌ، وَأُمِّي سَعِيدَةٌ أَيْضًا.",
+      "translit_f": "anā saʿīdatun, wa-ummī saʿīdatun ayḍan.",
+      "text_translation_uz": "Men xursandman, otam ham xursand.",
+      "text_translation_ru": "Я счастлив, и мой отец тоже счастлив.",
+      "text_translation_en": "I am happy, and my father is happy too.",
+      "text_translation_uz_f": "Men xursandman, onam ham xursand.",
+      "text_translation_ru_f": "Я счастлива, и моя мама тоже счастлива.",
+      "text_translation_en_f": "I am happy, and my mother is happy too.",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/s9.mp3?v=9ae6cec8bc",
+      "audio_url_f": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/female/s9.mp3?v=2825a4192d"
+    }
+  ],
+  "vocab": [
+    {
+      "ar": "اِسْم",
+      "translit": "ism",
+      "uz": "ism",
+      "ru": "имя",
+      "en": "name",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w01.mp3?v=7a86207447"
+    },
+    {
+      "ar": "أَنَا",
+      "translit": "anā",
+      "uz": "men",
+      "ru": "я",
+      "en": "I",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w02.mp3?v=454f7d28f1"
+    },
+    {
+      "ar": "طَالِب",
+      "translit": "ṭālib",
+      "uz": "talaba",
+      "ru": "студент",
+      "en": "student (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w03.mp3?v=e14e194941"
+    },
+    {
+      "ar": "طَالِبَة",
+      "translit": "ṭālibah",
+      "uz": "talaba",
+      "ru": "студентка",
+      "en": "student (female)",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w04.mp3?v=7f380ab3a6"
+    },
+    {
+      "ar": "الْيَوْم",
+      "translit": "al-yawm",
+      "uz": "bugun",
+      "ru": "сегодня",
+      "en": "today",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w05.mp3?v=8a930f0428"
+    },
+    {
+      "ar": "ذَهَبَ",
+      "translit": "dhahaba",
+      "uz": "bormoq",
+      "ru": "идти",
+      "en": "to go",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w06.mp3?v=ffa0943c0b"
+    },
+    {
+      "ar": "سُوق",
+      "translit": "sūq",
+      "uz": "bozor",
+      "ru": "рынок",
+      "en": "market",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w07.mp3?v=75c9d6b747"
+    },
+    {
+      "ar": "مَعَ",
+      "translit": "maʿa",
+      "uz": "bilan",
+      "ru": "с",
+      "en": "with",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w08.mp3?v=a3bf9fbd20"
+    },
+    {
+      "ar": "أُمّ",
+      "translit": "umm",
+      "uz": "ona",
+      "ru": "мама",
+      "en": "mother",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w09.mp3?v=aae5067ae0"
+    },
+    {
+      "ar": "أَب",
+      "translit": "ab",
+      "uz": "ota",
+      "ru": "отец",
+      "en": "father",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w10.mp3?v=c267450fb6"
+    },
+    {
+      "ar": "كَبِير",
+      "translit": "kabīr",
+      "uz": "katta",
+      "ru": "большой",
+      "en": "big (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w11.mp3?v=359ef7648c"
+    },
+    {
+      "ar": "نَظِيف",
+      "translit": "naẓīf",
+      "uz": "toza",
+      "ru": "чистый",
+      "en": "clean (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w12.mp3?v=469225bca5"
+    },
+    {
+      "ar": "رَأَى",
+      "translit": "raʾā",
+      "uz": "ko'rmoq",
+      "ru": "видеть",
+      "en": "to see",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w13.mp3?v=24838e64bc"
+    },
+    {
+      "ar": "فَاكِهَة",
+      "translit": "fākihah",
+      "uz": "meva",
+      "ru": "фрукт",
+      "en": "fruit",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w14.mp3?v=c44edca347"
+    },
+    {
+      "ar": "خُضْرَوَات",
+      "translit": "khuḍrawāt",
+      "uz": "sabzavotlar",
+      "ru": "овощи",
+      "en": "vegetables",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w15.mp3?v=f3ceb9817d"
+    },
+    {
+      "ar": "كَثِير",
+      "translit": "kathīr",
+      "uz": "ko'p",
+      "ru": "много",
+      "en": "many, much",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w16.mp3?v=3ac173fb31"
+    },
+    {
+      "ar": "اِشْتَرَى",
+      "translit": "ishtarā",
+      "uz": "sotib olmoq",
+      "ru": "покупать",
+      "en": "to buy",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w17.mp3?v=800cc7a850"
+    },
+    {
+      "ar": "تُفَّاح",
+      "translit": "tuffāḥ",
+      "uz": "olma",
+      "ru": "яблоко",
+      "en": "apple",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w18.mp3?v=403081ac8c"
+    },
+    {
+      "ar": "مَوْز",
+      "translit": "mawz",
+      "uz": "banan",
+      "ru": "банан",
+      "en": "banana",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w19.mp3?v=3bbc552ab9"
+    },
+    {
+      "ar": "خُبْز",
+      "translit": "khubz",
+      "uz": "non",
+      "ru": "хлеб",
+      "en": "bread",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w20.mp3?v=48ccda614a"
+    },
+    {
+      "ar": "شَرِبَ",
+      "translit": "shariba",
+      "uz": "ichmoq",
+      "ru": "пить",
+      "en": "to drink",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w21.mp3?v=ee5282ddcd"
+    },
+    {
+      "ar": "مَاء",
+      "translit": "māʾ",
+      "uz": "suv",
+      "ru": "вода",
+      "en": "water",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w22.mp3?v=065a9c9b46"
+    },
+    {
+      "ar": "بَعْدَ",
+      "translit": "baʿda",
+      "uz": "-dan keyin",
+      "ru": "после",
+      "en": "after",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w23.mp3?v=5a9070de89"
+    },
+    {
+      "ar": "ذَلِكَ",
+      "translit": "dhālika",
+      "uz": "o'sha",
+      "ru": "то, это",
+      "en": "that",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w24.mp3?v=8d3fc6547b"
+    },
+    {
+      "ar": "عَادَ",
+      "translit": "ʿāda",
+      "uz": "qaytmoq",
+      "ru": "возвращаться",
+      "en": "to return",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w25.mp3?v=8fa909265f"
+    },
+    {
+      "ar": "بَيْت",
+      "translit": "bayt",
+      "uz": "uy",
+      "ru": "дом",
+      "en": "house, home",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w26.mp3?v=2535f9ae7f"
+    },
+    {
+      "ar": "سَعِيد",
+      "translit": "saʿīd",
+      "uz": "xursand",
+      "ru": "счастливый",
+      "en": "happy (male)",
+      "gender": "m",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w27.mp3?v=2a55cd37ff"
+    },
+    {
+      "ar": "سَعِيدَة",
+      "translit": "saʿīdah",
+      "uz": "xursand",
+      "ru": "счастливая",
+      "en": "happy (female)",
+      "gender": "f",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w28.mp3?v=09783d76a1"
+    },
+    {
+      "ar": "أَيْضًا",
+      "translit": "ayḍan",
+      "uz": "ham",
+      "ru": "тоже",
+      "en": "also",
+      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/ar/stories/a2/at-the-market/omar/words/w29.mp3?v=c4a408dbd0"
+    }
+  ]
+}
