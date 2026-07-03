@@ -1,14 +1,14 @@
 {
   "id": "hsk2-dialogue29",
-  "slug": "sending-a-package",
-  "title": "寄包裹",
-  "pinyin": "Jì bāoguǒ",
-  "titleTranslation": "Posilka jo'natish",
-  "titleTranslation_ru": "Отправить посылку",
-  "titleTranslation_en": "Sending a Package",
-  "description_uz": "«Salom, bu posilkani Amerikaga jo'natsa bo'ladimi?» — mijoz va pochta xodimi o'rtasidagi suhbat. Bu dialog narx va muddatni so'rash, tezkor yoki oddiy yetkazishni tanlash va manzil yozishni mashq qiladi. Amaliy vaziyat, foydali kundalik so'zlar — takrorlab tabiiy bo'lish uchun qisqa. Tinglash va gapirish uchun ajoyib.",
-  "description_ru": "«Здравствуйте, эту посылку можно отправить в Америку?» — разговор клиента и работника почты. Этот диалог тренирует, как спрашивать о цене и сроке, выбирать быструю или обычную доставку и записывать адрес. Практичная ситуация, полезная повседневная лексика — короткий, чтобы повторять до естественности. Отлично для аудирования и речи.",
-  "description_en": "«Hi, can this package go to America?» — a conversation between a customer and a postal worker. This dialogue practices asking about prices and timing, choosing fast or slow shipping, and filling in an address. Practical situation, useful everyday words—short enough to repeat until natural. Great for listening and speaking.",
+  "slug": "i-want-to-send-a-package",
+  "title": "我要寄一个包裹",
+  "pinyin": "Wǒ yào jì yí ge bāo guǒ",
+  "titleTranslation": "Men posilka jo'natmoqchiman",
+  "titleTranslation_ru": "Я хочу отправить посылку",
+  "titleTranslation_en": "I Want to Send a Package",
+  "description_uz": "«Men bitta posilka jo'natmoqchiman.» — pochtada mijoz va xodim o'rtasidagi suhbat. Bu dialog posilka jo'natish, ichidagini aytish, tez va sekin yetkazishni taqqoslash va manzil yozishni mashq qiladi. Kundalik, foydali so'zlar bilan — takrorlab o'rganish uchun ideal.",
+  "description_ru": "«Я хочу отправить посылку.» — разговор клиента и сотрудника на почте. Диалог тренирует, как отправить посылку, сказать, что внутри, сравнить быструю и медленную доставку и написать адрес. Близкая тема и полезная лексика — идеально для повторения.",
+  "description_en": "«I'd like to send a package.» — a chat between a customer and a clerk at the post office. This dialogue practices sending a package, saying what's inside, comparing fast and slow shipping, and writing the address. Relatable topic with useful vocabulary—perfect for repetition.",
   "category_uz": "Pochta va jo'natma",
   "category_ru": "Почта и посылки",
   "category_en": "Post & Shipping",
@@ -16,22 +16,17 @@
   "tag": "kundalik",
   "dateAdded": "2026-06-16",
   "vocab": [
-    "包裹",
     "寄",
-    "美国",
-    "礼物",
-    "快的",
-    "慢的",
-    "填",
-    "单子",
+    "包裹",
+    "里面",
+    "衣服",
+    "化妆品",
+    "快",
+    "慢",
+    "块",
     "地址",
-    "清楚",
-    "零钱",
-    "收据",
-    "以内",
-    "查",
-    "快递",
-    "信息"
+    "还是",
+    "写"
   ],
   "sections": [
     {
@@ -42,42 +37,60 @@
       "sentences": [
         {
           "id": "d29-s1",
-          "text_original": "你好，请问这个包裹可以寄到美国吗？",
-          "pinyin": "Nǐ hǎo, qǐng wèn zhè ge bāo guǒ kě yǐ jì dào Měi guó ma?",
-          "text_translation": "Salom, kechirasiz, bu posilkani Amerikaga jo'natsa bo'ladimi?",
-          "text_translation_ru": "Здравствуйте, скажите, эту посылку можно отправить в Америку?",
-          "text_translation_en": "Hello, can this package be sent to the United States?",
+          "text_original": "你好，我要寄一个包裹。",
+          "pinyin": "Nǐ hǎo, wǒ yào jì yí ge bāo guǒ.",
+          "text_translation": "Salom, men bitta posilka jo'natmoqchiman.",
+          "text_translation_ru": "Здравствуйте, я хочу отправить посылку.",
+          "text_translation_en": "Hello, I'd like to send a package.",
           "speaker": "A"
         },
         {
           "id": "d29-s2",
-          "text_original": "可以。您要寄什么？",
-          "pinyin": "Kě yǐ. Nín yào jì shén me?",
-          "text_translation": "Bo'ladi. Nima jo'natmoqchisiz?",
-          "text_translation_ru": "Можно. Что вы хотите отправить?",
-          "text_translation_en": "Yes. What would you like to send?",
+          "text_original": "寄到哪儿？",
+          "pinyin": "Jì dào nǎr?",
+          "text_translation": "Qayerga jo'natasiz?",
+          "text_translation_ru": "Куда отправить?",
+          "text_translation_en": "Where to?",
           "speaker": "B"
         },
         {
           "id": "d29-s3",
-          "text_original": "是一件衣服，送给朋友的礼物。",
-          "pinyin": "Shì yí jiàn yī fu, sòng gěi péng you de lǐ wù.",
-          "text_translation": "Bu bitta kiyim, do'stimga sovg'a.",
-          "text_translation_ru": "Это одежда, подарок другу.",
-          "text_translation_en": "It's a piece of clothing, a gift for a friend.",
+          "text_original": "寄到上海。",
+          "pinyin": "Jì dào Shàng hǎi.",
+          "text_translation": "Shanxayga.",
+          "text_translation_ru": "В Шанхай.",
+          "text_translation_en": "To Shanghai.",
           "speaker": "A"
         },
         {
           "id": "d29-s4",
-          "text_original": "您想寄快的还是慢的？",
-          "pinyin": "Nín xiǎng jì kuài de hái shì màn de?",
-          "text_translation": "Tezini yoki sekinini jo'natmoqchimisiz?",
-          "text_translation_ru": "Вы хотите отправить быстрой или медленной доставкой?",
-          "text_translation_en": "Do you want fast or slow delivery?",
+          "text_original": "里面是什么？",
+          "pinyin": "Lǐ miàn shì shén me?",
+          "text_translation": "Ichida nima bor?",
+          "text_translation_ru": "Что внутри?",
+          "text_translation_en": "What's inside?",
           "speaker": "B"
         },
         {
           "id": "d29-s5",
+          "text_original": "是衣服和化妆品。",
+          "pinyin": "Shì yī fu hé huà zhuāng pǐn.",
+          "text_translation": "Kiyim va kosmetika.",
+          "text_translation_ru": "Одежда и косметика.",
+          "text_translation_en": "Clothes and cosmetics.",
+          "speaker": "A"
+        },
+        {
+          "id": "d29-s6",
+          "text_original": "您要寄快的还是慢的？",
+          "pinyin": "Nín yào jì kuài de hái shì màn de?",
+          "text_translation": "Tez yoki sekin jo'natmoqchimisiz?",
+          "text_translation_ru": "Вы хотите отправить быстро или медленно?",
+          "text_translation_en": "Do you want fast or slow shipping?",
+          "speaker": "B"
+        },
+        {
+          "id": "d29-s7",
           "text_original": "快的多少钱？",
           "pinyin": "Kuài de duō shao qián?",
           "text_translation": "Tezi qancha turadi?",
@@ -86,16 +99,16 @@
           "speaker": "A"
         },
         {
-          "id": "d29-s6",
-          "text_original": "快的两百块，五天到。",
-          "pinyin": "Kuài de liǎng bǎi kuài, wǔ tiān dào.",
-          "text_translation": "Tezi ikki yuz yuan, besh kunda yetib boradi.",
-          "text_translation_ru": "Быстрая двести юаней, дойдёт за пять дней.",
-          "text_translation_en": "The fast one is two hundred yuan, arrives in five days.",
+          "id": "d29-s8",
+          "text_original": "快的三十块，两天到。",
+          "pinyin": "Kuài de sān shí kuài, liǎng tiān dào.",
+          "text_translation": "Tezi o'ttiz yuan, ikki kunda yetib boradi.",
+          "text_translation_ru": "Быстрая — тридцать юаней, два дня.",
+          "text_translation_en": "The fast one is thirty yuan, arrives in two days.",
           "speaker": "B"
         },
         {
-          "id": "d29-s7",
+          "id": "d29-s9",
           "text_original": "慢的呢？",
           "pinyin": "Màn de ne?",
           "text_translation": "Sekini-chi?",
@@ -104,112 +117,31 @@
           "speaker": "A"
         },
         {
-          "id": "d29-s8",
-          "text_original": "慢的一百块，两个星期到。",
-          "pinyin": "Màn de yì bǎi kuài, liǎng ge xīng qī dào.",
-          "text_translation": "Sekini bir yuz yuan, ikki haftada yetib boradi.",
-          "text_translation_ru": "Медленная сто юаней, дойдёт за две недели.",
-          "text_translation_en": "The slow one is one hundred yuan, arrives in two weeks.",
-          "speaker": "B"
-        },
-        {
-          "id": "d29-s9",
-          "text_original": "我寄快的吧。朋友下周生日。",
-          "pinyin": "Wǒ jì kuài de ba. Péng you xià zhōu shēng rì.",
-          "text_translation": "Tezini jo'nataman. Do'stimning keyingi hafta tug'ilgan kuni.",
-          "text_translation_ru": "Отправлю быстрой. У друга на следующей неделе день рождения.",
-          "text_translation_en": "I'll send the fast one. My friend's birthday is next week.",
-          "speaker": "A"
-        },
-        {
           "id": "d29-s10",
-          "text_original": "好的。请填一下这个单子。",
-          "pinyin": "Hǎo de. Qǐng tián yí xià zhè ge dān zi.",
-          "text_translation": "Yaxshi. Iltimos, bu blankni to'ldiring.",
-          "text_translation_ru": "Хорошо. Заполните, пожалуйста, этот бланк.",
-          "text_translation_en": "Okay. Please fill out this form.",
+          "text_original": "慢的十五块，七天到。",
+          "pinyin": "Màn de shí wǔ kuài, qī tiān dào.",
+          "text_translation": "Sekini o'n besh yuan, yetti kunda yetib boradi.",
+          "text_translation_ru": "Медленная — пятнадцать юаней, семь дней.",
+          "text_translation_en": "The slow one is fifteen yuan, arrives in seven days.",
           "speaker": "B"
         },
         {
           "id": "d29-s11",
-          "text_original": "写中文还是英文？",
-          "pinyin": "Xiě Zhōng wén hái shì Yīng wén?",
-          "text_translation": "Xitoychami yoki inglizcha yozaymi?",
-          "text_translation_ru": "Писать по-китайски или по-английски?",
-          "text_translation_en": "Should I write in Chinese or English?",
+          "text_original": "那寄快的吧。",
+          "pinyin": "Nà jì kuài de ba.",
+          "text_translation": "Unda tezini jo'nataylik.",
+          "text_translation_ru": "Тогда отправлю быструю.",
+          "text_translation_en": "Then let's send it fast.",
           "speaker": "A"
         },
         {
           "id": "d29-s12",
-          "text_original": "都可以。地址一定要写清楚。",
-          "pinyin": "Dōu kě yǐ. Dì zhǐ yí dìng yào xiě qīng chu.",
-          "text_translation": "Ikkalasi ham bo'ladi. Manzilni albatta aniq yozing.",
-          "text_translation_ru": "Любым. Адрес обязательно напишите чётко.",
-          "text_translation_en": "Either is fine. Just be sure to write the address clearly.",
+          "text_original": "好的，请写一下地址。",
+          "pinyin": "Hǎo de, qǐng xiě yí xià dì zhǐ.",
+          "text_translation": "Yaxshi, manzilni yozib bering.",
+          "text_translation_ru": "Хорошо, напишите, пожалуйста, адрес.",
+          "text_translation_en": "Okay, please write down the address.",
           "speaker": "B"
-        },
-        {
-          "id": "d29-s13",
-          "text_original": "好了。给你。",
-          "pinyin": "Hǎo le. Gěi nǐ.",
-          "text_translation": "Bo'ldi. Mana.",
-          "text_translation_ru": "Готово. Держите.",
-          "text_translation_en": "Done. Here you go.",
-          "speaker": "A"
-        },
-        {
-          "id": "d29-s14",
-          "text_original": "一共两百块。",
-          "pinyin": "Yí gòng liǎng bǎi kuài.",
-          "text_translation": "Jami ikki yuz yuan.",
-          "text_translation_ru": "Всего двести юаней.",
-          "text_translation_en": "Two hundred yuan in total.",
-          "speaker": "B"
-        },
-        {
-          "id": "d29-s15",
-          "text_original": "给你钱。",
-          "pinyin": "Gěi nǐ qián.",
-          "text_translation": "Mana puli.",
-          "text_translation_ru": "Вот деньги.",
-          "text_translation_en": "Here's the money.",
-          "speaker": "A"
-        },
-        {
-          "id": "d29-s16",
-          "text_original": "找您零钱。这是您的收据。",
-          "pinyin": "Zhǎo nín líng qián. Zhè shì nín de shōu jù.",
-          "text_translation": "Mana qaytimingiz. Bu sizning kvitansiyangiz.",
-          "text_translation_ru": "Вот ваша сдача. Это ваша квитанция.",
-          "text_translation_en": "Here's your change. And here's your receipt.",
-          "speaker": "B"
-        },
-        {
-          "id": "d29-s17",
-          "text_original": "谢谢。包裹什么时候能到？",
-          "pinyin": "Xiè xie. Bāo guǒ shén me shí hou néng dào?",
-          "text_translation": "Rahmat. Posilka qachon yetib boradi?",
-          "text_translation_ru": "Спасибо. Когда посылка дойдёт?",
-          "text_translation_en": "Thanks. When will the package arrive?",
-          "speaker": "A"
-        },
-        {
-          "id": "d29-s18",
-          "text_original": "五天以内。您可以上网查快递信息。",
-          "pinyin": "Wǔ tiān yǐ nèi. Nín kě yǐ shàng wǎng chá kuài dì xìnxī.",
-          "text_translation": "Besh kun ichida. Internetdan yetkazma ma'lumotlarini tekshira olasiz.",
-          "text_translation_ru": "В течение пяти дней. Можете посмотреть информацию о посылке онлайн.",
-          "text_translation_en": "Within five days. You can look up the delivery information online.",
-          "speaker": "B"
-        },
-        {
-          "id": "d29-s19",
-          "text_original": "好的，我知道了。",
-          "pinyin": "Hǎo de, wǒ zhī dào le.",
-          "text_translation": "Yaxshi, tushundim.",
-          "text_translation_ru": "Хорошо, я понял.",
-          "text_translation_en": "Okay, got it.",
-          "speaker": "A"
         }
       ]
     }
