@@ -1327,21 +1327,32 @@ body {
 .dr-lines {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
-.dr-line {
+/* Chat-bubble dialogue layout: speaker A on the left, B on the right.
+   The bubble sizes to the Chinese line; a longer translation wraps inside it
+   (see .dr-line-tr) rather than stretching the bubble. */
+.dr-row {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-  margin-bottom: 28px;
+}
+.dr-row--a { justify-content: flex-start; }
+.dr-row--b { justify-content: flex-end; }
+
+.dr-bubble {
+  max-width: 85%;
+  padding: 9px 13px 10px;
+  border-radius: 18px;
+  box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.08);
   cursor: pointer;
 }
-
-.dr-line-main {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+.dr-row--a .dr-bubble {
+  background: #fff;
+  border-bottom-left-radius: 5px;
+}
+.dr-row--b .dr-bubble {
+  background: #fbe4e4;
+  border-bottom-right-radius: 5px;
 }
 
 .dr-line--active .dr-char-zh {
@@ -1420,7 +1431,12 @@ body {
   font-size: 0.81em;
   color: #888;
   margin-top: 4px;
-  padding-left: 38px;
+  /* width:0 + min-width:100% = fill the bubble but never widen it, so the
+     Chinese line defines the bubble width and a longer translation wraps
+     underneath instead of stretching it and leaving the Chinese half-empty. */
+  width: 0;
+  min-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .dr-word-tooltip {

@@ -643,11 +643,8 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                           {groups.map((group, gi) => {
                             const speaker = group[0].speaker;
                             return (
-                              <div key={`${section.id}-g${gi}`} className="dr-line">
-                                <div className="dr-line-main">
-                                  {speaker && (
-                                    <div className="dr-line-speaker">{speaker}:</div>
-                                  )}
+                              <div key={`${section.id}-g${gi}`} className={`dr-row dr-row--${speaker === 'B' ? 'b' : 'a'}`}>
+                                <div className="dr-bubble">
                                   <div ref={group[0].id === allSentences[0]?.id ? firstLineRef : undefined} className="dr-line-chars">
                                     {group.map((s, si) => {
                                       const pairs = alignPinyinToText(s.text_original, s.pinyin);
@@ -678,17 +675,17 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                                       });
                                     })}
                                   </div>
+                                  {showTranslation && (() => {
+                                    // Tap-to-reveal: show only the active line's
+                                    // translation, one at a time (matches the
+                                    // Arabic reader). Tapping another line moves
+                                    // the reveal; re-tapping the same line hides it.
+                                    const active = group.find(s => s.id === revealedId);
+                                    if (!active) return null;
+                                    const tr = language === 'ru' ? active.text_translation_ru : language === 'en' ? (active.text_translation_en || active.text_translation) : active.text_translation;
+                                    return <div className="dr-line-tr">{tr}</div>;
+                                  })()}
                                 </div>
-                                {showTranslation && (() => {
-                                  // Tap-to-reveal: show only the active line's
-                                  // translation, one at a time (matches the
-                                  // Arabic reader). Tapping another line moves
-                                  // the reveal; re-tapping the same line hides it.
-                                  const active = group.find(s => s.id === revealedId);
-                                  if (!active) return null;
-                                  const tr = language === 'ru' ? active.text_translation_ru : language === 'en' ? (active.text_translation_en || active.text_translation) : active.text_translation;
-                                  return <div className="dr-line-tr">{tr}</div>;
-                                })()}
                               </div>
                             );
                           })}
