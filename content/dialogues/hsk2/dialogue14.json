@@ -67,11 +67,11 @@
         },
         {
           "id": "d14-s4",
-          "text_original": "我想请几个朋友来家里吃饭。",
-          "pinyin": "Wǒ xiǎng qǐng jǐ gè péng you lái jiā lǐ chī fàn.",
-          "text_translation": "Bir nechta do'stimni uyga ovqatga taklif qilmoqchiman.",
-          "text_translation_ru": "Я хочу пригласить несколько друзей домой на ужин.",
-          "text_translation_en": "I want to invite a few friends over for dinner.",
+          "text_original": "我想请几个朋友来我家吃饭。",
+          "pinyin": "Wǒ xiǎng qǐng jǐ gè péng you lái wǒ jiā chī fàn.",
+          "text_translation": "Bir nechta do'stimni uyimga ovqatga taklif qilmoqchiman.",
+          "text_translation_ru": "Я хочу пригласить несколько друзей к себе домой на ужин.",
+          "text_translation_en": "I want to invite a few friends over to my place for dinner.",
           "speaker": "B"
         },
         {
