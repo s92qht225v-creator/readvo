@@ -48,11 +48,11 @@
         },
         {
           "id": "d23-s2",
-          "text_original": "我用手机软件打车。",
-          "pinyin": "Wǒ yòng shǒu jī ruǎn jiàn dǎ chē.",
-          "text_translation": "Telefon ilovasi orqali taksi chaqiraman.",
-          "text_translation_ru": "Я вызываю такси через приложение на телефоне.",
-          "text_translation_en": "I use a phone app to get a taxi.",
+          "text_original": "我用手机软件。",
+          "pinyin": "Wǒ yòng shǒu jī ruǎn jiàn.",
+          "text_translation": "Telefon ilovasidan foydalanaman.",
+          "text_translation_ru": "Я пользуюсь приложением на телефоне.",
+          "text_translation_en": "I use a phone app.",
           "speaker": "B"
         },
         {
