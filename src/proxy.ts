@@ -130,6 +130,7 @@ export default function proxy(request: NextRequest) {
     'hsk3/ride-hailing-apps': 'how-do-you-usually-get-a-taxi',
     'hsk3/buying-shoes-online': 'do-you-shop-online-often',
     'hsk3/homestay': 'i-like-staying-in-homestays',
+    'hsk3/online-courses': 'im-taking-an-online-course',
   };
   const dlgRename = pathname.match(/^\/(uz|ru|en)\/chinese\/dialogues\/(hsk\d)\/([^/]+)\/?$/);
   if (dlgRename) {
