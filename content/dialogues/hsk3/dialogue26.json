@@ -102,8 +102,8 @@
         },
         {
           "id": "d26-s8",
-          "text_original": "那我帮你剪短点，凉快。",
-          "pinyin": "Nà wǒ bāng nǐ jiǎn duǎn diǎn, liáng kuai.",
+          "text_original": "那我帮你剪短一点，凉快。",
+          "pinyin": "Nà wǒ bāng nǐ jiǎn duǎn yì diǎn, liáng kuai.",
           "text_translation": "Unda kaltaroq qirqib beray, salqin bo'ladi.",
           "text_translation_ru": "Тогда подстригу покороче, будет прохладнее.",
           "text_translation_en": "Then I'll cut it a bit shorter — it'll feel cooler.",
@@ -165,5 +165,9 @@
         }
       ]
     }
-  ]
+  ],
+  "voices": {
+    "A": "白桦",
+    "B": "茉莉"
+  }
 }
