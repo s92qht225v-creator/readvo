@@ -16,6 +16,8 @@ export interface DialogueInfo {
   level: number;
   tag?: string;
   dateAdded?: string;
+  /** Card thumbnail / hero image URL (Supabase). Absent → branded watermark. */
+  image?: string;
 }
 
 export interface DialoguePage {
@@ -123,6 +125,7 @@ export async function loadDialoguesForBook(bookId: string): Promise<DialogueInfo
           level: data.level,
           tag: data.tag,
           dateAdded: data.dateAdded,
+          image: (data as DialoguePage & { image?: string }).image,
         };
       })
     );

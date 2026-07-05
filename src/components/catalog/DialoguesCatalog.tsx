@@ -193,8 +193,14 @@ export function DialoguesCatalog({ dialogues, dialoguesHsk2, dialoguesHsk3, dial
         {/* Dialogue cards */}
         <div className="home__lessons">
           {filteredDialogues.map((d) => (
-            <Link key={d.id} href={`/chinese/dialogues/hsk${dialogueHskLevel}/${d.slug}`} prefetch={false} className="dialogue-card">
-              <span className="dialogue-card__deco" aria-hidden="true">{d.title.slice(0, 3)}</span>
+            <Link key={d.id} href={`/chinese/dialogues/hsk${dialogueHskLevel}/${d.slug}`} prefetch={false} className={`dialogue-card${d.image ? ' dialogue-card--has-image' : ''}`}>
+              {d.image ? (
+                <span className="dialogue-card__thumb" aria-hidden="true">
+                  <Image src={d.image} alt="" fill sizes="120px" style={{ objectFit: 'cover' }} />
+                </span>
+              ) : (
+                <span className="dialogue-card__deco" aria-hidden="true">{d.title.slice(0, 3)}</span>
+              )}
               <div className="dialogue-card__content">
                 <div className="dialogue-card__text">
                   <h3 className="dialogue-card__title">{d.title}</h3>

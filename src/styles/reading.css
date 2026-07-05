@@ -3493,6 +3493,30 @@ body {
   user-select: none;
 }
 
+.dialogue-card__thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 108px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.dialogue-card__thumb img {
+  object-fit: cover;
+}
+/* soft fade from the card's white into the image's left edge */
+.dialogue-card__thumb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 42%);
+}
+.dialogue-card--has-image .dialogue-card__content {
+  padding-right: 100px;
+}
+
 .dialogue-card__content {
   display: flex;
   align-items: flex-start;
