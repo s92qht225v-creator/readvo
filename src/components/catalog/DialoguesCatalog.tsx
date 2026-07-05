@@ -196,7 +196,7 @@ export function DialoguesCatalog({ dialogues, dialoguesHsk2, dialoguesHsk3, dial
             <Link key={d.id} href={`/chinese/dialogues/hsk${dialogueHskLevel}/${d.slug}`} prefetch={false} className={`dialogue-card${d.image ? ' dialogue-card--has-image' : ''}`}>
               {d.image ? (
                 <span className="dialogue-card__thumb" aria-hidden="true">
-                  <Image src={d.image} alt="" fill sizes="120px" style={{ objectFit: 'cover' }} />
+                  <Image src={d.image} alt="" fill sizes="180px" style={{ objectFit: 'cover' }} />
                 </span>
               ) : (
                 <span className="dialogue-card__deco" aria-hidden="true">{d.title.slice(0, 3)}</span>

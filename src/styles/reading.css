@@ -3498,23 +3498,25 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 108px;
+  width: 132px;
   overflow: hidden;
   pointer-events: none;
 }
 .dialogue-card__thumb img {
   object-fit: cover;
+  object-position: right center;
 }
-/* soft fade from the card's white into the image's left edge */
+/* clean vertical fade: image blends into the card's white on its left edge */
 .dialogue-card__thumb::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 25%);
 }
-.dialogue-card--has-image .dialogue-card__content {
-  padding-right: 100px;
+/* pad the whole card (not just text) so both the copy and the tag pill clear the image */
+.dialogue-card--has-image {
+  padding-right: 148px;
 }
 
 .dialogue-card__content {
