@@ -56,11 +56,11 @@
         },
         {
           "id": "d19-s3",
-          "text_original": "用微信扫吗？",
-          "pinyin": "Yòng Wēixìn sǎo ma?",
-          "text_translation": "WeChat orqali skanerlaymanmi?",
-          "text_translation_ru": "Сканировать через WeChat?",
-          "text_translation_en": "Do I scan it with WeChat?",
+          "text_original": "用微信扫码吗？",
+          "pinyin": "Yòng Wēixìn sǎomǎ ma?",
+          "text_translation": "WeChat orqali kod skanerlaymanmi?",
+          "text_translation_ru": "Сканировать код через WeChat?",
+          "text_translation_en": "Do I scan the code with WeChat?",
           "speaker": "A"
         },
         {
