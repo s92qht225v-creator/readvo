@@ -25,7 +25,6 @@
     "无聊",
     "教练",
     "动作",
-    "增加",
     "累"
   ],
   "sections": [
@@ -118,11 +117,11 @@
         },
         {
           "id": "d13-s10",
-          "text_original": "刚开始都这样，慢慢增加时间就好。",
-          "pinyin": "Gāng kāishǐ dōu zhèyàng, mànman zēngjiā shíjiān jiù hǎo.",
-          "text_translation": "Boshida hamma shunday, asta-sekin vaqtni oshirsang bo'ldi.",
-          "text_translation_ru": "В начале у всех так, постепенно увеличивай время, и всё наладится.",
-          "text_translation_en": "Everyone's like that at first — just increase the time gradually.",
+          "text_original": "刚开始都这样，慢慢跑就会好。",
+          "pinyin": "Gāng kāishǐ dōu zhèyàng, mànman pǎo jiù huì hǎo.",
+          "text_translation": "Boshida hamma shunday, asta-sekin yugursang yaxshi bo'lib ketadi.",
+          "text_translation_ru": "В начале у всех так, беги потихоньку — и станет легче.",
+          "text_translation_en": "Everyone's like that at first — run slowly and it'll get better.",
           "speaker": "B"
         },
         {
