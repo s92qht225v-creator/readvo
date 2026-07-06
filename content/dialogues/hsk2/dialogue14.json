@@ -6,6 +6,7 @@
   "titleTranslation": "Ertaga sening tug'ilgan kuningmi?",
   "titleTranslation_ru": "Завтра твой день рождения?",
   "titleTranslation_en": "Is tomorrow your birthday?",
+  "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk2/is-tomorrow-your-birthday.webp",
   "voices": {
     "A": "白桦",
     "B": "茉莉"
