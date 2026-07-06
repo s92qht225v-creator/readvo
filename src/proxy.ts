@@ -137,6 +137,7 @@ export default function proxy(request: NextRequest) {
     'hsk3/dreams': 'what-is-your-dream',
     'hsk3/pets': 'i-lost-my-wallet',
     'hsk3/transportation': 'lets-cook-ourselves',
+    'hsk3/online-shopping': 'looks-like-a-power-outage',
   };
   const dlgRename = pathname.match(/^\/(uz|ru|en)\/chinese\/dialogues\/(hsk\d)\/([^/]+)\/?$/);
   if (dlgRename) {
