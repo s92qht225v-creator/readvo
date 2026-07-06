@@ -6,6 +6,7 @@
   "titleTranslation": "Seni kinoga taklif qilmoqchiman.",
   "titleTranslation_ru": "Я хочу пригласить тебя в кино.",
   "titleTranslation_en": "I want to invite you to a movie.",
+  "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk2/want-to-see-a-movie.webp",
   "voices": {
     "A": "白桦",
     "B": "茉莉"
