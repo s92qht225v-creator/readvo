@@ -45,20 +45,20 @@
       "sentences": [
         {
           "id": "d29-s1",
-          "text_original": "你平时怎么去上班？",
-          "pinyin": "Nǐ píng shí zěn me qù shàng bān?",
-          "text_translation": "Odatda ishga qanday borasan?",
-          "text_translation_ru": "Как ты обычно добираешься до работы?",
-          "text_translation_en": "How do you usually get to work?",
+          "text_original": "你每天怎么去公司？坐公交吗？",
+          "pinyin": "Nǐ měi tiān zěn me qù gōng sī? Zuò gōng jiāo ma?",
+          "text_translation": "Har kuni kompaniyaga qanday borasan? Avtobusdami?",
+          "text_translation_ru": "Как ты каждый день добираешься до работы? На автобусе?",
+          "text_translation_en": "How do you get to the office every day? By bus?",
           "speaker": "A"
         },
         {
           "id": "d29-s2",
-          "text_original": "我平时骑电动车。",
-          "pinyin": "Wǒ píng shí qí diàn dòng chē.",
-          "text_translation": "Odatda elektromopedda boraman.",
-          "text_translation_ru": "Обычно я езжу на электробайке.",
-          "text_translation_en": "I usually ride an electric bike.",
+          "text_original": "不坐公交，我骑电动车，省钱又省时间。",
+          "pinyin": "Bù zuò gōng jiāo, wǒ qí diàn dòng chē, shěng qián yòu shěng shí jiān.",
+          "text_translation": "Avtobusda bormayman, elektromopedda boraman — pul ham, vaqt ham tejaladi.",
+          "text_translation_ru": "Не на автобусе, я езжу на электробайке — экономит и деньги, и время.",
+          "text_translation_en": "Not the bus — I ride an e-bike; it saves both money and time.",
           "speaker": "B"
         },
         {
