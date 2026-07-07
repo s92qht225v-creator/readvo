@@ -139,8 +139,18 @@ export default function proxy(request: NextRequest) {
     'hsk3/transportation': 'lets-cook-ourselves',
     'hsk3/online-shopping': 'looks-like-a-power-outage',
   };
+  // Dialogues moved to a different HSK level (old `hsk{n}/slug` → new `hsk{m}/slug`).
+  const MOVED_DIALOGUES: Record<string, string> = {
+    'hsk3/what-is-your-dream': 'hsk2/what-is-your-dream',
+  };
   const dlgRename = pathname.match(/^\/(uz|ru|en)\/chinese\/dialogues\/(hsk\d)\/([^/]+)\/?$/);
   if (dlgRename) {
+    const moved = MOVED_DIALOGUES[`${dlgRename[2]}/${dlgRename[3]}`];
+    if (moved) {
+      const dest = request.nextUrl.clone();
+      dest.pathname = `/${dlgRename[1]}/chinese/dialogues/${moved}`;
+      return NextResponse.redirect(dest, 301);
+    }
     const newSlug = RENAMED_DIALOGUE_SLUGS[`${dlgRename[2]}/${dlgRename[3]}`];
     if (newSlug) {
       const dest = request.nextUrl.clone();
