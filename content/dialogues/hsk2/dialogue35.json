@@ -1,5 +1,5 @@
 {
-  "id": "hsk3-dialogue23",
+  "id": "hsk2-dialogue35",
   "slug": "how-do-you-usually-get-a-taxi",
   "title": "你平时怎么打车？",
   "pinyin": "Nǐ píng shí zěn me dǎ chē?",
@@ -12,7 +12,7 @@
   "category_uz": "Taksi ilovalari",
   "category_ru": "Приложения для такси",
   "category_en": "Ride-Hailing Apps",
-  "level": 3,
+  "level": 2,
   "tag": "transport",
   "dateAdded": "2026-06-19",
   "vocab": [
@@ -32,13 +32,13 @@
   ],
   "sections": [
     {
-      "id": "d23-sec1",
+      "id": "d35-sec1",
       "type": "text",
       "heading": "",
       "subheading": "",
       "sentences": [
         {
-          "id": "d23-s1",
+          "id": "d35-s1",
           "text_original": "你平时怎么打车？",
           "pinyin": "Nǐ píng shí zěn me dǎ chē?",
           "text_translation": "Odatda qanday taksi chaqirasan?",
@@ -47,34 +47,16 @@
           "speaker": "A"
         },
         {
-          "id": "d23-s2",
-          "text_original": "我用手机软件。",
-          "pinyin": "Wǒ yòng shǒu jī ruǎn jiàn.",
-          "text_translation": "Telefon ilovasidan foydalanaman.",
-          "text_translation_ru": "Я пользуюсь приложением на телефоне.",
-          "text_translation_en": "I use a phone app.",
+          "id": "d35-s2",
+          "text_original": "我手机上有个软件，叫滴滴出行。",
+          "pinyin": "Wǒ shǒu jī shàng yǒu ge ruǎn jiàn, jiào Dī dī Chū xíng.",
+          "text_translation": "Telefonimda Didi degan ilova bor.",
+          "text_translation_ru": "У меня на телефоне есть приложение, называется DiDi.",
+          "text_translation_en": "I have an app on my phone called DiDi.",
           "speaker": "B"
         },
         {
-          "id": "d23-s3",
-          "text_original": "什么软件？",
-          "pinyin": "Shén me ruǎn jiàn?",
-          "text_translation": "Qanday ilova?",
-          "text_translation_ru": "Какое приложение?",
-          "text_translation_en": "What app?",
-          "speaker": "A"
-        },
-        {
-          "id": "d23-s4",
-          "text_original": "滴滴出行，很方便的。",
-          "pinyin": "Dī dī Chū xíng, hěn fāng biàn de.",
-          "text_translation": "Didi, juda qulay.",
-          "text_translation_ru": "DiDi, очень удобно.",
-          "text_translation_en": "DiDi — it's really convenient.",
-          "speaker": "B"
-        },
-        {
-          "id": "d23-s5",
+          "id": "d35-s3",
           "text_original": "怎么用啊？",
           "pinyin": "Zěn me yòng a?",
           "text_translation": "Qanday ishlatiladi?",
@@ -83,7 +65,7 @@
           "speaker": "A"
         },
         {
-          "id": "d23-s6",
+          "id": "d35-s4",
           "text_original": "输入要去的地址，然后点叫车。",
           "pinyin": "Shū rù yào qù de dì zhǐ, rán hòu diǎn jiào chē.",
           "text_translation": "Bormoqchi bo'lgan manzilni kiritasan, keyin «mashina chaqirish»ni bosasan.",
@@ -92,7 +74,7 @@
           "speaker": "B"
         },
         {
-          "id": "d23-s7",
+          "id": "d35-s5",
           "text_original": "要等很久吗？",
           "pinyin": "Yào děng hěn jiǔ ma?",
           "text_translation": "Uzoq kutish kerakmi?",
@@ -101,7 +83,7 @@
           "speaker": "A"
         },
         {
-          "id": "d23-s8",
+          "id": "d35-s6",
           "text_original": "不用，附近有很多车。",
           "pinyin": "Bú yòng, fù jìn yǒu hěn duō chē.",
           "text_translation": "Yo'q, atrofda ko'p mashina bor.",
@@ -110,7 +92,7 @@
           "speaker": "B"
         },
         {
-          "id": "d23-s9",
+          "id": "d35-s7",
           "text_original": "那价格怎么算？",
           "pinyin": "Nà jià gé zěn me suàn?",
           "text_translation": "Unda narx qanday hisoblanadi?",
@@ -119,7 +101,7 @@
           "speaker": "A"
         },
         {
-          "id": "d23-s10",
+          "id": "d35-s8",
           "text_original": "软件会先告诉你多少钱。",
           "pinyin": "Ruǎn jiàn huì xiān gào su nǐ duō shao qián.",
           "text_translation": "Ilova avval qancha turishini aytadi.",
@@ -128,7 +110,7 @@
           "speaker": "B"
         },
         {
-          "id": "d23-s11",
+          "id": "d35-s9",
           "text_original": "到了再用现金付吗？",
           "pinyin": "Dào le zài yòng xiàn jīn fù ma?",
           "text_translation": "Yetib borgach naqd pul bilan to'lanadimi?",
@@ -137,7 +119,7 @@
           "speaker": "A"
         },
         {
-          "id": "d23-s12",
+          "id": "d35-s10",
           "text_original": "不用，直接在手机上付。",
           "pinyin": "Bú yòng, zhí jiē zài shǒu jī shàng fù.",
           "text_translation": "Yo'q, to'g'ridan-to'g'ri telefonda to'laysan.",
@@ -146,7 +128,7 @@
           "speaker": "B"
         },
         {
-          "id": "d23-s13",
+          "id": "d35-s11",
           "text_original": "真的很方便，我也想试试。",
           "pinyin": "Zhēn de hěn fāng biàn, wǒ yě xiǎng shì shi.",
           "text_translation": "Rostdan juda qulay, men ham sinab ko'rmoqchiman.",
@@ -155,7 +137,7 @@
           "speaker": "A"
         },
         {
-          "id": "d23-s14",
+          "id": "d35-s12",
           "text_original": "你下一个吧，我教你怎么叫。",
           "pinyin": "Nǐ xià yí ge ba, wǒ jiāo nǐ zěn me jiào.",
           "text_translation": "Sen ilovani yuklab ol, men chaqirishni o'rgataman.",
