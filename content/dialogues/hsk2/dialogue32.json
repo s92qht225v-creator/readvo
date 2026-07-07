@@ -23,7 +23,6 @@
     "改变",
     "实现",
     "努力",
-    "意义",
     "咖啡店",
     "加油",
     "后来"
@@ -126,30 +125,12 @@
           "speaker": "B"
         },
         {
-          "id": "d11-s11",
-          "text_original": "你的梦想很有意义。",
-          "pinyin": "Nǐ de mèngxiǎng hěn yǒu yìyì.",
-          "text_translation": "Sening orzuing juda ma'noli.",
-          "text_translation_ru": "Твоя мечта очень значимая.",
-          "text_translation_en": "Your dream is very meaningful.",
-          "speaker": "A"
-        },
-        {
-          "id": "d11-s12",
-          "text_original": "谢谢你。你的梦想呢？",
-          "pinyin": "Xièxie nǐ. Nǐ de mèngxiǎng ne?",
-          "text_translation": "Rahmat. Sening orzuing-chi?",
-          "text_translation_ru": "Спасибо. А твоя мечта?",
-          "text_translation_en": "Thank you. And what's your dream?",
-          "speaker": "B"
-        },
-        {
           "id": "d11-s13",
-          "text_original": "我想开一家咖啡店。",
-          "pinyin": "Wǒ xiǎng kāi yì jiā kāfēi diàn.",
-          "text_translation": "Men qahvaxona ochmoqchiman.",
-          "text_translation_ru": "Я хочу открыть кофейню.",
-          "text_translation_en": "I want to open a coffee shop.",
+          "text_original": "我的梦想是开一家咖啡店。",
+          "pinyin": "Wǒ de mèngxiǎng shì kāi yì jiā kāfēi diàn.",
+          "text_translation": "Mening orzuim — qahvaxona ochish.",
+          "text_translation_ru": "Моя мечта — открыть кофейню.",
+          "text_translation_en": "My dream is to open a coffee shop.",
           "speaker": "A"
         },
         {
