@@ -1,5 +1,5 @@
 {
-  "id": "hsk3-dialogue26",
+  "id": "hsk2-dialogue33",
   "slug": "do-you-want-your-hair-washed",
   "title": "要不要洗头？",
   "pinyin": "Yào bu yào xǐ tóu?",
@@ -12,7 +12,7 @@
   "category_uz": "Soch oldirish",
   "category_ru": "Стрижка",
   "category_en": "Getting a Haircut",
-  "level": 3,
+  "level": 2,
   "tag": "kundalik",
   "dateAdded": "2026-06-19",
   "vocab": [
@@ -143,24 +143,6 @@
           "text_translation": "Yaxshi, fen bilan quritsak bo'ldi.",
           "text_translation_ru": "Хорошо, сейчас высушу феном и всё.",
           "text_translation_en": "Alright, I'll just blow-dry it and we're done.",
-          "speaker": "B"
-        },
-        {
-          "id": "d26-s13",
-          "text_original": "多少钱？",
-          "pinyin": "Duō shao qián?",
-          "text_translation": "Qancha turadi?",
-          "text_translation_ru": "Сколько с меня?",
-          "text_translation_en": "How much is it?",
-          "speaker": "A"
-        },
-        {
-          "id": "d26-s14",
-          "text_original": "四十五块。",
-          "pinyin": "Sì shí wǔ kuài.",
-          "text_translation": "Qirq besh yuan.",
-          "text_translation_ru": "Сорок пять юаней.",
-          "text_translation_en": "Forty-five yuan.",
           "speaker": "B"
         }
       ]

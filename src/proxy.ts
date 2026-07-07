@@ -142,6 +142,7 @@ export default function proxy(request: NextRequest) {
   // Dialogues moved to a different HSK level (old `hsk{n}/slug` → new `hsk{m}/slug`).
   const MOVED_DIALOGUES: Record<string, string> = {
     'hsk3/what-is-your-dream': 'hsk2/what-is-your-dream',
+    'hsk3/do-you-want-your-hair-washed': 'hsk2/do-you-want-your-hair-washed',
   };
   const dlgRename = pathname.match(/^\/(uz|ru|en)\/chinese\/dialogues\/(hsk\d)\/([^/]+)\/?$/);
   if (dlgRename) {
