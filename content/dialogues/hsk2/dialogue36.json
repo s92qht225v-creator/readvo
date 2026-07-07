@@ -1,5 +1,5 @@
 {
-  "id": "hsk3-dialogue22",
+  "id": "hsk2-dialogue36",
   "slug": "do-you-shop-online-often",
   "title": "你经常网购吗？",
   "pinyin": "Nǐ jīng cháng wǎng gòu ma?",
@@ -12,13 +12,12 @@
   "category_uz": "Onlayn xarid",
   "category_ru": "Онлайн-покупки",
   "category_en": "Online Shopping",
-  "level": 3,
+  "level": 2,
   "tag": "xaridlar",
   "dateAdded": "2026-06-19",
   "vocab": [
     "网购",
     "网上",
-    "一般",
     "不一样",
     "送货",
     "退货",
@@ -32,13 +31,13 @@
   ],
   "sections": [
     {
-      "id": "d22-sec1",
+      "id": "d36-sec1",
       "type": "text",
       "heading": "",
       "subheading": "",
       "sentences": [
         {
-          "id": "d22-s1",
+          "id": "d36-s1",
           "text_original": "你经常网购吗？",
           "pinyin": "Nǐ jīng cháng wǎng gòu ma?",
           "text_translation": "Tez-tez onlayn xarid qilasanmi?",
@@ -47,119 +46,101 @@
           "speaker": "A"
         },
         {
-          "id": "d22-s2",
-          "text_original": "经常，我很多东西都在网上买。",
-          "pinyin": "Jīng cháng, wǒ hěn duō dōng xi dōu zài wǎng shàng mǎi.",
-          "text_translation": "Tez-tez, ko'p narsalarni internetdan olaman.",
-          "text_translation_ru": "Часто, я много всего покупаю в интернете.",
-          "text_translation_en": "Often — I buy a lot of things online.",
+          "id": "d36-s2",
+          "text_original": "经常，我很多东西在淘宝和京东上买的。",
+          "pinyin": "Jīng cháng, wǒ hěn duō dōng xi zài Táo bǎo hé Jīng dōng shàng mǎi de.",
+          "text_translation": "Ha, ko'p narsalarni Taobao va JD'dan sotib olaman.",
+          "text_translation_ru": "Часто, многие вещи я покупаю на Taobao и JD.",
+          "text_translation_en": "Often — I buy a lot of things on Taobao and JD.",
           "speaker": "B"
         },
         {
-          "id": "d22-s3",
-          "text_original": "你一般在哪儿买？",
-          "pinyin": "Nǐ yì bān zài nǎr mǎi?",
-          "text_translation": "Odatda qayerdan olasan?",
-          "text_translation_ru": "Где обычно покупаешь?",
-          "text_translation_en": "Where do you usually buy?",
-          "speaker": "A"
-        },
-        {
-          "id": "d22-s4",
-          "text_original": "淘宝和京东都用。",
-          "pinyin": "Táo bǎo hé Jīng dōng dōu yòng.",
-          "text_translation": "Taobao va JD ikkalasidan foydalanaman.",
-          "text_translation_ru": "Пользуюсь и Taobao, и JD.",
-          "text_translation_en": "I use both Taobao and JD.",
-          "speaker": "B"
-        },
-        {
-          "id": "d22-s5",
+          "id": "d36-s3",
           "text_original": "这两个有什么不一样？",
           "pinyin": "Zhè liǎng ge yǒu shén me bù yí yàng?",
-          "text_translation": "Bu ikkovi nimasi bilan farq qiladi?",
-          "text_translation_ru": "Чем эти два отличаются?",
+          "text_translation": "Bu ikkovining farqi nima?",
+          "text_translation_ru": "А чем эти два отличаются?",
           "text_translation_en": "What's the difference between the two?",
           "speaker": "A"
         },
         {
-          "id": "d22-s6",
+          "id": "d36-s4",
           "text_original": "淘宝便宜，京东送货快。",
           "pinyin": "Táo bǎo pián yi, Jīng dōng sòng huò kuài.",
           "text_translation": "Taobao arzon, JD tez yetkazadi.",
-          "text_translation_ru": "Taobao дешевле, JD быстрее доставляет.",
+          "text_translation_ru": "Taobao дешевле, JD доставляет быстрее.",
           "text_translation_en": "Taobao is cheaper, JD delivers faster.",
           "speaker": "B"
         },
         {
-          "id": "d22-s7",
+          "id": "d36-s5",
           "text_original": "东西到了不喜欢怎么办？",
           "pinyin": "Dōng xi dào le bù xǐ huan zěn me bàn?",
-          "text_translation": "Narsa kelib, yoqmasa nima qilasan?",
-          "text_translation_ru": "Что делать, если товар пришёл и не понравился?",
-          "text_translation_en": "What if the item arrives and you don't like it?",
+          "text_translation": "Narsa yetib kelib yoqmasa nima qilasan?",
+          "text_translation_ru": "А если вещь пришла и не понравилась?",
+          "text_translation_en": "What if it arrives and you don't like it?",
           "speaker": "A"
         },
         {
-          "id": "d22-s8",
+          "id": "d36-s6",
           "text_original": "可以退货，很简单。",
           "pinyin": "Kě yǐ tuì huò, hěn jiǎn dān.",
-          "text_translation": "Qaytarish mumkin, juda oson.",
-          "text_translation_ru": "Можно вернуть, очень просто.",
+          "text_translation": "Qaytarsa bo'ladi, juda oson.",
+          "text_translation_ru": "Можно вернуть, это очень просто.",
           "text_translation_en": "You can return it — it's very easy.",
           "speaker": "B"
         },
         {
-          "id": "d22-s9",
+          "id": "d36-s7",
           "text_original": "你最近在网上买了什么？",
           "pinyin": "Nǐ zuì jìn zài wǎng shàng mǎi le shén me?",
           "text_translation": "Yaqinda internetdan nima olding?",
-          "text_translation_ru": "Что ты недавно купил в интернете?",
-          "text_translation_en": "What have you bought online recently?",
+          "text_translation_ru": "Что ты недавно покупал в интернете?",
+          "text_translation_en": "What did you buy online recently?",
           "speaker": "A"
         },
         {
-          "id": "d22-s10",
+          "id": "d36-s8",
           "text_original": "买了一双鞋和一件衣服。",
           "pinyin": "Mǎi le yì shuāng xié hé yí jiàn yī fu.",
-          "text_translation": "Bir juft poyabzal va bitta kiyim oldim.",
-          "text_translation_ru": "Купил пару обуви и одну вещь из одежды.",
+          "text_translation": "Bir juft oyoq kiyim va bitta kiyim oldim.",
+          "text_translation_ru": "Купил пару обуви и одну вещь одежды.",
           "text_translation_en": "I bought a pair of shoes and a piece of clothing.",
           "speaker": "B"
         },
         {
-          "id": "d22-s11",
+          "id": "d36-s9",
           "text_original": "质量怎么样？",
           "pinyin": "Zhì liàng zěn me yàng?",
           "text_translation": "Sifati qanday?",
-          "text_translation_ru": "Как качество?",
+          "text_translation_ru": "А качество как?",
           "text_translation_en": "How's the quality?",
           "speaker": "A"
         },
         {
-          "id": "d22-s12",
+          "id": "d36-s10",
           "text_original": "鞋很好，衣服有点小。",
           "pinyin": "Xié hěn hǎo, yī fu yǒu diǎn xiǎo.",
-          "text_translation": "Poyabzal juda yaxshi, kiyim biroz kichik.",
+          "text_translation": "Oyoq kiyim yaxshi, kiyim biroz kichik.",
           "text_translation_ru": "Обувь отличная, одежда немного маловата.",
-          "text_translation_en": "The shoes are great, the clothing is a bit small.",
+          "text_translation_en": "The shoes are great, the clothes are a bit small.",
           "speaker": "B"
         },
         {
-          "id": "d22-s13",
+          "id": "d36-s11",
           "text_original": "那你退了吗？",
           "pinyin": "Nà nǐ tuì le ma?",
           "text_translation": "Unda qaytardingmi?",
-          "text_translation_ru": "Тогда ты вернул?",
+          "text_translation_ru": "И ты её вернул?",
           "text_translation_en": "So did you return it?",
           "speaker": "A"
         },
         {
-          "id": "d22-s14",
+          "id": "d36-s12",
           "text_original": "退了，第二天就退了。",
           "pinyin": "Tuì le, dì èr tiān jiù tuì le.",
-          "text_translation": "Qaytardim, ertasi kuni qaytardim.",
-          "text_translation_ru": "Вернул, на следующий день вернул.",
+          "text_translation": "Qaytardim, ertasi kuniyoq qaytardim.",
+          "text_translation_ru": "Вернул, на следующий же день вернул.",
           "text_translation_en": "I did — returned it the very next day.",
           "speaker": "B"
         }
