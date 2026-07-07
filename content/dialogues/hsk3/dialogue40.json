@@ -1,20 +1,23 @@
 {
-  "id": "hsk2-dialogue35",
+  "id": "hsk3-dialogue40",
   "slug": "how-do-you-usually-get-a-taxi",
   "title": "你平时怎么打车？",
   "pinyin": "Nǐ píng shí zěn me dǎ chē?",
   "titleTranslation": "Odatda qanday taksi chaqirasan?",
   "titleTranslation_ru": "Как ты обычно вызываешь такси?",
   "titleTranslation_en": "How Do You Usually Get a Taxi?",
-  "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk2/how-do-you-usually-get-a-taxi.webp",
-  "voices": { "A": "白桦", "B": "茉莉" },
+  "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk3/how-do-you-usually-get-a-taxi.webp",
+  "voices": {
+    "A": "白桦",
+    "B": "茉莉"
+  },
   "description_uz": "«Odatda qanday taksi chaqirasan?» — taksi ilovalari haqidagi suhbat. Bu dialog telefon ilovasi (DiDi) orqali taksi chaqirish, manzil kiritish, kutish vaqti, narx hisoblash va telefonda to'lovni muhokama qilishni mashq qiladi. Kundalik, foydali so'zlar bilan — takrorlab o'rganish uchun ideal.",
   "description_ru": "«Как ты обычно вызываешь такси?» — разговор о приложениях для такси. Диалог тренирует, как вызвать такси через приложение (DiDi), ввести адрес, обсудить время ожидания, расчёт цены и оплату в телефоне. Близкая тема и полезная лексика — идеально для повторения.",
   "description_en": "«How do you usually get a taxi?» — a chat about ride-hailing apps. This dialogue practices calling a taxi with a phone app (DiDi), entering an address, wait times, how the price is calculated, and paying in the phone. Relatable topic with useful vocabulary—perfect for repetition.",
   "category_uz": "Taksi ilovalari",
   "category_ru": "Приложения для такси",
   "category_en": "Ride-Hailing Apps",
-  "level": 2,
+  "level": 3,
   "tag": "transport",
   "dateAdded": "2026-06-19",
   "vocab": [
