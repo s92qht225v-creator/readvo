@@ -141,11 +141,19 @@ export default function proxy(request: NextRequest) {
   };
   // Dialogues moved to a different HSK level (old `hsk{n}/slug` → new `hsk{m}/slug`).
   const MOVED_DIALOGUES: Record<string, string> = {
-    'hsk3/what-is-your-dream': 'hsk2/what-is-your-dream',
-    'hsk3/do-you-want-your-hair-washed': 'hsk2/do-you-want-your-hair-washed',
-    'hsk3/what-coffee-do-you-drink': 'hsk2/what-coffee-do-you-drink',
+    // taxi stays in HSK 2
     'hsk3/how-do-you-usually-get-a-taxi': 'hsk2/how-do-you-usually-get-a-taxi',
-    'hsk3/do-you-shop-online-often': 'hsk2/do-you-shop-online-often',
+    // level-corrected HSK 2 -> HSK 3 (natural level 3 by official HSK 3.0 vocab)
+    'hsk2/are-you-hungry': 'hsk3/are-you-hungry',
+    'hsk2/buying-clothes': 'hsk3/buying-clothes',
+    'hsk2/do-you-want-to-exercise-today': 'hsk3/do-you-want-to-exercise-today',
+    'hsk2/is-there-a-bank-nearby': 'hsk3/is-there-a-bank-nearby',
+    'hsk2/what-would-you-like-to-eat': 'hsk3/what-would-you-like-to-eat',
+    'hsk2/how-long-do-you-study-every-day': 'hsk3/how-long-do-you-study-every-day',
+    'hsk2/what-is-your-dream': 'hsk3/what-is-your-dream',
+    'hsk2/do-you-want-your-hair-washed': 'hsk3/do-you-want-your-hair-washed',
+    'hsk2/what-coffee-do-you-drink': 'hsk3/what-coffee-do-you-drink',
+    'hsk2/do-you-shop-online-often': 'hsk3/do-you-shop-online-often',
   };
   const dlgRename = pathname.match(/^\/(uz|ru|en)\/chinese\/dialogues\/(hsk\d)\/([^/]+)\/?$/);
   if (dlgRename) {

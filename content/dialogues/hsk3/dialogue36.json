@@ -1,20 +1,23 @@
 {
-  "id": "hsk2-dialogue32",
+  "id": "hsk3-dialogue36",
   "slug": "what-is-your-dream",
   "title": "你的梦想是什么？",
   "pinyin": "Nǐ de mèngxiǎng shì shénme?",
   "titleTranslation": "Orzuing nima?",
   "titleTranslation_ru": "Какая у тебя мечта?",
   "titleTranslation_en": "What's Your Dream?",
-  "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk2/what-is-your-dream.webp",
-  "voices": { "A": "白桦", "B": "茉莉" },
+  "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk3/what-is-your-dream.webp",
+  "voices": {
+    "A": "白桦",
+    "B": "茉莉"
+  },
   "description_uz": "«Nega o'qituvchi bo'lmoqchisan?» — Ikki do'st orzulari haqida suhbatlashadi: o'qituvchi va shifokor bo'lish, ota-onaning qo'llab-quvvatlashi, orzuni ro'yobga chiqarish va qahvaxona ochish. Bu dialog niyatlarni izohlash, sabab keltirish va bir-birini rag'batlantirishni mashq qiladi. Real maqsadlar haqida foydali so'zlar bilan to'la. Soya o'qish va rol o'ynash uchun ajoyib.",
   "description_ru": "«Почему ты хочешь стать учителем?» — Двое друзей говорят о мечтах: стать учителем и врачом, поддержка родителей, осуществление мечты и открытие кофейни. Диалог тренирует объяснение намерений, приведение причин и взаимную поддержку. Полон полезной лексики о реальных целях. Отлично подходит для затенения и ролевой игры.",
   "description_en": "«Why do you want to be a teacher?» — Two friends talk about their dreams: becoming a teacher and a doctor, parental support, making a dream come true, and opening a coffee shop. The dialogue practices explaining intentions, giving reasons, and encouraging each other. Full of useful vocabulary about real goals. Great for shadowing and role-play.",
   "category_uz": "Orzular va rejalar",
   "category_ru": "Мечты и планы",
   "category_en": "Dreams and plans",
-  "level": 2,
+  "level": 3,
   "tag": "reja",
   "dateAdded": "2026-06-19",
   "vocab": [
