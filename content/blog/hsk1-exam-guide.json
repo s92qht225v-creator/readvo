@@ -1,58 +1,113 @@
 {
   "slug": "hsk1-exam-guide",
-  "title": "HSK 1 imtihon qo'llanmasi (2026)",
-  "title_ru": "Руководство по экзамену HSK 1 (2026)",
-  "title_en": "HSK 1 Exam Guide (2026)",
-  "description": "HSK 1 imtihon tuzilishi, savol turlari, lug'at talablari va tayyorgarlik bo'yicha to'liq qo'llanma.",
-  "description_ru": "Полное руководство по структуре экзамена HSK 1: типы вопросов, требования к словарному запасу и подготовка.",
-  "description_en": "Complete guide to the HSK 1 exam: structure, question types, vocabulary requirements and how to prepare.",
-  "date": "2026-03-17",
+  "title": "HSK 1 imtihoni: to'liq qo'llanma (2026)",
+  "title_ru": "Экзамен HSK 1: полное руководство (2026)",
+  "title_en": "HSK 1 Exam: A Complete Beginner's Guide (2026)",
+  "description": "HSK 1 imtihoni nima: tuzilishi (tinglash va o'qish, 40 savol), o'tish balli 120/200, 150 ta so'z va tayyorgarlik. Iyeroglif yozish shart emas.",
+  "description_ru": "Что такое экзамен HSK 1: структура (аудирование и чтение, 40 вопросов), проходной балл 120 из 200, 150 слов и как подготовиться. Иероглифы писать не нужно.",
+  "description_en": "What is the HSK 1 exam? Structure (listening + reading, 40 questions), passing score 120/200, the 150 words, and how to prepare. No character writing required.",
+  "date": "2026-07-07",
   "heroImage": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/Blog/Chinese/hsk1-guide-uzbek.jpg",
   "heroImage_ru": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/Blog/Chinese/hsk1-guide-russian.jpg",
   "heroImage_en": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/Blog/Chinese/hsk1-guide-english.jpg",
-  "intro": "Agar siz xitoy tilini o'rganishni boshlayotgan bo'lsangiz, **HSK 1** haqida eshitgan bo'lsangiz kerak.\nBu butun dunyoda qo'llaniladigan rasmiy xitoy tili bilish darajasi imtihonining birinchi bosqichi.\n\nBu qo'llanmada siz o'rganasiz:\n\n* HSK 1 nima\n* Imtihon tuzilishi\n* Savol turlari\n* Lug'at talablari\n* Qanday tayyorlanish kerak",
-  "intro_ru": "Если вы начинаете изучать китайский язык, вы наверняка слышали про **HSK 1**.\nЭто первый уровень официального экзамена на знание китайского языка, который используется во всём мире.\n\nВ этом руководстве вы узнаете:\n\n* Что такое HSK 1\n* Структуру экзамена\n* Типы вопросов\n* Требования к словарному запасу\n* Как подготовиться",
-  "intro_en": "If you are starting to learn Chinese, you have probably heard about **HSK 1**.\nIt is the first level of the official Chinese proficiency test used worldwide.\n\nIn this guide you will learn:\n\n* What HSK 1 is\n* The exam structure\n* Question types\n* Vocabulary requirements\n* How to prepare",
   "sections": [
     {
-      "heading": "HSK nima?",
-      "heading_ru": "Что такое HSK?",
-      "heading_en": "What is HSK?",
-      "body": "**HSK (汉语水平考试 / Hanyu Shuiping Kaoshi)** — xitoy tilini ona tili bo'lmagan insonlar uchun rasmiy bilim darajasi imtihoni.\n\nHSK 1 — **boshlang'ich daraja**. U quyidagilarni tekshiradi:\n\n* Oddiy xitoycha so'zlarni tushunish\n* Sodda ierogliflarni tanish\n* Qisqa kundalik gaplarni tushunish",
-      "body_ru": "**HSK (汉语水平考试 / Hanyu Shuiping Kaoshi)** — официальный экзамен на уровень владения китайским языком для неносителей.\n\nHSK 1 — это **начальный уровень**. Он проверяет, можете ли вы:\n\n* Понимать базовые китайские слова\n* Распознавать простые иероглифы\n* Понимать короткие повседневные предложения",
-      "body_en": "**HSK (汉语水平考试 / Hanyu Shuiping Kaoshi)** is the official Chinese language proficiency test for non-native speakers.\n\nHSK 1 is the **beginner level**. It checks if you can:\n\n* Understand basic Chinese words\n* Recognize simple characters\n* Understand short everyday sentences"
+      "heading": "",
+      "heading_ru": "",
+      "heading_en": "",
+      "body": "Siz xitoy tilini o'rganayapsiz va doim HSK degan imtihon haqida eshityapsiz. U juda rasmiy va hatto biroz qo'rqinchli tuyulishi mumkin. Balki siz ham: «Uni topshirishga arziydimi?» deb o'ylayotgandirsiz.\n\nKeling, buni birgalikda ko'rib chiqamiz. Ushbu sodda va tushunarli qo'llanma sizga HSK 1 nima ekanini, unda nimalar bo'lishini va unga qanday tayyorlanishni tushuntirib beradi.",
+      "body_ru": "Вы изучаете китайский язык и постоянно слышите о каком-то экзамене под названием HSK. Звучит официально и, возможно, немного пугающе. Наверняка вы задаётесь вопросом: стоит ли вообще его сдавать?\n\nДавайте разберёмся. Это простое руководство без сложных терминов поможет вам понять, что представляет собой HSK 1 и как успешно к нему подготовиться.",
+      "body_en": "So, you're learning Chinese and keep hearing about this thing called the “HSK.” It sounds official, maybe a bit intimidating, and you're probably wondering if you should take the plunge. Let's break it down. Think of this as your friendly, no-jargon guide to not just surviving the HSK 1, but actually feeling good about it."
     },
     {
-      "heading": "HSK 1 imtihon umumiy ko'rinishi",
-      "heading_ru": "Обзор экзамена HSK 1",
-      "heading_en": "HSK 1 Exam Overview",
-      "body": "| Kategoriya | Tafsilotlar |\n|---|---|\n| Daraja | Boshlang'ich |\n| Lug'at | ~150 ta so'z |\n| Bo'limlar | Tinglash, O'qish |\n| Jami savollar | 40 |\n| Jami ball | 200 |\n| O'tish bali | 120 |\n| Davomiylik | ~35–40 daqiqa |",
-      "body_ru": "| Категория | Детали |\n|---|---|\n| Уровень | Начальный |\n| Словарный запас | ~150 слов |\n| Разделы | Аудирование, Чтение |\n| Всего вопросов | 40 |\n| Максимальный балл | 200 |\n| Проходной балл | 120 |\n| Длительность | ~35–40 минут |",
-      "body_en": "| Category | Details |\n|---|---|\n| Level | Beginner |\n| Vocabulary | ~150 words |\n| Sections | Listening, Reading |\n| Total Questions | 40 |\n| Total Score | 200 |\n| Passing Score | 120 |\n| Duration | ~35–40 minutes |"
+      "heading": "HSK 1 nima?",
+      "heading_ru": "Что такое HSK 1?",
+      "heading_en": "So, what exactly is this HSK 1?",
+      "body": "HSK — Hànyǔ Shuǐpíng Kǎoshì (汉语水平考试) so'zlarining qisqartmasi bo'lib, xitoy tilini bilish darajasini baholovchi rasmiy xalqaro imtihondir.\n\nHSK 1 — imtihonning birinchi darajasi bo'lib, u endigina xitoy tilini o'rganishni boshlaganlar uchun mo'ljallangan. Odatda bu darajadagi o'quvchilar bir necha oy davomida til o'rganib, kundalik hayotdagi eng oddiy suhbatlarni tushuna va olib bora oladilar.\n\nBu imtihon sizning xitoy tilini o'rganishni boshlaganingizni va oddiy muloqot qila olishingizni tasdiqlaydi.",
+      "body_ru": "HSK — это сокращение от Hànyǔ Shuǐpíng Kǎoshì (汉语水平考试) — официального международного экзамена на знание китайского языка.\n\nHSK 1 — это первый уровень экзамена, предназначенный для начинающих. Он рассчитан на тех, кто изучает китайский язык всего несколько месяцев и уже может поддержать самые простые разговоры.\n\nПо сути, этот экзамен подтверждает, что вы сделали первые шаги в изучении китайского языка и уже умеете общаться на базовом уровне.",
+      "body_en": "HSK stands for *Hànyǔ Shuǐpíng Kǎoshì* (汉语水平考试). In plain English, it's the official, globally recognized test for Mandarin proficiency.\n\nLevel 1 is where everyone starts. It's designed for absolute beginners — the kind of people who have been learning for a few months and can handle the most basic conversations. It's basically the exam that says, “Hey, I've started my Chinese journey, and I can actually say a few things!”"
     },
     {
-      "heading": "HSK 1 imtihon tuzilishi",
-      "heading_ru": "Структура экзамена HSK 1",
-      "heading_en": "HSK 1 Exam Structure",
-      "body": "| Bo'lim | Savollar | Vaqt |\n|---|---|---|\n| Tinglash | 20 | ~15 daqiqa |\n| O'qish | 20 | ~17 daqiqa |\n| Jami | 40 | ~35 daqiqa |\n\nHSK 1 da **yozma bo'lim yo'q**.",
-      "body_ru": "| Раздел | Вопросов | Время |\n|---|---|---|\n| Аудирование | 20 | ~15 минут |\n| Чтение | 20 | ~17 минут |\n| Итого | 40 | ~35 минут |\n\nВ HSK 1 **нет письменной части**.",
-      "body_en": "| Section | Questions | Time |\n|---|---|---|\n| Listening | 20 | ~15 minutes |\n| Reading | 20 | ~17 minutes |\n| Total | 40 | ~35 minutes |\n\nThere is **no writing section** in HSK 1."
+      "heading": "Imtihon haqida qisqacha: iyeroglif yozish shart emas!",
+      "heading_ru": "Экзамен в двух словах: писать иероглифы не нужно!",
+      "heading_en": "The Exam in a Nutshell: No Writing Required!",
+      "body": "Mana siz uchun birinchi yaxshi yangilik: HSK 1 da iyeroglif yozishingiz shart emas!\n\nBu imtihonda faqat quyidagi ikki ko'nikma tekshiriladi:\n\n* Tinglab tushunish\n* O'qish\n\nInsho yozish ham, murakkab iyerogliflarni yozish ham talab qilinmaydi.\n\n| Ko'nikma | Savollar soni | Vaqt |\n| --- | --- | --- |\n| Tinglab tushunish | 20 ta | ~15 daqiqa |\n| O'qish | 20 ta | ~17 daqiqa |\n| Jami | 40 ta | ~40 daqiqa (shaxsiy ma'lumotlar bilan) |\n\nMaksimal ball — 200, o'tish uchun kamida 120 ball kerak. HSK 1 qog'oz shaklida ham, kompyuter orqali ham topshirilishi mumkin.\n\nYana bir yaxshi tomoni shundaki, barcha savollarda iyerogliflar ustida Pinyin yozilgan bo'ladi. Shuning uchun barcha iyerogliflarni yod bilishingiz shart emas — ularning talaffuzi va ma'nosini bilishingiz kifoya.",
+      "body_ru": "Вот первая хорошая новость: писать китайские иероглифы не придётся!\n\nHSK 1 проверяет только два навыка:\n\n* Аудирование\n* Чтение\n\nНикаких сочинений и сложных заданий на написание иероглифов.\n\n| Навык | Вопросов | Время |\n| --- | --- | --- |\n| Аудирование | 20 | ~15 минут |\n| Чтение | 20 | ~17 минут |\n| Всего | 40 | ~40 минут (с личными данными) |\n\nМаксимальный балл — 200, для успешной сдачи необходимо набрать 120 баллов. Экзамен проводится как в бумажном, так и в компьютерном формате.\n\nИ ещё одна хорошая новость: во всех заданиях над иероглифами есть пиньинь, поэтому вам не обязательно знать все иероглифы наизусть — достаточно понимать их произношение и значение.",
+      "body_en": "Here's the first bit of good news. You don't need to write a single Chinese character! Phew, right? The HSK 1 is all about **listening** and **reading**. No essay questions, no stroke-order nightmares.\n\n| Skill | Questions | Time |\n| --- | --- | --- |\n| Listening | 20 questions | ~15 minutes |\n| Reading | 20 questions | ~17 minutes |\n| Total | 40 questions | ~40 minutes (incl. personal info) |\n\nYou get a score out of 200, and you need 120 to pass. The test is offered in both paper and digital formats. The best part? All the questions have **Pinyin** above the characters, so you don't need to know the characters by heart — just the sounds and meanings."
     },
     {
-      "heading": "Tinglash bo'limi",
-      "heading_ru": "Раздел аудирования",
-      "heading_en": "Listening Section",
-      "body": "Tinglash bo'limida siz qisqa gaplar yoki dialoglarni eshitasiz va to'g'ri javobni tanlaysiz.\n\n| Qism | Vazifa | Savollar |\n|---|---|---|\n| 1-qism | Rasmlar bilan to'g'ri/noto'g'ri | 5 |\n| 2-qism | To'g'ri rasmni tanlang | 5 |\n| 3-qism | Qisqa dialoglar | 5 |\n| 4-qism | Ko'p tanlov | 5 |\n\nTinglash uchun misol gap:\n\n> 他喝水\n> *U suv ichadi.*",
-      "body_ru": "В разделе аудирования вы слушаете короткие предложения или диалоги и выбираете правильный ответ.\n\n| Часть | Задание | Вопросов |\n|---|---|---|\n| Часть 1 | Верно/неверно с картинками | 5 |\n| Часть 2 | Выберите правильную картинку | 5 |\n| Часть 3 | Короткие диалоги | 5 |\n| Часть 4 | Множественный выбор | 5 |\n\nПример предложения для аудирования:\n\n> 他喝水\n> *Он пьёт воду.*",
-      "body_en": "In the listening section you hear short sentences or dialogues and choose the correct answer.\n\n| Part | Task | Questions |\n|---|---|---|\n| Part 1 | True / False with pictures | 5 |\n| Part 2 | Choose correct picture | 5 |\n| Part 3 | Short dialogues | 5 |\n| Part 4 | Multiple choice | 5 |\n\nExample listening sentence:\n\n> 他喝水\n> *He drinks water.*"
+      "heading": "Imtihonda nimalar bo'ladi?",
+      "heading_ru": "Что входит в экзамен? Что нужно знать?",
+      "heading_en": "What's on the Test? What Do I Need to Know?",
+      "body": "HSK 1 dasturi juda sodda va aniq. Muvaffaqiyatli topshirish uchun asosan ikkita narsani bilishingiz kerak.\n\n**1. Bilishingiz kerak bo'lgan 150 ta so'z**\n\nHSK 1 lug'ati atigi 150 ta so'zdan iborat. Bular kundalik hayotda eng ko'p ishlatiladigan so'zlardir, masalan:\n\n* nǐ (你) — sen\n* chī (吃) — ovqatlanmoq\n* shuǐ (水) — suv\n* shénme (什么) — nima\n\nAynan shu so'zlar sizning xitoy tilidagi ilk lug'at boyligingizni tashkil qiladi.\n\n**2. Asosiy grammatika**\n\nHSK 1 grammatikasi juda sodda bo'lib, keyingi bosqichlar uchun mustahkam poydevor yaratadi. Siz quyidagi tuzilmalarni tushunishingiz kerak:\n\n* Ega + Kesim + To'ldiruvchi: Wǒ ài nǐ. (Men seni sevaman.)\n* 不 (bù) bilan inkor: Wǒ bú shì lǎoshī. (Men o'qituvchi emasman.)\n* 吗 (ma) yordamida savol: Nǐ hǎo ma? (Qalaysan?)\n* 的 (de) yordamida egalik: Wǒ de míngzì. (Mening ismim.)",
+      "body_ru": "Программа HSK 1 очень понятная. Чтобы успешно сдать экзамен, нужно освоить две основные вещи.\n\n**1. 150 самых важных слов**\n\nВесь словарный запас HSK 1 состоит всего из 150 слов. Именно они используются в повседневном общении:\n\n* nǐ (你) — ты\n* chī (吃) — есть\n* shuǐ (水) — вода\n* shénme (什么) — что\n\nЭти слова станут основой вашего китайского языка.\n\n**2. Основные грамматические конструкции**\n\nГрамматика на этом уровне очень простая и служит фундаментом для дальнейшего обучения. Вам нужно понимать такие конструкции, как:\n\n* Подлежащее + сказуемое + дополнение: Wǒ ài nǐ. (Я люблю тебя.)\n* Отрицание с 不 (bù): Wǒ bú shì lǎoshī. (Я не учитель.)\n* Вопрос с 吗 (ma): Nǐ hǎo ma? (Как дела?)\n* Притяжательная частица 的 (de): Wǒ de míngzì. (Моё имя.)",
+      "body_en": "The HSK 1 has a very clear curriculum. If you know these two things, you're golden.\n\n**1. The 150 Must-Know Words**\n\nYour entire world for this exam consists of **150 vocabulary words**. That's it! These are the building blocks of everyday Chinese:\n\n* nǐ (你) — you\n* chī (吃) — to eat\n* shuǐ (水) — water\n* shénme (什么) — what\n\nThese words are the foundation of your Chinese.\n\n**2. Basic Grammar Patterns**\n\nThe grammar is super simple, forming the foundation of everything you'll learn later. You'll need to recognize patterns like:\n\n* Subject-Verb-Object: Wǒ ài nǐ. (I love you.)\n* Negation with 不 (bù): Wǒ bú shì lǎoshī. (I am not a teacher.)\n* Asking questions with 吗 (ma): Nǐ hǎo ma? (How are you?)\n* Showing possession with 的 (de): Wǒ de míngzì. (my name.)"
     },
     {
-      "heading": "O'qish bo'limi",
-      "heading_ru": "Раздел чтения",
-      "heading_en": "Reading Section",
-      "body": "O'qish bo'limi oddiy ierogliflar va gaplarni tushunish qobiliyatingizni tekshiradi.\n\n| Qism | Vazifa | Savollar |\n|---|---|---|\n| 1-qism | Rasmni so'z bilan moslashtiring | 5 |\n| 2-qism | Savol va javobni moslashtiring | 5 |\n| 3-qism | Gaplarni moslashtiring | 5 |\n| 4-qism | Bo'sh joyni to'ldiring | 5 |",
-      "body_ru": "Раздел чтения проверяет вашу способность распознавать простые иероглифы и предложения.\n\n| Часть | Задание | Вопросов |\n|---|---|---|\n| Часть 1 | Соотнесите картинку со словом | 5 |\n| Часть 2 | Соотнесите вопрос и ответ | 5 |\n| Часть 3 | Соотнесите предложения | 5 |\n| Часть 4 | Заполните пропуски | 5 |",
-      "body_en": "The reading section tests your ability to recognize simple characters and sentences.\n\n| Part | Task | Questions |\n|---|---|---|\n| Part 1 | Match picture with word | 5 |\n| Part 2 | Match question and answer | 5 |\n| Part 3 | Sentence matching | 5 |\n| Part 4 | Fill in the blank | 5 |"
+      "heading": "Imtihon qanday tuzilgan?",
+      "heading_ru": "Заглянем внутрь экзамена",
+      "heading_en": "Let's Peek Inside the Exam: Listening & Reading",
+      "body": "Quyida tinglab tushunish va o'qish bo'limlari qanday tuzilganini ko'rishingiz mumkin.\n\n**Tinglab tushunish (4 qism, har biri 5 ta savoldan)**\n\n1. Siz qisqa iborani eshitasiz va rasmga qarab u mos keladimi yoki yo'qligini aniqlaysiz.\n2. Siz gapni eshitasiz va uchta rasmdan to'g'risini tanlaysiz.\n3. Siz qisqa dialogni tinglaysiz va unga mos rasmni tanlaysiz.\n4. Siz gapni va undan keyingi savolni eshitasiz hamda uchta javob variantidan to'g'risini tanlaysiz.\n\n**O'qish (4 qism, har biri 5 ta savoldan)**\n\n1. Sizga rasm va so'z beriladi. Ular bir-biriga mos kelishini aniqlaysiz.\n2. Gapni o'qib, unga mos rasmni tanlaysiz.\n3. Beshta savolni mos javoblari bilan bog'laysiz.\n4. Gapdagi bo'sh joyni berilgan variantlardan mos so'z bilan to'ldirasiz.",
+      "body_ru": "Вот как устроены разделы аудирования и чтения.\n\n**Аудирование (4 части по 5 вопросов)**\n\n1. Вы слышите короткую фразу и видите картинку. Нужно определить, соответствует ли фраза изображению.\n2. Вы слышите предложение и выбираете одну из трёх картинок.\n3. Вы слушаете короткий диалог и выбираете подходящую картинку.\n4. Вы слышите предложение, затем вопрос к нему и выбираете правильный ответ из трёх вариантов.\n\n**Чтение (4 части по 5 вопросов)**\n\n1. Перед вами картинка и слово. Нужно определить, подходят ли они друг другу.\n2. Вы читаете предложение и выбираете соответствующую картинку.\n3. Нужно сопоставить пять вопросов с правильными ответами.\n4. В предложении пропущено слово. Необходимо выбрать подходящий вариант.",
+      "body_en": "Here's a simple breakdown of what each section looks like.\n\n**Listening (4 Parts, 5 questions each)**\n\n1. You hear a short phrase and see a picture. You decide if the phrase matches the picture.\n2. You hear a sentence and must choose the correct picture out of three options.\n3. You hear a short dialogue and must match it to the correct picture.\n4. You hear a short sentence, then a question about it. You choose the correct answer from three options.\n\n**Reading (4 Parts, 5 questions each)**\n\n1. You see a picture and a word. You decide if they match.\n2. You read a sentence and choose the picture it describes.\n3. You match 5 questions to their correct answers.\n4. You see a sentence with a missing word. You fill in the blank from a few options."
+    },
+    {
+      "heading": "Tayyorgarlik rejasi",
+      "heading_ru": "Ваш план подготовки",
+      "heading_en": "Your Game Plan for Success",
+      "body": "HSK 1 ni muvaffaqiyatli topshirish mumkin. Buning uchun quyidagi tavsiyalarga amal qiling.\n\n**1. 150 ta so'zni puxta o'rganing**\n\nSo'zlarni shunchaki o'qib chiqish yetarli emas. Kartochkalar, mobil ilovalar yoki boshqa usullar yordamida ularni muntazam takrorlab boring. Yodlanishi kerak bo'lgan so'zlar soni atigi 150 ta, shuning uchun buni bemalol uddalashingiz mumkin.\n\n**2. Tinglab tushunishni mashq qiling**\n\nHSK 1 audio yozuvlari aniq va sekin talaffuz qilinadi. Darslikdagi yoki internetdagi audio materiallarni tinglab, tanish so'zlarni ajratib olishga odatlaning.\n\n**3. Sinov imtihonini ishlang**\n\nBu tayyorgarlikning eng samarali usullaridan biridir. Sinov imtihoni sizga savollar formati, vaqt taqsimoti va haqiqiy imtihon muhiti bilan tanishishga yordam beradi.",
+      "body_ru": "Сдать HSK 1 вполне реально. Вот что поможет добиться успеха.\n\n**1. Выучите весь список слов**\n\nНе просто перечитывайте слова. Используйте карточки, приложения для повторения и регулярно проверяйте себя. Всего слов 150, поэтому вы вполне сможете выучить их все.\n\n**2. Тренируйте аудирование**\n\nЗаписи для HSK 1 произносятся чётко и довольно медленно. Слушайте аудио из учебников или онлайн-ресурсов и учитесь распознавать знакомые слова на слух.\n\n**3. Пройдите пробный экзамен**\n\nЭто один из самых эффективных способов подготовки. Пробный тест поможет привыкнуть к формату заданий, научиться распределять время и почувствовать себя гораздо увереннее перед настоящим экзаменом.",
+      "body_en": "The HSK 1 is very achievable. Here's how to make it happen.\n\n**1. Conquer the Vocab List**\n\nDon't just look at the list; interact with it. Make flashcards, use an app, and test yourself regularly. There are only 150 words, so you can definitely do this!\n\n**2. Practice Your Listening**\n\nThe audio for HSK 1 is spoken clearly and a bit slowly. Get used to it by listening to the audio files that come with your textbook or from online sources. Train your ear to pick out the key words.\n\n**3. Take a Mock Test**\n\nThis is a game-changer. A practice test helps you understand the timing, the format, and the style of questions. It also makes you feel much more confident when the real day comes."
+    },
+    {
+      "heading": "HSK 1 ni topshirishga arziydimi?",
+      "heading_ru": "Главный вопрос: стоит ли сдавать HSK 1?",
+      "heading_en": "The Big Question: Should You Take It?",
+      "body": "HSK 1 siz uchun ayni muddao, agar:\n\n* siz xitoy tilini endigina o'rganishni boshlagan bo'lsangiz va oldingizga aniq maqsad qo'ymoqchi bo'lsangiz;\n* kelajakda Xitoyda o'qish yoki ishlashni rejalashtirayotgan bo'lsangiz;\n* xitoy tilidagi ilk yutug'ingizni tasdiqlovchi rasmiy sertifikatga ega bo'lishni istasangiz.\n\nAgar hozircha imtihon topshirishni rejalashtirmagan bo'lsangiz ham, HSK 1 dasturidagi lug'at va grammatika xitoy tilini tizimli ravishda o'rganish uchun ajoyib asos bo'lib xizmat qiladi.\n\nShunday ekan, o'zingizni sinab ko'ring. Balki HSK 1 xitoy tilini mukammal o'rganish yo'lidagi ilk katta qadamingiz bo'lar.",
+      "body_ru": "HSK 1 отлично подойдёт вам, если:\n\n* вы только начинаете изучать китайский язык и хотите поставить перед собой конкретную цель;\n* вы планируете в будущем учиться или работать в Китае;\n* вы хотите получить официальный сертификат, подтверждающий ваши первые успехи в изучении китайского языка.\n\nДаже если вы пока не собираетесь сдавать экзамен, программа HSK 1 с её словарным запасом и грамматикой станет отличной основой для систематического изучения китайского языка.\n\nТак что попробуйте. Возможно, HSK 1 станет вашим первым большим шагом на пути к свободному владению китайским языком.",
+      "body_en": "HSK 1 is perfect for you if:\n\n* You're a total beginner who wants a clear goal.\n* You plan to study or work in China one day (this is the first step on that path).\n* You just want a formal certificate to prove your first achievement in Chinese!\n\nEven if you don't take the exam, using the HSK 1 framework (vocabulary and grammar) is an excellent, structured way to kickstart your Chinese learning.\n\nSo go on, give it a shot. You've got this!"
+    }
+  ],
+  "faq": [
+    {
+      "q": "HSK 1 dan o'tish balli qancha?",
+      "q_ru": "Какой проходной балл на HSK 1?",
+      "q_en": "What is the passing score for HSK 1?",
+      "a": "Imtihon 200 balldan baholanadi, o'tish uchun 120 ball kerak. Ballar tinglash va o'qish o'rtasida teng bo'linadi.",
+      "a_ru": "Экзамен оценивается из 200 баллов, для сдачи нужно набрать 120. Баллы делятся поровну между аудированием и чтением.",
+      "a_en": "The exam is scored out of 200, and you need 120 to pass. The points are split evenly between listening and reading."
+    },
+    {
+      "q": "HSK 1 da iyeroglif yozish kerakmi?",
+      "q_ru": "Нужно ли писать иероглифы на HSK 1?",
+      "q_en": "Do I need to write characters for HSK 1?",
+      "a": "Yo'q. HSK 1 faqat tinglash va o'qishni tekshiradi — yozish yo'q. Bundan tashqari, har bir iyeroglif ustida pinyin yozilgan bo'ladi.",
+      "a_ru": "Нет. HSK 1 проверяет только аудирование и чтение, писать иероглифы не нужно. Более того, над всеми иероглифами есть пиньинь.",
+      "a_en": "No. HSK 1 only tests listening and reading — there's no writing. And every character has pinyin printed above it."
+    },
+    {
+      "q": "HSK 1 uchun nechta so'z kerak?",
+      "q_ru": "Сколько слов нужно знать для HSK 1?",
+      "q_en": "How many words do you need for HSK 1?",
+      "a": "Bor-yo'g'i 150 ta so'z. Bu kundalik muloqotning asosiy lug'ati — hammasini o'rganish mumkin.",
+      "a_ru": "Всего 150 слов. Это базовая лексика повседневного общения — её вполне реально выучить.",
+      "a_en": "Just 150 words. It's everyday basic vocabulary, and it's very achievable to learn them all."
+    },
+    {
+      "q": "HSK 1 imtihoni qancha davom etadi?",
+      "q_ru": "Сколько длится экзамен HSK 1?",
+      "q_en": "How long is the HSK 1 exam?",
+      "a": "Taxminan 40 daqiqa: 40 ta savol (20 tinglash, 20 o'qish) va shaxsiy ma'lumotlarni to'ldirish vaqti.",
+      "a_ru": "Около 40 минут: 40 вопросов (20 на аудирование, 20 на чтение) плюс время на заполнение личных данных.",
+      "a_en": "About 40 minutes: 40 questions (20 listening, 20 reading) plus time to fill in your personal details."
+    },
+    {
+      "q": "HSK 1 ga qanday tayyorlanaman?",
+      "q_ru": "Как подготовиться к HSK 1?",
+      "q_en": "How do I prepare for HSK 1?",
+      "a": "150 ta so'zni kartochkalar bilan o'rganing, aniq va sekin nutqda tinglashni mashq qiling va sinov testini ishlang. Blimda HSK 1 flesh-kartalari va ovozli dialoglar mavjud.",
+      "a_ru": "Выучите 150 слов по карточкам, тренируйте аудирование на чёткой медленной речи и пройдите пробный тест. В Blim есть флеш-карты HSK 1 и озвученные диалоги для практики.",
+      "a_en": "Learn the 150 words with flashcards, train your ear on clear slow audio, and take a mock test. Blim has HSK 1 flashcards and audio dialogues to practice with."
     }
   ]
 }
