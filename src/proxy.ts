@@ -143,6 +143,7 @@ export default function proxy(request: NextRequest) {
   const MOVED_DIALOGUES: Record<string, string> = {
     'hsk3/what-is-your-dream': 'hsk2/what-is-your-dream',
     'hsk3/do-you-want-your-hair-washed': 'hsk2/do-you-want-your-hair-washed',
+    'hsk3/what-coffee-do-you-drink': 'hsk2/what-coffee-do-you-drink',
   };
   const dlgRename = pathname.match(/^\/(uz|ru|en)\/chinese\/dialogues\/(hsk\d)\/([^/]+)\/?$/);
   if (dlgRename) {

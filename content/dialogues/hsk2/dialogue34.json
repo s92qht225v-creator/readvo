@@ -1,5 +1,5 @@
 {
-  "id": "hsk3-dialogue24",
+  "id": "hsk2-dialogue34",
   "slug": "what-coffee-do-you-drink",
   "title": "你喝什么咖啡？",
   "pinyin": "Nǐ hē shén me kā fēi?",
@@ -12,7 +12,7 @@
   "category_uz": "Qahva madaniyati",
   "category_ru": "Кофейная культура",
   "category_en": "Coffee Culture",
-  "level": 3,
+  "level": 2,
   "tag": "ovqat",
   "dateAdded": "2026-06-19",
   "vocab": [
@@ -143,24 +143,6 @@
           "text_translation": "Amerikano o'n besh yuan, latte yigirma yuan.",
           "text_translation_ru": "Американо пятнадцать, латте двадцать.",
           "text_translation_en": "Americano is 15 yuan, latte is 20.",
-          "speaker": "B"
-        },
-        {
-          "id": "d24-s13",
-          "text_original": "现在喝咖啡的人越来越多了。",
-          "pinyin": "Xiàn zài hē kā fēi de rén yuè lái yuè duō le.",
-          "text_translation": "Hozir qahva ichadigan odamlar tobora ko'payib boryapti.",
-          "text_translation_ru": "Сейчас всё больше людей пьют кофе.",
-          "text_translation_en": "More and more people drink coffee these days.",
-          "speaker": "A"
-        },
-        {
-          "id": "d24-s14",
-          "text_original": "是啊，咖啡店也开得越来越多。",
-          "pinyin": "Shì a, kā fēi diàn yě kāi de yuè lái yuè duō.",
-          "text_translation": "Ha, qahvaxonalar ham tobora ko'proq ochilyapti.",
-          "text_translation_ru": "Да, и кофеен открывается всё больше.",
-          "text_translation_en": "Yeah, and more and more coffee shops are opening.",
           "speaker": "B"
         }
       ]
