@@ -1,0 +1,113 @@
+{
+  "slug": "what-is-pinyin",
+  "title": "Pinyin nima?",
+  "title_ru": "Что такое пиньинь?",
+  "title_en": "What Is Pinyin?",
+  "description": "Pinyin — Xitoy tili talaffuzini lotin alifbosida yozish tizimi: ierogliflarni o'rganmasdan turib so'zlarni o'qing va talaffuz qiling. Jadval, tonlar va misollar bilan.",
+  "description_ru": "Пиньинь — официальная система записи произношения китайского латиницей: читайте и произносите слова ещё до изучения иероглифов. С таблицами, тонами и примерами.",
+  "description_en": "Pinyin is the official system for writing Mandarin pronunciation with the Latin alphabet — read and say Chinese words before learning characters. With tables, tones, and examples.",
+  "date": "2026-07-07",
+  "heroImage": "",
+  "heroImage_ru": "",
+  "heroImage_en": "",
+  "sections": [
+    {
+      "heading": "",
+      "heading_ru": "",
+      "heading_en": "",
+      "body": "Xitoycha so'zni ko'rib, «Buni qanday talaffuz qilaman?» deb o'ylab qolganmisiz?\n\nShunday holatlarda sizga Pinyin yordam beradi.\n\nPinyin — bu Xitoy tilining talaffuzini lotin alifbosi yordamida yozishning rasmiy tizimi. U orqali siz Xitoy ierogliflarini hali o'rganmasdan turib ham Xitoycha so'zlarni o'qish va to'g'ri talaffuz qilishni boshlashingiz mumkin.\n\nOddiy qilib aytganda, Pinyin — bu talaffuz bo'yicha qo'llanma. Endi ieroglif qanday o'qilishini taxmin qilish shart emas — Pinyin uni qanday talaffuz qilish kerakligini ko'rsatadi.",
+      "body_ru": "Вы когда-нибудь смотрели на китайское слово и думали: «Как вообще это произносится?»\n\nИменно для этого существует пиньинь.\n\nПиньинь — это официальная система записи произношения китайского языка (путунхуа) с помощью латинского алфавита. Благодаря ей вы можете читать и правильно произносить китайские слова ещё до того, как выучите иероглифы.\n\nПроще говоря, пиньинь — это руководство по произношению. Вместо того чтобы гадать, как читается тот или иной иероглиф, вы просто смотрите на его запись в пиньине.",
+      "body_en": "Have you ever looked at a Chinese word and wondered, “How do I pronounce that?”\n\nThat's where Pinyin comes in.\n\nPinyin is the official system for writing Mandarin pronunciation using the Latin alphabet. It allows you to read and pronounce Chinese words before you've learned Chinese characters.\n\nThink of it as a pronunciation guide. Instead of guessing how a character sounds, Pinyin shows you exactly how to say it."
+    },
+    {
+      "heading": "«Pinyin» so'zi nimani anglatadi?",
+      "heading_ru": "Что означает слово «пиньинь»?",
+      "heading_en": "What Does “Pinyin” Mean?",
+      "body": "Pinyin (拼音) so'zi ikki ieroglifdan tashkil topgan:\n\n* **拼 (pīn)** — harflab yozish.\n* **音 (yīn)** — tovush.\n\nIkkalasi birgalikda «tovushlarni harflar bilan yozish» yoki «talaffuzni yozish» degan ma'noni anglatadi.\n\nBoshqacha aytganda, Pinyin — bu Xitoycha so'zlarning talaffuzini yozish tizimidir.",
+      "body_ru": "Слово пиньинь (拼音) состоит из двух иероглифов:\n\n* **拼 (pīn)** — составлять по буквам, записывать.\n* **音 (yīn)** — звук.\n\nВместе они означают «запись звуков» или «запись произношения».\n\nИными словами, пиньинь — это система, которая показывает, как произносить китайские слова.",
+      "body_en": "The Chinese word Pinyin (拼音) is made up of two characters:\n\n* **拼 (pīn)** — to spell.\n* **音 (yīn)** — sound.\n\nTogether, they mean “spelled sounds” or “spelling the sounds.”\n\nIn other words, Pinyin is a system for writing the pronunciation of Chinese words."
+    },
+    {
+      "heading": "Pinyin qanday ishlaydi?",
+      "heading_ru": "Как работает пиньинь?",
+      "heading_en": "How Pinyin Works",
+      "body": "Har bir Xitoy ieroglifining o'z talaffuzi bor, Pinyin esa uni lotin harflari yordamida yozib beradi.\n\nMasalan:\n\n| Xitoycha | Pinyin | Ma'nosi |\n| --- | --- | --- |\n| 你 | nǐ | sen |\n| 好 | hǎo | yaxshi |\n| 我 | wǒ | men |\n| 学生 | xuésheng | o'quvchi, talaba |\n\nHar bir Xitoycha so'zni ikki xil ko'rinishda yozish mumkin:\n\n* **Ieroglif** — Xitoy tilining odatiy yozuv shakli.\n* **Pinyin** — so'zning talaffuzi.\n\nO'rganishning boshida siz asosan Pinyin orqali o'qiysiz. Keyinchalik ko'proq ieroglif o'rganganingiz sari, Pinyin'ga ehtiyoj kamayib boradi.\n\nShuni esda tutingki, Pinyin ham lotin alifbosidan foydalanadi, ammo ba'zi harflar ingliz tilidagidan boshqacha talaffuz qilinadi. Masalan, x, q, c va zh harflari ingliz tilidagidek o'qilmaydi. Kurs davomida siz ularning talaffuzini bosqichma-bosqich o'rganasiz.",
+      "body_ru": "У каждого китайского иероглифа есть своё произношение, а пиньинь записывает его с помощью латинских букв.\n\nНапример:\n\n| Китайский | Пиньинь | Значение |\n| --- | --- | --- |\n| 你 | nǐ | ты |\n| 好 | hǎo | хороший |\n| 我 | wǒ | я |\n| 学生 | xuésheng | ученик, студент |\n\nКаждое китайское слово можно записать двумя способами:\n\n* **Иероглифами** — это обычная письменная форма китайского языка.\n* **Пиньинем** — это запись произношения.\n\nВ самом начале обучения вы будете читать в основном пиньинь. Постепенно, по мере изучения новых иероглифов, необходимость в нём станет всё меньше.\n\nВажно помнить, что в пиньине используются те же латинские буквы, что и в английском языке, но произносятся они не всегда одинаково. Например, буквы x, q, c и сочетание zh читаются совсем иначе. С их произношением вы познакомитесь шаг за шагом в ходе курса.",
+      "body_en": "Every Chinese character has a pronunciation, and Pinyin shows you how to pronounce it using the Latin alphabet.\n\nFor example:\n\n| Chinese | Pinyin | Meaning |\n| --- | --- | --- |\n| 你 | nǐ | you |\n| 好 | hǎo | good |\n| 我 | wǒ | I, me |\n| 学生 | xuésheng | student |\n\nEach Chinese word can be written in two ways:\n\n* **Chinese characters** — the standard writing system.\n* **Pinyin** — the pronunciation.\n\nWhen you first begin learning Chinese, you'll read mostly Pinyin. As you learn more characters, you'll gradually rely on it less.\n\nOne important thing to remember is that Pinyin uses the same letters as English, but they don't always represent the same sounds. For example, the letters x, q, c, and zh are pronounced differently in Mandarin. You'll learn these sounds step by step throughout the course."
+    },
+    {
+      "heading": "Tonlar nima?",
+      "heading_ru": "Что такое тоны?",
+      "heading_en": "What Are Tones?",
+      "body": "Mandarin Xitoy tili tonli til hisoblanadi. Bu degani, ovozingizning baland-pastligi ham talaffuzning bir qismidir.\n\nBir xil bo'g'in turli tonlar bilan aytilsa, uning ma'nosi ham o'zgaradi.\n\nPinyin'da ton unli harf ustidagi kichik belgi bilan ko'rsatiladi.\n\n| Ton | Misol | Tavsifi |\n| --- | --- | --- |\n| Birinchi | mā | Baland va tekis |\n| Ikkinchi | má | Ko'tarilib boradi |\n| Uchinchi | mǎ | Avval pasayadi, keyin ko'tariladi |\n| To'rtinchi | mà | Keskin pasayadi |\n| Neytral | ma | Yengil va urg'usiz |\n\nAvvaliga tonlar g'alati tuyulishi mumkin. Ammo muntazam tinglash va mashq qilish orqali ularga tezda o'rganasiz.",
+      "body_ru": "Китайский язык является тональным языком, а это значит, что высота вашего голоса является частью произношения.\n\nОдин и тот же слог может иметь разные значения в зависимости от того, каким тоном он произносится.\n\nВ пиньине тон обозначается небольшим знаком над гласной буквой.\n\n| Тон | Пример | Описание |\n| --- | --- | --- |\n| Первый | mā | Высокий и ровный |\n| Второй | má | Восходящий |\n| Третий | mǎ | Сначала понижается, затем повышается |\n| Четвёртый | mà | Резко нисходящий |\n| Нейтральный | ma | Короткий и безударный |\n\nНе переживайте, если сначала тоны покажутся непривычными. С практикой и регулярным прослушиванием речи они станут гораздо понятнее.",
+      "body_en": "Mandarin is a tonal language, which means the pitch of your voice is part of the pronunciation.\n\nThe same syllable can have different meanings depending on the tone you use.\n\nPinyin shows the tone with a small mark above the vowel.\n\n| Tone | Example | Description |\n| --- | --- | --- |\n| First | mā | High and level |\n| Second | má | Rising |\n| Third | mǎ | Falls, then rises |\n| Fourth | mà | Sharp and falling |\n| Neutral | ma | Light and unstressed |\n\nDon't worry if the tones feel unfamiliar at first. They become much more natural with listening and practice."
+    },
+    {
+      "heading": "Qisqacha tarix",
+      "heading_ru": "Краткая история",
+      "heading_en": "A Brief History",
+      "body": "Pinyin 1958-yilda Xitoyda rasman qabul qilingan. Uning asosiy maqsadi savodxonlikni oshirish va mandarin Xitoy tilining talaffuzini yozish uchun yagona standart yaratish edi.\n\nBugungi kunda Pinyin butun dunyoda Xitoy tilini yozishning xalqaro standarti hisoblanadi. U maktablarda, lug'atlarda, darsliklarda, xaritalarda hamda kompyuter va smartfonlarda Xitoycha matn terishda keng qo'llaniladi.",
+      "body_ru": "Пиньинь был официально введён в Китае в 1958 году, чтобы повысить уровень грамотности и создать единый стандарт записи произношения китайского языка.\n\nСегодня пиньинь является международным стандартом романизации китайского языка. Он используется в школах, словарях, учебниках, на картах и при вводе китайского текста на компьютерах и смартфонах.",
+      "body_en": "Pinyin was officially introduced in China in 1958 to help improve literacy and provide a standard way to teach Mandarin pronunciation.\n\nToday, it is the standard romanization system used in schools, dictionaries, textbooks, maps, and Chinese input methods around the world."
+    },
+    {
+      "heading": "Nega Pinyin muhim?",
+      "heading_ru": "Почему пиньинь так важен?",
+      "heading_en": "Why Is Pinyin Important?",
+      "body": "**🗣️ Birinchi kundanoq gapira boshlaysiz**\n\nBirinchi gaplaringizni aytish uchun yuzlab ieroglif yodlash shart emas. Pinyin yordamida siz birinchi darsning o'zidayoq gapirishni boshlay olasiz.\n\n**📖 Yangi so'zlarni oson qidirish**\n\nKo'pchilik lug'atlar va Xitoy tilini o'rganish ilovalari so'zlarni Pinyin orqali qidirish imkonini beradi.\n\n**📱 Xitoycha matn terish**\n\nTelefon yoki kompyuterda Xitoycha yozish uchun Pinyin'ni terishning o'zi kifoya — qurilma mos ieroglifni taklif qiladi. Xitoyliklarning aksariyati ham aynan shu usuldan foydalanadi.\n\n**🎯 To'g'ri talaffuzni shakllantiring**\n\nPinyin aniq va izchil talaffuz qoidalariga asoslangan. Ularni o'zlashtirganingizdan so'ng, yangi Xitoycha so'zlarni ishonch bilan talaffuz qila olasiz.",
+      "body_ru": "**🗣️ Начните говорить с первого дня**\n\nВам не нужно запоминать сотни иероглифов, чтобы произнести свои первые фразы. Благодаря пиньиню вы сможете начать говорить уже с первого урока.\n\n**📖 Легко искать новые слова**\n\nБольшинство словарей и приложений для изучения китайского языка позволяют искать слова по пиньиню, поэтому вы сможете быстро находить незнакомую лексику.\n\n**📱 Вводите китайский текст**\n\nЧтобы напечатать китайский текст на телефоне или компьютере, достаточно ввести пиньинь — устройство предложит подходящие иероглифы. Именно так печатает большинство носителей китайского языка.\n\n**🎯 Освойте правильное произношение**\n\nПиньинь основан на чётких и последовательных правилах произношения. Освоив их, вы сможете уверенно читать и произносить новые китайские слова.",
+      "body_en": "**🗣️ Start Speaking Immediately**\n\nYou don't need to memorize hundreds of Chinese characters before saying your first sentence. Pinyin lets you begin speaking from your very first lesson.\n\n**📖 Look Up New Words**\n\nMost dictionaries and language-learning apps let you search using Pinyin, making it easy to find the meaning of unfamiliar words.\n\n**📱 Type Chinese**\n\nWhen you type Pinyin on your phone or computer, your device suggests the matching Chinese characters. This is how millions of native speakers type every day.\n\n**🎯 Build Accurate Pronunciation**\n\nPinyin follows consistent pronunciation rules. Once you learn them, you'll be able to pronounce new Chinese words with confidence."
+    },
+    {
+      "heading": "Xulosa",
+      "heading_ru": "Итоги",
+      "heading_en": "The Bottom Line",
+      "body": "Pinyin — Xitoy tili talaffuzining asosidir. U sizga ko'plab ieroglifni hali o'rganmasdan turib ham gapirish, eshitish, o'qish va Xitoycha matn terishga yordam beradi.\n\nVaqt o'tishi bilan siz Pinyin'dan kamroq foydalanasiz va so'zlarni ieroglifi orqali taniy boshlaysiz. Lekin har bir Xitoy tili o'rganuvchisi o'z yo'lini aynan Pinyin bilan boshlaydi.\n\nPinyin'ni yaxshi o'zlashtiring — va Xitoy tilini o'rganish uchun mustahkam poydevor yaratasiz.\n\nNǐ zhǔnbèi hǎo le ma? (Tayyormisiz?) Unda boshlaymiz!",
+      "body_ru": "Пиньинь — это основа правильного произношения китайского языка. Он помогает говорить, понимать речь на слух, читать и печатать китайский текст ещё до того, как вы выучите большое количество иероглифов.\n\nСо временем вы будете всё реже пользоваться пиньинем и всё чаще узнавать слова по самим иероглифам. Но путь каждого изучающего китайский начинается именно с него.\n\nОсвойте пиньинь — и вы заложите прочную основу для дальнейшего изучения китайского языка.\n\nNǐ zhǔnbèi hǎo le ma? (Вы готовы?) Тогда начнём!",
+      "body_en": "Pinyin is the foundation of Mandarin pronunciation. It helps you speak, listen, read, and type Chinese long before you've memorized many characters.\n\nAs your Chinese improves, you'll depend on Pinyin less and recognize more words by their characters alone. But every learner starts here.\n\nMaster Pinyin, and you'll have a strong foundation for learning Mandarin.\n\nNǐ zhǔnbèi hǎo le ma? (Are you ready?) Let's begin!"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Pinyin — Xitoy alifbosimi?",
+      "q_ru": "Пиньинь — это китайский алфавит?",
+      "q_en": "Is Pinyin the Chinese alphabet?",
+      "a": "Yo'q. Xitoy tilida alifbo yo'q — u ieroglif (汉字) bilan yoziladi. Pinyin faqat talaffuzni lotin harflari bilan yozadi; bu alifbo emas, talaffuz qo'llanmasi.",
+      "a_ru": "Нет. В китайском языке нет алфавита — он записывается иероглифами (汉字). Пиньинь лишь передаёт произношение латинскими буквами; это руководство по произношению, а не алфавит языка.",
+      "a_en": "No. Chinese has no alphabet — it is written with characters (汉字). Pinyin only writes the pronunciation using Latin letters; it's a pronunciation guide, not the language's alphabet."
+    },
+    {
+      "q": "Pinyinda nechta harf bor?",
+      "q_ru": "Сколько букв в пиньине?",
+      "q_en": "How many letters does Pinyin use?",
+      "a": "Pinyin 26 ta lotin harfidan (va ton belgilaridan) foydalanadi. Lekin x, q, c va zh kabi ba'zilari ingliz tilidagidan boshqacha o'qiladi.",
+      "a_ru": "Пиньинь использует 26 латинских букв (плюс знаки тонов). Но некоторые — x, q, c и zh — читаются не так, как в английском.",
+      "a_en": "Pinyin uses the 26 Latin letters, plus tone marks. But several — like x, q, c and zh — are pronounced differently than in English."
+    },
+    {
+      "q": "Pinyinni bilsam, ieroglif kerakmi?",
+      "q_ru": "Если я знаю пиньинь, нужны ли иероглифы?",
+      "q_en": "If I know Pinyin, do I still need characters?",
+      "a": "Pinyin birinchi kundanoq gapirish, tinglash va yozish imkonini beradi, lekin ieroglifsiz haqiqiy Xitoycha matnlarni (kitob, e'lon, ilova) o'qib bo'lmaydi. Ko'pchilik pinyindan boshlab, ieroglifni asta-sekin qo'shadi.",
+      "a_ru": "Пиньинь позволяет говорить, понимать на слух и печатать с первого дня, но читать настоящие китайские тексты (книги, вывески, приложения) без иероглифов нельзя. Обычно начинают с пиньиня и постепенно добавляют иероглифы.",
+      "a_en": "Pinyin lets you speak, listen, and type from day one, but you can't read real Chinese texts (books, signs, apps) without characters. Most learners start with pinyin and add characters gradually."
+    },
+    {
+      "q": "Pinyindagi to'rt ton qaysi?",
+      "q_ru": "Какие четыре тона в пиньине?",
+      "q_en": "What are the four tones in Pinyin?",
+      "a": "Birinchi (mā) baland va tekis, ikkinchi (má) ko'tariladi, uchinchi (mǎ) pasayib keyin ko'tariladi, to'rtinchi (mà) keskin pasayadi, yana neytral (ma) ton bor. Ton ma'noni o'zgartiradi, shuning uchun u talaffuzning bir qismi.",
+      "a_ru": "Первый (mā) — высокий и ровный, второй (má) — восходящий, третий (mǎ) — понижается, затем повышается, четвёртый (mà) — резко нисходящий, плюс нейтральный (ma). Тон меняет значение, поэтому он часть произношения.",
+      "a_en": "First (mā) high and level, second (má) rising, third (mǎ) falls then rises, fourth (mà) sharp falling, plus a neutral tone (ma). The tone changes the meaning, so it's part of the pronunciation."
+    },
+    {
+      "q": "Pinyinni qanday mashq qilgan ma'qul?",
+      "q_ru": "Как лучше всего тренировать пиньинь?",
+      "q_en": "What's the best way to practice Pinyin?",
+      "a": "Haqiqiy audio bilan tinglab takrorlang. Blimda har bir HSK dialogida pinyin ieroglif ustida, ona tili audiosi bilan ko'rsatiladi — shunday qilib o'qish asnosida to'g'ri talaffuzni shakllantirasiz.",
+      "a_ru": "Слушайте и повторяйте с настоящим аудио. В Blim в каждом диалоге HSK пиньинь показан над иероглифами с озвучкой носителей — так вы нарабатываете правильное произношение во время чтения.",
+      "a_en": "Listen and repeat with real audio. On Blim, every HSK dialogue shows pinyin above the characters with native audio, so you build accurate pronunciation while you read."
+    }
+  ]
+}
