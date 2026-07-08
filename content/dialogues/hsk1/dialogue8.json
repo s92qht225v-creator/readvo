@@ -71,7 +71,6 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue1.mp3",
           "text_translation_en": "Hello, where are you?"
         },
         {
@@ -116,7 +115,6 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue2.mp3",
           "text_translation_en": "I'm at school."
         },
         {
@@ -170,7 +168,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue3.mp3",
           "text_translation_en": "Are you in the classroom?"
         },
         {
@@ -224,215 +221,13 @@
               "tr": "библиотека"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue4.mp3",
           "text_translation_en": "No, I'm in the library."
-        },
-        {
-          "id": "d8-s5",
-          "text_original": "你几点回家？",
-          "pinyin": "Nǐ jǐ diǎn huí jiā?",
-          "text_translation": "Uyga soat nechada qaytasan?",
-          "text_translation_ru": "Во сколько вернёшься домой?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "jǐ",
-              "t": "necha",
-              "tr": "сколько",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "diǎn",
-              "t": "soat",
-              "tr": "час",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "huí",
-              "t": "qaytmoq",
-              "tr": "вернуться",
-              "h": 1,
-              "l": 7
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "jiā",
-              "t": "uy",
-              "tr": "дом",
-              "h": 1,
-              "l": 7
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue5.mp3",
-          "text_translation_en": "What time will you come home?"
-        },
-        {
-          "id": "d8-s6",
-          "text_original": "五点回家。",
-          "pinyin": "Wǔ diǎn huí jiā.",
-          "text_translation": "Soat beshda qaytaman.",
-          "text_translation_ru": "В пять вернусь.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǔ",
-              "t": "besh",
-              "tr": "пять",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "diǎn",
-              "t": "soat",
-              "tr": "час",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "huí",
-              "t": "qaytmoq",
-              "tr": "вернуться",
-              "h": 1,
-              "l": 7
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "jiā",
-              "t": "uy",
-              "tr": "дом",
-              "h": 1,
-              "l": 7
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue6.mp3",
-          "text_translation_en": "I'll be home at five."
-        },
-        {
-          "id": "d8-s7",
-          "text_original": "好，我等你。",
-          "pinyin": "Hǎo, wǒ děng nǐ.",
-          "text_translation": "Yaxshi, kutaman.",
-          "text_translation_ru": "Хорошо, жду тебя.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "děng",
-              "t": "kutmoq",
-              "tr": "ждать"
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue7.mp3",
-          "text_translation_en": "OK, I'll wait for you."
-        },
-        {
-          "id": "d8-s8",
-          "text_original": "好的。",
-          "pinyin": "Hǎode.",
-          "text_translation": "Yaxshi.",
-          "text_translation_ru": "Хорошо.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "hǎode",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue8.mp3",
-          "text_translation_en": "OK."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue.mp3"
+      ]
     }
   ],
   "tag": "telefon",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zai%20nar/dialogue.mp3",
   "vocab": [
     "喂",
     "哪儿",
