@@ -73,7 +73,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue1.mp3",
           "text_translation_en": "Are you Chinese?"
         },
         {
@@ -150,15 +149,14 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue2.mp3",
           "text_translation_en": "Yes, I'm Chinese. And you?"
         },
         {
           "id": "d2-s3",
-          "text_original": "我是乌兹别克斯坦人。",
-          "pinyin": "Wǒ shì Wūzībiékèsītǎn rén.",
-          "text_translation": "Men O'zbekman.",
-          "text_translation_ru": "Я Узбек.",
+          "text_original": "我是美国人。",
+          "pinyin": "Wǒ shì Měiguó rén.",
+          "text_translation": "Men Amerikalikman.",
+          "text_translation_ru": "Я Американец.",
           "speaker": "A",
           "words": [
             {
@@ -186,15 +184,15 @@
             {
               "i": [
                 2,
-                9
+                5
               ],
-              "p": "Wūzībiékèsītǎn rén",
-              "t": "O'zbekistonlik，O'zbek",
-              "tr": "узбек"
+              "p": "Měiguó rén",
+              "t": "Amerikalik",
+              "tr": "американец",
+              "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue3.mp3",
-          "text_translation_en": "I'm from Uzbekistan."
+          "text_translation_en": "I'm American."
         },
         {
           "id": "d2-s4",
@@ -236,14 +234,11 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue4.mp3",
           "text_translation_en": "Oh, hello! Hello!"
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "tanishuv",
-  "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20shi%20zhongguo%20ren%20ma/dialogue.mp3"
+  "dateAdded": "2026-02-22"
 }
