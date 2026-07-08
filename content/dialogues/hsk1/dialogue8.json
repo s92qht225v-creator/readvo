@@ -6,6 +6,8 @@
   "titleTranslation": "Qayerdasan?",
   "titleTranslation_ru": "Ты где?",
   "titleTranslation_en": "Where are you?",
+  "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk1/where-are-you.webp",
+  "voices": { "A": "白桦", "B": "茉莉" },
   "description_uz": "«Qayerdasan?» — telefon orqali joylashuv haqidagi suhbat. Bu dialog kim qayerdaligini so'rash, joyni aytish va inkor bilan aniqlashtirishni o'rgatadi. Joy nomlari bilan ishlash uchun foydali. Hayotiy telefon vaziyati — rol o'ynash va gapirishga ishonch uchun ajoyib.",
   "description_ru": "«Ты где?» — телефонный разговор о местоположении. Этот диалог учит спрашивать, кто где, называть место и уточнять через отрицание. Полезно для названий мест. Жизненная телефонная ситуация — отлично для ролевой игры и уверенности в речи.",
   "description_en": "«Where are you?» — a phone call about location. This dialogue teaches asking where someone is, naming a place, and clarifying with a negative. Useful for place names. A real-life phone situation—great for role-play and speaking confidence.",
