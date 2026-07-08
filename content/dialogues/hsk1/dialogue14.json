@@ -6,6 +6,7 @@
   "titleTranslation": "U kim?",
   "titleTranslation_ru": "Кто она?",
   "titleTranslation_en": "Who is she?",
+  "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk1/who-is-she.webp",
   "description_uz": "«Anavi qiz kim?» — ikki do'st olomondagi kishini aniqlashga urinishyapti. Bu suhbat kimligini so'rash, kishini tasvirlash va fikr bildirishni mashq qildiradi. Tanish, qiziqarli mavzu, foydali so'zlar — va tabiiy bo'lguncha takrorlash uchun yetarlicha qisqa. Shadowing va gapirishga ishonch hosil qilish uchun ideal.",
   "description_ru": "«Кто та девушка?» — двое друзей пытаются опознать человека в толпе. Этот диалог тренирует, как спрашивать, кто это, описывать человека и высказывать мнение. Близкая, живая тема, полезные слова — и достаточно короткий, чтобы повторять до естественности. Отлично для шэдоуинга и уверенности в речи.",
   "description_en": "«Who's that girl?» — two friends try to pin down someone in a crowd. This exchange practises asking who someone is, describing a person, and giving an opinion. A familiar, lively topic, useful words—and short enough to repeat until it feels natural. Perfect for shadowing and building speaking confidence.",
@@ -291,79 +292,10 @@
           ],
           "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ta%20shi%20shui/dialogue5.mp3",
           "text_translation_en": "Oh, she's very pretty."
-        },
-        {
-          "id": "d14-s6",
-          "text_original": "是吗？",
-          "pinyin": "Shì ma?",
-          "text_translation": "Shunaqami?",
-          "text_translation_ru": "Правда?",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "shì",
-              "t": "ha",
-              "tr": "да",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "ma",
-              "t": "-mi",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ta%20shi%20shui/dialogue6.mp3",
-          "text_translation_en": "Really?"
-        },
-        {
-          "id": "d14-s7",
-          "text_original": "是的。",
-          "pinyin": "Shì de.",
-          "text_translation": "Ha.",
-          "text_translation_ru": "Да.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "shì",
-              "t": "ha",
-              "tr": "да",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "de",
-              "t": "(yukl.)",
-              "tr": "(част.)",
-              "h": 1
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ta%20shi%20shui/dialogue7.mp3",
-          "text_translation_en": "Yes."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ta%20shi%20shui/dialogue.mp3"
+      ]
     }
   ],
   "tag": "tanishuv",
-  "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ta%20shi%20shui/dialogue.mp3"
+  "dateAdded": "2026-02-22"
 }
