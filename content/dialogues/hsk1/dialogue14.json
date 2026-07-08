@@ -72,7 +72,6 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ta%20shi%20shui/dialogue1.mp3",
           "text_translation_en": "Who's that girl?"
         },
         {
@@ -95,7 +94,6 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ta%20shi%20shui/dialogue2.mp3",
           "text_translation_en": "Which one?"
         },
         {
@@ -158,7 +156,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ta%20shi%20shui/dialogue3.mp3",
           "text_translation_en": "The one in red."
         },
         {
@@ -236,7 +233,6 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ta%20shi%20shui/dialogue4.mp3",
           "text_translation_en": "Her? She's my friend."
         },
         {
@@ -290,7 +286,6 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ta%20shi%20shui/dialogue5.mp3",
           "text_translation_en": "Oh, she's very pretty."
         }
       ]
