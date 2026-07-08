@@ -62,7 +62,6 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue1.mp3",
           "text_translation_en": "Where are you going?"
         },
         {
@@ -105,7 +104,6 @@
               "tr": "супермаркет"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue2.mp3",
           "text_translation_en": "I'm going to the supermarket."
         },
         {
@@ -139,7 +137,6 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue3.mp3",
           "text_translation_en": "To buy what?"
         },
         {
@@ -173,7 +170,6 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue4.mp3",
           "text_translation_en": "To buy clothes."
         },
         {
@@ -218,7 +214,6 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue5.mp3",
           "text_translation_en": "To buy what kind of clothes?"
         },
         {
@@ -259,100 +254,11 @@
               "tr": "футболка"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue6.mp3",
           "text_translation_en": "To buy a T-shirt."
-        },
-        {
-          "id": "d15-s7",
-          "text_original": "我们一起去吧。",
-          "pinyin": "Wǒmen yìqǐ qù ba.",
-          "text_translation": "Keling, birga boramiz.",
-          "text_translation_ru": "Давай пойдём вместе.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "yìqǐ",
-              "t": "birga",
-              "tr": "вместе"
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1,
-              "l": 8
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "ba",
-              "t": "(-ylik)",
-              "tr": "(давай)",
-              "h": 1,
-              "l": 11
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue7.mp3",
-          "text_translation_en": "Let's go together."
-        },
-        {
-          "id": "d15-s8",
-          "text_original": "好啊。",
-          "pinyin": "Hǎo a.",
-          "text_translation": "Mayli!",
-          "text_translation_ru": "Хорошо!",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "a",
-              "t": "(undov)",
-              "tr": "(воскл.)"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue8.mp3",
-          "text_translation_en": "Okay!"
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue.mp3"
+      ]
     }
   ],
   "tag": "xaridlar",
-  "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qu%20chaoshi/dialogue.mp3"
+  "dateAdded": "2026-02-22"
 }
