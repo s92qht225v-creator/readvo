@@ -62,7 +62,6 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue1.mp3",
           "text_translation_en": "What's wrong?"
         },
         {
@@ -105,7 +104,6 @@
               "tr": "комфортно"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue2.mp3",
           "text_translation_en": "I don't feel well."
         },
         {
@@ -159,7 +157,6 @@
               "tr": "комфортно"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue3.mp3",
           "text_translation_en": "Where does it hurt?"
         },
         {
@@ -200,7 +197,6 @@
               "tr": "болеть"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue4.mp3",
           "text_translation_en": "I have a headache."
         },
         {
@@ -232,7 +228,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue5.mp3",
           "text_translation_en": "Do you have a fever?"
         },
         {
@@ -264,139 +259,13 @@
               "tr": "температура"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue6.mp3",
           "text_translation_en": "No, I don't."
-        },
-        {
-          "id": "d12-s7",
-          "text_original": "去医院吗？",
-          "pinyin": "Qù yīyuàn ma?",
-          "text_translation": "Kasalxonaga borasanmi?",
-          "text_translation_ru": "Пойдёшь в больницу?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1,
-              "l": 8
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "yīyuàn",
-              "t": "kasalxona",
-              "tr": "больница",
-              "h": 1,
-              "l": 15
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "ma",
-              "t": "-mi",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue7.mp3",
-          "text_translation_en": "Will you go to the hospital?"
-        },
-        {
-          "id": "d12-s8",
-          "text_original": "不去，我想休息一下。",
-          "pinyin": "Bù qù, wǒ xiǎng xiūxi yíxià.",
-          "text_translation": "Yo'q, biroz dam olmoqchiman.",
-          "text_translation_ru": "Нет, я хочу немного отдохнуть.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1,
-              "l": 8
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1,
-              "l": 11
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "xiūxi",
-              "t": "dam olmoq",
-              "tr": "отдыхать",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "yíxià",
-              "t": "biroz",
-              "tr": "немного",
-              "h": 1,
-              "l": 12
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue8.mp3",
-          "text_translation_en": "No, I just want to rest a bit."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue.mp3"
+      ]
     }
   ],
   "tag": "salomatlik",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20bu%20shufu/dialogue.mp3",
   "vocab": [
     "头疼",
     "发烧",
