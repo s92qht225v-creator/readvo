@@ -26,6 +26,7 @@
           "pinyin": "Nǐ huì shuō Zhōngwén ma?",
           "text_translation": "Xitoycha gaplasha olasanmi?",
           "text_translation_ru": "Ты умеешь говорить по-китайски?",
+          "text_translation_en": "Can you speak Chinese?",
           "speaker": "A",
           "words": [
             {
@@ -82,16 +83,15 @@
               "h": 1,
               "l": 2
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue1.mp3",
-          "text_translation_en": "Can you speak Chinese?"
+          ]
         },
         {
           "id": "d5-s2",
-          "text_original": "我会说一点。你会说乌兹别克语吗？",
-          "pinyin": "Wǒ huì shuō yìdiǎn. Nǐ huì shuō Wūzībiékè yǔ ma?",
-          "text_translation": "Biroz gaplasha olaman. Sen O'zbekcha gaplasha olasanmi?",
-          "text_translation_ru": "Я немного умею. Ты умеешь говорить по-узбекски?",
+          "text_original": "会一点儿。",
+          "pinyin": "Huì yìdiǎnr.",
+          "text_translation": "Ozgina bilaman.",
+          "text_translation_ru": "Немного говорю.",
+          "text_translation_en": "A little.",
           "speaker": "B",
           "words": [
             {
@@ -99,11 +99,44 @@
                 0,
                 1
               ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
+              "p": "huì",
+              "t": "bilmoq",
+              "tr": "уметь",
               "h": 1,
-              "l": 2
+              "l": 9
+            },
+            {
+              "i": [
+                1,
+                4
+              ],
+              "p": "yìdiǎnr",
+              "t": "ozgina",
+              "tr": "немного",
+              "h": 1,
+              "l": 11
+            }
+          ]
+        },
+        {
+          "id": "d5-s3",
+          "text_original": "你会说英文吗？",
+          "pinyin": "Nǐ huì shuō Yīngwén ma?",
+          "text_translation": "Inglizcha gaplasha olasanmi?",
+          "text_translation_ru": "Ты умеешь говорить по-английски?",
+          "text_translation_en": "Can you speak English?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
             },
             {
               "i": [
@@ -132,67 +165,15 @@
                 3,
                 5
               ],
-              "p": "yìdiǎn",
-              "t": "biroz",
-              "tr": "немного",
-              "h": 1,
-              "l": 11
+              "p": "Yīngwén",
+              "t": "inglizcha",
+              "tr": "английский язык",
+              "h": 1
             },
             {
               "i": [
-                6,
-                7
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "huì",
-              "t": "bilmoq",
-              "tr": "уметь",
-              "h": 1,
-              "l": 9
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "shuō",
-              "t": "gapirmoq",
-              "tr": "говорить",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                9,
-                13
-              ],
-              "p": "Wūzībiékè",
-              "t": "o'zbek",
-              "tr": "узбекский"
-            },
-            {
-              "i": [
-                13,
-                14
-              ],
-              "p": "yǔ",
-              "t": "til",
-              "tr": "язык"
-            },
-            {
-              "i": [
-                14,
-                15
+                5,
+                6
               ],
               "p": "ma",
               "t": "-mi",
@@ -200,51 +181,21 @@
               "h": 1,
               "l": 2
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue2.mp3",
-          "text_translation_en": "I can speak a little. Can you speak Uzbek?"
+          ]
         },
         {
-          "id": "d5-s3",
-          "text_original": "乌兹别克语？我不会说。",
-          "pinyin": "Wūzībiékè yǔ? Wǒ bú huì shuō.",
-          "text_translation": "O'zbekchami? Gaplasha olmayman.",
-          "text_translation_ru": "Узбекский? Не умею.",
-          "speaker": "A",
+          "id": "d5-s4",
+          "text_original": "不会。",
+          "pinyin": "Bú huì.",
+          "text_translation": "Yo'q, bilmayman.",
+          "text_translation_ru": "Нет, не умею.",
+          "text_translation_en": "No, I can't.",
+          "speaker": "B",
           "words": [
             {
               "i": [
                 0,
-                4
-              ],
-              "p": "Wūzībiékè",
-              "t": "o'zbek",
-              "tr": "узбекский"
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "yǔ",
-              "t": "til",
-              "tr": "язык"
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                7,
-                8
+                1
               ],
               "p": "bú",
               "t": "emas",
@@ -254,35 +205,20 @@
             },
             {
               "i": [
-                8,
-                9
+                1,
+                2
               ],
               "p": "huì",
               "t": "bilmoq",
               "tr": "уметь",
               "h": 1,
               "l": 9
-            },
-            {
-              "i": [
-                9,
-                10
-              ],
-              "p": "shuō",
-              "t": "gapirmoq",
-              "tr": "говорить",
-              "h": 1,
-              "l": 5
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue3.mp3",
-          "text_translation_en": "Uzbek? I can't."
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "tanishuv",
-  "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20hui%20shuo%20zhongwen%20ma/dialogue.mp3"
+  "dateAdded": "2026-02-22"
 }
