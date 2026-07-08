@@ -60,7 +60,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue1.mp3",
           "text_translation_en": "Are you hungry?"
         },
         {
@@ -94,7 +93,6 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue2.mp3",
           "text_translation_en": "A little."
         },
         {
@@ -150,15 +148,14 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue3.mp3",
           "text_translation_en": "What do you want to eat?"
         },
         {
           "id": "d11-s4",
-          "text_original": "我想吃面条。你呢？",
-          "pinyin": "Wǒ xiǎng chī miàntiáo. Nǐ ne?",
-          "text_translation": "Men lapsha yegim kelyapti. Senchi?",
-          "text_translation_ru": "Я хочу лапшу. А ты?",
+          "text_original": "我想吃面条。",
+          "pinyin": "Wǒ xiǎng chī miàntiáo.",
+          "text_translation": "Men lag'mon yegim kelyapti.",
+          "text_translation_ru": "Я хочу лапшу.",
           "speaker": "B",
           "words": [
             {
@@ -202,39 +199,16 @@
               "p": "miàntiáo",
               "t": "lag'mon",
               "tr": "лапша"
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "ne",
-              "t": "-chi",
-              "tr": "а (ты)?",
-              "h": 1,
-              "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue4.mp3",
-          "text_translation_en": "I want noodles. And you?"
+          "text_translation_en": "I want noodles."
         },
         {
           "id": "d11-s5",
-          "text_original": "我想吃米饭。你喝什么？",
-          "pinyin": "Wǒ xiǎng chī mǐfàn. Nǐ hē shénme?",
-          "text_translation": "Men guruch yegim kelyapti. Sen nima ichasan?",
-          "text_translation_ru": "Что ты хочешь пить?",
+          "text_original": "你喝什么？",
+          "pinyin": "Nǐ hē shénme?",
+          "text_translation": "Sen nima ichasan?",
+          "text_translation_ru": "Что ты будешь пить?",
           "speaker": "A",
           "words": [
             {
@@ -242,50 +216,6 @@
                 0,
                 1
               ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть",
-              "h": 1,
-              "l": 9
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 12
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "mǐfàn",
-              "t": "guruch",
-              "tr": "рис",
-              "h": 1,
-              "l": 12
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
               "p": "nǐ",
               "t": "sen",
               "tr": "ты",
@@ -294,8 +224,8 @@
             },
             {
               "i": [
-                7,
-                8
+                1,
+                2
               ],
               "p": "hē",
               "t": "ichmoq",
@@ -305,8 +235,8 @@
             },
             {
               "i": [
-                8,
-                10
+                2,
+                4
               ],
               "p": "shénme",
               "t": "nima",
@@ -315,8 +245,7 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue5.mp3",
-          "text_translation_en": "I want rice. What will you drink?"
+          "text_translation_en": "What will you drink?"
         },
         {
           "id": "d11-s6",
@@ -358,72 +287,16 @@
               "tr": "кола"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue6.mp3",
           "text_translation_en": "I'll have cola."
-        },
-        {
-          "id": "d11-s7",
-          "text_original": "我也喝可乐。",
-          "pinyin": "Wǒ yě hē kělè.",
-          "text_translation": "Men ham kola ichaman.",
-          "text_translation_ru": "Я тоже буду колу.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "yě",
-              "t": "ham",
-              "tr": "тоже",
-              "h": 1,
-              "l": 3
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "hē",
-              "t": "ichmoq",
-              "tr": "пить",
-              "h": 1,
-              "l": 12
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "kělè",
-              "t": "kola",
-              "tr": "кола"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue7.mp3",
-          "text_translation_en": "I'll have cola too."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue.mp3"
+      ]
     }
   ],
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20xiang%20chi%20shenme/dialogue.mp3",
   "vocab": [
-    "米饭",
-    "面条"
-  ]
+    "面条",
+    "可乐"
+  ],
+  "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk1/what-do-you-want-to-eat.webp"
 }
