@@ -92,7 +92,6 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue1.mp3",
           "text_translation_en": "What's your phone number?"
         },
         {
@@ -156,7 +155,6 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue2.mp3",
           "text_translation_en": "My phone number is 138 1234 5678."
         },
         {
@@ -209,7 +207,6 @@
               "tr": "один раз"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue3.mp3",
           "text_translation_en": "Please say it again."
         },
         {
@@ -220,7 +217,6 @@
           "text_translation_ru": "138 1234 5678.",
           "speaker": "B",
           "words": [],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue4.mp3",
           "text_translation_en": "138 1234 5678."
         },
         {
@@ -243,7 +239,6 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue5.mp3",
           "text_translation_en": "Thank you."
         },
         {
@@ -266,17 +261,15 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue6.mp3",
           "text_translation_en": "You're welcome."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue.mp3"
+      ]
     }
   ],
   "tag": "telefon",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20de%20dianhua%20haoma%20shi%20duoshao/dialogue.mp3",
   "vocab": [
     "号码"
-  ]
+  ],
+  "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk1/whats-your-phone-number.webp"
 }
