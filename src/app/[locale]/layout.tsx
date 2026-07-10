@@ -46,6 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: { type: 'website', locale: m.ogLocale, siteName: 'Blim' },
     twitter: { card: 'summary_large_image' },
     robots: { index: true, follow: true },
+    keywords: ['chinese', 'learn chinese', 'HSK', 'pinyin', 'online courses', 'arabic', 'learn arabic', 'language learning', 'karaoke', 'flashcards', 'xitoy tili', 'xitoy tilini urganish'],
     icons: {
       icon: [
         { url: '/favicon.ico', sizes: 'any' },

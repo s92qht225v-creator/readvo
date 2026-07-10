@@ -56,6 +56,16 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         url: siteUrl,
         logo: `${siteUrl}/logo.svg`,
       },
+      {
+        '@type': 'Course',
+        name: locale === 'ru' ? 'Курсы китайского языка HSK 1-6' : locale === 'en' ? 'HSK 1-6 Chinese Courses' : 'HSK 1-6 Xitoy tili kurslari',
+        description: m.description,
+        provider: {
+          '@type': 'Organization',
+          name: 'Blim',
+          sameAs: siteUrl
+        }
+      }
     ],
   };
 
