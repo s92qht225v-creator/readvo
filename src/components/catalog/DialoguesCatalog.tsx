@@ -126,9 +126,16 @@ export function DialoguesCatalog({ dialogues, dialoguesHsk2, dialoguesHsk3, dial
                 disabled={!hasContent}
                 onClick={() => {
                   if (hasContent) {
-                    setDialogueHskLevel(lv === 'HSK 6' ? '6' : lv === 'HSK 5' ? '5' : lv === 'HSK 4' ? '4' : lv === 'HSK 3' ? '3' : lv === 'HSK 2' ? '2' : '1');
+                    const level: HskLevel = lv === 'HSK 6' ? '6' : lv === 'HSK 5' ? '5' : lv === 'HSK 4' ? '4' : lv === 'HSK 3' ? '3' : lv === 'HSK 2' ? '2' : '1';
+                    setDialogueHskLevel(level);
                     setActiveTag(null);
                     setShowBookmarked(false);
+                    // Persist the active tab in the URL so browser Back reopens
+                    // the same level (replaceState = no reload, no scroll jump).
+                    const url = new URL(window.location.href);
+                    if (level === '1') url.searchParams.delete('dialhsk');
+                    else url.searchParams.set('dialhsk', level);
+                    window.history.replaceState(null, '', url.toString());
                   }
                 }}
                 className={`lp__hsk-pill ${isActive ? 'lp__hsk-pill--active' : ''} ${!hasContent ? 'lp__hsk-pill--disabled' : ''}`}

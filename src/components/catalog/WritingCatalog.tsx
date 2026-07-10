@@ -109,7 +109,13 @@ export function WritingCatalog({ writingSets, writingSetsHsk2, writingSetsHsk2L2
                 disabled={!hasContent}
                 onClick={() => {
                   if (hasContent && hskVersion === '2.0') {
-                    setWritingHskLevel(lv === 'HSK 2' ? '2' : lv === 'HSK 3' ? '3' : lv === 'HSK 4' ? '4' : lv === 'HSK 5' ? '5' : lv === 'HSK 6' ? '6' : '1');
+                    const level: HskLevel = lv === 'HSK 2' ? '2' : lv === 'HSK 3' ? '3' : lv === 'HSK 4' ? '4' : lv === 'HSK 5' ? '5' : lv === 'HSK 6' ? '6' : '1';
+                    setWritingHskLevel(level);
+                    // Persist the active tab so browser Back reopens the same level.
+                    const url = new URL(window.location.href);
+                    if (level === '1') url.searchParams.delete('hsk');
+                    else url.searchParams.set('hsk', level);
+                    window.history.replaceState(null, '', url.toString());
                   }
                 }}
                 className={`lp__hsk-pill ${isActive ? 'lp__hsk-pill--active' : ''} ${!hasContent ? 'lp__hsk-pill--disabled' : ''}`}
