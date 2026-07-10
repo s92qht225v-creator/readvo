@@ -82,10 +82,10 @@
         },
         {
           "id": "d17-s2",
-          "text_original": "我在休息。",
-          "pinyin": "Wǒ zài xiūxi.",
-          "text_translation": "Dam olyapman.",
-          "text_translation_ru": "Отдыхаю.",
+          "text_original": "我在睡觉。",
+          "pinyin": "Wǒ zài shuìjiào.",
+          "text_translation": "Uxlayapman.",
+          "text_translation_ru": "Сплю.",
           "speaker": "B",
           "words": [
             {
@@ -115,14 +115,14 @@
                 2,
                 4
               ],
-              "p": "xiūxi",
-              "t": "dam olmoq",
-              "tr": "отдыхать",
+              "p": "shuìjiào",
+              "t": "uxlamoq",
+              "tr": "спать",
               "h": 1,
               "l": 5
             }
           ],
-          "text_translation_en": "I'm resting."
+          "text_translation_en": "I'm sleeping."
         },
         {
           "id": "d17-s3",
