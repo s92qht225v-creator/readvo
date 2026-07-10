@@ -263,7 +263,13 @@
   "tag": "kundalik",
   "dateAdded": "2026-02-22",
   "vocab": [
-    "电梯"
+    "请问",
+    "洗手间",
+    "哪儿",
+    "楼",
+    "电梯",
+    "那边",
+    "不用谢"
   ],
   "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk1/where-is-the-bathroom.webp"
 }

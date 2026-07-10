@@ -295,7 +295,11 @@
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
   "vocab": [
+    "饿",
+    "想",
+    "吃",
     "面条",
+    "喝",
     "可乐"
   ],
   "image": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/images/dialogues/hsk1/what-do-you-want-to-eat.webp"
