@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useScrollRestore } from '../../hooks/useScrollRestore';
 import { CatalogHeader } from './CatalogHeader';
 import { PageFooter } from '../PageFooter';
 
@@ -23,6 +24,8 @@ export function KaraokeCatalog() {
   // src/proxy.ts. Client auth gating blanked the SSG HTML for crawlers.
   const [language] = useLanguage();
   const [karaokeSearch, setKaraokeSearch] = useState('');
+
+  const saveScroll = useScrollRestore('ktv-scroll', 'k', true);
 
   return (
     <main className="home">
@@ -55,7 +58,7 @@ export function KaraokeCatalog() {
             if (!q) return true;
             return k.title.toLowerCase().includes(q) || k.pinyin.toLowerCase().includes(q) || k.translation.toLowerCase().includes(q) || k.translation_ru.toLowerCase().includes(q) || k.translation_en.toLowerCase().includes(q);
           }).map((k) => (
-            <Link key={k.href} href={k.href} prefetch={false} className="lp__card">
+            <Link key={k.href} href={k.href} prefetch={false} onClick={saveScroll} className="lp__card">
               <div className="lp__card-deco" aria-hidden="true">{k.title.slice(0, 3)}</div>
               <div className="lp__card-main">
                 <div className="lp__card-title">{k.title}</div>

@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { useClientSearchParam } from '../../hooks/useClientSearchParam';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useStars } from '../../hooks/useStars';
+import { useScrollRestore } from '../../hooks/useScrollRestore';
 import { CatalogHeader } from './CatalogHeader';
 import { PageFooter } from '../PageFooter';
 import { TAGS, BOOKMARK_KEY, parseHskLevel, type HskLevel } from './types';
@@ -92,6 +93,10 @@ export function DialoguesCatalog({ dialogues, dialoguesHsk2, dialoguesHsk3, dial
     );
     return result;
   }, [search, activeDialogues, activeTag, showBookmarked, bookmarks]);
+
+  // Restore scroll position when returning from a dialogue (browser Back).
+  // Keyed by the active HSK level so switching tabs never jumps.
+  const saveScroll = useScrollRestore('dlg-scroll', dialogueHskLevel, filteredDialogues.length > 0);
 
   return (
     <main className="home">
@@ -193,7 +198,7 @@ export function DialoguesCatalog({ dialogues, dialoguesHsk2, dialoguesHsk3, dial
         {/* Dialogue cards */}
         <div className="home__lessons">
           {filteredDialogues.map((d) => (
-            <Link key={d.id} href={`/chinese/dialogues/hsk${dialogueHskLevel}/${d.slug}`} prefetch={false} className={`dialogue-card${d.image ? ' dialogue-card--has-image' : ''}`}>
+            <Link key={d.id} href={`/chinese/dialogues/hsk${dialogueHskLevel}/${d.slug}`} prefetch={false} onClick={saveScroll} className={`dialogue-card${d.image ? ' dialogue-card--has-image' : ''}`}>
               {d.image ? (
                 <span className="dialogue-card__thumb" aria-hidden="true">
                   <Image src={d.image} alt="" fill sizes="(max-width: 600px) 100vw, 400px" style={{ objectFit: 'cover' }} />

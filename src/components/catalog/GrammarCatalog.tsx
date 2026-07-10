@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useStars } from '../../hooks/useStars';
+import { useScrollRestore } from '../../hooks/useScrollRestore';
 import { CatalogHeader } from './CatalogHeader';
 import { PageFooter } from '../PageFooter';
 import { trackAll } from '@/utils/analytics';
@@ -53,6 +54,8 @@ export function GrammarCatalog() {
       )
     : grammarItems;
 
+  const saveScroll = useScrollRestore('grammar-scroll', 'g', filteredGrammar.length > 0);
+
   return (
     <main className="home">
       <CatalogHeader currentTab="grammar" hskLevel="1" />
@@ -73,7 +76,7 @@ export function GrammarCatalog() {
         </div>
         <div className="home__lessons">
           {filteredGrammar.map((item) => (
-            <Link key={item.char} href={item.active ? item.href : '#'} prefetch={false} className="grammar-card">
+            <Link key={item.char} href={item.active ? item.href : '#'} prefetch={false} onClick={saveScroll} className="grammar-card">
               <span className="grammar-card__bg">{('ghost' in item && item.ghost) || item.char}</span>
               <div className="grammar-card__top">
                 <p className="grammar-card__title">{item.char} {item.pinyin}</p>

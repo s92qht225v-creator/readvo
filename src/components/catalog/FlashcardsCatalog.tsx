@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useAuth } from '../../hooks/useAuth';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useScrollRestore } from '../../hooks/useScrollRestore';
 import { CatalogHeader } from './CatalogHeader';
 import { PageFooter } from '../PageFooter';
 import { trackAll } from '@/utils/analytics';
@@ -90,6 +91,8 @@ export function FlashcardsCatalog() {
       )
     : TOPIC_ITEMS;
 
+  const saveScroll = useScrollRestore('flash-scroll', 'f', filteredTopics.length > 0);
+
   return (
     <main className="home">
       <CatalogHeader currentTab="flashcards" />
@@ -114,6 +117,7 @@ export function FlashcardsCatalog() {
               key={topic.slug}
               href={`/chinese/flashcards/topics/${topic.slug}`}
               prefetch={false}
+              onClick={saveScroll}
               style={{
                 position: 'relative',
                 background: '#fff', borderRadius: 10, padding: '14px',

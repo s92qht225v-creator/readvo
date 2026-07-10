@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { useClientSearchParam } from '../../hooks/useClientSearchParam';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useStars } from '../../hooks/useStars';
+import { useScrollRestore } from '../../hooks/useScrollRestore';
 import { CatalogHeader } from './CatalogHeader';
 import { PageFooter } from '../PageFooter';
 import { parseHskLevel, type HskLevel, type WritingSetMeta } from './types';
@@ -86,6 +87,8 @@ export function WritingCatalog({ writingSets, writingSetsHsk2, writingSetsHsk2L2
         (!!s.pinyin && s.pinyin.includes(wqToneless))
       )
     : activeSets;
+
+  const saveScroll = useScrollRestore('writing-scroll', writingHskLevel, filteredSets.length > 0);
 
   return (
     <main className="home">
@@ -168,7 +171,7 @@ export function WritingCatalog({ writingSets, writingSetsHsk2, writingSetsHsk2L2
                 {inner}
               </div>
             ) : (
-              <Link key={set.id} className="lp__writing-card" href={`/chinese/writing/hsk${writingHskLevel}/set${set.id.split('-set').pop()}`} prefetch={false}>
+              <Link key={set.id} className="lp__writing-card" href={`/chinese/writing/hsk${writingHskLevel}/set${set.id.split('-set').pop()}`} prefetch={false} onClick={saveScroll}>
                 {inner}
               </Link>
             );
