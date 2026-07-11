@@ -1,12 +1,12 @@
 {
   "id": "hsk1-dialogue18",
-  "slug": "are-you-free-tomorrow",
-  "title": "你明天有空吗？",
-  "pinyin": "Nǐ míngtiān yǒu kòng ma?",
+  "slug": "i-have-a-younger-brother",
+  "title": "我有一个弟弟。",
+  "pinyin": "Wǒ yǒu yí ge dìdi.",
   "dictationPinyin": true,
-  "titleTranslation": "Ertaga bo'sh vaqting bormi?",
-  "titleTranslation_ru": "У тебя завтра есть свободное время?",
-  "titleTranslation_en": "Are you free tomorrow?",
+  "titleTranslation": "Mening ukam bor",
+  "titleTranslation_ru": "У меня есть младший брат",
+  "titleTranslation_en": "I Have a Younger Brother",
   "description_uz": "«Ertaga bo'sh vaqting bormi?» — bir do'st boshqasini birga ovqatlanishga taklif qilyapti. Bu suhbat bo'sh vaqtni so'rash, taklif qilish va qachonligini aniqlashtirishni mashq qildiradi. Tanish kundalik mavzu, foydali so'zlar — va tabiiy bo'lguncha takrorlash uchun yetarlicha qisqa. Rol o'ynash va gapirishga ishonch hosil qilish uchun ideal.",
   "description_ru": "«Ты завтра свободен?» — один друг зовёт другого вместе поесть. Этот диалог тренирует, как спрашивать о свободном времени, приглашать и уточнять, когда. Близкая повседневная тема, полезные слова — и достаточно короткий, чтобы повторять до естественности. Отлично для ролевой игры и уверенности в речи.",
   "description_en": "«Are you free tomorrow?» — one friend invites another to eat together. This exchange practises asking about free time, extending an invitation, and pinning down when. A familiar everyday topic, useful words—and short enough to repeat until it feels natural. Perfect for role-play and building speaking confidence.",
@@ -23,10 +23,11 @@
       "sentences": [
         {
           "id": "d18-s1",
-          "text_original": "你明天有空吗？",
-          "pinyin": "Nǐ míngtiān yǒu kòng ma?",
-          "text_translation": "Ertaga bo'sh vaqting bormi?",
-          "text_translation_ru": "У тебя завтра есть свободное время?",
+          "text_original": "你有姐姐吗？",
+          "pinyin": "Nǐ yǒu jiějie ma?",
+          "text_translation": "Katta opang bormi?",
+          "text_translation_ru": "У тебя есть старшая сестра?",
+          "text_translation_en": "Do you have an older sister?",
           "speaker": "A",
           "words": [
             {
@@ -43,22 +44,143 @@
             {
               "i": [
                 1,
-                3
+                2
               ],
-              "p": "míngtiān",
-              "t": "ertaga",
-              "tr": "завтра",
+              "p": "yǒu",
+              "t": "bor",
+              "tr": "есть",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "jiějie",
+              "t": "opa",
+              "tr": "старшая сестра",
               "h": 1,
               "l": 5
             },
             {
               "i": [
-                3,
-                4
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ]
+        },
+        {
+          "id": "d18-s2",
+          "text_original": "没有。",
+          "pinyin": "Méiyǒu.",
+          "text_translation": "Yo'q.",
+          "text_translation_ru": "Нет.",
+          "text_translation_en": "No.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "méiyǒu",
+              "t": "yo'q",
+              "tr": "нет",
+              "h": 1,
+              "l": 4
+            }
+          ]
+        },
+        {
+          "id": "d18-s3",
+          "text_original": "你有妹妹吗？",
+          "pinyin": "Nǐ yǒu mèimei ma?",
+          "text_translation": "Singling bormi?",
+          "text_translation_ru": "У тебя есть младшая сестра?",
+          "text_translation_en": "Do you have a younger sister?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
               ],
               "p": "yǒu",
               "t": "bor",
-              "tr": "иметь",
+              "tr": "есть",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "mèimei",
+              "t": "singil",
+              "tr": "младшая сестра",
+              "h": 1,
+              "l": 5
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ]
+        },
+        {
+          "id": "d18-s4",
+          "text_original": "也没有，我有一个弟弟。",
+          "pinyin": "Yě méiyǒu, wǒ yǒu yí ge dìdi.",
+          "text_translation": "U ham yo'q, mening ukam bor.",
+          "text_translation_ru": "Тоже нет, у меня есть младший брат.",
+          "text_translation_en": "No either — I have a younger brother.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "yě",
+              "t": "ham",
+              "tr": "тоже",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "méiyǒu",
+              "t": "yo'q",
+              "tr": "нет",
               "h": 1,
               "l": 4
             },
@@ -67,201 +189,46 @@
                 4,
                 5
               ],
-              "p": "kòng",
-              "t": "bo'sh",
-              "tr": "свободный"
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 2
             },
             {
               "i": [
                 5,
                 6
               ],
-              "p": "ma",
-              "t": "-mi",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue1.mp3",
-          "text_translation_en": "Do you have time tomorrow?"
-        },
-        {
-          "id": "d18-s2",
-          "text_original": "有。",
-          "pinyin": "Yǒu.",
-          "text_translation": "Bor.",
-          "text_translation_ru": "Есть.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
               "p": "yǒu",
               "t": "bor",
-              "tr": "иметь",
+              "tr": "есть",
               "h": 1,
               "l": 4
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue2.mp3",
-          "text_translation_en": "Yes, I do."
-        },
-        {
-          "id": "d18-s3",
-          "text_original": "我们一起吃饭吧。",
-          "pinyin": "Wǒmen yìqǐ chīfàn ba.",
-          "text_translation": "Kel, birga ovqatlanamiz.",
-          "text_translation_ru": "Давай вместе поедим.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "yìqǐ",
-              "t": "birga",
-              "tr": "вместе"
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "chīfàn",
-              "t": "ovqat yemoq",
-              "tr": "кушать,поесть",
-              "h": 1,
-              "l": 11
             },
             {
               "i": [
                 6,
-                7
+                8
               ],
-              "p": "ba",
-              "t": "(-ylik)",
-              "tr": "(давай)",
+              "p": "yí ge",
+              "t": "bitta",
+              "tr": "один",
               "h": 1,
-              "l": 11
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue3.mp3",
-          "text_translation_en": "Let's have a meal together."
-        },
-        {
-          "id": "d18-s4",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
-          "text_translation_ru": "Хорошо.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue4.mp3",
-          "text_translation_en": "Okay."
-        },
-        {
-          "id": "d18-s5",
-          "text_original": "中午还是晚上？",
-          "pinyin": "Zhōngwǔ háishi wǎnshang?",
-          "text_translation": "Tushdami yoki kechdami?",
-          "text_translation_ru": "В обед или вечером?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "zhōngwǔ",
-              "t": "tushlik",
-              "tr": "полдень",
-              "h": 1,
-              "l": 6
+              "l": 4
             },
             {
               "i": [
-                2,
-                4
+                8,
+                10
               ],
-              "p": "háishi",
-              "t": "yoki",
-              "tr": "или"
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "wǎnshang",
-              "t": "kechasi",
-              "tr": "вечер",
+              "p": "dìdi",
+              "t": "uka",
+              "tr": "младший брат",
               "h": 1,
-              "l": 6
+              "l": 5
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue5.mp3",
-          "text_translation_en": "At noon or in the evening?"
-        },
-        {
-          "id": "d18-s6",
-          "text_original": "晚上吧。",
-          "pinyin": "Wǎnshang ba.",
-          "text_translation": "Kechda.",
-          "text_translation_ru": "Вечером.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "wǎnshang",
-              "t": "kechasi",
-              "tr": "вечер",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "ba",
-              "t": "(-sin)",
-              "tr": "(пусть)",
-              "h": 1,
-              "l": 11
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue6.mp3",
-          "text_translation_en": "In the evening."
+          ]
         }
       ],
       "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20mingtian%20you%20kong%20ma/dialogue.mp3"
