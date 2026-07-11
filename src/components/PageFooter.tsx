@@ -145,7 +145,7 @@ export function PageFooter() {
         <Link href="/chinese/grammar" className="home__footer-nav-link">{({ uz: 'Grammatika', ru: 'Грамматика', en: 'Grammar' } as Record<string, string>)[language]}</Link>
         <Link href="/chinese/dialogues" className="home__footer-nav-link">{({ uz: 'Dialoglar', ru: 'Диалоги', en: 'Dialogues' } as Record<string, string>)[language]}</Link>
         <Link href="/chinese/flashcards" className="home__footer-nav-link">{({ uz: 'Flesh-kartalar', ru: 'Флеш-карты', en: 'Flashcards' } as Record<string, string>)[language]}</Link>
-        <Link href="/blog" className="home__footer-nav-link">Blog</Link>
+        <Link href="/chinese/blog" className="home__footer-nav-link">Blog</Link>
       </nav>
       <p>{({ uz: 'Blim — Interaktiv til darsliklari', ru: 'Blim — Интерактивные учебники языков', en: 'Blim — Interactive language textbooks' } as Record<string, string>)[language]}</p>
     </footer>

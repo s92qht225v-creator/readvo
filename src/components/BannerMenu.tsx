@@ -114,7 +114,7 @@ export function BannerMenu({ extraItems }: { extraItems?: (close: () => void) =>
             </Link>
           </div>
           <div className="home__menu-divider" />
-          <Link href="/blog" className="home__menu-item" onClick={() => setMenuOpen(false)}>
+          <Link href="/chinese/blog" className="home__menu-item" onClick={() => setMenuOpen(false)}>
             Blog
           </Link>
           <Link href="/payment" className="home__menu-item" onClick={() => setMenuOpen(false)}>

@@ -7,9 +7,11 @@ import type { BlogPost } from '../services/blog';
 
 interface Props {
   posts: BlogPost[];
+  /** URL base for post links, e.g. '/chinese/blog' or '/arabic/blog'. */
+  basePath?: string;
 }
 
-export function BlogList({ posts }: Props) {
+export function BlogList({ posts, basePath = '/chinese/blog' }: Props) {
   const [language, toggleLanguage] = useLanguage();
   const isRu = language === 'ru';
   const formatDate = (dateStr: string) => {
@@ -42,7 +44,7 @@ export function BlogList({ posts }: Props) {
       </div>
       <div className="blog__list">
         {posts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`} className="blog__card">
+          <Link key={post.slug} href={`${basePath}/${post.slug}`} className="blog__card">
             <h2 className="blog__card-title">
               {language === 'ru' ? post.title_ru : language === 'en' ? (post.title_en || post.title) : post.title}
             </h2>

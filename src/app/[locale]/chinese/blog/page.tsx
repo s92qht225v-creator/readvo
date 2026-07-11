@@ -19,22 +19,23 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: m.title,
     description: m.description,
     alternates: {
-      canonical: `/${locale}/blog`,
-      languages: { uz: '/uz/blog', ru: '/ru/blog', en: '/en/blog', 'x-default': '/uz/blog' },
+      canonical: `/${locale}/chinese/blog`,
+      languages: { uz: '/uz/chinese/blog', ru: '/ru/chinese/blog', en: '/en/chinese/blog', 'x-default': '/uz/chinese/blog' },
     },
   };
 }
 
-export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ChineseBlogPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const posts = await loadBlogPosts();
+  const posts = await loadBlogPosts('chinese');
 
   const jsonLd = jsonLdScript([
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
-      { name: 'Blog', path: `/${locale}/blog` },
+      { name: 'Chinese', path: `/${locale}/chinese/dialogues` },
+      { name: 'Blog', path: `/${locale}/chinese/blog` },
     ]),
   ]);
 

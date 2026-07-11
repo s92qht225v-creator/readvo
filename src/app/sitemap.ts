@@ -75,9 +75,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   entries.push(...localeEntries('/arabic/story', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/arabic/flashcards', { changeFrequency: 'weekly', priority: 0.8 }));
 
-  entries.push(...localeEntries('/blog', { changeFrequency: 'weekly', priority: 0.7 }));
+  entries.push(...localeEntries('/chinese/blog', { changeFrequency: 'weekly', priority: 0.7 }));
   for (const p of blogPosts) {
-    entries.push(...localeEntries(`/blog/${p.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
+    entries.push(...localeEntries(`/chinese/blog/${p.slug}`, { changeFrequency: 'monthly', priority: 0.6 }));
   }
 
   return entries;

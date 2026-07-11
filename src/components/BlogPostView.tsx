@@ -90,9 +90,11 @@ function renderBody(text: string) {
 
 interface Props {
   post: BlogPost;
+  /** URL base for the back-to-blog link, e.g. '/chinese/blog'. */
+  basePath?: string;
 }
 
-export function BlogPostView({ post }: Props) {
+export function BlogPostView({ post, basePath = '/chinese/blog' }: Props) {
   const [language, toggleLanguage] = useLanguage();
   const isRu = language === 'ru';
 
@@ -112,7 +114,7 @@ export function BlogPostView({ post }: Props) {
     <main className="blog">
       <div className="blog__header">
         <div className="blog__header-top">
-          <Link href="/blog" className="blog__logo-link">
+          <Link href={basePath} className="blog__logo-link">
             <Image src="/logo-red.svg" alt="Blim" width={64} height={28} className="blog__logo-img" />
           </Link>
           <button className="page__lang-btn" onClick={toggleLanguage} type="button">

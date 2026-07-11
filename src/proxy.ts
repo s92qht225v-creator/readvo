@@ -165,6 +165,16 @@ export default function proxy(request: NextRequest) {
     }
   }
 
+  // Redirect legacy flat blog URLs to subject-first (301 permanent).
+  // Blog is now split by learning subject: /{locale}/chinese/blog/... so we
+  // can add /{locale}/arabic/blog/... etc. Old /{locale}/blog/... forwards.
+  const legacyBlog = pathname.match(/^\/(uz|ru|en)\/blog(\/[^/]+)?\/?$/);
+  if (legacyBlog) {
+    const dest = request.nextUrl.clone();
+    dest.pathname = `/${legacyBlog[1]}/chinese/blog${legacyBlog[2] || ''}`;
+    return NextResponse.redirect(dest, 301);
+  }
+
   // Redirect legacy book-first dialogue URLs to section-first (301 permanent)
   const dlgReader = pathname.match(/^\/(uz|ru|en)\/chinese\/hsk(\d)\/dialogues\/(.+)$/);
   if (dlgReader) {

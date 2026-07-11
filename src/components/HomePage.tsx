@@ -255,7 +255,7 @@ function LandingPage({ language, toggleLanguage, s }: {
             <a href="#how" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
               {s.howItWorks}
             </a>
-            <Link href="/blog" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/chinese/blog" className="landing__mobile-link" onClick={() => setMobileMenuOpen(false)}>
               Blog
             </Link>
           </div>
@@ -421,7 +421,7 @@ function LandingPage({ language, toggleLanguage, s }: {
           <Link href="/chinese/flashcards" className="landing__footer-link">{({ uz: 'Flesh-kartalar', ru: 'Флеш-карты', en: 'Flashcards' } as Record<string, string>)[language]}</Link>
           <Link href="/chinese/karaoke" className="landing__footer-link">KTV</Link>
           <Link href="/chinese/writing" className="landing__footer-link">{({ uz: 'Yozish', ru: 'Письмо', en: 'Writing' } as Record<string, string>)[language]}</Link>
-          <Link href="/blog" className="landing__footer-link">Blog</Link>
+          <Link href="/chinese/blog" className="landing__footer-link">Blog</Link>
         </div>
       </footer>
 

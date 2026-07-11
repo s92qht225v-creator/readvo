@@ -12,7 +12,7 @@ interface PageParams {
 
 export async function generateMetadata({ params }: PageParams) {
   const { locale, slug } = await params;
-  const post = await loadBlogPost(slug);
+  const post = await loadBlogPost(slug, 'chinese');
 
   const rawTitle = post
     ? locale === 'ru' ? post.title_ru
@@ -34,22 +34,22 @@ export async function generateMetadata({ params }: PageParams) {
     title: metaTitle,
     description,
     alternates: {
-      canonical: `/${locale}/blog/${slug}`,
-      languages: { uz: `/uz/blog/${slug}`, ru: `/ru/blog/${slug}`, en: `/en/blog/${slug}`, 'x-default': `/uz/blog/${slug}` },
+      canonical: `/${locale}/chinese/blog/${slug}`,
+      languages: { uz: `/uz/chinese/blog/${slug}`, ru: `/ru/chinese/blog/${slug}`, en: `/en/chinese/blog/${slug}`, 'x-default': `/uz/chinese/blog/${slug}` },
     },
   };
 }
 
 export async function generateStaticParams() {
-  const posts = await loadBlogPosts();
+  const posts = await loadBlogPosts('chinese');
   return posts.map((p) => ({ slug: p.slug }));
 }
 
-export default async function BlogPostPage({ params }: PageParams) {
+export default async function ChineseBlogPostPage({ params }: PageParams) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  const post = await loadBlogPost(slug);
+  const post = await loadBlogPost(slug, 'chinese');
 
   if (!post) {
     notFound();
@@ -80,8 +80,9 @@ export default async function BlogPostPage({ params }: PageParams) {
     ...faqJsonLd,
     breadcrumbJsonLd([
       { name: 'Blim', path: `/${locale}` },
-      { name: 'Blog', path: `/${locale}/blog` },
-      { name: title, path: `/${locale}/blog/${slug}` },
+      { name: 'Chinese', path: `/${locale}/chinese/dialogues` },
+      { name: 'Blog', path: `/${locale}/chinese/blog` },
+      { name: title, path: `/${locale}/chinese/blog/${slug}` },
     ]),
     {
       '@type': 'Article',
@@ -89,7 +90,7 @@ export default async function BlogPostPage({ params }: PageParams) {
       description,
       datePublished: post.date,
       inLanguage: locale,
-      url: `${siteUrl}/${locale}/blog/${slug}`,
+      url: `${siteUrl}/${locale}/chinese/blog/${slug}`,
       author: { '@type': 'Organization', name: 'Blim', url: siteUrl },
       publisher: { '@type': 'Organization', name: 'Blim', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.svg` } },
       ...(post.heroImage ? { image: post.heroImage } : {}),
@@ -99,7 +100,7 @@ export default async function BlogPostPage({ params }: PageParams) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
-      <BlogPostView post={post} />
+      <BlogPostView post={post} basePath={`/chinese/blog`} />
     </>
   );
 }
