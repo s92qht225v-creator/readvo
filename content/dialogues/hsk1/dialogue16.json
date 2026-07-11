@@ -1,8 +1,8 @@
 {
   "id": "hsk1-dialogue16",
   "slug": "are-you-free-today",
-  "title": "你今天有时间吗？",
-  "pinyin": "Nǐ jīntiān yǒu shíjiān ma?",
+  "title": "你明天有时间吗？",
+  "pinyin": "Nǐ míngtiān yǒu shíjiān ma?",
   "titleTranslation": "Bugun vaqtingiz bormi?",
   "titleTranslation_ru": "У тебя сегодня есть время?",
   "titleTranslation_en": "Do you have time today?",
@@ -23,10 +23,11 @@
       "sentences": [
         {
           "id": "d16-s1",
-          "text_original": "你今天有时间吗？",
-          "pinyin": "Nǐ jīntiān yǒu shíjiān ma?",
-          "text_translation": "Bugun vaqting bormi?",
-          "text_translation_ru": "У тебя сегодня есть время?",
+          "text_original": "你明天有时间吗？",
+          "pinyin": "Nǐ míngtiān yǒu shíjiān ma?",
+          "text_translation": "Ertaga vaqting bormi?",
+          "text_translation_ru": "Завтра у тебя есть время?",
+          "text_translation_en": "Do you have time tomorrow?",
           "speaker": "A",
           "words": [
             {
@@ -45,11 +46,11 @@
                 1,
                 3
               ],
-              "p": "jīntiān",
-              "t": "bugun",
-              "tr": "сегодня",
+              "p": "míngtiān",
+              "t": "ertaga",
+              "tr": "завтра",
               "h": 1,
-              "l": 5
+              "l": 6
             },
             {
               "i": [
@@ -58,7 +59,7 @@
               ],
               "p": "yǒu",
               "t": "bor",
-              "tr": "иметь",
+              "tr": "есть",
               "h": 1,
               "l": 4
             },
@@ -84,8 +85,7 @@
               "h": 1,
               "l": 2
             }
-          ],
-          "text_translation_en": "Do you have time today?"
+          ]
         },
         {
           "id": "d16-s2",
@@ -93,6 +93,7 @@
           "pinyin": "Yǒu.",
           "text_translation": "Bor.",
           "text_translation_ru": "Есть.",
+          "text_translation_en": "Yes, I do.",
           "speaker": "B",
           "words": [
             {
@@ -102,19 +103,19 @@
               ],
               "p": "yǒu",
               "t": "bor",
-              "tr": "иметь",
+              "tr": "есть",
               "h": 1,
               "l": 4
             }
-          ],
-          "text_translation_en": "Yes."
+          ]
         },
         {
           "id": "d16-s3",
-          "text_original": "我们去看电影吧。",
-          "pinyin": "Wǒmen qù kàn diànyǐng ba.",
-          "text_translation": "Kino ko'rgani boraylik.",
-          "text_translation_ru": "Давай сходим в кино.",
+          "text_original": "我们一起吃饭吧。",
+          "pinyin": "Wǒmen yìqǐ chīfàn ba.",
+          "text_translation": "Birga ovqatlanaylik.",
+          "text_translation_ru": "Давай поедим вместе.",
+          "text_translation_en": "Let's eat together.",
           "speaker": "A",
           "words": [
             {
@@ -126,27 +127,16 @@
               "t": "biz",
               "tr": "мы",
               "h": 1,
-              "l": 4
+              "l": 5
             },
             {
               "i": [
                 2,
-                3
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1,
-              "l": 8
-            },
-            {
-              "i": [
-                3,
                 4
               ],
-              "p": "kàn",
-              "t": "ko'rmoq",
-              "tr": "смотреть",
+              "p": "yìqǐ",
+              "t": "birga",
+              "tr": "вместе",
               "h": 1,
               "l": 6
             },
@@ -155,11 +145,11 @@
                 4,
                 6
               ],
-              "p": "diànyǐng",
-              "t": "kino",
-              "tr": "фильм",
+              "p": "chīfàn",
+              "t": "ovqatlanmoq",
+              "tr": "есть, кушать",
               "h": 1,
-              "l": 11
+              "l": 5
             },
             {
               "i": [
@@ -167,20 +157,19 @@
                 7
               ],
               "p": "ba",
-              "t": "(-ylik)",
-              "tr": "(давай)",
-              "h": 1,
-              "l": 11
+              "t": "-aylik",
+              "tr": "(побуждение)",
+              "h": 1
             }
-          ],
-          "text_translation_en": "Let's go watch a movie."
+          ]
         },
         {
           "id": "d16-s4",
-          "text_original": "好啊。",
-          "pinyin": "Hǎo a.",
+          "text_original": "好。",
+          "pinyin": "Hǎo.",
           "text_translation": "Yaxshi.",
           "text_translation_ru": "Хорошо.",
+          "text_translation_en": "Okay.",
           "speaker": "B",
           "words": [
             {
@@ -193,25 +182,16 @@
               "tr": "хорошо",
               "h": 1,
               "l": 1
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "a",
-              "t": "(undov)",
-              "tr": "(воскл.)"
             }
-          ],
-          "text_translation_en": "Sure."
+          ]
         },
         {
           "id": "d16-s5",
-          "text_original": "我们几点见？",
-          "pinyin": "Wǒmen jǐ diǎn jiàn?",
-          "text_translation": "Soat nechida uchrashamiz?",
-          "text_translation_ru": "Во сколько встретимся?",
+          "text_original": "中午还是晚上？",
+          "pinyin": "Zhōngwǔ háishì wǎnshang?",
+          "text_translation": "Tushdami yoki kechqurunmi?",
+          "text_translation_ru": "Днём или вечером?",
+          "text_translation_en": "Noon or evening?",
           "speaker": "A",
           "words": [
             {
@@ -219,69 +199,67 @@
                 0,
                 2
               ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
+              "p": "zhōngwǔ",
+              "t": "tush payti",
+              "tr": "полдень",
               "h": 1,
-              "l": 3
+              "l": 6
             },
             {
               "i": [
                 2,
                 4
               ],
-              "p": "jǐ diǎn",
-              "t": "soat nechida",
-              "tr": "во сколько",
+              "p": "háishì",
+              "t": "yoki",
+              "tr": "или",
               "h": 1,
-              "l": 6
+              "l": 9
             },
             {
               "i": [
                 4,
-                5
+                6
               ],
-              "p": "jiàn",
-              "t": "ko'rishmoq",
-              "tr": "встретиться",
+              "p": "wǎnshang",
+              "t": "kechqurun",
+              "tr": "вечер",
               "h": 1,
-              "l": 3
+              "l": 6
             }
-          ],
-          "text_translation_en": "What time shall we meet?"
+          ]
         },
         {
           "id": "d16-s6",
-          "text_original": "七点。",
-          "pinyin": "Qī diǎn.",
-          "text_translation": "Soat yettida.",
-          "text_translation_ru": "В семь.",
+          "text_original": "晚上吧。",
+          "pinyin": "Wǎnshang ba.",
+          "text_translation": "Kechqurun bo'la qolsin.",
+          "text_translation_ru": "Давай вечером.",
+          "text_translation_en": "Evening works.",
           "speaker": "B",
           "words": [
             {
               "i": [
                 0,
-                1
+                2
               ],
-              "p": "qī",
-              "t": "yetti",
-              "tr": "семь",
+              "p": "wǎnshang",
+              "t": "kechqurun",
+              "tr": "вечер",
               "h": 1,
-              "l": 5
+              "l": 6
             },
             {
               "i": [
-                1,
-                2
+                2,
+                3
               ],
-              "p": "diǎn",
-              "t": "soat",
-              "tr": "час",
-              "h": 1,
-              "l": 6
+              "p": "ba",
+              "t": "-a qolsin",
+              "tr": "(побуждение)",
+              "h": 1
             }
-          ],
-          "text_translation_en": "Seven o'clock."
+          ]
         }
       ]
     }
