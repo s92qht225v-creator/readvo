@@ -73,7 +73,6 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue1.mp3",
           "text_translation_en": "How do you go to school?"
         },
         {
@@ -116,7 +115,6 @@
               "tr": "автобус"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue2.mp3",
           "text_translation_en": "I go by bus."
         },
         {
@@ -159,7 +157,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue3.mp3",
           "text_translation_en": "Is the school far?"
         },
         {
@@ -191,76 +188,11 @@
               "tr": "далеко"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue4.mp3",
           "text_translation_en": "No, it isn't."
-        },
-        {
-          "id": "d19-s5",
-          "text_original": "多久到？",
-          "pinyin": "Duō jiǔ dào?",
-          "text_translation": "Qancha vaqtda yetib borasan?",
-          "text_translation_ru": "За сколько добираешься?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "duō jiǔ",
-              "t": "qancha vaqt",
-              "tr": "как долго"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "dào",
-              "t": "yetib bormoq",
-              "tr": "добраться"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue5.mp3",
-          "text_translation_en": "How long does it take?"
-        },
-        {
-          "id": "d19-s6",
-          "text_original": "二十分钟。",
-          "pinyin": "Èrshí fēnzhōng.",
-          "text_translation": "Yigirma daqiqada.",
-          "text_translation_ru": "За двадцать минут.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "èrshí",
-              "t": "yigirma",
-              "tr": "двадцать"
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "fēnzhōng",
-              "t": "daqiqa",
-              "tr": "минут",
-              "h": 1,
-              "l": 6
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue6.mp3",
-          "text_translation_en": "Twenty minutes."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue.mp3"
+      ]
     }
   ],
   "tag": "transport",
-  "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zenme%20qu%20xuexiao/dialogue.mp3"
+  "dateAdded": "2026-02-22"
 }
