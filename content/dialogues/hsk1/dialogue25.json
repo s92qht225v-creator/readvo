@@ -73,7 +73,6 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue1.mp3",
           "text_translation_en": "Where is your home?"
         },
         {
@@ -127,7 +126,6 @@
               "tr": "Шанхай"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue2.mp3",
           "text_translation_en": "My home is in Shanghai."
         },
         {
@@ -203,15 +201,14 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue3.mp3",
           "text_translation_en": "How many people are there in your family?"
         },
         {
           "id": "d25-s4",
-          "text_original": "四口人。爸爸、妈妈、弟弟和我。",
-          "pinyin": "Sì kǒu rén. Bàba, māma, dìdi hé wǒ.",
-          "text_translation": "To'rt kishi. Dadam, oyim, ukam va men.",
-          "text_translation_ru": "Четыре человека. Папа, мама, младший брат и я.",
+          "text_original": "四口人。爸爸、妈妈、哥哥和我。",
+          "pinyin": "Sì kǒu rén. Bàba, māma, gēge hé wǒ.",
+          "text_translation": "To'rt kishi. Dadam, oyim, akam va men.",
+          "text_translation_ru": "Четыре человека. Папа, мама, старший брат и я.",
           "speaker": "B",
           "words": [
             {
@@ -272,9 +269,9 @@
                 10,
                 12
               ],
-              "p": "dìdi",
-              "t": "uka",
-              "tr": "младший брат",
+              "p": "gēge",
+              "t": "aka",
+              "tr": "старший брат",
               "h": 1,
               "l": 7
             },
@@ -301,8 +298,7 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue4.mp3",
-          "text_translation_en": "Four people: dad, mom, my younger brother, and me."
+          "text_translation_en": "Four people: dad, mom, my older brother, and me."
         },
         {
           "id": "d25-s5",
@@ -357,7 +353,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue5.mp3",
           "text_translation_en": "Is your home big?"
         },
         {
@@ -391,14 +386,21 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue6.mp3",
           "text_translation_en": "Not big."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue.mp3"
+      ]
     }
   ],
   "tag": "kundalik",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20jia%20you%20ji%20kou%20ren/dialogue.mp3"
+  "vocab": [
+    "家",
+    "哪儿",
+    "上海",
+    "有",
+    "几",
+    "口",
+    "人",
+    "大"
+  ]
 }
