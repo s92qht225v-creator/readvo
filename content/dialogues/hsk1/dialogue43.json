@@ -1,17 +1,17 @@
 {
   "id": "hsk1-dialogue43",
-  "slug": "fasten-your-seatbelt",
-  "title": "安全带系好了吗？",
-  "pinyin": "Ānquándài jì hǎo le ma?",
-  "titleTranslation": "Xavfsizlik kamaringizni taqib oldingmi?",
-  "titleTranslation_ru": "Ремень безопасности пристегнул?",
-  "titleTranslation_en": "Did you fasten your seatbelt?",
-  "description_uz": "«Tayyormisan?» — ketishga shoshilayotgan ikki kishining tezkor, jonli suhbati. Boshlang'ichlar uchun ideal: tayyorgarlik haqida so'rash, yo'nalish fe'llari va shoshilinchlik bildirish mashq qilinadi. Qisqa gaplar, tabiiy takror va muhim kundalik iboralar. Tinglash, takrorlash va rolli mashq uchun ajoyib.",
-  "description_ru": "«Ты готов?» — быстрый, живой разговор двух людей, спешащих выйти. Идеально для начинающих: отрабатывает вопросы о готовности, глаголы направления и выражение спешки. Короткие фразы, естественные повторы и важные повседневные выражения. Отлично для аудирования, шэдоуинга и ролевой игры.",
-  "description_en": "«Are you ready?» — A quick, lively conversation between two people hurrying to leave. Perfect for beginners, this dialogue practices asking about readiness, using directional verbs, and expressing urgency. Short sentences, natural repetition, and essential everyday phrases. Great for listening, shadowing, and role-play practice.",
-  "category_uz": "Kundalik hayot",
-  "category_ru": "Сборы и спешка",
-  "category_en": "Daily Routines & Urgency",
+  "slug": "can-you-swim",
+  "title": "你会游泳吗？",
+  "pinyin": "Nǐ huì yóuyǒng ma?",
+  "titleTranslation": "Suzishni bilasanmi?",
+  "titleTranslation_ru": "Ты умеешь плавать?",
+  "titleTranslation_en": "Can you swim?",
+  "description_uz": "«Suzishni bilasanmi?» — ikki do'st suzish va suvdan qo'rqish haqida gaplashadi. Bu suhbat imkoniyatni so'rash (会), qo'rquvni aytish va yordam taklif qilishni o'rgatadi. «你呢？», «没关系», «真的吗？» kabi tabiiy iboralar bor. Qisqa va rag'batlantiruvchi — tinglash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Ты умеешь плавать?» — два друга говорят о плавании и страхе воды. Этот диалог учит спрашивать об умении (会), говорить о страхе и предлагать помощь. Есть естественные выражения «你呢？», «没关系», «真的吗？». Короткий и мотивирующий — отлично для аудирования и уверенности в речи.",
+  "description_en": "«Can you swim?» — Two friends talk about swimming and a fear of water. This dialogue teaches asking about ability (会), expressing fear, and offering help. It has natural expressions like 你呢？, 没关系, and 真的吗？. Short and encouraging—ideal for listening and speaking confidence.",
+  "category_uz": "Sport",
+  "category_ru": "Спорт",
+  "category_en": "Sports & Hobbies",
   "level": 1,
   "sections": [
     {
@@ -22,11 +22,11 @@
       "sentences": [
         {
           "id": "d43-s1",
-          "text_original": "你准备好了吗？",
-          "pinyin": "Nǐ zhǔnbèi hǎo le ma?",
-          "text_translation": "Tayyor bo'ldingmi?",
-          "text_translation_ru": "Ты готов?",
-          "text_translation_en": "Are you ready?",
+          "text_original": "你会游泳吗？",
+          "pinyin": "Nǐ huì yóuyǒng ma?",
+          "text_translation": "Suzishni bilasanmi?",
+          "text_translation_ru": "Ты умеешь плавать?",
+          "text_translation_en": "Can you swim?",
           "speaker": "A",
           "words": [
             {
@@ -43,39 +43,31 @@
             {
               "i": [
                 1,
-                3
+                2
               ],
-              "p": "zhǔnbèi",
-              "t": "tayyorlanmoq",
-              "tr": "готовиться"
+              "p": "huì",
+              "t": "-a olmoq",
+              "tr": "уметь",
+              "h": 1,
+              "l": 10
             },
             {
               "i": [
-                3,
+                2,
                 4
               ],
-              "p": "hǎo",
-              "t": "tayyor",
-              "tr": "готово",
-              "h": 1,
-              "l": 1
+              "p": "yóuyǒng",
+              "t": "suzmoq",
+              "tr": "плавать",
+              "h": 1
             },
             {
               "i": [
                 4,
                 5
               ],
-              "p": "le",
-              "t": "(tugallangan ish)",
-              "tr": "(завершённость)"
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
               "p": "ma",
-              "t": "(so'roq)",
+              "t": "-mi",
               "tr": "(вопрос)",
               "h": 1,
               "l": 2
@@ -84,11 +76,11 @@
         },
         {
           "id": "d43-s2",
-          "text_original": "好了。我们可以走了。",
-          "pinyin": "Hǎo le. Wǒmen kěyǐ zǒu le.",
-          "text_translation": "Tayyor. Yo'lga chiqsak bo'ladi.",
-          "text_translation_ru": "Готов. Можем ехать.",
-          "text_translation_en": "Ready. We can go.",
+          "text_original": "会，我会游泳。你呢？",
+          "pinyin": "Huì, wǒ huì yóuyǒng. Nǐ ne?",
+          "text_translation": "Ha, men suza olaman. Sen-chi?",
+          "text_translation_ru": "Да, я умею плавать. А ты?",
+          "text_translation_en": "Yes, I can swim. And you?",
           "speaker": "B",
           "words": [
             {
@@ -96,227 +88,84 @@
                 0,
                 1
               ],
-              "p": "hǎo",
-              "t": "tayyor",
-              "tr": "готово",
+              "p": "huì",
+              "t": "-a olmoq",
+              "tr": "уметь",
               "h": 1,
-              "l": 1
+              "l": 10
             },
             {
               "i": [
-                1,
-                2
-              ],
-              "p": "le",
-              "t": "(tugallangan ish)",
-              "tr": "(завершённость)"
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "kěyǐ",
-              "t": "mumkin; bo'ladi",
-              "tr": "можно"
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "zǒu",
-              "t": "ketmoq; yurmoq",
-              "tr": "идти; ехать"
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "le",
-              "t": "(holat o'zgarishi)",
-              "tr": "(изменение)"
-            }
-          ]
-        },
-        {
-          "id": "d43-s3",
-          "text_original": "安全带系好了吗？",
-          "pinyin": "Ānquándài jì hǎo le ma?",
-          "text_translation": "Xavfsizlik kamarini taqib oldingmi?",
-          "text_translation_ru": "Ремень безопасности пристегнул?",
-          "text_translation_en": "Have you fastened your seatbelt?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
+                2,
                 3
               ],
-              "p": "ānquándài",
-              "t": "xavfsizlik kamari",
-              "tr": "ремень безопасности"
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
             },
             {
               "i": [
                 3,
                 4
               ],
-              "p": "jì",
-              "t": "bog'lamoq; taqmoq",
-              "tr": "пристегнуть"
+              "p": "huì",
+              "t": "-a olmoq",
+              "tr": "уметь",
+              "h": 1,
+              "l": 10
             },
             {
               "i": [
                 4,
-                5
-              ],
-              "p": "hǎo",
-              "t": "tayyor",
-              "tr": "готово",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                5,
                 6
               ],
-              "p": "le",
-              "t": "(tugallangan ish)",
-              "tr": "(завершённость)"
+              "p": "yóuyǒng",
+              "t": "suzmoq",
+              "tr": "плавать",
+              "h": 1
             },
             {
               "i": [
-                6,
-                7
-              ],
-              "p": "ma",
-              "t": "(so'roq)",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ]
-        },
-        {
-          "id": "d43-s4",
-          "text_original": "还没有。等一下。",
-          "pinyin": "Hái méiyǒu. Děng yíxià.",
-          "text_translation": "Hali yo'q. Bir oz kut.",
-          "text_translation_ru": "Ещё нет. Подожди немного.",
-          "text_translation_en": "Not yet. Wait a moment.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                3
-              ],
-              "p": "hái méiyǒu",
-              "t": "hali yo'q",
-              "tr": "ещё нет"
-            },
-            {
-              "i": [
-                4,
-                7
-              ],
-              "p": "děng yíxià",
-              "t": "bir oz kut",
-              "tr": "подожди немного"
-            }
-          ]
-        },
-        {
-          "id": "d43-s5",
-          "text_original": "快点。我们要迟到了。",
-          "pinyin": "Kuài diǎn. Wǒmen yào chídào le.",
-          "text_translation": "Tezroq. Kechikamiz.",
-          "text_translation_ru": "Побыстрее. Мы опаздываем.",
-          "text_translation_en": "Hurry up. We're going to be late.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "kuài diǎn",
-              "t": "tezroq",
-              "tr": "побыстрее"
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "yào",
-              "t": "...moqchi (bo'lyapti)",
-              "tr": "вот-вот",
-              "h": 1,
-              "l": 7
-            },
-            {
-              "i": [
-                6,
+                7,
                 8
               ],
-              "p": "chídào",
-              "t": "kechikmoq",
-              "tr": "опаздывать"
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
             },
             {
               "i": [
                 8,
                 9
               ],
-              "p": "le",
-              "t": "(holat o'zgarishi)",
-              "tr": "(изменение)"
+              "p": "ne",
+              "t": "-chi?",
+              "tr": "а?",
+              "h": 1
             }
           ]
         },
         {
-          "id": "d43-s6",
-          "text_original": "好了。现在可以走了。",
-          "pinyin": "Hǎo le. Xiànzài kěyǐ zǒu le.",
-          "text_translation": "Bo'ldi. Endi yo'lga chiqsak bo'ladi.",
-          "text_translation_ru": "Готово. Теперь можем ехать.",
-          "text_translation_en": "Done. Now we can go.",
-          "speaker": "B",
+          "id": "d43-s3",
+          "text_original": "我不会，我怕水。",
+          "pinyin": "Wǒ bú huì, wǒ pà shuǐ.",
+          "text_translation": "Men bilmayman, suvdan qo'rqaman.",
+          "text_translation_ru": "Я не умею, я боюсь воды.",
+          "text_translation_en": "I can't, I'm afraid of water.",
+          "speaker": "A",
           "words": [
             {
               "i": [
                 0,
                 1
               ],
-              "p": "hǎo",
-              "t": "tayyor",
-              "tr": "готово",
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
               "h": 1,
               "l": 1
             },
@@ -325,63 +174,154 @@
                 1,
                 2
               ],
-              "p": "le",
-              "t": "(tugallangan ish)",
-              "tr": "(завершённость)"
+              "p": "bù",
+              "t": "(-ma-)",
+              "tr": "не",
+              "h": 1,
+              "l": 2
             },
             {
               "i": [
-                3,
+                2,
+                3
+              ],
+              "p": "huì",
+              "t": "-a olmoq",
+              "tr": "уметь",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                4,
                 5
               ],
-              "p": "xiànzài",
-              "t": "hozir; endi",
-              "tr": "сейчас; теперь",
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
               "h": 1,
-              "l": 5
+              "l": 1
             },
             {
               "i": [
                 5,
+                6
+              ],
+              "p": "pà",
+              "t": "qo'rqmoq",
+              "tr": "бояться",
+              "h": 1
+            },
+            {
+              "i": [
+                6,
                 7
               ],
-              "p": "kěyǐ",
-              "t": "mumkin; bo'ladi",
-              "tr": "можно"
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "zǒu",
-              "t": "ketmoq; yurmoq",
-              "tr": "идти; ехать"
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "le",
-              "t": "(holat o'zgarishi)",
-              "tr": "(изменение)"
+              "p": "shuǐ",
+              "t": "suv",
+              "tr": "вода",
+              "h": 1,
+              "l": 12
             }
           ]
         },
         {
-          "id": "d43-s7",
-          "text_original": "好。我们走吧！",
-          "pinyin": "Hǎo. Wǒmen zǒu ba!",
-          "text_translation": "Mayli. Ketdik!",
-          "text_translation_ru": "Хорошо. Поехали!",
-          "text_translation_en": "Okay. Let's go!",
+          "id": "d43-s4",
+          "text_original": "没关系，我教你。",
+          "pinyin": "Méi guānxi, wǒ jiāo nǐ.",
+          "text_translation": "Zarari yo'q, men senga o'rgataman.",
+          "text_translation_ru": "Ничего, я тебя научу.",
+          "text_translation_en": "It's OK, I'll teach you.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                3
+              ],
+              "p": "méi guānxi",
+              "t": "zarari yo'q",
+              "tr": "ничего",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "jiāo",
+              "t": "o'rgatmoq",
+              "tr": "учить",
+              "h": 1
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "nǐ",
+              "t": "senga",
+              "tr": "тебя",
+              "h": 1,
+              "l": 1
+            }
+          ]
+        },
+        {
+          "id": "d43-s5",
+          "text_original": "真的吗？太好了！",
+          "pinyin": "Zhēn de ma? Tài hǎo le!",
+          "text_translation": "Rostdanmi? Juda yaxshi!",
+          "text_translation_ru": "Правда? Отлично!",
+          "text_translation_en": "Really? Great!",
           "speaker": "A",
           "words": [
             {
               "i": [
                 0,
-                1
+                2
+              ],
+              "p": "zhēn de",
+              "t": "rostdan",
+              "tr": "правда",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "tài",
+              "t": "juda",
+              "tr": "слишком",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                6
               ],
               "p": "hǎo",
               "t": "yaxshi",
@@ -391,53 +331,29 @@
             },
             {
               "i": [
-                2,
-                4
+                6,
+                7
               ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
+              "p": "le",
+              "t": "(holat)",
+              "tr": "(частица)",
               "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "zǒu",
-              "t": "ketmoq; yurmoq",
-              "tr": "идти; ехать"
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "ba",
-              "t": "(taklif)",
-              "tr": "(побуждение)",
-              "h": 1,
-              "l": 6
+              "l": 8
             }
           ]
         }
       ]
     }
   ],
-  "tag": "muloqot",
+  "tag": "sport",
   "dateAdded": "2026-02-22",
   "vocab": [
-    "准备",
-    "可以",
-    "走",
-    "安全带",
-    "系",
-    "还没有",
-    "等一下",
-    "快点",
-    "要",
-    "迟到",
-    "现在"
+    "会",
+    "游泳",
+    "怕",
+    "水",
+    "没关系",
+    "教",
+    "真的"
   ]
 }
