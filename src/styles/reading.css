@@ -12975,3 +12975,54 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .fc-quiz, .fc-quiz__option--correct, .fc-quiz__option--wrong, .fc-kb__answer--correct, .fc-kb__answer--wrong, .fc-confetti__p { animation: none; }
 }
+
+/* ── My Vocabulary ─────────────────────────────────────────────────────── */
+/* Save "+"/"✓" button on dialogue Words-tab flip cards (replaces old audio btn) */
+.dr-flip__save {
+  position: absolute; top: 50%; right: 12px; transform: translateY(-50%);
+  width: 34px; height: 34px; border: 1.5px solid #dc2626; border-radius: 50%;
+  background: #fff; color: #dc2626; display: inline-flex; align-items: center;
+  justify-content: center; cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.dr-flip__save::after { content: ''; position: absolute; inset: -6px; } /* ~44px tap target */
+.dr-flip__save--done { background: #16a34a; border-color: #16a34a; color: #fff; }
+
+/* Catalog "My Vocabulary" button (between HSK pills and search) */
+.lp__vocab-btn {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  padding: 11px 14px; margin-bottom: 12px; background: #fff;
+  border: 1px solid #eee; border-radius: 10px; color: #dc2626;
+  font-weight: 600; font-size: 15px; text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.lp__vocab-btn span:not(.lp__vocab-btn-count) { color: #333; }
+.lp__vocab-btn-count {
+  margin-left: auto; min-width: 22px; height: 22px; padding: 0 7px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #dc2626; color: #fff; border-radius: 999px; font-size: 12px; font-weight: 700;
+}
+
+/* Vocabulary review deck (/chinese/vocabulary) */
+.vocab-review { max-width: 900px; margin: 0 auto; padding: 0 16px calc(80px + env(safe-area-inset-bottom)); min-height: 100vh; }
+.vr-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.vr-back { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; color: #333; border-radius: 8px; text-decoration: none; }
+.vr-title { font-size: 18px; font-weight: 700; margin: 0; color: #222; }
+.vr-empty { text-align: center; padding: 64px 20px; color: #666; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.vr-cta { display: inline-block; padding: 10px 20px; background: #dc2626; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; }
+.vr-spinner { width: 28px; height: 28px; border: 3px solid #eee; border-top-color: #dc2626; border-radius: 50%; animation: spin .8s linear infinite; }
+.vr-deck { display: flex; flex-direction: column; align-items: center; gap: 20px; padding-top: 12px; }
+.vr-counter { color: #999; font-size: 14px; font-weight: 600; }
+.vr-card { width: 100%; max-width: 420px; aspect-ratio: 3 / 2; perspective: 1200px; cursor: pointer; touch-action: pan-y; user-select: none; }
+.vr-card__inner { position: relative; width: 100%; height: 100%; transition: transform .45s; transform-style: preserve-3d; }
+.vr-card--flipped .vr-card__inner { transform: rotateY(180deg); }
+.vr-card__face { position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: #fff; border: 1px solid #eee; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,.08); padding: 20px; }
+.vr-card__back { transform: rotateY(180deg); }
+.vr-card__py { font-size: 18px; color: #dc2626; font-style: italic; }
+.vr-card__zh { font-size: 52px; line-height: 1.1; color: #111; }
+.vr-card__hint { position: absolute; bottom: 12px; font-size: 12px; color: #bbb; }
+.vr-card__meaning { font-size: 26px; color: #222; text-align: center; }
+.vr-controls { display: flex; align-items: center; gap: 16px; }
+.vr-nav { width: 52px; height: 52px; border-radius: 50%; border: none; background: #f1f1f1; color: #333; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.vr-nav:disabled { opacity: .4; cursor: default; }
+.vr-remove { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; border: 1px solid #eee; background: #fff; color: #dc2626; border-radius: 999px; font-weight: 600; font-size: 14px; cursor: pointer; }

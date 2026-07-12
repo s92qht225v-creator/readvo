@@ -7,6 +7,7 @@ import { useClientSearchParam } from '../../hooks/useClientSearchParam';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useStars } from '../../hooks/useStars';
 import { useScrollRestore } from '../../hooks/useScrollRestore';
+import { useSavedVocab } from '../../hooks/useSavedVocab';
 import { CatalogHeader } from './CatalogHeader';
 import { PageFooter } from '../PageFooter';
 import { TAGS, BOOKMARK_KEY, parseHskLevel, type HskLevel } from './types';
@@ -29,6 +30,7 @@ export function DialoguesCatalog({ dialogues, dialoguesHsk2, dialoguesHsk3, dial
   // spinner) and bounced anonymous visitors who could have seen the catalog.
   const [language] = useLanguage();
   const { getStars: getDialogueStars } = useStars('dialogue');
+  const { count: vocabCount } = useSavedVocab();
 
   // Dialogue filters
   const [search, setSearch] = useState('');
@@ -149,6 +151,15 @@ export function DialoguesCatalog({ dialogues, dialoguesHsk2, dialoguesHsk3, dial
 
       {/* Content */}
       <section className="home__content">
+        {/* My Vocabulary — words saved from dialogue Words tabs, reviewed as a swipe deck */}
+        <Link href="/chinese/vocabulary" className="lp__vocab-btn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          </svg>
+          <span>{({ uz: "Mening lug'atim", ru: 'Мой словарь', en: 'My Vocabulary' } as Record<string, string>)[language]}</span>
+          {vocabCount > 0 && <span className="lp__vocab-btn-count">{vocabCount}</span>}
+        </Link>
+
         {/* Search */}
         <div className="dialogues__search">
           <svg className="dialogues__search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
