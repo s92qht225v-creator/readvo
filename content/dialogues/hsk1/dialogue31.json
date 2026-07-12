@@ -214,8 +214,8 @@
         },
         {
           "id": "d31-s4",
-          "text_original": "好的，我发什么？",
-          "pinyin": "Hǎo de, wǒ fā shénme?",
+          "text_original": "好的，发什么？",
+          "pinyin": "Hǎo de, fā shénme?",
           "text_translation": "Mayli, nima yuboray?",
           "text_translation_ru": "Хорошо, что отправить?",
           "text_translation_en": "OK, what should I send?",
@@ -236,17 +236,6 @@
                 3,
                 4
               ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
               "p": "fā",
               "t": "yubormoq",
               "tr": "отправить",
@@ -254,8 +243,8 @@
             },
             {
               "i": [
-                5,
-                7
+                4,
+                6
               ],
               "p": "shénme",
               "t": "nima",
@@ -267,10 +256,10 @@
         },
         {
           "id": "d31-s5",
-          "text_original": "发你的位置。",
-          "pinyin": "Fā nǐ de wèizhi.",
-          "text_translation": "Joylashuvingni yubor.",
-          "text_translation_ru": "Отправь свою локацию.",
+          "text_original": "发定位。",
+          "pinyin": "Fā dìngwèi.",
+          "text_translation": "Lokatsiyangni yubor.",
+          "text_translation_ru": "Отправь геолокацию.",
           "text_translation_en": "Send your location.",
           "speaker": "A",
           "words": [
@@ -287,33 +276,11 @@
             {
               "i": [
                 1,
-                2
-              ],
-              "p": "nǐ",
-              "t": "sening",
-              "tr": "твой",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                2,
                 3
               ],
-              "p": "de",
-              "t": "(-ning)",
-              "tr": "(прит. част.)",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "wèizhi",
-              "t": "joylashuv",
-              "tr": "локация",
+              "p": "dìngwèi",
+              "t": "lokatsiya (GPS)",
+              "tr": "геолокация",
               "h": 1
             }
           ]
@@ -364,5 +331,17 @@
     }
   ],
   "tag": "muloqot",
-  "dateAdded": "2026-02-22"
+  "dateAdded": "2026-02-22",
+  "vocab": [
+    "哪儿",
+    "太",
+    "吵",
+    "街上",
+    "发",
+    "信息",
+    "给",
+    "什么",
+    "定位",
+    "马上"
+  ]
 }
