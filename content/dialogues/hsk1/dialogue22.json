@@ -62,7 +62,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20leng%20ma/dialogue1.mp3",
           "text_translation_en": "Are you cold?"
         },
         {
@@ -96,7 +95,6 @@
               "l": 12
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20leng%20ma/dialogue2.mp3",
           "text_translation_en": "A little."
         },
         {
@@ -137,15 +135,14 @@
               "tr": "кондиционер"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20leng%20ma/dialogue3.mp3",
           "text_translation_en": "Shall I turn on the air conditioner?"
         },
         {
           "id": "d22-s4",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Ha, mayli.",
-          "text_translation_ru": "Да, пожалуйста.",
+          "text_original": "要。",
+          "pinyin": "Yào.",
+          "text_translation": "Ha, xohlayman.",
+          "text_translation_ru": "Да, хочу.",
           "speaker": "B",
           "words": [
             {
@@ -153,14 +150,12 @@
                 0,
                 1
               ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
+              "p": "yào",
+              "t": "xohlamoq; kerak",
+              "tr": "хотеть; нужно",
+              "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20leng%20ma/dialogue4.mp3",
           "text_translation_en": "Yes, please."
         },
         {
@@ -194,7 +189,6 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20leng%20ma/dialogue5.mp3",
           "text_translation_en": "It's on."
         },
         {
@@ -217,14 +211,23 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20leng%20ma/dialogue6.mp3",
           "text_translation_en": "Thank you."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20leng%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "kundalik",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20leng%20ma/dialogue.mp3"
+  "vocab": [
+    "冷",
+    "一点",
+    {
+      "zh": "要",
+      "uz": "xohlamoq; kerak",
+      "ru": "хотеть; нужно",
+      "en": "to want; need"
+    },
+    "开",
+    "空调"
+  ]
 }
