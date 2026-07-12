@@ -86,10 +86,10 @@
         },
         {
           "id": "d29-s2",
-          "text_original": "对。",
-          "pinyin": "Duì.",
-          "text_translation": "Ha.",
-          "text_translation_ru": "Да.",
+          "text_original": "对的。",
+          "pinyin": "Duì de.",
+          "text_translation": "To'g'ri.",
+          "text_translation_ru": "Верно.",
           "speaker": "B",
           "words": [
             {
@@ -102,9 +102,20 @@
               "tr": "верно",
               "h": 1,
               "l": 4
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "de",
+              "t": "(yukl.)",
+              "tr": "(част.)",
+              "h": 1,
+              "l": 2
             }
           ],
-          "text_translation_en": "Yes."
+          "text_translation_en": "That's right."
         },
         {
           "id": "d29-s3",
