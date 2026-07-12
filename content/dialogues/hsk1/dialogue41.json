@@ -49,7 +49,6 @@
               "tr": "счёт"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/keyi%20shua%20ka%20ma/dialogue1.mp3",
           "text_translation_en": "Waiter, the bill please."
         },
         {
@@ -70,7 +69,6 @@
               "tr": "хорошо"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/keyi%20shua%20ka%20ma/dialogue2.mp3",
           "text_translation_en": "OK."
         },
         {
@@ -113,7 +111,6 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/keyi%20shua%20ka%20ma/dialogue3.mp3",
           "text_translation_en": "How much is it in total?"
         },
         {
@@ -154,7 +151,6 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/keyi%20shua%20ka%20ma/dialogue4.mp3",
           "text_translation_en": "One hundred and twenty yuan."
         },
         {
@@ -197,7 +193,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/keyi%20shua%20ka%20ma/dialogue5.mp3",
           "text_translation_en": "Can I pay by card?"
         },
         {
@@ -220,21 +215,22 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/keyi%20shua%20ka%20ma/dialogue6.mp3",
           "text_translation_en": "Yes, you can."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/keyi%20shua%20ka%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/keyi%20shua%20ka%20ma/dialogue.mp3",
   "vocab": [
     "服务员",
     "买单",
     "一共",
-    "多少钱",
+    "多少",
+    "钱",
+    "一百",
+    "二十",
+    "块",
     "可以",
     "刷卡"
   ]
