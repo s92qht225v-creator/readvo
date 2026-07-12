@@ -93,6 +93,7 @@ export default function proxy(request: NextRequest) {
   // slug changes so old/shared links keep working.
   const RENAMED_DIALOGUE_SLUGS: Record<string, string> = {
     'hsk1/are-you-free-tomorrow': 'i-have-a-younger-brother',
+    'hsk1/wrong-wechat': 'sending-a-message',
     'hsk2/at-the-restaurant': 'are-you-hungry',
     'hsk2/weather-and-plans': 'how-is-the-weather-tomorrow',
     'hsk2/at-the-hotel': 'how-much-per-night',

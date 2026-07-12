@@ -1,17 +1,17 @@
 {
   "id": "hsk1-dialogue30",
-  "slug": "wrong-wechat",
-  "title": "这不是我的微信",
-  "pinyin": "Zhè bú shì wǒ de Wēixìn",
-  "titleTranslation": "Bu mening Wechатим emas",
-  "titleTranslation_ru": "Это не мой WeChat",
-  "titleTranslation_en": "That's not my WeChat",
-  "description_uz": "«Bu sening WeChating emas» — ikki kishi yuborilmagan xabar va noto'g'ri kontakt haqida gaplashadi. Bu suhbat o'tgan harakatni aytish, olmaganini bildirish va qayta urinishni o'rgatadi. Tegishlilik savoli va inkor ham bor. Zamonaviy, foydali mavzu — shadowing va gapirishga ishonch uchun ideal.",
-  "description_ru": "«Это не твой WeChat» — двое говорят о неполученном сообщении и неверном контакте. Этот диалог учит называть прошедшее действие, сообщать, что не получил, и пробовать снова. Есть и вопрос о принадлежности, и отрицание. Современная, полезная тема — отлично для шэдоуинга и уверенности в речи.",
-  "description_en": "«That's not my WeChat» — Two people sort out a message that never arrived and a wrong contact. This dialogue teaches stating a past action, reporting non-receipt, and trying again. It also covers a possession question and a negation. A modern, useful topic—ideal for shadowing and building speaking confidence.",
-  "category_uz": "Texnologiya",
-  "category_ru": "Технологии",
-  "category_en": "Technology",
+  "slug": "sending-a-message",
+  "title": "我在发信息",
+  "pinyin": "Wǒ zài fā xìnxī",
+  "titleTranslation": "Xabar yuboryapman",
+  "titleTranslation_ru": "Я отправляю сообщение",
+  "titleTranslation_en": "I'm sending a message",
+  "description_uz": "«Nima qilyapsan?» — ikki do'st hozir nima qilayotgani, kimga xabar yuborayotgani va oila haqida gaplashadi. Bu suhbat davom etayotgan harakatni so'rash (在...), kimga ekanini aniqlash va joyni aytishni o'rgatadi. Qisqa va tabiiy — tinglash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Что ты делаешь?» — два друга говорят о том, что происходит сейчас, кому пишут сообщение и о семье. Этот диалог учит спрашивать о текущем действии (在...), уточнять кому и называть место. Короткий и естественный — отлично для аудирования и уверенности в речи.",
+  "description_en": "«What are you doing?» — Two friends chat about what's happening right now, who they're texting, and family. This dialogue teaches asking about an ongoing action (在...), clarifying to whom, and stating a place. Short and natural—ideal for listening and speaking confidence.",
+  "category_uz": "Muloqot",
+  "category_ru": "Общение",
+  "category_en": "Communication",
   "level": 1,
   "sections": [
     {
@@ -22,10 +22,11 @@
       "sentences": [
         {
           "id": "d30-s1",
-          "text_original": "我早上给你发信息了。",
-          "pinyin": "Wǒ zǎoshang gěi nǐ fā xìnxī le.",
-          "text_translation": "Men ertalab senga xabar yubordim.",
-          "text_translation_ru": "Я отправил тебе сообщение сегодня утром.",
+          "text_original": "你在干什么？",
+          "pinyin": "Nǐ zài gàn shénme?",
+          "text_translation": "Nima qilyapsan?",
+          "text_translation_ru": "Что ты делаешь?",
+          "text_translation_en": "What are you doing?",
           "speaker": "A",
           "words": [
             {
@@ -33,80 +34,53 @@
                 0,
                 1
               ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
               "h": 1,
               "l": 1
             },
             {
               "i": [
                 1,
+                2
+              ],
+              "p": "zài",
+              "t": "(-yapti)",
+              "tr": "(прогрессив)",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
                 3
               ],
-              "p": "zǎoshang",
-              "t": "ertalab",
-              "tr": "утром"
+              "p": "gàn",
+              "t": "qilmoq",
+              "tr": "делать",
+              "h": 1
             },
             {
               "i": [
                 3,
-                4
-              ],
-              "p": "gěi",
-              "t": "(-ga)",
-              "tr": "(кому-л.)"
-            },
-            {
-              "i": [
-                4,
                 5
               ],
-              "p": "nǐ",
-              "t": "senga",
-              "tr": "тебе",
+              "p": "shénme",
+              "t": "nima",
+              "tr": "что",
               "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "fā",
-              "t": "yubormoq",
-              "tr": "отправить"
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "xìnxī",
-              "t": "xabar",
-              "tr": "сообщение"
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "le",
-              "t": "(o'tgan zamon)",
-              "tr": "(прош. время)",
-              "h": 1,
-              "l": 8
+              "l": 3
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue1.mp3",
-          "text_translation_en": "I sent you a message this morning."
+          ]
         },
         {
           "id": "d30-s2",
-          "text_original": "我没收到。",
-          "pinyin": "Wǒ méi shōudào.",
-          "text_translation": "Men olmadim.",
-          "text_translation_ru": "Я не получила.",
+          "text_original": "我在发信息。",
+          "pinyin": "Wǒ zài fā xìnxī.",
+          "text_translation": "Xabar yuboryapman.",
+          "text_translation_ru": "Я отправляю сообщение.",
+          "text_translation_en": "I'm sending a message.",
           "speaker": "B",
           "words": [
             {
@@ -125,133 +99,41 @@
                 1,
                 2
               ],
-              "p": "méi",
-              "t": "(-ma-)",
-              "tr": "не (прош.)",
+              "p": "zài",
+              "t": "(-yapti)",
+              "tr": "(прогрессив)",
               "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "shōudào",
-              "t": "olmoq",
-              "tr": "получить"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue2.mp3",
-          "text_translation_en": "I didn't receive it."
-        },
-        {
-          "id": "d30-s3",
-          "text_original": "那我再发一遍。",
-          "pinyin": "Nà wǒ zài fā yí biàn.",
-          "text_translation": "Unda yana bir marta yuboraman.",
-          "text_translation_ru": "Тогда я отправлю ещё раз.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nà",
-              "t": "unda",
-              "tr": "тогда",
-              "h": 1,
-              "l": 10
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 1
+              "l": 7
             },
             {
               "i": [
                 2,
                 3
-              ],
-              "p": "zài",
-              "t": "yana",
-              "tr": "ещё раз"
-            },
-            {
-              "i": [
-                3,
-                4
               ],
               "p": "fā",
               "t": "yubormoq",
-              "tr": "отправить"
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "yí biàn",
-              "t": "bir marta",
-              "tr": "один раз"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue3.mp3",
-          "text_translation_en": "Then I'll send it again."
-        },
-        {
-          "id": "d30-s4",
-          "text_original": "还是没收到。",
-          "pinyin": "Háishi méi shōudào.",
-          "text_translation": "Hali ham kelmadi.",
-          "text_translation_ru": "Всё ещё не получила.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "háishi",
-              "t": "hali ham",
-              "tr": "всё ещё"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "méi",
-              "t": "(-ma-)",
-              "tr": "не (прош.)",
-              "h": 1,
-              "l": 4
+              "tr": "отправлять",
+              "h": 1
             },
             {
               "i": [
                 3,
                 5
               ],
-              "p": "shōudào",
-              "t": "olmoq/kelmoq",
-              "tr": "получить"
+              "p": "xìnxī",
+              "t": "xabar",
+              "tr": "сообщение",
+              "h": 1
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue4.mp3",
-          "text_translation_en": "Still didn't receive it."
+          ]
         },
         {
-          "id": "d30-s5",
-          "text_original": "这是你的微信吗？",
-          "pinyin": "Zhè shì nǐ de Wēixìn ma?",
-          "text_translation": "Bu sening Wechatingmi?",
-          "text_translation_ru": "Это твой WeChat?",
+          "id": "d30-s3",
+          "text_original": "给谁发？",
+          "pinyin": "Gěi shéi fā?",
+          "text_translation": "Kimga yuboryapsan?",
+          "text_translation_ru": "Кому отправляешь?",
+          "text_translation_en": "Who are you sending it to?",
           "speaker": "A",
           "words": [
             {
@@ -259,58 +141,121 @@
                 0,
                 1
               ],
-              "p": "zhè",
-              "t": "bu",
-              "tr": "это",
-              "h": 1,
-              "l": 10
+              "p": "gěi",
+              "t": "(-ga)",
+              "tr": "кому",
+              "h": 1
             },
             {
               "i": [
                 1,
                 2
               ],
-              "p": "shì",
-              "t": "bo'lmoq",
-              "tr": "быть",
-              "h": 1,
-              "l": 2
+              "p": "shéi",
+              "t": "kim",
+              "tr": "кто",
+              "h": 1
             },
             {
               "i": [
                 2,
                 3
               ],
-              "p": "nǐ",
-              "t": "sening",
-              "tr": "твой",
+              "p": "fā",
+              "t": "yubormoq",
+              "tr": "отправлять",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "d30-s4",
+          "text_original": "给我妈妈。",
+          "pinyin": "Gěi wǒ māma.",
+          "text_translation": "Oyimga.",
+          "text_translation_ru": "Маме.",
+          "text_translation_en": "To my mom.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "gěi",
+              "t": "(-ga)",
+              "tr": "кому",
+              "h": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "wǒ",
+              "t": "mening",
+              "tr": "мой",
               "h": 1,
               "l": 1
             },
             {
               "i": [
-                3,
+                2,
                 4
               ],
-              "p": "de",
-              "t": "(-ning)",
-              "tr": "(прит. част.)",
+              "p": "māma",
+              "t": "oyi",
+              "tr": "мама",
+              "h": 1,
+              "l": 7
+            }
+          ]
+        },
+        {
+          "id": "d30-s5",
+          "text_original": "她在中国吗？",
+          "pinyin": "Tā zài Zhōngguó ma?",
+          "text_translation": "U Xitoydami?",
+          "text_translation_ru": "Она в Китае?",
+          "text_translation_en": "Is she in China?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "tā",
+              "t": "u",
+              "tr": "она",
               "h": 1,
               "l": 2
             },
             {
               "i": [
-                4,
-                6
+                1,
+                2
               ],
-              "p": "Wēixìn",
-              "t": "Wechat",
-              "tr": "WeChat"
+              "p": "zài",
+              "t": "-da",
+              "tr": "в/на",
+              "h": 1,
+              "l": 7
             },
             {
               "i": [
-                6,
-                7
+                2,
+                4
+              ],
+              "p": "Zhōngguó",
+              "t": "Xitoy",
+              "tr": "Китай",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                5
               ],
               "p": "ma",
               "t": "-mi",
@@ -318,16 +263,15 @@
               "h": 1,
               "l": 2
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue5.mp3",
-          "text_translation_en": "Is this your WeChat?"
+          ]
         },
         {
           "id": "d30-s6",
-          "text_original": "不是。",
-          "pinyin": "Bú shì.",
-          "text_translation": "Yo'q.",
-          "text_translation_ru": "Нет.",
+          "text_original": "对，她在北京。",
+          "pinyin": "Duì, tā zài Běijīng.",
+          "text_translation": "Ha, u Pekinda.",
+          "text_translation_ru": "Да, она в Пекине.",
+          "text_translation_en": "Yes, she's in Beijing.",
           "speaker": "B",
           "words": [
             {
@@ -335,32 +279,49 @@
                 0,
                 1
               ],
-              "p": "bú",
-              "t": "emas",
-              "tr": "не",
+              "p": "duì",
+              "t": "ha, to'g'ri",
+              "tr": "да, верно",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "tā",
+              "t": "u",
+              "tr": "она",
               "h": 1,
               "l": 2
             },
             {
               "i": [
-                1,
-                2
+                3,
+                4
               ],
-              "p": "shì",
-              "t": "bo'lmoq",
-              "tr": "быть",
+              "p": "zài",
+              "t": "-da",
+              "tr": "в/на",
               "h": 1,
-              "l": 2
+              "l": 7
+            },
+            {
+              "i": [
+                4,
+                6
+              ],
+              "p": "Běijīng",
+              "t": "Pekin",
+              "tr": "Пекин",
+              "h": 1
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue6.mp3",
-          "text_translation_en": "No, it's not."
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue.mp3"
+      ]
     }
   ],
-  "tag": "telefon",
-  "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zhe%20bu%20shi%20wo%20de%20weixin/dialogue.mp3"
+  "tag": "muloqot",
+  "dateAdded": "2026-02-22"
 }
