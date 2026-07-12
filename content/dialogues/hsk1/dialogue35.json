@@ -308,11 +308,25 @@
   "tag": "transport",
   "dateAdded": "2026-02-22",
   "vocab": [
+    "什么时候",
     "走",
-    "坐",
+    "明天",
+    {
+      "zh": "坐",
+      "uz": "minmoq (transportda)",
+      "ru": "ехать на (транспорте)",
+      "en": "to take/ride (transport)"
+    },
     "火车",
     "飞机",
-    "还是",
-    "送"
+    "几点",
+    "送",
+    "早上",
+    {
+      "zh": "点",
+      "uz": "soat (vaqt)",
+      "ru": "час (время)",
+      "en": "o'clock"
+    }
   ]
 }
