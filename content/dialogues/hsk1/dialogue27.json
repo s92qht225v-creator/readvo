@@ -75,8 +75,8 @@
         },
         {
           "id": "d27-s2",
-          "text_original": "有。",
-          "pinyin": "Yǒu.",
+          "text_original": "有的。",
+          "pinyin": "Yǒu de.",
           "text_translation": "Bor.",
           "text_translation_ru": "Есть.",
           "speaker": "B",
@@ -91,9 +91,20 @@
               "tr": "иметь",
               "h": 1,
               "l": 4
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "de",
+              "t": "(yukl.)",
+              "tr": "(част.)",
+              "h": 1,
+              "l": 2
             }
           ],
-          "text_translation_en": "Yes."
+          "text_translation_en": "Yes, I do."
         },
         {
           "id": "d27-s3",
