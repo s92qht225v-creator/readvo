@@ -82,7 +82,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zai%20yinhang/dialogue1.mp3",
           "text_translation_en": "Are you here to withdraw money?"
         },
         {
@@ -105,7 +104,6 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zai%20yinhang/dialogue2.mp3",
           "text_translation_en": "Yes."
         },
         {
@@ -157,7 +155,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zai%20yinhang/dialogue3.mp3",
           "text_translation_en": "Did you bring your bank card?"
         },
         {
@@ -189,7 +186,6 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zai%20yinhang/dialogue4.mp3",
           "text_translation_en": "Yes, I did."
         },
         {
@@ -230,7 +226,6 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zai%20yinhang/dialogue5.mp3",
           "text_translation_en": "How much do you want to withdraw?"
         },
         {
@@ -262,14 +257,33 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zai%20yinhang/dialogue6.mp3",
           "text_translation_en": "One thousand yuan."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zai%20yinhang/dialogue.mp3"
+      ]
     }
   ],
   "tag": "xaridlar",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zai%20yinhang/dialogue.mp3"
+  "vocab": [
+    {
+      "zh": "来",
+      "uz": "kelmoq",
+      "ru": "приходить",
+      "en": "to come"
+    },
+    "取",
+    "钱",
+    "对",
+    "带",
+    "银行卡",
+    {
+      "zh": "要",
+      "uz": "xohlamoq; kerak",
+      "ru": "хотеть; нужно",
+      "en": "to want; need"
+    },
+    "多少",
+    "一千",
+    "块"
+  ]
 }
