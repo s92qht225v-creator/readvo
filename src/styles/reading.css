@@ -12991,7 +12991,7 @@ body {
 /* Catalog "My Vocabulary" button (between HSK pills and search) */
 .lp__vocab-btn {
   display: flex; align-items: center; gap: 8px; width: 100%;
-  padding: 11px 14px; margin-bottom: 12px; background: #fff;
+  padding: 11px 14px; margin-top: calc(12px - var(--spacing-lg)); margin-bottom: 12px; background: #fff;
   border: 1px solid #eee; border-radius: 10px; color: #dc2626;
   font-weight: 600; font-size: 15px; text-decoration: none;
   box-shadow: 0 1px 3px rgba(0,0,0,.05);
