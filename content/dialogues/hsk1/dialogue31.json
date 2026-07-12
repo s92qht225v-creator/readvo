@@ -6,9 +6,9 @@
   "titleTranslation": "Juda shovqin ekan",
   "titleTranslation_ru": "Слишком шумно",
   "titleTranslation_en": "It's too noisy",
-  "description_uz": "«Juda shovqinli» — ikki kishi gapni eshitish qiyinligi haqida suhbatlashadi. Bu suhbat imkoniyatni so'rash, holatni ta'kidlash va yechim taklif qilishni o'rgatadi. Rozilik so'zi ham bor. Hayotiy va foydali vaziyat — rol o'ynash va og'zaki nutq uchun ajoyib.",
-  "description_ru": "«Слишком шумно» — двое говорят о том, что трудно расслышать. Этот диалог учит спрашивать о возможности, подчёркивать состояние и предлагать решение. Есть и слово согласия. Жизненная и полезная ситуация — отлично для ролевой игры и устной речи.",
-  "description_en": "«It's too noisy» — Two people talk about struggling to hear each other. This dialogue teaches asking about ability, emphasizing a state, and proposing a fix. It also has an agreement word. A lifelike, useful situation—great for role-play and spoken Chinese.",
+  "description_uz": "«Qayerdasan? Juda shovqin!» — ikki do'st telefonda gaplashadi, atrofda esa shovqin. Bu suhbat joyni so'rash, xabar va joylashuv (lokatsiya) yuborishni so'rash va tez javob berishni o'rgatadi. «在...», «给», «吧» kabi foydali tuzilmalar bor. Qisqa va zamonaviy — tinglash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Ты где? Очень шумно!» — два друга говорят по телефону, а вокруг шум. Этот диалог учит спрашивать о месте, просить прислать сообщение и геолокацию и быстро отвечать. Есть полезные конструкции «在...», «给», «吧». Короткий и современный — отлично для аудирования и уверенности в речи.",
+  "description_en": "«Where are you? It's so noisy!» — Two friends talk on the phone with noise all around. This dialogue teaches asking about location, requesting a message and a shared location, and replying quickly. It includes handy patterns like 在..., 给, and 吧. Short and modern—ideal for listening and speaking confidence.",
   "category_uz": "Kundalik hayot",
   "category_ru": "Повседневная жизнь",
   "category_en": "Everyday Life",
@@ -22,10 +22,11 @@
       "sentences": [
         {
           "id": "d31-s1",
-          "text_original": "你听得清吗？",
-          "pinyin": "Nǐ tīng de qīng ma?",
-          "text_translation": "Meni yaxshi eshityapsanmi?",
-          "text_translation_ru": "Ты меня хорошо слышишь?",
+          "text_original": "你在哪儿？太吵了！",
+          "pinyin": "Nǐ zài nǎr? Tài chǎo le!",
+          "text_translation": "Qayerdasan? Juda shovqin!",
+          "text_translation_ru": "Ты где? Очень шумно!",
+          "text_translation_en": "Where are you? It's so noisy!",
           "speaker": "A",
           "words": [
             {
@@ -44,11 +45,255 @@
                 1,
                 2
               ],
-              "p": "tīng",
-              "t": "eshitmoq",
-              "tr": "слушать",
+              "p": "zài",
+              "t": "-da",
+              "tr": "в/на",
               "h": 1,
-              "l": 10
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "nǎr",
+              "t": "qayer",
+              "tr": "где",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "tài",
+              "t": "juda",
+              "tr": "слишком",
+              "h": 1
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "chǎo",
+              "t": "shovqinli",
+              "tr": "шумно",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "le",
+              "t": "(holat)",
+              "tr": "(частица)",
+              "h": 1,
+              "l": 8
+            }
+          ]
+        },
+        {
+          "id": "d31-s2",
+          "text_original": "我在街上。",
+          "pinyin": "Wǒ zài jiē shang.",
+          "text_translation": "Ko'chadaman.",
+          "text_translation_ru": "Я на улице.",
+          "text_translation_en": "I'm on the street.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "zài",
+              "t": "-da",
+              "tr": "на",
+              "h": 1,
+              "l": 7
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "jiē shang",
+              "t": "ko'chada",
+              "tr": "на улице",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "d31-s3",
+          "text_original": "你发信息给我吧。",
+          "pinyin": "Nǐ fā xìnxī gěi wǒ ba.",
+          "text_translation": "Menga xabar yuborsang-chi.",
+          "text_translation_ru": "Отправь мне сообщение.",
+          "text_translation_en": "Send me a message.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "fā",
+              "t": "yubormoq",
+              "tr": "отправить",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "xìnxī",
+              "t": "xabar",
+              "tr": "сообщение",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "gěi",
+              "t": "(-ga)",
+              "tr": "мне",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "wǒ",
+              "t": "menga",
+              "tr": "мне",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "ba",
+              "t": "(-chi)",
+              "tr": "(побуждение)",
+              "h": 1,
+              "l": 11
+            }
+          ]
+        },
+        {
+          "id": "d31-s4",
+          "text_original": "好的，我发什么？",
+          "pinyin": "Hǎo de, wǒ fā shénme?",
+          "text_translation": "Mayli, nima yuboray?",
+          "text_translation_ru": "Хорошо, что отправить?",
+          "text_translation_en": "OK, what should I send?",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "hǎo de",
+              "t": "mayli",
+              "tr": "хорошо",
+              "h": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "fā",
+              "t": "yubormoq",
+              "tr": "отправить",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "shénme",
+              "t": "nima",
+              "tr": "что",
+              "h": 1,
+              "l": 3
+            }
+          ]
+        },
+        {
+          "id": "d31-s5",
+          "text_original": "发你的位置。",
+          "pinyin": "Fā nǐ de wèizhi.",
+          "text_translation": "Joylashuvingni yubor.",
+          "text_translation_ru": "Отправь свою локацию.",
+          "text_translation_en": "Send your location.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "fā",
+              "t": "yubormoq",
+              "tr": "отправить",
+              "h": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "nǐ",
+              "t": "sening",
+              "tr": "твой",
+              "h": 1,
+              "l": 1
             },
             {
               "i": [
@@ -56,231 +301,30 @@
                 3
               ],
               "p": "de",
-              "t": "(imkoniyat)",
-              "tr": "(возможность)"
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "qīng",
-              "t": "aniq",
-              "tr": "чётко"
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "ma",
-              "t": "-mi",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue1.mp3",
-          "text_translation_en": "Can you hear me clearly?"
-        },
-        {
-          "id": "d31-s2",
-          "text_original": "听不清。",
-          "pinyin": "Tīng bu qīng.",
-          "text_translation": "Yo'q, yaxshi eshitmayapman.",
-          "text_translation_ru": "Нет, плохо слышу.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "tīng",
-              "t": "eshitmoq",
-              "tr": "слушать",
-              "h": 1,
-              "l": 10
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "bu",
-              "t": "emas",
-              "tr": "не",
+              "t": "(-ning)",
+              "tr": "(прит. част.)",
               "h": 1,
               "l": 2
             },
             {
               "i": [
-                2,
-                3
-              ],
-              "p": "qīng",
-              "t": "aniq",
-              "tr": "чётко"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue2.mp3",
-          "text_translation_en": "No, I can't."
-        },
-        {
-          "id": "d31-s3",
-          "text_original": "这里太吵了。",
-          "pinyin": "Zhèlǐ tài chǎo le.",
-          "text_translation": "Bu yer juda shovqin ekan.",
-          "text_translation_ru": "Здесь слишком шумно.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "zhèlǐ",
-              "t": "bu yerda",
-              "tr": "здесь"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "tài",
-              "t": "juda",
-              "tr": "слишком",
-              "h": 1,
-              "l": 12
-            },
-            {
-              "i": [
                 3,
-                4
-              ],
-              "p": "chǎo",
-              "t": "shovqinli",
-              "tr": "шумный"
-            },
-            {
-              "i": [
-                4,
                 5
               ],
-              "p": "le",
-              "t": "(kuchay.)",
-              "tr": "(усилит.)",
-              "h": 1,
-              "l": 8
+              "p": "wèizhi",
+              "t": "joylashuv",
+              "tr": "локация",
+              "h": 1
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue3.mp3",
-          "text_translation_en": "It's too noisy here."
-        },
-        {
-          "id": "d31-s4",
-          "text_original": "对，很吵。",
-          "pinyin": "Duì, hěn chǎo.",
-          "text_translation": "Ha, juda shovqin.",
-          "text_translation_ru": "Да, очень шумно.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "duì",
-              "t": "to'g'ri",
-              "tr": "верно",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "hěn",
-              "t": "juda",
-              "tr": "очень",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "chǎo",
-              "t": "shovqinli",
-              "tr": "шумный"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue4.mp3",
-          "text_translation_en": "Yes, it is. It's very noisy."
-        },
-        {
-          "id": "d31-s5",
-          "text_original": "我们出去说吧。",
-          "pinyin": "Wǒmen chūqù shuō ba.",
-          "text_translation": "Kel, tashqariga chiqib gaplashaylik.",
-          "text_translation_ru": "Давай выйдем и поговорим.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "chūqù",
-              "t": "chiqmoq",
-              "tr": "выйти"
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "shuō",
-              "t": "gapirmoq",
-              "tr": "говорить",
-              "h": 1,
-              "l": 10
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "ba",
-              "t": "(-ylik)",
-              "tr": "(давай)",
-              "h": 1,
-              "l": 11
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue5.mp3",
-          "text_translation_en": "Let's go outside and talk."
+          ]
         },
         {
           "id": "d31-s6",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
-          "text_translation_ru": "Хорошо.",
+          "text_original": "好，马上发！",
+          "pinyin": "Hǎo, mǎshàng fā!",
+          "text_translation": "Mayli, hoziroq yuboraman!",
+          "text_translation_ru": "Хорошо, сейчас отправлю!",
+          "text_translation_en": "OK, sending right now!",
           "speaker": "B",
           "words": [
             {
@@ -289,20 +333,36 @@
                 1
               ],
               "p": "hǎo",
-              "t": "yaxshi",
+              "t": "mayli",
               "tr": "хорошо",
               "h": 1,
               "l": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "mǎshàng",
+              "t": "hoziroq",
+              "tr": "сейчас же",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "fā",
+              "t": "yubormoq",
+              "tr": "отправить",
+              "h": 1
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue6.mp3",
-          "text_translation_en": "Okay."
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue.mp3"
+      ]
     }
   ],
   "tag": "muloqot",
-  "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/tai%20chao%20le/dialogue.mp3"
+  "dateAdded": "2026-02-22"
 }
