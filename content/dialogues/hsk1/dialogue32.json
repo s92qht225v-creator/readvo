@@ -6,9 +6,9 @@
   "titleTranslation": "Tirbandlik",
   "titleTranslation_ru": "Пробка",
   "titleTranslation_en": "Traffic jam",
-  "description_uz": "«Nega endi kelyapsan?» — bir kishi kechikkani uchun uzr so'raydi. Bu suhbat kechikish sababini so'rash, uzr bilan sabab aytish va kutganini bildirishni o'rgatadi. «» kabi muloyim uzr ham bor. Kundalik, tanish vaziyat — shadowing va gapirishga ishonch uchun ideal.",
-  "description_ru": "«Почему ты только сейчас пришёл?» — один человек извиняется за опоздание. Этот диалог учит спрашивать о причине задержки, извиняться и называть причину и сообщать, что ждал. Есть и вежливое извинение «». Бытовая, знакомая ситуация — отлично для шэдоуинга и уверенности в речи.",
-  "description_en": "«Why are you only getting here now?» — One person apologizes for being late. This dialogue teaches asking the reason for a delay, apologizing with a cause, and saying you waited. It also includes a polite apology,. A familiar everyday situation—ideal for shadowing and building speaking confidence.",
+  "description_uz": "«Yetib keldingmi?» — telefon suhbatida bir do'st ikkinchisidan qayerdaligini so'raydi, u esa tirbandda qolganini aytadi. Bu suhbat yetib kelishni so'rash, yo'ldaligini aytish, tirbandlikni tasvirlash va qachon yetib kelishini so'rashni o'rgatadi. Kundalik, foydali vaziyat — rol o'ynash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Ты доехал?» — по телефону один друг спрашивает другого, где он, а тот отвечает, что застрял в пробке. Этот диалог учит спрашивать о прибытии, говорить, что ты в пути, описывать пробку и спрашивать, когда приедешь. Бытовая, полезная ситуация — отлично для ролевой игры и уверенности в речи.",
+  "description_en": "«Have you arrived?» — Over the phone, one friend asks where the other is, and they say they're stuck in traffic. This dialogue teaches asking about arrival, saying you're on the way, describing a traffic jam, and asking when. A useful everyday situation—great for role-play and speaking confidence.",
   "category_uz": "Transport",
   "category_ru": "Транспорт",
   "category_en": "Transport",
@@ -22,10 +22,11 @@
       "sentences": [
         {
           "id": "d32-s1",
-          "text_original": "你怎么才来？",
-          "pinyin": "Nǐ zěnme cái lái?",
-          "text_translation": "Nega endi kelding?",
-          "text_translation_ru": "Почему так поздно пришёл?",
+          "text_original": "你到了吗？",
+          "pinyin": "Nǐ dào le ma?",
+          "text_translation": "Yetib keldingmi?",
+          "text_translation_ru": "Ты доехал?",
+          "text_translation_en": "Have you arrived?",
           "speaker": "A",
           "words": [
             {
@@ -42,106 +43,12 @@
             {
               "i": [
                 1,
-                3
-              ],
-              "p": "zěnme",
-              "t": "nega",
-              "tr": "почему",
-              "h": 1,
-              "l": 7
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "cái",
-              "t": "endi",
-              "tr": "только сейчас"
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "lái",
-              "t": "kelmoq",
-              "tr": "приходить",
-              "h": 1,
-              "l": 8
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue1.mp3",
-          "text_translation_en": "Why are you only just arriving?"
-        },
-        {
-          "id": "d32-s2",
-          "text_original": "对不起，路上堵车。",
-          "pinyin": "Duìbuqǐ, lùshang dǔchē.",
-          "text_translation": "Kechirasan, yo'l tirband ekan.",
-          "text_translation_ru": "Извини, на дороге была пробка.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                3
-              ],
-              "p": "duìbuqǐ",
-              "t": "kechirasiz",
-              "tr": "извини",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "lùshang",
-              "t": "yo'lda",
-              "tr": "на дороге"
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "dǔchē",
-              "t": "tirbandlik",
-              "tr": "пробка"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue2.mp3",
-          "text_translation_en": "Sorry, there was a traffic jam on the way."
-        },
-        {
-          "id": "d32-s3",
-          "text_original": "我等了你很久。",
-          "pinyin": "Wǒ děng le nǐ hěn jiǔ.",
-          "text_translation": "Seni ancha kutdim.",
-          "text_translation_ru": "Я тебя долго ждала.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
                 2
               ],
-              "p": "děng",
-              "t": "kutmoq",
-              "tr": "ждать"
+              "p": "dào",
+              "t": "yetib bormoq",
+              "tr": "доезжать",
+              "h": 1
             },
             {
               "i": [
@@ -159,9 +66,42 @@
                 3,
                 4
               ],
-              "p": "nǐ",
-              "t": "seni",
-              "tr": "тебя",
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
+              "h": 1,
+              "l": 2
+            }
+          ]
+        },
+        {
+          "id": "d32-s2",
+          "text_original": "没有。我在路上。堵车了！",
+          "pinyin": "Méiyǒu. Wǒ zài lùshang. Dǔchē le!",
+          "text_translation": "Yo'q. Yo'ldaman. Tirbandlik!",
+          "text_translation_ru": "Нет. Я в пути. Пробка!",
+          "text_translation_en": "Not yet. I'm on the way. There's a traffic jam!",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                2
+              ],
+              "p": "méiyǒu",
+              "t": "yo'q",
+              "tr": "нет",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
               "h": 1,
               "l": 1
             },
@@ -170,104 +110,92 @@
                 4,
                 5
               ],
-              "p": "hěn",
-              "t": "juda",
-              "tr": "очень",
+              "p": "zài",
+              "t": "-da",
+              "tr": "на",
               "h": 1,
-              "l": 1
+              "l": 7
             },
             {
               "i": [
                 5,
-                6
+                7
               ],
-              "p": "jiǔ",
-              "t": "uzoq",
-              "tr": "долго"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue3.mp3",
-          "text_translation_en": "I've been waiting for you for a long time."
-        },
-        {
-          "id": "d32-s4",
-          "text_original": "不好意思。",
-          "pinyin": "Bù hǎoyìsi.",
-          "text_translation": "Uzr so'rayman.",
-          "text_translation_ru": "Прости.",
-          "speaker": "B",
-          "words": [
+              "p": "lùshang",
+              "t": "yo'lda",
+              "tr": "в пути"
+            },
             {
               "i": [
-                0,
-                4
+                8,
+                10
               ],
-              "p": "bù hǎoyìsi",
-              "t": "uzr so'rayman",
-              "tr": "мне неловко"
+              "p": "dǔchē",
+              "t": "tirbandlik",
+              "tr": "пробка"
+            },
+            {
+              "i": [
+                10,
+                11
+              ],
+              "p": "le",
+              "t": "(holat o'zgarishi)",
+              "tr": "(изменение)",
+              "h": 1,
+              "l": 8
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue4.mp3",
-          "text_translation_en": "I'm sorry."
+          ]
         },
         {
-          "id": "d32-s5",
-          "text_original": "下次早点出门。",
-          "pinyin": "Xià cì zǎo diǎn chūmén.",
-          "text_translation": "Keyingi safar ertaroq yo'lga chiq.",
-          "text_translation_ru": "В следующий раз выходи пораньше.",
+          "id": "d32-s3",
+          "text_original": "很堵吗？",
+          "pinyin": "Hěn dǔ ma?",
+          "text_translation": "Juda tirbandmi?",
+          "text_translation_ru": "Сильная пробка?",
+          "text_translation_en": "Is it a bad jam?",
           "speaker": "A",
           "words": [
             {
               "i": [
                 0,
+                1
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                1,
                 2
               ],
-              "p": "xià cì",
-              "t": "keyingi safar",
-              "tr": "в следующий раз",
-              "h": 1,
-              "l": 13
+              "p": "dǔ",
+              "t": "tirband",
+              "tr": "забитый (пробка)"
             },
             {
               "i": [
                 2,
                 3
               ],
-              "p": "zǎo",
-              "t": "erta",
-              "tr": "рано"
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "diǎn",
-              "t": "biroz",
-              "tr": "немного",
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
               "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "chūmén",
-              "t": "chiqmoq",
-              "tr": "выходить из дома"
+              "l": 2
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue5.mp3",
-          "text_translation_en": "Leave earlier next time."
+          ]
         },
         {
-          "id": "d32-s6",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
-          "text_translation_ru": "Хорошо.",
+          "id": "d32-s4",
+          "text_original": "对，很堵。车很多。",
+          "pinyin": "Duì, hěn dǔ. Chē hěn duō.",
+          "text_translation": "Ha, juda tirband. Mashina ko'p.",
+          "text_translation_ru": "Да, сильная. Машин много.",
+          "text_translation_en": "Yeah, really bad. Lots of cars.",
           "speaker": "B",
           "words": [
             {
@@ -275,21 +203,164 @@
                 0,
                 1
               ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
+              "p": "duì",
+              "t": "ha, to'g'ri",
+              "tr": "да, верно",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "dǔ",
+              "t": "tirband",
+              "tr": "забитый (пробка)"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "chē",
+              "t": "mashina",
+              "tr": "машина",
+              "h": 1
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
+              "h": 1,
+              "l": 3
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "duō",
+              "t": "ko'p",
+              "tr": "много",
+              "h": 1,
+              "l": 9
+            }
+          ]
+        },
+        {
+          "id": "d32-s5",
+          "text_original": "你什么时候到？",
+          "pinyin": "Nǐ shénme shíhou dào?",
+          "text_translation": "Qachon yetib kelasan?",
+          "text_translation_ru": "Когда доедешь?",
+          "text_translation_en": "When will you arrive?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
               "h": 1,
               "l": 1
+            },
+            {
+              "i": [
+                1,
+                5
+              ],
+              "p": "shénme shíhou",
+              "t": "qachon",
+              "tr": "когда"
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "dào",
+              "t": "yetib bormoq",
+              "tr": "доезжать",
+              "h": 1
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue6.mp3",
-          "text_translation_en": "OK."
+          ]
+        },
+        {
+          "id": "d32-s6",
+          "text_original": "我不知道。",
+          "pinyin": "Wǒ bù zhīdào.",
+          "text_translation": "Bilmayman.",
+          "text_translation_ru": "Не знаю.",
+          "text_translation_en": "I don't know.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "zhīdào",
+              "t": "bilmoq",
+              "tr": "знать",
+              "h": 1
+            }
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue.mp3"
+      ]
     }
   ],
   "tag": "muloqot",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/du%20che/dialogue.mp3"
+  "vocab": [
+    "到",
+    "没有",
+    "路上",
+    "堵车",
+    "堵",
+    "车",
+    "多",
+    "什么时候",
+    "知道"
+  ]
 }
