@@ -170,8 +170,8 @@
         },
         {
           "id": "d39-s4",
-          "text_original": "我写一半。",
-          "pinyin": "Wǒ xiě yíbàn.",
+          "text_original": "我写了一半。",
+          "pinyin": "Wǒ xiě le yíbàn.",
           "text_translation": "Yarmini yozdim.",
           "text_translation_ru": "Половину написал.",
           "text_translation_en": "I've written half.",
@@ -201,7 +201,18 @@
             {
               "i": [
                 2,
-                4
+                3
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                3,
+                5
               ],
               "p": "yíbàn",
               "t": "yarmi",
