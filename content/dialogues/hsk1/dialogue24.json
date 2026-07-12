@@ -60,7 +60,6 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20ke%20le/dialogue1.mp3",
           "text_translation_en": "I'm thirsty."
         },
         {
@@ -114,7 +113,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20ke%20le/dialogue2.mp3",
           "text_translation_en": "Want some water?"
         },
         {
@@ -135,7 +133,6 @@
               "tr": "хотеть"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20ke%20le/dialogue3.mp3",
           "text_translation_en": "Yes."
         },
         {
@@ -198,7 +195,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20ke%20le/dialogue4.mp3",
           "text_translation_en": "Cold or hot?"
         },
         {
@@ -230,14 +226,25 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20ke%20le/dialogue5.mp3",
           "text_translation_en": "Room temperature."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20ke%20le/dialogue.mp3"
+      ]
     }
   ],
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20ke%20le/dialogue.mp3"
+  "vocab": [
+    "渴",
+    "喝",
+    "水",
+    {
+      "zh": "要",
+      "uz": "xohlamoq; kerak",
+      "ru": "хотеть; нужно",
+      "en": "to want; need"
+    },
+    "冰",
+    "热",
+    "常温"
+  ]
 }
