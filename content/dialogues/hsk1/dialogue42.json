@@ -1,14 +1,14 @@
 {
   "id": "hsk1-dialogue42",
   "slug": "delivery-arrived",
-  "title": "外卖到了",
-  "pinyin": "Wàimài dào le",
-  "titleTranslation": "Dostavka yetib keldi",
-  "titleTranslation_ru": "Доставка приехала",
-  "titleTranslation_en": "The delivery has arrived",
-  "description_uz": "«Yetkazma keldimi?» — bir kishi buyurtma qilingan ovqat yetib kelganini bilib oladi. Bu suhbat yetib keldimi deb so'rashni, qayerda deb so'rashni va joyni aytishni mashq qiladi. «Pastga tushib olib kelaman» iborasi ham bor. Kundalik va qisqa — soya bo'lib takrorlash va gapirishga ishonch hosil qilish uchun ayni muddao.",
-  "description_ru": "«Доставка пришла?» — человек узнаёт, что заказанная еда прибыла. Этот диалог тренирует вопрос «пришло ли», вопрос «где» и указание места. Есть выражение «я спущусь и заберу». Бытовой и короткий — идеален для шэдоуинга и уверенности в речи.",
-  "description_en": "«Has the delivery arrived?» — someone learns that the food they ordered has come. This dialogue practises asking if something has arrived, asking «where», and giving a location. The phrase «I'll go down and get it» appears too. Everyday and short—perfect for shadowing and building speaking confidence.",
+  "title": "我不想做饭",
+  "pinyin": "Wǒ bù xiǎng zuò fàn",
+  "titleTranslation": "Ovqat qilgim kelmayapti",
+  "titleTranslation_ru": "Не хочу готовить",
+  "titleTranslation_en": "I don't want to cook",
+  "description_uz": "«Ovqatlandingmi?» — ikki do'st ovqat haqida gaplashib, yetkazib berishga buyurtma berishga qaror qiladi. Bu suhbat «ovqatlandingmi» deb so'rash, xohishni bildirish va nima yemoqchi ekanini so'rashni o'rgatadi. «Ovqat qilgim kelmayapti» iborasi ham bor. Kundalik, foydali vaziyat — rol o'ynash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Ты поел?» — два друга говорят о еде и решают заказать доставку. Этот диалог учит спрашивать «поел ли ты», выражать желание и спрашивать, что хочешь съесть. Есть фраза «не хочу готовить». Бытовая, полезная ситуация — отлично для ролевой игры и уверенности в речи.",
+  "description_en": "«Have you eaten?» — Two friends talk about food and decide to order delivery. This dialogue teaches asking «have you eaten», expressing what you want, and asking what someone wants to eat. The phrase «I don't want to cook» appears too. A useful everyday situation—great for role-play and speaking confidence.",
   "category_uz": "Yetkazib berish",
   "category_ru": "Доставка",
   "category_en": "Delivery",
@@ -22,29 +22,33 @@
       "sentences": [
         {
           "id": "d42-s1",
-          "text_original": "外卖到了吗？",
-          "pinyin": "Wàimài dào le ma?",
-          "text_translation": "Dostavka yetib keldimi?",
-          "text_translation_ru": "Доставка приехала?",
+          "text_original": "你吃饭了吗？",
+          "pinyin": "Nǐ chī fàn le ma?",
+          "text_translation": "Ovqatlandingmi?",
+          "text_translation_ru": "Ты поел?",
+          "text_translation_en": "Have you eaten?",
           "speaker": "A",
           "words": [
             {
               "i": [
                 0,
-                2
+                1
               ],
-              "p": "wàimài",
-              "t": "yetkazib berish",
-              "tr": "доставка еды"
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
             },
             {
               "i": [
-                2,
+                1,
                 3
               ],
-              "p": "dào",
-              "t": "yetib kelmoq",
-              "tr": "прибыть"
+              "p": "chī fàn",
+              "t": "ovqatlanmoq",
+              "tr": "есть, кушать",
+              "h": 1
             },
             {
               "i": [
@@ -68,129 +72,31 @@
               "h": 1,
               "l": 2
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue1.mp3",
-          "text_translation_en": "Has the takeout arrived?"
+          ]
         },
         {
           "id": "d42-s2",
-          "text_original": "到了。",
-          "pinyin": "Dào le.",
-          "text_translation": "Yetib keldi.",
-          "text_translation_ru": "Приехала.",
+          "text_original": "还没有，我不想做饭。",
+          "pinyin": "Hái méiyǒu, wǒ bù xiǎng zuò fàn.",
+          "text_translation": "Hali yo'q, ovqat qilgim kelmayapti.",
+          "text_translation_ru": "Ещё нет, не хочу готовить.",
+          "text_translation_en": "Not yet, I don't want to cook.",
           "speaker": "B",
           "words": [
             {
               "i": [
                 0,
-                1
-              ],
-              "p": "dào",
-              "t": "yetib kelmoq",
-              "tr": "прибыть"
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "le",
-              "t": "(o'tgan zamon)",
-              "tr": "(прош. время)",
-              "h": 1,
-              "l": 8
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue2.mp3",
-          "text_translation_en": "Yes, it has."
-        },
-        {
-          "id": "d42-s3",
-          "text_original": "在哪儿？",
-          "pinyin": "Zài nǎr?",
-          "text_translation": "Qayerda?",
-          "text_translation_ru": "Где?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "zài",
-              "t": "-da",
-              "tr": "в/на",
-              "h": 1,
-              "l": 7
-            },
-            {
-              "i": [
-                1,
                 3
               ],
-              "p": "nǎr",
-              "t": "qayerda",
-              "tr": "где",
-              "h": 1,
-              "l": 7
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue3.mp3",
-          "text_translation_en": "Where is it?"
-        },
-        {
-          "id": "d42-s4",
-          "text_original": "在楼下。",
-          "pinyin": "Zài lóuxià.",
-          "text_translation": "Pastda.",
-          "text_translation_ru": "Внизу.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "zài",
-              "t": "-da",
-              "tr": "в/на",
-              "h": 1,
-              "l": 7
+              "p": "hái méiyǒu",
+              "t": "hali yo'q",
+              "tr": "ещё нет",
+              "h": 1
             },
             {
               "i": [
-                1,
-                3
-              ],
-              "p": "lóuxià",
-              "t": "pastda",
-              "tr": "внизу"
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue4.mp3",
-          "text_translation_en": "Downstairs."
-        },
-        {
-          "id": "d42-s5",
-          "text_original": "好的，我下去拿。",
-          "pinyin": "Hǎo de, wǒ xiàqù ná.",
-          "text_translation": "Xo'p, men pastga tushib olaman.",
-          "text_translation_ru": "Хорошо, я спущусь и возьму.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "hǎo de",
-              "t": "xo'p",
-              "tr": "хорошо"
-            },
-            {
-              "i": [
-                3,
-                4
+                4,
+                5
               ],
               "p": "wǒ",
               "t": "men",
@@ -200,32 +106,97 @@
             },
             {
               "i": [
-                4,
+                5,
                 6
               ],
-              "p": "xiàqù",
-              "t": "pastga tushmoq",
-              "tr": "спуститься"
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
             },
             {
               "i": [
                 6,
                 7
               ],
-              "p": "ná",
-              "t": "olmoq",
-              "tr": "взять"
+              "p": "xiǎng",
+              "t": "xohlamoq",
+              "tr": "хотеть",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "zuò fàn",
+              "t": "ovqat qilmoq",
+              "tr": "готовить",
+              "h": 1
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue5.mp3",
-          "text_translation_en": "OK, I'll go down and get it."
+          ]
         },
         {
-          "id": "d42-s6",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
-          "text_translation_ru": "Хорошо.",
+          "id": "d42-s3",
+          "text_original": "那我们点外卖吧。",
+          "pinyin": "Nà wǒmen diǎn wàimài ba.",
+          "text_translation": "Unda yetkazib berishga buyurtma beraylik.",
+          "text_translation_ru": "Тогда закажем доставку.",
+          "text_translation_en": "Then let's order takeout.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nà",
+              "t": "unda",
+              "tr": "тогда",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "wǒmen",
+              "t": "biz",
+              "tr": "мы",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                3,
+                6
+              ],
+              "p": "diǎn wàimài",
+              "t": "yetkazib berishga buyurtma bermoq",
+              "tr": "заказать доставку"
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "ba",
+              "t": "(-aylik)",
+              "tr": "(давай)",
+              "h": 1,
+              "l": 11
+            }
+          ]
+        },
+        {
+          "id": "d42-s4",
+          "text_original": "好！你想吃什么？",
+          "pinyin": "Hǎo! Nǐ xiǎng chī shénme?",
+          "text_translation": "Yaxshi! Nima yeging keladi?",
+          "text_translation_ru": "Хорошо! Что хочешь съесть?",
+          "text_translation_en": "OK! What do you want to eat?",
           "speaker": "B",
           "words": [
             {
@@ -238,24 +209,170 @@
               "tr": "хорошо",
               "h": 1,
               "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "xiǎng",
+              "t": "xohlamoq",
+              "tr": "хотеть",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "shénme",
+              "t": "nima",
+              "tr": "что",
+              "h": 1,
+              "l": 3
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue6.mp3",
-          "text_translation_en": "OK."
+          ]
+        },
+        {
+          "id": "d42-s5",
+          "text_original": "我想吃肉。",
+          "pinyin": "Wǒ xiǎng chī ròu.",
+          "text_translation": "Go'sht yegim keladi.",
+          "text_translation_ru": "Хочу мяса.",
+          "text_translation_en": "I want to eat meat.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "xiǎng",
+              "t": "xohlamoq",
+              "tr": "хотеть",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "chī",
+              "t": "yemoq",
+              "tr": "есть",
+              "h": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "ròu",
+              "t": "go'sht",
+              "tr": "мясо",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "d42-s6",
+          "text_original": "好，我点肉。",
+          "pinyin": "Hǎo, wǒ diǎn ròu.",
+          "text_translation": "Yaxshi, go'sht buyurtma qilaman.",
+          "text_translation_ru": "Хорошо, закажу мясо.",
+          "text_translation_en": "OK, I'll order meat.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "diǎn",
+              "t": "buyurtma qilmoq",
+              "tr": "заказать",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ròu",
+              "t": "go'sht",
+              "tr": "мясо",
+              "h": 1
+            }
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/waimai%20dao%20le%20ma/dialogue.mp3",
   "vocab": [
-    "外卖",
-    "到",
-    "哪儿",
-    "楼下",
-    "下去",
-    "拿"
+    "吃饭",
+    "还没有",
+    "做饭",
+    "那",
+    "点外卖",
+    "想",
+    "吃",
+    "什么",
+    "肉"
   ]
 }
