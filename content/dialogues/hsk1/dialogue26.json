@@ -179,10 +179,10 @@
         },
         {
           "id": "d26-s4",
-          "text_original": "难。",
-          "pinyin": "Nán.",
-          "text_translation": "Qiyin.",
-          "text_translation_ru": "Трудно.",
+          "text_original": "不难。",
+          "pinyin": "Bù nán.",
+          "text_translation": "Qiyin emas.",
+          "text_translation_ru": "Не трудно.",
           "speaker": "B",
           "words": [
             {
@@ -190,12 +190,23 @@
                 0,
                 1
               ],
+              "p": "bù",
+              "t": "emas",
+              "tr": "не",
+              "h": 1,
+              "l": 2
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
               "p": "nán",
               "t": "qiyin",
               "tr": "трудный"
             }
           ],
-          "text_translation_en": "It's difficult."
+          "text_translation_en": "It's not hard."
         },
         {
           "id": "d26-s5",
