@@ -60,7 +60,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue1.mp3",
           "text_translation_en": "Is it raining outside?"
         },
         {
@@ -93,7 +92,6 @@
               "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue2.mp3",
           "text_translation_en": "Yes, it is."
         },
         {
@@ -156,7 +154,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue3.mp3",
           "text_translation_en": "Did you bring an umbrella?"
         },
         {
@@ -188,7 +185,6 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue4.mp3",
           "text_translation_en": "Yes, I did."
         },
         {
@@ -242,7 +238,6 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue5.mp3",
           "text_translation_en": "Then let's go."
         },
         {
@@ -265,14 +260,19 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue6.mp3",
           "text_translation_en": "Okay."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "kundalik",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20dai%20san%20le%20ma/dialogue.mp3"
+  "vocab": [
+    "外面",
+    "下雨",
+    "带",
+    "伞",
+    "那",
+    "走"
+  ]
 }
