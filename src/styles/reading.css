@@ -12986,7 +12986,7 @@ body {
   transition: background .15s, color .15s, border-color .15s;
 }
 .dr-flip__save::after { content: ''; position: absolute; inset: -6px; } /* ~44px tap target */
-.dr-flip__save--done { background: #16a34a; border-color: #16a34a; color: #fff; }
+.dr-flip__save--done { background: #dc2626; border-color: #dc2626; color: #fff; }
 
 /* Catalog "My Vocabulary" button (between HSK pills and search) */
 .lp__vocab-btn {
