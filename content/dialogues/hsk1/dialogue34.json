@@ -82,7 +82,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue1.mp3",
           "text_translation_en": "Are you ready?"
         },
         {
@@ -114,7 +113,6 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue2.mp3",
           "text_translation_en": "Not yet."
         },
         {
@@ -164,7 +162,6 @@
               "tr": "долго"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue3.mp3",
           "text_translation_en": "How much longer?"
         },
         {
@@ -198,7 +195,6 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue4.mp3",
           "text_translation_en": "Five minutes."
         },
         {
@@ -270,39 +266,13 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue5.mp3",
           "text_translation_en": "Hurry up, we'll be late."
-        },
-        {
-          "id": "d34-s6",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
-          "text_translation_ru": "Хорошо.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "yaxshi",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue6.mp3",
-          "text_translation_en": "OK."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "reja",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20zhunbei%20hao%20le%20ma/dialogue.mp3",
   "vocab": [
     "准备",
     {

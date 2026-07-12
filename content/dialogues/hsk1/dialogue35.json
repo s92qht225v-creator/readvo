@@ -60,7 +60,6 @@
               "tr": "уходить"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue1.mp3",
           "text_translation_en": "When are you leaving?"
         },
         {
@@ -83,7 +82,6 @@
               "l": 5
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue2.mp3",
           "text_translation_en": "Tomorrow."
         },
         {
@@ -150,7 +148,6 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue3.mp3",
           "text_translation_en": "By train or by plane?"
         },
         {
@@ -184,7 +181,6 @@
               "l": 11
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue4.mp3",
           "text_translation_en": "By plane."
         },
         {
@@ -260,7 +256,6 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue5.mp3",
           "text_translation_en": "What time is the flight? I'll take you."
         },
         {
@@ -305,16 +300,13 @@
               "l": 6
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue6.mp3",
           "text_translation_en": "At eight o'clock in the morning."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue.mp3"
+      ]
     }
   ],
   "tag": "transport",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20song%20ni/dialogue.mp3",
   "vocab": [
     "走",
     "坐",
