@@ -60,7 +60,6 @@
               "l": 7
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20hen%20jinzhang/dialogue1.mp3",
           "text_translation_en": "How have you been lately?"
         },
         {
@@ -112,7 +111,6 @@
               "tr": "занят"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20hen%20jinzhang/dialogue2.mp3",
           "text_translation_en": "I've been very busy lately."
         },
         {
@@ -144,7 +142,6 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20hen%20jinzhang/dialogue3.mp3",
           "text_translation_en": "Busy with what?"
         },
         {
@@ -194,7 +191,6 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20hen%20jinzhang/dialogue4.mp3",
           "text_translation_en": "I have an exam next month."
         },
         {
@@ -226,7 +222,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20hen%20jinzhang/dialogue5.mp3",
           "text_translation_en": "Are you nervous?"
         },
         {
@@ -247,22 +242,21 @@
               "tr": "волноваться"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20hen%20jinzhang/dialogue6.mp3",
           "text_translation_en": "Yes, I am."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20hen%20jinzhang/dialogue.mp3"
+      ]
     }
   ],
   "tag": "ish",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20hen%20jinzhang/dialogue.mp3",
   "vocab": [
     "紧张",
-    "最近",
+    "怎么样",
+    "很",
     "忙",
-    "考试",
+    "什么",
+    "下个月",
     "要",
-    "下个月"
+    "考试"
   ]
 }
