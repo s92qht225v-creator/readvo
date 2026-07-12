@@ -6,12 +6,12 @@
   "titleTranslation": "Yodimdan chiqibdi",
   "titleTranslation_ru": "Я забыл",
   "titleTranslation_en": "I forgot",
-  "description_uz": "«Uy vazifangni olib keldingmi?» — bir do'st boshqasining yana uyga vazifani unutganini ko'rib qoladi. Bu suhbat narsa olib kelganmi-yo'qmi deb so'rashni, takror harakatni bildirishni va eslab qolishni so'rashni mashq qiladi. Kechirim so'rash va ertangi kun ham uchraydi. Qisqa va kundalik — soya bo'lib takrorlash hamda rol o'ynash uchun ayni muddao.",
-  "description_ru": "«Ты принёс домашнее задание?» — один друг замечает, что другой снова забыл взять задание домой. Этот диалог тренирует вопрос о том, взял ли ты что-то, выражение повторного действия и просьбу не забыть. Встречаются извинение и слово «завтра». Короткий и бытовой — идеален для шэдоуинга и ролевой игры.",
-  "description_en": "«Did you bring your homework?» — one friend notices the other forgot to bring their assignment again. This dialogue practises asking whether you brought something, marking a repeated action, and reminding someone to remember. It also slips in an apology and «tomorrow». Short and everyday—ideal for shadowing and quick role-play.",
-  "category_uz": "Maktab va odatlar",
-  "category_ru": "Школа и привычки",
-  "category_en": "School & Habits",
+  "description_uz": "«Men unutdim!» — bir do'st boshqasiga dori ichishni eslatadi. Bu suhbat harakat bajarilganini so'rash, unutganini aytish va tez harakat qilishga undashni o'rgatadi. «哎呀», «那...吧», «去拿» kabi tabiiy iboralar bor. Qisqa va hayotiy — tinglash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Я забыл!» — один друг напоминает другому выпить лекарство. Этот диалог учит спрашивать, сделано ли действие, признаваться, что забыл, и побуждать действовать быстро. Есть естественные выражения «哎呀», «那...吧», «去拿». Короткий и жизненный — отлично для аудирования и уверенности в речи.",
+  "description_en": "«I forgot!» — One friend reminds another to take their medicine. This dialogue teaches asking whether an action is done, admitting you forgot, and urging quick action. It has natural expressions like 哎呀, 那...吧, and 去拿. Short and lifelike—ideal for listening and speaking confidence.",
+  "category_uz": "Kundalik hayot",
+  "category_ru": "Повседневная жизнь",
+  "category_en": "Everyday Life",
   "level": 1,
   "sections": [
     {
@@ -22,10 +22,11 @@
       "sentences": [
         {
           "id": "d33-s1",
-          "text_original": "你带作业了吗？",
-          "pinyin": "Nǐ dài zuòyè le ma?",
-          "text_translation": "Uy vazifangni olib keldingmi?",
-          "text_translation_ru": "Ты принёс домашнее задание?",
+          "text_original": "你吃药了吗？",
+          "pinyin": "Nǐ chī yào le ma?",
+          "text_translation": "Dori ichdingmi?",
+          "text_translation_ru": "Ты выпил лекарство?",
+          "text_translation_en": "Did you take your medicine?",
           "speaker": "A",
           "words": [
             {
@@ -42,25 +43,17 @@
             {
               "i": [
                 1,
-                2
+                3
               ],
-              "p": "dài",
-              "t": "olib kelmoq",
-              "tr": "взять с собой"
+              "p": "chī yào",
+              "t": "dori ichmoq",
+              "tr": "пить лекарство",
+              "h": 1
             },
             {
               "i": [
-                2,
+                3,
                 4
-              ],
-              "p": "zuòyè",
-              "t": "vazifa",
-              "tr": "домашнее задание"
-            },
-            {
-              "i": [
-                4,
-                5
               ],
               "p": "le",
               "t": "(o'tgan zamon)",
@@ -70,8 +63,8 @@
             },
             {
               "i": [
-                5,
-                6
+                4,
+                5
               ],
               "p": "ma",
               "t": "-mi",
@@ -79,153 +72,143 @@
               "h": 1,
               "l": 2
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20wang%20le/dialogue1.mp3",
-          "text_translation_en": "Did you bring your homework?"
+          ]
         },
         {
           "id": "d33-s2",
-          "text_original": "忘了。",
-          "pinyin": "Wàng le.",
-          "text_translation": "Esimdan chiqibdi.",
-          "text_translation_ru": "Забыл.",
+          "text_original": "哎呀！我忘了吃药！",
+          "pinyin": "Āiyā! Wǒ wàng le chī yào!",
+          "text_translation": "Voy! Dori ichishni unutibman!",
+          "text_translation_ru": "Ой! Я забыл выпить лекарство!",
+          "text_translation_en": "Oh no! I forgot to take my medicine!",
           "speaker": "B",
           "words": [
             {
               "i": [
                 0,
-                1
-              ],
-              "p": "wàng",
-              "t": "unutmoq",
-              "tr": "забыть"
-            },
-            {
-              "i": [
-                1,
                 2
               ],
-              "p": "le",
-              "t": "(o'tgan zamon)",
-              "tr": "(прош. время)",
-              "h": 1,
-              "l": 8
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20wang%20le/dialogue2.mp3",
-          "text_translation_en": "I forgot."
-        },
-        {
-          "id": "d33-s3",
-          "text_original": "又忘了？",
-          "pinyin": "Yòu wàng le?",
-          "text_translation": "Yana esingdan chiqdimi?",
-          "text_translation_ru": "Опять забыл?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "yòu",
-              "t": "yana",
-              "tr": "опять"
+              "p": "āiyā",
+              "t": "voy",
+              "tr": "ой",
+              "h": 1
             },
             {
               "i": [
-                1,
-                2
-              ],
-              "p": "wàng",
-              "t": "unutmoq",
-              "tr": "забыть"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "le",
-              "t": "(o'tgan zamon)",
-              "tr": "(прош. время)",
-              "h": 1,
-              "l": 8
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20wang%20le/dialogue3.mp3",
-          "text_translation_en": "You forgot again?"
-        },
-        {
-          "id": "d33-s4",
-          "text_original": "对不起。",
-          "pinyin": "Duìbuqǐ.",
-          "text_translation": "Kechirasan.",
-          "text_translation_ru": "Извините.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                3
-              ],
-              "p": "duìbuqǐ",
-              "t": "kechirasiz",
-              "tr": "извини",
-              "h": 1,
-              "l": 1
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20wang%20le/dialogue4.mp3",
-          "text_translation_en": "I'm sorry."
-        },
-        {
-          "id": "d33-s5",
-          "text_original": "明天记得带。",
-          "pinyin": "Míngtiān jìde dài.",
-          "text_translation": "Ertaga olib kelish esingdan chiqmasin.",
-          "text_translation_ru": "Не забудь завтра принести.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "míngtiān",
-              "t": "ertaga",
-              "tr": "завтра",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                2,
+                3,
                 4
               ],
-              "p": "jìde",
-              "t": "eslamoq",
-              "tr": "помнить"
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
             },
             {
               "i": [
                 4,
                 5
               ],
-              "p": "dài",
-              "t": "olib kelmoq",
-              "tr": "принести"
+              "p": "wàng",
+              "t": "unutmoq",
+              "tr": "забыть",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "chī yào",
+              "t": "dori ichmoq",
+              "tr": "пить лекарство",
+              "h": 1
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20wang%20le/dialogue5.mp3",
-          "text_translation_en": "Remember to bring it tomorrow."
+          ]
         },
         {
-          "id": "d33-s6",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
-          "text_translation_ru": "Хорошо.",
+          "id": "d33-s3",
+          "text_original": "那你快吃吧。",
+          "pinyin": "Nà nǐ kuài chī ba.",
+          "text_translation": "Unda tez ichib ol.",
+          "text_translation_ru": "Тогда быстрее выпей.",
+          "text_translation_en": "Then take it quickly.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nà",
+              "t": "unda",
+              "tr": "тогда",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "kuài",
+              "t": "tez",
+              "tr": "быстро",
+              "h": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "chī",
+              "t": "ichmoq",
+              "tr": "пить",
+              "h": 1,
+              "l": 11
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ba",
+              "t": "(-gin)",
+              "tr": "(побуждение)",
+              "h": 1,
+              "l": 11
+            }
+          ]
+        },
+        {
+          "id": "d33-s4",
+          "text_original": "好，我去拿水。",
+          "pinyin": "Hǎo, wǒ qù ná shuǐ.",
+          "text_translation": "Mayli, borib suv olaman.",
+          "text_translation_ru": "Хорошо, я схожу за водой.",
+          "text_translation_en": "OK, I'll go get water.",
           "speaker": "B",
           "words": [
             {
@@ -234,20 +217,68 @@
                 1
               ],
               "p": "hǎo",
-              "t": "yaxshi",
+              "t": "mayli",
               "tr": "хорошо",
               "h": 1,
               "l": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "идти",
+              "h": 1
+            },
+            {
+              "i": [
+                4,
+                5
+              ],
+              "p": "ná",
+              "t": "olmoq",
+              "tr": "взять",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "shuǐ",
+              "t": "suv",
+              "tr": "вода",
+              "h": 1,
+              "l": 12
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20wang%20le/dialogue6.mp3",
-          "text_translation_en": "OK."
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20wang%20le/dialogue.mp3"
+      ]
     }
   ],
-  "tag": "ish",
+  "tag": "kundalik",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20wang%20le/dialogue.mp3"
+  "vocab": [
+    "吃药",
+    "哎呀",
+    "忘",
+    "那",
+    "快",
+    "去",
+    "拿",
+    "水"
+  ]
 }
