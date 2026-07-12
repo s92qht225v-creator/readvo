@@ -6,9 +6,9 @@
   "titleTranslation": "Uy vazifani yozib bo'ldingmi?",
   "titleTranslation_ru": "Домашнее задание дописал?",
   "titleTranslation_en": "Did you finish your homework?",
-  "description_uz": "«Vazifangni yozib bo'ldingmi?» — bir do'st boshqasining uy vazifasi qanday ketayotganini tekshiradi. Bu suhbat ish tugadimi deb so'rashni, hali emasligini aytishni va qancha qolganini so'rashni mashq qiladi. «Yarmi qoldi» va «bugun bo'la oladimi» ham bor. Soya bo'lib takrorlash uchun qisqa va foydali.",
-  "description_ru": "«Ты доделал задание?» — один друг проверяет, как у другого продвигается домашняя работа. Этот диалог тренирует вопрос «закончил ли», ответ «ещё не доделал» и вопрос «сколько осталось». Есть «осталась половина» и «успеешь сегодня». Короткий и полезный для шэдоуинга.",
-  "description_en": "«Did you finish your homework?» — one friend checks how the other's homework is coming along. This dialogue practises asking if something is finished, saying «not done yet», and asking how much is left. «Half to go» and «can you finish today» appear too. Short and useful for shadowing.",
+  "description_uz": "«Uy vazifasini yozib bo'ldingmi?» — bir kishi boshqasidan uy vazifasi haqida so'raydi, u esa yarmini yozganini aytadi. Bu suhbat tugatilgan-tugatilmaganini so'rash, qancha qilganini aytish va shoshirishni o'rgatadi. «Juda kech bo'ldi» iborasi ham bor. Kundalik, tanish mavzu — shadowing va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Ты доделал домашку?» — один спрашивает другого про домашнее задание, а тот отвечает, что написал половину. Этот диалог учит спрашивать, закончено ли дело, говорить, сколько сделано, и торопить. Есть фраза «уже слишком поздно». Бытовая, знакомая тема — отлично для шэдоуинга и уверенности в речи.",
+  "description_en": "«Have you finished your homework?» — One person asks another about homework, and they say they've done half. This dialogue teaches asking whether something is finished, saying how much is done, and urging someone to hurry. The phrase «it's too late» appears too. A familiar everyday topic—ideal for shadowing and speaking confidence.",
   "category_uz": "Maktab va vazifa",
   "category_ru": "Школа и задания",
   "category_en": "School & Homework",
@@ -24,8 +24,9 @@
           "id": "d39-s1",
           "text_original": "作业写完了吗？",
           "pinyin": "Zuòyè xiě wán le ma?",
-          "text_translation": "Uy vazifani yozib bo'ldingmi?",
-          "text_translation_ru": "Домашнее задание дописал?",
+          "text_translation": "Uy vazifasini yozib bo'ldingmi?",
+          "text_translation_ru": "Ты доделал домашку?",
+          "text_translation_en": "Have you finished your homework?",
           "speaker": "A",
           "words": [
             {
@@ -34,7 +35,7 @@
                 2
               ],
               "p": "zuòyè",
-              "t": "vazifa",
+              "t": "uy vazifasi",
               "tr": "домашнее задание"
             },
             {
@@ -45,8 +46,7 @@
               "p": "xiě",
               "t": "yozmoq",
               "tr": "писать",
-              "h": 1,
-              "l": 2
+              "h": 1
             },
             {
               "i": [
@@ -55,7 +55,8 @@
               ],
               "p": "wán",
               "t": "tugatmoq",
-              "tr": "закончить"
+              "tr": "закончить",
+              "h": 1
             },
             {
               "i": [
@@ -79,16 +80,15 @@
               "h": 1,
               "l": 2
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue1.mp3",
-          "text_translation_en": "Have you finished writing homework?"
+          ]
         },
         {
           "id": "d39-s2",
-          "text_original": "还没写完。",
-          "pinyin": "Hái méi xiě wán.",
-          "text_translation": "Hali yozib bo'lmadim.",
-          "text_translation_ru": "Ещё не дописал.",
+          "text_original": "还没有。",
+          "pinyin": "Hái méiyǒu.",
+          "text_translation": "Hali yo'q.",
+          "text_translation_ru": "Ещё нет.",
+          "text_translation_en": "Not yet.",
           "speaker": "B",
           "words": [
             {
@@ -98,49 +98,29 @@
               ],
               "p": "hái",
               "t": "hali",
-              "tr": "ещё"
+              "tr": "ещё",
+              "h": 1
             },
             {
               "i": [
                 1,
-                2
-              ],
-              "p": "méi",
-              "t": "yo'q",
-              "tr": "не",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                2,
                 3
               ],
-              "p": "xiě",
-              "t": "yozmoq",
-              "tr": "писать",
+              "p": "méiyǒu",
+              "t": "yo'q",
+              "tr": "нет",
               "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "wán",
-              "t": "tugatmoq",
-              "tr": "закончить"
+              "l": 4
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue2.mp3",
-          "text_translation_en": "Not yet."
+          ]
         },
         {
           "id": "d39-s3",
-          "text_original": "还差多少？",
-          "pinyin": "Hái chà duōshao?",
-          "text_translation": "Yana qancha qoldi?",
-          "text_translation_ru": "Сколько ещё осталось?",
+          "text_original": "你写了多少？",
+          "pinyin": "Nǐ xiě le duōshao?",
+          "text_translation": "Qancha yozding?",
+          "text_translation_ru": "Сколько написал?",
+          "text_translation_en": "How much have you written?",
           "speaker": "A",
           "words": [
             {
@@ -148,23 +128,37 @@
                 0,
                 1
               ],
-              "p": "hái",
-              "t": "hali",
-              "tr": "ещё"
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
             },
             {
               "i": [
                 1,
                 2
               ],
-              "p": "chà",
-              "t": "qolmoq",
-              "tr": "не хватать"
+              "p": "xiě",
+              "t": "yozmoq",
+              "tr": "писать",
+              "h": 1
             },
             {
               "i": [
                 2,
-                4
+                3
+              ],
+              "p": "le",
+              "t": "(o'tgan zamon)",
+              "tr": "(прош. время)",
+              "h": 1,
+              "l": 8
+            },
+            {
+              "i": [
+                3,
+                5
               ],
               "p": "duōshao",
               "t": "qancha",
@@ -172,16 +166,15 @@
               "h": 1,
               "l": 9
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue3.mp3",
-          "text_translation_en": "How much is left?"
+          ]
         },
         {
           "id": "d39-s4",
-          "text_original": "还差一半。",
-          "pinyin": "Hái chà yíbàn.",
-          "text_translation": "Yana yarmi qoldi.",
-          "text_translation_ru": "Ещё половина.",
+          "text_original": "我写一半。",
+          "pinyin": "Wǒ xiě yíbàn.",
+          "text_translation": "Yarmini yozdim.",
+          "text_translation_ru": "Половину написал.",
+          "text_translation_en": "I've written half.",
           "speaker": "B",
           "words": [
             {
@@ -189,18 +182,21 @@
                 0,
                 1
               ],
-              "p": "hái",
-              "t": "hali",
-              "tr": "ещё"
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
             },
             {
               "i": [
                 1,
                 2
               ],
-              "p": "chà",
-              "t": "qolmoq",
-              "tr": "не хватать"
+              "p": "xiě",
+              "t": "yozmoq",
+              "tr": "писать",
+              "h": 1
             },
             {
               "i": [
@@ -211,105 +207,96 @@
               "t": "yarmi",
               "tr": "половина"
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue4.mp3",
-          "text_translation_en": "Half of it."
+          ]
         },
         {
           "id": "d39-s5",
-          "text_original": "今天能写完吗？",
-          "pinyin": "Jīntiān néng xiě wán ma?",
-          "text_translation": "Bugun yozib tugata olasanmi?",
-          "text_translation_ru": "Сегодня сможешь дописать?",
+          "text_original": "快点写吧，太晚了。",
+          "pinyin": "Kuài diǎn xiě ba, tài wǎn le.",
+          "text_translation": "Tezroq yoz, juda kech bo'ldi.",
+          "text_translation_ru": "Пиши быстрее, уже поздно.",
+          "text_translation_en": "Hurry up and write, it's too late.",
           "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "jīntiān",
-              "t": "bugun",
-              "tr": "сегодня",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "néng",
-              "t": "(-a olmoq)",
-              "tr": "мочь",
-              "h": 1,
-              "l": 10
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "xiě",
-              "t": "yozmoq",
-              "tr": "писать",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "wán",
-              "t": "tugatmoq",
-              "tr": "закончить"
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "ma",
-              "t": "-mi",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue5.mp3",
-          "text_translation_en": "Can you finish it today?"
-        },
-        {
-          "id": "d39-s6",
-          "text_original": "能。",
-          "pinyin": "Néng.",
-          "text_translation": "Tugata olaman.",
-          "text_translation_ru": "Смогу.",
-          "speaker": "B",
           "words": [
             {
               "i": [
                 0,
                 1
               ],
-              "p": "néng",
-              "t": "(-a olmoq)",
-              "tr": "мочь",
+              "p": "kuài",
+              "t": "tez",
+              "tr": "быстро",
+              "h": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "diǎn",
+              "t": "biroz",
+              "tr": "немного",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "xiě",
+              "t": "yozmoq",
+              "tr": "писать",
+              "h": 1
+            },
+            {
+              "i": [
+                3,
+                4
+              ],
+              "p": "ba",
+              "t": "(-gin)",
+              "tr": "(побужд.)",
               "h": 1,
-              "l": 10
+              "l": 11
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "tài",
+              "t": "juda",
+              "tr": "слишком",
+              "h": 1
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "wǎn",
+              "t": "kech",
+              "tr": "поздно",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "le",
+              "t": "(holat o'zgarishi)",
+              "tr": "(изменение)",
+              "h": 1,
+              "l": 8
             }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue6.mp3",
-          "text_translation_en": "Yes, I can."
+          ]
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "ish",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/zuoye%20xie%20wan%20le%20ma/dialogue.mp3",
   "vocab": [
     "作业",
     "写",
@@ -318,7 +305,16 @@
       "zh": "还",
       "py": "hái"
     },
-    "差",
-    "一半"
+    "多少",
+    "一半",
+    "快",
+    {
+      "zh": "点",
+      "uz": "biroz",
+      "ru": "немного",
+      "en": "a bit"
+    },
+    "太",
+    "晚"
   ]
 }
