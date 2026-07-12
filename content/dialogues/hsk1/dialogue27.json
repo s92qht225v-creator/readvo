@@ -71,7 +71,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20xianjin%20ma/dialogue1.mp3",
           "text_translation_en": "Do you have cash?"
         },
         {
@@ -94,7 +93,6 @@
               "l": 4
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20xianjin%20ma/dialogue2.mp3",
           "text_translation_en": "Yes."
         },
         {
@@ -168,7 +166,6 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20xianjin%20ma/dialogue3.mp3",
           "text_translation_en": "Can you lend me twenty yuan?"
         },
         {
@@ -191,7 +188,6 @@
               "l": 10
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20xianjin%20ma/dialogue4.mp3",
           "text_translation_en": "Sure."
         },
         {
@@ -245,7 +241,6 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20xianjin%20ma/dialogue5.mp3",
           "text_translation_en": "I'll return it to you tomorrow."
         },
         {
@@ -279,14 +274,24 @@
               "l": 13
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20xianjin%20ma/dialogue6.mp3",
           "text_translation_en": "No problem."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20xianjin%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "xaridlar",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20you%20xianjin%20ma/dialogue.mp3"
+  "vocab": [
+    "有",
+    "现金",
+    "可以",
+    "借",
+    "块",
+    "明天",
+    {
+      "zh": "还",
+      "py": "huán"
+    },
+    "问题"
+  ]
 }
