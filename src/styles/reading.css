@@ -13018,7 +13018,7 @@ body {
 .vr-card--flipped .vr-card__inner { transform: rotateY(180deg); }
 .vr-card__face { position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: #fff; border: 1px solid #eee; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,.08); padding: 20px; }
 .vr-card__back { transform: rotateY(180deg); }
-.vr-card__py { font-size: 18px; color: #dc2626; font-style: italic; }
+.vr-card__py { position: absolute; top: 50%; transform: translateY(-58px); font-size: 18px; color: #dc2626; font-style: italic; }
 .vr-card__zh { font-size: 52px; line-height: 1.1; color: #111; }
 .vr-card__hint { position: absolute; bottom: 12px; font-size: 12px; color: #bbb; }
 .vr-card__meaning { font-size: 26px; color: #222; text-align: center; }
