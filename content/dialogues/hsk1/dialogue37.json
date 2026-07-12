@@ -71,15 +71,14 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue1.mp3",
           "text_translation_en": "Have you arrived?"
         },
         {
           "id": "d37-s2",
-          "text_original": "到了。",
-          "pinyin": "Dào le.",
+          "text_original": "我到了。",
+          "pinyin": "Wǒ dào le.",
           "text_translation": "Yetib keldim.",
-          "text_translation_ru": "Приехал.",
+          "text_translation_ru": "Я приехал.",
           "speaker": "B",
           "words": [
             {
@@ -87,14 +86,26 @@
                 0,
                 1
               ],
-              "p": "dào",
-              "t": "yetib kelmoq",
-              "tr": "прибыть"
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
             },
             {
               "i": [
                 1,
                 2
+              ],
+              "p": "dào",
+              "t": "yetib kelmoq",
+              "tr": "прибыть",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                3
               ],
               "p": "le",
               "t": "(o'tgan zamon)",
@@ -103,13 +114,12 @@
               "l": 8
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue2.mp3",
-          "text_translation_en": "Yes, I have."
+          "text_translation_en": "I've arrived."
         },
         {
           "id": "d37-s3",
-          "text_original": "在哪儿？",
-          "pinyin": "Zài nǎr?",
+          "text_original": "你在哪儿？",
+          "pinyin": "Nǐ zài nǎr?",
           "text_translation": "Qayerdasan?",
           "text_translation_ru": "Где ты?",
           "speaker": "A",
@@ -119,6 +129,17 @@
                 0,
                 1
               ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
               "p": "zài",
               "t": "-da",
               "tr": "в/на",
@@ -127,8 +148,8 @@
             },
             {
               "i": [
-                1,
-                3
+                2,
+                4
               ],
               "p": "nǎr",
               "t": "qayerda",
@@ -137,15 +158,14 @@
               "l": 7
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue3.mp3",
           "text_translation_en": "Where are you?"
         },
         {
           "id": "d37-s4",
-          "text_original": "在门口。",
-          "pinyin": "Zài ménkǒu.",
-          "text_translation": "Eshik oldida.",
-          "text_translation_ru": "У входа.",
+          "text_original": "在超市门口。",
+          "pinyin": "Zài chāoshì ménkǒu.",
+          "text_translation": "Supermarket oldida.",
+          "text_translation_ru": "У входа в супермаркет.",
           "speaker": "B",
           "words": [
             {
@@ -164,13 +184,21 @@
                 1,
                 3
               ],
+              "p": "chāoshì",
+              "t": "supermarket",
+              "tr": "супермаркет"
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
               "p": "ménkǒu",
               "t": "eshik oldi",
               "tr": "у входа"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue4.mp3",
-          "text_translation_en": "At the entrance."
+          "text_translation_en": "At the supermarket entrance."
         },
         {
           "id": "d37-s5",
@@ -210,7 +238,6 @@
               "tr": "немного"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue5.mp3",
           "text_translation_en": "Wait for me a moment."
         },
         {
@@ -233,22 +260,19 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue6.mp3",
           "text_translation_en": "OK."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue.mp3"
+      ]
     }
   ],
   "tag": "muloqot",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/deng%20wo%20yixia/dialogue.mp3",
   "vocab": [
     "到",
-    "在",
+    "哪儿",
+    "超市",
     "门口",
     "等",
-    "一下",
-    "哪儿"
+    "一下"
   ]
 }
