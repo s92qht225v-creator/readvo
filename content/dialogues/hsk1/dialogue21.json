@@ -71,7 +71,6 @@
               "l": 9
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qing%20ni/dialogue1.mp3",
           "text_translation_en": "I didn't bring money,"
         },
         {
@@ -92,7 +91,6 @@
               "tr": "а?"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qing%20ni/dialogue2.mp3",
           "text_translation_en": "Huh?"
         },
         {
@@ -124,7 +122,6 @@
               "tr": "делать"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qing%20ni/dialogue3.mp3",
           "text_translation_en": "What should we do?"
         },
         {
@@ -178,7 +175,6 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qing%20ni/dialogue4.mp3",
           "text_translation_en": "No worries, my treat."
         },
         {
@@ -245,7 +241,6 @@
               "l": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qing%20ni/dialogue5.mp3",
           "text_translation_en": "Thanks, next time it's my treat."
         },
         {
@@ -277,14 +272,20 @@
               "tr": "(воскл.)"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qing%20ni/dialogue6.mp3",
           "text_translation_en": "Sure."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qing%20ni/dialogue.mp3"
+      ]
     }
   ],
   "tag": "xaridlar",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/wo%20qing%20ni/dialogue.mp3"
+  "vocab": [
+    "带",
+    "钱",
+    "啊",
+    "怎么办",
+    "没事",
+    "请",
+    "下次"
+  ]
 }
