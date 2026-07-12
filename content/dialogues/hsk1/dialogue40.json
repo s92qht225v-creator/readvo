@@ -58,7 +58,6 @@
               "l": 14
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue1.mp3",
           "text_translation_en": "Waiter, I'd like to order."
         },
         {
@@ -125,7 +124,6 @@
               "l": 3
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue2.mp3",
           "text_translation_en": "Hello, what would you like to eat today?"
         },
         {
@@ -166,7 +164,6 @@
               "tr": "дапаньцзи (курица с картошкой)"
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue3.mp3",
           "text_translation_en": "One serving of Dapanji."
         },
         {
@@ -260,15 +257,14 @@
               "l": 2
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue4.mp3",
           "text_translation_en": "Dapanji is very spicy, can you eat spicy?"
         },
         {
           "id": "d40-s5",
-          "text_original": "我能吃辣，再来一瓶冰的百事可乐。",
-          "pinyin": "Wǒ néng chī là, zài lái yì píng bīng de Bǎishì Kělè.",
-          "text_translation": "Achchiq yeya olaman, bitta muzdek Pepsi ham olib keling.",
-          "text_translation_ru": "Я могу есть острое, ещё принесите бутылку холодного Пепси.",
+          "text_original": "我能吃辣。",
+          "pinyin": "Wǒ néng chī là.",
+          "text_translation": "Men achchiq yeya olaman.",
+          "text_translation_ru": "Я могу есть острое.",
           "speaker": "A",
           "words": [
             {
@@ -311,95 +307,29 @@
               ],
               "p": "là",
               "t": "achchiq",
-              "tr": "острый"
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "zài",
-              "t": "yana",
-              "tr": "ещё"
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "lái",
-              "t": "bermoq",
-              "tr": "дайте",
-              "h": 1,
-              "l": 8
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "yì píng",
-              "t": "bitta shisha",
-              "tr": "одну бутылку"
-            },
-            {
-              "i": [
-                9,
-                11
-              ],
-              "p": "bīng de",
-              "t": "sovuq",
-              "tr": "холодный"
-            },
-            {
-              "i": [
-                11,
-                15
-              ],
-              "p": "Bǎishì Kělè",
-              "t": "Pepsi",
-              "tr": "Пепси"
+              "tr": "острый",
+              "h": 1
             }
           ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue5.mp3",
-          "text_translation_en": "Yes, I can. And bring a bottle of cold Pepsi."
-        },
-        {
-          "id": "d40-s6",
-          "text_original": "好。",
-          "pinyin": "Hǎo.",
-          "text_translation": "Xo'p.",
-          "text_translation_ru": "Хорошо.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "hǎo",
-              "t": "xo'p",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            }
-          ],
-          "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue6.mp3",
-          "text_translation_en": "OK."
+          "text_translation_en": "Yes, I can eat spicy food."
         }
-      ],
-      "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue.mp3"
+      ]
     }
   ],
   "tag": "ovqat",
   "dateAdded": "2026-02-22",
-  "audio_url": "https://miruwaeplbzfqmdwacsh.supabase.co/storage/v1/object/public/audio/HSK%201/Dialogues/ni%20neng%20chi%20la%20ma/dialogue.mp3",
   "vocab": [
+    "服务员",
     "点菜",
+    "今天",
+    "吃",
+    "点",
+    "什么",
     "来",
     "一份",
+    "大盘鸡",
+    "很",
     "辣",
-    "能",
-    "再来"
+    "能"
   ]
 }
