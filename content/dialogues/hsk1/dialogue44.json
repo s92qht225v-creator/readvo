@@ -6,9 +6,9 @@
   "titleTranslation": "Bugun qo'shimcha ishlaysanmi?",
   "titleTranslation_ru": "Сегодня будешь работать сверхурочно?",
   "titleTranslation_en": "Are you working overtime today?",
-  "description_uz": "«Bugun qo'shimcha ishlaysanmi?» — hamkasblarning ish vaqti va kechki rejalar haqidagi g'amxo'r suhbati. Boshlang'ichlar uchun ideal: kunlik jadval haqida so'rash, kelasi zamon va hamdardlik bildirish mashq qilinadi. Qisqa gaplar, amaliy so'zlar va iliq, tabiiy ohang. Tinglash, takrorlash va rolli mashq uchun ajoyib.",
-  "description_ru": "«Ты сегодня работаешь сверхурочно?» — заботливый разговор коллег о рабочих часах и вечерних планах. Идеально для начинающих: отрабатывает вопросы о распорядке дня, будущее время и выражение участия. Короткие фразы, практичная лексика и тёплый, естественный тон. Отлично для аудирования, шэдоуинга и ролевой игры.",
-  "description_en": "«Are you working overtime today?» — A caring conversation between colleagues about work hours and evening plans. Perfect for beginners, this dialogue practices asking about daily schedules, using the future tense, and expressing concern. Short sentences, practical vocabulary, and a warm, natural tone. Great for listening, shadowing, and role-play practice.",
+  "description_uz": "«Bugun qo'shimcha ishlaysanmi?» — ikki hamkasb ish vaqti va birga ovqatlanish haqida gaplashadi. Bu suhbat qo'shimcha ish (加班), ishdan chiqish vaqti (几点下班) va birga rejalashtirishni o'rgatadi. Qisqa va kundalik — tinglash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Ты сегодня работаешь сверхурочно?» — два коллеги говорят о рабочем времени и совместном ужине. Этот диалог учит спрашивать о сверхурочной работе (加班), времени окончания работы (几点下班) и договариваться вместе. Короткий и бытовой — отлично для аудирования и уверенности в речи.",
+  "description_en": "«Are you working overtime today?» — Two colleagues talk about work hours and eating together. This dialogue teaches asking about overtime (加班), what time you get off (几点下班), and making a plan together. Short and everyday—ideal for listening and speaking confidence.",
   "category_uz": "Ish va kun tartibi",
   "category_ru": "Работа и распорядок",
   "category_en": "Work & Daily Schedule",
@@ -58,7 +58,8 @@
               ],
               "p": "jiābān",
               "t": "qo'shimcha ishlamoq",
-              "tr": "работать сверхурочно"
+              "tr": "работать сверхурочно",
+              "h": 1
             },
             {
               "i": [
@@ -66,7 +67,7 @@
                 6
               ],
               "p": "ma",
-              "t": "(so'roq)",
+              "t": "-mi",
               "tr": "(вопрос)",
               "h": 1,
               "l": 2
@@ -75,11 +76,11 @@
         },
         {
           "id": "d44-s2",
-          "text_original": "对。我今天要加班。",
-          "pinyin": "Duì. Wǒ jīntiān yào jiābān.",
-          "text_translation": "Ha. Bugun qo'shimcha ishlashim kerak.",
-          "text_translation_ru": "Да. Сегодня мне нужно работать сверхурочно.",
-          "text_translation_en": "Yes. I have to work overtime today.",
+          "text_original": "我今天不加班。",
+          "pinyin": "Wǒ jīntiān bù jiābān.",
+          "text_translation": "Bugun qo'shimcha ishlamayman.",
+          "text_translation_ru": "Сегодня я не работаю сверхурочно.",
+          "text_translation_en": "I'm not working overtime today.",
           "speaker": "B",
           "words": [
             {
@@ -87,27 +88,16 @@
                 0,
                 1
               ],
-              "p": "duì",
-              "t": "to'g'ri",
-              "tr": "правильно",
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
               "h": 1,
               "l": 1
             },
             {
               "i": [
-                2,
+                1,
                 3
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                5
               ],
               "p": "jīntiān",
               "t": "bugun",
@@ -117,112 +107,51 @@
             },
             {
               "i": [
-                5,
-                6
+                3,
+                4
               ],
-              "p": "yào",
-              "t": "kerak; -moqchi",
-              "tr": "нужно; собираться",
+              "p": "bù",
+              "t": "(-ma-)",
+              "tr": "не",
               "h": 1,
-              "l": 7
+              "l": 2
             },
             {
               "i": [
-                6,
-                8
+                4,
+                6
               ],
               "p": "jiābān",
               "t": "qo'shimcha ishlamoq",
-              "tr": "работать сверхурочно"
+              "tr": "работать сверхурочно",
+              "h": 1
             }
           ]
         },
         {
           "id": "d44-s3",
-          "text_original": "几点下班？",
-          "pinyin": "Jǐ diǎn xiàbān?",
-          "text_translation": "Soat nechada ishdan chiqasan?",
-          "text_translation_ru": "Во сколько заканчиваешь работу?",
-          "text_translation_en": "What time do you get off work?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "jǐ diǎn",
-              "t": "soat nechada",
-              "tr": "во сколько",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                2,
-                4
-              ],
-              "p": "xiàbān",
-              "t": "ishdan chiqmoq",
-              "tr": "закончить работу"
-            }
-          ]
-        },
-        {
-          "id": "d44-s4",
-          "text_original": "晚上八点。",
-          "pinyin": "Wǎnshang bā diǎn.",
-          "text_translation": "Kechqurun soat sakkizda.",
-          "text_translation_ru": "Вечером в восемь.",
-          "text_translation_en": "Eight in the evening.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "wǎnshang",
-              "t": "kechqurun",
-              "tr": "вечером",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "bā",
-              "t": "sakkiz",
-              "tr": "восемь",
-              "h": 1,
-              "l": 6
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "diǎn",
-              "t": "soat",
-              "tr": "часов"
-            }
-          ]
-        },
-        {
-          "id": "d44-s5",
-          "text_original": "你吃晚餐了吗？",
-          "pinyin": "Nǐ chī wǎncān le ma?",
-          "text_translation": "Kechki ovqat yedingmi?",
-          "text_translation_ru": "Ты поужинал?",
-          "text_translation_en": "Have you had dinner?",
+          "text_original": "那你几点下班？",
+          "pinyin": "Nà nǐ jǐ diǎn xiàbān?",
+          "text_translation": "Unda soat nechada ishdan chiqasan?",
+          "text_translation_ru": "Тогда во сколько ты заканчиваешь?",
+          "text_translation_en": "Then what time do you finish?",
           "speaker": "A",
           "words": [
             {
               "i": [
                 0,
                 1
+              ],
+              "p": "nà",
+              "t": "unda",
+              "tr": "тогда",
+              "h": 1,
+              "l": 10
+            },
+            {
+              "i": [
+                1,
+                2
               ],
               "p": "nǐ",
               "t": "sen",
@@ -232,174 +161,161 @@
             },
             {
               "i": [
-                1,
-                2
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            },
-            {
-              "i": [
                 2,
                 4
               ],
-              "p": "wǎncān",
-              "t": "kechki ovqat",
-              "tr": "ужин"
+              "p": "jǐ diǎn",
+              "t": "soat nechada",
+              "tr": "во сколько",
+              "h": 1
             },
             {
               "i": [
                 4,
-                5
-              ],
-              "p": "le",
-              "t": "(tugallangan ish)",
-              "tr": "(завершённость)"
-            },
-            {
-              "i": [
-                5,
                 6
               ],
-              "p": "ma",
-              "t": "(so'roq)",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
+              "p": "xiàbān",
+              "t": "ishdan chiqmoq",
+              "tr": "заканчивать работу",
+              "h": 1
             }
           ]
         },
         {
-          "id": "d44-s6",
-          "text_original": "还没有。我下班以后吃。",
-          "pinyin": "Hái méiyǒu. Wǒ xiàbān yǐhòu chī.",
-          "text_translation": "Hali yo'q. Ishdan chiqqach yeyman.",
-          "text_translation_ru": "Ещё нет. Поем после работы.",
-          "text_translation_en": "Not yet. I'll eat after work.",
+          "id": "d44-s4",
+          "text_original": "我五点下班。",
+          "pinyin": "Wǒ wǔ diǎn xiàbān.",
+          "text_translation": "Soat beshda ishdan chiqaman.",
+          "text_translation_ru": "Я заканчиваю в пять.",
+          "text_translation_en": "I get off at five.",
           "speaker": "B",
           "words": [
             {
               "i": [
                 0,
-                3
-              ],
-              "p": "hái méiyǒu",
-              "t": "hali yo'q",
-              "tr": "ещё нет"
-            },
-            {
-              "i": [
-                4,
-                5
+                1
               ],
               "p": "wǒ",
               "t": "men",
               "tr": "я",
               "h": 1,
-              "l": 2
+              "l": 1
             },
             {
               "i": [
-                5,
-                7
-              ],
-              "p": "xiàbān",
-              "t": "ishdan chiqmoq",
-              "tr": "закончить работу"
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "yǐhòu",
-              "t": "...dan keyin",
-              "tr": "после"
-            },
-            {
-              "i": [
-                9,
-                10
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            }
-          ]
-        },
-        {
-          "id": "d44-s7",
-          "text_original": "辛苦了！",
-          "pinyin": "Xīnkǔ le!",
-          "text_translation": "Charchamang!",
-          "text_translation_ru": "Спасибо за труд!",
-          "text_translation_en": "Thanks for your hard work!",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "xīnkǔ",
-              "t": "qiyin; mehnat",
-              "tr": "тяжело; труд"
-            },
-            {
-              "i": [
-                2,
+                1,
                 3
               ],
-              "p": "le",
-              "t": "(ta'kid)",
-              "tr": "(частица)"
-            }
-          ]
-        },
-        {
-          "id": "d44-s8",
-          "text_original": "谢谢！明天见。",
-          "pinyin": "Xièxie! Míngtiān jiàn.",
-          "text_translation": "Rahmat! Ertaga ko'rishamiz.",
-          "text_translation_ru": "Спасибо! До завтра.",
-          "text_translation_en": "Thanks! See you tomorrow.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "xièxie",
-              "t": "rahmat",
-              "tr": "спасибо",
-              "h": 1,
-              "l": 1
+              "p": "wǔ diǎn",
+              "t": "soat besh",
+              "tr": "пять часов",
+              "h": 1
             },
             {
               "i": [
                 3,
                 5
               ],
-              "p": "míngtiān",
-              "t": "ertaga",
-              "tr": "завтра",
+              "p": "xiàbān",
+              "t": "ishdan chiqmoq",
+              "tr": "заканчивать работу",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "d44-s5",
+          "text_original": "那我们一起吃饭吧。",
+          "pinyin": "Nà wǒmen yìqǐ chī fàn ba.",
+          "text_translation": "Unda birga ovqatlanaylik.",
+          "text_translation_ru": "Тогда давай поедим вместе.",
+          "text_translation_en": "Then let's eat together.",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nà",
+              "t": "unda",
+              "tr": "тогда",
               "h": 1,
-              "l": 5
+              "l": 10
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "wǒmen",
+              "t": "biz",
+              "tr": "мы",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "yìqǐ",
+              "t": "birga",
+              "tr": "вместе",
+              "h": 1
             },
             {
               "i": [
                 5,
-                6
+                7
               ],
-              "p": "jiàn",
-              "t": "ko'rishmoq",
-              "tr": "видеться"
+              "p": "chī fàn",
+              "t": "ovqatlanmoq",
+              "tr": "есть, кушать",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "ba",
+              "t": "(-aylik)",
+              "tr": "(давай)",
+              "h": 1,
+              "l": 11
+            }
+          ]
+        },
+        {
+          "id": "d44-s6",
+          "text_original": "好啊。",
+          "pinyin": "Hǎo a.",
+          "text_translation": "Yaxshi!",
+          "text_translation_ru": "Хорошо!",
+          "text_translation_en": "Sure!",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "hǎo",
+              "t": "yaxshi",
+              "tr": "хорошо",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "a",
+              "t": "(undov)",
+              "tr": "(воскл.)",
+              "h": 1
             }
           ]
         }
@@ -411,15 +327,10 @@
   "vocab": [
     "今天",
     "加班",
-    "要",
+    "那",
+    "几点",
     "下班",
-    "晚上",
-    "点",
-    "晚餐",
-    "还没有",
-    "以后",
-    "辛苦",
-    "明天",
-    "见"
+    "一起",
+    "吃饭"
   ]
 }
