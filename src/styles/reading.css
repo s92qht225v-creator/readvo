@@ -11592,24 +11592,25 @@ body {
 .telegram-fab {
   position: fixed;
   right: 16px;
-  bottom: 16px;
-  width: 52px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
   height: 52px;
-  border-radius: 50%;
+  padding: 0 20px 0 15px;
+  border-radius: 26px;
   background: linear-gradient(135deg, #2aabee 0%, #229ed9 100%);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
   box-shadow: 0 6px 24px rgba(34, 158, 217, 0.45);
   z-index: 60;
   text-decoration: none;
   transition: transform 0.15s ease;
-  padding-bottom: env(safe-area-inset-bottom);
 }
+.telegram-fab__label { color: #fff; font-size: 15px; font-weight: 600; white-space: nowrap; }
 .telegram-fab:hover { transform: scale(1.06); }
 .telegram-fab:active { transform: scale(0.96); }
 @media (max-width: 600px) {
-  .telegram-fab { right: 12px; bottom: 12px; width: 48px; height: 48px; }
+  .telegram-fab { right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); height: 48px; padding: 0 18px 0 13px; }
+  .telegram-fab__label { font-size: 14px; }
 }
 
 /* =============================================================================
