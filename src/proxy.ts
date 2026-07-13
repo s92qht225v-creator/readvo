@@ -95,6 +95,7 @@ export default function proxy(request: NextRequest) {
     'hsk1/are-you-free-tomorrow': 'i-have-a-younger-brother',
     'hsk1/wrong-wechat': 'sending-a-message',
     'hsk1/fasten-your-seatbelt': 'can-you-swim',
+    'hsk1/ramadan': 'do-you-like-traveling',
     'hsk2/at-the-restaurant': 'are-you-hungry',
     'hsk2/weather-and-plans': 'how-is-the-weather-tomorrow',
     'hsk2/at-the-hotel': 'how-much-per-night',

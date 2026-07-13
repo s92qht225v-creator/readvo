@@ -1,17 +1,17 @@
 {
   "id": "hsk1-dialogue47",
-  "slug": "ramadan",
-  "title": "斋月",
-  "pinyin": "Zhāiyuè",
-  "titleTranslation": "Ro'za oyi",
-  "titleTranslation_ru": "Рамадан",
-  "titleTranslation_en": "Ramadan",
-  "description_uz": "«Nega ovqat yemayapsan?» — ikki do'stning kundalik tartib va Ramazon haqidagi sodda suhbati. Bu suhbat muhim savol shakllari, vaqt so'zlari va inkor tuzilmasi ni mashq qildiradi. Qisqa gaplar, tabiiy takror va ozgina madaniyat — bari 30 soniyalik suhbatda. Tinglash, takrorlash yoki sherik bilan rolda ijro etish uchun foydalaning.",
-  "description_ru": "«Почему ты не ешь?» — простой диалог двух друзей о повседневной жизни и Рамадане. Этот разговор отрабатывает важные вопросительные конструкции, слова времени и отрицание. Короткие фразы, естественные повторы и немного культуры — всё это в 30-секундном диалоге. Используйте для аудирования, шэдоуинга или ролевой игры с партнёром.",
-  "description_en": "«Why aren't you eating?» — A simple dialogue between two friends about daily routines and Ramadan. This conversation drills essential question patterns, time words, and the negative structure. Short sentences, natural repetition, and a touch of culture—all in one 30-second exchange. Use it for listening practice, shadowing, or acting out with a partner.",
-  "category_uz": "Kundalik hayot va madaniyat",
-  "category_ru": "Быт и культура",
-  "category_en": "Daily Routines & Culture",
+  "slug": "do-you-like-traveling",
+  "title": "你喜欢旅游吗？",
+  "pinyin": "Nǐ xǐhuan lǚyóu ma?",
+  "titleTranslation": "Sayohatni yoqtirasanmi?",
+  "titleTranslation_ru": "Ты любишь путешествовать?",
+  "titleTranslation_en": "Do you like traveling?",
+  "description_uz": "«Sayohat qilishni yoqtirasanmi?» — ikki do'st sayohat va dengiz bo'yi haqida gaplashadi. Bu suhbat qiziqishlarni so'rash (喜欢), takrorlanuvchi odatni aytish (每年) va joyni tavsiflashni o'rgatadi. Qisqa va yoqimli — tinglash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Ты любишь путешествовать?» — два друга говорят о путешествиях и море. Этот диалог учит спрашивать о предпочтениях (喜欢), говорить о регулярной привычке (每年) и описывать место. Короткий и приятный — отлично для аудирования и уверенности в речи.",
+  "description_en": "«Do you like traveling?» — Two friends talk about travel and the seaside. This dialogue teaches asking about preferences (喜欢), describing a regular habit (每年), and describing a place. Short and pleasant—ideal for listening and speaking confidence.",
+  "category_uz": "Sayohat",
+  "category_ru": "Путешествия",
+  "category_en": "Travel & Hobbies",
   "level": 1,
   "sections": [
     {
@@ -22,28 +22,17 @@
       "sentences": [
         {
           "id": "d47-s1",
-          "text_original": "你好！你为什么不吃饭？",
-          "pinyin": "Nǐ hǎo! Nǐ wèi shénme bù chīfàn?",
-          "text_translation": "Salom! Nega ovqat yemayapsan?",
-          "text_translation_ru": "Привет! Почему ты не ешь?",
-          "text_translation_en": "Hello! Why aren't you eating?",
+          "text_original": "你喜欢旅游吗？",
+          "pinyin": "Nǐ xǐhuan lǚyóu ma?",
+          "text_translation": "Sayohatni yoqtirasanmi?",
+          "text_translation_ru": "Ты любишь путешествовать?",
+          "text_translation_en": "Do you like traveling?",
           "speaker": "A",
           "words": [
             {
               "i": [
                 0,
-                2
-              ],
-              "p": "nǐ hǎo",
-              "t": "salom",
-              "tr": "привет",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                3,
-                4
+                1
               ],
               "p": "nǐ",
               "t": "sen",
@@ -53,42 +42,44 @@
             },
             {
               "i": [
-                4,
-                7
+                1,
+                3
               ],
-              "p": "wèi shénme",
-              "t": "nega",
-              "tr": "почему"
+              "p": "xǐhuan",
+              "t": "yoqtirmoq",
+              "tr": "нравиться",
+              "h": 1
             },
             {
               "i": [
-                7,
-                8
+                3,
+                5
               ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
+              "p": "lǚyóu",
+              "t": "sayohat qilmoq",
+              "tr": "путешествовать",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                6
+              ],
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
               "h": 1,
               "l": 2
-            },
-            {
-              "i": [
-                8,
-                10
-              ],
-              "p": "chīfàn",
-              "t": "ovqat yemoq",
-              "tr": "есть"
             }
           ]
         },
         {
           "id": "d47-s2",
-          "text_original": "因为我在封斋。",
-          "pinyin": "Yīnwèi wǒ zài fēngzhāi.",
-          "text_translation": "Chunki men ro'za tutyapman.",
-          "text_translation_ru": "Потому что я держу пост.",
-          "text_translation_en": "Because I'm fasting.",
+          "text_original": "喜欢，我每年去旅游。",
+          "pinyin": "Xǐhuan, wǒ měinián qù lǚyóu.",
+          "text_translation": "Ha, men har yili sayohat qilaman.",
+          "text_translation_ru": "Да, я каждый год путешествую.",
+          "text_translation_en": "Yes, I travel every year.",
           "speaker": "B",
           "words": [
             {
@@ -96,99 +87,111 @@
                 0,
                 2
               ],
-              "p": "yīnwèi",
-              "t": "chunki",
-              "tr": "потому что"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "wǒ",
-              "t": "men",
-              "tr": "я",
-              "h": 1,
-              "l": 2
+              "p": "xǐhuan",
+              "t": "yoqtiraman",
+              "tr": "нравится",
+              "h": 1
             },
             {
               "i": [
                 3,
                 4
               ],
-              "p": "zài",
-              "t": "(-yapti)",
-              "tr": "(прогрессив)",
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
               "h": 1,
-              "l": 7
+              "l": 1
             },
             {
               "i": [
                 4,
                 6
               ],
-              "p": "fēngzhāi",
-              "t": "ro'za tutmoq",
-              "tr": "держать пост"
+              "p": "měinián",
+              "t": "har yili",
+              "tr": "каждый год",
+              "h": 1
+            },
+            {
+              "i": [
+                6,
+                7
+              ],
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "ездить",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                9
+              ],
+              "p": "lǚyóu",
+              "t": "sayohat qilmoq",
+              "tr": "путешествовать",
+              "h": 1
             }
           ]
         },
         {
           "id": "d47-s3",
-          "text_original": "封斋？现在是斋月吗？",
-          "pinyin": "Fēngzhāi? Xiànzài shì zhāiyuè ma?",
-          "text_translation": "Ro'za? Hozir ro'za oyimi?",
-          "text_translation_ru": "Пост? Сейчас Рамадан?",
-          "text_translation_en": "Fasting? Is it Ramadan now?",
+          "text_original": "你喜欢去海边吗？",
+          "pinyin": "Nǐ xǐhuan qù hǎibiān ma?",
+          "text_translation": "Dengiz bo'yiga borishni yoqtirasanmi?",
+          "text_translation_ru": "Ты любишь ездить на море?",
+          "text_translation_en": "Do you like going to the seaside?",
           "speaker": "A",
           "words": [
             {
               "i": [
                 0,
-                2
+                1
               ],
-              "p": "fēngzhāi",
-              "t": "ro'za tutmoq",
-              "tr": "держать пост"
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                3
+              ],
+              "p": "xǐhuan",
+              "t": "yoqtirmoq",
+              "tr": "нравиться",
+              "h": 1
             },
             {
               "i": [
                 3,
-                5
+                4
               ],
-              "p": "xiànzài",
-              "t": "hozir",
-              "tr": "сейчас",
-              "h": 1,
-              "l": 5
+              "p": "qù",
+              "t": "bormoq",
+              "tr": "ездить",
+              "h": 1
             },
             {
               "i": [
-                5,
+                4,
                 6
               ],
-              "p": "shì",
-              "t": "bu",
-              "tr": "это",
-              "h": 1,
-              "l": 2
+              "p": "hǎibiān",
+              "t": "dengiz bo'yi",
+              "tr": "море",
+              "h": 1
             },
             {
               "i": [
                 6,
-                8
-              ],
-              "p": "zhāiyuè",
-              "t": "ro'za oyi",
-              "tr": "Рамадан"
-            },
-            {
-              "i": [
-                8,
-                9
+                7
               ],
               "p": "ma",
-              "t": "(so'roq)",
+              "t": "-mi",
               "tr": "(вопрос)",
               "h": 1,
               "l": 2
@@ -197,11 +200,11 @@
         },
         {
           "id": "d47-s4",
-          "text_original": "是的。现在是斋月。",
-          "pinyin": "Shì de. Xiànzài shì zhāiyuè.",
-          "text_translation": "Ha. Hozir ro'za oyi.",
-          "text_translation_ru": "Да. Сейчас Рамадан.",
-          "text_translation_en": "Yes. It's Ramadan now.",
+          "text_original": "喜欢，海边很美。",
+          "pinyin": "Xǐhuan, hǎibiān hěn měi.",
+          "text_translation": "Ha, dengiz bo'yi juda chiroyli.",
+          "text_translation_ru": "Да, на море очень красиво.",
+          "text_translation_en": "Yes, the seaside is beautiful.",
           "speaker": "B",
           "words": [
             {
@@ -209,248 +212,68 @@
                 0,
                 2
               ],
-              "p": "shì de",
-              "t": "ha",
-              "tr": "да",
-              "h": 1,
-              "l": 2
+              "p": "xǐhuan",
+              "t": "yoqtiraman",
+              "tr": "нравится",
+              "h": 1
             },
             {
               "i": [
                 3,
                 5
               ],
-              "p": "xiànzài",
-              "t": "hozir",
-              "tr": "сейчас",
-              "h": 1,
-              "l": 5
+              "p": "hǎibiān",
+              "t": "dengiz bo'yi",
+              "tr": "море",
+              "h": 1
             },
             {
               "i": [
                 5,
                 6
               ],
-              "p": "shì",
-              "t": "bu",
-              "tr": "это",
+              "p": "hěn",
+              "t": "juda",
+              "tr": "очень",
               "h": 1,
-              "l": 2
+              "l": 3
             },
             {
               "i": [
                 6,
-                8
+                7
               ],
-              "p": "zhāiyuè",
-              "t": "ro'za oyi",
-              "tr": "Рамадан"
+              "p": "měi",
+              "t": "chiroyli",
+              "tr": "красивый",
+              "h": 1
             }
           ]
         },
         {
           "id": "d47-s5",
-          "text_original": "你白天不吃东西，对吗？",
-          "pinyin": "Nǐ báitiān bù chī dōngxi, duì ma?",
-          "text_translation": "Kunduzi hech narsa yemaysan, to'g'rimi?",
-          "text_translation_ru": "Ты днём ничего не ешь, правда?",
-          "text_translation_en": "You don't eat anything during the day, right?",
+          "text_original": "我也喜欢海边！",
+          "pinyin": "Wǒ yě xǐhuan hǎibiān!",
+          "text_translation": "Men ham dengiz bo'yini yoqtiraman!",
+          "text_translation_ru": "Я тоже люблю море!",
+          "text_translation_en": "I like the seaside too!",
           "speaker": "A",
           "words": [
             {
               "i": [
                 0,
                 1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "báitiān",
-              "t": "kunduz",
-              "tr": "днём"
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "dōngxi",
-              "t": "narsa",
-              "tr": "вещь"
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "duì",
-              "t": "to'g'ri",
-              "tr": "правильно",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                9,
-                10
-              ],
-              "p": "ma",
-              "t": "(so'roq)",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ]
-        },
-        {
-          "id": "d47-s6",
-          "text_original": "对。我白天不吃，晚上吃。",
-          "pinyin": "Duì. Wǒ báitiān bù chī, wǎnshang chī.",
-          "text_translation": "To'g'ri. Men kunduzi yemayman, kechqurun yeyman.",
-          "text_translation_ru": "Верно. Я днём не ем, ем вечером.",
-          "text_translation_en": "Right. I don't eat during the day, I eat in the evening.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "duì",
-              "t": "to'g'ri",
-              "tr": "правильно",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                2,
-                3
               ],
               "p": "wǒ",
               "t": "men",
               "tr": "я",
               "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "báitiān",
-              "t": "kunduz",
-              "tr": "днём"
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            },
-            {
-              "i": [
-                8,
-                10
-              ],
-              "p": "wǎnshang",
-              "t": "kechqurun",
-              "tr": "вечером",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                10,
-                11
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            }
-          ]
-        },
-        {
-          "id": "d47-s7",
-          "text_original": "你早上也不吃吗？",
-          "pinyin": "Nǐ zǎoshang yě bù chī ma?",
-          "text_translation": "Ertalab ham yemaysanmi?",
-          "text_translation_ru": "Утром ты тоже не ешь?",
-          "text_translation_en": "You don't eat in the morning either?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
               "l": 1
             },
             {
               "i": [
                 1,
-                3
-              ],
-              "p": "zǎoshang",
-              "t": "ertalab",
-              "tr": "утром"
-            },
-            {
-              "i": [
-                3,
-                4
+                2
               ],
               "p": "yě",
               "t": "ham",
@@ -460,278 +283,39 @@
             },
             {
               "i": [
+                2,
+                4
+              ],
+              "p": "xǐhuan",
+              "t": "yoqtirmoq",
+              "tr": "нравиться",
+              "h": 1
+            },
+            {
+              "i": [
                 4,
-                5
-              ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                5,
                 6
               ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "ma",
-              "t": "(so'roq)",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ]
-        },
-        {
-          "id": "d47-s8",
-          "text_original": "不吃。早上、中午都不吃。",
-          "pinyin": "Bù chī. Zǎoshang, zhōngwǔ dōu bù chī.",
-          "text_translation": "Yemayman. Ertalab ham, peshinda ham yemayman.",
-          "text_translation_ru": "Не ем. Ни утром, ни в полдень не ем.",
-          "text_translation_en": "No. I don't eat in the morning or at noon.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                2
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "zǎoshang",
-              "t": "ertalab",
-              "tr": "утром"
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "zhōngwǔ",
-              "t": "peshin",
-              "tr": "полдень"
-            },
-            {
-              "i": [
-                8,
-                9
-              ],
-              "p": "dōu",
-              "t": "hammasi",
-              "tr": "всё; оба"
-            },
-            {
-              "i": [
-                9,
-                10
-              ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                10,
-                11
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            }
-          ]
-        },
-        {
-          "id": "d47-s9",
-          "text_original": "那什么时候吃？",
-          "pinyin": "Nà shénme shíhou chī?",
-          "text_translation": "Unda qachon yeysan?",
-          "text_translation_ru": "Тогда когда ты ешь?",
-          "text_translation_en": "So when do you eat?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nà",
-              "t": "unda",
-              "tr": "тогда",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                1,
-                5
-              ],
-              "p": "shénme shíhou",
-              "t": "qachon",
-              "tr": "когда"
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            }
-          ]
-        },
-        {
-          "id": "d47-s10",
-          "text_original": "晚上吃。",
-          "pinyin": "Wǎnshang chī.",
-          "text_translation": "Kechqurun yeyman.",
-          "text_translation_ru": "Вечером ем.",
-          "text_translation_en": "I eat in the evening.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "wǎnshang",
-              "t": "kechqurun",
-              "tr": "вечером",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            }
-          ]
-        },
-        {
-          "id": "d47-s11",
-          "text_original": "辛苦吗？",
-          "pinyin": "Xīnkǔ ma?",
-          "text_translation": "Qiyinmi?",
-          "text_translation_ru": "Тяжело?",
-          "text_translation_en": "Is it hard?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "xīnkǔ",
-              "t": "qiyin",
-              "tr": "тяжело"
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "ma",
-              "t": "(so'roq)",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
-            }
-          ]
-        },
-        {
-          "id": "d47-s12",
-          "text_original": "不辛苦。",
-          "pinyin": "Bù xīnkǔ.",
-          "text_translation": "Qiyin emas.",
-          "text_translation_ru": "Не тяжело.",
-          "text_translation_en": "Not hard.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "xīnkǔ",
-              "t": "qiyin",
-              "tr": "тяжело"
+              "p": "hǎibiān",
+              "t": "dengiz bo'yi",
+              "tr": "море",
+              "h": 1
             }
           ]
         }
       ]
     }
   ],
-  "tag": "kundalik",
+  "tag": "sayohat",
   "dateAdded": "2026-02-26",
   "vocab": [
-    "为什么",
-    "吃饭",
-    "因为",
-    "封斋",
-    "现在",
-    "斋月",
-    "白天",
-    "东西",
-    "对",
-    "晚上",
-    "早上",
-    "中午",
-    "都",
-    "什么时候",
-    "辛苦"
+    "喜欢",
+    "旅游",
+    "每年",
+    "去",
+    "海边",
+    "很",
+    "美",
+    "也"
   ]
 }
