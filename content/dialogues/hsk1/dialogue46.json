@@ -6,9 +6,9 @@
   "titleTranslation": "Ozish",
   "titleTranslation_ru": "Похудение",
   "titleTranslation_en": "Losing weight",
-  "description_uz": "«So'nggi paytlarda go'sht yemayapsanmi?» — ikki do'stning parhez va vazn yo'qotish haqidagi erkin suhbati. Bu suhbat odat haqida so'rash, oddiy sabab aytish va daraja bildirishni yoritadi. Tanish mavzu, foydali oziq-ovqat so'zlari — va tabiiy bo'lguncha takrorlash uchun yetarlicha qisqa. Takrorlash va gapirishga ishonch hosil qilish uchun ideal.",
-  "description_ru": "«Ты в последнее время не ешь мясо?» — непринуждённый разговор двух друзей о диете и похудении. Этот диалог показывает, как спрашивать о привычках, называть простые причины и выражать степень. Близкая тема, полезная лексика о еде — и достаточно короткий, чтобы повторять до естественности. Отлично для шэдоуинга и уверенности в речи.",
-  "description_en": "«You don't eat meat these days?» — A casual chat between two friends about dieting and losing weight. This exchange highlights asking about habits, giving simple reasons, and expressing degrees. Relatable topic, useful food vocabulary—and short enough to repeat until natural. Perfect for shadowing and building speaking confidence.",
+  "description_uz": "«Yaqinda ozibsan!» — ikki do'st parhez va sport haqida gaplashadi. Bu suhbat qanday ozayotganini so'rash, kam/ko'p yeyishni aytish va sport haqida so'rashni o'rgatadi. «Guruchni kam, mevani ko'p yeyman» kabi iboralar bor. Sog'lom turmush mavzusi — rol o'ynash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Ты недавно похудел!» — два друга говорят о похудении и спорте. Этот диалог учит спрашивать, как человек худеет, говорить, что ешь меньше/больше, и спрашивать о спорте. Есть фразы вроде «ем меньше риса и больше фруктов». Тема здоровья — отлично для ролевой игры и уверенности в речи.",
+  "description_en": "«You've lost weight recently!» — Two friends talk about dieting and exercise. This dialogue teaches asking how someone is losing weight, saying you eat less/more, and asking about exercise. Phrases like «I eat less rice and more fruit» appear. A health topic—great for role-play and speaking confidence.",
   "category_uz": "Ovqat va turmush tarzi",
   "category_ru": "Еда и образ жизни",
   "category_en": "Food & Lifestyle",
@@ -22,11 +22,11 @@
       "sentences": [
         {
           "id": "d46-s1",
-          "text_original": "你最近不吃肉吗？",
-          "pinyin": "Nǐ zuìjìn bù chī ròu ma?",
-          "text_translation": "Sen yaqinda go'sht yemayapsanmi?",
-          "text_translation_ru": "Ты в последнее время не ешь мясо?",
-          "text_translation_en": "Aren't you eating meat lately?",
+          "text_original": "你最近瘦了！",
+          "pinyin": "Nǐ zuìjìn shòu le!",
+          "text_translation": "Yaqinda ozibsan!",
+          "text_translation_ru": "Ты недавно похудел!",
+          "text_translation_en": "You've lost weight recently!",
           "speaker": "A",
           "words": [
             {
@@ -54,52 +54,31 @@
                 3,
                 4
               ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
+              "p": "shòu",
+              "t": "ozg'in",
+              "tr": "худой",
+              "h": 1
             },
             {
               "i": [
                 4,
                 5
               ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
+              "p": "le",
+              "t": "(holat o'zgarishi)",
+              "tr": "(изменение)",
               "h": 1,
-              "l": 11
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "ròu",
-              "t": "go'sht",
-              "tr": "мясо"
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "ma",
-              "t": "(so'roq)",
-              "tr": "(вопрос)",
-              "h": 1,
-              "l": 2
+              "l": 8
             }
           ]
         },
         {
           "id": "d46-s2",
-          "text_original": "对。我在减肥。",
-          "pinyin": "Duì. Wǒ zài jiǎnféi.",
-          "text_translation": "Ha. Men ozayapman.",
-          "text_translation_ru": "Да. Я худею.",
-          "text_translation_en": "Right. I'm losing weight.",
+          "text_original": "对，我在减肥。",
+          "pinyin": "Duì, wǒ zài jiǎnféi.",
+          "text_translation": "Ha, parhez qilyapman.",
+          "text_translation_ru": "Да, я худею.",
+          "text_translation_en": "Yes, I'm losing weight.",
           "speaker": "B",
           "words": [
             {
@@ -108,10 +87,10 @@
                 1
               ],
               "p": "duì",
-              "t": "to'g'ri",
-              "tr": "правильно",
+              "t": "ha",
+              "tr": "да",
               "h": 1,
-              "l": 1
+              "l": 4
             },
             {
               "i": [
@@ -122,7 +101,7 @@
               "t": "men",
               "tr": "я",
               "h": 1,
-              "l": 2
+              "l": 1
             },
             {
               "i": [
@@ -130,8 +109,8 @@
                 4
               ],
               "p": "zài",
-              "t": "(-yapti)",
-              "tr": "(прогрессив)",
+              "t": "(-yapman)",
+              "tr": "(в процессе)",
               "h": 1,
               "l": 7
             },
@@ -148,26 +127,17 @@
         },
         {
           "id": "d46-s3",
-          "text_original": "为什么？你不胖啊！",
-          "pinyin": "Wèishénme? Nǐ bú pàng a!",
-          "text_translation": "Nega? Sen semiz emassan-ku!",
-          "text_translation_ru": "Почему? Ты же не толстый!",
-          "text_translation_en": "Why? You're not fat!",
+          "text_original": "你怎么减肥？",
+          "pinyin": "Nǐ zěnme jiǎnféi?",
+          "text_translation": "Qanday ozyapsan?",
+          "text_translation_ru": "Как ты худеешь?",
+          "text_translation_en": "How are you losing weight?",
           "speaker": "A",
           "words": [
             {
               "i": [
                 0,
-                3
-              ],
-              "p": "wèishénme",
-              "t": "nega",
-              "tr": "почему"
-            },
-            {
-              "i": [
-                4,
-                5
+                1
               ],
               "p": "nǐ",
               "t": "sen",
@@ -177,42 +147,33 @@
             },
             {
               "i": [
-                5,
-                6
+                1,
+                3
               ],
-              "p": "bú",
-              "t": "emas",
-              "tr": "не",
+              "p": "zěnme",
+              "t": "qanday",
+              "tr": "как",
               "h": 1,
-              "l": 2
+              "l": 7
             },
             {
               "i": [
-                6,
-                7
+                3,
+                5
               ],
-              "p": "pàng",
-              "t": "semiz",
-              "tr": "толстый"
-            },
-            {
-              "i": [
-                7,
-                8
-              ],
-              "p": "a",
-              "t": "(ta'kid)",
-              "tr": "(восклицание)"
+              "p": "jiǎnféi",
+              "t": "ozmoq",
+              "tr": "худеть"
             }
           ]
         },
         {
           "id": "d46-s4",
-          "text_original": "我想瘦一点。",
-          "pinyin": "Wǒ xiǎng shòu yì diǎn.",
-          "text_translation": "Men bir oz ozg'inroq bo'lmoqchiman.",
-          "text_translation_ru": "Я хочу немного похудеть.",
-          "text_translation_en": "I want to be a bit thinner.",
+          "text_original": "我少吃米饭，多吃水果。",
+          "pinyin": "Wǒ shǎo chī mǐfàn, duō chī shuǐguǒ.",
+          "text_translation": "Guruchni kam, mevani ko'p yeyman.",
+          "text_translation_ru": "Я ем меньше риса и больше фруктов.",
+          "text_translation_en": "I eat less rice and more fruit.",
           "speaker": "B",
           "words": [
             {
@@ -224,150 +185,55 @@
               "t": "men",
               "tr": "я",
               "h": 1,
-              "l": 2
+              "l": 1
             },
             {
               "i": [
                 1,
-                2
-              ],
-              "p": "xiǎng",
-              "t": "xohlamoq",
-              "tr": "хотеть"
-            },
-            {
-              "i": [
-                2,
                 3
               ],
-              "p": "shòu",
-              "t": "ozg'in",
-              "tr": "худой"
+              "p": "shǎo chī",
+              "t": "kam yemoq",
+              "tr": "есть меньше"
             },
             {
               "i": [
                 3,
                 5
               ],
-              "p": "yì diǎn",
-              "t": "bir oz",
-              "tr": "немного"
+              "p": "mǐfàn",
+              "t": "guruch",
+              "tr": "рис",
+              "h": 1
+            },
+            {
+              "i": [
+                6,
+                8
+              ],
+              "p": "duō chī",
+              "t": "ko'p yemoq",
+              "tr": "есть больше"
+            },
+            {
+              "i": [
+                8,
+                10
+              ],
+              "p": "shuǐguǒ",
+              "t": "meva",
+              "tr": "фрукты",
+              "h": 1
             }
           ]
         },
         {
           "id": "d46-s5",
-          "text_original": "你现在吃什么？",
-          "pinyin": "Nǐ xiànzài chī shénme?",
-          "text_translation": "Hozir nima yeysan?",
-          "text_translation_ru": "Что ты сейчас ешь?",
-          "text_translation_en": "What do you eat now?",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "xiànzài",
-              "t": "hozir",
-              "tr": "сейчас",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "shénme",
-              "t": "nima",
-              "tr": "что",
-              "h": 1,
-              "l": 3
-            }
-          ]
-        },
-        {
-          "id": "d46-s6",
-          "text_original": "吃水果和蔬菜。",
-          "pinyin": "Chī shuǐguǒ hé shūcài.",
-          "text_translation": "Meva va sabzavot yeyman.",
-          "text_translation_ru": "Ем фрукты и овощи.",
-          "text_translation_en": "I eat fruit and vegetables.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                1
-              ],
-              "p": "chī",
-              "t": "yemoq",
-              "tr": "есть",
-              "h": 1,
-              "l": 11
-            },
-            {
-              "i": [
-                1,
-                3
-              ],
-              "p": "shuǐguǒ",
-              "t": "meva",
-              "tr": "фрукты"
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "hé",
-              "t": "va",
-              "tr": "и",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "shūcài",
-              "t": "sabzavot",
-              "tr": "овощи"
-            }
-          ]
-        },
-        {
-          "id": "d46-s7",
-          "text_original": "你饿吗？",
-          "pinyin": "Nǐ è ma?",
-          "text_translation": "Qorning ochmi?",
-          "text_translation_ru": "Ты голодный?",
-          "text_translation_en": "Are you hungry?",
+          "text_original": "你还运动吗？",
+          "pinyin": "Nǐ hái yùndòng ma?",
+          "text_translation": "Sport ham qilasanmi?",
+          "text_translation_ru": "Ты ещё и спортом занимаешься?",
+          "text_translation_en": "Do you also exercise?",
           "speaker": "A",
           "words": [
             {
@@ -386,17 +252,27 @@
                 1,
                 2
               ],
-              "p": "è",
-              "t": "och",
-              "tr": "голодный"
+              "p": "hái",
+              "t": "yana; ham",
+              "tr": "ещё; также",
+              "h": 1
             },
             {
               "i": [
                 2,
-                3
+                4
+              ],
+              "p": "yùndòng",
+              "t": "sport qilmoq",
+              "tr": "заниматься спортом"
+            },
+            {
+              "i": [
+                4,
+                5
               ],
               "p": "ma",
-              "t": "(so'roq)",
+              "t": "-mi",
               "tr": "(вопрос)",
               "h": 1,
               "l": 2
@@ -404,12 +280,12 @@
           ]
         },
         {
-          "id": "d46-s8",
-          "text_original": "有一点。",
-          "pinyin": "Yǒu yì diǎn.",
-          "text_translation": "Bir oz.",
-          "text_translation_ru": "Немного.",
-          "text_translation_en": "A little.",
+          "id": "d46-s6",
+          "text_original": "对，我每天跑步。",
+          "pinyin": "Duì, wǒ měitiān pǎobù.",
+          "text_translation": "Ha, har kuni yuguraman.",
+          "text_translation_ru": "Да, я бегаю каждый день.",
+          "text_translation_en": "Yes, I run every day.",
           "speaker": "B",
           "words": [
             {
@@ -417,20 +293,42 @@
                 0,
                 1
               ],
-              "p": "yǒu",
-              "t": "bor",
-              "tr": "есть",
+              "p": "duì",
+              "t": "ha",
+              "tr": "да",
               "h": 1,
               "l": 4
             },
             {
               "i": [
-                1,
+                2,
                 3
               ],
-              "p": "yì diǎn",
-              "t": "bir oz",
-              "tr": "немного"
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "měitiān",
+              "t": "har kuni",
+              "tr": "каждый день",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "pǎobù",
+              "t": "yugurmoq",
+              "tr": "бегать",
+              "h": 1
             }
           ]
         }
@@ -441,15 +339,18 @@
   "dateAdded": "2026-02-22",
   "vocab": [
     "最近",
-    "肉",
-    "减肥",
-    "为什么",
-    "胖",
-    "想",
     "瘦",
-    "一点",
-    "水果",
-    "蔬菜",
-    "饿"
+    "对",
+    "减肥",
+    "怎么",
+    "少吃",
+    "多吃",
+    {
+      "zh": "还",
+      "py": "hái"
+    },
+    "运动",
+    "每天",
+    "跑步"
   ]
 }
