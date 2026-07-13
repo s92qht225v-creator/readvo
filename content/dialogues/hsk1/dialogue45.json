@@ -1,14 +1,14 @@
 {
   "id": "hsk1-dialogue45",
   "slug": "tell-me-next-time",
-  "title": "下次说一声",
-  "pinyin": "Xià cì shuō yì shēng",
-  "titleTranslation": "Keyingi safar bir o'giz aytib qo'y",
-  "titleTranslation_ru": "В следующий раз предупреди",
-  "titleTranslation_en": "Give me a heads up next time",
-  "description_uz": "«Kecha savdo markaziga bordingmi?» — ikki do'stning xarid qilish va birga reja tuzish haqidagi do'stona suhbati. Boshlang'ichlar uchun ideal: o'tgan ish-harakat haqida so'rash, sanoq so'zlardan foydalanish va xushmuomala taklif qilish mashq qilinadi. Qisqa gaplar, tabiiy oqim va foydali kundalik so'zlar. Tinglash, takrorlash va rolli mashq uchun ajoyib.",
-  "description_ru": "«Ты вчера ходил в торговый центр?» — дружеский разговор двух друзей о шопинге и совместных планах. Идеально для начинающих: отрабатывает вопросы о прошедших действиях, счётные слова и вежливые предложения. Короткие фразы, естественный ход и полезная повседневная лексика. Отлично для аудирования, шэдоуинга и ролевой игры.",
-  "description_en": "«You went to the mall yesterday?» — A friendly conversation between two friends about a shopping trip and making plans together. Perfect for beginners, this dialogue practices asking about past actions, using measure words, and making polite suggestions. Short sentences, natural flow, and useful everyday vocabulary. Great for listening, shadowing, and role-play practice.",
+  "title": "我喜欢跑步",
+  "pinyin": "Wǒ xǐhuan pǎobù",
+  "titleTranslation": "Men yugurishni yoqtiraman",
+  "titleTranslation_ru": "Я люблю бегать",
+  "titleTranslation_en": "I like running",
+  "description_uz": "«Sport bilan shug'ullanasanmi?» — ikki do'st sport va yugurish haqida gaplashadi. Bu suhbat odat haqida so'rash, nimani yoqtirishni aytish va davomiylikni so'rashni o'rgatadi. «Har kuni ertalab yuguraman» kabi iboralar bor. Sog'lom turmush mavzusi — rol o'ynash va gapirishga ishonch uchun ideal.",
+  "description_ru": "«Ты занимаешься спортом?» — два друга говорят о спорте и беге. Этот диалог учит спрашивать о привычке, называть, что нравится, и спрашивать о продолжительности. Есть фразы вроде «бегаю каждое утро». Тема здорового образа жизни — отлично для ролевой игры и уверенности в речи.",
+  "description_en": "«Do you exercise?» — Two friends talk about sport and running. This dialogue teaches asking about a habit, saying what you like, and asking about duration. Phrases like «I run every morning» appear. A healthy-lifestyle topic—great for role-play and speaking confidence.",
   "category_uz": "Xarid va muloqot",
   "category_ru": "Шопинг и общение",
   "category_en": "Shopping & Social",
@@ -22,11 +22,11 @@
       "sentences": [
         {
           "id": "d45-s1",
-          "text_original": "你昨天去商场了？",
-          "pinyin": "Nǐ zuótiān qù shāngchǎng le?",
-          "text_translation": "Kecha savdo markaziga bordingmi?",
-          "text_translation_ru": "Ты вчера ходил в торговый центр?",
-          "text_translation_en": "Did you go to the mall yesterday?",
+          "text_original": "你运动吗？",
+          "pinyin": "Nǐ yùndòng ma?",
+          "text_translation": "Sport bilan shug'ullanasanmi?",
+          "text_translation_ru": "Ты занимаешься спортом?",
+          "text_translation_en": "Do you exercise?",
           "speaker": "A",
           "words": [
             {
@@ -45,48 +45,30 @@
                 1,
                 3
               ],
-              "p": "zuótiān",
-              "t": "kecha",
-              "tr": "вчера"
+              "p": "yùndòng",
+              "t": "sport qilmoq",
+              "tr": "заниматься спортом"
             },
             {
               "i": [
                 3,
                 4
               ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
               "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                4,
-                6
-              ],
-              "p": "shāngchǎng",
-              "t": "savdo markazi",
-              "tr": "торговый центр"
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "le",
-              "t": "(tugallangan ish)",
-              "tr": "(завершённость)"
+              "l": 2
             }
           ]
         },
         {
           "id": "d45-s2",
-          "text_original": "对。我买了一件衣服。",
-          "pinyin": "Duì. Wǒ mǎi le yí jiàn yīfu.",
-          "text_translation": "Ha. Bitta kiyim sotib oldim.",
-          "text_translation_ru": "Да. Я купил одну вещь из одежды.",
-          "text_translation_en": "Yes. I bought a piece of clothing.",
+          "text_original": "对，我喜欢跑步。",
+          "pinyin": "Duì, wǒ xǐhuan pǎobù.",
+          "text_translation": "Ha, yugurishni yoqtiraman.",
+          "text_translation_ru": "Да, я люблю бегать.",
+          "text_translation_en": "Yes, I like running.",
           "speaker": "B",
           "words": [
             {
@@ -95,10 +77,10 @@
                 1
               ],
               "p": "duì",
-              "t": "to'g'ri",
-              "tr": "правильно",
+              "t": "ha, to'g'ri",
+              "tr": "да, верно",
               "h": 1,
-              "l": 1
+              "l": 4
             },
             {
               "i": [
@@ -109,53 +91,37 @@
               "t": "men",
               "tr": "я",
               "h": 1,
-              "l": 2
+              "l": 1
             },
             {
               "i": [
                 3,
-                4
-              ],
-              "p": "mǎi",
-              "t": "sotib olmoq",
-              "tr": "покупать"
-            },
-            {
-              "i": [
-                4,
                 5
               ],
-              "p": "le",
-              "t": "(tugallangan ish)",
-              "tr": "(завершённость)"
+              "p": "xǐhuan",
+              "t": "yoqtirmoq",
+              "tr": "нравиться",
+              "h": 1
             },
             {
               "i": [
                 5,
                 7
               ],
-              "p": "yí jiàn",
-              "t": "bitta (dona)",
-              "tr": "одна (штука)"
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "yīfu",
-              "t": "kiyim",
-              "tr": "одежда"
+              "p": "pǎobù",
+              "t": "yugurmoq",
+              "tr": "бегать",
+              "h": 1
             }
           ]
         },
         {
           "id": "d45-s3",
-          "text_original": "你为什么不叫我？",
-          "pinyin": "Nǐ wèishénme bú jiào wǒ?",
-          "text_translation": "Nega meni chaqirmading?",
-          "text_translation_ru": "Почему ты меня не позвал?",
-          "text_translation_en": "Why didn't you call me?",
+          "text_original": "你每天跑步吗？",
+          "pinyin": "Nǐ měitiān pǎobù ma?",
+          "text_translation": "Har kuni yuguradsanmi?",
+          "text_translation_ru": "Ты бегаешь каждый день?",
+          "text_translation_en": "Do you run every day?",
           "speaker": "A",
           "words": [
             {
@@ -172,42 +138,31 @@
             {
               "i": [
                 1,
-                4
+                3
               ],
-              "p": "wèishénme",
-              "t": "nega",
-              "tr": "почему"
+              "p": "měitiān",
+              "t": "har kuni",
+              "tr": "каждый день",
+              "h": 1
             },
             {
               "i": [
-                4,
+                3,
                 5
               ],
-              "p": "bú",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
+              "p": "pǎobù",
+              "t": "yugurmoq",
+              "tr": "бегать",
+              "h": 1
             },
             {
               "i": [
                 5,
                 6
               ],
-              "p": "jiào",
-              "t": "chaqirmoq",
-              "tr": "звать",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                6,
-                7
-              ],
-              "p": "wǒ",
-              "t": "meni",
-              "tr": "меня",
+              "p": "ma",
+              "t": "-mi",
+              "tr": "(вопрос)",
               "h": 1,
               "l": 2
             }
@@ -215,11 +170,116 @@
         },
         {
           "id": "d45-s4",
-          "text_original": "我不知道你有时间。",
-          "pinyin": "Wǒ bù zhīdào nǐ yǒu shíjiān.",
-          "text_translation": "Vaqting borligini bilmadim.",
-          "text_translation_ru": "Я не знал, что у тебя есть время.",
-          "text_translation_en": "I didn't know you had time.",
+          "text_original": "对，我每天早上跑。",
+          "pinyin": "Duì, wǒ měitiān zǎoshang pǎo.",
+          "text_translation": "Ha, har kuni ertalab yuguraman.",
+          "text_translation_ru": "Да, я бегаю каждое утро.",
+          "text_translation_en": "Yes, I run every morning.",
+          "speaker": "B",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "duì",
+              "t": "ha",
+              "tr": "да",
+              "h": 1,
+              "l": 4
+            },
+            {
+              "i": [
+                2,
+                3
+              ],
+              "p": "wǒ",
+              "t": "men",
+              "tr": "я",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                3,
+                5
+              ],
+              "p": "měitiān",
+              "t": "har kuni",
+              "tr": "каждый день",
+              "h": 1
+            },
+            {
+              "i": [
+                5,
+                7
+              ],
+              "p": "zǎoshang",
+              "t": "ertalab",
+              "tr": "утром",
+              "h": 1
+            },
+            {
+              "i": [
+                7,
+                8
+              ],
+              "p": "pǎo",
+              "t": "yugurmoq",
+              "tr": "бегать",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "d45-s5",
+          "text_original": "你跑多久？",
+          "pinyin": "Nǐ pǎo duōjiǔ?",
+          "text_translation": "Qancha yugurasan?",
+          "text_translation_ru": "Сколько ты бегаешь?",
+          "text_translation_en": "How long do you run?",
+          "speaker": "A",
+          "words": [
+            {
+              "i": [
+                0,
+                1
+              ],
+              "p": "nǐ",
+              "t": "sen",
+              "tr": "ты",
+              "h": 1,
+              "l": 1
+            },
+            {
+              "i": [
+                1,
+                2
+              ],
+              "p": "pǎo",
+              "t": "yugurmoq",
+              "tr": "бегать",
+              "h": 1
+            },
+            {
+              "i": [
+                2,
+                4
+              ],
+              "p": "duōjiǔ",
+              "t": "qancha vaqt",
+              "tr": "как долго",
+              "h": 1
+            }
+          ]
+        },
+        {
+          "id": "d45-s6",
+          "text_original": "我跑三十分钟。",
+          "pinyin": "Wǒ pǎo sānshí fēnzhōng.",
+          "text_translation": "O'ttiz daqiqa yuguraman.",
+          "text_translation_ru": "Я бегаю тридцать минут.",
+          "text_translation_en": "I run for thirty minutes.",
           "speaker": "B",
           "words": [
             {
@@ -231,195 +291,37 @@
               "t": "men",
               "tr": "я",
               "h": 1,
-              "l": 2
+              "l": 1
             },
             {
               "i": [
                 1,
                 2
               ],
-              "p": "bù",
-              "t": "emas",
-              "tr": "не",
-              "h": 1,
-              "l": 2
+              "p": "pǎo",
+              "t": "yugurmoq",
+              "tr": "бегать",
+              "h": 1
             },
             {
               "i": [
                 2,
                 4
               ],
-              "p": "zhīdào",
-              "t": "bilmoq",
-              "tr": "знать"
-            },
-            {
-              "i": [
-                4,
-                5
-              ],
-              "p": "nǐ",
-              "t": "sen",
-              "tr": "ты",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                5,
-                6
-              ],
-              "p": "yǒu",
-              "t": "bor",
-              "tr": "иметь",
-              "h": 1,
-              "l": 4
-            },
-            {
-              "i": [
-                6,
-                8
-              ],
-              "p": "shíjiān",
-              "t": "vaqt",
-              "tr": "время"
-            }
-          ]
-        },
-        {
-          "id": "d45-s5",
-          "text_original": "下次去的时候，说一声。",
-          "pinyin": "Xià cì qù de shíhou, shuō yì shēng.",
-          "text_translation": "Keyingi safar borganingda, bir og'iz aytib qo'y.",
-          "text_translation_ru": "В следующий раз, когда пойдёшь, предупреди.",
-          "text_translation_en": "Next time you go, give me a heads up.",
-          "speaker": "A",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "xià cì",
-              "t": "keyingi safar",
-              "tr": "в следующий раз",
-              "h": 1,
-              "l": 13
-            },
-            {
-              "i": [
-                2,
-                3
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1,
-              "l": 5
-            },
-            {
-              "i": [
-                3,
-                4
-              ],
-              "p": "de",
-              "t": "(bog'lovchi)",
-              "tr": "(служебное)",
-              "h": 1,
-              "l": 1
+              "p": "sānshí",
+              "t": "o'ttiz",
+              "tr": "тридцать",
+              "h": 1
             },
             {
               "i": [
                 4,
                 6
               ],
-              "p": "shíhou",
-              "t": "payt",
-              "tr": "время; момент"
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "shuō",
-              "t": "aytmoq",
-              "tr": "сказать",
-              "h": 1,
-              "l": 10
-            },
-            {
-              "i": [
-                9,
-                11
-              ],
-              "p": "yì shēng",
-              "t": "bir og'iz",
-              "tr": "одно слово"
-            }
-          ]
-        },
-        {
-          "id": "d45-s6",
-          "text_original": "好的。下次我们一起去。",
-          "pinyin": "Hǎo de. Xià cì wǒmen yìqǐ qù.",
-          "text_translation": "Xo'p. Keyingi safar birga boramiz.",
-          "text_translation_ru": "Хорошо. В следующий раз пойдём вместе.",
-          "text_translation_en": "Okay. Next time we'll go together.",
-          "speaker": "B",
-          "words": [
-            {
-              "i": [
-                0,
-                2
-              ],
-              "p": "hǎo de",
-              "t": "xo'p",
-              "tr": "хорошо",
-              "h": 1,
-              "l": 1
-            },
-            {
-              "i": [
-                3,
-                5
-              ],
-              "p": "xià cì",
-              "t": "keyingi safar",
-              "tr": "в следующий раз",
-              "h": 1,
-              "l": 13
-            },
-            {
-              "i": [
-                5,
-                7
-              ],
-              "p": "wǒmen",
-              "t": "biz",
-              "tr": "мы",
-              "h": 1,
-              "l": 2
-            },
-            {
-              "i": [
-                7,
-                9
-              ],
-              "p": "yìqǐ",
-              "t": "birga",
-              "tr": "вместе"
-            },
-            {
-              "i": [
-                9,
-                10
-              ],
-              "p": "qù",
-              "t": "bormoq",
-              "tr": "идти",
-              "h": 1,
-              "l": 5
+              "p": "fēnzhōng",
+              "t": "daqiqa",
+              "tr": "минута",
+              "h": 1
             }
           ]
         }
@@ -429,18 +331,14 @@
   "tag": "muloqot",
   "dateAdded": "2026-02-22",
   "vocab": [
-    "昨天",
-    "商场",
-    "买",
-    "件",
-    "衣服",
-    "为什么",
-    "叫",
-    "知道",
-    "时间",
-    "下次",
-    "时候",
-    "说一声",
-    "一起"
+    "运动",
+    "对",
+    "喜欢",
+    "跑步",
+    "每天",
+    "早上",
+    "跑",
+    "多久",
+    "分钟"
   ]
 }
