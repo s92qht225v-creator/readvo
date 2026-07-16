@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { usePrimeAudioToken } from '@/hooks/useAudioToken';
 import { protectAudioUrlSync } from '@/lib/audio/token-client';
 
-type AdminTab = 'payments' | 'users' | 'audio' | 'glossary';
+type AdminTab = 'payments' | 'users' | 'audio' | 'glossary' | 'analyzer';
 
 interface Payment {
   id: string;
@@ -73,6 +73,7 @@ const NAV_ICONS: Record<AdminTab, React.ReactNode> = {
   users: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="8" r="3.2" /><path d="M3.4 19.2c.7-3.3 3-5.2 5.6-5.2s4.9 1.9 5.6 5.2" /><path d="M16.6 6.1a3 3 0 0 1 0 5.8" /><path d="M17.8 19.2a7.8 7.8 0 0 0-1.5-3.7" /></svg>),
   audio: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"><path d="M4 10v4M8 7.5v9M12 4v16M16 7.5v9M20 10.5v3" /></svg>),
   glossary: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4.5h10.5a2 2 0 0 1 2 2V20H7a2 2 0 0 1-2-2V4.5z" /><path d="M5 18.2A1.8 1.8 0 0 1 6.8 16.4H17.5" /><path d="M9 8.6h5M9 11.4h3.4" /></svg>),
+  analyzer: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19V5m5 14V9m5 10v-6m5 6V4" /></svg>),
 };
 
 interface AdminPanelProps {
@@ -91,6 +92,30 @@ export function AdminPanel({ password }: AdminPanelProps) {
   const [expandedScreenshot, setExpandedScreenshot] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   const [now, setNow] = useState(() => Date.now());
+
+  // HSK analyzer tab state
+  type AnalyzeRow = { zh: string; pinyin: string | null; level: number | null; estimate: boolean; inGlossary: boolean; gloss: string | null };
+  type AnalyzeResult = { mode: string; count: number; words: AnalyzeRow[]; perLevel: Record<string, number>; offList: string[] };
+  const [analyzeSlug, setAnalyzeSlug] = useState('');
+  const [analyzeText, setAnalyzeText] = useState('');
+  const [analyzeRes, setAnalyzeRes] = useState<AnalyzeResult | null>(null);
+  const [analyzing, setAnalyzing] = useState(false);
+  const [analyzeErr, setAnalyzeErr] = useState('');
+  const runAnalyze = async (payload: { slug?: string; text?: string }) => {
+    setAnalyzing(true); setAnalyzeErr(''); setAnalyzeRes(null);
+    try {
+      const res = await fetch('/api/admin/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-password': password },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok) { setAnalyzeErr(data.error || 'Xatolik'); return; }
+      setAnalyzeRes(data);
+    } catch (e) { setAnalyzeErr((e as Error).message); }
+    finally { setAnalyzing(false); }
+  };
+  const lvlLabel = (l: number | null) => (l === null ? '—' : l === 7 ? '7–9' : String(l));
 
   // Audio tab state
   const [ttsText, setTtsText] = useState('');
@@ -357,6 +382,7 @@ export function AdminPanel({ password }: AdminPanelProps) {
     { id: 'users', label: 'Foydalanuvchilar', eyebrow: 'Members', count: users.length },
     { id: 'audio', label: 'Audio', eyebrow: 'TTS studio', count: null },
     { id: 'glossary', label: 'Lug’at', eyebrow: 'Lexicon', count: glossary.length || null },
+    { id: 'analyzer', label: 'HSK Analyzer', eyebrow: 'Levels', count: null },
   ];
   const activeNav = NAV.find((n) => n.id === tab) || NAV[0];
 
@@ -626,6 +652,70 @@ export function AdminPanel({ password }: AdminPanelProps) {
                 </tbody>
               </table>
             </div>
+          </section>
+        )}
+
+        {tab === 'analyzer' && (
+          <section className="adm__analyzer">
+            <p className="adm__analyzer-hint">
+              Dialog slug yoki matn qo&apos;ying — har bir so&apos;zning HSK 3.0 darajasi ko&apos;rsatiladi.
+              Darajani o&apos;zingiz belgilaysiz. <b>≈</b> = qismlardan taxminiy daraja; <b>—</b> = HSK 3.0 ro&apos;yxatida yo&apos;q.
+            </p>
+            <div className="adm__toolbar">
+              <div className="adm__field">
+                <input className="adm__field-input" placeholder="Dialog slug (masalan: are-you-cold)" value={analyzeSlug}
+                  onChange={(e) => setAnalyzeSlug(e.target.value)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' && analyzeSlug.trim()) runAnalyze({ slug: analyzeSlug.trim() }); }} />
+              </div>
+              <button className="adm__btn adm__btn--accent" type="button" disabled={!analyzeSlug.trim() || analyzing}
+                onClick={() => runAnalyze({ slug: analyzeSlug.trim() })}>Tahlil</button>
+            </div>
+            <div className="adm__editor">
+              <label className="adm__field-lbl" style={{ width: '100%' }}>
+                <span>…yoki xitoycha matn</span>
+                <textarea className="adm__input" rows={2} placeholder="你好！你今天加班吗？" value={analyzeText}
+                  onChange={(e) => setAnalyzeText(e.target.value)} />
+              </label>
+              <div className="adm__editor-actions">
+                <button className="adm__btn adm__btn--ghost" type="button" disabled={!analyzeText.trim() || analyzing}
+                  onClick={() => runAnalyze({ text: analyzeText.trim() })}>Matnni tahlil qilish</button>
+              </div>
+            </div>
+
+            {analyzing && <div className="adm__loading-text">Tahlil qilinmoqda…</div>}
+            {analyzeErr && <div className="adm__err">{analyzeErr}</div>}
+
+            {analyzeRes && (
+              <>
+                <div className="adm__analyzer-summary">
+                  {analyzeRes.mode === 'text' && <span className="adm__hsk" style={{ background: '#fef3c7', color: '#92400e' }}>approx segmentation</span>}
+                  {[1, 2, 3, 4, 5, 6, 7].map((l) => analyzeRes.perLevel[l] ? (
+                    <span key={l} className="adm__hsk">HSK {l === 7 ? '7–9' : l}: {analyzeRes.perLevel[l]}</span>
+                  ) : null)}
+                  {analyzeRes.offList.length > 0 && (
+                    <span className="adm__dash">off-list: {analyzeRes.offList.length}</span>
+                  )}
+                </div>
+                <div className="adm__table-wrap">
+                  <table className="adm__table">
+                    <thead><tr><th>汉字</th><th>Pinyin</th><th>HSK</th><th>Lug&apos;at</th><th>Ma&apos;no</th></tr></thead>
+                    <tbody>
+                      {analyzeRes.words.map((w, i) => (
+                        <tr key={w.zh + i}>
+                          <td className="adm__zh">{w.zh}</td>
+                          <td className="adm__py">{w.pinyin || ''}</td>
+                          <td>{w.level === null
+                            ? <span className="adm__dash">—</span>
+                            : <span className="adm__hsk" style={w.estimate ? { background: '#f1f5f9', color: '#475569' } : undefined}>{w.estimate ? '≈' : ''}{lvlLabel(w.level)}</span>}</td>
+                          <td>{w.inGlossary ? '✓' : <span className="adm__dash">—</span>}</td>
+                          <td>{w.gloss || ''}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
           </section>
         )}
       </main>
