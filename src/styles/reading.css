@@ -1358,9 +1358,18 @@ body {
   padding: 8px 12px;
 }
 
-.dr-line--spa { --dr-speaker: #378add; }
-.dr-line--spb { --dr-speaker: #dc2626; }
+.dr-line--spa { --dr-speaker: #dc2626; }
 .dr-line--spc { --dr-speaker: #ef9f27; }
+
+/* B's strip sits on the RIGHT edge, so the side is a second speaker cue on top
+   of colour and the exchange reads as two-sided. The rounding mirrors with it:
+   flat against the strip, rounded away from it. */
+.dr-line--spb {
+  --dr-speaker: #378add;
+  border-left: none;
+  border-right: 3px solid var(--dr-speaker);
+  border-radius: 8px 0 0 8px;
+}
 
 .dr-line-main {
   display: flex;
