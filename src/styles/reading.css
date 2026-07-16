@@ -1151,10 +1151,18 @@ body {
    row of tiles. */
 .dr-dict__answer--text {
   min-height: 44px;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 500;
   color: #1a1a1a;
   letter-spacing: 0.3px;
+}
+
+/* Character answers are short and compact, so they can carry more size than a
+   long spaced-out pinyin string — and the answer should read larger than the
+   keys feeding it, not smaller. */
+.dr-dict__answer--han {
+  font-size: 28px;
+  letter-spacing: 1px;
 }
 
 /* tray */

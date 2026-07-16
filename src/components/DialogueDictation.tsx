@@ -299,7 +299,7 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
             {/* Keyboard: the answer is a compact text line; the scrambled keys
                 below stay in place and dim when used. Syllables join with a
                 space, characters run together. */}
-            <div className={`dr-dict__answer dr-dict__answer--text${status !== 'idle' ? ` dr-dict__answer--${status}` : ''}`}>
+            <div className={`dr-dict__answer dr-dict__answer--text${pinyinTiles ? '' : ' dr-dict__answer--han'}${status !== 'idle' ? ` dr-dict__answer--${status}` : ''}`}>
               {placed.length === 0
                 ? <span className="dr-dict__answer-hint">{pinyinTiles
                     ? T(language, 'Bo\'g\'inlarni bosing', 'Нажимайте слоги', 'Tap the syllables')
