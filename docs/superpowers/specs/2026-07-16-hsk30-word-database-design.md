@@ -35,6 +35,18 @@ Note **七–九级 is a single band** in the standard, not three separate level
 6. **Dictionary is complete on day one** — backfill glosses for the ~8,500 unglossed HSK words before shipping it.
 7. **Dictionary is public**, but word pages are sitemapped only once substantive (see M5).
 8. **Backfilled glosses live in `hsk_words`**, not `glossary`. Precedence: **glossary (human) > hsk_words (machine)**.
+9. **HSK 3.0 is the single standard, product-wide — including user-facing labels.** No dual-standard UI, no 2.0/3.0 toggle. Decided 2026-07-16. This resolves the ambiguity that exists today (the Writing tab currently ships HSK 2.0 *and* 3.0 sets side by side, so "HSK 2" already means two different things). See "Migration consequences" below.
+
+> **Caveat recorded, not blocking:** levels are ultimately a promise about the exam the learner sits. The HSK 3.0 exam rollout was still in progress as of the last reliable information available here, and this is exactly the kind of fact that changes. If it later turns out the target audience predominantly sits HSK 2.0, this decision is the one to revisit — everything else in this spec survives, because the data spine is standard-agnostic.
+
+## Migration consequences of decision 9
+
+Adopting 3.0 for **user-facing** levels (not just internally) has two real costs that must be planned, not discovered:
+
+1. **Writing tab carries HSK 2.0 content.** `WRITING_SETS_HSK2` … `WRITING_SETS_HSK6` are 2.0-level sets (HSK 6 alone has 25), reached via `?tab=writing&version=2.0&hsk={level}`, with `setId`s like `hsk2-*`. Under a single-standard product these must be **relabelled to 3.0 levels or retired**, and the `version` toggle removed. The characters themselves don't change — only their level grouping — but `setId`s appear in URLs, so renaming implies redirects.
+2. **Dialogue levels will move, and dialogue URLs contain the level.** Re-confirming levels on the 3.0 scale (via M2) will reassign some dialogues; since URLs are `/chinese/dialogues/hsk{n}/{slug}`, any move changes the URL. Use the existing `MOVED_DIALOGUES` map in `src/proxy.ts` to 301 the old path. Expect movement to be common: 3.0's lower levels are far broader (L1 = 500 words vs 2.0's 150), so content will generally shift **down** a level.
+
+Flashcard decks (`content/flashcards/hsk1.json`, 307 words — a count matching neither standard) should be reconciled against the imported list in the same pass.
 
 ## Data model
 
