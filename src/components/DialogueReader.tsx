@@ -647,11 +647,8 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                           {groups.map((group, gi) => {
                             const speaker = group[0].speaker;
                             return (
-                              <div key={`${section.id}-g${gi}`} className="dr-line">
+                              <div key={`${section.id}-g${gi}`} className={`dr-line dr-line--sp${(speaker || 'a').toLowerCase()}`}>
                                 <div className="dr-line-main">
-                                  {speaker && (
-                                    <div className="dr-line-speaker">{speaker}:</div>
-                                  )}
                                   <div ref={group[0].id === allSentences[0]?.id ? firstLineRef : undefined} className="dr-line-chars">
                                     {group.map((s, si) => {
                                       const pairs = alignPinyinToText(s.text_original, s.pinyin);
