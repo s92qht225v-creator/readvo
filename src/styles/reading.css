@@ -1361,11 +1361,12 @@ body {
 .dr-line--spa { --dr-speaker: #dc2626; }
 .dr-line--spc { --dr-speaker: #ef9f27; }
 
-/* B's strip sits on the RIGHT edge, so the side is a second speaker cue on top
-   of colour and the exchange reads as two-sided. The rounding mirrors with it:
-   flat against the strip, rounded away from it. */
+/* A and B share one colour, so the EDGE is what tells them apart: A's strip is
+   on the left, B's on the right. C keeps its own colour because it also sits on
+   the left and would otherwise be indistinguishable from A. The rounding mirrors
+   with the strip: flat against it, rounded away from it. */
 .dr-line--spb {
-  --dr-speaker: #378add;
+  --dr-speaker: #dc2626;
   border-left: none;
   border-right: 3px solid var(--dr-speaker);
   border-radius: 8px 0 0 8px;
