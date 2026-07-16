@@ -50,33 +50,50 @@ Flashcard decks (`content/flashcards/hsk1.json`, 307 words — a count matching 
 
 ## Data model
 
+**Source dataset (verified 2026-07-16):** [`ivankra/hsk30`](https://github.com/ivankra/hsk30) — MIT, derived from the PRC Ministry of Education standard via proof-read OCR. **Count gate PASSED exactly**: 500/772/973/1000/1071/1140/5636 = 11,092, and it already labels the band as `7-9`.
+
+> **One word ≠ one level.** The standard lists polysemous words once *per sense*, at different levels: 打 is **L1** (V, dǎ), **L4** (M, **dá** — different tone), **L5** (Prep, dǎ); 白 is L1 (Adj) and L3 (Adv). There are **112** such `(zh, py_norm)` groups, **79 of which span different levels**. Therefore:
+> - **No unique constraint on `(zh, py_norm)`** — it would reject 112 rows. The natural key is the dataset's own `hsk_id` (`L1-0056`).
+> - **Pinyin + analyzer use the *lowest* level a word form appears at** ("first introduced at"). If 打 is introduced at L1, an L2 learner knows the form and must not get pinyin. Exposed via the `hsk_word_levels` view.
+> - **The dictionary shows all senses** — that polysemy is a feature there, not noise.
+
 ```sql
 create table public.hsk_words (
   id          bigint generated always as identity primary key,
+  hsk_id      text not null unique,          -- dataset ID, e.g. L1-0056 (natural key)
   zh          text not null,
+  traditional text,
   pinyin      text not null,                 -- tone-marked, e.g. kōngtiáo
-  -- toneless + lowercase + despaced, e.g. kōngtiáo -> kongtiao
+  -- toneless + lowercase + despaced + ellipsis-stripped, e.g. kōngtiáo -> kongtiao, …jí le -> jile
   py_norm     text generated always as (
-                replace(replace(lower(translate(pinyin,
+                replace(replace(replace(lower(translate(pinyin,
                   'āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüĀÁǍÀĒÉĚÈĪÍǏÌŌÓǑÒŪÚǓÙǕǗǙǛÜ',
                   'aaaaeeeeiiiioooouuuuuuuuuaaaaeeeeiiiioooouuuuuuuuu')),
-                ' ', ''), '''', '')
+                ' ', ''), '''', ''), '…', '')
               ) stored,
+  pos         text,                          -- part of speech: V, N, Adj, M, Prep… (aids M4 disambiguation)
   level       smallint not null check (level between 1 and 7), -- 7 == the 七–九级 band
   uz          text,                          -- machine-generated (M4)
   ru          text,
   en          text,
-  source      text not null,                 -- dataset provenance
+  source      text not null default 'ivankra/hsk30',
   created_at  timestamptz not null default now(),
-  updated_at  timestamptz not null default now(),
-  unique (zh, py_norm)
+  updated_at  timestamptz not null default now()
 );
 alter table public.hsk_words enable row level security;  -- service-role only, read server-side
 create index on public.hsk_words (py_norm);
 create index on public.hsk_words (level);
+create index on public.hsk_words (zh);
+
+-- "first introduced at" level per word form — the ONLY level source for M2/M3.
+create view public.hsk_word_levels as
+  select zh, py_norm, min(level) as level
+  from public.hsk_words
+  group by zh, py_norm;
 ```
 
 - `level = 7` means **"7–9"**; UI renders the label `7–9`, never `7`.
+- The `py_norm` expression is validated against all 11,092 rows: 0 rows retain non-ASCII after normalisation.
 - `glossary` gains `hsk30_level smallint` (nullable). **NULL = not in HSK 3.0** (proper nouns / modern terms: 微信, 定位, 上海, 大盘鸡).
 - `py_norm` mirrors the existing generated-column pattern already used by `glossary`.
 - Per project convention, RLS is enabled with **no policies** (service-role only, reached through `/api/*`), never queried from the browser.
