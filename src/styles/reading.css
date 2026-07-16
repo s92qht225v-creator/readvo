@@ -610,10 +610,15 @@ body {
   line-height: 2.8;
 }
 
+/* Focus mode is the only consumer of .story__text (StoryReader is gone). This
+   margin is split across both sides of each ruby, and its em resolves against
+   the 24px character — so 0.06em == the 2.88px gap that .dr-line-chars gets
+   from its 0.18em column-gap in dialogue mode. Measured, not guessed: the two
+   paths express spacing against different bases, so the numbers can't match. */
 .story__text ruby {
   ruby-position: over;
   ruby-align: center;
-  margin: 0 0.28em;
+  margin: 0 0.06em;
 }
 
 .story__text rt {
