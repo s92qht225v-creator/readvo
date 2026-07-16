@@ -34,6 +34,10 @@ export interface DialoguePage {
   /** Opt-in: dictation uses pinyin-syllable tiles instead of Han characters
    *  (HSK 1 prototype). */
   dictationPinyin?: boolean;
+  /** Opt-in: dictation uses the fixed-key keyboard + backspace instead of the
+   *  drag-tile tray. Independent of `dictationPinyin` — set alone for a
+   *  CHARACTER keyboard. */
+  dictationKeyboard?: boolean;
   /** Per-dialogue speaker→MiMo-voice override (e.g. swap A/B genders for one
    *  dialogue). Merged over the global DIALOGUE_VOICE map. */
   voices?: Record<string, string>;

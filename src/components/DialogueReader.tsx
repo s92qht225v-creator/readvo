@@ -101,6 +101,10 @@ export interface DialogueMeta {
   /** Opt-in: dictation tiles are pinyin syllables instead of Han characters
    *  (HSK 1 prototype). Set per-dialogue via `dictationPinyin` in the JSON. */
   dictationPinyin?: boolean;
+  /** Opt-in: dictation uses the fixed-key keyboard + backspace instead of the
+   *  drag-tile tray. Independent of `dictationPinyin` — set this alone for a
+   *  CHARACTER keyboard. Pinyin always uses the keyboard regardless. */
+  dictationKeyboard?: boolean;
   /** Per-dialogue speaker→MiMo-voice override (e.g. swap A/B genders for one
    *  dialogue). Merged over the global DIALOGUE_VOICE map. Set via `voices`
    *  in the JSON. */
@@ -788,7 +792,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
             {/* ── GRAMMATIKA TAB ── */}
             {activeTab === 'dictation' && (
               <div className="dr-panel">
-                <DialogueDictation lines={dictationLines} language={language} level={meta.level} pinyinTiles={meta.dictationPinyin} />
+                <DialogueDictation lines={dictationLines} language={language} level={meta.level} pinyinTiles={meta.dictationPinyin} keyboard={meta.dictationKeyboard} />
               </div>
             )}
 

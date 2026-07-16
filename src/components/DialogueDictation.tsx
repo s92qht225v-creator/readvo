@@ -31,7 +31,11 @@ const T = (language: Language, uz: string, ru: string, en: string) =>
  *   - type:  type the characters with a Chinese keyboard (HSK 5/6 default).
  * Bespoke, self-contained (no test engine), styled with the reader's `dr-*` look.
  */
-export function DialogueDictation({ lines, language, level = 1, pinyinTiles = false }: { lines: DictationLine[]; language: Language; level?: number; pinyinTiles?: boolean }) {
+export function DialogueDictation({ lines, language, level = 1, pinyinTiles = false, keyboard = false }: { lines: DictationLine[]; language: Language; level?: number; pinyinTiles?: boolean; keyboard?: boolean }) {
+  // Two independent choices: WHAT the tokens are (pinyinTiles → syllables, else
+  // characters) and HOW you enter them (keyboard → fixed keys + backspace, else
+  // drag-tiles). Pinyin always implies the keyboard; characters can use either.
+  const useKeyboard = keyboard || pinyinTiles;
   // HSK 5/6 default to typing; lower levels stay on tiles. The mode is session-
   // level (persists across lines), toggled via the fallback link when level≥5.
   const [mode, setMode] = useState<'tiles' | 'type'>(level >= 5 ? 'type' : 'tiles');
@@ -290,14 +294,17 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
       </button>
 
       {mode === 'tiles' ? (
-        pinyinTiles ? (
+        useKeyboard ? (
           <>
-            {/* Pinyin keyboard: the answer is a compact text line; the
-                scrambled syllables below stay in place and dim when used. */}
+            {/* Keyboard: the answer is a compact text line; the scrambled keys
+                below stay in place and dim when used. Syllables join with a
+                space, characters run together. */}
             <div className={`dr-dict__answer dr-dict__answer--text${status !== 'idle' ? ` dr-dict__answer--${status}` : ''}`}>
               {placed.length === 0
-                ? <span className="dr-dict__answer-hint">{T(language, 'Bo\'g\'inlarni bosing', 'Нажимайте слоги', 'Tap the syllables')}</span>
-                : placed.map(id => tokens[id]).join(' ')}
+                ? <span className="dr-dict__answer-hint">{pinyinTiles
+                    ? T(language, 'Bo\'g\'inlarni bosing', 'Нажимайте слоги', 'Tap the syllables')
+                    : T(language, 'Ierogliflarni bosing', 'Нажимайте иероглифы', 'Tap the characters')}</span>
+                : placed.map(id => tokens[id]).join(pinyinTiles ? ' ' : '')}
             </div>
 
             {!done && (
@@ -306,14 +313,14 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
                   <button
                     key={id}
                     type="button"
-                    className={`dr-dict__tile dr-dict__tile--py${placed.includes(id) ? ' dr-dict__tile--used' : ''}`}
+                    className={`dr-dict__tile${pinyinTiles ? ' dr-dict__tile--py' : ''}${placed.includes(id) ? ' dr-dict__tile--used' : ''}`}
                     onClick={() => pressKey(id)}
                     disabled={placed.includes(id)}
                   >
                     {tokens[id]}
                   </button>
                 ))}
-                <button type="button" className="dr-dict__tile dr-dict__tile--back" onClick={backspaceKey} disabled={placed.length === 0} aria-label="Backspace">⌫</button>
+                <button type="button" className={`dr-dict__tile${pinyinTiles ? ' dr-dict__tile--py' : ''} dr-dict__tile--back`} onClick={backspaceKey} disabled={placed.length === 0} aria-label="Backspace">⌫</button>
               </div>
             )}
 

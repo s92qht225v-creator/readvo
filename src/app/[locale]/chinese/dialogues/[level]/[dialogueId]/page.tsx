@@ -127,6 +127,7 @@ export default async function DialoguePage({ params }: PageParams) {
           titleTranslation_ru: raw.titleTranslation_ru,
           titleTranslation_en: raw.titleTranslation_en,
           dictationPinyin: raw.dictationPinyin,
+          dictationKeyboard: raw.dictationKeyboard,
           voices: raw.voices,
         }}
         bookPath={`/chinese/${level}`}

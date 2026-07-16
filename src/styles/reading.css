@@ -1200,7 +1200,11 @@ body {
 /* Double class so this beats `.dr-dict__tile:disabled` (used keys are also
    disabled) — otherwise the disabled opacity would win and the grey wouldn't show. */
 .dr-dict__tile.dr-dict__tile--used { opacity: 0.3; background: #f1f3f5; border-color: #ececef; }
-.dr-dict__tile--back { color: #6b7177; min-width: 52px; height: 58px; }
+/* Wide like a real keyboard's backspace. Height is deliberately NOT set here:
+   it comes from --py (58px) on the syllable keyboard, or the base tile (50px)
+   on the character keyboard, so the key always matches its row. Declared after
+   --py so its min-width wins (same specificity, later source). */
+.dr-dict__tile--back { color: #6b7177; min-width: 88px; }
 
 .dr-dict__feedback { font-size: 14px; font-weight: 600; text-align: center; }
 .dr-dict__feedback--wrong { color: #dc2626; }
