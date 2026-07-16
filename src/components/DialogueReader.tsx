@@ -45,6 +45,8 @@ interface Sentence {
   audio_url?: string;
   start?: number;
   end?: number;
+  /** Per-character HSK 3.0 level (server-attached). null = off-list. */
+  charLvls?: (number | null)[];
 }
 
 interface VocabEntry {
@@ -234,6 +236,8 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   // ── Null-safe derived data (hooks must always run — dialogue may be null) ──
 
   const allSentences = useMemo(() => (dialogue?.sections ?? []).flatMap(s => s.sentences), [dialogue]);
+  // This dialogue's HSK level — words below it get their pinyin hidden (progressive pinyin).
+  const dialogueLevel = meta.level ?? 1;
 
   // Per-sentence MiMo TTS fallback. Dialogues without recorded audio (e.g.
   // HSK 2) have no `audio_url`; we resolve a playable URL from /api/tts
@@ -653,25 +657,31 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                                       const pairs = alignPinyinToText(s.text_original, s.pinyin);
                                       const sActive = displaySentenceId === s.id;
                                       const sPlaying = audioSentenceId === s.id;
-                                      // Pinyin follows the global toggle — when it's
-                                      // on, every line shows it (users preferred this
-                                      // over the per-line reveal). Translation stays
-                                      // per-line (tap to reveal one at a time).
+                                      // Pinyin follows the global toggle. When on, it's
+                                      // shown PROGRESSIVELY: words below the dialogue's
+                                      // HSK level (which the learner already knows) render
+                                      // bare; words at-or-above level + off-list keep it.
                                       const sPinyin = showPinyin;
+                                      // char-index → HSK 3.0 level (server-attached charLvls)
+                                      const charLvl = s.charLvls ?? [];
+                                      let charOff = 0;
                                       return pairs.map((pair, ci) => {
+                                        const wl = charLvl[charOff];
+                                        charOff += [...pair.char].length;
+                                        // hide pinyin for a word whose level < this dialogue's level
+                                        const hidePy = typeof wl === 'number' && wl < dialogueLevel;
                                         const isPunct = /[，。？！、,.\s]/.test(pair.char);
+                                        const reservePy = sPinyin && !isPunct;
+                                        const pyText = (!hidePy && pair.pinyin) ? pair.pinyin : null;
                                         return (
                                           <div
                                             key={`${si}-${ci}`}
                                             className={`dr-char ${sActive ? 'dr-char--active' : ''} ${sPlaying ? 'dr-char--playing' : ''}`}
                                             onClick={(e) => { e.stopPropagation(); handleSentenceClick(s.id); }}
                                           >
-                                            {sPinyin && pair.pinyin && (
-                                              <div className="dr-char-py">{pair.pinyin}</div>
-                                            )}
-                                            {sPinyin && !pair.pinyin && !isPunct && (
-                                              <div className="dr-char-py dr-char-py--empty"> </div>
-                                            )}
+                                            {reservePy && (pyText
+                                              ? <div className="dr-char-py">{pyText}</div>
+                                              : <div className="dr-char-py dr-char-py--empty"> </div>)}
                                             <div className="dr-char-zh">{pair.char}</div>
                                           </div>
                                         );
