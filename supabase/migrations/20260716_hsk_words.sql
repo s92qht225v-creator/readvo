@@ -1,6 +1,6 @@
 -- HSK 3.0 word database — reference spine.
--- Source: ivankra/hsk30 (MIT), derived from the PRC MoE standard 《国际中文教育中文水平等级标准》.
--- Count gate verified 2026-07-16: 500/772/973/1000/1071/1140/5636 = 11,092 exactly.
+-- Source: HSK 3.0 EXAM syllabus 2026 (chinaeducenter vocabulary_band{1..6,789}_2026.pdf).
+-- Count gate verified 2026-07-16: 300/200/500/1000/1600/1800/5600 = 11,000 exactly.
 --
 -- NOTE: apply this MANUALLY in the Supabase dashboard SQL editor.
 -- `supabase db push` is blocked by migration drift on this project.
@@ -24,7 +24,7 @@ create table if not exists public.hsk_words (
   uz          text,                           -- machine-generated later (M4)
   ru          text,
   en          text,
-  source      text not null default 'ivankra/hsk30',
+  source      text not null,               -- e.g. chinaeducenter HSK3.0 exam syllabus 2026
   created_at  timestamptz not null default now(),
   updated_at  timestamptz not null default now()
 );

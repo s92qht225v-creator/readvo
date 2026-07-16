@@ -50,7 +50,34 @@ Flashcard decks (`content/flashcards/hsk1.json`, 307 words — a count matching 
 
 ## Data model
 
-**Source dataset (verified 2026-07-16):** [`ivankra/hsk30`](https://github.com/ivankra/hsk30) — MIT, derived from the PRC Ministry of Education standard via proof-read OCR. **Count gate PASSED exactly**: 500/772/973/1000/1071/1140/5636 = 11,092, and it already labels the band as `7-9`.
+## Source: the EXAM syllabus, not the proficiency standard
+
+> **Correction (2026-07-16).** There are **two different official documents**, and the first import used the wrong one:
+>
+> | | 《国际中文教育中文水平等级标准》 (2021) | **HSK 3.0 exam syllabus (2026)** ✅ |
+> |---|---|---|
+> | Band 1 | 500 words | **300 words** |
+> | Total | 11,092 | **11,000** |
+> | Distribution | 500/772/973/1000/1071/1140/5636 | **300/200/500/1000/1600/1800/5600** |
+> | 你好 | **absent** (only 你 + 好) | **present** (#147, band 1) |
+> | English glosses | no | **yes** |
+>
+> The 等级标准 is an academic word inventory; the **exam syllabus is what learners actually study and sit**. Since the whole point of a level badge is to predict exam readiness, **the exam syllabus is authoritative for this project.**
+
+**Source (verified 2026-07-16):** `chinaeducenter.com/cecdl/vocabulary_band{1..6,789}_2026.pdf` — "New HSK Test 3.0 Vocabulary List (2026 Version)", 7 PDFs, parsed with `pdftotext -layout`.
+
+**Verification (all passed):**
+- Per-band counts exact: **300 / 200 / 500 / 1000 / 1600 / 1800 / 5600 = 11,000**, cumulative 300/500/1000/2000/3600/5400/11000 (round syllabus targets).
+- **Self-validating:** band 7–9 is numbered **5401→11000 contiguously**, continuing straight on from band 6's 5,400 — the bands stitch into one sequence. Stronger evidence than a count match alone.
+- Bands 1–6 (the app's range, 5,400 words): **0 missing pinyin, 0 missing English**.
+
+**Parsing gotchas (each cost a bug):**
+- **Bands 1–6 and band 7–9 have DIFFERENT column layouts.** 1–6: `num word pinyin POS(English) translation`. 7–9: `num word pinyin translation POS(Chinese 动/名/形)`. A single parser silently mangles one of them.
+- In bands 1–6, POS and translation are separated by a **single** space (`verb、adjective can, may; okay, fine`), so a `\s{2,}` split merges them.
+- In band 7–9, pinyin **wraps across lines** (饱经沧桑 → `bǎojīng-cā` + `ngsāng`).
+- POS matching is **greedy and imperfect** where a translation begins with a POS word (`号` → pos absorbed "number"). POS is therefore **best-effort**; 158 band 7–9 entries still lack English (idiom translations wrap unpredictably). Levels, 汉字 and pinyin are complete and exact.
+
+`level` stores the band: 1–6, and **7 = the 7–9 band** (render as `7–9`, never `7`).
 
 > **One word ≠ one level.** The standard lists polysemous words once *per sense*, at different levels: 打 is **L1** (V, dǎ), **L4** (M, **dá** — different tone), **L5** (Prep, dǎ); 白 is L1 (Adj) and L3 (Adv). There are **112** such `(zh, py_norm)` groups, **79 of which span different levels**. Therefore:
 > - **No unique constraint on `(zh, py_norm)`** — it would reject 112 rows. The natural key is the dataset's own `hsk_id` (`L1-0056`).
