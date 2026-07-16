@@ -1352,7 +1352,7 @@ body {
   margin-bottom: 10px;
   cursor: pointer;
   background: #fff;
-  border-left: 5px solid var(--dr-speaker, #378add);
+  border-left: 3px solid var(--dr-speaker, #378add);
   border-radius: 0 8px 8px 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
   padding: 8px 12px;
