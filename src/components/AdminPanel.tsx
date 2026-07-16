@@ -98,9 +98,13 @@ export function AdminPanel({ password }: AdminPanelProps) {
   type AnalyzeResult = { mode: string; count: number; words: AnalyzeRow[]; perLevel: Record<string, number>; offList: string[] };
   const [analyzeSlug, setAnalyzeSlug] = useState('');
   const [analyzeText, setAnalyzeText] = useState('');
+  const [analyzeMode, setAnalyzeMode] = useState<'slug' | 'text'>('slug');
+  const [analyzeSort, setAnalyzeSort] = useState<'order' | 'level'>('order');
   const [analyzeRes, setAnalyzeRes] = useState<AnalyzeResult | null>(null);
   const [analyzing, setAnalyzing] = useState(false);
   const [analyzeErr, setAnalyzeErr] = useState('');
+  // easy→hard colour band for a level badge (null = off-list)
+  const lvlBand = (l: number | null) => (l === null ? 'off' : l <= 2 ? 'a' : l <= 4 ? 'b' : l <= 6 ? 'c' : 'd');
   const runAnalyze = async (payload: { slug?: string; text?: string }) => {
     setAnalyzing(true); setAnalyzeErr(''); setAnalyzeRes(null);
     try {
@@ -656,66 +660,81 @@ export function AdminPanel({ password }: AdminPanelProps) {
         )}
 
         {tab === 'analyzer' && (
-          <section className="adm__analyzer">
-            <p className="adm__analyzer-hint">
-              Dialog slug yoki matn qo&apos;ying — har bir so&apos;zning HSK 3.0 darajasi ko&apos;rsatiladi.
-              Darajani o&apos;zingiz belgilaysiz. <b>≈</b> = qismlardan taxminiy daraja; <b>—</b> = HSK 3.0 ro&apos;yxatida yo&apos;q.
-            </p>
-            <div className="adm__toolbar">
-              <div className="adm__field">
-                <input className="adm__field-input" placeholder="Dialog slug (masalan: are-you-cold)" value={analyzeSlug}
+          <section className="hska">
+            {/* input mode toggle */}
+            <div className="hska__modes">
+              <button type="button" className={`hska__mode${analyzeMode === 'slug' ? ' hska__mode--on' : ''}`} onClick={() => setAnalyzeMode('slug')}>Dialog</button>
+              <button type="button" className={`hska__mode${analyzeMode === 'text' ? ' hska__mode--on' : ''}`} onClick={() => setAnalyzeMode('text')}>Matn</button>
+            </div>
+
+            {analyzeMode === 'slug' ? (
+              <div className="hska__inputrow">
+                <input className="hska__input" placeholder="Dialog slug — masalan: are-you-cold" value={analyzeSlug}
                   onChange={(e) => setAnalyzeSlug(e.target.value)}
                   onKeyDown={(e) => { if (e.key === 'Enter' && analyzeSlug.trim()) runAnalyze({ slug: analyzeSlug.trim() }); }} />
+                <button className="hska__go" type="button" disabled={!analyzeSlug.trim() || analyzing}
+                  onClick={() => runAnalyze({ slug: analyzeSlug.trim() })}>{analyzing ? '…' : 'Tahlil'}</button>
               </div>
-              <button className="adm__btn adm__btn--accent" type="button" disabled={!analyzeSlug.trim() || analyzing}
-                onClick={() => runAnalyze({ slug: analyzeSlug.trim() })}>Tahlil</button>
-            </div>
-            <div className="adm__editor">
-              <label className="adm__field-lbl" style={{ width: '100%' }}>
-                <span>…yoki xitoycha matn</span>
-                <textarea className="adm__input" rows={2} placeholder="你好！你今天加班吗？" value={analyzeText}
+            ) : (
+              <div className="hska__inputrow hska__inputrow--text">
+                <textarea className="hska__textarea" rows={3} placeholder="Xitoycha matn qo'ying — 你好！你今天加班吗？" value={analyzeText}
                   onChange={(e) => setAnalyzeText(e.target.value)} />
-              </label>
-              <div className="adm__editor-actions">
-                <button className="adm__btn adm__btn--ghost" type="button" disabled={!analyzeText.trim() || analyzing}
-                  onClick={() => runAnalyze({ text: analyzeText.trim() })}>Matnni tahlil qilish</button>
+                <button className="hska__go" type="button" disabled={!analyzeText.trim() || analyzing}
+                  onClick={() => runAnalyze({ text: analyzeText.trim() })}>{analyzing ? '…' : 'Tahlil'}</button>
               </div>
-            </div>
+            )}
 
-            {analyzing && <div className="adm__loading-text">Tahlil qilinmoqda…</div>}
+            <p className="hska__legend">
+              <span className="hska__b hska__b--a">1–2</span><span className="hska__b hska__b--b">3–4</span>
+              <span className="hska__b hska__b--c">5–6</span><span className="hska__b hska__b--d">7–9</span>
+              <span className="hska__b hska__b--off">—</span>
+              &nbsp;daraja &nbsp;·&nbsp; <b>≈</b> qismlardan taxminiy &nbsp;·&nbsp; <b>—</b> HSK 3.0&apos;da yo&apos;q
+            </p>
+
             {analyzeErr && <div className="adm__err">{analyzeErr}</div>}
 
-            {analyzeRes && (
-              <>
-                <div className="adm__analyzer-summary">
-                  {analyzeRes.mode === 'text' && <span className="adm__hsk" style={{ background: '#fef3c7', color: '#92400e' }}>approx segmentation</span>}
-                  {[1, 2, 3, 4, 5, 6, 7].map((l) => analyzeRes.perLevel[l] ? (
-                    <span key={l} className="adm__hsk">HSK {l === 7 ? '7–9' : l}: {analyzeRes.perLevel[l]}</span>
-                  ) : null)}
-                  {analyzeRes.offList.length > 0 && (
-                    <span className="adm__dash">off-list: {analyzeRes.offList.length}</span>
-                  )}
-                </div>
-                <div className="adm__table-wrap">
-                  <table className="adm__table">
-                    <thead><tr><th>汉字</th><th>Pinyin</th><th>HSK</th><th>Lug&apos;at</th><th>Ma&apos;no</th></tr></thead>
-                    <tbody>
-                      {analyzeRes.words.map((w, i) => (
-                        <tr key={w.zh + i}>
-                          <td className="adm__zh">{w.zh}</td>
-                          <td className="adm__py">{w.pinyin || ''}</td>
-                          <td>{w.level === null
-                            ? <span className="adm__dash">—</span>
-                            : <span className="adm__hsk" style={w.estimate ? { background: '#f1f5f9', color: '#475569' } : undefined}>{w.estimate ? '≈' : ''}{lvlLabel(w.level)}</span>}</td>
-                          <td>{w.inGlossary ? '✓' : <span className="adm__dash">—</span>}</td>
-                          <td>{w.gloss || ''}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </>
-            )}
+            {analyzeRes && (() => {
+              const levels = Object.keys(analyzeRes.perLevel).map(Number).filter((l) => l > 0);
+              const maxLvl = levels.length ? Math.max(...levels) : null;
+              const rows = [...analyzeRes.words];
+              if (analyzeSort === 'level') rows.sort((a, b) => (b.level ?? 99) - (a.level ?? 99));
+              return (
+                <>
+                  {/* headline: highest level in the dialogue = the decision anchor */}
+                  <div className="hska__headline">
+                    <div className="hska__headline-main">
+                      <span className="hska__headline-num">{maxLvl === null ? '—' : maxLvl === 7 ? '7–9' : maxLvl}</span>
+                      <span className="hska__headline-lbl">eng yuqori daraja<br /><em>{analyzeRes.count} so&apos;z{analyzeRes.mode === 'text' ? ' · taxminiy bo‘lish' : ''}</em></span>
+                    </div>
+                    <div className="hska__dist">
+                      {[1, 2, 3, 4, 5, 6, 7].map((l) => analyzeRes.perLevel[l] ? (
+                        <span key={l} className={`hska__chip hska__b--${lvlBand(l)}`}>{l === 7 ? '7–9' : l}<b>{analyzeRes.perLevel[l]}</b></span>
+                      ) : null)}
+                      {analyzeRes.offList.length > 0 && <span className="hska__chip hska__b--off">—<b>{analyzeRes.offList.length}</b></span>}
+                    </div>
+                  </div>
+
+                  <div className="hska__tools">
+                    <span>Saralash:</span>
+                    <button type="button" className={`hska__sort${analyzeSort === 'order' ? ' hska__sort--on' : ''}`} onClick={() => setAnalyzeSort('order')}>Tartib bo&apos;yicha</button>
+                    <button type="button" className={`hska__sort${analyzeSort === 'level' ? ' hska__sort--on' : ''}`} onClick={() => setAnalyzeSort('level')}>Daraja bo&apos;yicha</button>
+                  </div>
+
+                  <div className="hska__grid">
+                    {rows.map((w, i) => (
+                      <div key={w.zh + i} className={`hska__word${w.level === maxLvl && maxLvl && maxLvl > 1 ? ' hska__word--top' : ''}`}>
+                        <span className={`hska__badge hska__b--${lvlBand(w.level)}`}>
+                          {w.level === null ? '—' : (w.estimate ? '≈' : '') + lvlLabel(w.level)}
+                        </span>
+                        <span className="hska__zh">{w.zh}</span>
+                        <span className="hska__py">{w.pinyin || ''}</span>
+                        <span className="hska__gloss">{w.gloss || (w.inGlossary ? '' : <em>lug&apos;atda yo&apos;q</em>)}</span>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              );
+            })()}
           </section>
         )}
       </main>
