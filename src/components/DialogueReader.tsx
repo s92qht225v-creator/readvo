@@ -680,9 +680,13 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                                             className={`dr-char ${sActive ? 'dr-char--active' : ''} ${sPlaying ? 'dr-char--playing' : ''}`}
                                             onClick={(e) => { e.stopPropagation(); handleSentenceClick(s.id); }}
                                           >
+                                            {/* NBSP, not a plain space: a plain space collapses, the
+                                                div gets no line box, and the row loses the pinyin's
+                                                height — so lines whose words are all below level
+                                                would sit tighter than lines that show pinyin. */}
                                             {reservePy && (pyText
                                               ? <div className="dr-char-py">{pyText}</div>
-                                              : <div className="dr-char-py dr-char-py--empty"> </div>)}
+                                              : <div className="dr-char-py dr-char-py--empty">{'\u00A0'}</div>)}
                                             <div className="dr-char-zh">{pair.char}</div>
                                           </div>
                                         );
