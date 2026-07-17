@@ -13,6 +13,7 @@
   "category_ru": "Учёба",
   "category_en": "Learning & Study",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d26-sec1",

@@ -13,6 +13,7 @@
   "category_ru": "Поиск дороги",
   "category_en": "Asking Directions",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d10-sec1",

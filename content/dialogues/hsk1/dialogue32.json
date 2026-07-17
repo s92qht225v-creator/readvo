@@ -13,6 +13,7 @@
   "category_ru": "Транспорт",
   "category_en": "Transport",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d32-sec1",

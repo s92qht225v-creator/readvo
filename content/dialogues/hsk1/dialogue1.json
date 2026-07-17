@@ -14,6 +14,7 @@
   "category_ru": "Знакомство",
   "category_en": "Introductions & Greetings",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d1-sec1",

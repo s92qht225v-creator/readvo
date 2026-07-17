@@ -13,6 +13,7 @@
   "category_ru": "Дружба",
   "category_en": "Friendship",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d21-sec1",

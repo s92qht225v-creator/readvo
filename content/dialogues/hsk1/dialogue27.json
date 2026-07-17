@@ -13,6 +13,7 @@
   "category_ru": "Деньги",
   "category_en": "Money",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d27-sec1",

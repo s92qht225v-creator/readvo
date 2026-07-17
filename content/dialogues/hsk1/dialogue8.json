@@ -18,6 +18,7 @@
   "category_ru": "Местоположение",
   "category_en": "Location",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d8-sec1",

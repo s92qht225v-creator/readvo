@@ -13,6 +13,7 @@
   "category_ru": "Погода",
   "category_en": "Weather",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d23-sec1",

@@ -14,6 +14,7 @@
   "category_ru": "Покупки",
   "category_en": "Shopping",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d15-sec1",

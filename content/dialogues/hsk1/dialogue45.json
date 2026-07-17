@@ -13,6 +13,7 @@
   "category_ru": "Шопинг и общение",
   "category_en": "Shopping & Social",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d45-sec1",

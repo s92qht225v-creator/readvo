@@ -14,6 +14,7 @@
   "category_ru": "Транспорт",
   "category_en": "Transport",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d19-sec1",

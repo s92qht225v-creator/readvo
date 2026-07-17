@@ -18,6 +18,7 @@
   "category_ru": "Повседневная жизнь",
   "category_en": "Daily Life",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d17-sec1",

@@ -13,6 +13,7 @@
   "category_ru": "В ресторане",
   "category_en": "At the Restaurant",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d40-sec1",

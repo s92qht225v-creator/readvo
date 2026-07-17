@@ -13,6 +13,7 @@
   "category_ru": "Чувства и экзамены",
   "category_en": "Feelings & Exams",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d38-sec1",

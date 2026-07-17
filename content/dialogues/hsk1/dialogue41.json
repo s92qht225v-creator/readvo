@@ -13,6 +13,7 @@
   "category_ru": "Оплата",
   "category_en": "Paying the Bill",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d41-sec1",

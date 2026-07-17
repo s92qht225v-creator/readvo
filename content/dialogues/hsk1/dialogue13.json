@@ -14,6 +14,7 @@
   "category_ru": "Знакомство",
   "category_en": "Getting Acquainted",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d13-sec1",

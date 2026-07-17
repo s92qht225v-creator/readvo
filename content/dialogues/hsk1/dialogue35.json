@@ -13,6 +13,7 @@
   "category_ru": "Поездки и прощание",
   "category_en": "Travel & Goodbyes",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d35-sec1",

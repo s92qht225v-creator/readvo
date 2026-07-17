@@ -13,6 +13,7 @@
   "category_ru": "Доставка",
   "category_en": "Delivery",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d42-sec1",

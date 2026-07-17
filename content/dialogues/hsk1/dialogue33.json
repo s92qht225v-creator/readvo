@@ -13,6 +13,7 @@
   "category_ru": "Повседневная жизнь",
   "category_en": "Everyday Life",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d33-sec1",

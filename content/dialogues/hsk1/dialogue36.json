@@ -13,6 +13,7 @@
   "category_ru": "Телефонный разговор",
   "category_en": "Phone Calls",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d36-sec1",

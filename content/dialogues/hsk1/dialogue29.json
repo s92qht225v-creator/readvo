@@ -13,6 +13,7 @@
   "category_ru": "В банке",
   "category_en": "At the Bank",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d29-sec1",

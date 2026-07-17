@@ -15,6 +15,7 @@
   "category_ru": "Люди",
   "category_en": "People",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d14-sec1",

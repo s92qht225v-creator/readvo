@@ -13,6 +13,7 @@
   "category_ru": "Работа и распорядок",
   "category_en": "Work & Daily Schedule",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d44-sec1",

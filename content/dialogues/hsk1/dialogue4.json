@@ -14,6 +14,7 @@
   "category_ru": "Связь и соцсети",
   "category_en": "Contact & Social Apps",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d4-sec1",

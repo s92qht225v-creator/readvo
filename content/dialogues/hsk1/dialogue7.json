@@ -14,6 +14,7 @@
   "category_ru": "Время и расписание",
   "category_en": "Time & Schedule",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d7-sec1",

@@ -13,6 +13,7 @@
   "category_ru": "Общение",
   "category_en": "Communication",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d28-sec1",

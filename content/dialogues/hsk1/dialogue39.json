@@ -13,6 +13,7 @@
   "category_ru": "Школа и задания",
   "category_en": "School & Homework",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d39-sec1",

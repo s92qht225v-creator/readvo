@@ -13,6 +13,7 @@
   "category_ru": "Еда и образ жизни",
   "category_en": "Food & Lifestyle",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d46-sec1",

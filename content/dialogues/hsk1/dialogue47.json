@@ -13,6 +13,7 @@
   "category_ru": "Путешествия",
   "category_en": "Travel & Hobbies",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d47-sec1",

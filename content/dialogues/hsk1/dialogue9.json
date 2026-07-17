@@ -17,6 +17,7 @@
   "category_ru": "Номер телефона",
   "category_en": "Phone Numbers",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d9-sec1",

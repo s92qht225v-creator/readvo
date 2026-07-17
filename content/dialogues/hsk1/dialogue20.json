@@ -14,6 +14,7 @@
   "category_ru": "Бытовые ситуации",
   "category_en": "Everyday Problems",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d20-sec1",

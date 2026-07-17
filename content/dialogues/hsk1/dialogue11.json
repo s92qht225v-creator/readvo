@@ -13,6 +13,7 @@
   "category_ru": "Заказ еды",
   "category_en": "Ordering Food",
   "level": 1,
+  "dictationPinyin": true,
   "sections": [
     {
       "id": "d11-sec1",
