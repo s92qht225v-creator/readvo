@@ -105,13 +105,6 @@ export function BannerMenu({ extraItems }: { extraItems?: (close: () => void) =>
             >
               中文
             </Link>
-            <Link
-              href="/arabic/dialogues"
-              className={`home__menu-lang-btn ${onArabic ? 'home__menu-lang-btn--active' : ''}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              العربية
-            </Link>
           </div>
           <div className="home__menu-divider" />
           <Link href="/chinese/blog" className="home__menu-item" onClick={() => setMenuOpen(false)}>
