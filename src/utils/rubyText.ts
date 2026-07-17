@@ -43,9 +43,11 @@ function isVowel(ch: string): boolean {
  * We detect boundaries where a consonant follows a completed syllable.
  */
 function splitPinyinWord(word: string): string[] {
-  // Handle apostrophe separator (e.g., "kě'ài")
+  // Apostrophe separator (e.g. "kě'ài"). Each side must still be split itself —
+  // an apostrophe marks ONE boundary, not every boundary: "èrshí'èr" is
+  // èr·shí·èr, not èrshí·èr.
   if (word.includes("'")) {
-    return word.split("'");
+    return word.split("'").flatMap(part => (part ? splitPinyinWord(part) : []));
   }
 
   // Single syllable shortcut: count vowel groups
@@ -85,9 +87,22 @@ function splitPinyinWord(word: string): string[] {
           // Check if after "ng" there's a vowel (then ng is final, next is vowel-initial syllable)
           // or a consonant (then ng is final)
           if (i + 2 < word.length && isVowel(word[i + 2])) {
-            // ng + vowel: ng is final, vowel starts new syllable
-            current += 'ng';
-            i += 2;
+            // "ng" + vowel is ambiguous, and both readings occur:
+            //   yīngér  → yīng·ér   (-ng is the final; "er" is a real syllable)
+            //   bàngōng → bàn·gōng  (the g OPENS the next syllable; "ong" is not)
+            // Only keep -ng as the final when a genuine zero-initial syllable
+            // starts at the vowel.
+            if (startsZeroInitialSyllable(word, i + 2)) {
+              current += 'ng';
+              i += 2;
+              syllables.push(current);
+              current = '';
+              continue;
+            }
+            // Otherwise the 'g' belongs to the next syllable: 'n' is this
+            // syllable's final (bàn·gōng).
+            current += 'n';
+            i += 1;
             syllables.push(current);
             current = '';
             continue;
@@ -177,6 +192,36 @@ function hasVowel(s: string): boolean {
   return s.split('').some(isVowel);
 }
 
+/**
+ * The complete set of zero-initial (vowel-initial) Mandarin syllables — the only
+ * ones that can legitimately follow a final -n/-ng. Note what's absent: "ong",
+ * and anything starting i/u/ü. Those never stand alone (they're written wēng,
+ * yī, wū), which is exactly what lets us resolve bàngōng below.
+ */
+const ZERO_INITIAL_SYLLABLES = new Set([
+  'a', 'ai', 'an', 'ang', 'ao', 'e', 'ei', 'en', 'eng', 'er', 'o', 'ou',
+]);
+
+/**
+ * Maximal-munch test: does a REAL zero-initial syllable start at index `i`?
+ * Must be maximal — "ōng" starts with "o", which is a valid syllable on its own,
+ * so a non-greedy check would wrongly accept it. Taking the longest form gives
+ * "ong", which is not a syllable, and the caller can then split correctly.
+ */
+function startsZeroInitialSyllable(word: string, i: number): boolean {
+  let j = i;
+  let vowels = '';
+  while (j < word.length && isVowel(word[j])) { vowels += word[j]; j++; }
+  if (!vowels) return false;
+  let tail = '';
+  if (j < word.length) {
+    const c = word[j].toLowerCase();
+    if (c === 'n') tail = (j + 1 < word.length && word[j + 1].toLowerCase() === 'g') ? 'ng' : 'n';
+    else if (c === 'r') tail = 'r';
+  }
+  return ZERO_INITIAL_SYLLABLES.has(stripPinyinTones(vowels + tail).replace(/\s/g, ''));
+}
+
 function countVowelGroups(s: string): number {
   let count = 0;
   let inVowel = false;
@@ -226,7 +271,9 @@ export function alignPinyinToText(text: string, pinyin: string): RubyPair[] {
   const syllables: string[] = [];
   for (const token of tokens) {
     const cleaned = stripPunct(token);
-    if (!cleaned) continue;
+    // Punctuation-only tokens ("……", "—") must not become syllables, or every
+    // character after them is shifted onto the wrong pinyin.
+    if (!cleaned || !/\p{L}/u.test(cleaned)) continue;
     const parts = splitPinyinWord(cleaned);
     syllables.push(...parts);
   }
@@ -259,8 +306,13 @@ export function alignPinyinToText(text: string, pinyin: string): RubyPair[] {
         i++;
         nonCjk += text[i];
       }
-      // If the non-CJK text matches the current pinyin syllable (e.g., "AI" = "AI"), consume it
-      if (pinyinIndex < syllables.length && nonCjk.toLowerCase() === syllables[pinyinIndex].toLowerCase()) {
+      // If the non-CJK text matches the current pinyin syllable (e.g. "AI" = "AI"),
+      // consume it. Compare on letters/digits only: the run above sweeps up any
+      // trailing punctuation the stop-list misses ("App……"), which would
+      // otherwise fail to match its token ("App") and shift it onto the next
+      // character.
+      const core = nonCjk.replace(/[^\p{L}\p{N}]/gu, '');
+      if (core && pinyinIndex < syllables.length && core.toLowerCase() === syllables[pinyinIndex].toLowerCase()) {
         pinyinIndex++;
       }
       result.push({ char: nonCjk });
