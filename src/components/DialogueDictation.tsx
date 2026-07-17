@@ -9,6 +9,7 @@ import { shuffleArray } from '@/utils/shuffle';
 import { resolveTtsUrl } from '@/utils/ttsAudio';
 import { hanChars, normalizeHan } from '@/utils/hanziNormalize';
 import { alignPinyinToText } from '@/utils/rubyText';
+import { playResult, unlockSfx } from '@/utils/sfx';
 
 export interface DictationLine {
   id: string;
@@ -122,7 +123,7 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
     void playLine(l);
   }, [lines, playLine, lineTokens, useKeyboard]);
 
-  const start = () => { setPhase('play'); setIdx(0); enterLine(0); };
+  const start = () => { unlockSfx(); setPhase('play'); setIdx(0); enterLine(0); };
 
   // Drag-to-reorder within the answer box. PointerSensor with a small
   // activation distance keeps tap-to-remove working (a tap < 6px is a click,
@@ -140,9 +141,11 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
     const answer = arr.map(i => keys[i]).join('');
     if (answer === tokens.join('')) {
       setStatus('correct');
+      playResult(true);
       setResults(prev => { const n = prev.slice(); n[idx] = mistakes === 0; return n; });
     } else {
       setStatus('wrong');
+      playResult(false);
       setMistakes(m => m + 1);
     }
   };
@@ -200,9 +203,11 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
     if (!normalizeHan(typed)) return; // ignore empty / punctuation-only submits
     if (normalizeHan(typed) === normalizeHan(target)) {
       setStatus('correct');
+      playResult(true);
       setResults(prev => { const n = prev.slice(); n[idx] = mistakes === 0; return n; });
     } else {
       setStatus('wrong');
+      playResult(false);
       setMistakes(m => m + 1);
     }
   };
