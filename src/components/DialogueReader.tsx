@@ -13,6 +13,7 @@ import { protectAudioUrlSync } from '../lib/audio/token-client';
 import { resolveTtsUrl } from '../utils/ttsAudio';
 import { RubyText } from './RubyText';
 import { alignPinyinToText } from '../utils/rubyText';
+import { voiceForWith } from '../utils/dialogueVoice';
 import { PageFooter } from './PageFooter';
 import { CoachMarkTour, dismissTip } from './CoachMark';
 import type { TourStep } from './CoachMark';
@@ -127,15 +128,6 @@ const TABS = [
   { id: 'practice', uz: 'Mashq', ru: 'Практика', en: 'Practice' },
 ];
 
-// Per-speaker TTS voices so A/B (and the occasional C) sound like different
-// people. Mapped to MiMo voices; an unmapped speaker → undefined → the route's
-// default voice. Keep in sync with the re-warm scripts.
-const DIALOGUE_VOICE: Record<string, string> = { A: '茉莉', B: '白桦', C: '苏打' };
-const voiceForWith = (
-  s: { speaker?: string },
-  override?: Record<string, string>,
-): string | undefined =>
-  (s.speaker && ((override && override[s.speaker]) || DIALOGUE_VOICE[s.speaker])) || undefined;
 
 export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueReaderProps) {
   const { getAccessToken, user, isLoading: authLoading } = useAuth();
@@ -809,6 +801,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                     dialogueId={dialogue.id}
                     accentColor="#dc2626"
                     language={language}
+                    voices={meta.voices}
                     onComplete={(stars) => saveDialogueStars(dialogue.id, stars)}
                   />
                 ) : (

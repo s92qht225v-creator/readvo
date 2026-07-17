@@ -4,6 +4,8 @@ import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react'
 import { useAuth } from '@/hooks/useAuth';
 import { usePrimeAudioToken } from '@/hooks/useAudioToken';
 import { protectAudioUrlSync } from '@/lib/audio/token-client';
+import { resolveTtsUrl } from '@/utils/ttsAudio';
+import { voiceForWith } from '@/utils/dialogueVoice';
 
 type Language = 'uz' | 'ru' | 'en';
 
@@ -111,51 +113,6 @@ function toSimplified(str: string): string {
 }
 
 // ── Audio helper ──
-// Module-level cache of resolved playable URLs (Supabase MiMo cache or
-// blob URLs) so the same line doesn't hit the TTS API twice in one session.
-const mimoCache = new Map<string, string>();
-
-/** Revoke any blob: URLs held in the cache so they don't leak for the life of
- *  the document. Supabase (`data.url`) entries are plain URLs — left intact. */
-function revokeMimoBlobs() {
-  for (const [key, url] of mimoCache) {
-    if (url.startsWith('blob:')) {
-      URL.revokeObjectURL(url);
-      mimoCache.delete(key);
-    }
-  }
-}
-
-async function fetchMimoUrl(text: string): Promise<string | null> {
-  const cached = mimoCache.get(text);
-  if (cached) return cached;
-  try {
-    const res = await fetch('/api/tts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text }),
-    });
-    if (!res.ok) return null;
-    const data = await res.json();
-    if (data.url) {
-      mimoCache.set(text, data.url);
-      return data.url;
-    }
-    if (data.audio) {
-      const binary = atob(data.audio);
-      const bytes = new Uint8Array(binary.length);
-      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-      const blob = new Blob([bytes], { type: 'audio/wav' });
-      const url = URL.createObjectURL(blob);
-      mimoCache.set(text, url);
-      return url;
-    }
-    return null;
-  } catch {
-    return null;
-  }
-}
-
 function playUrl(url: string): Promise<boolean> {
   return new Promise(resolve => {
     // protectAudioUrlSync proxies Supabase URLs (token primed by the
@@ -178,18 +135,14 @@ function playSpeechSynthesis(text: string): Promise<void> {
   });
 }
 
-// Playback order:
-// 1. Caller-supplied audioUrl (Supabase per-sentence MP3, when the
-//    dialogue JSON has one).
-// 2. MiMo TTS via /api/tts — generated once per Chinese string and
-//    cached in Supabase Storage for instant replay.
-// 3. Browser SpeechSynthesis fallback if MiMo is unconfigured or down.
-async function playAudio(text: string, audioUrl?: string): Promise<void> {
+async function playAudio(text: string, audioUrl?: string, voice?: string): Promise<void> {
   if (audioUrl) {
     const ok = await playUrl(audioUrl);
     if (ok) return;
   }
-  const mimoUrl = await fetchMimoUrl(text);
+  // Shared resolver — same MiMo cache and in-flight de-dup the reader uses, and
+  // it keys on `voice:text`, so a line sounds identical in both tabs.
+  const mimoUrl = await resolveTtsUrl(text, voice);
   if (mimoUrl) {
     const ok = await playUrl(mimoUrl);
     if (ok) return;
@@ -197,8 +150,8 @@ async function playAudio(text: string, audioUrl?: string): Promise<void> {
   await playSpeechSynthesis(text);
 }
 
-function speakFire(text: string, audioUrl?: string) {
-  playAudio(text, audioUrl);
+function speakFire(text: string, audioUrl?: string, voice?: string) {
+  playAudio(text, audioUrl, voice);
 }
 
 // ── Test unit splitting ──
@@ -235,6 +188,9 @@ interface Props {
   dialogueId: string;
   accentColor?: string;
   language?: Language;
+  /** Per-dialogue speaker→voice override, merged over DIALOGUE_VOICE. Must be
+   *  passed through from the reader or Practice drifts to a different voice. */
+  voices?: Record<string, string>;
   onComplete?: (stars: number) => void;
 }
 
@@ -243,9 +199,12 @@ export function DialogueRolePlay({
   dialogueId,
   accentColor = '#dc2626',
   language = 'uz',
+  voices,
   onComplete,
 }: Props) {
   usePrimeAudioToken();
+  // Same voice a line gets in the Dialog tab (A=茉莉, B=白桦), honouring overrides.
+  const voiceOf = useCallback((u: { speaker?: string }) => voiceForWith(u, voices), [voices]);
   const { getAccessToken } = useAuth();
 
   // ── Precompute test units ──
@@ -294,7 +253,6 @@ export function DialogueRolePlay({
   }, [screen, unitIndex, phase]);
 
   // ── Release any TTS blob URLs on unmount so they don't leak ──
-  useEffect(() => () => revokeMimoBlobs(), []);
 
   // ── Recording progress bar ──
   useEffect(() => {
@@ -312,7 +270,7 @@ export function DialogueRolePlay({
   const playAppLine = useCallback(async () => {
     if (!currentAppUnit) return;
     setPlayingAppLine(true);
-    await playAudio(currentAppUnit.zh, currentAppUnit.audio_url);
+    await playAudio(currentAppUnit.zh, currentAppUnit.audio_url, voiceOf(currentAppUnit));
     setPlayingAppLine(false);
   }, [currentAppUnit]);
 
@@ -437,7 +395,7 @@ export function DialogueRolePlay({
         // learner) before advancing.
         // advanceUnit handles the dialogue-ends-on-app-turn case.
         if (round === 2 && currentAppUnit) {
-          playAudio(currentAppUnit.zh, currentAppUnit.audio_url).then(() => advanceUnit());
+          playAudio(currentAppUnit.zh, currentAppUnit.audio_url, voiceOf(currentAppUnit)).then(() => advanceUnit());
         } else {
           window.setTimeout(() => advanceUnit(), result === 'correct' ? 700 : 900);
         }
@@ -448,7 +406,7 @@ export function DialogueRolePlay({
           setScores(p => [...p, 'wrong']);
           setRevealed(p => ({ ...p, [revealKey]: { zh: currentLearnerUnit.zh, score: 'wrong' } }));
           setPhase('result_wrong_final');
-          speakFire(currentLearnerUnit.zh, currentLearnerUnit.audio_url);
+          speakFire(currentLearnerUnit.zh, currentLearnerUnit.audio_url, voiceOf(currentLearnerUnit));
         }
       }
     } catch {
@@ -467,7 +425,7 @@ export function DialogueRolePlay({
       const trailingApp = appUnits[unitIndex + 1];
       const goNext = () => setScreen(round === 1 ? 'between' : 'complete');
       if (trailingApp) {
-        playAudio(trailingApp.zh, trailingApp.audio_url).then(goNext);
+        playAudio(trailingApp.zh, trailingApp.audio_url, voiceOf(trailingApp)).then(goNext);
       } else {
         goNext();
       }
@@ -510,7 +468,7 @@ export function DialogueRolePlay({
   const retryAfterWrong = () => { setAttempt(2); startRecording(); };
   const startShadowing = () => {
     setShadowingUsed(true);
-    speakFire(currentLearnerUnit.zh, currentLearnerUnit.audio_url);
+    speakFire(currentLearnerUnit.zh, currentLearnerUnit.audio_url, voiceOf(currentLearnerUnit));
     setPhase('shadowing');
   };
 
@@ -887,7 +845,7 @@ export function DialogueRolePlay({
                 <div style={{ fontSize: 22, fontWeight: 700, color: '#1a1a2e' }}>{currentLearnerUnit.zh}</div>
                 {currentLearnerUnit.pinyin && <div style={{ fontSize: 13, color: accentColor, marginTop: 2 }}>{currentLearnerUnit.pinyin}</div>}
               </div>
-              <button onClick={() => speakFire(currentLearnerUnit.zh, currentLearnerUnit.audio_url)} style={{ width: '100%', padding: '10px 0', background: '#f5f5f8', border: '1px solid #e0e0e6', borderRadius: 8, fontSize: 13, color: '#555', cursor: 'pointer', fontFamily: 'inherit', marginBottom: 8 }}>▶ {t(UI.listenAgain)}</button>
+              <button onClick={() => speakFire(currentLearnerUnit.zh, currentLearnerUnit.audio_url, voiceOf(currentLearnerUnit))} style={{ width: '100%', padding: '10px 0', background: '#f5f5f8', border: '1px solid #e0e0e6', borderRadius: 8, fontSize: 13, color: '#555', cursor: 'pointer', fontFamily: 'inherit', marginBottom: 8 }}>▶ {t(UI.listenAgain)}</button>
               <button onClick={advanceUnit} className="drp__btn" style={{ background: '#6b7280' }}>
                 {unitIndex + 1 < learnerUnits.length ? t(UI.next) : t(UI.results)}
               </button>
