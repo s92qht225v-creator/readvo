@@ -14,6 +14,7 @@
   "category_ru": "Поиск дороги",
   "category_en": "Asking Directions",
   "level": 2,
+  "dictationKeyboard": true,
   "tag": "transport",
   "dateAdded": "2026-06-16",
   "vocab": [

@@ -85,6 +85,14 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
   }, [pinyinTiles]);
   const tokens = useMemo(() => lineTokens(line), [line, lineTokens]);
 
+  // What the KEYS are, as opposed to what the ANSWER is.
+  // Keyboard mode DEDUPES: one key per distinct token, pressable as many times
+  // as the line needs — like a real keyboard, which has one 'A' you press twice
+  // rather than two 'A's where the first dies after one press. Drag-tile mode
+  // keeps one tile per token instance (you physically move each), so there
+  // keys === tokens. `placed` indexes THIS list in both modes.
+  const keys = useMemo(() => (useKeyboard ? [...new Set(tokens)] : tokens), [tokens, useKeyboard]);
+
   const playLine = useCallback(async (l: DictationLine | undefined) => {
     if (!l) return;
     const a = audioRef.current;
@@ -103,13 +111,16 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
   const enterLine = useCallback((i: number) => {
     const l = lines[i];
     const cs = lineTokens(l);
+    // Derived from `l`, not the `keys` memo: `tokens` still reflects the
+    // PREVIOUS line here, because idx updates after enterLine runs.
+    const ks = useKeyboard ? [...new Set(cs)] : cs;
     setPlaced([]);
-    setTray(shuffleArray(cs.map((_, k) => k)));
+    setTray(shuffleArray(ks.map((_, k) => k)));
     setTyped('');
     setStatus('idle');
     setMistakes(0);
     void playLine(l);
-  }, [lines, playLine, lineTokens]);
+  }, [lines, playLine, lineTokens, useKeyboard]);
 
   const start = () => { setPhase('play'); setIdx(0); enterLine(0); };
 
@@ -126,7 +137,7 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
     if (arr.length !== tokens.length) { setStatus('idle'); return; }
     // Compare the arranged sequence to the correct order. Identical tokens
     // (repeated syllables/chars) are interchangeable, which is fine.
-    const answer = arr.map(i => tokens[i]).join('');
+    const answer = arr.map(i => keys[i]).join('');
     if (answer === tokens.join('')) {
       setStatus('correct');
       setResults(prev => { const n = prev.slice(); n[idx] = mistakes === 0; return n; });
@@ -171,7 +182,8 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
   // line and dims the key in place, backspace pops the last one. No drag, no
   // mid-sequence insert — you rebuild the line left-to-right.
   const pressKey = (id: number) => {
-    if (status === 'correct' || status === 'revealed' || placed.includes(id)) return;
+    if (status === 'correct' || status === 'revealed') return;
+    if (placed.length >= tokens.length) return; // answer full — backspace to fix
     const next = [...placed, id];
     setPlaced(next);
     evaluate(next);
@@ -201,13 +213,15 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
   const switchMode = (m: 'tiles' | 'type') => {
     setMode(m);
     setPlaced([]);
-    setTray(shuffleArray(tokens.map((_, k) => k)));
+    setTray(shuffleArray(keys.map((_, k) => k)));
     setTyped('');
     setStatus('idle');
   };
 
   const reveal = () => {
-    setPlaced(tokens.map((_, i) => i)); // ordered tiles = correct
+    // Keyboard: map each answer token back to its (deduped) key. Tiles: identity,
+    // since there's one tile per token instance.
+    setPlaced(useKeyboard ? tokens.map(t => keys.indexOf(t)) : tokens.map((_, i) => i));
     setTray([]);
     setStatus('revealed');
     setResults(prev => { const n = prev.slice(); n[idx] = false; return n; });
@@ -304,7 +318,7 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
                 ? <span className="dr-dict__answer-hint">{pinyinTiles
                     ? T(language, 'Bo\'g\'inlarni bosing', 'Нажимайте слоги', 'Tap the syllables')
                     : T(language, 'Ierogliflarni bosing', 'Нажимайте иероглифы', 'Tap the characters')}</span>
-                : placed.map(id => tokens[id]).join(pinyinTiles ? ' ' : '')}
+                : placed.map(id => keys[id]).join(pinyinTiles ? ' ' : '')}
             </div>
 
             {!done && (
@@ -313,11 +327,10 @@ export function DialogueDictation({ lines, language, level = 1, pinyinTiles = fa
                   <button
                     key={id}
                     type="button"
-                    className={`dr-dict__tile${pinyinTiles ? ' dr-dict__tile--py' : ''}${placed.includes(id) ? ' dr-dict__tile--used' : ''}`}
+                    className={`dr-dict__tile${pinyinTiles ? ' dr-dict__tile--py' : ''}`}
                     onClick={() => pressKey(id)}
-                    disabled={placed.includes(id)}
                   >
-                    {tokens[id]}
+                    {keys[id]}
                   </button>
                 ))}
                 <button type="button" className={`dr-dict__tile${pinyinTiles ? ' dr-dict__tile--py' : ''} dr-dict__tile--back`} onClick={backspaceKey} disabled={placed.length === 0} aria-label="Backspace">⌫</button>

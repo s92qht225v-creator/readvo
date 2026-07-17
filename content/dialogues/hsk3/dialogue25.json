@@ -14,6 +14,7 @@
   "category_ru": "Аренда жилья",
   "category_en": "Renting a Home",
   "level": 3,
+  "dictationKeyboard": true,
   "tag": "kundalik",
   "dateAdded": "2026-06-19",
   "vocab": [

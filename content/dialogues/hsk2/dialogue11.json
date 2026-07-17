@@ -14,6 +14,7 @@
   "category_ru": "Здоровье и врач",
   "category_en": "Health & Doctor",
   "level": 2,
+  "dictationKeyboard": true,
   "tag": "salomatlik",
   "dateAdded": "2026-06-16",
   "vocab": [

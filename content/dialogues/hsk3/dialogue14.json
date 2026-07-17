@@ -13,6 +13,7 @@
   "category_ru": "Очередь и покупки",
   "category_en": "Queuing and ordering",
   "level": 3,
+  "dictationKeyboard": true,
   "tag": "ovqat",
   "dateAdded": "2026-06-19",
   "vocab": [

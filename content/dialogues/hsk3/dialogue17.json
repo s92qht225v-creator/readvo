@@ -13,6 +13,7 @@
   "category_ru": "Городской транспорт",
   "category_en": "City transport",
   "level": 3,
+  "dictationKeyboard": true,
   "tag": "transport",
   "dateAdded": "2026-06-19",
   "vocab": [

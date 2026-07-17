@@ -13,6 +13,7 @@
   "category_ru": "Заказ в ресторане",
   "category_en": "Ordering at a restaurant",
   "level": 3,
+  "dictationKeyboard": true,
   "tag": "ovqat",
   "dateAdded": "2026-06-19",
   "vocab": [
