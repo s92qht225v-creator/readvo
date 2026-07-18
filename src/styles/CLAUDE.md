@@ -104,7 +104,7 @@ All styles live in `src/styles/reading.css` **EXCEPT**:
 - `.story__focus-nav` - Button row: prev, play, next (flex, centered, gap 16px)
 - `.story__focus-nav-btn` - Prev/next buttons (48px grey circle, no border, SVG chevrons)
 - `.story__focus-play-btn` - Inline play/pause button (44px blue circle, toggles ▶/⏸)
-- `.story__focus-counter` - Sentence counter label below nav ("9 / 30")
+- `.story__focus-counter` - Sentence counter label below nav ("9 / 30"). `font-size: 13px` (absolute px, deliberately NOT em, so A+/A- font control doesn't scale it)
 - `.story__word` - Pressable word span (cursor pointer, border-radius 2px)
 - `.story__word--active` - Blue background highlight for pressed word
 - `.story__word-hsk` - HSK level/lesson badge in translation panel (small pill-shaped tag)
@@ -114,6 +114,37 @@ All styles live in `src/styles/reading.css` **EXCEPT**:
 - `.story__dialogue-text` - Dialogue text container (flex: 1, ruby pinyin with blue color)
 - `.story__focus-speaker` - Speaker label in focus mode (bold, blue, smaller font above sentence)
 - `.story--focus .story__sentence:not(.story__sentence--active)` - Dimmed non-active sentences (opacity 0.35)
+
+### Dialogue Reader (DialogueReader)
+Speaker turns are white cards with a coloured left strip — the old `A:` / `B:` `.dr-line-speaker` labels were removed; colour alone identifies the speaker (every strip is on the left).
+- `.dr-lines` - Turn list (flex column)
+- `.dr-line` - One turn: white card, `border-left: 3px solid var(--dr-speaker, #378add)`, `border-radius: 0 8px 8px 0`, `box-shadow`, `margin-bottom: 14px`, `padding: 8px 12px`, `cursor: pointer`
+- `.dr-line--spa` / `--spb` / `--spc` - Speaker hue via `--dr-speaker`: `#dc2626` (red, A) / `#378add` (blue, B) / `#ef9f27` (amber, C). Colour only — the strip stays on the left for all speakers
+- `.dr-line-chars` - Char row (flex wrap, `column-gap: 0.18em`; collapses to `0` when pinyin hidden via `:not(:has(.dr-char-py))`)
+- `.dr-char-py` - Per-char progressive pinyin (`font-size: 0.69em`, `color: #dc2626`, `margin-bottom: 4px`)
+- `.dr-char-py--empty` - `visibility: hidden` placeholder (component fills it with a non-breaking space so below-level words still reserve the pinyin-row height, keeping line heights even)
+
+### Dictation (`.dr-dict__*`)
+Pinyin-syllable / hanzi dictation keyboard. Base tile `.dr-dict__tile` (`min-width: 46px`, `height: 50px`, `font-size: 24px`).
+- `.dr-dict__tile--py` - Pinyin syllable key (`min-width: 52px`, `height: 58px`, `font-size: 21px`, `padding: 0 18px`)
+- `.dr-dict__tile--back` - Backspace key (`min-width: 88px`; height NOT set — inherits its row: 58px on the syllable board, 50px on the char board)
+- `.dr-dict__tile.dr-dict__tile--used` - Used key dims in place (`opacity: 0.3`, grey bg; double class beats `:disabled`)
+- `.dr-dict__answer--text` - Pinyin answer line, one compact text field (`font-size: 23px`)
+- `.dr-dict__answer--han` - Character answer line (`font-size: 28px`, `letter-spacing: 1px`) — answer reads larger than the keys feeding it
+
+### My Vocabulary (VocabularyReview, `.vr-*`)
+Saved-word flip-card review deck at `/chinese/vocabulary`.
+- `.dr-flip__save` / `--done` - Save "+"/"✓" button on dialogue Words-tab flip cards (34px circle, red `#dc2626` border/text; `--done` fills red bg with white ✓ to match theme). Replaces the old audio btn
+- `.vocab-review` - Page container (`max-width: 900px`, centered)
+- `.vr-header` / `.vr-title` / `.vr-back` - Header row, title, back button (40px)
+- `.vr-deck` / `.vr-counter` - Deck column + "n / N" counter
+- `.vr-card` - Flip card, **square** (`aspect-ratio: 1/1`, `max-width: 380px`, `perspective: 1200px`)
+- `.vr-card--flipped .vr-card__inner` - `rotateY(180deg)` flip; `.vr-card__inner` holds preserve-3d transform
+- `.vr-card__face` - Both faces (absolute, `backface-visibility: hidden`, white, `border-radius: 16px`, centered flex). `.vr-card__back` = `rotateY(180deg)` (no separate `__front` class — the front is the untransformed face)
+- `.vr-card__py` / `.vr-card__zh` / `.vr-card__meaning` / `.vr-card__hint` - Front centres the 字 (`__zh` 52px) with pinyin (`__py`) absolutely floated above it (red italic); `__meaning` (26px) on the back; `__hint` tap hint pinned bottom
+- `.vr-controls` / `.vr-nav` - Prev/next control row + 52px circular nav buttons (`:disabled` → dim)
+- `.vr-remove` - Remove-word pill (red text, `border-radius: 999px`)
+- `.vr-empty` / `.vr-cta` / `.vr-spinner` - Empty state, red CTA link, loading spinner
 
 ### Section Cards
 - `.section--objectives .section__sentences` - Single white card container (border-radius 16px, shadow)

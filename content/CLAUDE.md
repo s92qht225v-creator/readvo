@@ -238,6 +238,13 @@ This file covers JSON format conventions for all content files in `/content/`.
 - The `speaker` field triggers dialogue layout in StoryReader (block layout with speaker labels)
 - Data loaded from `content/dialogues/{bookId}/dialogue{N}.json`
 
+#### Dialogue optional top-level fields
+All optional; read by `DialogueReader`. Sit alongside `id`/`title`/`level`.
+- `"dictationPinyin": true` — the Dictation tab uses a fixed-key keyboard of **pinyin syllables** (spell the sound) instead of the default character drag-tiles. Set on all 47 HSK 1 dialogues. Passed as the `pinyinTiles` prop to `DialogueDictation`.
+- `"dictationKeyboard": true` — the Dictation tab uses a fixed-key keyboard of **characters + backspace** instead of drag-tiles. Independent of `dictationPinyin` (pinyin already implies a keyboard; use this alone for a character keyboard). Set on all HSK 2 + HSK 3 dialogues. Passed as the `keyboard` prop.
+- `"voices": { "A": "白桦", "B": "茉莉" }` — per-dialogue speaker→MiMo-voice override, merged over the global map (`A: 茉莉, B: 白桦, C: 苏打`). Used to swap A/B genders for one dialogue; applies in both the Dialog and Practice (role-play) tabs. Shared resolver: `src/utils/dialogueVoice.ts`.
+- `"image"` — Supabase Storage URL of a banner image (`.../images/dialogues/hsk1/{slug}.webp`), 800×451 webp, cover-cropped. Feeds both the on-page dialogue banner and the page's `og:image`. Sits after `titleTranslation_en` in the key order.
+
 ### Story JSON
 ```json
 {

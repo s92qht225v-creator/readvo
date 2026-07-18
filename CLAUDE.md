@@ -24,40 +24,40 @@ Blim (formerly ReadVo/Kitobee) is a DOM-based interactive reading system for lan
 
 ## URL Structure
 All routes are locale-prefixed (`/{locale}/...`). Unprefixed URLs auto-redirect to `/uz/...` (default locale).
+
+**Section-first URLs (2026-06/07 migration).** Content routes are now grouped by *subject/section*, NOT by HSK level — the level is a path param on dialogues/flashcards/writing. Legacy book-first URLs (`/chinese/hsk1/dialogues/…`, `/chinese/hsk1/karaoke/…`, `/{locale}/blog/…`) **301-redirect** to the new paths via `src/proxy.ts` (`RENAMED_DIALOGUE_SLUGS`, `legacyBlog`, section-first dialogue/karaoke/writing rules). Don't add new book-first routes.
 ```
-/                                           # Redirects to /uz (default locale)
-/{locale}                                   # Landing (unauthenticated) or redirect to /{locale}/chinese
-/{locale}/chinese                           # Language page - tabbed catalog (6 tabs)
-/{locale}/chinese?tab=[tabId]               # Language page with specific tab pre-selected
-/{locale}/chinese/hsk1/lesson/[lessonId]/page/[pageNum]  # Lesson page
-/{locale}/chinese/hsk1/flashcards           # Flashcard list page (per-lesson cards)
-/{locale}/chinese/hsk1/flashcards/[lessonId] # Flashcard practice for specific lesson
-/{locale}/chinese/hsk1/dialogues            # Dialogues list page
-/{locale}/chinese/hsk1/dialogues/[dialogueId] # Dialogue reader page (uses StoryReader)
-/{locale}/chinese/hsk2/dialogues/[dialogueId] # HSK 2 dialogue reader (MiMo TTS audio fallback)
-/{locale}/chinese/hsk3/dialogues/[dialogueId] # HSK 3 dialogue reader (MiMo TTS audio fallback)
-/{locale}/chinese/hsk4/dialogues/[dialogueId] # HSK 4 dialogue reader (MiMo TTS audio fallback)
-/{locale}/chinese/hsk6/dialogues/[dialogueId] # HSK 6 dialogue reader (MiMo TTS audio fallback)
-/{locale}/chinese/hsk1/karaoke/[songId]     # Karaoke player page
-/{locale}/chinese/hsk1/writing/[setId]      # Writing practice page (per character set)
-/{locale}/chinese/hsk1/grammar/[slug]       # Grammar page (7 slugs)
-/{locale}/chinese/hsk2/flashcards/[lessonId] # HSK 2 flashcard practice
-/{locale}/chinese/hsk3/flashcards/[lessonId] # HSK 3 flashcard practice
-/{locale}/login                             # Login page
-/{locale}/payment                           # Payment page
-/{locale}/blog                              # Blog list
-/{locale}/blog/[slug]                       # Blog post
+/                                            # Redirects to /uz (default locale)
+/{locale}                                    # Landing (unauthenticated) or redirect to /{locale}/chinese
+/{locale}/chinese                            # Language page — tabbed catalog (6 tabs)
+/{locale}/chinese?tab=[tabId]                # Language page with a specific tab pre-selected
+/{locale}/chinese/dialogues                  # Dialogues list (HSK level tabs, ?dialhsk=N)
+/{locale}/chinese/dialogues/[level]/[dialogueId]  # Dialogue reader (level = hsk1..hsk6; descriptive slug)
+/{locale}/chinese/vocabulary                 # "My Vocabulary" — saved-words swipe/flip review deck
+/{locale}/chinese/flashcards                 # Flashcards tab (topic decks)
+/{locale}/chinese/flashcards/[level]/[lessonId]  # Flashcard ladder (orphaned/unlinked, still routable)
+/{locale}/chinese/flashcards/mix             # Mixed flashcards (orphaned)
+/{locale}/chinese/flashcards/topics/[topicId]  # Topic flashcards
+/{locale}/chinese/karaoke                    # KTV catalog tab
+/{locale}/chinese/karaoke/[songId]           # Karaoke player
+/{locale}/chinese/writing                    # Writing tab (HSK 1-6, ?version & ?hsk params)
+/{locale}/chinese/writing/[level]/[set]      # Writing practice (level = hsk1..hsk6)
+/{locale}/chinese/hsk1/grammar/[slug]        # Grammar page (17 slugs; still book-first)
+/{locale}/chinese/blog                       # Blog list (moved under /chinese — subject-first)
+/{locale}/chinese/blog/[slug]                # Blog post
+/{locale}/login                              # Login page (Telegram + Google)
+/{locale}/payment                            # Payment page
 ```
+Arabic mirrors the Chinese section-first shape under `/{locale}/arabic/…` (dialogues, flashcards, stories).
 
 Example routes:
 - `/uz` - Landing page in Uzbek
 - `/en/chinese` - Chinese language page with tabs (English UI)
 - `/ru/chinese?tab=flashcards` - Language page with Flashcards tab active (Russian UI)
-- `/uz/chinese/hsk1/lesson/1/page/1` - Lesson 1, Page 1
-- `/en/chinese/hsk1/flashcards/1` - Flashcard practice for lesson 1
-- `/uz/chinese/hsk1/dialogues/hsk1-dialogue1` - Dialogue reader
-- `/en/chinese/hsk1/writing/hsk1-set1` - Writing practice for character set 1
-- `/en/blog/hsk-1-sozlar-royxati` - Blog post in English
+- `/uz/chinese/dialogues/hsk1/do-you-like-traveling` - Dialogue reader (section-first)
+- `/en/chinese/writing/hsk1/hsk1-set1` - Writing practice for character set 1
+- `/uz/chinese/vocabulary` - The user's saved-words review deck
+- `/en/chinese/blog/hsk-1-sozlar-royxati` - Blog post in English
 
 ## Project Structure
 ```
@@ -326,11 +326,13 @@ npm run lint     # Run ESLint
 ## Deployment
 - Deploy: `ssh deploy@178.105.107.198 './deploy.sh'` (cd /home/deploy/app → `git pull --ff-only origin main` → `npm install` → `npm run build` → restart `blim`). Commit + push to `main` first.
 - **Lockfile gotcha**: the server keeps an uncommitted `package-lock.json` (npm install rewrites it). A commit that changes the lockfile (any new dependency) makes `git pull --ff-only` abort. Fix: `ssh deploy@178.105.107.198 'cd /home/deploy/app && git checkout -- package-lock.json'`, then `./deploy.sh`.
-- **MiMo TTS** (`/api/tts`, `MIMO_API_KEY`): Chinese speech, cached once to Supabase `audio/tts/grammar/{hex}.wav` (hex = UTF-8 hex of the text). `src/utils/ttsAudio.ts` `resolveTtsUrl(text)` is the shared client resolver. Delete a cached clip (Supabase Storage DELETE) to force regen.
+- **ENOTEMPTY gotcha (fixed in deploy.sh)**: bots probe `/1.php`, `/atkno.php` etc.; Next ISR-caches those 404s as real files into `.next/server/app`, so the *next* build dies rmdir-ing that non-empty dir (`ENOTEMPTY: … rmdir '.next/server/app'`). `deploy.sh` now does `rm -rf .next` before `npm run build` to make every build deterministic — no manual step needed. If you ever see it, a plain re-run of `./deploy.sh` clears it. **NEVER `rm -rf .next` on the server yourself without immediately running the real `./deploy.sh` (it lives in `~`, not `app/`) — a failed rebuild leaves the site alive only in memory, one restart from going down.** Read full deploy output; don't grep it.
+- **deploy.sh** (`~/deploy.sh` on the server): pull → `npm install` → `rm -rf .next` → `npm run build` → `systemctl restart blim` → IndexNow ping. Backup at `~/deploy.sh.bak`.
+- **MiMo TTS** (`/api/tts`, `MIMO_API_KEY`): Chinese speech, cached once to Supabase `audio/tts/grammar/{hex}.wav` (default voice) or `audio/tts/grammar/{voiceslug}/{hex}.wav` (per-speaker A/B). The cache key INCLUDES the voice, and the URL gets a `?v={content-hash}` cache-buster so a regenerated clip isn't served stale. `src/utils/ttsAudio.ts` `resolveTtsUrl(text, voice?)` is the shared client resolver (memoized per `voice:text`, in-flight de-duped). Delete a cached clip (Supabase Storage DELETE) to force regen.
 
 ## Authentication & User Management
-- **Provider**: Telegram Login Widget (HMAC-SHA256 verification with bot token)
-- **Hook**: `src/hooks/useAuth.tsx` — `AuthProvider` wraps entire app in `layout.tsx`
+- **Providers**: **Telegram** Login Widget (HMAC-SHA256 verification with bot token) **and Google** (`loginWithGoogle()` → Supabase `signInWithOAuth({ provider: 'google' })`). The login page (`LoginPage.tsx`) shows both buttons. Google matters for reach — Russian users can't use Telegram (blocked there) but can sign in with Google.
+- **Hook**: `src/hooks/useAuth.tsx` — `AuthProvider` wraps entire app in `layout.tsx`; exposes `loginWithTelegram`, `loginWithGoogle`, `logout`, `getAccessToken`. Google OAuth has no custom callback page — the nonce is registered on the `onAuthStateChange` `SIGNED_IN` event instead.
 - **Auth guard**: `src/hooks/useRequireAuth.ts` — redirects unauthenticated users to `/`. Used in all content page components.
 - **Auth flow**:
   1. User clicks "Telegram orqali kirish" → `loginWithTelegram()` calls `/api/auth/telegram/init`
@@ -421,6 +423,9 @@ Only one device can be logged in at a time. New login kicks previous session.
 - **API**: `src/app/api/admin/glossary/route.ts` — GET (search via sanitized `.or` ilike), POST (insert/update; NFC-normalizes `py`, validates `hsk` 1–6, never writes the generated `py_norm`, maps `23505` → friendly "already exists"), DELETE. All gated by `x-admin-password`. Each write calls `revalidateTag('glossary', 'max')` (guarded) so edits go live without a deploy.
 - **UI**: search box, add/edit form (zh, py, uz, ru, en, hsk), table with edit/delete.
 - **Data**: Supabase `glossary` table — `id, zh, py, py_norm (GENERATED), uz, ru, en, hsk, created_at, updated_at`, unique `(zh, py_norm)`, **RLS enabled with no policies** (service-role only; never queried from the browser). Read server-side via `getGlossary()` (`src/services/glossary.ts`, cached under the `glossary` tag); dialogues reference words by `(zh, py)` and resolve at render. See `docs/superpowers/specs/2026-06-12-dialogue-vocab-glossary-design.md`.
+
+### HSK Analyzer Tab
+- **What**: paste a dialogue slug or Chinese text → get each word's official HSK 3.0 level (colour-coded, sortable). Used to re-confirm dialogue levels on the 3.0 scale (for progressive pinyin). API `POST /api/admin/analyze` (`x-admin-password`). See the **HSK 3.0 Word Database** section.
 
 ## User Progress Tracking
 - **API**: `src/app/api/progress/route.ts` (GET: retrieve, POST: save)
@@ -573,6 +578,19 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **`getUserIdFromJWT(token)`**: Decodes Supabase JWT payload locally (~0ms vs ~1-2s for `admin.auth.getUser`). Returns `sub` (user_id). Checks expiration by default, optional `skipExpiration` flag.
 - **`getUserFromJWT(token)`**: Returns `{ id, email, user_metadata }` from JWT payload
 - **Used by**: `/api/stars`, `/api/subscription`, `/api/auth/session-check`, `/api/progress` — all low-risk read endpoints where local decode is sufficient
+
+## HSK 3.0 Word Database & Progressive Pinyin
+The single product-wide vocabulary standard is **HSK 3.0** (the 2026 **exam syllabus**, 11,000 words — NOT the 2021 《等级标准》 11,092; the exam list is authoritative and *does* contain 你好 at band 1). Spec: `docs/superpowers/specs/2026-07-16-hsk30-word-database-design.md`.
+- **`hsk_words` table** (Supabase, migration `supabase/migrations/20260716_hsk_words.sql`): `id, hsk_id (unique), zh, traditional, pinyin, py_norm (GENERATED toneless), pos, level smallint 1..7 (7 = 七–九级 band), uz, ru, en, source, …`. RLS enabled, no policies (service-role only). **No `unique(zh, py_norm)`** — 112 polysemy groups (打 = 3 senses) span levels. All 11,000 rows have `uz`/`ru`/`en` glosses (machine-generated, GPT-4o-mini; band 7–9 idioms are the weakest and want review). **`hsk_word_levels`** view = min level per `(zh, py_norm)`. **`glossary.hsk30_level`** column added.
+- **`py_norm` gotcha**: `hsk_words.py_norm` is TONELESS; `glossary.py_norm` keeps tones. Never join them directly.
+- **Progressive pinyin (M3)** — the dialogue Dialog tab hides pinyin for words *below* the dialogue's HSK level (`meta.level`), shows it for at-or-above + off-list words. `/api/content/dialogue/[book]/[slug]` → `src/lib/hskWordLevels.ts` `attachWordLevels()` attaches a per-character level array `charLvls` to each sentence. Word boundaries: the sentence's `words[]` (HSK1) or **CC-CEDICT longest-match segmentation** (HSK2+, no word data; dict file `content/segwords.txt`, ~104k forms). A word's level = its own HSK level, else the **max** of its characters' levels (每天 = max(每2, 天1) = 2 → uniform), else null (off-list → keep pinyin). Uses each dialogue's *current* `level` as-is (levels can move independently).
+- **Admin HSK Analyzer** — Admin Panel "HSK Analyzer" tab + `POST /api/admin/analyze` (`x-admin-password`). Given a dialogue slug or pasted Chinese, returns each word's official HSK 3.0 level (exact `zh|toneless-py` match, else whole-word, else char-composition), colour-coded, sortable. Used to re-confirm dialogue levels on the 3.0 scale.
+- **Dictionary (M5)** — not built yet; the data is ready.
+
+## My Vocabulary
+- **Save**: the dialogue Words tab (`DialogueVocab`) shows a **`+` button** per word (turns to a red **✓** once saved). Saving requires login (anon → `/login`). Account-synced.
+- **Table**: Supabase `saved_vocab` (`user_id, zh, py, uz, ru, en, hsk, created_at`, upsert on `(user_id, zh, py)`). API `/api/vocab` (GET newest-first / POST upsert / DELETE). Hook `useSavedVocab`.
+- **Review**: `/chinese/vocabulary` (`VocabularyReview`, "Mening lug'atim") — a swipe/flip deck of saved words (tap = flip 汉字⇄meaning, ‹ › or swipe to move, Remove to drop). **No SRS — pure review.** The deck is **shuffled once per visit** (fresh on remount, stable while open); removing a card keeps the rest in place (no reshuffle).
 
 ## Caching & ISR (static rendering — 2026-06-12 restructure)
 - **ALL content routes are statically rendered** (`●` SSG in the build table): home, `/chinese`, dialogues (all 6 HSK readers, `revalidate = 3600`), grammar, writing, flashcards, karaoke, blog (list+posts). Production server render time: ~2–8 ms (was 0.4–0.8 s per-request).
