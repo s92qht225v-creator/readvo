@@ -5,7 +5,6 @@ import type { Language } from '../types/ui-state';
 import { useRouter } from '@/i18n/navigation';
 import { useAuth } from '../hooks/useAuth';
 import { useSavedVocab } from '../hooks/useSavedVocab';
-import { shuffleArray } from '@/utils/shuffle';
 
 export interface VocabItem {
   zh: string; py: string; uz: string; ru: string; en: string;
@@ -35,11 +34,13 @@ export function DialogueVocab({ words, language }: { words: VocabItem[]; languag
   const { words: saved, add } = useSavedVocab();
   const savedSet = useMemo(() => new Set(saved.map((w) => `${w.zh}|${w.py}`)), [saved]);
 
-  // Shuffle once per mount so the order varies each session — you learn the
-  // words, not their sequence. Stable while the tab is open (flipping a card
-  // never reshuffles). The tab unmounts on tab-switch, so re-entering the Words
-  // tab deals a fresh order. Client-only render → Math.random is safe (no SSR).
-  const deck = useMemo(() => shuffleArray(words), [words]);
+  // Show vocab alphabetically by pinyin (tone marks ignored for ordering) — a
+  // reference list is easiest to scan sorted. (The shuffle lives on the separate
+  // "My Vocabulary" review page, not on this per-dialogue word list.)
+  const deck = useMemo(() => {
+    const key = (v: VocabItem) => (v.py || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+    return [...words].sort((a, b) => key(a).localeCompare(key(b)));
+  }, [words]);
   const [open, setOpen] = useState<number | null>(null);
   const [dir, setDir] = useState<Dir>('zh-native');
 

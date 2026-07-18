@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useRouter } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
 import { useAuth } from '../hooks/useAuth';
 import { useSavedVocab, type SavedWord } from '../hooks/useSavedVocab';
+import { shuffleArray } from '@/utils/shuffle';
 import { PageFooter } from './PageFooter';
 
 const meaningOf = (w: SavedWord, l: string) => (l === 'ru' ? w.ru : l === 'en' ? (w.en || w.uz) : w.uz);
@@ -26,16 +27,35 @@ export function VocabularyReview() {
   const start = useRef<{ x: number; y: number } | null>(null);
   const moved = useRef(false);
 
+  // Shuffle the saved words once per visit (seed the random order into a ref the
+  // first time they load), so the deck isn't the same fixed newest-first list
+  // every time. `deck` reconciles that frozen order against the live `words`:
+  // removing a card drops it and KEEPS the rest in place (no reshuffle), and any
+  // word not in the seed is appended. Fresh order on the next visit (remount).
+  const orderRef = useRef<string[] | null>(null);
+  const key = (w: SavedWord) => `${w.zh}|${w.py}`;
+  if (orderRef.current === null && !loading && words.length > 0) {
+    orderRef.current = shuffleArray(words).map(key);
+  }
+  const deck = useMemo(() => {
+    if (!orderRef.current) return words;
+    const byKey = new Map(words.map((w) => [key(w), w]));
+    const out = orderRef.current.map((k) => byKey.get(k)).filter(Boolean) as SavedWord[];
+    const seeded = new Set(orderRef.current);
+    for (const w of words) if (!seeded.has(key(w))) out.push(w);
+    return out;
+  }, [words]);
+
   // Keep idx in range as the deck shrinks (removal) or on first load.
   useEffect(() => {
-    if (idx > words.length - 1) setIdx(Math.max(0, words.length - 1));
-  }, [words.length, idx]);
+    if (idx > deck.length - 1) setIdx(Math.max(0, deck.length - 1));
+  }, [deck.length, idx]);
 
   const t = (uz: string, ru: string, en: string) => ({ uz, ru, en } as Record<string, string>)[language];
 
   const go = (delta: number) => {
     setFlipped(false);
-    setIdx((i) => Math.min(words.length - 1, Math.max(0, i + delta)));
+    setIdx((i) => Math.min(deck.length - 1, Math.max(0, i + delta)));
   };
 
   const onPointerDown = (e: React.PointerEvent) => { start.current = { x: e.clientX, y: e.clientY }; moved.current = false; };
@@ -49,7 +69,7 @@ export function VocabularyReview() {
   const onCardClick = () => { if (!moved.current) setFlipped((f) => !f); };
 
   const removeCurrent = async () => {
-    const w = words[idx];
+    const w = deck[idx];
     if (!w) return;
     setFlipped(false);
     await remove(w.zh, w.py);
@@ -83,10 +103,10 @@ export function VocabularyReview() {
       </div>
     );
   } else {
-    const w = words[Math.min(idx, words.length - 1)];
+    const w = deck[Math.min(idx, deck.length - 1)];
     body = (
       <div className="vr-deck">
-        <div className="vr-counter">{idx + 1} / {words.length}</div>
+        <div className="vr-counter">{idx + 1} / {deck.length}</div>
         <div
           className={`vr-card ${flipped ? 'vr-card--flipped' : ''}`}
           onPointerDown={onPointerDown}
@@ -115,7 +135,7 @@ export function VocabularyReview() {
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /></svg>
             {t("O'chirish", 'Убрать', 'Remove')}
           </button>
-          <button type="button" className="vr-nav" onClick={() => go(1)} disabled={idx >= words.length - 1} aria-label={t('Keyingi', 'Следующее', 'Next')}>
+          <button type="button" className="vr-nav" onClick={() => go(1)} disabled={idx >= deck.length - 1} aria-label={t('Keyingi', 'Следующее', 'Next')}>
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
           </button>
         </div>
