@@ -235,6 +235,11 @@ export function DialogueRolePlay({
   // Tracks which lines have been answered: key = "round_unitIndex", value = zh text
   const [revealed, setRevealed] = useState<Record<string, { zh: string; score: Score }>>({});
   const [playingAppLine, setPlayingAppLine] = useState(false);
+  // The dialogue often ends on an app turn (an A line after the learner's last B).
+  // We play it as the natural closing line the moment the last answer is graded —
+  // highlighted, not greyed — so "Results" is instant instead of playing it late.
+  const [closingAppPlaying, setClosingAppPlaying] = useState(false);
+  const endAppPlayedRef = useRef(false);
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -403,8 +408,19 @@ export function DialogueRolePlay({
         // Round 2: the app speaks its next line, then we advance (natural
         // back-and-forth). Round 1: DON'T auto-advance — the feedback used to
         // flash away in 700ms; now it stays until the learner taps Next.
+        const isLastLine = unitIndex + 1 >= learnerUnits.length;
+        const closingApp = isLastLine ? appUnits[unitIndex + 1] : null;
         if (round === 2 && currentAppUnit) {
           playAudio(currentAppUnit.zh, currentAppUnit.audio_url, voiceOf(currentAppUnit)).then(() => advanceUnit());
+        } else if (closingApp) {
+          // Play the app's closing line NOW (highlighted) instead of on the
+          // Results tap, so the conversation ends naturally and Results is instant.
+          // Mark it played up-front so tapping Results mid-play goes straight to
+          // the recap rather than replaying it.
+          endAppPlayedRef.current = true;
+          setClosingAppPlaying(true);
+          playAudio(closingApp.zh, closingApp.audio_url, voiceOf(closingApp))
+            .then(() => setClosingAppPlaying(false));
         }
       } else {
         if (attempt === 1) {
@@ -431,7 +447,9 @@ export function DialogueRolePlay({
       // on the Next/Results button after a wrong answer.
       const trailingApp = appUnits[unitIndex + 1];
       const goNext = () => setScreen(round === 1 ? 'between' : 'complete');
-      if (trailingApp) {
+      // Already auto-played on a correct/close last answer → don't replay it
+      // (that was the "hasty play on Results" the learner reported).
+      if (trailingApp && !endAppPlayedRef.current) {
         playAudio(trailingApp.zh, trailingApp.audio_url, voiceOf(trailingApp)).then(goNext);
       } else {
         goNext();
@@ -446,6 +464,7 @@ export function DialogueRolePlay({
   };
 
   const startRound2 = () => {
+    endAppPlayedRef.current = false; setClosingAppPlaying(false);
     setRound(2);
     setUnitIndex(0);
     setPhase('idle');
@@ -458,6 +477,7 @@ export function DialogueRolePlay({
   };
 
   const restartAll = () => {
+    endAppPlayedRef.current = false; setClosingAppPlaying(false);
     setRound(1);
     setUnitIndex(0);
     setPhase('idle');
@@ -664,17 +684,21 @@ export function DialogueRolePlay({
           const isAnswered = state.type === 'learner' && state.revealData;
           const isFutureLearner = state.type === 'learner' && state.isFuture;
           const isCurrentApp = state.type === 'app' && state.isCurrent;
+          // The app's closing line (after the learner's last turn): while it
+          // auto-plays it should read as active, not greyed.
+          const isClosingLine = lineIdx === (appUnits[learnerUnits.length]?.originalIndex ?? -1);
+          const closingActive = closingAppPlaying && isClosingLine;
 
           return (
             <div
               key={`${round}_${lineIdx}`}
-              ref={isCurrentLearner || isCurrentApp ? activeBubbleRef : undefined}
+              ref={isCurrentLearner || isCurrentApp || closingActive ? activeBubbleRef : undefined}
               className={`drp__bubble ${isA ? 'drp__bubble--a' : 'drp__bubble--b'}`}
               style={{
                 borderColor: isCurrentLearner ? accentColor
-                  : isCurrentApp && playingAppLine ? '#bae6fd'
+                  : (isCurrentApp && playingAppLine) || closingActive ? '#bae6fd'
                   : 'transparent',
-                opacity: (state.isFuture && !isCurrentApp) ? 0.5 : 1,
+                opacity: (state.isFuture && !isCurrentApp && !closingActive) ? 0.5 : 1,
               }}
             >
               <div className="drp__bubble-inner">
@@ -790,11 +814,9 @@ export function DialogueRolePlay({
           {/* ── correct ── */}
           {phase === 'result_correct' && (
             <div>
-              <div style={{ background: '#dcfce7', borderRadius: 12, padding: '14px 18px', border: '1px solid #86efac', marginBottom: 12, textAlign: 'center' }}>
-                <div style={{ fontSize: 21, fontWeight: 700, color: '#16a34a', marginBottom: 6 }}>✓ {t(UI.correct)}</div>
-                {heard && <div style={{ fontSize: 16, color: '#333', marginBottom: 2 }}>{t(UI.heard)} <b>{toSimplified(heard)}</b></div>}
-                {currentLearnerUnit.pinyin && <div style={{ fontSize: 15, color: '#15803d', fontStyle: 'italic', marginBottom: 6 }}>{currentLearnerUnit.pinyin}</div>}
-                <div style={{ fontSize: 15, color: '#15803d', lineHeight: 1.55 }}>{feedback || t(UI.correctDefault)}</div>
+              {/* Correct → just the confirmation. No "heard"/pinyin/feedback clutter. */}
+              <div style={{ background: '#dcfce7', borderRadius: 12, padding: '16px 18px', border: '1px solid #86efac', marginBottom: 12, textAlign: 'center' }}>
+                <div style={{ fontSize: 22, fontWeight: 700, color: '#16a34a' }}>✓ {t(UI.correct)}</div>
               </div>
               <button onClick={advanceUnit} className="drp__btn" style={{ background: accentColor }}>
                 {unitIndex + 1 < learnerUnits.length ? t(UI.next) : t(UI.results)}
