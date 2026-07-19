@@ -239,6 +239,9 @@ export function DialogueRolePlay({
   // We play it as the natural closing line the moment the last answer is graded —
   // highlighted, not greyed — so "Results" is instant instead of playing it late.
   const [closingAppPlaying, setClosingAppPlaying] = useState(false);
+  // Stays true once the closing line has started (survives the audio ending), so
+  // the line reads as a completed part of the conversation, not greyed-out again.
+  const [closingAppShown, setClosingAppShown] = useState(false);
   const endAppPlayedRef = useRef(false);
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
@@ -418,6 +421,7 @@ export function DialogueRolePlay({
           // Mark it played up-front so tapping Results mid-play goes straight to
           // the recap rather than replaying it.
           endAppPlayedRef.current = true;
+          setClosingAppShown(true);
           setClosingAppPlaying(true);
           playAudio(closingApp.zh, closingApp.audio_url, voiceOf(closingApp))
             .then(() => setClosingAppPlaying(false));
@@ -464,7 +468,7 @@ export function DialogueRolePlay({
   };
 
   const startRound2 = () => {
-    endAppPlayedRef.current = false; setClosingAppPlaying(false);
+    endAppPlayedRef.current = false; setClosingAppPlaying(false); setClosingAppShown(false);
     setRound(2);
     setUnitIndex(0);
     setPhase('idle');
@@ -477,7 +481,7 @@ export function DialogueRolePlay({
   };
 
   const restartAll = () => {
-    endAppPlayedRef.current = false; setClosingAppPlaying(false);
+    endAppPlayedRef.current = false; setClosingAppPlaying(false); setClosingAppShown(false);
     setRound(1);
     setUnitIndex(0);
     setPhase('idle');
@@ -687,7 +691,8 @@ export function DialogueRolePlay({
           // The app's closing line (after the learner's last turn): while it
           // auto-plays it should read as active, not greyed.
           const isClosingLine = lineIdx === (appUnits[learnerUnits.length]?.originalIndex ?? -1);
-          const closingActive = closingAppPlaying && isClosingLine;
+          const closingActive = closingAppPlaying && isClosingLine;   // transient: border + scroll while playing
+          const closingDone = closingAppShown && isClosingLine;       // persistent: keep it un-greyed after
 
           return (
             <div
@@ -698,7 +703,7 @@ export function DialogueRolePlay({
                 borderColor: isCurrentLearner ? accentColor
                   : (isCurrentApp && playingAppLine) || closingActive ? '#bae6fd'
                   : 'transparent',
-                opacity: (state.isFuture && !isCurrentApp && !closingActive) ? 0.5 : 1,
+                opacity: (state.isFuture && !isCurrentApp && !closingDone) ? 0.5 : 1,
               }}
             >
               <div className="drp__bubble-inner">
