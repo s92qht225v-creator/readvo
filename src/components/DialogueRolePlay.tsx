@@ -92,6 +92,12 @@ const UI = {
   review:        { uz: "Qayta mashq qiling.",             ru: 'Повторите практику.',          en: 'Keep practising.'         } as T,
   results:       { uz: 'Natijalar',                      ru: 'Результаты',                  en: 'Results'                  } as T,
   sayInChinese:  { uz: 'Xitoycha ayting:',               ru: 'Скажите по-китайски:',        en: 'Say in Chinese:'          } as T,
+  // Fallback feedback shown when the grader returns none (exact matches skip the
+  // AI judge, so most correct answers have empty feedback).
+  correctDefault: { uz: "Ajoyib! Talaffuzingiz aniq va to'g'ri.",   ru: 'Отлично! Произношение чёткое и правильное.', en: 'Great — clear, accurate pronunciation.' } as T,
+  closeDefault:   { uz: 'Deyarli to\'g\'ri — kichik farq bor. Audioni eshitib, yana urinib ko\'ring.', ru: 'Почти верно — небольшая разница. Послушайте аудио и повторите.', en: 'Almost there — a small difference. Listen to the audio and refine it.' } as T,
+  wrongDefault:   { uz: "Hozircha to'g'ri emas. To'g'ri variantni eshiting va qaytaring.", ru: 'Пока неверно. Послушайте правильный вариант и повторите.', en: "Not quite yet. Listen to the correct version and repeat it." } as T,
+  saidLabel:      { uz: 'Siz aytdingiz:',                 ru: 'Вы сказали:',                 en: 'You said:'                } as T,
 };
 
 // ── Traditional → Simplified map ──
@@ -394,10 +400,11 @@ export function DialogueRolePlay({
         // Round 2: play the app's next response (new content for the
         // learner) before advancing.
         // advanceUnit handles the dialogue-ends-on-app-turn case.
+        // Round 2: the app speaks its next line, then we advance (natural
+        // back-and-forth). Round 1: DON'T auto-advance — the feedback used to
+        // flash away in 700ms; now it stays until the learner taps Next.
         if (round === 2 && currentAppUnit) {
           playAudio(currentAppUnit.zh, currentAppUnit.audio_url, voiceOf(currentAppUnit)).then(() => advanceUnit());
-        } else {
-          window.setTimeout(() => advanceUnit(), result === 'correct' ? 700 : 900);
         }
       } else {
         if (attempt === 1) {
@@ -715,20 +722,20 @@ export function DialogueRolePlay({
           {/* ── idle ── */}
           {phase === 'idle' && (
             <div style={{ textAlign: 'center' }}>
-              {attempt === 2 && <div style={{ fontSize: 12, color: '#d97706', marginBottom: 10, fontWeight: 600 }}>{t(UI.lastAttempt)}</div>}
+              {attempt === 2 && <div style={{ fontSize: 14, color: '#d97706', marginBottom: 10, fontWeight: 700 }}>{t(UI.lastAttempt)}</div>}
               <button onClick={startRecording} disabled={playingAppLine} className="drp__btn" style={{
                 background: playingAppLine ? '#ccc' : accentColor,
                 cursor: playingAppLine ? 'not-allowed' : 'pointer',
               }}>{playingAppLine ? `${appRole} ${t(UI.appSays)}` : t(UI.speakBtn)}</button>
-              {!playingAppLine && round === 1 && <div style={{ fontSize: 11, color: '#6b7177', marginTop: 6 }}>{t(UI.tapSpeak)}</div>}
-              {!playingAppLine && round === 2 && <div style={{ fontSize: 11, color: '#6b7177', marginTop: 6 }}>{t(UI.tapSpeak)}</div>}
+              {!playingAppLine && round === 1 && <div style={{ fontSize: 13, color: '#6b7177', marginTop: 6 }}>{t(UI.tapSpeak)}</div>}
+              {!playingAppLine && round === 2 && <div style={{ fontSize: 13, color: '#6b7177', marginTop: 6 }}>{t(UI.tapSpeak)}</div>}
             </div>
           )}
 
           {/* ── recording ── */}
           {phase === 'recording' && (
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: 12, color: accentColor, fontWeight: 700, marginBottom: 8 }}>🔴 {t(UI.listening)}</div>
+              <div style={{ fontSize: 14, color: accentColor, fontWeight: 700, marginBottom: 8 }}>🔴 {t(UI.listening)}</div>
               <button onClick={stopRecording} className="drp__btn" style={{
                 background: '#fee2e2', border: '2px solid #ef4444', color: '#dc2626',
                 animation: 'drpPulse 1s infinite',
@@ -743,7 +750,7 @@ export function DialogueRolePlay({
           {/* ── processing ── */}
           {phase === 'processing' && (
             <div style={{ textAlign: 'center', padding: '12px 0' }}>
-              <div style={{ fontSize: 13, color: '#888' }}>⏳ {t(UI.processing)}</div>
+              <div style={{ fontSize: 15, color: '#888' }}>⏳ {t(UI.processing)}</div>
             </div>
           )}
 
@@ -783,10 +790,11 @@ export function DialogueRolePlay({
           {/* ── correct ── */}
           {phase === 'result_correct' && (
             <div>
-              <div style={{ background: '#dcfce7', borderRadius: 10, padding: '10px 14px', border: '1px solid #86efac', marginBottom: 10, textAlign: 'center' }}>
-                <div style={{ fontSize: 16, fontWeight: 700, color: '#16a34a', marginBottom: 2 }}>✓ {t(UI.correct)}</div>
-                {heard && <div style={{ fontSize: 13, color: '#444' }}>{t(UI.heard)} <b>{toSimplified(heard)}</b></div>}
-                {feedback && <div style={{ fontSize: 12, color: '#15803d', marginTop: 4 }}>{feedback}</div>}
+              <div style={{ background: '#dcfce7', borderRadius: 12, padding: '14px 18px', border: '1px solid #86efac', marginBottom: 12, textAlign: 'center' }}>
+                <div style={{ fontSize: 21, fontWeight: 700, color: '#16a34a', marginBottom: 6 }}>✓ {t(UI.correct)}</div>
+                {heard && <div style={{ fontSize: 16, color: '#333', marginBottom: 2 }}>{t(UI.heard)} <b>{toSimplified(heard)}</b></div>}
+                {currentLearnerUnit.pinyin && <div style={{ fontSize: 15, color: '#15803d', fontStyle: 'italic', marginBottom: 6 }}>{currentLearnerUnit.pinyin}</div>}
+                <div style={{ fontSize: 15, color: '#15803d', lineHeight: 1.55 }}>{feedback || t(UI.correctDefault)}</div>
               </div>
               <button onClick={advanceUnit} className="drp__btn" style={{ background: accentColor }}>
                 {unitIndex + 1 < learnerUnits.length ? t(UI.next) : t(UI.results)}
@@ -797,10 +805,11 @@ export function DialogueRolePlay({
           {/* ── close ── */}
           {phase === 'result_close' && (
             <div>
-              <div style={{ background: '#fff7ed', borderRadius: 10, padding: '10px 14px', border: '1px solid #fcd34d', marginBottom: 10, textAlign: 'center' }}>
-                <div style={{ fontSize: 16, fontWeight: 700, color: '#d97706', marginBottom: 2 }}>≈ {t(UI.close)}</div>
-                {heard && <div style={{ fontSize: 13, color: '#444' }}>{t(UI.heard)} <b>{toSimplified(heard)}</b></div>}
-                {feedback && <div style={{ fontSize: 12, color: '#b45309', marginTop: 4 }}>{feedback}</div>}
+              <div style={{ background: '#fff7ed', borderRadius: 12, padding: '14px 18px', border: '1px solid #fcd34d', marginBottom: 12, textAlign: 'center' }}>
+                <div style={{ fontSize: 21, fontWeight: 700, color: '#d97706', marginBottom: 6 }}>≈ {t(UI.close)}</div>
+                {heard && <div style={{ fontSize: 16, color: '#333', marginBottom: 2 }}>{t(UI.heard)} <b>{toSimplified(heard)}</b></div>}
+                {currentLearnerUnit.pinyin && <div style={{ fontSize: 15, color: '#b45309', fontStyle: 'italic', marginBottom: 6 }}>{currentLearnerUnit.pinyin}</div>}
+                <div style={{ fontSize: 15, color: '#b45309', lineHeight: 1.55 }}>{feedback || t(UI.closeDefault)}</div>
               </div>
               <button onClick={advanceUnit} className="drp__btn" style={{ background: '#d97706' }}>
                 {unitIndex + 1 < learnerUnits.length ? t(UI.next) : t(UI.results)}
@@ -811,10 +820,10 @@ export function DialogueRolePlay({
           {/* ── wrong retry ── */}
           {phase === 'result_wrong_retry' && (
             <div>
-              <div style={{ background: '#fff7ed', borderRadius: 10, padding: '10px 14px', border: '1px solid #fcd34d', marginBottom: 10, textAlign: 'center' }}>
-                <div style={{ fontSize: 15, fontWeight: 700, color: '#d97706', marginBottom: 2 }}>{t(UI.retryPrompt)}</div>
-                {heard && <div style={{ fontSize: 12, color: '#888' }}>{t(UI.heard)} <b>{toSimplified(heard)}</b></div>}
-                {feedback && <div style={{ fontSize: 12, color: '#b45309', marginTop: 4 }}>{feedback}</div>}
+              <div style={{ background: '#fff7ed', borderRadius: 12, padding: '14px 18px', border: '1px solid #fcd34d', marginBottom: 12, textAlign: 'center' }}>
+                <div style={{ fontSize: 19, fontWeight: 700, color: '#d97706', marginBottom: 6 }}>{t(UI.retryPrompt)}</div>
+                {heard && <div style={{ fontSize: 15, color: '#666', marginBottom: 4 }}>{t(UI.saidLabel)} <b>{toSimplified(heard)}</b></div>}
+                <div style={{ fontSize: 15, color: '#b45309', lineHeight: 1.55 }}>{feedback || t(UI.closeDefault)}</div>
               </div>
               <button onClick={retryAfterWrong} className="drp__btn" style={{ background: '#d97706' }}>🎤 {t(UI.retrySpeak)}</button>
             </div>
@@ -823,15 +832,15 @@ export function DialogueRolePlay({
           {/* ── wrong final ── */}
           {phase === 'result_wrong_final' && (
             <div>
-              <div style={{ background: '#fee2e2', borderRadius: 10, padding: '10px 14px', border: '1px solid #fca5a5', marginBottom: 10, textAlign: 'center' }}>
-                <div style={{ fontSize: 15, fontWeight: 700, color: '#dc2626', marginBottom: 2 }}>{t(UI.wrong)}</div>
-                {heard && <div style={{ fontSize: 12, color: '#888' }}>{t(UI.heard)} <b>{toSimplified(heard)}</b></div>}
-                {feedback && <div style={{ fontSize: 12, color: '#b91c1c', marginTop: 4 }}>{feedback}</div>}
+              <div style={{ background: '#fee2e2', borderRadius: 12, padding: '14px 18px', border: '1px solid #fca5a5', marginBottom: 12, textAlign: 'center' }}>
+                <div style={{ fontSize: 19, fontWeight: 700, color: '#dc2626', marginBottom: 6 }}>✗ {t(UI.wrong)}</div>
+                {heard && <div style={{ fontSize: 15, color: '#666', marginBottom: 4 }}>{t(UI.saidLabel)} <b>{toSimplified(heard)}</b></div>}
+                <div style={{ fontSize: 15, color: '#b91c1c', lineHeight: 1.55 }}>{feedback || t(UI.wrongDefault)}</div>
               </div>
-              <div style={{ background: '#f5f5f8', borderRadius: 8, padding: '10px 14px', marginBottom: 10 }}>
-                <div style={{ fontSize: 11, color: '#888', marginBottom: 3 }}>{t(UI.correctAns)}</div>
-                <div style={{ fontSize: 20, fontWeight: 700, color: '#1a1a2e' }}>{currentLearnerUnit.zh}</div>
-                {currentLearnerUnit.pinyin && <div style={{ fontSize: 12, color: accentColor }}>{currentLearnerUnit.pinyin}</div>}
+              <div style={{ background: '#f5f5f8', borderRadius: 12, padding: '14px 18px', marginBottom: 12, textAlign: 'center' }}>
+                <div style={{ fontSize: 13, color: '#888', marginBottom: 6, fontWeight: 600 }}>{t(UI.correctAns)}</div>
+                <div style={{ fontSize: 28, fontWeight: 700, color: '#1a1a2e', lineHeight: 1.3 }}>{currentLearnerUnit.zh}</div>
+                {currentLearnerUnit.pinyin && <div style={{ fontSize: 16, color: accentColor, fontStyle: 'italic', marginTop: 2 }}>{currentLearnerUnit.pinyin}</div>}
               </div>
               <button onClick={startShadowing} className="drp__btn" style={{ background: accentColor }}>🔁 {t(UI.shadowing)}</button>
             </div>
