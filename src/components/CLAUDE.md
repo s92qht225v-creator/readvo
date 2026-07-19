@@ -42,18 +42,10 @@
 - **Persistence**: `POST /api/arabic/flashcards/reviews` (JWT) writes into the **shared `flashcard_reviews` table** with an `ar:{level}:{cardId}` card_id prefix (so it never collides with Chinese SM-2 rows; `ease`/`lapses` are written as constants, unused). Reads reuse the generic `GET /api/flashcards/reviews?prefix=…`.
 
 ### Dialogue Reader
-- Accessible from Language Page → Matn tab → Dialoglar card → `/chinese/hsk1/dialogues`
-- Dialogues are short A/B conversations using vocabulary from the corresponding HSK level
-- **Reuses StoryReader component** with `listPath` prop for correct back navigation
-- **Dialogue detection**: StoryReader checks if any sentence has a `speaker` field (`isDialogue` flag)
-- **Dialogue layout** (when `isDialogue` is true):
-  - Each sentence renders as its own block (`.story__dialogue-line`) instead of inline flowing text
-  - Speaker label (A/B) in blue on the left (`.story__speaker`) with `：` suffix via CSS `::after`
-  - Text on the right (`.story__dialogue-text`)
-  - Ruby pinyin with blue color, `padding-bottom: 0.15em` for spacing
-- **Focus mode**: Shows speaker label above the sentence text (`.story__focus-speaker`)
-- **Stories are unaffected** — the dialogue layout only activates when sentences have `speaker` fields
-- Data loaded from `content/dialogues/{bookId}/dialogue{N}.json` via `src/services/dialogues.ts`
+- Accessible from the Dialogues catalog tab → dialogue card → `/chinese/dialogues/[level]/[slug]`. The list page is `DialoguesCatalog` (part of `LanguagePage`), NOT a separate `DialoguesPage` (removed).
+- Dedicated component **`DialogueReader.tsx`** (the old `StoryReader` was removed). Public teaser is server-rendered (`DialoguePreviewBody`); the full content is fetched client-side (behind auth) from `/api/content/dialogue/[book]/[slug]`.
+- Dialogues are short A/B (occasionally C) conversations. Speaker is shown via **speaker cards** (see below), not `A:`/`B:` labels. Focus mode shows one line at a time.
+- Data loaded from `content/dialogues/{level}/*.json` via `src/services/dialogues.ts`.
 - **Tabs**: Dialog · Words (`So'zlar`) · **Dictation** (`Diktant`) · Practice (`Mashq`). The Grammar tab was **replaced by Dictation** (grammar lives in its own top-level Grammar section on the language page).
 - **Words tab** (`DialogueVocab.tsx`): a vertical stack of **flip-cards** (one per word). Tap a card → it 3D-rotates to the other side; only one is open at a time (tapping another flips the previous back). A **direction toggle** sits above the stack (segmented pill, `.dr-vocab-dir`): **汉字 → native** (front = pinyin + 汉字 + **`+` save button**, back = meaning) and **native → 汉字** (front = meaning, back = pinyin + 汉字 + save button — recall the Chinese, flip to check); switching direction closes any open card. **Per-word audio was removed** (single-word TTS was unreliable) and replaced by the **`+` save button** (`.dr-flip__save`): it saves the word to **"My Vocabulary"** (`/chinese/vocabulary`) via `useSavedVocab` → `/api/vocab`; once saved it shows a red ✓; saving requires login (anon → routes to `/login`). Cards are sorted **alphabetically by pinyin** (tone marks ignored) — this is a reference list; the shuffle lives on the My Vocabulary page instead. Both faces share one CSS-grid cell (`.dr-flip__face { grid-area: 1/1 }`) so each card sizes to its **taller** face → identical height in both directions. No practice mode, no Know/Don't-know, no examples. Self-contained — NOT the test engine or flashcard-deck flow. Vocab comes from the dialogue's `vocab[]` (whole **words/phrases** — 打电话, 怎么办, 别着急 — never bare characters, so polysemy like 打 is avoided), falling back to auto-extract from per-sentence `words[]`. **Vocab entry shape**: `{ zh, py, uz, ru, en }`. **Translations now live in the Supabase `glossary` table, not in the dialogue JSONs.** Each dialogue's `vocab[]` is a **reference list** — bare `"汉字"` strings, or `{ zh, py }` for homographs, or `{ zh, py?, uz?, ru?, en? }` to override a gloss for that dialogue's context. The dialogue page resolves refs server-side via `resolveDialogueVocab()` → `resolveVocab()` (`src/services/glossary.ts`, cached under the `glossary` tag) and passes resolved `{ zh, py, uz, ru, en }[]` into `DialogueReader` (unchanged). Edit the words in the admin **Glossary tab** (`/api/admin/glossary`), which `revalidateTag('glossary')`s so edits go live without a deploy. Unresolved refs are dropped → auto-extract fallback from per-sentence `words[]`. **Note:** the HSK 4/6 dialogues still need `vocab[]` reference lists (+ glossary rows) added.
 - **Dictation tab** (`DialogueDictation.tsx`, sibling of `DialogueRolePlay`): a listening exercise — Start → hears a line (text hidden, audio via the dialogue's `audioUrl`/`resolveTtsUrl`) → reproduces it → reveals the line (zh + pinyin + translation) → Next → score (`first-try correct / total`). One item per sentence with ≥2 Han chars. **Two independent per-dialogue opt-ins** (from `meta.*`, set in the dialogue JSON): `dictationPinyin` (tokens are pinyin **syllables** via `alignPinyinToText`, not characters) and `dictationKeyboard` (a **fixed-key keyboard + ⌫ backspace** instead of the drag-tile tray). **Pinyin always implies the keyboard**; characters can use either. In keyboard mode **keys are DEDUPED** — one key per **distinct** token, pressable as many times as the line needs (fixes the old "two identical keys, one dies after first use" bug); `placed` indexes the key list. The answer box is bigger than the keys (`.dr-dict__answer--han` 28px for characters, `.dr-dict__answer--text` 23px for pinyin); backspace is widened (`.dr-dict__tile--back` 88px). **Correct/wrong sounds** play via the shared `playResult()` (`src/utils/sfx.ts` — same harp-strum / triple-thud as the flashcard ladder; shared mute flag `blim-fc-muted`); `unlockSfx()` fires on Start (iOS gesture requirement). **Rollout**: all 47 HSK 1 dialogues use `dictationPinyin`; all HSK 2 + HSK 3 use `dictationKeyboard` (character keys); HSK 4 keeps the drag-tiles. **Input modes** (drag-tile vs. type) are still gated by the `level` prop (`meta.level`):
@@ -65,57 +57,7 @@
 - **Practice tab audio** (`DialogueRolePlay`): now uses the **shared `resolveTtsUrl(text, voice)`** (`utils/ttsAudio.ts`) with a per-speaker voice resolved via `voiceForWith` (`src/utils/dialogueVoice.ts` — A=茉莉, B=白桦, C=苏打, honouring a per-dialogue `voices` override). Previously it called `/api/tts` with no voice and kept its own private cache, so lines sounded different from the Dialog tab; now both tabs share one MiMo cache and the same voice.
 - **Focus-mode fixes**: the "N / M" counter is pinned at `font-size: 13px` (`.story__focus-counter`, was `0.85em` which scaled with the A+/A- font control); focus-mode character spacing matched to dialogue mode (`.story__text ruby { margin: 0 0.06em }`).
 - **My Vocabulary** (`src/components/VocabularyReview.tsx`, route `/chinese/vocabulary`, H1 "Mening lug'atim", `robots: noindex`): a **swipe/flip review deck** of the words the user saved from the Words-tab **`+`** button. Account-synced via `useSavedVocab` → `/api/vocab` (Supabase `saved_vocab` table). **No SRS** — pure review. The deck is **shuffled once per visit** (seeded into a ref the first time words load, stable while open, fresh on remount); removing a card **keeps the rest in place** (no reshuffle). Tap to flip (汉字 ⇄ meaning), swipe or ‹ › to move, Remove to drop a word.
-- **DialoguesPage** (`src/components/DialoguesPage.tsx`): List page with HSK level tabs, same pattern as StoriesPage
 - **TTS audio fallback** (dialogues with no recorded `audio_url`, e.g. HSK 2): `resolveTtsUrl` (`utils/ttsAudio.ts`) → MiMo `/api/tts`. DialogueReader prefetches on mount (warms cache so a tap stays in the user gesture for iOS), `playSentence()` uses `audio_url` else TTS, and a sequential "play all" FAB (`handlePlayAll`/`playSeqFrom`) walks sentences when there's no single recording. HSK 1 (has recordings) makes zero TTS calls.
-
-### Story Reader
-- Accessible from Language Page → Matn tab → Hikoyalar card → `/chinese/hsk2/stories`
-- Stories are graded reading texts using vocabulary from the corresponding HSK level
-- **Ruby pinyin**: Each pinyin syllable appears directly above its corresponding Chinese character using HTML `<ruby>/<rt>/<rp>` tags
-- **Pinyin-character alignment**: `src/utils/rubyText.ts` splits compound pinyin (e.g., "Jīntiān" → "Jīn" + "tiān") and maps syllables to CJK characters
-- **Erhua handling**: Characters like 玩儿 and 点儿 are merged under one ruby element with pinyin "wánr"/"diǎnr". Works in compound words too (e.g., "Yǒudiǎnr" → ["Yǒu", "diǎnr"])
-- **Pinyin quote stripping**: `stripPunct()` removes leading `"'"(` and trailing `.,!?:;"""''()` from pinyin tokens before splitting, so quotes in pinyin like `"Jiālǐ` don't get attached to syllables
-- **Pinyin toggle stability**: When pinyin is toggled off, `<ruby>` tags remain but `<rt>` gets `visibility: hidden` to prevent layout shift
-- **Tap-to-translate**: Tapping a sentence changes its color to blue (`color: var(--color-accent)`) and shows its translation in a fixed panel below the header
-- **Translation panel**: Fixed position below header (`z-index: 99`), only visible when a sentence is active and translation toggle is on
-- **No inline translations**: Unlike lessons, story translations only appear in the panel (not inline below text)
-- **Sentence spacing**: A space character is inserted between adjacent sentence `<span>`s in the same paragraph to prevent quotes/punctuation from visually merging
-- **Independent CSS**: Stories use `.story` class (not `.page`), completely independent from lesson page styles
-- **Per-sentence audio**: Sentences can have individual `audio_url` fields. Tapping a sentence plays its audio via `useAudioPlayer` singleton. Starting per-sentence audio stops full-story audio and vice versa.
-  - Per-sentence URLs: `HSK%201%20stories/{storyNum}/line{N}.mp3`
-  - Full-story URL: `HSK%201%20stories/{storyNum}/story.mp3`
-- **Bottom toggle bar**: Fixed slim bar at the bottom of the story reader with Pinyin and Tarjima toggle buttons (`.story__bottom-bar`). Stories don't use the lesson bottom nav, so toggles live here instead. Grey background (`rgba(245, 245, 245, 0.97)`) with backdrop blur.
-- **Full-story audio FAB** (normal mode only, hidden in focus mode):
-  - Play/pause FAB (56px blue circle) at bottom-right, positioned above the bottom toggle bar
-  - Toggles between play (▶) and pause (⏸) SVG icons
-  - No skip buttons, no progress bar — just a simple play/pause toggle
-  - Uses direct `HTMLAudioElement` via `useRef` (not `useAudioPlayer` hook)
-- **Audio-text sync**: When sentences have `start`/`end` timestamps (in seconds), the currently playing sentence is automatically highlighted during audio playback
-  - `audioSentenceId` is derived via `useMemo` from `currentTime` — finds which sentence's `start ≤ time < end`
-  - Audio-synced highlight takes priority over manual tap highlight (`displaySentenceId = audioSentenceId ?? activeSentenceId`)
-  - When audio starts playing, manual tap selection is cleared (`setActiveSentenceId(null)`)
-  - Translation panel shows the currently playing sentence's translation
-  - Timestamps are optional — stories without `start`/`end` work exactly as before (tap-only)
-- **One sentence per JSON entry**: Each tappable sentence must be its own entry in the `sentences` array (don't combine two sentences in one `text_original`)
-- **Press-and-hold word translation**: Long-press (300ms) on a Chinese word shows its individual pinyin + translation in the translation panel (overrides sentence translation)
-  - Word data stored in `words[]` array per sentence with compact format: `{ i: [start, end], p, t, tr, h?, l? }`
-  - `i`: character index range in `text_original` (exclusive end), `p`: pinyin, `t`: Uzbek, `tr`: Russian
-  - `h`: HSK level (1-6), `l`: lesson number where word's **contextual meaning** was first introduced
-  - Translation panel shows: **字** pinyin — translation `[HSK 1]` `[10-dars]` (two separate badge spans)
-  - Panel shows regardless of translation toggle when a word is pressed (always useful for learners)
-  - Audio pauses during word press, resumes on release
-  - Words wrapped in `<span class="story__word">` with `story__word--active` highlight (background, not color)
-- **Focus mode**: Shows one sentence at a time, centered. Toggled via Fokus button in bottom bar.
-  - Sentence text area has `min-height: 35vh; justify-content: center` to vertically center text on screen
-  - Navigation row: ‹ (prev) | ▶/⏸ (play/pause) | › (next) — three symmetric buttons. SVG chevrons for nav, blue circle for play.
-  - Counter below nav buttons: "9 / 30" (small centered label)
-  - Prev/next navigation auto-plays the target sentence's audio
-  - Entering focus mode auto-plays the current (or first) sentence's audio
-  - Play button replays/pauses the current sentence's audio (not full-story audio)
-  - Full-story audio FAB is hidden in focus mode
-  - Entering focus mode stops any playing full-story audio
-  - CSS: `.story__focus-nav-btn` (48px grey circle, no border), `.story__focus-play-btn` (44px blue circle)
-- Data loaded from `content/stories/{bookId}/{storyN}.json` via `src/services/stories.ts`
 
 ### Karaoke Player
 - Accessible from Language Page → KTV tab → song card → `/chinese/hsk1/karaoke/[songId]`
@@ -303,59 +245,6 @@ main.home (reuses home styling, no top padding)
 └── footer.home__footer
 ```
 
-### Book Page Structure (BookPage.tsx — lesson list)
-```
-main.home (reuses home styling)
-├── header.home__hero (logo + HSK 1-6 folder tabs)
-│   └── div.home__hero-inner
-│       ├── div.home__hero-top-row
-│       │   └── Link.home__hero-logo > img (links to /chinese)
-│       └── div.lang-page__tabs (HSK 1 active, 2-6 disabled)
-├── section.home__content
-│   ├── div.home__lessons
-│   │   └── article.lesson-card (per lesson)
-│   │       ├── div.lesson-card__header (number + translation, no Chinese title/pinyin)
-│   │       └── div.lesson-card__pages (page links)
-│   └── div.home__stats
-└── footer.home__footer
-```
-
-### Lesson Page Structure
-```
-div.reader
-├── header.reader__header (fixed, full-width background)
-│   └── div.reader__header-inner (constrained width)
-│       ├── Link.reader__home (logo img)
-│       └── ReaderControls (RU/UZ toggle, A-/A+ font controls)
-├── div.page__translation-panel (fixed below header, shown when translation on + sentence tapped)
-├── article.page (constrained width, permanent 1em extra top padding for panel space)
-│   ├── LessonHeader (if present)
-│   ├── div.page__content
-│   │   └── Section (multiple)
-│   └── button.page__audio-fab (floating play button, shown when section play button scrolls away)
-└── nav.reader__bottom-nav (fixed, full-width background)
-    └── div.reader__bottom-nav-inner (constrained width)
-        ├── Link/span.reader__nav-btn (prev)
-        ├── div.reader__nav-toggles (Pinyin + Tarjima toggle buttons)
-        └── Link/span.reader__nav-btn (next)
-```
-
-### Flashcard List Page Structure (FlashcardListPage.tsx)
-```
-main.home
-├── header.home__hero (logo + HSK 1-6 folder tabs)
-│   └── div.home__hero-inner
-│       ├── div.home__hero-top-row
-│       │   └── Link.home__hero-logo > img (links to /chinese?tab=flashcards)
-│       └── div.lang-page__tabs (HSK 1 active, 2-6 disabled)
-├── section.home__content
-│   └── div.home__lessons
-│       └── article.lesson-card (per lesson)
-│           ├── div.lesson-card__header (number + translation)
-│           └── div.lesson-card__pages (word count link → /flashcards/[lessonId])
-└── footer.home__footer
-```
-
 ### Flashcard Practice Page Structure (FlashcardDeck.tsx)
 ```
 main.flashcard-page
@@ -372,34 +261,6 @@ main.flashcard-page
     │       ├── div.flashcard__face--front (Chinese + audio + pinyin)
     │       └── div.flashcard__face--back (translation + reminder)
     └── div.flashcard__actions (know/don't know buttons)
-```
-
-### Story Reader Page Structure (StoryReader.tsx)
-```
-div.reader
-├── header.reader__header (fixed, grey bg, reuses lesson header)
-│   └── div.reader__header-inner
-│       ├── Link.reader__home (logo img, links to /[book]/stories)
-│       └── ReaderControls (language/font toggles only)
-├── div.story__translation-panel (fixed below header, shown on sentence tap)
-│   └── p.story__translation-panel-text
-├── article.story (independent container, NOT .page)
-│   ├── div.story__focus (focus mode: single sentence view)
-│   │   ├── p.story__focus-text (centered, min-height 35vh)
-│   │   ├── div.story__focus-nav (← ▶ → buttons row)
-│   │   │   ├── button.story__focus-nav-btn (48px grey circle, SVG chevron)
-│   │   │   ├── button.story__focus-play-btn (44px blue circle, play/pause)
-│   │   │   └── button.story__focus-nav-btn
-│   │   └── span.story__focus-counter ("9 / 30")
-│   └── div.story__paragraph (normal mode: per section)
-│       └── p.story__text
-│           └── span.story__sentence (per sentence, clickable, tap-to-play audio)
-│               └── span.story__word (per word, long-pressable)
-│                   └── ruby > rt (pinyin above each character)
-├── button.story__play-fab (normal mode only: play/pause full story audio)
-└── nav.story__bottom-bar (fixed, grey bg, Tarjima + Fokus + Pinyin toggles)
-    └── div.story__bottom-bar-inner
-        └── button.reader__nav-toggle (× 2)
 ```
 
 ### Karaoke Player Page Structure (KaraokePlayer.tsx)

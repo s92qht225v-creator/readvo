@@ -42,7 +42,7 @@ All routes are locale-prefixed (`/{locale}/...`). Unprefixed URLs auto-redirect 
 /{locale}/chinese/karaoke/[songId]           # Karaoke player
 /{locale}/chinese/writing                    # Writing tab (HSK 1-6, ?version & ?hsk params)
 /{locale}/chinese/writing/[level]/[set]      # Writing practice (level = hsk1..hsk6)
-/{locale}/chinese/hsk1/grammar/[slug]        # Grammar page (17 slugs; still book-first)
+/{locale}/chinese/hsk1/grammar/[slug]        # Grammar page (15 slugs; still book-first)
 /{locale}/chinese/blog                       # Blog list (moved under /chinese — subject-first)
 /{locale}/chinese/blog/[slug]                # Blog post
 /{locale}/login                              # Login page (Telegram + Google)
@@ -75,7 +75,10 @@ Example routes:
 │   │   │   ├── blog/
 │   │   │   │   ├── page.tsx       # Blog list
 │   │   │   │   └── [slug]/page.tsx # Blog post
-│   │   │   └── chinese/
+│   │   │   └── chinese/           # NOTE: routes are SECTION-FIRST now (see URL Structure
+│   │   │       │                  #   above) — dialogues/[level]/[id], karaoke/[id],
+│   │   │       │                  #   writing/[level]/[set], blog/. The hsk1/* tree below is
+│   │   │       │                  #   stale except grammar/ (still book-first).
 │   │   │       ├── page.tsx       # Language page (tabbed catalog)
 │   │   │       └── hsk1/
 │   │   │           ├── flashcards/
@@ -90,7 +93,7 @@ Example routes:
 │   │   │           │   └── [setId]/
 │   │   │           │       ├── page.tsx              # Writing practice (server)
 │   │   │           │       └── WritingPracticePage.tsx # Writing practice (client)
-│   │   │           └── grammar/[slug]/page.tsx # Grammar pages (20 slugs)
+│   │   │           └── grammar/[slug]/page.tsx # Grammar pages (15 slugs)
 │   │   │       ├── hsk2/
 │   │   │       │   └── flashcards/
 │   │   │       │       └── [lessonId]/page.tsx  # HSK 2 flashcard practice
@@ -120,53 +123,35 @@ Example routes:
 │   │   │       └── session-check/route.ts # Session nonce validation (POST/DELETE)
 │   │   └── auth/telegram/complete/page.tsx  # Telegram login completion (outside [locale])
 │   ├── components/             # React components (see src/components/CLAUDE.md)
-│   │   ├── Page.tsx           # Top-level page container
-│   │   ├── PageReader.tsx     # Page reader wrapper
-│   │   ├── Section.tsx        # Groups sentences by type
-│   │   ├── Sentence.tsx       # Atomic unit with words, audio
-│   │   ├── LessonHeader.tsx   # Lesson banner (1 DARS format)
-│   │   ├── ReaderLayout.tsx   # Layout with fixed header/footer
-│   │   ├── ReaderControls.tsx # Header controls (focus, language, font)
-│   │   ├── HomePage.tsx       # Home page (language selection cards)
-│   │   ├── PageFooter.tsx    # Shared footer: correction button + "Blim — ..." text
-│   │   ├── BannerMenu.tsx    # Shared hamburger menu for all banner pages
+│   │   # NOTE: the lesson reader + all exercise components were REMOVED (~2026-03).
+│   │   # Page/Section/Sentence/ReaderLayout/LessonHeader/StoryReader/BookPage/
+│   │   # DialoguesPage/FlashcardListPage/FlashcardCard + Matching/FillBlank/
+│   │   # MultipleChoice/… exercises no longer exist. Current top-level components:
 │   │   ├── LanguagePage.tsx   # Language page (tabbed: Dialog, Yozish, Flesh, KTV, Tika, Test)
-│   │   ├── HanziWriterPractice.tsx  # Writing tab: Leitner SRS character practice (home/practice/done views)
-│   │   ├── HanziCanvas.tsx          # Canvas-based hanzi stroke engine (retina, grading, hints, reveal)
-│   │   ├── BookPage.tsx       # Book page (lesson list with banner+tabs)
-│   │   ├── DialoguesPage.tsx   # Dialogues list page (HSK level tabs)
-│   │   ├── StoryReader.tsx    # Dialogue reader with ruby pinyin, translation panel, audio bar
-│   │   ├── FlashcardListPage.tsx # Flashcard lesson list with banner+tabs
-│   │   ├── FlashcardDeck.tsx  # Flashcard session manager (client)
-│   │   ├── FlashcardCard.tsx  # Flashcard with 3D flip animation
-│   │   ├── KaraokePlayer.tsx  # Karaoke player with synced lyrics, ruby pinyin, controls
-│   │   ├── MatchingExercise.tsx      # Image-word matching
-│   │   ├── FillBlankExercise.tsx     # Dropdown fill-in-the-blank
-│   │   ├── MultipleChoiceExercise.tsx # Multiple choice questions
-│   │   ├── ImageDescribeExercise.tsx  # Image description with typed input
-│   │   ├── TableFillExercise.tsx      # Table-based activity exercises
-│   │   ├── TypedFillBlankExercise.tsx # Typed fill-in-blank (English exercises)
-│   │   ├── ErrorCorrectionExercise.tsx # Error correction (English exercises)
-│   │   ├── WordChoiceExercise.tsx     # Word choice / circle correct word (English exercises)
-│   │   ├── TextErrorExercise.tsx      # Text error / find & correct errors in passage (English exercises)
-│   │   ├── SpeakingMashq.tsx         # Speaking practice with AI grading (Groq + OpenAI)
-│   │   ├── DialogueRolePlay.tsx     # Dialogue role-play speaking quiz (2 rounds, A/B roles)
-│   │   ├── WritingTest.tsx           # Writing test with HanziCanvas + star scoring
-│   │   ├── CoachMark.tsx             # Tooltip coach marks + multi-step tours
-│   │   ├── RubyText.tsx              # Shared ruby pinyin component (<ruby>/<rt>)
-│   │   ├── DialogueReader.tsx        # Dialogue reader (dialog/vocab/grammar/practice tabs, coach tour)
-│   │   ├── DialoguesPage.tsx         # Dialogues list page (HSK level tabs)
-│   │   ├── FlashcardListPage.tsx     # Flashcard lesson list with banner+tabs
-│   │   ├── FlashcardCard.tsx         # Flashcard with 3D flip animation
-│   │   ├── BookPage.tsx              # Book page (lesson list with banner+tabs)
-│   │   ├── LoginPage.tsx             # Login page (Telegram auth button)
-│   │   ├── BlogList.tsx              # Blog list page
-│   │   ├── BlogPostView.tsx          # Blog post viewer
-│   │   ├── YandexPageView.tsx        # Yandex Metrica page view tracker
-│   │   ├── MetaPageView.tsx          # Meta (Facebook) Pixel page view tracker
-│   │   ├── AdminPanel.tsx            # Admin panel (payments + users management)
-│   │   ├── PaymentPage.tsx           # Payment page (plan selection + screenshot upload)
-│   │   └── Paywall.tsx               # Paywall overlay (trial expired)
+│   │   ├── HomePage.tsx       # Landing / language selection
+│   │   ├── BannerMenu.tsx     # Shared hamburger menu for banner pages
+│   │   ├── PageFooter.tsx     # Shared footer: correction button + "Blim — ..." text
+│   │   ├── ReaderControls.tsx # Reader header controls (language, font)
+│   │   ├── RubyText.tsx       # Shared ruby pinyin (<ruby>/<rt>)
+│   │   ├── DialogueReader.tsx     # Dialogue reader (Dialog/Words/Dictation/Practice tabs, progressive pinyin, speaker cards)
+│   │   ├── DialogueVocab.tsx      # Words tab: flip-cards + "+" save-to-My-Vocabulary
+│   │   ├── DialogueDictation.tsx  # Dictation tab: tile / keyboard (pinyin or character) + sfx
+│   │   ├── DialogueRolePlay.tsx   # Practice tab: role-play speaking quiz (per-speaker TTS)
+│   │   ├── DialoguePreviewBody.tsx # Public server-rendered dialogue teaser (SEO)
+│   │   ├── VocabularyReview.tsx   # "My Vocabulary" saved-words swipe/flip deck (shuffled)
+│   │   ├── FlashcardDeck.tsx / FlashcardDeckLoader.tsx  # Flashcard mastery-ladder session
+│   │   ├── HanziWriterPractice.tsx / HanziCanvas.tsx / WritingTest.tsx  # Writing (SRS + stroke engine + dictation test)
+│   │   ├── KaraokePlayer.tsx      # Karaoke player (synced lyrics, ruby pinyin)
+│   │   ├── SpeakingMashq.tsx      # Grammar-page speaking practice (AI grading)
+│   │   ├── Grammar{Shi,Ma,De,…}PolishedPage.tsx  # 15 grammar pages
+│   │   ├── BlogList.tsx / BlogPostView.tsx   # Blog
+│   │   ├── CoachMark.tsx          # Tooltip coach marks + tours
+│   │   ├── TelegramFAB.tsx        # Support FAB (Telegram)
+│   │   ├── LoginPage.tsx          # Login (Telegram + Google)
+│   │   ├── AdminPanel.tsx         # Admin (payments, users, glossary, HSK analyzer)
+│   │   ├── PaymentPage.tsx / Paywall.tsx     # Payment + paywall overlay
+│   │   ├── AnalyticsScripts.tsx / YandexPageView.tsx / MetaPageView.tsx  # Analytics
+│   │   └── flashcards/, catalog/, test/      # Sub-folders (see src/components/CLAUDE.md)
 │   ├── i18n/
 │   │   ├── request.ts         # next-intl server config (reads locale from URL)
 │   │   ├── routing.ts         # Locale routing config (locales, defaultLocale, localePrefix)
@@ -206,15 +191,12 @@ Example routes:
 │   │   ├── schema.ts          # TypeScript interfaces
 │   │   └── ui-state.ts        # UI state type definitions
 │   └── validation/             # Content validation
-├── content/                    # JSON lesson data (see content/CLAUDE.md)
-│   ├── lesson1-page1.json     # Lessons 1-15 (3 pages each, 45 total)
-│   ├── ...
-│   ├── lesson15-page3.json
+├── content/                    # JSON content data (see content/CLAUDE.md) — lesson*.json removed
 │   ├── flashcards/
 │   │   └── hsk1.json          # HSK 1 flashcard word list
 │   ├── dialogues/
 │   │   └── hsk1/
-│   │       └── dialogue1.json # Dialogue content files (uses StoryReader format)
+│   │       └── dialogue1.json # Dialogue content (rendered by DialogueReader)
 │   ├── karaoke/
 │   │   └── yueliang.json      # Karaoke song data (per-character timestamps + pinyin)
 ├── messages/                   # next-intl translation files (22 namespaces, ~348 lines each)
@@ -235,36 +217,10 @@ Example routes:
 - **`src/styles/CLAUDE.md`** — CSS class reference, padding specs, mobile responsive, button sizes
 - **`src/components/test/CLAUDE.md`** — Test builder + player. Folder map, per-question-type extension recipe, viewport architecture, **scroll mode** (`layout: 'scroll'` — IELTS / SurveyMonkey-style stacked questions), listening audio, navigator, marketplace, sessions.
 
-## Data Hierarchy
-```
-Page → Section → Sentence → Word
-```
+## Content Model
+The old **lesson reader** (`Page → Section → Sentence`, with typed *exercise* sections) was **removed** (~2026-03). Its component tree (`Page`, `Section`, `Sentence`, `ReaderLayout`, `LessonHeader`) and the ~9 exercise components (`MatchingExercise`, `FillBlankExercise`, `MultipleChoiceExercise`, `TableFillExercise`, `TypedFillBlankExercise`, `ErrorCorrectionExercise`, `WordChoiceExercise`, `TextErrorExercise`, …) no longer exist. `src/types/schema.ts` still declares the old `SectionType` / exercise interfaces but is **orphaned** — nothing imports it (safe to delete).
 
-- **Page**: Unit of navigation, contains sections
-- **Section**: Groups content by type (objectives, text, vocabulary, exercise, tip)
-- **Sentence**: Atomic unit with Chinese text, pinyin, translation, optional audio
-- **Word**: Tokenized words for future dictionary lookup
-
-## Section Types
-- `objectives` - Learning goals
-- `text` - Main dialogue/reading with context narration
-- `dialogue` - Conversational exchanges
-- `vocabulary` - Word lists with pinyin and translation
-- `grammar` - Grammar explanations
-- `tip` - Helper tips
-- `exercise` - Practice activities with checkboxes
-- `instruction` - Meta-text instructions
-- `activity` - Classroom activities → `TableFillExercise`
-- `tonguetwister` - Tongue twisters (floating white card, single merged sentence)
-- `matching` - Image-word matching → `MatchingExercise`
-- `fillblank` - Fill-in-the-blank with dropdowns → `FillBlankExercise`
-- `multiplechoice` - Multiple choice questions → `MultipleChoiceExercise`
-- `imagedescribe` - Image description with typed input → `ImageDescribeExercise`
-- `bonus` - Bonus content with video player
-- `typedfillblank` - Typed fill-in-blank → `TypedFillBlankExercise` (English exercises)
-- `errorcorrection` - Error correction → `ErrorCorrectionExercise` (English exercises)
-- `wordchoice` - Word choice (circle correct word/phrase) → `WordChoiceExercise` (English exercises)
-- `texterror` - Text error (find & correct errors in passage) → `TextErrorExercise` (English exercises)
+Current content types, each with its own JSON format (see `content/CLAUDE.md`): **dialogues, flashcards, writing sets, karaoke, grammar, blog**. Dialogue JSON still nests `sections[] → sentences[] → words[]` for the dialogue reader, but there are no typed "exercise sections" any more.
 
 ## UI Text Language
 - **Three UI languages**: Uzbek (uz), Russian (ru), English (en)
@@ -373,7 +329,7 @@ Only one device can be logged in at a time. New login kicks previous session.
 - **Trial status**: `{ daysLeft, isTrialActive, isTrialExpired, hasSubscription, subscriptionDaysLeft }`
 - **Subscription takes priority**: If valid subscription exists, `isTrialActive = true`
 - **Paywall component**: `src/components/Paywall.tsx` — shown when `trial.isTrialExpired && !isFreeContent`
-- **Paywall locations**: ReaderLayout, StoryReader, FlashcardDeck, KaraokePlayer
+- **Paywall locations**: DialogueReader, FlashcardDeck/FlashcardDeckLoader, KaraokePlayer (+ Arabic readers)
 - **Subscription API**: `GET /api/subscription` — returns active subscription (ends_at > now)
 - **BannerMenu display**: Active subscription shows "Obuna: N kun qoldi" / "Subscription: N days left", expired shows "Sinov muddati tugadi" / "Trial period expired" (red), trial shows "Sinov: N kun qoldi" / "Trial: N days left" (yellow)
 
@@ -429,7 +385,7 @@ Only one device can be logged in at a time. New login kicks previous session.
 
 ## User Progress Tracking
 - **API**: `src/app/api/progress/route.ts` (GET: retrieve, POST: save)
-- **Auto-saved**: ReaderLayout `useEffect` records page visit on load
+- **API present** (`/api/progress`, `user_progress` table) but the old ReaderLayout auto-save was removed with the lesson reader; not actively written by the current readers.
 - **Database**: `user_progress` table — `user_id, lesson_id, page_num, completed, last_visited_at`
 - **Upsert**: Creates or updates on conflict `(user_id, lesson_id, page_num)`
 
@@ -543,7 +499,7 @@ Subfolder structure: `HSK 1/HSK {lesson}-{page}/`
 - **Trilingual**: All labels support UZ/RU/EN via `useLanguage()` hook
 - **CSS classes**: `.correction-inline__*` in reading.css
 - **Footer spacing**: `padding-bottom: calc(80px + ...)` to clear fixed bottom bars (dialogue/lesson). Karaoke excluded due to full-screen player layout with fixed controls.
-- **Used in**: Every page component — LanguagePage, BookPage, FlashcardListPage, DialoguesPage, HomePage, all Grammar pages, DialogueReader, FlashcardDeck, StoryReader, ReaderLayout, WritingPracticePage. **Not in KaraokePlayer** (fixed controls conflict).
+- **Used in**: page components — LanguagePage, HomePage, all Grammar pages, DialogueReader, FlashcardDeck, WritingPracticePage, VocabularyReview, blog. **Not in KaraokePlayer** (fixed controls conflict).
 
 ## Writing Test
 - **Component**: `src/components/WritingTest.tsx` — timed writing quiz using `HanziCanvas`
@@ -605,7 +561,7 @@ The single product-wide vocabulary standard is **HSK 3.0** (the 2026 **exam syll
 - **Payment upload validation** (`/api/payment`): File extension allowlist (`jpg, jpeg, png, webp, heic`), MIME type check, 10MB size limit. Validated server-side before Supabase upload.
 - **Admin rate limiting** (`/api/admin/check`): In-memory IP-based rate limiter. Max 5 failed password attempts per IP, 15-minute lockout window. Uses `x-forwarded-for` header.
 - **Error sanitization** (`/api/admin`): Invalid action responses return generic `"Invalid action"` without echoing user input (prevents reflected XSS / fingerprinting).
-- **Paywall enforcement**: All content components (ReaderLayout, StoryReader, FlashcardDeck, KaraokePlayer) use early-return `<Paywall />` pattern — paid content is never rendered to DOM when locked. Server-side content (JSON files) is loaded at build time, not fetched client-side.
+- **Paywall enforcement**: content components (DialogueReader, FlashcardDeck/FlashcardDeckLoader, KaraokePlayer) use early-return `<Paywall />` pattern — paid content is never rendered to DOM when locked. Server-side content (JSON files) is loaded at build time, not fetched client-side.
 - **Known limitations**:
   - Payment screenshots are publicly accessible in Supabase storage (would need private bucket + signed URLs to fix)
   - No server-side bounds validation on admin `add_days`/`remove_days`/`grant_subscription` days parameter

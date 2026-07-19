@@ -235,7 +235,7 @@ This file covers JSON format conventions for all content files in `/content/`.
 - Same format as Story JSON but with `speaker` field on each sentence (typically "A" or "B")
 - Dialogue IDs follow the pattern `hsk1-dialogue1`, `hsk1-dialogue2`, etc.
 - Sentence IDs follow the pattern `d1-s1`, `d1-s2`, etc.
-- The `speaker` field triggers dialogue layout in StoryReader (block layout with speaker labels)
+- The `speaker` field (A/B/C) drives the DialogueReader speaker cards (coloured left strip per speaker)
 - Data loaded from `content/dialogues/{bookId}/dialogue{N}.json`
 
 #### Dialogue optional top-level fields
