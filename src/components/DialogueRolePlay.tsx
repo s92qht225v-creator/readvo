@@ -6,6 +6,7 @@ import { usePrimeAudioToken } from '@/hooks/useAudioToken';
 import { protectAudioUrlSync } from '@/lib/audio/token-client';
 import { resolveTtsUrl } from '@/utils/ttsAudio';
 import { voiceForWith } from '@/utils/dialogueVoice';
+import { playResult, unlockSfx } from '@/utils/sfx';
 
 type Language = 'uz' | 'ru' | 'en';
 
@@ -335,6 +336,7 @@ export function DialogueRolePlay({
 
   // ── Recording ──
   const startRecording = async () => {
+    unlockSfx();   // prime WebAudio inside the tap gesture so the result chime can play (iOS)
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       chunksRef.current = [];
@@ -401,6 +403,7 @@ export function DialogueRolePlay({
       const result = (data.result ?? 'wrong') as Score;
       const revealKey = `${round}_${unitIndex}`;
       if (result === 'correct' || result === 'close') {
+        playResult(true);   // positive chime (shared with flashcards/dictation)
         setScores(p => [...p, result]);
         setRevealed(p => ({ ...p, [revealKey]: { zh: currentLearnerUnit.zh, score: result } }));
         setPhase(result === 'correct' ? 'result_correct' : 'result_close');
@@ -427,6 +430,7 @@ export function DialogueRolePlay({
             .then(() => setClosingAppPlaying(false));
         }
       } else {
+        playResult(false);  // "wrong" thud on each wrong submission (retry + final)
         if (attempt === 1) {
           setPhase('result_wrong_retry');
         } else {
