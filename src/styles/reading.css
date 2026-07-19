@@ -9502,6 +9502,18 @@ body {
 }
 
 @media (max-width: 600px) {
+  /* Match the Dialog tab's edge-to-edge width on phones. The Dialog reclaims the
+     reader's side padding (var(--spacing-xl)) with negative margins; the Practice
+     tab sits one layer deeper (inside .dr-panel, +10px padding) and is capped at
+     480px, so it read narrower/more inset than the Dialog. Reclaim both layers
+     and re-apply the same symmetric 12px so the two tabs line up. */
+  .drp {
+    max-width: none;
+    margin-left: calc(-1 * (var(--spacing-xl) + 10px));
+    margin-right: calc(-1 * (var(--spacing-xl) + 10px));
+    padding-left: 12px;
+    padding-right: 12px;
+  }
   .drp__bubble {
     max-width: 88%;
   }
