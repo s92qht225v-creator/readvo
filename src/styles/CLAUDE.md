@@ -100,10 +100,8 @@ All styles live in `src/styles/reading.css` **EXCEPT**:
 - `.story__bottom-bar-inner` - Flex container for toggle buttons (Tarjima, Fokus, Pinyin)
 - `.story__play-fab` - Floating action button (56px blue circle, above bottom bar). Normal mode only: play/pause full-story audio.
 - `.story__focus` - Focus mode container (flex column, centered, `gap: 16px`)
+- `.story__focus-card` - **Swipeable line card** (white, `max-width: 560px`, `border-radius: 16px`, shadow). Same gesture model as `.vr-card`: `touch-action: pan-y` + `user-select: none`, swipe left/right (55px threshold, handled in JS) moves between lines. **Replaced the ‹ › arrow buttons** — `.story__focus-nav`, `-nav-btn` and `-play-btn` were deleted. Audio moved to the shared `.story__play-fab` (same fixed bottom-right placement as the Dialog tab), wired to the current line
 - `.story__focus-text` - Centered sentence text (`font-size: 1.5em`, `min-height: 35vh`, `justify-content: center`)
-- `.story__focus-nav` - Button row: prev, play, next (flex, centered, gap 16px)
-- `.story__focus-nav-btn` - Prev/next buttons (48px grey circle, no border, SVG chevrons)
-- `.story__focus-play-btn` - Inline play/pause button (44px blue circle, toggles ▶/⏸)
 - `.story__focus-counter` - Sentence counter label below nav ("9 / 30"). `font-size: 13px` (absolute px, deliberately NOT em, so A+/A- font control doesn't scale it)
 - `.story__word` - Pressable word span (cursor pointer, border-radius 2px)
 - `.story__word--active` - Blue background highlight for pressed word
