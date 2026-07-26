@@ -413,6 +413,38 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
     }
   }, [allSentences, displaySentenceId, playSentence]);
 
+  // Focus mode is a swipeable card deck (same gesture as the My Vocabulary
+  // review): swipe left → next line, right → previous. That replaced the ‹ ›
+  // arrows. `focusSwiped` suppresses the click that fires at the end of a
+  // swipe, so a swipe never also triggers tap-to-play.
+  const focusSwipeStart = useRef<{ x: number; y: number } | null>(null);
+  const focusSwiped = useRef(false);
+  const onFocusPointerDown = (e: React.PointerEvent) => {
+    focusSwipeStart.current = { x: e.clientX, y: e.clientY };
+    focusSwiped.current = false;
+  };
+  const onFocusPointerUp = (e: React.PointerEvent) => {
+    const s = focusSwipeStart.current;
+    if (!s) return;
+    const dx = e.clientX - s.x;
+    const dy = e.clientY - s.y;
+    focusSwipeStart.current = null;
+    if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) {
+      focusSwiped.current = true;
+      handleFocusNav(dx < 0 ? 'next' : 'prev');
+    }
+  };
+  const onFocusCardClick = () => {
+    if (focusSwiped.current) return;
+    if (activeSentence) handleSentenceClick(activeSentence.id);
+  };
+  // Arrow keys keep the deck navigable without the removed buttons.
+  const onFocusKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); handleFocusNav('next'); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); handleFocusNav('prev'); }
+    else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onFocusCardClick(); }
+  };
+
   const handlePlay = useCallback(() => {
     const audio = audioRef.current;
     if (!audio || !dialogue?.audio_url) return;
@@ -600,30 +632,30 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                 <div className={`dr-dialog-body ${audioActive ? 'dr-dialog-body--with-audio' : ''}`}>
                   {focusMode && activeSentence ? (
                     <div className="story__focus">
-                      <div className="story__text story__focus-text">
-                        <div className="story__focus-line">
-                          <span className="story__sentence story__sentence--active" onClick={() => handleSentenceClick(activeSentence.id)}>
-                            <RubyText text={activeSentence.text_original} pinyin={activeSentence.pinyin} showPinyin={showPinyin} />
-                          </span>
+                      {/* Swipeable card deck (same gesture as My Vocabulary):
+                          swipe left → next line, right → previous. Tap plays the
+                          line; the ‹ › arrows were replaced by the gesture and
+                          audio moved to the shared FAB. */}
+                      <div
+                        className="story__focus-card"
+                        onPointerDown={onFocusPointerDown}
+                        onPointerUp={onFocusPointerUp}
+                        onClick={onFocusCardClick}
+                        onKeyDown={onFocusKeyDown}
+                        role="button"
+                        tabIndex={0}
+                        aria-label={({ uz: 'Gapni tinglash — chapga/oʻngga suring', ru: 'Прослушать строку — свайп влево/вправо', en: 'Play line — swipe left/right' } as Record<string, string>)[language]}
+                      >
+                        <div className="story__text story__focus-text">
+                          <div className="story__focus-line">
+                            <span className="story__sentence story__sentence--active">
+                              <RubyText text={activeSentence.text_original} pinyin={activeSentence.pinyin} showPinyin={showPinyin} />
+                            </span>
+                          </div>
+                          {showTranslation && (
+                            <div className="story__focus-translation">{language === 'ru' ? activeSentence.text_translation_ru : language === 'en' ? (activeSentence.text_translation_en || activeSentence.text_translation) : activeSentence.text_translation}</div>
+                          )}
                         </div>
-                        {showTranslation && (
-                          <div className="story__focus-translation">{language === 'ru' ? activeSentence.text_translation_ru : language === 'en' ? (activeSentence.text_translation_en || activeSentence.text_translation) : activeSentence.text_translation}</div>
-                        )}
-                      </div>
-                      <div className="story__focus-nav">
-                        <button className="story__focus-nav-btn" onClick={() => handleFocusNav('prev')} disabled={allSentences[0]?.id === displaySentenceId} type="button">
-                          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                        </button>
-                        {activeSentence && (
-                          <button className="story__focus-play-btn" onClick={() => playSentence(activeSentence)} type="button">
-                            {sentenceAudio.isPlaying(activeSentence.id)
-                              ? <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
-                              : <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>}
-                          </button>
-                        )}
-                        <button className="story__focus-nav-btn" onClick={() => handleFocusNav('next')} disabled={allSentences[allSentences.length - 1]?.id === displaySentenceId} type="button">
-                          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                        </button>
                       </div>
                       <span className="story__focus-counter">{allSentences.findIndex(s => s.id === displaySentenceId) + 1} / {allSentences.length}</span>
                     </div>
@@ -704,6 +736,24 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                     })
                   )}
                 </div>
+
+                {/* Focus mode: same FAB, same placement as the Dialog tab, but it
+                    plays the CURRENT line (the inline play button between the old
+                    ‹ › arrows is gone). */}
+                {focusMode && activeSentence && (
+                  <button
+                    className="story__play-fab"
+                    onClick={() => playSentence(activeSentence)}
+                    type="button"
+                    aria-label={sentenceAudio.isPlaying(activeSentence.id)
+                      ? ({ uz: 'Toxtatish', ru: 'Пауза', en: 'Pause' } as Record<string, string>)[language]
+                      : ({ uz: 'Tinglash', ru: 'Слушать', en: 'Play' } as Record<string, string>)[language]}
+                  >
+                    {sentenceAudio.isPlaying(activeSentence.id)
+                      ? <svg className="story__play-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+                      : <svg className="story__play-fab-icon" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z" /></svg>}
+                  </button>
+                )}
 
                 {!focusMode && (dialogue.audio_url || ttsPlayable) && (
                   <button className={`story__play-fab ${isAudioLoading ? 'story__play-fab--loading' : ''}`} onClick={dialogue.audio_url ? handlePlay : handlePlayAll} type="button" aria-label={isAudioLoading ? ({ uz: 'Yuklanmoqda', ru: 'Загрузка', en: 'Loading' } as Record<string, string>)[language] : isPlaying ? ({ uz: 'Toxtatish', ru: 'Пауза', en: 'Pause' } as Record<string, string>)[language] : ({ uz: 'Tinglash', ru: 'Слушать', en: 'Play' } as Record<string, string>)[language]}>

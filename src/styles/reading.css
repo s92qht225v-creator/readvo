@@ -1952,6 +1952,29 @@ body {
   width: 100%;
 }
 
+/* The focus line sits in a swipeable card — same gesture model as the My
+   Vocabulary deck (.vr-card): swipe left/right to move between lines, which
+   replaced the ‹ › arrow buttons. `touch-action: pan-y` lets the page still
+   scroll vertically while horizontal drags are handled in JS; `user-select`
+   stops a swipe from selecting the Chinese text. */
+.story__focus-card {
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 20px 16px;
+  cursor: pointer;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.story__focus-card:focus-visible {
+  outline: 2px solid var(--color-accent, #dc2626);
+  outline-offset: 2px;
+}
+
 .story__focus-text {
   text-align: center;
   font-size: 1.5em;
@@ -1980,57 +2003,6 @@ body {
   flex-shrink: 0;
 }
 
-.story__focus-nav {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md, 16px);
-}
-
-.story__focus-nav-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  background: #f0f0f0;
-  color: #333;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.15s;
-}
-
-.story__focus-nav-btn:active:not(:disabled) {
-  background: #e0e0e0;
-}
-
-.story__focus-nav-btn:disabled {
-  opacity: 0.25;
-  cursor: default;
-}
-
-.story__focus-play-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: none;
-  background: var(--color-accent, #4a90e2);
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.15s;
-}
-
-.story__focus-play-btn:active {
-  background: #3a7bd5;
-}
-
-/* Absolute px, deliberately NOT em: the A+/A- control scales the reader root,
-   and an em here would scale this with it. The counter is chrome (a position
-   indicator), not content — it shouldn't grow with the Chinese. The nav buttons
-   are already immune for the same reason (fixed 48px). */
 .story__focus-counter {
   font-size: 13px;
   color: var(--color-text-secondary, #666);
