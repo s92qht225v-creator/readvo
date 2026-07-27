@@ -1,12 +1,12 @@
 /**
  * Tiny sound-effects helper for the flashcard ladder. Synthesizes short tones
- * with the Web Audio API — no audio files to host. Respects a persisted mute
- * flag. Call `unlockSfx()` on the first user gesture so iOS lets it play.
+ * with the Web Audio API — no audio files to host. There is no in-app mute:
+ * the device's own volume/silent switch is the control (a stored mute flag with
+ * no UI to clear it would have silenced users permanently). Call `unlockSfx()`
+ * on the first user gesture so iOS lets it play.
  */
 
 let ctx: AudioContext | null = null;
-let muted = false;
-try { muted = typeof localStorage !== 'undefined' && localStorage.getItem('blim-fc-muted') === '1'; } catch { /* ignore */ }
 
 function getCtx(): AudioContext | null {
   if (typeof window === 'undefined') return null;
@@ -20,12 +20,6 @@ function getCtx(): AudioContext | null {
 }
 
 export function unlockSfx() { getCtx(); }
-
-export function isMuted() { return muted; }
-export function setMuted(m: boolean) {
-  muted = m;
-  try { localStorage.setItem('blim-fc-muted', m ? '1' : '0'); } catch { /* ignore */ }
-}
 
 function tone(freq: number, start: number, dur: number, type: OscillatorType = 'sine', gain = 0.15) {
   const c = getCtx();
@@ -44,7 +38,6 @@ function tone(freq: number, start: number, dur: number, type: OscillatorType = '
 }
 
 export function playCorrect() {
-  if (muted) return;
   // Soft harp strum (C–E–G chord, slightly staggered).
   tone(523, 0, 0.5, 'sine', 0.1);
   tone(659, 0.03, 0.5, 'sine', 0.1);
@@ -52,7 +45,6 @@ export function playCorrect() {
 }
 
 export function playWrong() {
-  if (muted) return;
   // Triple soft thud — three quick low thumps.
   tone(150, 0, 0.1, 'sine', 0.18);
   tone(150, 0.12, 0.1, 'sine', 0.16);
@@ -60,7 +52,6 @@ export function playWrong() {
 }
 
 export function playComplete() {
-  if (muted) return;
   [523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.1, 0.24, 'triangle', 0.15));
 }
 

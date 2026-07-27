@@ -16,7 +16,7 @@ import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
 import { LadderExercise, STAGE_COUNT } from './flashcards/LadderExercise';
 import { Confetti } from './flashcards/Confetti';
-import { unlockSfx, isMuted, setMuted, playComplete } from '@/utils/sfx';
+import { unlockSfx, playComplete } from '@/utils/sfx';
 import { trackAll } from '@/utils/analytics';
 import '@/styles/arabic.css';
 
@@ -62,7 +62,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
   const [cardCount, setCardCount] = useState(0);
   const [attempt, setAttempt] = useState(0);   // bumps every answer → fresh exercise mount
   const [isPinyinVisible, setIsPinyinVisible] = useState(true);
-  const [muted, setMutedState] = useState(() => isMuted());
   const tokenRef = useRef<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const builtRef = useRef(false);
@@ -274,7 +273,6 @@ export const FlashcardDeck: React.FC<FlashcardDeckProps> = ({ deck, backHref, le
             <nav className="story__bottom-bar">
               <div className="story__bottom-bar-inner">
                 <button className={`reader__nav-toggle ${isPinyinVisible ? 'reader__nav-toggle--active' : ''}`} onClick={() => setIsPinyinVisible((p) => !p)} type="button">Pinyin</button>
-                <button className="reader__nav-toggle" onClick={() => { const m = !muted; setMuted(m); setMutedState(m); }} type="button" aria-label="Sound on/off">{muted ? '🔇' : '🔊'}</button>
               </div>
             </nav>
           </section>
