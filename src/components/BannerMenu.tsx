@@ -107,6 +107,9 @@ export function BannerMenu({ extraItems }: { extraItems?: (close: () => void) =>
             </Link>
           </div>
           <div className="home__menu-divider" />
+          <Link href="/chinese/dictionary" className="home__menu-item" onClick={() => setMenuOpen(false)}>
+            {({ uz: "Lug'at", ru: 'Словарь', en: 'Dictionary' } as Record<string, string>)[language]}
+          </Link>
           <Link href="/chinese/blog" className="home__menu-item" onClick={() => setMenuOpen(false)}>
             Blog
           </Link>

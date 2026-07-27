@@ -71,6 +71,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   entries.push(...localeEntries('/chinese/flashcards', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/chinese/karaoke', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/chinese/grammar', { changeFrequency: 'weekly', priority: 0.8 }));
+  // Dictionary: the SEARCH page is indexed immediately; individual word pages
+  // are phased in only once substantive (see the M5 spec) — bulk-publishing 11k
+  // thin pages would feed the crawled-not-indexed pile rather than fix it.
+  entries.push(...localeEntries('/chinese/dictionary', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/arabic/dialogues', { changeFrequency: 'weekly', priority: 0.9 }));
   entries.push(...localeEntries('/arabic/story', { changeFrequency: 'weekly', priority: 0.8 }));
   entries.push(...localeEntries('/arabic/flashcards', { changeFrequency: 'weekly', priority: 0.8 }));
