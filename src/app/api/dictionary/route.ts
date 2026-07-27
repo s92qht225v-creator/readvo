@@ -32,7 +32,11 @@ type Row = {
   zh: string;
   pinyin: string;
   level: number | null;
-  meaning: string;
+  /** All three glosses travel with the row so the client can display the
+   *  current UI language AND save a complete word to My Vocabulary. */
+  uz: string;
+  ru: string;
+  en: string;
   source: 'glossary' | 'hsk';
 };
 
@@ -40,6 +44,8 @@ type Lang = 'uz' | 'ru' | 'en';
 const pickLang = (v: string | null): Lang => (v === 'ru' || v === 'en' ? v : 'uz');
 const glossOf = (r: Record<string, unknown>, lang: Lang): string =>
   String((r[lang] as string) || (r.en as string) || (r.uz as string) || '').trim();
+/** Join a second sense onto an existing gloss without repeating it. */
+const merge = (a: string, b: string) => (!b || a.includes(b) ? a : a ? `${a}; ${b}` : b);
 
 export async function GET(req: NextRequest) {
   const raw = (req.nextUrl.searchParams.get('q') || '').trim();
@@ -74,38 +80,49 @@ export async function GET(req: NextRequest) {
     const byKey = new Map<string, Row>();
     for (const r of hsk.data ?? []) {
       const key = `${r.zh}|${r.py_norm}`;
-      const meaning = glossOf(r, lang);
       const prev = byKey.get(key);
-      // Same word, multiple senses → keep the lowest level, join distinct glosses.
+      // Same word + same pinyin, multiple senses → lowest level, joined glosses.
+      // (Different pinyin stays a separate row: 打 dǎ vs dá are distinct senses.)
       if (prev) {
         if (r.level != null && (prev.level == null || r.level < prev.level)) prev.level = r.level;
-        if (meaning && !prev.meaning.includes(meaning)) prev.meaning += `; ${meaning}`;
+        prev.uz = merge(prev.uz, String(r.uz || '').trim());
+        prev.ru = merge(prev.ru, String(r.ru || '').trim());
+        prev.en = merge(prev.en, String(r.en || '').trim());
       } else {
-        byKey.set(key, { zh: r.zh, pinyin: r.pinyin, level: r.level, meaning, source: 'hsk' });
+        byKey.set(key, {
+          zh: r.zh, pinyin: r.pinyin, level: r.level,
+          uz: String(r.uz || '').trim(), ru: String(r.ru || '').trim(), en: String(r.en || '').trim(),
+          source: 'hsk',
+        });
       }
     }
     for (const r of glos.data ?? []) {
       const key = `${r.zh}|${toneless(r.py)}`;
-      const meaning = glossOf(r, lang);
       const existing = byKey.get(key);
       byKey.set(key, {
         zh: r.zh,
         pinyin: r.py || existing?.pinyin || '',
         level: (r.hsk30_level as number | null) ?? existing?.level ?? null,
-        meaning: meaning || existing?.meaning || '',
+        // Human gloss wins per language; fall back to the machine one where the
+        // glossary has no translation for that language.
+        uz: String(r.uz || '').trim() || existing?.uz || '',
+        ru: String(r.ru || '').trim() || existing?.ru || '',
+        en: String(r.en || '').trim() || existing?.en || '',
         source: 'glossary',
       });
     }
 
     const qLower = safe.toLowerCase();
+    const display = (r: Row) => glossOf(r as unknown as Record<string, unknown>, lang);
     const rank = (r: Row): number => {
+      const meaning = display(r);
       const rtl = toneless(r.pinyin);
       if (r.zh === safe) return 0;
       if (rtl === tl) return 1;
       if (r.zh.startsWith(safe)) return 2;
       if (rtl.startsWith(tl)) return 3;
-      if (r.meaning.toLowerCase() === qLower) return 4;
-      if (r.meaning.toLowerCase().startsWith(qLower)) return 5;
+      if (meaning.toLowerCase() === qLower) return 4;
+      if (meaning.toLowerCase().startsWith(qLower)) return 5;
       return 6;
     };
     // Within the same match quality, surface the more common word first: lower
@@ -113,7 +130,7 @@ export async function GET(req: NextRequest) {
     // for 医 put 医保 (no level) above 医生 (HSK 1, "doctor").
     const lvlRank = (l: number | null) => (l == null ? 99 : l);
     const results = [...byKey.values()]
-      .filter((r) => r.meaning)
+      .filter((r) => display(r))
       .sort((a, b) =>
         rank(a) - rank(b) ||
         lvlRank(a.level) - lvlRank(b.level) ||

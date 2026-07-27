@@ -1,55 +1,53 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useRouter } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
+import { useAuth } from '../hooks/useAuth';
+import { useSavedVocab } from '../hooks/useSavedVocab';
 import { PageFooter } from './PageFooter';
 
 export interface DictEntry {
   zh: string;
   pinyin: string;
   level: number | null;
-  meaning: string;
+  uz: string;
+  ru: string;
+  en: string;
 }
 
-const T = (l: string, uz: string, ru: string, en: string) =>
-  (l === 'ru' ? ru : l === 'en' ? en : uz);
+interface Example {
+  zh: string; pinyin: string; uz: string; ru: string; en: string;
+  slug: string; level: string; title: string;
+}
 
-/** Level chip text. 7 is the 七–九级 band, so it renders as a range.
- *  `null` = the word isn't in the HSK 3.0 list → no chip at all (see the
- *  dictionary spec: an absent chip claims nothing, "beyond HSK" would be a
- *  false difficulty claim for everyday words like 点菜). */
+const T = (l: string, uz: string, ru: string, en: string) => (l === 'ru' ? ru : l === 'en' ? en : uz);
+const glossOf = (e: { uz: string; ru: string; en: string }, l: string) =>
+  (l === 'ru' ? e.ru : l === 'en' ? e.en : e.uz) || e.en || e.uz;
+
+/** 7 is the 七–九级 band. `null` → no chip at all: the word isn't in HSK 3.0,
+ *  and "beyond HSK" would be a false difficulty claim for everyday words. */
 const levelLabel = (l: number | null) => (l == null ? null : l >= 7 ? 'HSK 7–9' : `HSK ${l}`);
 const levelBand = (l: number) => (l <= 2 ? 'a' : l <= 4 ? 'b' : l <= 6 ? 'c' : 'd');
 
-function Row({ e }: { e: DictEntry }) {
-  const label = levelLabel(e.level);
-  return (
-    <li className="dict__row">
-      <div className="dict__head">
-        <span className="dict__zh" lang="zh-Hans">{e.zh}</span>
-        <span className="dict__py">{e.pinyin}</span>
-        {label && <span className={`dict__badge dict__badge--${levelBand(e.level as number)}`}>{label}</span>}
-      </div>
-      <div className="dict__meaning">{e.meaning}</div>
-    </li>
-  );
-}
-
 /**
- * Public dictionary search (M5). Searches 汉字, toneless pinyin ("kongtiao")
- * or the learner's own language against `/api/dictionary`.
- *
- * `initial` is a server-rendered starter list (common HSK 1 words) so the page
- * has real indexable content before anyone types — the search page is meant to
- * be indexed immediately, and an empty search box is exactly the thin/empty
- * shell that got the catalogs stuck in "crawled – not indexed".
+ * Public dictionary search (M5). Rows expand in place — a dictionary is used in
+ * bursts (look up three words in a row), so a page navigation per word would be
+ * friction. Word pages come later, for the subset substantive enough to index.
  */
 export function DictionarySearch({ initial }: { initial: DictEntry[] }) {
   const [language] = useLanguage();
+  const { user } = useAuth();
+  const router = useRouter();
+  const { isSaved, add } = useSavedVocab();
+
   const [q, setQ] = useState('');
   const [results, setResults] = useState<DictEntry[]>([]);
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
+  const [open, setOpen] = useState<string | null>(null);
+  const [examples, setExamples] = useState<Record<string, Example[] | 'loading'>>({});
+  const [savedTick, setSavedTick] = useState(0);   // re-render after an optimistic save
   const abortRef = useRef<AbortController | null>(null);
 
   const run = useCallback(async (query: string, lang: string) => {
@@ -71,22 +69,42 @@ export function DictionarySearch({ initial }: { initial: DictEntry[] }) {
     }
   }, []);
 
-  // Debounce typing; re-run when the UI language changes so glosses follow it.
   useEffect(() => {
     const id = setTimeout(() => { void run(q, language); }, 250);
     return () => clearTimeout(id);
   }, [q, language, run]);
-
   useEffect(() => () => abortRef.current?.abort(), []);
+  useEffect(() => { setOpen(null); }, [q]);
+
+  const toggle = useCallback(async (e: DictEntry) => {
+    const key = `${e.zh}|${e.pinyin}`;
+    if (open === key) { setOpen(null); return; }
+    setOpen(key);
+    if (examples[key]) return;                       // already fetched
+    setExamples((m) => ({ ...m, [key]: 'loading' }));
+    try {
+      const res = await fetch(`/api/dictionary/examples?zh=${encodeURIComponent(e.zh)}`);
+      const data = await res.json();
+      setExamples((m) => ({ ...m, [key]: data.examples ?? [] }));
+    } catch {
+      setExamples((m) => ({ ...m, [key]: [] }));
+    }
+  }, [open, examples]);
+
+  const save = useCallback(async (ev: React.MouseEvent, e: DictEntry) => {
+    ev.stopPropagation();
+    if (!user) { router.push('/login'); return; }
+    if (isSaved(e.zh, e.pinyin)) return;
+    await add({ zh: e.zh, py: e.pinyin, uz: e.uz, ru: e.ru, en: e.en, hsk: e.level });
+    setSavedTick((t) => t + 1);
+  }, [user, router, isSaved, add]);
 
   const showStarter = !q.trim() && !searched;
   const list = showStarter ? initial : results;
 
   return (
     <main className="dict">
-      <h1 className="dict__title">
-        {T(language, "Xitoycha lug'at", 'Китайский словарь', 'Chinese Dictionary')}
-      </h1>
+      <h1 className="dict__title">{T(language, "Xitoycha lug'at", 'Китайский словарь', 'Chinese Dictionary')}</h1>
       <p className="dict__intro">
         {T(language,
           "Iyeroglif, pinyin (belgilarsiz — masalan “kongtiao”) yoki o‘zbekcha so‘z bo‘yicha qidiring. HSK 3.0 darajasi bilan 11 000 dan ortiq so‘z.",
@@ -106,22 +124,72 @@ export function DictionarySearch({ initial }: { initial: DictEntry[] }) {
       />
 
       {showStarter && initial.length > 0 && (
-        <h2 className="dict__subhead">
-          {T(language, 'Ommabop so‘zlar', 'Частые слова', 'Common words')}
-        </h2>
+        <h2 className="dict__subhead">{T(language, 'Ommabop so‘zlar', 'Частые слова', 'Common words')}</h2>
       )}
-
       {loading && <div className="dict__note">{T(language, 'Qidirilmoqda…', 'Поиск…', 'Searching…')}</div>}
-
       {!loading && searched && results.length === 0 && (
-        <div className="dict__note">
-          {T(language, 'Hech narsa topilmadi.', 'Ничего не найдено.', 'No matches found.')}
-        </div>
+        <div className="dict__note">{T(language, 'Hech narsa topilmadi.', 'Ничего не найдено.', 'No matches found.')}</div>
       )}
 
       {list.length > 0 && (
         <ul className="dict__list">
-          {list.map((e) => <Row key={`${e.zh}|${e.pinyin}`} e={e} />)}
+          {list.map((e) => {
+            const key = `${e.zh}|${e.pinyin}`;
+            const label = levelLabel(e.level);
+            const isOpen = open === key;
+            const ex = examples[key];
+            const saved = isSaved(e.zh, e.pinyin);
+            return (
+              <li key={key + savedTick} className={`dict__row${isOpen ? ' dict__row--open' : ''}`}>
+                <div
+                  className="dict__click"
+                  onClick={() => void toggle(e)}
+                  onKeyDown={(k) => { if (k.key === 'Enter' || k.key === ' ') { k.preventDefault(); void toggle(e); } }}
+                  role="button"
+                  tabIndex={0}
+                  aria-expanded={isOpen}
+                >
+                  <div className="dict__head">
+                    <span className="dict__zh" lang="zh-Hans">{e.zh}</span>
+                    <span className="dict__py">{e.pinyin}</span>
+                    {label && <span className={`dict__badge dict__badge--${levelBand(e.level as number)}`}>{label}</span>}
+                  </div>
+                  <div className="dict__meaning">{glossOf(e, language)}</div>
+                </div>
+
+                {isOpen && (
+                  <div className="dict__detail">
+                    <button
+                      type="button"
+                      className={`dict__save${saved ? ' dict__save--done' : ''}`}
+                      onClick={(ev) => void save(ev, e)}
+                      aria-pressed={saved}
+                    >
+                      {saved
+                        ? `✓ ${T(language, "Lug'atimda", 'В словаре', 'In my vocabulary')}`
+                        : `+ ${T(language, "Lug'atimga qo'shish", 'Добавить в словарь', 'Add to my vocabulary')}`}
+                    </button>
+
+                    {ex === 'loading' && <div className="dict__exnote">{T(language, 'Yuklanmoqda…', 'Загрузка…', 'Loading…')}</div>}
+                    {Array.isArray(ex) && ex.length === 0 && (
+                      <div className="dict__exnote">{T(language, 'Dialoglarda misol topilmadi.', 'Примеров в диалогах нет.', 'No example from the dialogues yet.')}</div>
+                    )}
+                    {Array.isArray(ex) && ex.length > 0 && (
+                      <div className="dict__ex">
+                        <div className="dict__exhead">{T(language, 'Dialoglardan misollar', 'Примеры из диалогов', 'Examples from the dialogues')}</div>
+                        {ex.map((s, i) => (
+                          <a key={i} className="dict__exitem" href={`/${language}/chinese/dialogues/${s.level}/${s.slug}`}>
+                            <span className="dict__exzh" lang="zh-Hans">{s.zh}</span>
+                            <span className="dict__extr">{glossOf(s, language)}</span>
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
 

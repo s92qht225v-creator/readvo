@@ -44,7 +44,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
  *  crawlers (and something useful to browse) before anyone types. Glossary
  *  glosses override the machine ones, same precedence as search. */
 async function starterWords(locale: string): Promise<DictEntry[]> {
-  const lang = locale === 'ru' ? 'ru' : locale === 'en' ? 'en' : 'uz';
   try {
     const sb = getSupabaseAdmin();
     const { data } = await sb
@@ -59,17 +58,19 @@ async function starterWords(locale: string): Promise<DictEntry[]> {
       .select('zh,uz,ru,en')
       .in('zh', rows.map((r) => r.zh));
     const override = new Map((gl ?? []).map((g) => [g.zh, g]));
+    // Carry all three glosses (same shape as search) so the client can switch UI
+    // language and save a complete word to My Vocabulary.
     return rows.map((r) => {
       const g = override.get(r.zh);
-      const pick = (o: Record<string, unknown> | undefined) =>
-        o ? String((o[lang] as string) || (o.en as string) || (o.uz as string) || '').trim() : '';
+      const pick = (k: 'uz' | 'ru' | 'en') =>
+        String((g?.[k] as string) || (r[k] as string) || '').trim();
       return {
         zh: r.zh,
         pinyin: r.pinyin,
         level: r.level,
-        meaning: pick(g) || pick(r),
+        uz: pick('uz'), ru: pick('ru'), en: pick('en'),
       };
-    }).filter((e) => e.meaning);
+    }).filter((e) => e.uz || e.ru || e.en);
   } catch {
     return [];   // dictionary still works — search is client-side
   }
