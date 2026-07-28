@@ -13112,4 +13112,5 @@ body {
 .dict__exhead { font-size: 12px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: .8px; margin-bottom: 6px; }
 .dict__exitem { display: block; padding: 8px 10px; border-left: 3px solid #dc2626; background: #fafafa; margin-bottom: 6px; text-decoration: none; }
 .dict__exzh { display: block; font-size: 17px; color: #1a1a2e; line-height: 1.5; }
+.dict__expy { display: block; font-size: 13px; color: var(--color-accent); font-style: italic; margin-top: 2px; }
 .dict__extr { display: block; font-size: 13px; color: #777; margin-top: 2px; }

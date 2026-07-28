@@ -16,9 +16,11 @@ export interface DictEntry {
   en: string;
 }
 
+/** Written for the headword and capped at its HSK level — see
+ *  `scripts/gen-word-examples.py`. Not mined from the dialogues: those gave
+ *  level-6 sentences for level-1 words. */
 interface Example {
-  zh: string; pinyin: string; uz: string; ru: string; en: string;
-  slug: string; level: string; title: string;
+  ex_zh: string; ex_py: string; uz: string; ru: string; en: string; level: number;
 }
 
 const T = (l: string, uz: string, ru: string, en: string) => (l === 'ru' ? ru : l === 'en' ? en : uz);
@@ -83,7 +85,8 @@ export function DictionarySearch({ initial }: { initial: DictEntry[] }) {
     if (examples[key]) return;                       // already fetched
     setExamples((m) => ({ ...m, [key]: 'loading' }));
     try {
-      const res = await fetch(`/api/dictionary/examples?zh=${encodeURIComponent(e.zh)}`);
+      const res = await fetch(
+        `/api/dictionary/examples?zh=${encodeURIComponent(e.zh)}&py=${encodeURIComponent(e.pinyin)}`);
       const data = await res.json();
       setExamples((m) => ({ ...m, [key]: data.examples ?? [] }));
     } catch {
@@ -172,16 +175,17 @@ export function DictionarySearch({ initial }: { initial: DictEntry[] }) {
 
                     {ex === 'loading' && <div className="dict__exnote">{T(language, 'Yuklanmoqda…', 'Загрузка…', 'Loading…')}</div>}
                     {Array.isArray(ex) && ex.length === 0 && (
-                      <div className="dict__exnote">{T(language, 'Dialoglarda misol topilmadi.', 'Примеров в диалогах нет.', 'No example from the dialogues yet.')}</div>
+                      <div className="dict__exnote">{T(language, 'Bu so‘z uchun misol hali yo‘q.', 'Примеров для этого слова пока нет.', 'No examples for this word yet.')}</div>
                     )}
                     {Array.isArray(ex) && ex.length > 0 && (
                       <div className="dict__ex">
-                        <div className="dict__exhead">{T(language, 'Dialoglardan misollar', 'Примеры из диалогов', 'Examples from the dialogues')}</div>
+                        <div className="dict__exhead">{T(language, 'Misollar', 'Примеры', 'Examples')}</div>
                         {ex.map((s, i) => (
-                          <a key={i} className="dict__exitem" href={`/${language}/chinese/dialogues/${s.level}/${s.slug}`}>
-                            <span className="dict__exzh" lang="zh-Hans">{s.zh}</span>
+                          <div key={i} className="dict__exitem">
+                            <span className="dict__exzh" lang="zh-Hans">{s.ex_zh}</span>
+                            {s.ex_py && <span className="dict__expy">{s.ex_py}</span>}
                             <span className="dict__extr">{glossOf(s, language)}</span>
-                          </a>
+                          </div>
                         ))}
                       </div>
                     )}
