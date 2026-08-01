@@ -1,0 +1,176 @@
+{
+  "id": "hsk2-dialogue37",
+  "slug": "how-much-are-the-strawberries",
+  "title": "草莓怎么卖？",
+  "pinyin": "Cǎoméi zěnme mài?",
+  "titleTranslation": "Qulupnay qanchadan?",
+  "titleTranslation_ru": "Почём клубника?",
+  "titleTranslation_en": "How much are the strawberries?",
+  "description_uz": "«Sal arzonroq bo'lmaydimi?» — bozorda meva sotib olish haqidagi suhbat. Bu dialog narxni so'rash, savdolashish, tortib berishni so'rash va qaytimni hisoblashni mashq qiladi.",
+  "description_ru": "«А подешевле можно?» — разговор о покупке фруктов на рынке. Этот диалог отрабатывает, как спросить цену, поторговаться, попросить взвесить и посчитать сдачу.",
+  "description_en": "«Could you make it a bit cheaper?» — buying fruit at the market. This dialogue practises asking a price, haggling, asking to be weighed out an amount, and working out the change.",
+  "category_uz": "Bozor va xarid",
+  "category_ru": "Рынок и покупки",
+  "category_en": "Market & Shopping",
+  "level": 2,
+  "dictationKeyboard": true,
+  "tag": "xaridlar",
+  "dateAdded": "2026-07-28",
+  "vocab": [
+    "草莓",
+    "橘子",
+    "斤",
+    "卖",
+    "便宜",
+    "新鲜",
+    "称",
+    "一共",
+    { "zh": "找", "py": "zhǎo", "uz": "qaytim bermoq", "ru": "давать сдачу", "en": "to give change" },
+    "慢走"
+  ],
+  "sections": [
+    {
+      "id": "d37-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d37-s1",
+          "text_original": "你好，草莓怎么卖？",
+          "pinyin": "Nǐ hǎo, cǎoméi zěnme mài?",
+          "text_translation": "Salom, qulupnay qanchadan?",
+          "text_translation_ru": "Здравствуйте, почём клубника?",
+          "text_translation_en": "Hello, how much are the strawberries?",
+          "speaker": "A"
+        },
+        {
+          "id": "d37-s2",
+          "text_original": "草莓八块钱一斤。",
+          "pinyin": "Cǎoméi bā kuài qián yì jīn.",
+          "text_translation": "Qulupnayning yarim kilosi sakkiz yuan.",
+          "text_translation_ru": "Клубника — восемь юаней за пол кило.",
+          "text_translation_en": "Strawberries are eight yuan for half a kilo.",
+          "speaker": "B"
+        },
+        {
+          "id": "d37-s3",
+          "text_original": "能便宜点吗？",
+          "pinyin": "Néng piányi diǎn ma?",
+          "text_translation": "Sal arzonroq bo'lmaydimi?",
+          "text_translation_ru": "А подешевле можно?",
+          "text_translation_en": "Could you make it a bit cheaper?",
+          "speaker": "A"
+        },
+        {
+          "id": "d37-s4",
+          "text_original": "这个很新鲜，不能再便宜了。",
+          "pinyin": "Zhège hěn xīnxiān, bù néng zài piányi le.",
+          "text_translation": "Bu juda yangi, bundan arzon bo'lmaydi.",
+          "text_translation_ru": "Она очень свежая, дешевле не могу.",
+          "text_translation_en": "These are very fresh, I can't go any lower.",
+          "speaker": "B"
+        },
+        {
+          "id": "d37-s5",
+          "text_original": "那给我称两斤吧。",
+          "pinyin": "Nà gěi wǒ chēng liǎng jīn ba.",
+          "text_translation": "Unda menga bir kilo tortib bering.",
+          "text_translation_ru": "Тогда взвесьте мне килограмм.",
+          "text_translation_en": "Then weigh me out a kilo.",
+          "speaker": "A"
+        },
+        {
+          "id": "d37-s6",
+          "text_original": "好的，还要别的吗？",
+          "pinyin": "Hǎo de, hái yào biéde ma?",
+          "text_translation": "Xo'p, yana biror narsa kerakmi?",
+          "text_translation_ru": "Хорошо, что-нибудь ещё?",
+          "text_translation_en": "Sure, anything else?",
+          "speaker": "B"
+        },
+        {
+          "id": "d37-s7",
+          "text_original": "橘子多少钱一斤？",
+          "pinyin": "Júzi duōshao qián yì jīn?",
+          "text_translation": "Mandarinning yarim kilosi qancha turadi?",
+          "text_translation_ru": "Сколько стоят мандарины за пол кило?",
+          "text_translation_en": "How much are the tangerines for half a kilo?",
+          "speaker": "A"
+        },
+        {
+          "id": "d37-s8",
+          "text_original": "橘子四块钱一斤。",
+          "pinyin": "Júzi sì kuài qián yì jīn.",
+          "text_translation": "Mandarinning yarim kilosi to'rt yuan.",
+          "text_translation_ru": "Мандарины — четыре юаня за пол кило.",
+          "text_translation_en": "Tangerines are four yuan for half a kilo.",
+          "speaker": "B"
+        },
+        {
+          "id": "d37-s9",
+          "text_original": "那来一斤橘子。",
+          "pinyin": "Nà lái yì jīn júzi.",
+          "text_translation": "Unda yarim kilo mandarin bering.",
+          "text_translation_ru": "Тогда дайте пол кило мандаринов.",
+          "text_translation_en": "Then give me half a kilo of tangerines.",
+          "speaker": "A"
+        },
+        {
+          "id": "d37-s10",
+          "text_original": "一共多少钱？",
+          "pinyin": "Yígòng duōshao qián?",
+          "text_translation": "Hammasi bo'lib qancha?",
+          "text_translation_ru": "Сколько всего?",
+          "text_translation_en": "How much is it altogether?",
+          "speaker": "A"
+        },
+        {
+          "id": "d37-s11",
+          "text_original": "草莓两斤十六块，橘子四块，一共二十块。",
+          "pinyin": "Cǎoméi liǎng jīn shíliù kuài, júzi sì kuài, yígòng èrshí kuài.",
+          "text_translation": "Bir kilo qulupnay o'n olti yuan, mandarin to'rt yuan, hammasi bo'lib yigirma yuan.",
+          "text_translation_ru": "Килограмм клубники — шестнадцать юаней, мандарины — четыре, всего двадцать юаней.",
+          "text_translation_en": "A kilo of strawberries is sixteen yuan, the tangerines four, twenty yuan altogether.",
+          "speaker": "B"
+        },
+        {
+          "id": "d37-s12",
+          "text_original": "给你五十块。",
+          "pinyin": "Gěi nǐ wǔshí kuài.",
+          "text_translation": "Mana sizga ellik yuan.",
+          "text_translation_ru": "Вот вам пятьдесят юаней.",
+          "text_translation_en": "Here's fifty yuan.",
+          "speaker": "A"
+        },
+        {
+          "id": "d37-s13",
+          "text_original": "找你三十块。",
+          "pinyin": "Zhǎo nǐ sānshí kuài.",
+          "text_translation": "Qaytimingiz o'ttiz yuan.",
+          "text_translation_ru": "Ваша сдача — тридцать юаней.",
+          "text_translation_en": "Thirty yuan change.",
+          "speaker": "B"
+        },
+        {
+          "id": "d37-s14",
+          "text_original": "谢谢！",
+          "pinyin": "Xièxie!",
+          "text_translation": "Rahmat!",
+          "text_translation_ru": "Спасибо!",
+          "text_translation_en": "Thank you!",
+          "speaker": "A"
+        },
+        {
+          "id": "d37-s15",
+          "text_original": "不客气，慢走！",
+          "pinyin": "Bú kèqi, màn zǒu!",
+          "text_translation": "Arzimaydi, yaxshi boring!",
+          "text_translation_ru": "Не за что, всего доброго!",
+          "text_translation_en": "You're welcome, take care!",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
