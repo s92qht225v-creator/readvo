@@ -26,7 +26,13 @@ function segWords(): Set<string> {
 const MAX_WORD = 4;
 
 type Word = { i?: [number, number]; p?: string };
-type Sentence = { text_original: string; pinyin?: string; words?: Word[]; charLvls?: (number | null)[] };
+type Sentence = {
+  text_original: string; pinyin?: string; words?: Word[];
+  charLvls?: (number | null)[];
+  /** [start, end) char ranges of each word — the SAME segmentation that drives
+   *  progressive pinyin, reused so long-press lookup selects 白天, not 白. */
+  wordSpans?: [number, number][];
+};
 type Dialogue = { sections?: { sentences?: Sentence[] }[] };
 
 const isHan = (c: string) => /[一-鿿]/.test(c);
@@ -80,6 +86,7 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
   for (const s of sentences) {
     const text = [...s.text_original];
     const lvls: (number | null)[] = new Array(text.length).fill(undefined) as (number | null)[];
+    const spans: [number, number][] = [];
 
     if (s.words?.length) {
       for (const w of s.words) {
@@ -87,6 +94,7 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
         if (typeof a !== 'number' || typeof b !== 'number') continue;
         const lvl = wordLevel(text.slice(a, b).join(''), w.p);
         for (let k = a; k < b; k++) lvls[k] = lvl;
+        spans.push([a, b]);
       }
     } else {
       let i = 0;
@@ -103,10 +111,12 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
           }
         }
         if (!hit) { lvls[i] = wordLevel(text[i]); hit = 1; }
+        spans.push([i, i + hit]);
         i += hit;
       }
     }
     s.charLvls = lvls;
+    s.wordSpans = spans.sort((a, b) => a[0] - b[0]);
   }
   return dialogue;
 }

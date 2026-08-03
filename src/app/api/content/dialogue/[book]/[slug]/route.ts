@@ -3,6 +3,7 @@ import { getUserIdFromJWT } from '@/lib/jwt';
 import { resolveEntitlement } from '@/lib/entitlement';
 import { loadDialogue, resolveDialogueVocab } from '@/services';
 import { attachWordLevels } from '@/lib/hskWordLevels';
+import { attachGlosses } from '@/lib/dialogueGlosses';
 
 const BOOKS = new Set(['hsk1', 'hsk2', 'hsk3', 'hsk4', 'hsk5', 'hsk6']);
 
@@ -36,6 +37,7 @@ export async function GET(
     return NextResponse.json({ error: 'not_found' }, { status: 404 });
   }
   const dialogue = await resolveDialogueVocab(raw);
-  await attachWordLevels(dialogue);
+  await attachWordLevels(dialogue);   // must run first — attachGlosses reads its wordSpans
+  await attachGlosses(dialogue);
   return NextResponse.json({ dialogue }, { headers: { 'Cache-Control': 'no-store, private' } });
 }
