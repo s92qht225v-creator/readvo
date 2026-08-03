@@ -427,6 +427,20 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   // Press and hold a character → the panel above the dialogue shows that WORD's
   // pinyin + meaning. Deliberately a long press, not a tap: tap already plays
   // the line, and that behaviour predates this feature.
+  // The tab bar is itself sticky at top:0, so the lookup panel has to stick just
+  // BELOW it. Measured rather than hardcoded — the bar's height moves with the
+  // A+/A- font control and with longer tab labels in RU/EN.
+  const tabsRef = useRef<HTMLDivElement | null>(null);
+  const [tabsH, setTabsH] = useState(46);
+  useEffect(() => {
+    const el = tabsRef.current;
+    if (!el || typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(() => setTabsH(el.offsetHeight));
+    ro.observe(el);
+    setTabsH(el.offsetHeight);
+    return () => ro.disconnect();
+  }, [status]);
+
   const pressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pressOrigin = useRef<{ x: number; y: number } | null>(null);
   // Set when a long press fires, so the click that follows the release doesn't
@@ -461,9 +475,12 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
     pressTimer.current = setTimeout(() => openLookup(s, idx), 450);
   }, [openLookup]);
 
+  // Release ends the lookup — it's a peek, not a dialog. Holding shows the
+  // meaning, letting go puts it away, so there's nothing to dismiss afterwards.
   const cancelPress = useCallback(() => {
     if (pressTimer.current) { clearTimeout(pressTimer.current); pressTimer.current = null; }
     pressOrigin.current = null;
+    setLookup(null);
   }, []);
 
   // Scrolling must never trigger a lookup: any real finger movement cancels the
@@ -676,7 +693,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
         {status === 'loaded' && dialogue && (
           <>
             {/* ── Top tab bar ── */}
-            <div className="dr-tabs">
+            <div className="dr-tabs" ref={tabsRef}>
               <div className="dr-tabs__inner">
                 {TABS.map(t => (
                   <button
@@ -738,7 +755,11 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                     {/* Word-lookup panel. Always mounted, empty until you press a
                         word — mounting it on demand would push the dialogue down
                         and move the text out from under your finger. */}
-                    <div className={`dr-wordpanel${lookup ? ' dr-wordpanel--on' : ''}`} aria-live="polite">
+                    <div
+                      className={`dr-wordpanel${lookup ? ' dr-wordpanel--on' : ''}`}
+                      style={{ top: tabsH }}
+                      aria-live="polite"
+                    >
                       {lookup && (
                         <>
                           <span className="dr-wordpanel__zh" lang="zh-Hans">{lookup.zh}</span>
@@ -750,12 +771,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                           {lookup.gloss.hsk != null && (
                             <span className="dr-wordpanel__hsk">HSK {lookup.gloss.hsk >= 7 ? '7–9' : lookup.gloss.hsk}</span>
                           )}
-                          <button
-                            type="button"
-                            className="dr-wordpanel__close"
-                            onClick={() => setLookup(null)}
-                            aria-label={({ uz: 'Yopish', ru: 'Закрыть', en: 'Close' } as Record<string, string>)[language]}
-                          >×</button>
                         </>
                       )}
                     </div>
@@ -807,6 +822,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                                             onPointerMove={onCharPointerMove}
                                             onPointerUp={cancelPress}
                                             onPointerCancel={cancelPress}
+                                            onPointerLeave={cancelPress}
                                             onContextMenu={(e) => e.preventDefault()}
                                             onClick={(e) => {
                                               e.stopPropagation();

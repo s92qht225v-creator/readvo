@@ -1424,27 +1424,37 @@ body {
   border-radius: 3px;
 }
 
-/* Sticky, NOT fixed: it rides under the tab bar and scrolls with the reader.
-   min-height is reserved while empty so the first press doesn't push the
-   dialogue down and move the text out from under the reader's finger. */
+/* Sticky just BELOW the tab bar (`top` is set inline from the bar's measured
+   height — it moves with the A+/A- control). z-index sits under .dr-tabs (40)
+   so it slides beneath the bar rather than over it.
+
+   The row is ALWAYS in flow at a fixed height, invisible until a word is
+   pressed. A sticky element still occupies space, so growing it on press would
+   shove the dialogue down ~34px while the finger is resting on a character —
+   the text would slide out from under the reader mid-press. Reserving the space
+   permanently costs one blank row and makes the press perfectly still. */
 .dr-wordpanel {
   position: sticky;
-  top: 0;
-  z-index: 40;
+  z-index: 39;
   display: flex;
   align-items: baseline;
   gap: 8px;
-  min-height: 34px;
-  padding: 0 4px;
+  height: 34px;
+  padding: 0 10px;
   overflow: hidden;
+  /* Transparent border in the resting state, coloured on press: if the border
+     only existed in the --on state it would add 1px and nudge the dialogue. */
+  border: 1px solid transparent;
+  border-top: none;
+  box-sizing: border-box;
 }
 
+/* Only the skin changes on press — never the box. */
 .dr-wordpanel--on {
   background: #fff;
-  border-bottom: 1px solid #eee;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-color: #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border-radius: 0 0 6px 6px;
-  padding: 6px 10px;
 }
 
 .dr-wordpanel__zh {
@@ -1477,18 +1487,6 @@ body {
   font-size: 0.7em;
   font-weight: 600;
   color: #dc2626;
-}
-
-.dr-wordpanel__close {
-  flex-shrink: 0;
-  width: 26px;
-  height: 26px;
-  border: none;
-  background: transparent;
-  color: #999;
-  font-size: 18px;
-  line-height: 1;
-  cursor: pointer;
 }
 
 .dr-char-py {
