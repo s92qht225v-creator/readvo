@@ -48,19 +48,6 @@ interface Sentence {
   end?: number;
   /** Per-character HSK 3.0 level (server-attached). null = off-list. */
   charLvls?: (number | null)[];
-  /** [start, end) char ranges per word, from the same server-side segmentation
-   *  as charLvls. Drives long-press lookup so pressing 白 selects 白天. */
-  wordSpans?: [number, number][];
-}
-
-/** Bundled word glosses for long-press lookup — see lib/dialogueGlosses.ts.
- *  Shipped with the dialogue so a press costs no network. */
-interface Gloss {
-  py: string;
-  uz: string;
-  ru: string;
-  en: string;
-  hsk: number | null;
 }
 
 interface VocabEntry {
@@ -101,7 +88,6 @@ interface DialogueData {
   vocab?: VocabEntry[];
   phrases?: PhraseEntry[];
   timeOfDay?: TimeOfDayEntry[];
-  glosses?: Record<string, Gloss>;
 }
 
 export interface DialogueMeta {
@@ -372,11 +358,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
   // re-shows it for that line (each aid's own toggle gates whether it renders).
   // Drives BOTH the translation and pinyin per-line reveal. Uses React's "adjust
   // state during render" pattern so it never lags a frame.
-  // Long-press word lookup. Declared up here (not beside its handlers below)
-  // because toggleFocus and the tab buttons clear it, and those are defined
-  // first. `sid` + span let the pressed word be highlighted in place.
-  const [lookup, setLookup] = useState<{ zh: string; gloss: Gloss; sid: string; a: number; b: number } | null>(null);
-
   const [revealedId, setRevealedId] = useState<string | null>(null);
   const [prevDisplayId, setPrevDisplayId] = useState<string | null>(displaySentenceId);
   if (displaySentenceId !== prevDisplayId) {
@@ -413,7 +394,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
       sentenceAudio.stop();
     }
     setFocusMode(v => !v);
-    setLookup(null);   // the lookup belongs to the line you pressed in Dialog view
   }, [focusMode, isPlaying, activeSentenceId, allSentences, sentenceAudio, playSentence]);
 
   const handleSentenceClick = useCallback((id: string) => {
@@ -422,76 +402,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
     const sentence = allSentences.find(s => s.id === id);
     playSentence(sentence);
   }, [focusMode, allSentences, playSentence]);
-
-  // ── Long-press word lookup ────────────────────────────────────────────────
-  // Press and hold a character → the panel above the dialogue shows that WORD's
-  // pinyin + meaning. Deliberately a long press, not a tap: tap already plays
-  // the line, and that behaviour predates this feature.
-  // The tab bar is itself sticky at top:0, so the lookup panel has to stick just
-  // BELOW it. Measured rather than hardcoded — the bar's height moves with the
-  // A+/A- font control and with longer tab labels in RU/EN.
-  const tabsRef = useRef<HTMLDivElement | null>(null);
-  const [tabsH, setTabsH] = useState(46);
-  useEffect(() => {
-    const el = tabsRef.current;
-    if (!el || typeof ResizeObserver === 'undefined') return;
-    const ro = new ResizeObserver(() => setTabsH(el.offsetHeight));
-    ro.observe(el);
-    setTabsH(el.offsetHeight);
-    return () => ro.disconnect();
-  }, [status]);
-
-  const pressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const pressOrigin = useRef<{ x: number; y: number } | null>(null);
-  // Set when a long press fires, so the click that follows the release doesn't
-  // also play the line — pressing a word must not start audio.
-  const pressFired = useRef(false);
-
-  const glosses = dialogue?.glosses;
-
-  const openLookup = useCallback((s: Sentence, idx: number) => {
-    const span = (s.wordSpans ?? []).find(([a, b]) => idx >= a && idx < b);
-    if (!span) return;
-    const word = [...s.text_original].slice(span[0], span[1]).join('');
-    if (!word) return;
-    // Longest-first fallback: 晚上好 has no entry of its own but 晚上 does, so the
-    // panel shows something useful instead of going blank.
-    const candidates = [word];
-    for (let len = word.length - 1; len >= 1; len--) candidates.push(word.slice(0, len));
-    for (const c of candidates) {
-      const g = glosses?.[c];
-      if (g && (g.uz || g.ru || g.en)) {
-        pressFired.current = true;
-        setLookup({ zh: c, gloss: g, sid: s.id, a: span[0], b: span[1] });
-        if (navigator.vibrate) navigator.vibrate(10);
-        return;
-      }
-    }
-  }, [glosses]);
-
-  const onCharPointerDown = useCallback((e: React.PointerEvent, s: Sentence, idx: number) => {
-    if (e.pointerType === 'mouse' && e.button !== 0) return;
-    pressOrigin.current = { x: e.clientX, y: e.clientY };
-    pressTimer.current = setTimeout(() => openLookup(s, idx), 450);
-  }, [openLookup]);
-
-  // Release ends the lookup — it's a peek, not a dialog. Holding shows the
-  // meaning, letting go puts it away, so there's nothing to dismiss afterwards.
-  const cancelPress = useCallback(() => {
-    if (pressTimer.current) { clearTimeout(pressTimer.current); pressTimer.current = null; }
-    pressOrigin.current = null;
-    setLookup(null);
-  }, []);
-
-  // Scrolling must never trigger a lookup: any real finger movement cancels the
-  // timer. 10px matches the drag threshold used by the dictation tiles.
-  const onCharPointerMove = useCallback((e: React.PointerEvent) => {
-    const o = pressOrigin.current;
-    if (!o) return;
-    if (Math.abs(e.clientX - o.x) > 10 || Math.abs(e.clientY - o.y) > 10) cancelPress();
-  }, [cancelPress]);
-
-  useEffect(() => () => { if (pressTimer.current) clearTimeout(pressTimer.current); }, []);
 
   const handleFocusNav = useCallback((dir: 'prev' | 'next') => {
     const idx = allSentences.findIndex(s => s.id === displaySentenceId);
@@ -693,7 +603,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
         {status === 'loaded' && dialogue && (
           <>
             {/* ── Top tab bar ── */}
-            <div className="dr-tabs" ref={tabsRef}>
+            <div className="dr-tabs">
               <div className="dr-tabs__inner">
                 {TABS.map(t => (
                   <button
@@ -701,7 +611,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                     className={`dr-tabs__tab ${activeTab === t.id ? 'dr-tabs__tab--active' : ''}`}
                     onClick={() => {
                       setActiveTab(t.id);
-                      setLookup(null);
                       if (t.id !== 'dialog') {
                         setFocusMode(false);
                         sentenceAudio.stop();
@@ -751,30 +660,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                       <span className="story__focus-counter">{allSentences.findIndex(s => s.id === displaySentenceId) + 1} / {allSentences.length}</span>
                     </div>
                   ) : (
-                  <>
-                    {/* Word-lookup panel. Always mounted, empty until you press a
-                        word — mounting it on demand would push the dialogue down
-                        and move the text out from under your finger. */}
-                    <div
-                      className={`dr-wordpanel${lookup ? ' dr-wordpanel--on' : ''}`}
-                      style={{ top: tabsH }}
-                      aria-live="polite"
-                    >
-                      {lookup && (
-                        <>
-                          <span className="dr-wordpanel__zh" lang="zh-Hans">{lookup.zh}</span>
-                          <span className="dr-wordpanel__py">{lookup.gloss.py}</span>
-                          <span className="dr-wordpanel__mean">
-                            {(language === 'ru' ? lookup.gloss.ru : language === 'en' ? lookup.gloss.en : lookup.gloss.uz)
-                              || lookup.gloss.en || lookup.gloss.uz}
-                          </span>
-                          {lookup.gloss.hsk != null && (
-                            <span className="dr-wordpanel__hsk">HSK {lookup.gloss.hsk >= 7 ? '7–9' : lookup.gloss.hsk}</span>
-                          )}
-                        </>
-                      )}
-                    </div>
-                    {dialogue.sections.map(section => {
+                    dialogue.sections.map(section => {
                       // Group consecutive sentences that share a speaker so
                       // they flow as one wrapping row of characters instead
                       // of breaking onto a new line per sentence.
@@ -806,9 +692,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                                       let charOff = 0;
                                       return pairs.map((pair, ci) => {
                                         const wl = charLvl[charOff];
-                                        const cIdx = charOff;          // this char's index in text_original
                                         charOff += [...pair.char].length;
-                                        const inLookup = !!lookup && lookup.sid === s.id && cIdx >= lookup.a && cIdx < lookup.b;
                                         // hide pinyin for a word whose level < this dialogue's level
                                         const hidePy = typeof wl === 'number' && wl < dialogueLevel;
                                         const isPunct = /[，。？！、,.\s]/.test(pair.char);
@@ -817,19 +701,8 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                                         return (
                                           <div
                                             key={`${si}-${ci}`}
-                                            className={`dr-char ${sActive ? 'dr-char--active' : ''} ${sPlaying ? 'dr-char--playing' : ''} ${inLookup ? 'dr-char--lookup' : ''}`}
-                                            onPointerDown={(e) => onCharPointerDown(e, s, cIdx)}
-                                            onPointerMove={onCharPointerMove}
-                                            onPointerUp={cancelPress}
-                                            onPointerCancel={cancelPress}
-                                            onPointerLeave={cancelPress}
-                                            onContextMenu={(e) => e.preventDefault()}
-                                            onClick={(e) => {
-                                              e.stopPropagation();
-                                              // A long press already opened the panel — don't also play the line.
-                                              if (pressFired.current) { pressFired.current = false; return; }
-                                              handleSentenceClick(s.id);
-                                            }}
+                                            className={`dr-char ${sActive ? 'dr-char--active' : ''} ${sPlaying ? 'dr-char--playing' : ''}`}
+                                            onClick={(e) => { e.stopPropagation(); handleSentenceClick(s.id); }}
                                           >
                                             {/* NBSP, not a plain space: a plain space collapses, the
                                                 div gets no line box, and the row loses the pinyin's
@@ -860,8 +733,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
                           })}
                         </div>
                       );
-                    })}
-                  </>
+                    })
                   )}
                 </div>
 
