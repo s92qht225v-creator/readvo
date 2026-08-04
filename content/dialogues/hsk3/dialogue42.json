@@ -1,0 +1,186 @@
+{
+  "id": "hsk3-dialogue42",
+  "slug": "getting-new-glasses",
+  "title": "我要配一副眼镜",
+  "pinyin": "Wǒ yào pèi yí fù yǎnjìng",
+  "titleTranslation": "Menga ko'zoynak kerak",
+  "titleTranslation_ru": "Мне нужны очки",
+  "titleTranslation_en": "I need a pair of glasses",
+  "description_uz": "«Menga ko'zoynak kerak» — optikada ko'z tekshiruvidan o'tish, gardish tanlash va linza turini so'rash haqidagi suhbat. Bu dialog qancha vaqt ketishini so'rash, tanlov qilish va narxni aniqlashni mashq qiladi.",
+  "description_ru": "«Мне нужны очки» — разговор в оптике: проверка зрения, выбор оправы и тип линз. Этот диалог отрабатывает, как спросить, сколько это займёт, сделать выбор и узнать цену.",
+  "description_en": "«I need a pair of glasses» — at the optician's: an eye test, choosing frames, and picking a lens type. This dialogue practises asking how long something takes, making a choice, and settling the price.",
+  "category_uz": "Optikada",
+  "category_ru": "В оптике",
+  "category_en": "At the Optician's",
+  "level": 3,
+  "dictationKeyboard": true,
+  "tag": "kundalik",
+  "dateAdded": "2026-07-28",
+  "vocab": [
+    "配",
+    "副",
+    "眼镜",
+    "验光",
+    "镜框",
+    "镜片",
+    "薄",
+    "普通",
+    "清楚",
+    "大概",
+    "取"
+  ],
+  "sections": [
+    {
+      "id": "d42-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d42-s1",
+          "text_original": "你好，我要配一副眼镜。",
+          "pinyin": "Nǐ hǎo, wǒ yào pèi yí fù yǎnjìng.",
+          "text_translation": "Salom, menga ko'zoynak kerak.",
+          "text_translation_ru": "Здравствуйте, мне нужно заказать очки.",
+          "text_translation_en": "Hello, I'd like to get a pair of glasses.",
+          "speaker": "A"
+        },
+        {
+          "id": "d42-s2",
+          "text_original": "好的，您先做个验光吧。",
+          "pinyin": "Hǎo de, nín xiān zuò ge yànguāng ba.",
+          "text_translation": "Xo'p, avval ko'zingizni tekshirtiring.",
+          "text_translation_ru": "Хорошо, сначала проверим зрение.",
+          "text_translation_en": "Certainly, let's do an eye test first.",
+          "speaker": "B"
+        },
+        {
+          "id": "d42-s3",
+          "text_original": "验光要多久？",
+          "pinyin": "Yànguāng yào duō jiǔ?",
+          "text_translation": "Ko'z tekshiruvi qancha vaqt oladi?",
+          "text_translation_ru": "Сколько занимает проверка зрения?",
+          "text_translation_en": "How long does the eye test take?",
+          "speaker": "A"
+        },
+        {
+          "id": "d42-s4",
+          "text_original": "大概十五分钟。",
+          "pinyin": "Dàgài shíwǔ fēnzhōng.",
+          "text_translation": "Taxminan o'n besh daqiqa.",
+          "text_translation_ru": "Примерно пятнадцать минут.",
+          "text_translation_en": "About fifteen minutes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d42-s5",
+          "text_original": "好的，我试试。",
+          "pinyin": "Hǎo de, wǒ shìshi.",
+          "text_translation": "Xo'p, sinab ko'raman.",
+          "text_translation_ru": "Хорошо, давайте попробуем.",
+          "text_translation_en": "All right, let's try it.",
+          "speaker": "A"
+        },
+        {
+          "id": "d42-s6",
+          "text_original": "您看这个清楚吗？",
+          "pinyin": "Nín kàn zhège qīngchu ma?",
+          "text_translation": "Buni aniq ko'ryapsizmi?",
+          "text_translation_ru": "Вы видите это чётко?",
+          "text_translation_en": "Can you see this clearly?",
+          "speaker": "B"
+        },
+        {
+          "id": "d42-s7",
+          "text_original": "清楚，这个很好。",
+          "pinyin": "Qīngchu, zhège hěn hǎo.",
+          "text_translation": "Aniq, bu juda yaxshi.",
+          "text_translation_ru": "Чётко, так очень хорошо.",
+          "text_translation_en": "Clearly, this one's good.",
+          "speaker": "A"
+        },
+        {
+          "id": "d42-s8",
+          "text_original": "那您选一个镜框吧。",
+          "pinyin": "Nà nín xuǎn yí ge jìngkuàng ba.",
+          "text_translation": "Unda gardish tanlang.",
+          "text_translation_ru": "Тогда выберите оправу.",
+          "text_translation_en": "Then please choose a frame.",
+          "speaker": "B"
+        },
+        {
+          "id": "d42-s9",
+          "text_original": "这个黑色的怎么样？",
+          "pinyin": "Zhège hēisè de zěnmeyàng?",
+          "text_translation": "Bu qora rangi qanday?",
+          "text_translation_ru": "Как насчёт этой чёрной?",
+          "text_translation_en": "How about this black one?",
+          "speaker": "B"
+        },
+        {
+          "id": "d42-s10",
+          "text_original": "不错，我喜欢这个。",
+          "pinyin": "Búcuò, wǒ xǐhuan zhège.",
+          "text_translation": "Yomon emas, menga shu yoqdi.",
+          "text_translation_ru": "Неплохо, эта мне нравится.",
+          "text_translation_en": "Not bad, I like this one.",
+          "speaker": "A"
+        },
+        {
+          "id": "d42-s11",
+          "text_original": "镜片要普通的还是薄的？",
+          "pinyin": "Jìngpiàn yào pǔtōng de háishi báo de?",
+          "text_translation": "Linza oddiy bo'lsinmi yoki yupqami?",
+          "text_translation_ru": "Линзы обычные или тонкие?",
+          "text_translation_en": "Would you like standard lenses or thin ones?",
+          "speaker": "B"
+        },
+        {
+          "id": "d42-s12",
+          "text_original": "薄的吧。",
+          "pinyin": "Báo de ba.",
+          "text_translation": "Yupqasi bo'lsin.",
+          "text_translation_ru": "Давайте тонкие.",
+          "text_translation_en": "The thin ones, please.",
+          "speaker": "A"
+        },
+        {
+          "id": "d42-s13",
+          "text_original": "一共多少钱？",
+          "pinyin": "Yígòng duōshao qián?",
+          "text_translation": "Hammasi bo'lib qancha?",
+          "text_translation_ru": "Сколько всего?",
+          "text_translation_en": "How much is it altogether?",
+          "speaker": "A"
+        },
+        {
+          "id": "d42-s14",
+          "text_original": "一共六百块。",
+          "pinyin": "Yígòng liùbǎi kuài.",
+          "text_translation": "Hammasi bo'lib olti yuz yuan.",
+          "text_translation_ru": "Всего шестьсот юаней.",
+          "text_translation_en": "Six hundred yuan altogether.",
+          "speaker": "B"
+        },
+        {
+          "id": "d42-s15",
+          "text_original": "给你钱。",
+          "pinyin": "Gěi nǐ qián.",
+          "text_translation": "Mana, pul.",
+          "text_translation_ru": "Вот деньги.",
+          "text_translation_en": "Here you are.",
+          "speaker": "A"
+        },
+        {
+          "id": "d42-s16",
+          "text_original": "好的，三天后来取。",
+          "pinyin": "Hǎo de, sān tiān hòu lái qǔ.",
+          "text_translation": "Xo'p, uch kundan keyin olib keting.",
+          "text_translation_ru": "Хорошо, приходите за ними через три дня.",
+          "text_translation_en": "Great — come and collect them in three days.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
