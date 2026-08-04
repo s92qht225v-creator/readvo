@@ -1326,7 +1326,10 @@ body {
 
 /* ── Dialog body ── */
 .dr-dialog-body {
-  padding: 30px 16px 24px;
+  /* Named so .dr-wordpanel can cancel exactly this much and sit flush under the
+     tab bar at rest — if the padding changes, the panel follows automatically. */
+  --dr-body-pt: 30px;
+  padding: var(--dr-body-pt) 16px 24px;
   width: fit-content;
   min-width: 300px;
   max-width: 90vw;
@@ -1442,6 +1445,11 @@ body {
   height: 34px;
   padding: 0 10px;
   overflow: hidden;
+  /* Cancel the body's top padding so the band starts flush against the tab bar
+     when the page is at rest. Without this the panel appeared 30px below the
+     nav until you scrolled far enough for sticky to pin it. The band's own
+     height then serves as the gap above the first line. */
+  margin-top: calc(-1 * var(--dr-body-pt, 30px));
   /* Transparent border in the resting state, coloured on press: if the border
      only existed in the --on state it would add 1px and nudge the dialogue. */
   border: 1px solid transparent;
