@@ -513,6 +513,225 @@
           "en": "Same subject → 不仅 comes AFTER the subject.\nDifferent subjects → 不仅 comes BEFORE the first subject."
         }
       ]
+    },
+    {
+      "slug": "conglai",
+      "title": "从来",
+      "pinyin": "cónglái",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "从来 — «hech qachon / doimo shunday bo'lgan» ma'nolarini bildiruvchi ravish.",
+          "ru": "从来 — наречие со значением «всегда / никогда / с самого начала до настоящего момента».",
+          "en": "从来 is an adverb meaning “always / never before / ever since the past”."
+        },
+        {
+          "type": "p",
+          "uz": "U biror holat yoki harakat o'tmishdan hozirgacha doim shunday bo'lganini ifodalaydi.",
+          "ru": "Оно показывает, что действие или состояние оставалось неизменным с прошлого до настоящего времени.",
+          "en": "It indicates that a situation or action has been consistently the same from the past up to the present."
+        },
+        {
+          "type": "p",
+          "uz": "从来 ko'pincha inkor gaplarda ishlatiladi.",
+          "ru": "Чаще всего 从来 используется в отрицательных предложениях.",
+          "en": "It is most commonly used in negative sentences."
+        },
+        {
+          "type": "h",
+          "uz": "1. 从来不……",
+          "ru": "1. 从来不……",
+          "en": "1. 从来不……"
+        },
+        {
+          "type": "p",
+          "uz": "从来不 + fe'l — «hech qachon …maydi». Odat yoki doimiy holat haqida gapirganda ishlatiladi.",
+          "ru": "从来不 + глагол — «никогда не…». Используется для описания привычек или постоянного поведения.",
+          "en": "从来不 + verb — “never do”. Used for a habit or consistent behaviour."
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 从来不 + Fe'l",
+          "ru": "Подлежащее + 从来不 + Глагол",
+          "en": "Subject + 从来不 + Verb"
+        },
+        {
+          "type": "ex",
+          "zh": "他从来不迟到。",
+          "py": "Tā cónglái bù chídào.",
+          "uz": "U hech qachon kechikmaydi.",
+          "ru": "Он никогда не опаздывает.",
+          "en": "He never arrives late."
+        },
+        {
+          "type": "ex",
+          "zh": "我从来不喝咖啡。",
+          "py": "Wǒ cónglái bù hē kāfēi.",
+          "uz": "Men hech qachon qahva ichmayman.",
+          "ru": "Я никогда не пью кофе.",
+          "en": "I never drink coffee."
+        },
+        {
+          "type": "ex",
+          "zh": "老张这个人开会从来不迟到。",
+          "py": "Lǎo Zhāng zhège rén kāihuì cónglái bù chídào.",
+          "uz": "Lao Zhang yig'ilishlarga hech qachon kechikmaydi.",
+          "ru": "Лао Чжан никогда не опаздывает на собрания.",
+          "en": "Lao Zhang is never late for meetings."
+        },
+        {
+          "type": "h",
+          "uz": "2. 从来没 / 没有……",
+          "ru": "2. 从来没 / 没有……",
+          "en": "2. 从来没 / 没有……"
+        },
+        {
+          "type": "p",
+          "uz": "从来没(有) + fe'l — «hech qachon …magan». Hozirgacha biror ish yoki tajriba sodir bo'lmaganini bildiradi.",
+          "ru": "从来没(有) + глагол — «никогда не делал…». Показывает, что действие ни разу не происходило до настоящего момента.",
+          "en": "从来没(有) + verb — “have/has never…”. It says something has never happened up to now."
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 从来没(有) + Fe'l + 过",
+          "ru": "Подлежащее + 从来没(有) + Глагол + 过",
+          "en": "Subject + 从来没(有) + Verb + 过"
+        },
+        {
+          "type": "ex",
+          "zh": "我从来没去过中国。",
+          "py": "Wǒ cónglái méi qùguo Zhōngguó.",
+          "uz": "Men hech qachon Xitoyda bo'lmaganman.",
+          "ru": "Я никогда не был в Китае.",
+          "en": "I have never been to China."
+        },
+        {
+          "type": "ex",
+          "zh": "他从来没有坐过飞机。",
+          "py": "Tā cónglái méiyǒu zuòguo fēijī.",
+          "uz": "U hech qachon samolyotda uchmagan.",
+          "ru": "Он никогда не летал на самолёте.",
+          "en": "He has never travelled by plane."
+        },
+        {
+          "type": "h",
+          "uz": "从来不 va 从来没(有) farqi",
+          "ru": "Разница между 从来不 и 从来没(有)",
+          "en": "从来不 vs. 从来没(有)"
+        },
+        {
+          "type": "p",
+          "uz": "从来不 → odat yoki doimiy xatti-harakat haqida.",
+          "ru": "从来不 → описывает привычку или постоянное поведение.",
+          "en": "从来不 → describes a habit or consistent behaviour."
+        },
+        {
+          "type": "ex",
+          "zh": "他从来不喝酒。",
+          "py": "Tā cónglái bù hē jiǔ.",
+          "uz": "U hech qachon spirtli ichimlik ichmaydi.",
+          "ru": "Он никогда не пьёт алкоголь.",
+          "en": "He never drinks alcohol."
+        },
+        {
+          "type": "p",
+          "uz": "从来没(有) → hozirgacha bo'lmagan harakat yoki tajriba haqida.",
+          "ru": "从来没(有) → говорит об опыте или событии, которого никогда не было.",
+          "en": "从来没(有) → describes an experience that has never happened."
+        },
+        {
+          "type": "ex",
+          "zh": "他从来没喝过酒。",
+          "py": "Tā cónglái méi hēguo jiǔ.",
+          "uz": "U hech qachon spirtli ichimlik ichib ko'rmagan.",
+          "ru": "Он никогда не пробовал алкоголь.",
+          "en": "He has never drunk alcohol."
+        },
+        {
+          "type": "h",
+          "uz": "从来没……过",
+          "ru": "从来没……过",
+          "en": "从来没……过"
+        },
+        {
+          "type": "p",
+          "uz": "从来没……过 juda ko'p ishlatiladigan qolip — «hech qachon … qilib ko'rmagan».",
+          "ru": "从来没……过 — очень распространённая конструкция: «никогда не доводилось…».",
+          "en": "从来没……过 is a very common pattern: “have never done/experienced something”."
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 从来没(有) + Fe'l + 过",
+          "ru": "Подлежащее + 从来没(有) + Глагол + 过",
+          "en": "Subject + 从来没(有) + Verb + 过"
+        },
+        {
+          "type": "ex",
+          "zh": "我从来没吃过北京烤鸭。",
+          "py": "Wǒ cónglái méi chīguo Běijīng kǎoyā.",
+          "uz": "Men hech qachon Pekin o'rdagini yeb ko'rmaganman.",
+          "ru": "Я никогда не пробовал утку по-пекински.",
+          "en": "I have never tried Peking duck."
+        },
+        {
+          "type": "ex",
+          "zh": "我从来没这么快乐过。",
+          "py": "Wǒ cónglái méi zhème kuàilè guo.",
+          "uz": "Men hech qachon bunchalik baxtli bo'lmaganman.",
+          "ru": "Я никогда раньше не был так счастлив.",
+          "en": "I have never been this happy before."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "formula",
+          "uz": "从来不 + Fe'l → hech qachon qilmaydi",
+          "ru": "从来不 + Глагол → никогда не делает",
+          "en": "从来不 + Verb → never do"
+        },
+        {
+          "type": "ex",
+          "zh": "我从来不迟到。",
+          "py": "Wǒ cónglái bù chídào.",
+          "uz": "Men hech qachon kechikmayman.",
+          "ru": "Я никогда не опаздываю.",
+          "en": "I am never late."
+        },
+        {
+          "type": "formula",
+          "uz": "从来没(有) + Fe'l + 过 → hech qachon qilib ko'rmagan",
+          "ru": "从来没(有) + Глагол + 过 → никогда не делал",
+          "en": "从来没(有) + Verb + 过 → have never done"
+        },
+        {
+          "type": "ex",
+          "zh": "我从来没去过中国。",
+          "py": "Wǒ cónglái méi qùguo Zhōngguó.",
+          "uz": "Men hech qachon Xitoyda bo'lmaganman.",
+          "ru": "Я никогда не был в Китае.",
+          "en": "I have never been to China."
+        },
+        {
+          "type": "note",
+          "uz": "从来 o'tmishdan hozirgacha bo'lgan davrni qamrab oladi.\n从来不 → odat: hech qachon qilmaydi\n从来没(有)……过 → tajriba: hech qachon qilib ko'rmagan",
+          "ru": "从来 охватывает период от прошлого до настоящего момента.\n从来不 → привычка: никогда не делает\n从来没(有)……过 → опыт: никогда не делал",
+          "en": "从来 covers the span from the past up to now.\n从来不 → habit: never do\n从来没(有)……过 → experience: have never done"
+        }
+      ]
     }
   ]
 }
