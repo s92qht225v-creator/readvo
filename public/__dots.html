@@ -1,0 +1,304 @@
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><style>body{font-family:"Noto Sans",sans-serif;background:#f5f5f5;margin:0;padding-bottom:120px}*{box-sizing:border-box}.dr-hero {
+  background: linear-gradient(180deg, #dc2626 0%, #b91c1c 40%, #7f1d1d 100%);
+  padding: 0;
+  text-align: center;
+  position: relative;
+  z-index: 50;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+}
+.dr-tabs {
+  background: linear-gradient(180deg, #b91c1c 0%, #991b1b 100%);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+.dr-tabs__inner {
+  display: flex;
+  gap: 4px;
+  padding: 8px 16px 10px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.dr-tabs__tab {
+  flex: 1;
+  padding: 7px 4px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.dr-tabs__tab--active {
+  background: rgba(0, 0, 0, 0.28);
+  color: #fff;
+  font-weight: 700;
+}
+.dr-line {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 14px;
+  cursor: pointer;
+  background: #fff;
+  border-left: 3px solid var(--dr-speaker, #378add);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+  padding: 8px 12px;
+}
+.dr-line-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.dr-line-chars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  /* Gap is overridden to 0 below when pinyin is off so character spacing
+     stays natural without ruby labels overhead. */
+  column-gap: 0.18em;
+}
+.dr-char {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dr-char-py {
+  font-size: 0.69em;
+  color: #dc2626;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+.dr-char-py--empty {
+  visibility: hidden;
+}
+.dr-char-zh {
+  font-size: 1.5em;
+  color: #1a1a2e;
+  line-height: 1.3;
+}
+.dr-dialog-body {
+  padding: 30px 16px 24px;
+  width: fit-content;
+  min-width: 300px;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+.story__bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  background: rgba(245, 245, 245, 0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--color-border, #e0e0e0);
+  padding: 8px 24px calc(8px + env(safe-area-inset-bottom, 0px));
+}
+.story__bottom-bar-inner {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.reader__nav-toggle {
+  padding: 4px 12px;
+  min-height: 32px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.dr-font-btn {
+  width: 40px;
+  height: 44px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.story__play-fab {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-accent, #4a90e2);
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  z-index: 80;
+}
+.story__translation-panel {
+  position: fixed;
+  top: calc(var(--header-height, 60px) + env(safe-area-inset-top, 0px));
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: var(--color-surface, #fff);
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: var(--spacing-sm) var(--spacing-xl);
+}
+.story__translation-panel-text {
+  margin: 0;
+  font-size: 1.15em;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  /* Full-width on phones with small, symmetric padding. The desktop rule centres
+     a fit-content column (width:fit-content + margin:auto); on a phone that let
+     the block sit left-of-centre, so the right gap read wider than the left.
+     The parent .dialogue-reader also adds var(--spacing-xl) (24px) of side
+     padding, which made the conversation narrow — reclaim it with an equal
+     negative margin, then re-apply a small symmetric 12px so left = right and
+     the text runs nearly edge-to-edge. */
+  .dr-dialog-body {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+/* ⋮ overflow menu in the bottom bar. Flex-none so it doesn't steal width from
+   the four tabs, which share the rest equally. */
+.dr-more { flex: 0 0 44px !important; font-size: 20px; }
+
+/* Sheet sits directly above the bar, right-aligned under the ⋮. */
+.dr-sheet {
+  position: fixed; right: 8px; z-index: 96;
+  background: #fff; border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,.22);
+  min-width: 210px; padding: 6px 0; overflow: hidden;
+  transform-origin: bottom right;
+  transform: scale(.92) translateY(6px); opacity: 0; pointer-events: none;
+  transition: transform .16s cubic-bezier(.2,.8,.2,1), opacity .16s;
+}
+.dr-sheet--open { transform: none; opacity: 1; pointer-events: auto; }
+.dr-sheet__item, .dr-sheet__row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  width: 100%; min-height: 46px; padding: 0 14px; border: 0; background: none;
+  font-family: inherit; font-size: .95rem; color: #333; cursor: pointer;
+}
+/* State is visible in the menu, so you never open it just to check. */
+.dr-sheet__item b { color: #dc2626; opacity: 0; }
+.dr-sheet__item.is-on b { opacity: 1; }
+.dr-sheet__item.is-on span { color: #dc2626; font-weight: 600; }
+.dr-sheet__sep { height: 1px; background: #eee; margin: 6px 0; }
+.dr-sheet__sz { min-width: 40px; min-height: 34px; margin-left: 6px; border: 1px solid #e5e5e5;
+                background: #fff; border-radius: 6px; font-family: inherit; font-size: .9rem; }
+.dr-scrim { position: fixed; inset: 0; z-index: 94; background: transparent; display: none; }
+.dr-scrim--on { display: block; }
+
+/* ── MERGED LAYOUT (mockup only) ───────────────────────────────────────── */
+/* Tabs move to the bottom of the screen. */
+.dr-tabs { position: fixed; top: auto; bottom: 0; left: 0; right: 0; width: 100%;
+           margin-left: 0; z-index: 95; padding-bottom: env(safe-area-inset-bottom); }
+.dr-tabs__inner { max-width: 680px; }
+/* Nothing is pinned above it any more, so the translation panel takes top:0. */
+.dr-trpanel { position: sticky; top: 0; z-index: 40; background:#fff;
+              border-bottom:1px solid #eee; box-shadow:0 2px 8px rgba(0,0,0,.06);
+              padding:8px 12px; min-height:38px; display:flex; align-items:center; }
+.dr-trpanel p { margin:0; font-size:.95rem; color:#666; font-style:italic; text-align:center; width:100%; }
+.dr-font-btn { display:block; width:52px; height:56px; font-size:.95rem; }
+.dr-font-btn--on { color:#dc2626; font-weight:700; }
+.dr-font-divider { height:1px; background:#eee; margin:2px 6px; }
+.demo-note{max-width:680px;margin:0 auto;padding:10px 12px;font-size:.8rem;color:#999}
+</style>
+<div class="dr-hero" style="background:linear-gradient(180deg,#dc2626,#b91c1c);padding:18px 16px;color:#fff">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <b style="font-size:1.3rem">blim</b><span style="opacity:.7">☰</span>
+  </div>
+  <div style="margin-top:10px"><b style="font-size:1.2rem">简单的爱情</b></div>
+</div>
+
+<div class="dr-trpanel"><p id="tr">— tap a line —</p></div>
+
+<div class="dr-dialog-body" id="lines"></div>
+
+<div class="dr-tabs"><div class="dr-tabs__inner">
+  <button class="dr-tabs__tab dr-tabs__tab--active">Dialog</button>
+  <button class="dr-tabs__tab">So’zlar</button>
+  <button class="dr-tabs__tab">Diktant</button>
+  <button class="dr-tabs__tab">Mashq</button>
+  <button class="dr-tabs__tab dr-more" id="more" aria-label="More">⋮</button>
+</div></div>
+
+<div class="dr-sheet" id="sheet">
+  <button class="dr-sheet__item is-on" data-k="tr"><span>Tarjima</span><b>✓</b></button>
+  <button class="dr-sheet__item is-on" data-k="py"><span>Pinyin</span><b>✓</b></button>
+  <button class="dr-sheet__item" data-k="fo"><span>Fokus</span><b>✓</b></button>
+  <div class="dr-sheet__sep"></div>
+  <div class="dr-sheet__row"><span>Shrift</span><span><button class="dr-sheet__sz">A−</button><button class="dr-sheet__sz">A+</button></span></div>
+</div>
+<div class="dr-scrim" id="scrim"></div>
+
+<script>
+const D=[["A","听说你男朋友李进跟你是一个学校的，是你同学吗？","Eshitishimcha, yigiting Li Jin ham sen bilan bir universitetda o’qir ekan."],
+       ["B","是的，他学的是新闻，我学的是法律。","Ha, u jurnalistika, men esa huquq o’qiyman."],
+       ["A","那你们俩是怎么认识的？","Unda ikkovingiz qanday tanishgansizlar?"],
+       ["B","我们是在一次足球比赛中认识的。","Biz futbol o’yinida tanishganmiz."],
+       ["A","你为什么喜欢他？","Nega u senga yoqadi?"],
+       ["B","他不仅足球踢得好，性格也不错。","U nafaqat futbolni yaxshi o’ynaydi, balki fe’l-atvori ham yaxshi."]];
+const box=document.getElementById('lines');
+D.forEach(function(x){
+  const d=document.createElement('div'); d.className='dr-line';
+  d.style.setProperty('--dr-speaker', x[0]==='A'?'#dc2626':'#378add');
+  const m=document.createElement('div'); m.className='dr-line-main';
+  const row=document.createElement('div'); row.className='dr-line-chars';
+  [...x[1]].forEach(function(c){ const e=document.createElement('div'); e.className='dr-char';
+    e.innerHTML='<div class="dr-char-py dr-char-py--empty">&nbsp;</div><div class="dr-char-zh">'+c+'</div>'; row.appendChild(e); });
+  m.appendChild(row); d.appendChild(m);
+  d.onclick=function(){ document.getElementById('tr').textContent=x[2]; };
+  box.appendChild(d);
+});
+
+
+const more=document.getElementById('more'), sheet=document.getElementById('sheet'), scrim=document.getElementById('scrim');
+function place(){ const bar=document.querySelector('.dr-tabs').getBoundingClientRect();
+  sheet.style.bottom=(window.innerHeight-bar.top+8)+'px'; }
+function open(o){ place(); sheet.classList.toggle('dr-sheet--open',o); scrim.classList.toggle('dr-scrim--on',o); }
+more.onclick=function(e){ e.stopPropagation(); open(!sheet.classList.contains('dr-sheet--open')); };
+scrim.onclick=function(){ open(false); };
+sheet.querySelectorAll('.dr-sheet__item').forEach(function(b){
+  b.onclick=function(){ b.classList.toggle('is-on'); };   // stays open: flipping two toggles is one visit
+});
+window.addEventListener('resize',place);
+</script>
