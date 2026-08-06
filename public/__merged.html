@@ -196,6 +196,24 @@
   text-align: center;
   line-height: 1.5;
 }
+@media (max-width: 600px) {
+  /* Full-width on phones with small, symmetric padding. The desktop rule centres
+     a fit-content column (width:fit-content + margin:auto); on a phone that let
+     the block sit left-of-centre, so the right gap read wider than the left.
+     The parent .dialogue-reader also adds var(--spacing-xl) (24px) of side
+     padding, which made the conversation narrow — reclaim it with an equal
+     negative margin, then re-apply a small symmetric 12px so left = right and
+     the text runs nearly edge-to-edge. */
+  .dr-dialog-body {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
 /* ── MERGED LAYOUT (mockup only) ───────────────────────────────────────── */
 /* Tabs move to the bottom of the screen. */
 .dr-tabs { position: fixed; top: auto; bottom: 0; left: 0; right: 0; width: 100%;
