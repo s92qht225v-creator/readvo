@@ -732,6 +732,165 @@
           "en": "从来 covers the span from the past up to now.\n从来不 → habit: never do\n从来没(有)……过 → experience: have never done"
         }
       ]
+    },
+    {
+      "slug": "gang",
+      "title": "刚",
+      "pinyin": "gāng",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "刚 — «hozirgina / endigina / yaqindagina» ma'nolarini bildiruvchi ravish.",
+          "ru": "刚 — наречие со значением «только что / совсем недавно».",
+          "en": "刚 is an adverb meaning “just / just now / a short while ago”."
+        },
+        {
+          "type": "p",
+          "uz": "U biror harakat yoki holat yaqinda, ko'p vaqt o'tmay sodir bo'lganini bildiradi.",
+          "ru": "Оно указывает, что действие или ситуация произошли совсем недавно.",
+          "en": "It indicates that an action or situation happened only a short time ago."
+        },
+        {
+          "type": "p",
+          "uz": "刚 odatda egadan keyin va fe'ldan oldin keladi.",
+          "ru": "刚 обычно ставится после подлежащего и перед глаголом.",
+          "en": "刚 is usually placed after the subject and before the verb."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 刚 + Fe'l",
+          "ru": "Подлежащее + 刚 + Глагол",
+          "en": "Subject + 刚 + Verb"
+        },
+        {
+          "type": "ex",
+          "zh": "我刚回来。",
+          "py": "Wǒ gāng huílái.",
+          "uz": "Men hozirgina qaytib keldim.",
+          "ru": "Я только что вернулся.",
+          "en": "I just came back."
+        },
+        {
+          "type": "ex",
+          "zh": "他刚下班。",
+          "py": "Tā gāng xiàbān.",
+          "uz": "U hozirgina ishdan chiqdi.",
+          "ru": "Он только что закончил работу.",
+          "en": "He just got off work."
+        },
+        {
+          "type": "ex",
+          "zh": "我刚吃完饭。",
+          "py": "Wǒ gāng chīwán fàn.",
+          "uz": "Men hozirgina ovqatlanib bo'ldim.",
+          "ru": "Я только что поел.",
+          "en": "I just finished eating."
+        },
+        {
+          "type": "h",
+          "uz": "刚 + Fe'l + 的 + Ot",
+          "ru": "刚 + Глагол + 的 + Существительное",
+          "en": "刚 + Verb + 的 + Noun"
+        },
+        {
+          "type": "p",
+          "uz": "刚 yaqinda bajarilgan harakatni otga bog'lab, uni aniqlash uchun ham ishlatiladi.",
+          "ru": "刚 также используется, когда недавно совершённое действие определяет существительное.",
+          "en": "刚 can also describe a recently performed action that modifies a noun."
+        },
+        {
+          "type": "formula",
+          "uz": "刚 + Fe'l + 的 + Ot",
+          "ru": "刚 + Глагол + 的 + Существительное",
+          "en": "刚 + Verb + 的 + Noun"
+        },
+        {
+          "type": "ex",
+          "zh": "我上午刚借的那本书，怎么找不到了？",
+          "py": "Wǒ shàngwǔ gāng jiè de nà běn shū, zěnme zhǎo bú dào le?",
+          "uz": "Bugun ertalab endigina olgan kitobimni nega topolmayapman?",
+          "ru": "Почему я не могу найти книгу, которую только сегодня утром взял?",
+          "en": "Why can't I find the book I just borrowed this morning?"
+        },
+        {
+          "type": "h",
+          "uz": "刚……的时候",
+          "ru": "刚……的时候",
+          "en": "刚……的时候"
+        },
+        {
+          "type": "p",
+          "uz": "刚……的时候 — «endi … bo'lgan paytda / …ning dastlabki paytida» degan ma'noni bildiradi.",
+          "ru": "刚……的时候 означает «когда только…» / «в первое время после…».",
+          "en": "刚……的时候 means “when someone had just…” or “when something had just begun”."
+        },
+        {
+          "type": "ex",
+          "zh": "我和丈夫刚结婚的时候，每天都觉得很新鲜。",
+          "py": "Wǒ hé zhàngfu gāng jiéhūn de shíhou, měitiān dōu juéde hěn xīnxiān.",
+          "uz": "Erim bilan endigina turmush qurgan paytimizda, har kuni hamma narsa yangidek tuyulardi.",
+          "ru": "Когда мы с мужем только поженились, каждый день всё казалось новым и интересным.",
+          "en": "When my husband and I had just gotten married, everything felt new and exciting every day."
+        },
+        {
+          "type": "ex",
+          "zh": "我刚从会议室过来，怎么一个人也没有？",
+          "py": "Wǒ gāng cóng huìyìshì guòlái, zěnme yí ge rén yě méiyǒu?",
+          "uz": "Men hozirgina majlis xonasidan keldim, nega u yerda hech kim yo'q?",
+          "ru": "Я только что пришёл из переговорной. Почему там никого не было?",
+          "en": "I just came from the meeting room. Why wasn't anyone there?"
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 刚 + Fe'l",
+          "ru": "Подлежащее + 刚 + Глагол",
+          "en": "Subject + 刚 + Verb"
+        },
+        {
+          "type": "ex",
+          "zh": "我刚到。",
+          "py": "Wǒ gāng dào.",
+          "uz": "Men hozirgina yetib keldim.",
+          "ru": "Я только что пришёл.",
+          "en": "I just arrived."
+        },
+        {
+          "type": "ex",
+          "zh": "他刚走。",
+          "py": "Tā gāng zǒu.",
+          "uz": "U hozirgina ketdi.",
+          "ru": "Он только что ушёл.",
+          "en": "He just left."
+        },
+        {
+          "type": "note",
+          "uz": "刚 → harakat yaqindagina sodir bo'lganini bildiradi.\nOdatda: Ega + 刚 + Fe'l\n刚 = hozirgina / endigina / yaqindagina",
+          "ru": "刚 показывает, что действие произошло совсем недавно.\nОбычно: Подлежащее + 刚 + Глагол\n刚 = только что / совсем недавно",
+          "en": "刚 indicates something happened a short time ago.\nUsual pattern: Subject + 刚 + Verb\n刚 = just / just now / a short while ago"
+        }
+      ]
     }
   ]
 }
