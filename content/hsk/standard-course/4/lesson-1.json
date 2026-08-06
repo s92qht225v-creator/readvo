@@ -317,5 +317,202 @@
         }
       ]
     }
+  ],
+  "grammar": [
+    {
+      "slug": "bujin-ye-hai-erqie",
+      "title": "不仅……也 / 还 / 而且……",
+      "pinyin": "bùjǐn… yě / hái / érqiě…",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "不仅……也 / 还 / 而且…… konstruksiyasi «nafaqat…, balki … ham» degan ma'noni bildiradi.",
+          "ru": "Конструкция 不仅……也 / 还 / 而且…… означает «не только…, но и…».",
+          "en": "不仅……也 / 还 / 而且…… means “not only… but also…”."
+        },
+        {
+          "type": "p",
+          "uz": "U birinchi aytilgan fikrga qo'shimcha ravishda yana bir ma'lumot keltirish uchun ishlatiladi.",
+          "ru": "Она используется, когда к первой информации добавляется ещё один факт или более сильная дополнительная информация.",
+          "en": "It is used when, besides the first fact, there is another additional or stronger fact."
+        },
+        {
+          "type": "h",
+          "uz": "1. Ega bir xil bo'lsa",
+          "ru": "1. Одинаковое подлежащее",
+          "en": "1. Same subject"
+        },
+        {
+          "type": "p",
+          "uz": "Agar gapning ikkala qismida ham ega bir xil bo'lsa, 不仅 egadan keyin keladi.",
+          "ru": "Если в обеих частях предложения одно и то же подлежащее, 不仅 ставится после подлежащего.",
+          "en": "When both parts have the same subject, 不仅 comes after the subject."
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 不仅 + A，也 / 还 / 而且 + B",
+          "ru": "Подлежащее + 不仅 + A，也 / 还 / 而且 + B",
+          "en": "Subject + 不仅 + A，也 / 还 / 而且 + B"
+        },
+        {
+          "type": "ex",
+          "zh": "他不仅会说中文，而且会说英文。",
+          "py": "Tā bùjǐn huì shuō Zhōngwén, érqiě huì shuō Yīngwén.",
+          "uz": "U nafaqat xitoy tilida, balki ingliz tilida ham gapira oladi.",
+          "ru": "Он говорит не только по-китайски, но и по-английски.",
+          "en": "He not only speaks Chinese, but also speaks English."
+        },
+        {
+          "type": "p",
+          "uz": "Bu gapda ikkala harakatning ham egasi 他. Shuning uchun 不仅 egadan keyin kelgan.",
+          "ru": "В обеих частях подлежащее — 他. Поэтому 不仅 ставится после него.",
+          "en": "Here 他 is the subject of both actions, so 不仅 comes after 他."
+        },
+        {
+          "type": "ex",
+          "zh": "我不仅喜欢喝茶，还喜欢喝咖啡。",
+          "py": "Wǒ bùjǐn xǐhuan hē chá, hái xǐhuan hē kāfēi.",
+          "uz": "Men nafaqat choy, balki qahva ichishni ham yoqtiraman.",
+          "ru": "Я люблю пить не только чай, но и кофе.",
+          "en": "I not only like drinking tea, but also like drinking coffee."
+        },
+        {
+          "type": "h",
+          "uz": "2. Egalar har xil bo'lsa",
+          "ru": "2. Разные подлежащие",
+          "en": "2. Different subjects"
+        },
+        {
+          "type": "p",
+          "uz": "Agar gapning ikki qismidagi egalar har xil bo'lsa, 不仅 birinchi egadan oldin keladi.",
+          "ru": "Если в двух частях предложения разные подлежащие, 不仅 ставится перед первым подлежащим.",
+          "en": "When the two parts have different subjects, 不仅 comes before the first subject."
+        },
+        {
+          "type": "formula",
+          "uz": "不仅 + Ega 1 + A，Ega 2 + 也 / 还 + B",
+          "ru": "不仅 + Подлежащее 1 + A，Подлежащее 2 + 也 / 还 + B",
+          "en": "不仅 + Subject 1 + A，Subject 2 + 也 / 还 + B"
+        },
+        {
+          "type": "ex",
+          "zh": "不仅我喜欢中国菜，我朋友也喜欢中国菜。",
+          "py": "Bùjǐn wǒ xǐhuan Zhōngguó cài, wǒ péngyou yě xǐhuan Zhōngguó cài.",
+          "uz": "Nafaqat men, balki do'stim ham xitoy taomlarini yoqtiradi.",
+          "ru": "Не только я люблю китайскую кухню, но и мой друг тоже её любит.",
+          "en": "Not only do I like Chinese food, but my friend likes it too."
+        },
+        {
+          "type": "p",
+          "uz": "Bu yerda egalar har xil: 我 va 我朋友. Shuning uchun 不仅 birinchi egadan oldin keladi.",
+          "ru": "Здесь подлежащие разные: 我 и 我朋友. Поэтому 不仅 ставится перед первым подлежащим.",
+          "en": "Here the subjects differ — 我 and 我朋友 — so 不仅 comes before the first subject."
+        },
+        {
+          "type": "h",
+          "uz": "也、还、而且 farqi",
+          "ru": "Разница между 也、还 и 而且",
+          "en": "也, 还, 而且"
+        },
+        {
+          "type": "p",
+          "uz": "Uchalasi ham 不仅 bilan ishlatiladi, ammo ma'noda kichik farqlar bor.",
+          "ru": "Все три могут использоваться с 不仅, но между ними есть небольшая разница.",
+          "en": "All three work with 不仅, but the emphasis differs slightly."
+        },
+        {
+          "type": "p",
+          "uz": "也 — «ham». Oddiy qo'shimcha ma'lumot.",
+          "ru": "也 — «тоже / также». Нейтрально добавляет вторую информацию.",
+          "en": "也 — “also”. Neutral and straightforward."
+        },
+        {
+          "type": "ex",
+          "zh": "他不仅会中文，也会英语。",
+          "py": "Tā bùjǐn huì Zhōngwén, yě huì Yīngyǔ.",
+          "uz": "U nafaqat xitoy tilini, balki ingliz tilini ham biladi.",
+          "ru": "Он знает не только китайский, но и английский.",
+          "en": "He not only knows Chinese, but also English."
+        },
+        {
+          "type": "p",
+          "uz": "还 — «yana / ham». Birinchi ma'lumotga yana bir narsa qo'shilayotganini ta'kidlaydi.",
+          "ru": "还 — «ещё / также». Подчёркивает, что к первой информации добавляется что-то ещё.",
+          "en": "还 — “also / in addition”. Emphasises that something else is being added."
+        },
+        {
+          "type": "ex",
+          "zh": "他不仅会中文，还会英语。",
+          "py": "Tā bùjǐn huì Zhōngwén, hái huì Yīngyǔ.",
+          "uz": "U nafaqat xitoy tilini, balki ingliz tilini ham biladi.",
+          "ru": "Он знает не только китайский, но и английский.",
+          "en": "He not only knows Chinese, but also English."
+        },
+        {
+          "type": "p",
+          "uz": "而且 — «balki… ham / bundan tashqari». Ikkinchi ma'lumotni kuchliroq ta'kidlaydi. 不仅……而且…… juda ko'p ishlatiladi.",
+          "ru": "而且 — «но и / кроме того». Сильнее подчёркивает вторую информацию. Конструкция 不仅……而且…… очень распространена.",
+          "en": "而且 — “but also / moreover”. Often introduces stronger information; 不仅……而且…… is especially common."
+        },
+        {
+          "type": "ex",
+          "zh": "他不仅会说中文，而且说得很流利。",
+          "py": "Tā bùjǐn huì shuō Zhōngwén, érqiě shuō de hěn liúlì.",
+          "uz": "U nafaqat xitoy tilida gapira oladi, balki juda ravon ham gapiradi.",
+          "ru": "Он не только говорит по-китайски, но и говорит очень свободно.",
+          "en": "He not only speaks Chinese, but speaks it very fluently."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega bir xil: Ega + 不仅 + A，而且 / 还 / 也 + B",
+          "ru": "Одинаковое подлежащее: Подлежащее + 不仅 + A，而且 / 还 / 也 + B",
+          "en": "Same subject: Subject + 不仅 + A，而且 / 还 / 也 + B"
+        },
+        {
+          "type": "ex",
+          "zh": "我不仅会开车，而且会修车。",
+          "py": "Wǒ bùjǐn huì kāichē, érqiě huì xiūchē.",
+          "uz": "Men nafaqat mashina hayday olaman, balki uni ta'mirlay ham olaman.",
+          "ru": "Я умею не только водить машину, но и ремонтировать её.",
+          "en": "I can not only drive, but also repair cars."
+        },
+        {
+          "type": "formula",
+          "uz": "Egalar har xil: 不仅 + Ega 1 + A，Ega 2 + 也 / 还 + B",
+          "ru": "Разные подлежащие: 不仅 + Подлежащее 1 + A，Подлежащее 2 + 也 / 还 + B",
+          "en": "Different subjects: 不仅 + Subject 1 + A，Subject 2 + 也 / 还 + B"
+        },
+        {
+          "type": "ex",
+          "zh": "不仅我会开车，我哥哥也会开车。",
+          "py": "Bùjǐn wǒ huì kāichē, wǒ gēge yě huì kāichē.",
+          "uz": "Nafaqat men, balki akam ham mashina hayday oladi.",
+          "ru": "Не только я умею водить машину, но и мой старший брат.",
+          "en": "Not only can I drive, but my older brother can too."
+        },
+        {
+          "type": "note",
+          "uz": "Ega bir xil → 不仅 egadan KEYIN keladi.\nEgalar har xil → 不仅 birinchi egadan OLDIN keladi.",
+          "ru": "Одинаковое подлежащее → 不仅 ПОСЛЕ подлежащего.\nРазные подлежащие → 不仅 ПЕРЕД первым подлежащим.",
+          "en": "Same subject → 不仅 comes AFTER the subject.\nDifferent subjects → 不仅 comes BEFORE the first subject."
+        }
+      ]
+    }
   ]
 }

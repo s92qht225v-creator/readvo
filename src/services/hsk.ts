@@ -49,6 +49,28 @@ export interface HskText {
   }[];
 }
 
+/** One block of a grammar explanation. `ex` carries Chinese + pinyin; every
+ *  other type is prose in the three UI languages. */
+export interface HskGrammarBlock {
+  type: 'h' | 'p' | 'formula' | 'ex' | 'note';
+  uz?: string;
+  ru?: string;
+  en?: string;
+  zh?: string;
+  py?: string;
+}
+
+export interface HskGrammarPoint {
+  slug: string;
+  title: string;
+  pinyin: string;
+  label: string;
+  labelTranslation: string;
+  labelTranslation_ru?: string;
+  labelTranslation_en?: string;
+  blocks: HskGrammarBlock[];
+}
+
 export interface HskProperNoun {
   zh: string; py: string; uz: string; ru: string; en: string;
 }
@@ -67,6 +89,7 @@ export interface HskLesson {
   titleTranslation_en?: string;
   properNouns?: HskProperNoun[];
   texts: HskText[];
+  grammar?: HskGrammarPoint[];
 }
 
 const ROOT = path.join(process.cwd(), 'content', 'hsk');
@@ -95,6 +118,13 @@ export function loadHskLessons(book: string, level: string): HskLesson[] {
 
 export function getHskLesson(book: string, level: string, slug: string): HskLesson | null {
   return loadHskLessons(book, level).find((l) => l.slug === slug) ?? null;
+}
+
+export function getHskGrammar(book: string, level: string, slug: string, pointSlug: string) {
+  const lesson = getHskLesson(book, level, slug);
+  if (!lesson) return null;
+  const point = (lesson.grammar ?? []).find((g) => g.slug === pointSlug);
+  return point ? { lesson, point } : null;
 }
 
 export function getHskText(book: string, level: string, slug: string, textSlug: string) {

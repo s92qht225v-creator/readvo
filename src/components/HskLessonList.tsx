@@ -99,6 +99,22 @@ export function HskLessonList({ lessons, book, level }: { lessons: HskLesson[]; 
                             <span className="hsk__part-arrow" aria-hidden="true">›</span>
                           </Link>
                         ))}
+                        {(lesson.grammar ?? []).map((g) => (
+                          <Link
+                            key={g.slug}
+                            href={`/hsk/${book}/${level}/${lesson.slug}/grammar/${g.slug}`}
+                            className="hsk__part"
+                          >
+                            <span className="hsk__part-zh" lang="zh-Hans">{g.label}</span>
+                            <span className="hsk__part-tr">
+                              {language === 'ru' ? (g.labelTranslation_ru || g.labelTranslation)
+                                : language === 'en' ? (g.labelTranslation_en || g.labelTranslation)
+                                : g.labelTranslation}
+                              {' · '}{g.title}
+                            </span>
+                            <span className="hsk__part-arrow" aria-hidden="true">›</span>
+                          </Link>
+                        ))}
                         {lesson.properNouns && lesson.properNouns.length > 0 && (
                           <div className="hsk__nouns">
                             <span className="hsk__nouns-label">{t('Atoqli otlar', 'Имена собственные', 'Proper nouns')}</span>

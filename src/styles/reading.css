@@ -13190,3 +13190,45 @@ body {
 .hsk__nouns-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: #aaa; }
 .hsk__noun { font-size: 0.85rem; color: #666; }
 
+
+/* ── HSK grammar point (HskGrammar) ─────────────────────────────────────────
+   A textbook grammar note: prose in the reader's language, patterns in a
+   monospace-ish box, examples with ruby pinyin. Typed blocks rather than free
+   HTML so all three languages render identically. */
+.hskg__back { display: inline-block; margin-bottom: 12px; color: #888; text-decoration: none; font-size: 0.9rem; }
+.hskg__title { font-size: 1.5rem; font-weight: 700; color: #333; margin: 0; }
+.hskg__py { font-size: 0.95rem; color: var(--color-accent); font-family: var(--font-pinyin); margin: 4px 0 20px; }
+
+.hskg__body { background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); padding: 18px 16px; }
+.hskg__h { font-size: 1.05rem; font-weight: 700; color: #dc2626; margin: 22px 0 8px; }
+.hskg__h:first-child { margin-top: 0; }
+.hskg__p { font-size: 0.95rem; line-height: 1.65; color: #444; margin: 0 0 10px; }
+
+/* The pattern itself — set apart so it reads as a formula, not prose. */
+.hskg__formula {
+  background: #f7f7f7;
+  border-left: 3px solid #dc2626;
+  border-radius: 0 4px 4px 0;
+  padding: 10px 12px;
+  margin: 10px 0 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.6;
+}
+
+.hskg__ex { margin: 0 0 14px; padding-left: 12px; border-left: 2px solid #eee; }
+.hskg__ex-zh { font-size: 1.15rem; line-height: 2.1; color: #1a1a2e; }
+.hskg__ex-tr { font-size: 0.9rem; color: #777; margin-top: 2px; }
+
+/* Two-line rule — the line break is meaningful, so keep it. */
+.hskg__note {
+  white-space: pre-line;
+  background: #fff8e1;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-top: 18px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #6b5300;
+}
