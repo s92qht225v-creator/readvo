@@ -316,6 +316,101 @@
           ]
         }
       ]
+    },
+    {
+      "id": "hsk4-l1-t4",
+      "slug": "text-4",
+      "label": "课文四",
+      "labelTranslation": "Matn 4",
+      "labelTranslation_ru": "Текст 4",
+      "labelTranslation_en": "Text 4",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "vocab": [
+        "羡慕",
+        "爱情",
+        "星星",
+        "即使",
+        "加班",
+        "亮",
+        "感动"
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l1-t4-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l1-t4-s1",
+              "text_original": "很多女孩子羡慕浪漫的爱情。",
+              "pinyin": "Hěn duō nǚháizi xiànmù làngmàn de àiqíng.",
+              "text_translation": "Ko'p qizlar romantik sevgiga havas qiladi.",
+              "text_translation_ru": "Многие девушки завидуют романтической любви.",
+              "text_translation_en": "Many girls envy a romantic love.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t4-s2",
+              "text_original": "那什么是浪漫呢？",
+              "pinyin": "Nà shénme shì làngmàn ne?",
+              "text_translation": "Xo'sh, romantika nima o'zi?",
+              "text_translation_ru": "Так что же такое романтика?",
+              "text_translation_en": "So what is romance?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t4-s3",
+              "text_original": "年轻人说：浪漫是她想要月亮时，你不会给她星星。",
+              "pinyin": "Niánqīngrén shuō: làngmàn shì tā xiǎng yào yuèliang shí, nǐ bú huì gěi tā xīngxing.",
+              "text_translation": "Yoshlar aytadi: romantika — u oyni istaganda, sen unga yulduz bermasliging.",
+              "text_translation_ru": "Молодые говорят: романтика — это когда она хочет луну, а ты не даёшь ей звёзды.",
+              "text_translation_en": "Young people say: romance is that when she wants the moon, you don't hand her the stars.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t4-s4",
+              "text_original": "中年人说：浪漫是即使晚上加班到零点，到家时，自己家里也还亮着灯。",
+              "pinyin": "Zhōngniánrén shuō: làngmàn shì jíshǐ wǎnshang jiābān dào língdiǎn, dào jiā shí, zìjǐ jiā li yě hái liàngzhe dēng.",
+              "text_translation": "O'rta yoshdagilar aytadi: romantika — hatto kechqurun yarim tungacha qo'shimcha ishlab qaytsang ham, uyingda chiroq hamon yonib turishi.",
+              "text_translation_ru": "Люди среднего возраста говорят: романтика — это когда даже если ты работаешь допоздна до полуночи, дома всё ещё горит свет.",
+              "text_translation_en": "Middle-aged people say: romance is that even if you work overtime until midnight, the light at home is still on when you get back.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t4-s5",
+              "text_original": "老年人说：浪漫其实就像歌中唱的那样，「我能想到最浪漫的事，就是和你一起慢慢变老。」",
+              "pinyin": "Lǎoniánrén shuō: làngmàn qíshí jiù xiàng gē zhōng chàng de nàyàng, 「Wǒ néng xiǎngdào zuì làngmàn de shì, jiù shì hé nǐ yìqǐ mànmàn biàn lǎo.」",
+              "text_translation": "Keksalar aytadi: romantika, aslida, qo'shiqda kuylanganidek — «Men o'ylay oladigan eng romantik narsa — bu sen bilan birga asta-sekin qarish».",
+              "text_translation_ru": "Пожилые говорят: романтика — это как поётся в песне: «Самое романтичное, что я могу представить, — это медленно стареть вместе с тобой».",
+              "text_translation_en": "Older people say: romance is really as the song goes — “The most romantic thing I can imagine is growing old slowly together with you.”",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t4-s6",
+              "text_original": "其实，让我们感动的，就是生活中简单的爱情。",
+              "pinyin": "Qíshí, ràng wǒmen gǎndòng de, jiù shì shēnghuó zhōng jiǎndān de àiqíng.",
+              "text_translation": "Aslida, bizni ta'sirlantiradigan narsa — hayotdagi oddiy muhabbat.",
+              "text_translation_ru": "На самом деле трогает нас именно простая любовь в обычной жизни.",
+              "text_translation_en": "In fact, what moves us is the simple love found in everyday life.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t4-s7",
+              "text_original": "有时候，简单就是最大的幸福。",
+              "pinyin": "Yǒu shíhou, jiǎndān jiù shì zuì dà de xìngfú.",
+              "text_translation": "Ba'zida oddiylikning o'zi eng katta baxtdir.",
+              "text_translation_ru": "Иногда простота и есть самое большое счастье.",
+              "text_translation_en": "Sometimes simplicity is the greatest happiness of all.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
     }
   ],
   "grammar": [
