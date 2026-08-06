@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
+import { BannerMenu } from './BannerMenu';
 import { PageFooter } from './PageFooter';
 import type { HskLesson } from '@/services/hsk';
 
@@ -32,6 +34,23 @@ export function HskLessonList({ lessons, book, level }: { lessons: HskLesson[]; 
 
   return (
     <main className="home">
+      {/* Same banner as the catalog pages — logo home, hamburger menu. Without
+          it this page had no way back and no menu. */}
+      <header className="home__hero home__hero--lang">
+        <div className="home__hero-inner">
+          <span className="lp__hero-watermark" aria-hidden="true">课</span>
+          <div className="home__hero-top-row">
+            <Link href="/" className="home__hero-logo">
+              <Image src="/logo.svg" alt="Blim" width={64} height={22} className="home__hero-logo-img" priority />
+            </Link>
+            {/* No mobile title here: the H1 directly below already reads
+                "HSK {level}", and the catalog's decorative label would just
+                repeat it two lines apart. */}
+            <BannerMenu />
+          </div>
+        </div>
+      </header>
+
       <section className="home__content">
         <h1 className="hsk__title">HSK {level}</h1>
         <p className="hsk__intro">
