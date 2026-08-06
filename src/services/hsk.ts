@@ -25,6 +25,9 @@ export interface HskText {
   level: number;
   dictationKeyboard?: boolean;
   dictationPinyin?: boolean;
+  /** Per-speaker TTS voice override for this text — a lesson's speakers differ
+   *  from text to text, and a character should keep one voice across both. */
+  voices?: Record<string, string>;
   vocab?: unknown[];
   /** Same section shape as a dialogue — that's what lets the reader take it as-is. */
   sections: {

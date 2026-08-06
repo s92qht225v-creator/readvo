@@ -71,6 +71,7 @@ export default async function HskTextPage({ params }: PageParams) {
         titleTranslation_en: found.lesson.titleTranslation_en,
         dictationKeyboard: found.text.dictationKeyboard,
         dictationPinyin: found.text.dictationPinyin,
+        voices: found.text.voices,
       }}
       bookPath={`/hsk/${book}/${level}`}
       listPath={`/hsk/${book}/${level}`}

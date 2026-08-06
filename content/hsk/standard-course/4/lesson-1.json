@@ -32,6 +32,13 @@
       "uz": "Li Jin (ism)",
       "ru": "Ли Цзинь (имя)",
       "en": "Li Jin (name)"
+    },
+    {
+      "zh": "李老师",
+      "py": "Lǐ lǎoshī",
+      "uz": "Li o'qituvchi",
+      "ru": "учитель Ли",
+      "en": "Teacher Li"
     }
   ],
   "texts": [
@@ -122,6 +129,92 @@
               "text_translation_ru": "Он не только хорошо играет в футбол, у него ещё и хороший характер.",
               "text_translation_en": "He's not only good at football — he has a good personality too.",
               "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l1-t2",
+      "slug": "text-2",
+      "label": "课文二",
+      "labelTranslation": "Matn 2",
+      "labelTranslation_ru": "Текст 2",
+      "labelTranslation_en": "Text 2",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦",
+        "B": "茉莉"
+      },
+      "vocab": [
+        "开玩笑",
+        "从来",
+        "最好",
+        "共同",
+        "适合",
+        "幸福"
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l1-t2-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l1-t2-s1",
+              "text_original": "李老师，我下个月5号就要结婚了。",
+              "pinyin": "Lǐ lǎoshī, wǒ xià ge yuè 5 hào jiù yào jiéhūn le.",
+              "text_translation": "Li o'qituvchi, men kelasi oyning 5-sanasida turmushga chiqaman.",
+              "text_translation_ru": "Учитель Ли, я выхожу замуж 5-го числа следующего месяца.",
+              "text_translation_en": "Teacher Li, I'm getting married on the 5th of next month.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l1-t2-s2",
+              "text_original": "你是在开玩笑吧？你们不是才认识一个月？",
+              "pinyin": "Nǐ shì zài kāi wánxiào ba? Nǐmen bú shì cái rènshi yí ge yuè?",
+              "text_translation": "Hazillashyapsizmi? Siz endigina bir oy oldin tanishgan emasmidingiz?",
+              "text_translation_ru": "Ты шутишь? Вы же познакомились всего месяц назад?",
+              "text_translation_en": "You're joking, aren't you? Didn't you two only meet a month ago?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t2-s3",
+              "text_original": "虽然我们认识的时间不长，但我从来没这么快乐过。",
+              "pinyin": "Suīrán wǒmen rènshi de shíjiān bù cháng, dàn wǒ cónglái méi zhème kuàilè guo.",
+              "text_translation": "Garchi tanishganimizga ko'p bo'lmagan bo'lsa-da, men hech qachon bunchalik baxtli bo'lmaganman.",
+              "text_translation_ru": "Хотя мы знакомы недолго, я никогда не была так счастлива.",
+              "text_translation_en": "We haven't known each other long, but I've never been this happy.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l1-t2-s4",
+              "text_original": "两个人在一起，最好能有共同的兴趣和爱好。",
+              "pinyin": "Liǎng ge rén zài yìqǐ, zuìhǎo néng yǒu gòngtóng de xìngqù hé àihào.",
+              "text_translation": "Ikki kishi birga bo'lsa, umumiy qiziqish va sevimli mashg'ulotlari bo'lgani ma'qul.",
+              "text_translation_ru": "Когда двое вместе, лучше, чтобы у них были общие интересы и увлечения.",
+              "text_translation_en": "When two people are together, it's best if they share interests and hobbies.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t2-s5",
+              "text_original": "我们有很多共同的爱好，经常一起打球、唱歌、做菜。",
+              "pinyin": "Wǒmen yǒu hěn duō gòngtóng de àihào, jīngcháng yìqǐ dǎqiú, chànggē, zuò cài.",
+              "text_translation": "Bizning ko'p umumiy qiziqishlarimiz bor — tez-tez birga to'p o'ynaymiz, qo'shiq aytamiz, ovqat pishiramiz.",
+              "text_translation_ru": "У нас много общих увлечений: мы часто вместе играем в мяч, поём и готовим.",
+              "text_translation_en": "We have a lot of hobbies in common — we often play ball, sing and cook together.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l1-t2-s6",
+              "text_original": "看来你真的找到适合你的人了。祝你们幸福！",
+              "pinyin": "Kànlái nǐ zhēn de zhǎodào shìhé nǐ de rén le. Zhù nǐmen xìngfú!",
+              "text_translation": "Ko'rinishidan, siz haqiqatan ham o'zingizga mos odamni topibsiz. Baxtli bo'linglar!",
+              "text_translation_ru": "Похоже, ты действительно нашла подходящего человека. Счастья вам!",
+              "text_translation_en": "It seems you've really found the right person. I wish you both happiness!",
+              "speaker": "A"
             }
           ]
         }
