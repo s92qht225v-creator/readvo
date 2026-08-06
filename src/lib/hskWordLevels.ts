@@ -62,18 +62,41 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
     }
   }
 
-  // Level of a word: HSK headword level, else max of component-char levels, else null.
+  // Level of a word: HSK headword level, else the max over its largest known
+  // SUB-WORDS, else null.
+  //
+  // Sub-words, not single characters: 有时候 is not an HSK headword, and 候 alone
+  // isn't an HSK entry either, so a char-by-char fallback called the whole thing
+  // off-list and showed pinyin for it at every level. Decomposing into 有 + 时候
+  // (both level 1) gets it right. Same for 工作时间 → 工作 + 时间.
   const wordLevel = (zh: string, py?: string): number | null => {
     const exact = py ? byKey.get(`${zh}|${toneless(py)}`) : undefined;
     const whole = exact ?? hskWhole.get(zh);
     if (whole !== undefined) return whole;
-    let mx = 0;
-    for (const c of zh) {
-      const cl = hskWhole.get(c);
-      if (cl === undefined) return null; // a part is off-list → whole word off-list
-      mx = Math.max(mx, cl);
-    }
-    return mx || null;
+    // Pick the decomposition with the LOWEST hardest part, not the one with the
+    // longest first match. Longest-first reads 一个人 as 一 + 个人 ("individual",
+    // HSK 5) and calls a level-1 phrase level 5; the easiest reading 一 + 个 + 人
+    // is the one a learner actually parses. Words are <= a few characters, so
+    // this exhaustive search is trivial.
+    const t = [...zh];
+    const memo = new Map<number, number | null>();
+    const best = (i: number): number | null => {
+      if (i >= t.length) return 0;
+      if (memo.has(i)) return memo.get(i)!;
+      let out: number | null = null;
+      for (let len = 1; len <= Math.min(MAX_WORD, t.length - i); len++) {
+        const l = hskWhole.get(t.slice(i, i + len).join(''));
+        if (l === undefined) continue;
+        const rest = best(i + len);
+        if (rest === null) continue;
+        const cand = Math.max(l, rest);
+        if (out === null || cand < out) out = cand;
+      }
+      memo.set(i, out);
+      return out;
+    };
+    const mx = best(0);
+    return mx ? mx : null; // 0 means "no parts" → treat as off-list
   };
 
   const dict = segWords();
@@ -89,20 +112,45 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
         for (let k = a; k < b; k++) lvls[k] = lvl;
       }
     } else {
+      // Longest match starting at `at`, or 0 if none beyond a bare character.
+      const matchLen = (at: number): number => {
+        for (let len = Math.min(MAX_WORD, text.length - at); len >= 2; len--) {
+          const cand = text.slice(at, at + len).join('');
+          if (dict.has(cand) || hskWhole.has(cand)) return len;
+        }
+        return 0;
+      };
+
       let i = 0;
       while (i < text.length) {
         if (!isHan(text[i])) { i += 1; continue; }
-        let hit = 0;
-        // longest-match against the CEDICT dictionary (len 4..2), then single char.
-        for (let len = Math.min(MAX_WORD, text.length - i); len >= 2; len--) {
-          const cand = text.slice(i, i + len).join('');
-          if (dict.has(cand) || hskWhole.has(cand)) {
-            const lvl = wordLevel(cand);
-            for (let k = 0; k < len; k++) lvls[i + k] = lvl;
-            hit = len; break;
+        let hit = matchLen(i);
+
+        // Greedy longest-match sometimes swallows a rare CC-CEDICT entry that
+        // straddles two ordinary words: 没有同事在旁边 matched 在旁 ("at one's
+        // side", literary) and stranded 边, so the reader showed pinyin for a
+        // word that isn't in the sentence and hid none for 旁边 (HSK 2).
+        //
+        // When the greedy match is off-list, prefer a SHORTER split — but only
+        // if BOTH resulting words are known. That guard is what keeps a genuine
+        // off-list compound intact: 通勤 would split to 通 + 勤, and 勤 is
+        // off-list, so it stays whole and keeps its pinyin.
+        if (hit >= 2 && wordLevel(text.slice(i, i + hit).join('')) === null) {
+          for (let len = hit - 1; len >= 1; len--) {
+            if (wordLevel(text.slice(i, i + len).join('')) === null) continue;
+            const nextLen = matchLen(i + len) || 1;
+            if (wordLevel(text.slice(i + len, i + len + nextLen).join('')) !== null) {
+              hit = len;
+              break;
+            }
           }
         }
+
         if (!hit) { lvls[i] = wordLevel(text[i]); hit = 1; }
+        else {
+          const lvl = wordLevel(text.slice(i, i + hit).join(''));
+          for (let k = 0; k < hit; k++) lvls[i + k] = lvl;
+        }
         i += hit;
       }
     }
