@@ -117,6 +117,10 @@ interface DialogueReaderProps {
   bookPath: string;
   listPath?: string;
   preview: DialoguePreviewData;   // server-rendered public slice (always present)
+  /** Where to fetch the gated content from. Defaults to the dialogue API; HSK
+   *  course texts pass their own endpoint so they can reuse this whole reader
+   *  (audio, progressive pinyin, vocab, dictation, role-play) unchanged. */
+  contentPath?: string;
 }
 
 // ── Main component ─────────────────────────────────────────────────────────
@@ -129,7 +133,7 @@ const TABS = [
 ];
 
 
-export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueReaderProps) {
+export function DialogueReader({ meta, bookPath, listPath, preview, contentPath }: DialogueReaderProps) {
   const { getAccessToken, user, isLoading: authLoading } = useAuth();
   const [language] = useLanguage();
 
@@ -212,7 +216,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview }: DialogueRe
       try {
         const token = await getAccessToken();
         if (!token) { if (!cancelled) setStatus('locked'); return; }
-        const res = await fetch(`/api/content/dialogue/${meta.book}/${meta.slug}`, {
+        const res = await fetch(contentPath ?? `/api/content/dialogue/${meta.book}/${meta.slug}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (cancelled) return;

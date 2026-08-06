@@ -26,7 +26,24 @@ export interface HskText {
   dictationKeyboard?: boolean;
   dictationPinyin?: boolean;
   vocab?: unknown[];
-  sections: { id: string; sentences: Record<string, unknown>[] }[];
+  /** Same section shape as a dialogue — that's what lets the reader take it as-is. */
+  sections: {
+    id: string;
+    type: string;
+    heading: string;
+    subheading: string;
+    audio_url?: string;
+    sentences: {
+      id: string;
+      text_original: string;
+      pinyin: string;
+      text_translation: string;
+      text_translation_ru: string;
+      text_translation_en?: string;
+      speaker?: string;
+      audio_url?: string;
+    }[];
+  }[];
 }
 
 export interface HskProperNoun {
