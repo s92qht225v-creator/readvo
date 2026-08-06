@@ -48,10 +48,6 @@ interface Sentence {
   end?: number;
   /** Per-character HSK 3.0 level (server-attached). null = off-list. */
   charLvls?: (number | null)[];
-  /** Display-only speaker name (course texts print 孙月：before the line).
-   *  Deliberately NOT part of text_original: TTS, dictation and progressive
-   *  pinyin all read text_original, and none of them should see the name. */
-  speakerName?: string;
 }
 
 interface VocabEntry {
@@ -685,9 +681,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                             return (
                               <div key={`${section.id}-g${gi}`} className={`dr-line dr-line--sp${(speaker || 'a').toLowerCase()}`}>
                                 <div className="dr-line-main">
-                                  {group[0].speakerName && (
-                                    <div className="dr-line-name">{group[0].speakerName}：</div>
-                                  )}
                                   <div ref={group[0].id === allSentences[0]?.id ? firstLineRef : undefined} className="dr-line-chars">
                                     {group.map((s, si) => {
                                       const pairs = alignPinyinToText(s.text_original, s.pinyin);

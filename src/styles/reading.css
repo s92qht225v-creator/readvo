@@ -13190,24 +13190,3 @@ body {
 .hsk__nouns-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: #aaa; }
 .hsk__noun { font-size: 0.85rem; color: #666; }
 
-/* Speaker name printed before a turn (HSK course texts: 孙月：…). Display only —
-   the name is never in text_original, so audio, dictation and progressive
-   pinyin are unaffected by it. */
-.dr-line-name {
-  /* .dr-line-main is a flex ROW, so without these the name is squeezed to its
-     narrowest width and every character wraps onto its own line. */
-  flex-shrink: 0;
-  white-space: nowrap;
-  align-self: flex-start;
-  font-weight: 600;
-  color: var(--dr-speaker, #378add);
-  /* Drop it past the per-character pinyin row so the name sits on the same
-     baseline as the characters, not floating above them. */
-  margin-top: 0.95em;
-}
-
-/* No pinyin row to clear when pinyin is off. */
-.dr-line-chars:not(:has(.dr-char-py)) ~ .dr-line-name,
-.dr-line-main:not(:has(.dr-char-py)) .dr-line-name {
-  margin-top: 0;
-}

@@ -67,8 +67,7 @@
               "text_translation": "Eshitishimcha, yigiting Li Jin ham sen bilan bir universitetda o'qir ekan. Guruhdoshingmi?",
               "text_translation_ru": "Слышала, твой парень Ли Цзинь учится с тобой в одном университете. Он твой однокурсник?",
               "text_translation_en": "I hear your boyfriend Li Jin studies at the same university as you. Is he in your class?",
-              "speaker": "A",
-              "speakerName": "孙月"
+              "speaker": "A"
             },
             {
               "id": "hsk4-l1-t1-s2",
@@ -77,8 +76,7 @@
               "text_translation": "Ha, u jurnalistika, men esa huquq o'qiyman. Biz bir guruhda emasmiz.",
               "text_translation_ru": "Да, он изучает журналистику, а я — право. Мы не в одной группе.",
               "text_translation_en": "Yes. He studies journalism and I study law — we're not in the same class.",
-              "speaker": "B",
-              "speakerName": "王静"
+              "speaker": "B"
             },
             {
               "id": "hsk4-l1-t1-s3",
@@ -87,8 +85,7 @@
               "text_translation": "Unda ikkovingiz qanday tanishgansizlar?",
               "text_translation_ru": "А как вы двое познакомились?",
               "text_translation_en": "So how did the two of you meet?",
-              "speaker": "A",
-              "speakerName": "孙月"
+              "speaker": "A"
             },
             {
               "id": "hsk4-l1-t1-s4",
@@ -97,8 +94,7 @@
               "text_translation": "Biz futbol o'yinida tanishganmiz.",
               "text_translation_ru": "Мы познакомились на футбольном матче.",
               "text_translation_en": "We met at a football match.",
-              "speaker": "B",
-              "speakerName": "王静"
+              "speaker": "B"
             },
             {
               "id": "hsk4-l1-t1-s5",
@@ -107,8 +103,7 @@
               "text_translation": "Bizning guruh ular bilan o'ynadi, u yolg'iz o'zi ikkita gol urdi. Menda juda kuchli taassurot qoldirdi, keyin asta-sekin yaqinroq tanishdik.",
               "text_translation_ru": "Наша группа играла с их группой, и он один забил два гола. Он произвёл на меня сильное впечатление, а потом мы постепенно сблизились.",
               "text_translation_en": "Our class played theirs and he scored two goals himself. He made a strong impression on me, and after that we gradually got to know each other.",
-              "speaker": "B",
-              "speakerName": "王静"
+              "speaker": "B"
             },
             {
               "id": "hsk4-l1-t1-s6",
@@ -117,8 +112,7 @@
               "text_translation": "Nega u senga yoqadi?",
               "text_translation_ru": "Почему он тебе нравится?",
               "text_translation_en": "Why do you like him?",
-              "speaker": "A",
-              "speakerName": "孙月"
+              "speaker": "A"
             },
             {
               "id": "hsk4-l1-t1-s7",
@@ -127,8 +121,7 @@
               "text_translation": "U nafaqat futbolni yaxshi o'ynaydi, balki fe'l-atvori ham yaxshi.",
               "text_translation_ru": "Он не только хорошо играет в футбол, у него ещё и хороший характер.",
               "text_translation_en": "He's not only good at football — he has a good personality too.",
-              "speaker": "B",
-              "speakerName": "王静"
+              "speaker": "B"
             }
           ]
         }
