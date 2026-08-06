@@ -13169,7 +13169,11 @@ body {
 .hsk__tr { font-size: 0.85rem; color: #888; margin-top: 4px; }
 .hsk__chev { flex-shrink: 0; color: #bbb; font-size: 1rem; }
 
-.hsk__parts { padding: 0 14px 12px 56px; display: flex; flex-direction: column; gap: 6px; }
+/* Symmetric padding, NOT indented under the lesson number. A 56px left inset
+   aligned the rows with the title but squeezed them into a narrow column with
+   a dead gutter beside it — the parts are the content here, so they get the
+   card's full width. */
+.hsk__parts { padding: 0 14px 12px; display: flex; flex-direction: column; gap: 6px; }
 
 .hsk__part {
   display: flex;
