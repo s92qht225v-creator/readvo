@@ -52,12 +52,16 @@ export interface HskText {
 /** One block of a grammar explanation. `ex` carries Chinese + pinyin; every
  *  other type is prose in the three UI languages. */
 export interface HskGrammarBlock {
-  type: 'h' | 'p' | 'formula' | 'ex' | 'note';
+  type: 'h' | 'p' | 'formula' | 'ex' | 'note' | 'table';
   uz?: string;
   ru?: string;
   en?: string;
   zh?: string;
   py?: string;
+  /** `table` only. Column headers are Chinese, so they're language-independent;
+   *  each row carries its cells per language. */
+  head?: string[];
+  rows?: { uz: string[]; ru: string[]; en: string[] }[];
 }
 
 export interface HskGrammarPoint {

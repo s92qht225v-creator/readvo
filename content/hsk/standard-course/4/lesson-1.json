@@ -891,6 +891,276 @@
           "en": "刚 indicates something happened a short time ago.\nUsual pattern: Subject + 刚 + Verb\n刚 = just / just now / a short while ago"
         }
       ]
+    },
+    {
+      "slug": "gang-vs-gangcai",
+      "title": "刚 / 刚才",
+      "pinyin": "gāng / gāngcái",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "p",
+          "uz": "刚 va 刚才 ikkalasi ham biror harakat yaqinda sodir bo'lganini bildiradi. Ko'pincha «hozirgina / endigina / sal oldin» deb tarjima qilinadi.",
+          "ru": "刚 и 刚才 указывают, что действие произошло совсем недавно. Часто переводятся как «только что / совсем недавно».",
+          "en": "Both 刚 and 刚才 say an action happened not long ago. Either can be translated “just”, “just now” or “a short while ago”."
+        },
+        {
+          "type": "ex",
+          "zh": "你叔叔刚 / 刚才打电话来说给你发了个电子邮件。",
+          "py": "Nǐ shūshu gāng / gāngcái dǎ diànhuà lái shuō gěi nǐ fā le ge diànzǐ yóujiàn.",
+          "uz": "Amaking hozirgina qo'ng'iroq qilib, senga elektron xat yuborganini aytdi.",
+          "ru": "Твой дядя только что позвонил и сказал, что отправил тебе электронное письмо.",
+          "en": "Your uncle just called and said he sent you an email."
+        },
+        {
+          "type": "h",
+          "uz": "1. Gapdagi o'rni",
+          "ru": "1. Позиция в предложении",
+          "en": "1. Position in a sentence"
+        },
+        {
+          "type": "p",
+          "uz": "刚 — ravish. U odatda egadan keyin va fe'ldan oldin keladi.",
+          "ru": "刚 — наречие. Обычно ставится после подлежащего и перед глаголом.",
+          "en": "刚 is an adverb. It normally comes after the subject and before the verb."
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 刚 + Fe'l",
+          "ru": "Подлежащее + 刚 + Глагол",
+          "en": "Subject + 刚 + Verb"
+        },
+        {
+          "type": "ex",
+          "zh": "我刚看了邮箱，没有新邮件。",
+          "py": "Wǒ gāng kàn le yóuxiāng, méiyǒu xīn yóujiàn.",
+          "uz": "Men hozirgina elektron pochtamni tekshirdim, yangi xat yo'q.",
+          "ru": "Я только что проверил почту. Новых писем нет.",
+          "en": "I just checked my email. There are no new messages."
+        },
+        {
+          "type": "p",
+          "uz": "刚才 — vaqtni bildiruvchi so'z. U egadan oldin ham, keyin ham kelishi mumkin.",
+          "ru": "刚才 — слово со значением времени. Может стоять до или после подлежащего.",
+          "en": "刚才 is a time word. It can come before or after the subject."
+        },
+        {
+          "type": "formula",
+          "uz": "刚才 + Ega + Fe'l  /  Ega + 刚才 + Fe'l",
+          "ru": "刚才 + Подлежащее + Глагол  /  Подлежащее + 刚才 + Глагол",
+          "en": "刚才 + Subject + Verb  /  Subject + 刚才 + Verb"
+        },
+        {
+          "type": "ex",
+          "zh": "我刚才去洗手间了。",
+          "py": "Wǒ gāngcái qù xǐshǒujiān le.",
+          "uz": "Men hozirgina hojatxonaga borib keldim.",
+          "ru": "Я только что ходил в туалет.",
+          "en": "I went to the restroom just now."
+        },
+        {
+          "type": "ex",
+          "zh": "刚才我去洗手间了。",
+          "py": "Gāngcái wǒ qù xǐshǒujiān le.",
+          "uz": "Hozirgina men hojatxonaga borib kelgandim.",
+          "ru": "Только что я ходил в туалет.",
+          "en": "Just now, I went to the restroom."
+        },
+        {
+          "type": "h",
+          "uz": "2. Oldidan vaqt ko'rsatkichi",
+          "ru": "2. Другие указания времени",
+          "en": "2. Using other time expressions"
+        },
+        {
+          "type": "p",
+          "uz": "刚 oldidan boshqa vaqtni bildiruvchi so'z kelishi mumkin.",
+          "ru": "Перед 刚 может стоять другое выражение времени.",
+          "en": "刚 can be preceded by another time expression."
+        },
+        {
+          "type": "formula",
+          "uz": "Vaqt + Ega + 刚 + Fe'l",
+          "ru": "Время + Подлежащее + 刚 + Глагол",
+          "en": "Time + Subject + 刚 + Verb"
+        },
+        {
+          "type": "ex",
+          "zh": "我上个月刚结婚。",
+          "py": "Wǒ shàng ge yuè gāng jiéhūn.",
+          "uz": "Men o'tgan oy endigina turmush qurdim.",
+          "ru": "Я только в прошлом месяце женился.",
+          "en": "I just got married last month."
+        },
+        {
+          "type": "p",
+          "uz": "刚才 esa o'zi aniq bir yaqin o'tgan vaqtni bildirgani uchun, odatda uning oldidan boshqa vaqt ko'rsatkichi qo'yilmaydi.",
+          "ru": "刚才 само обозначает конкретный недавний момент, поэтому перед ним обычно не ставится другое указание времени.",
+          "en": "刚才 already names a specific recent moment, so it isn't normally preceded by another time expression."
+        },
+        {
+          "type": "h",
+          "uz": "3. Harakat davomiyligi",
+          "ru": "3. Продолжительность действия",
+          "en": "3. Duration"
+        },
+        {
+          "type": "p",
+          "uz": "刚 bilan fe'ldan keyin harakat qancha davom etganini ko'rsatish mumkin.",
+          "ru": "При 刚 после глагола может стоять выражение продолжительности.",
+          "en": "With 刚, the verb can be followed by an expression of duration."
+        },
+        {
+          "type": "ex",
+          "zh": "他刚来一会儿。",
+          "py": "Tā gāng lái yíhuìr.",
+          "uz": "U kelganiga hali ozgina vaqt bo'ldi.",
+          "ru": "Он здесь совсем недолго.",
+          "en": "He has only been here a short while."
+        },
+        {
+          "type": "p",
+          "uz": "刚才 bu shaklda davomiylikni ifodalash uchun ishlatilmaydi.",
+          "ru": "刚才 в такой конструкции для выражения продолжительности не используется.",
+          "en": "刚才 is not used this way to express duration."
+        },
+        {
+          "type": "h",
+          "uz": "4. Inkor shakli",
+          "ru": "4. Отрицание",
+          "en": "4. Negative forms"
+        },
+        {
+          "type": "p",
+          "uz": "刚才 dan keyin 不 / 没 kabi inkor so'zlari kelishi mumkin.",
+          "ru": "После 刚才 могут стоять отрицания 不 и 没.",
+          "en": "刚才 can be followed by a negative such as 不 or 没."
+        },
+        {
+          "type": "ex",
+          "zh": "你为什么刚才不说，现在才说？",
+          "py": "Nǐ wèishénme gāngcái bù shuō, xiànzài cái shuō?",
+          "uz": "Nega hozirgina aytmading, faqat hozir aytyapsan?",
+          "ru": "Почему ты не сказал только что, а говоришь только сейчас?",
+          "en": "Why didn't you say so just now, and are only saying it now?"
+        },
+        {
+          "type": "p",
+          "uz": "Bu holatda 刚 ishlatilmaydi.",
+          "ru": "В такой конструкции 刚 обычно использовать нельзя.",
+          "en": "刚 cannot normally replace 刚才 here."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa taqqoslash",
+          "ru": "Краткое сравнение",
+          "en": "Quick comparison"
+        },
+        {
+          "type": "table",
+          "head": [
+            "刚",
+            "刚才"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "Ravish",
+                "Vaqtni bildiruvchi so'z"
+              ],
+              "ru": [
+                "Наречие",
+                "Слово со значением времени"
+              ],
+              "en": [
+                "Adverb",
+                "Time word"
+              ]
+            },
+            {
+              "uz": [
+                "Egadan keyin keladi",
+                "Egadan oldin yoki keyin kelishi mumkin"
+              ],
+              "ru": [
+                "Обычно после подлежащего",
+                "Может стоять до или после подлежащего"
+              ],
+              "en": [
+                "Usually after the subject",
+                "Before or after the subject"
+              ]
+            },
+            {
+              "uz": [
+                "Oldidan vaqt ko'rsatkichi kelishi mumkin",
+                "Odatda oldidan vaqt ko'rsatkichi kelmaydi"
+              ],
+              "ru": [
+                "Может сочетаться с другим указанием времени",
+                "Обычно не сочетается с другим указанием времени"
+              ],
+              "en": [
+                "Can follow another time expression",
+                "Normally cannot"
+              ]
+            },
+            {
+              "uz": [
+                "Davomiylik bilan ishlatiladi",
+                "Davomiylik bilan ishlatilmaydi"
+              ],
+              "ru": [
+                "Используется с продолжительностью",
+                "Не используется с продолжительностью"
+              ],
+              "en": [
+                "Works with duration expressions",
+                "Not used with duration"
+              ]
+            },
+            {
+              "uz": [
+                "Bevosita inkor bilan ishlatilmaydi",
+                "不 / 没 bilan ishlatilishi mumkin"
+              ],
+              "ru": [
+                "Не используется прямо перед отрицанием",
+                "Может стоять перед 不 / 没"
+              ],
+              "en": [
+                "Not used directly before a negative",
+                "Can be followed by 不 / 没"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ex",
+          "zh": "我刚吃饭了。",
+          "py": "Wǒ gāng chīfàn le.",
+          "uz": "Men hozirgina ovqatlandim.",
+          "ru": "Я только что поел.",
+          "en": "I just ate."
+        },
+        {
+          "type": "ex",
+          "zh": "我刚才吃饭了。",
+          "py": "Wǒ gāngcái chīfàn le.",
+          "uz": "Men sal oldin ovqatlandim.",
+          "ru": "Я ел только что.",
+          "en": "I ate just now."
+        },
+        {
+          "type": "note",
+          "uz": "刚 → harakatning endi sodir bo'lganiga urg'u beradi.\n刚才 → «hozirgina / sal oldin» degan vaqtning o'zini bildiradi.",
+          "ru": "刚 → акцентирует, что действие произошло совсем недавно.\n刚才 → указывает на сам момент времени: «только что».",
+          "en": "刚 → focuses on the action having only just happened.\n刚才 → names the recent point in time itself: “just now”."
+        }
+      ]
     }
   ]
 }

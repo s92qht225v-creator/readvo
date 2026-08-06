@@ -13236,3 +13236,48 @@ body {
   line-height: 1.7;
   color: #6b5300;
 }
+
+/* Grammar comparison table (刚 vs 刚才). Horizontally scrollable: two columns of
+   prose in 375px would wrap to unreadable slivers, so the table keeps legible
+   column widths and the wrapper scrolls instead. */
+.hskg__table-wrap { overflow-x: auto; margin: 12px 0 16px; -webkit-overflow-scrolling: touch; }
+.hskg__table { border-collapse: collapse; width: 100%; min-width: 460px; font-size: 0.88rem; }
+.hskg__table th {
+  background: #fee2e2;
+  color: #dc2626;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 8px 12px;
+  text-align: left;
+  border: 1px solid #f3d0d0;
+}
+.hskg__table td {
+  padding: 8px 12px;
+  border: 1px solid #eee;
+  color: #444;
+  line-height: 1.5;
+  vertical-align: top;
+}
+.hskg__table tbody tr:nth-child(odd) td { background: #fafafa; }
+
+/* On a phone, a two-column prose comparison side-by-side means either unreadable
+   slivers or horizontal scrolling that hides half the comparison — and the
+   contrast IS the content. Stack it instead: each row becomes a pair of labelled
+   cells, so both halves are visible without scrolling. */
+@media (max-width: 600px) {
+  .hskg__table-wrap { overflow-x: visible; }
+  .hskg__table { min-width: 0; border-collapse: separate; border-spacing: 0; }
+  .hskg__table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .hskg__table tr { display: block; margin-bottom: 10px; border: 1px solid #eee; border-radius: 6px; overflow: hidden; }
+  .hskg__table td { display: block; border: none; border-bottom: 1px solid #f0f0f0; }
+  .hskg__table td:last-child { border-bottom: none; }
+  .hskg__table tbody tr:nth-child(odd) td { background: transparent; }
+  .hskg__table td::before {
+    content: attr(data-h);
+    display: block;
+    color: #dc2626;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+  }
+}

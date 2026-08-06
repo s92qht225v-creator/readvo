@@ -56,6 +56,29 @@ export function HskGrammar({ lesson, point, backHref }: {
               // Pre-line: the note is a two-line rule and the break carries meaning.
               <div key={i} className="hskg__note">{pick(b)}</div>
             );
+            if (b.type === 'table') return (
+              // Side-by-side contrast (刚 vs 刚才). Scrolls rather than wraps —
+              // squeezing two prose columns into 375px makes both unreadable.
+              <div key={i} className="hskg__table-wrap">
+                <table className="hskg__table">
+                  <thead>
+                    <tr>{(b.head ?? []).map((c) => <th key={c} lang="zh-Hans">{c}</th>)}</tr>
+                  </thead>
+                  <tbody>
+                    {(b.rows ?? []).map((r, ri) => (
+                      <tr key={ri}>
+                        {(language === 'ru' ? r.ru : language === 'en' ? r.en : r.uz)
+                          .map((c, ci) => (
+                            // data-h carries the column's 汉字 so the mobile
+                            // stacked layout can label each cell without the header row.
+                            <td key={ci} data-h={(b.head ?? [])[ci]}>{c}</td>
+                          ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            );
             if (b.type === 'ex') return (
               <div key={i} className="hskg__ex">
                 <div className="hskg__ex-zh" lang="zh-Hans">
