@@ -1326,7 +1326,10 @@ body {
 
 /* ── Dialog body ── */
 .dr-dialog-body {
-  padding: 30px 16px 24px;
+  /* Named so .dr-trbar can cancel it exactly — the bar has to start flush
+     against the hero, and this padding is the only thing between them. */
+  --dr-body-pt: 30px;
+  padding: var(--dr-body-pt) 16px 24px;
   width: fit-content;
   min-width: 300px;
   max-width: 90vw;
@@ -13343,6 +13346,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
+  /* Sit flush under the hero at rest by climbing back out of the body's top
+     padding. The lines below keep that padding — only the bar cancels it. */
+  margin-top: calc(-1 * var(--dr-body-pt, 30px));
   min-height: 42px;
   display: flex;
   align-items: center;
