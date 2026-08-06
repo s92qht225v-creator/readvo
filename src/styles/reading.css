@@ -13119,3 +13119,73 @@ body {
 .dict__exzh { display: block; font-size: 17px; color: #1a1a2e; line-height: 1.5; }
 .dict__expy { display: block; font-size: 13px; color: var(--color-accent); font-style: italic; margin-top: 2px; }
 .dict__extr { display: block; font-size: 13px; color: #777; margin-top: 2px; }
+
+/* ── HSK course lesson list (HskLessonList) ─────────────────────────────────
+   A textbook table of contents: one collapsible card per lesson, its parts
+   (课文一, 课文二, …) revealed on tap. Deliberately NOT tabs — each part is its
+   own page, which keeps the reader unchanged and every part linkable. */
+.hsk__title { font-size: 1.6rem; font-weight: 700; color: #333; margin: 0 0 4px; }
+.hsk__intro { font-size: 0.9rem; color: #888; margin: 0 0 20px; }
+.hsk__vol { font-size: 1rem; font-weight: 600; color: #dc2626; margin: 20px 0 8px; }
+
+.hsk__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+
+.hsk__item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.hsk__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+/* Lesson number reads as the anchor — it's how someone with the book navigates. */
+.hsk__num {
+  flex-shrink: 0;
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 6px;
+  background: #fee2e2;
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.hsk__text { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.hsk__zh { font-size: 1.15rem; font-weight: 600; color: #333; }
+.hsk__py { font-size: 0.85rem; color: var(--color-accent); font-family: var(--font-pinyin); margin-top: 2px; }
+.hsk__tr { font-size: 0.85rem; color: #888; margin-top: 4px; }
+.hsk__chev { flex-shrink: 0; color: #bbb; font-size: 1rem; }
+
+.hsk__parts { padding: 0 14px 12px 56px; display: flex; flex-direction: column; gap: 6px; }
+
+.hsk__part {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #f7f7f7;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.hsk__part-zh { font-size: 1rem; color: #333; font-weight: 600; }
+.hsk__part-tr { flex: 1; font-size: 0.85rem; color: #888; }
+.hsk__part-arrow { color: #bbb; }
+
+.hsk__nouns { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; padding: 8px 12px 0; }
+.hsk__nouns-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: #aaa; }
+.hsk__noun { font-size: 0.85rem; color: #666; }

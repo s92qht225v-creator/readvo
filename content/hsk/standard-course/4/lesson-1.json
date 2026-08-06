@@ -1,0 +1,105 @@
+{
+  "book": "standard-course",
+  "bookTitle": "HSK标准教程",
+  "level": 4,
+  "volume": "上",
+  "unit": 1,
+  "slug": "simple-love",
+  "title": "简单的爱情",
+  "pinyin": "Jiǎndān de àiqíng",
+  "titleTranslation": "Oddiy muhabbat",
+  "titleTranslation_ru": "Простая любовь",
+  "titleTranslation_en": "Simple Love",
+  "dateAdded": "2026-07-28",
+  "properNouns": [
+    { "zh": "孙月", "py": "Sūn Yuè", "uz": "Sun Yue (ism)", "ru": "Сунь Юэ (имя)", "en": "Sun Yue (name)" },
+    { "zh": "王静", "py": "Wáng Jìng", "uz": "Van Jing (ism)", "ru": "Ван Цзин (имя)", "en": "Wang Jing (name)" },
+    { "zh": "李进", "py": "Lǐ Jìn", "uz": "Li Jin (ism)", "ru": "Ли Цзинь (имя)", "en": "Li Jin (name)" }
+  ],
+  "texts": [
+    {
+      "id": "hsk4-l1-t1",
+      "slug": "text-1",
+      "label": "课文一",
+      "labelTranslation": "Matn 1",
+      "labelTranslation_ru": "Текст 1",
+      "labelTranslation_en": "Text 1",
+      "level": 4,
+      "dictationKeyboard": true,
+      "vocab": ["法律", "俩", "印象", "深", "熟悉", "不仅", "性格"],
+      "sections": [
+        {
+          "id": "hsk4-l1-t1-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l1-t1-s1",
+              "text_original": "听说你男朋友李进跟你是一个学校的，是你同学吗？",
+              "pinyin": "Tīngshuō nǐ nánpéngyou Lǐ Jìn gēn nǐ shì yí ge xuéxiào de, shì nǐ tóngxué ma?",
+              "text_translation": "Eshitishimcha, yigiting Li Jin ham sen bilan bir universitetda o'qir ekan. Guruhdoshingmi?",
+              "text_translation_ru": "Слышала, твой парень Ли Цзинь учится с тобой в одном университете. Он твой однокурсник?",
+              "text_translation_en": "I hear your boyfriend Li Jin studies at the same university as you. Is he in your class?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t1-s2",
+              "text_original": "是的，他学的是新闻，我学的是法律，我和他不是一个班。",
+              "pinyin": "Shì de, tā xué de shì xīnwén, wǒ xué de shì fǎlǜ, wǒ hé tā bú shì yí ge bān.",
+              "text_translation": "Ha, u jurnalistika, men esa huquq o'qiyman. Biz bir guruhda emasmiz.",
+              "text_translation_ru": "Да, он изучает журналистику, а я — право. Мы не в одной группе.",
+              "text_translation_en": "Yes. He studies journalism and I study law — we're not in the same class.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l1-t1-s3",
+              "text_original": "那你们俩是怎么认识的？",
+              "pinyin": "Nà nǐmen liǎ shì zěnme rènshi de?",
+              "text_translation": "Unda ikkovingiz qanday tanishgansizlar?",
+              "text_translation_ru": "А как вы двое познакомились?",
+              "text_translation_en": "So how did the two of you meet?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t1-s4",
+              "text_original": "我们是在一次足球比赛中认识的。",
+              "pinyin": "Wǒmen shì zài yí cì zúqiú bǐsài zhōng rènshi de.",
+              "text_translation": "Biz futbol o'yinida tanishganmiz.",
+              "text_translation_ru": "Мы познакомились на футбольном матче.",
+              "text_translation_en": "We met at a football match.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l1-t1-s5",
+              "text_original": "我们班跟他们班比赛，他一个人踢进两个球，我对他印象很深，后来就慢慢熟悉了。",
+              "pinyin": "Wǒmen bān gēn tāmen bān bǐsài, tā yí ge rén tī jìn liǎng ge qiú, wǒ duì tā yìnxiàng hěn shēn, hòulái jiù mànmàn shúxi le.",
+              "text_translation": "Bizning guruh ular bilan o'ynadi, u yolg'iz o'zi ikkita gol urdi. Menda juda kuchli taassurot qoldirdi, keyin asta-sekin yaqinroq tanishdik.",
+              "text_translation_ru": "Наша группа играла с их группой, и он один забил два гола. Он произвёл на меня сильное впечатление, а потом мы постепенно сблизились.",
+              "text_translation_en": "Our class played theirs and he scored two goals himself. He made a strong impression on me, and after that we gradually got to know each other.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l1-t1-s6",
+              "text_original": "你为什么喜欢他？",
+              "pinyin": "Nǐ wèishénme xǐhuan tā?",
+              "text_translation": "Nega u senga yoqadi?",
+              "text_translation_ru": "Почему он тебе нравится?",
+              "text_translation_en": "Why do you like him?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t1-s7",
+              "text_original": "他不仅足球踢得好，性格也不错。",
+              "pinyin": "Tā bùjǐn zúqiú tī de hǎo, xìnggé yě búcuò.",
+              "text_translation": "U nafaqat futbolni yaxshi o'ynaydi, balki fe'l-atvori ham yaxshi.",
+              "text_translation_ru": "Он не только хорошо играет в футбол, у него ещё и хороший характер.",
+              "text_translation_en": "He's not only good at football — he has a good personality too.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
