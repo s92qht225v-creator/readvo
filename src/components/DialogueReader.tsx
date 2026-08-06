@@ -414,6 +414,9 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
    * tapping is just "play this line" and moving the page under the reader
    * would be pure annoyance.
    */
+  const pendingScrollRef = useRef<HTMLElement | null>(null);
+  const [scrollTick, setScrollTick] = useState(0);
+
   const scrollLineUnderBar = useCallback((el: HTMLElement) => {
     const line = el.closest('.dr-line');
     if (!line) return;
@@ -431,11 +434,24 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     setActiveSentenceId(prev => focusMode ? id : prev === id ? null : id);
     const sentence = allSentences.find(s => s.id === id);
     playSentence(sentence);
-    // Next frame, not now: on the first tap the bar does not exist yet, so
-    // measuring here would size the gap against a bar that is about to appear
-    // and push the line down again.
-    if (el && showTranslation && !focusMode) requestAnimationFrame(() => scrollLineUnderBar(el));
-  }, [focusMode, allSentences, playSentence, showTranslation, scrollLineUnderBar]);
+    // Deferred to the effect below, not run here: on the first tap the bar does
+    // not exist yet, so measuring now would size the gap against a bar that is
+    // about to appear and push the line back down.
+    if (el && showTranslation && !focusMode) {
+      pendingScrollRef.current = el;
+      setScrollTick(t => t + 1);
+    }
+  }, [focusMode, allSentences, playSentence, showTranslation]);
+
+  // Runs once the bar is in the DOM, so the geometry is final. Deliberately an
+  // effect rather than requestAnimationFrame: rAF is starved whenever the tab
+  // isn't compositing, and this is a correctness step, not an animation.
+  useEffect(() => {
+    const el = pendingScrollRef.current;
+    if (!el) return;
+    pendingScrollRef.current = null;
+    scrollLineUnderBar(el);
+  }, [scrollTick, scrollLineUnderBar]);
 
   const handleFocusNav = useCallback((dir: 'prev' | 'next') => {
     const idx = allSentences.findIndex(s => s.id === displaySentenceId);
