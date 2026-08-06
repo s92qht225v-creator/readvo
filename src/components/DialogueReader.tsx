@@ -181,6 +181,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
   // their own effects; only the global tap player needs this.
   useEffect(() => () => { stopAllAudio(); }, []);
   const firstLineRef = useRef<HTMLDivElement | null>(null);
+  const trBarRef = useRef<HTMLDivElement | null>(null);
   // Font pill: flash visible on adjust, then fade fully out when idle (once the
   // user has used it at least once — keeps it discoverable until then).
   const [fontActive, setFontActive] = useState(false);
@@ -400,12 +401,38 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     setFocusMode(v => !v);
   }, [focusMode, isPlaying, activeSentenceId, allSentences, sentenceAudio, playSentence]);
 
-  const handleSentenceClick = useCallback((id: string) => {
+  /**
+   * Bring a tapped line up under the translation bar.
+   *
+   * The bar is pinned at the top, so a line tapped low on the screen puts its
+   * translation a screen away from the line it belongs to — with nothing to
+   * say which line that was. Karaoke never has this problem because audio
+   * drives the active line and scrolls it to centre; here the tap is the
+   * driver, so the tap has to do the scrolling.
+   *
+   * Only runs while the bar is actually on screen. With translations off,
+   * tapping is just "play this line" and moving the page under the reader
+   * would be pure annoyance.
+   */
+  const scrollLineUnderBar = useCallback((el: HTMLElement) => {
+    const line = el.closest('.dr-line');
+    if (!line) return;
+    const barBottom = trBarRef.current?.getBoundingClientRect().height ?? 0;
+    const gap = 12;
+    const delta = line.getBoundingClientRect().top - barBottom - gap;
+    // A line already sitting in the band under the bar doesn't need moving —
+    // scrolling it a few pixels reads as a twitch, not as help.
+    if (Math.abs(delta) < 24) return;
+    window.scrollBy({ top: delta, behavior: 'smooth' });
+  }, []);
+
+  const handleSentenceClick = useCallback((id: string, el?: HTMLElement) => {
     dismissTip('dialogue-tour');
     setActiveSentenceId(prev => focusMode ? id : prev === id ? null : id);
     const sentence = allSentences.find(s => s.id === id);
     playSentence(sentence);
-  }, [focusMode, allSentences, playSentence]);
+    if (el && showTranslation && !focusMode) scrollLineUnderBar(el);
+  }, [focusMode, allSentences, playSentence, showTranslation, scrollLineUnderBar]);
 
   const handleFocusNav = useCallback((dir: 'prev' | 'next') => {
     const idx = allSentences.findIndex(s => s.id === displaySentenceId);
@@ -691,7 +718,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                           : active.text_translation)
                         : '';
                       return (
-                        <div className="dr-trbar" aria-live="polite">
+                        <div className="dr-trbar" ref={trBarRef} aria-live="polite">
                           <p className="dr-trbar__text">{tr}</p>
                         </div>
                       );
@@ -738,7 +765,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                                           <div
                                             key={`${si}-${ci}`}
                                             className={`dr-char ${sActive ? 'dr-char--active' : ''} ${sPlaying ? 'dr-char--playing' : ''}`}
-                                            onClick={(e) => { e.stopPropagation(); handleSentenceClick(s.id); }}
+                                            onClick={(e) => { e.stopPropagation(); handleSentenceClick(s.id, e.currentTarget); }}
                                           >
                                             {/* NBSP, not a plain space: a plain space collapses, the
                                                 div gets no line box, and the row loses the pinyin's
