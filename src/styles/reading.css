@@ -13189,3 +13189,12 @@ body {
 .hsk__nouns { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; padding: 8px 12px 0; }
 .hsk__nouns-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: #aaa; }
 .hsk__noun { font-size: 0.85rem; color: #666; }
+
+/* Speaker name printed before a turn (HSK course texts: 孙月：…). Display only —
+   the name is never in text_original, so audio, dictation and progressive
+   pinyin are unaffected by it. */
+.dr-line-name {
+  font-weight: 600;
+  color: var(--dr-speaker, #378add);
+  margin-bottom: 2px;
+}
