@@ -674,7 +674,29 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                       <span className="story__focus-counter">{allSentences.findIndex(s => s.id === displaySentenceId) + 1} / {allSentences.length}</span>
                     </div>
                   ) : (
-                    dialogue.sections.map(section => {
+                  <>
+                    {/* Tapped line's translation, pinned at the top. Only
+                        possible now the tab bar moved to the bottom — nothing
+                        is pinned above it any more.
+
+                        Mounted for as long as Tarjima is on, empty until a line
+                        is tapped: the band then appears when you press the
+                        toggle, never when you tap a line, so tapping can't move
+                        the line out from under your finger. */}
+                    {showTranslation && (() => {
+                      const active = allSentences.find(s => s.id === revealedId);
+                      const tr = active
+                        ? (language === 'ru' ? active.text_translation_ru
+                          : language === 'en' ? (active.text_translation_en || active.text_translation)
+                          : active.text_translation)
+                        : '';
+                      return (
+                        <div className="dr-trbar" aria-live="polite">
+                          <p className="dr-trbar__text">{tr}</p>
+                        </div>
+                      );
+                    })()}
+                    {dialogue.sections.map(section => {
                       // Group consecutive sentences that share a speaker so
                       // they flow as one wrapping row of characters instead
                       // of breaking onto a new line per sentence.
@@ -732,22 +754,13 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                                     })}
                                   </div>
                                 </div>
-                                {showTranslation && (() => {
-                                  // Tap-to-reveal: show only the active line's
-                                  // translation, one at a time (matches the
-                                  // Arabic reader). Tapping another line moves
-                                  // the reveal; re-tapping the same line hides it.
-                                  const active = group.find(s => s.id === revealedId);
-                                  if (!active) return null;
-                                  const tr = language === 'ru' ? active.text_translation_ru : language === 'en' ? (active.text_translation_en || active.text_translation) : active.text_translation;
-                                  return <div className="dr-line-tr">{tr}</div>;
-                                })()}
                               </div>
                             );
                           })}
                         </div>
                       );
-                    })
+                    })}
+                  </>
                   )}
                 </div>
 
