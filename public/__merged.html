@@ -1,0 +1,265 @@
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><style>body{font-family:"Noto Sans",sans-serif;background:#f5f5f5;margin:0;padding-bottom:120px}*{box-sizing:border-box}.dr-hero {
+  background: linear-gradient(180deg, #dc2626 0%, #b91c1c 40%, #7f1d1d 100%);
+  padding: 0;
+  text-align: center;
+  position: relative;
+  z-index: 50;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+}
+.dr-tabs {
+  background: linear-gradient(180deg, #b91c1c 0%, #991b1b 100%);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+.dr-tabs__inner {
+  display: flex;
+  gap: 4px;
+  padding: 8px 16px 10px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.dr-tabs__tab {
+  flex: 1;
+  padding: 7px 4px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.dr-tabs__tab--active {
+  background: rgba(0, 0, 0, 0.28);
+  color: #fff;
+  font-weight: 700;
+}
+.dr-line {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 14px;
+  cursor: pointer;
+  background: #fff;
+  border-left: 3px solid var(--dr-speaker, #378add);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+  padding: 8px 12px;
+}
+.dr-line-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.dr-line-chars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  /* Gap is overridden to 0 below when pinyin is off so character spacing
+     stays natural without ruby labels overhead. */
+  column-gap: 0.18em;
+}
+.dr-char {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dr-char-py {
+  font-size: 0.69em;
+  color: #dc2626;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+.dr-char-py--empty {
+  visibility: hidden;
+}
+.dr-char-zh {
+  font-size: 1.5em;
+  color: #1a1a2e;
+  line-height: 1.3;
+}
+.dr-dialog-body {
+  padding: 30px 16px 24px;
+  width: fit-content;
+  min-width: 300px;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+.story__bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  background: rgba(245, 245, 245, 0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--color-border, #e0e0e0);
+  padding: 8px 24px calc(8px + env(safe-area-inset-bottom, 0px));
+}
+.story__bottom-bar-inner {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.reader__nav-toggle {
+  padding: 4px 12px;
+  min-height: 32px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+.dr-font-controls {
+  position: fixed;
+  right: 16px;
+  top: 58%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 89;
+  background-color: transparent;
+  border-radius: 999px;
+  box-shadow: none;
+  padding: 6px 4px;
+  /* Touch devices don't get the :hover reveal, so keep the pill discoverable. */
+  opacity: 0.65;
+  transition: opacity 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+.dr-font-btn {
+  width: 40px;
+  height: 44px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.story__play-fab {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-accent, #4a90e2);
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  z-index: 80;
+}
+.story__translation-panel {
+  position: fixed;
+  top: calc(var(--header-height, 60px) + env(safe-area-inset-top, 0px));
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: var(--color-surface, #fff);
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: var(--spacing-sm) var(--spacing-xl);
+}
+.story__translation-panel-text {
+  margin: 0;
+  font-size: 1.15em;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5;
+}
+/* ── MERGED LAYOUT (mockup only) ───────────────────────────────────────── */
+/* Tabs move to the bottom of the screen. */
+.dr-tabs { position: fixed; top: auto; bottom: 0; left: 0; right: 0; width: 100%;
+           margin-left: 0; z-index: 95; padding-bottom: env(safe-area-inset-bottom); }
+.dr-tabs__inner { max-width: 680px; }
+/* Nothing is pinned above it any more, so the translation panel takes top:0. */
+.dr-trpanel { position: sticky; top: 0; z-index: 40; background:#fff;
+              border-bottom:1px solid #eee; box-shadow:0 2px 8px rgba(0,0,0,.06);
+              padding:8px 12px; min-height:38px; display:flex; align-items:center; }
+.dr-trpanel p { margin:0; font-size:.95rem; color:#666; font-style:italic; text-align:center; width:100%; }
+/* The three reader toggles merge into the floating pill on the right. */
+.dr-font-controls { top: 40%; flex-direction: column; opacity: 1; background:#fff;
+                    box-shadow:0 2px 10px rgba(0,0,0,.15); border-radius:22px; padding:4px 0; }
+.dr-font-btn { display:block; width:44px; height:40px; font-size:.8rem; }
+.dr-font-btn--on { color:#dc2626; font-weight:700; }
+.dr-font-divider { height:1px; background:#eee; margin:2px 6px; }
+.demo-note{max-width:680px;margin:0 auto;padding:10px 12px;font-size:.8rem;color:#999}
+</style>
+<div class="dr-hero" style="background:linear-gradient(180deg,#dc2626,#b91c1c);padding:18px 16px;color:#fff">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <b style="font-size:1.3rem">blim</b><span style="opacity:.7">☰</span>
+  </div>
+  <div style="margin-top:10px"><b style="font-size:1.2rem">简单的爱情</b></div>
+</div>
+
+<div class="dr-trpanel"><p id="tr">— tap a line —</p></div>
+
+<div class="dr-dialog-body" id="lines"></div>
+
+<div class="dr-font-controls">
+  <button class="dr-font-btn" id="t-tr">译</button>
+  <div class="dr-font-divider"></div>
+  <button class="dr-font-btn" id="t-py">拼</button>
+  <div class="dr-font-divider"></div>
+  <button class="dr-font-btn" id="t-fo">⛶</button>
+  <div class="dr-font-divider"></div>
+  <button class="dr-font-btn">A+</button>
+  <button class="dr-font-btn">A−</button>
+</div>
+
+<div class="dr-tabs"><div class="dr-tabs__inner">
+  <button class="dr-tabs__tab dr-tabs__tab--active">Dialog</button>
+  <button class="dr-tabs__tab">So’zlar</button>
+  <button class="dr-tabs__tab">Diktant</button>
+  <button class="dr-tabs__tab">Mashq</button>
+</div></div>
+
+<script>
+const D=[["A","听说你男朋友李进跟你是一个学校的，是你同学吗？","Eshitishimcha, yigiting Li Jin ham sen bilan bir universitetda o’qir ekan."],
+       ["B","是的，他学的是新闻，我学的是法律。","Ha, u jurnalistika, men esa huquq o’qiyman."],
+       ["A","那你们俩是怎么认识的？","Unda ikkovingiz qanday tanishgansizlar?"],
+       ["B","我们是在一次足球比赛中认识的。","Biz futbol o’yinida tanishganmiz."],
+       ["A","你为什么喜欢他？","Nega u senga yoqadi?"],
+       ["B","他不仅足球踢得好，性格也不错。","U nafaqat futbolni yaxshi o’ynaydi, balki fe’l-atvori ham yaxshi."]];
+const box=document.getElementById('lines');
+D.forEach(function(x){
+  const d=document.createElement('div'); d.className='dr-line';
+  d.style.setProperty('--dr-speaker', x[0]==='A'?'#dc2626':'#378add');
+  const m=document.createElement('div'); m.className='dr-line-main';
+  const row=document.createElement('div'); row.className='dr-line-chars';
+  [...x[1]].forEach(function(c){ const e=document.createElement('div'); e.className='dr-char';
+    e.innerHTML='<div class="dr-char-py dr-char-py--empty">&nbsp;</div><div class="dr-char-zh">'+c+'</div>'; row.appendChild(e); });
+  m.appendChild(row); d.appendChild(m);
+  d.onclick=function(){ document.getElementById('tr').textContent=x[2]; };
+  box.appendChild(d);
+});
+</script>
