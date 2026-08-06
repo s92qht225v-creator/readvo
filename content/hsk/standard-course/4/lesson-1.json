@@ -39,6 +39,13 @@
       "uz": "Li o'qituvchi",
       "ru": "учитель Ли",
       "en": "Teacher Li"
+    },
+    {
+      "zh": "高老师",
+      "py": "Gāo lǎoshī",
+      "uz": "Gao o'qituvchi",
+      "ru": "учитель Гао",
+      "en": "Teacher Gao"
     }
   ],
   "texts": [
@@ -218,6 +225,92 @@
               "text_translation": "Ko'rinishidan, siz haqiqatan ham o'zingizga mos odamni topibsiz. Baxtli bo'linglar!",
               "text_translation_ru": "Похоже, ты действительно нашла подходящего человека. Счастья вам!",
               "text_translation_en": "It seems you've really found the right person. I wish you both happiness!",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l1-t3",
+      "slug": "text-3",
+      "label": "课文三",
+      "labelTranslation": "Matn 3",
+      "labelTranslation_ru": "Текст 3",
+      "labelTranslation_en": "Text 3",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦",
+        "B": "茉莉"
+      },
+      "vocab": [
+        "生活",
+        "刚",
+        "浪漫",
+        "够",
+        "缺点",
+        "接受"
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l1-t3-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l1-t3-s1",
+              "text_original": "听说您跟妻子结婚快二十年了？",
+              "pinyin": "Tīngshuō nín gēn qīzi jiéhūn kuài èrshí nián le?",
+              "text_translation": "Eshitishimcha, siz xotiningiz bilan yigirma yilga yaqin turmush qurgan ekansiz?",
+              "text_translation_ru": "Я слышала, вы с женой женаты почти двадцать лет?",
+              "text_translation_en": "I hear you and your wife have been married almost twenty years?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l1-t3-s2",
+              "text_original": "到6月9号，我们就结婚二十年了。这么多年，我们的生活一直挺幸福的。",
+              "pinyin": "Dào 6 yuè 9 hào, wǒmen jiù jiéhūn èrshí nián le. Zhème duō nián, wǒmen de shēnghuó yìzhí tǐng xìngfú de.",
+              "text_translation": "9-iyunga borib, turmush qurganimizga yigirma yil bo'ladi. Shuncha yil davomida hayotimiz doim ancha baxtli o'tdi.",
+              "text_translation_ru": "К 9 июня будет двадцать лет, как мы женаты. Все эти годы наша жизнь была довольно счастливой.",
+              "text_translation_en": "By June 9th we'll have been married twenty years. All these years our life has been quite happy.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t3-s3",
+              "text_original": "我和丈夫刚结婚的时候，每天都觉得很新鲜，在一起有说不完的话。但是现在……",
+              "pinyin": "Wǒ hé zhàngfu gāng jiéhūn de shíhou, měi tiān dōu juéde hěn xīnxiān, zài yìqǐ yǒu shuō bu wán de huà. Dànshì xiànzài……",
+              "text_translation": "Erim bilan endigina turmush qurgan paytimizda har kuni hammasi yangidek tuyulardi, birga bo'lganda gapimiz tugamasdi. Lekin hozir…",
+              "text_translation_ru": "Когда мы с мужем только поженились, каждый день всё казалось новым, нам было не наговориться. Но сейчас…",
+              "text_translation_en": "When my husband and I had just married, everything felt fresh every day and we never ran out of things to say. But now…",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l1-t3-s4",
+              "text_original": "两个人共同生活，只有浪漫和新鲜感是不够的。",
+              "pinyin": "Liǎng ge rén gòngtóng shēnghuó, zhǐyǒu làngmàn hé xīnxiān gǎn shì bú gòu de.",
+              "text_translation": "Ikki kishi birga yashaganda, faqat romantika va yangilik hissi yetarli emas.",
+              "text_translation_ru": "Когда двое живут вместе, одной романтики и новизны недостаточно.",
+              "text_translation_en": "When two people share a life, romance and novelty alone aren't enough.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t3-s5",
+              "text_original": "您说的对！我现在每天看到的都是他的缺点。",
+              "pinyin": "Nín shuō de duì! Wǒ xiànzài měi tiān kàndào de dōu shì tā de quēdiǎn.",
+              "text_translation": "To'g'ri aytdingiz! Men hozir har kuni faqat uning kamchiliklarini ko'raman.",
+              "text_translation_ru": "Вы правы! Сейчас я каждый день вижу только его недостатки.",
+              "text_translation_en": "You're right! These days all I see are his shortcomings.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l1-t3-s6",
+              "text_original": "两个人在一起时间长了，就会有很多问题。只有接受了他的缺点，你们才能更好地一起生活。",
+              "pinyin": "Liǎng ge rén zài yìqǐ shíjiān cháng le, jiù huì yǒu hěn duō wèntí. Zhǐyǒu jiēshòule tā de quēdiǎn, nǐmen cái néng gèng hǎo de yìqǐ shēnghuó.",
+              "text_translation": "Ikki kishi uzoq vaqt birga bo'lsa, ko'p muammolar paydo bo'ladi. Faqat uning kamchiliklarini qabul qilsangizgina, birga yaxshiroq yashay olasiz.",
+              "text_translation_ru": "Когда двое долго вместе, возникает много проблем. Только приняв его недостатки, вы сможете жить вместе лучше.",
+              "text_translation_en": "When two people are together a long time, plenty of problems come up. Only by accepting his shortcomings can you live together better.",
               "speaker": "A"
             }
           ]
