@@ -431,7 +431,10 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     setActiveSentenceId(prev => focusMode ? id : prev === id ? null : id);
     const sentence = allSentences.find(s => s.id === id);
     playSentence(sentence);
-    if (el && showTranslation && !focusMode) scrollLineUnderBar(el);
+    // Next frame, not now: on the first tap the bar does not exist yet, so
+    // measuring here would size the gap against a bar that is about to appear
+    // and push the line down again.
+    if (el && showTranslation && !focusMode) requestAnimationFrame(() => scrollLineUnderBar(el));
   }, [focusMode, allSentences, playSentence, showTranslation, scrollLineUnderBar]);
 
   const handleFocusNav = useCallback((dir: 'prev' | 'next') => {
@@ -706,10 +709,9 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                         possible now the tab bar moved to the bottom — nothing
                         is pinned above it any more.
 
-                        Mounted for as long as Tarjima is on, empty until a line
-                        is tapped: the band then appears when you press the
-                        toggle, never when you tap a line, so tapping can't move
-                        the line out from under your finger. */}
+                        Rendered only when there is a translation to show, not
+                        for as long as Tarjima is on: an empty white band
+                        sitting under the hero is just a bar-shaped hole. */}
                     {showTranslation && (() => {
                       const active = allSentences.find(s => s.id === revealedId);
                       const tr = active
@@ -717,6 +719,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                           : language === 'en' ? (active.text_translation_en || active.text_translation)
                           : active.text_translation)
                         : '';
+                      if (!tr) return null;
                       return (
                         <div className="dr-trbar" ref={trBarRef} aria-live="polite">
                           <p className="dr-trbar__text">{tr}</p>
