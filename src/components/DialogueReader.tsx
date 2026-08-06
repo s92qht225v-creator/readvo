@@ -3,7 +3,6 @@
 import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
-import { useClientSearchParam } from '../hooks/useClientSearchParam';
 import { useAuth } from '../hooks/useAuth';
 import { DialoguePreviewBody } from './DialoguePreviewBody';
 import { BannerMenu } from './BannerMenu';
@@ -157,12 +156,9 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     || titleTr;
   const { saveStars: saveDialogueStars } = useStars('dialogue');
 
-  // Nav layout experiment: ?nav=dots | ?nav=pill. Read post-mount via
-  // useClientSearchParam so a query string never opts this statically rendered
-  // page out of prerendering. Absent → today's layout, byte for byte.
-  const navParam = useClientSearchParam('nav');
-  const navVariant = navParam === 'dots' || navParam === 'pill' ? navParam : null;
+  // Reading controls live behind the ⋮ in the bottom tab bar.
   const [sheetOpen, setSheetOpen] = useState(false);
+  const moreBtnRef = useRef<HTMLButtonElement | null>(null);
 
   // Font size
   const [fontSize, setFontSize] = useState(100);
@@ -185,10 +181,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
   // their own effects; only the global tap player needs this.
   useEffect(() => () => { stopAllAudio(); }, []);
   const firstLineRef = useRef<HTMLDivElement | null>(null);
-  const translationBtnRef = useRef<HTMLButtonElement | null>(null);
-  const focusBtnRef = useRef<HTMLButtonElement | null>(null);
-  const pinyinBtnRef = useRef<HTMLButtonElement | null>(null);
-  const fontControlsRef = useRef<HTMLDivElement | null>(null);
   // Font pill: flash visible on adjust, then fade fully out when idle (once the
   // user has used it at least once — keeps it discoverable until then).
   const [fontActive, setFontActive] = useState(false);
@@ -564,7 +556,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
 
   return (
     <>
-      <div className={`dialogue-reader${navVariant ? ` dr-nav dr-nav--${navVariant}` : ''}`} style={{ fontSize: `${fontSize}%` }}>
+      <div className="dialogue-reader dr-nav" style={{ fontSize: `${fontSize}%` }}>
 
         {/* ── Classic banner hero — same across the app ── */}
         <div className="dr-hero">
@@ -635,8 +627,9 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                     {(t as Record<string, string>)[language] ?? t.uz}
                   </button>
                 ))}
-                {navVariant === 'dots' && (
+                {(
                   <button
+                    ref={moreBtnRef}
                     className="dr-tabs__tab dr-more"
                     onClick={(e) => { e.stopPropagation(); setSheetOpen(o => !o); }}
                     type="button"
@@ -786,19 +779,10 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                 )}
 
                 {/* Tarjima / Fokus / Pinyin bottom bar — unchanged */}
-                {navVariant && (
+                {(
                   <>
-                    {/* Same three toggles, relocated. Dots: a menu above the bar.
-                        Pill: a slide-in panel off the right edge. */}
-                    {sheetOpen && navVariant === 'dots' && (
-                      <div className="dr-scrim" onClick={() => setSheetOpen(false)} />
-                    )}
-                    <div className={`dr-ctl dr-ctl--${navVariant}${sheetOpen ? ' dr-ctl--open' : ''}`}>
-                      {navVariant === 'pill' && (
-                        <button className="dr-ctl__handle" onClick={() => setSheetOpen(o => !o)} type="button" aria-label="Controls">
-                          {sheetOpen ? '›' : '‹'}
-                        </button>
-                      )}
+                    {sheetOpen && <div className="dr-scrim" onClick={() => setSheetOpen(false)} />}
+                    <div className={`dr-ctl dr-ctl--dots${sheetOpen ? ' dr-ctl--open' : ''}`}>
                       <div className="dr-ctl__body">
                         <button className={`dr-ctl__item${showTranslation ? ' is-on' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button" aria-pressed={showTranslation}>
                           <span>{({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}</span><b>✓</b>
@@ -821,26 +805,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                     </div>
                   </>
                 )}
-
-                <nav className="story__bottom-bar">
-                  <div className="story__bottom-bar-inner">
-                    <button ref={focusBtnRef} className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`} onClick={toggleFocusMode} type="button" aria-pressed={focusMode}>
-                      {({ uz: 'Fokus', ru: 'Фокус', en: 'Focus' } as Record<string, string>)[language]}
-                    </button>
-                    <button ref={translationBtnRef} className={`reader__nav-toggle ${showTranslation ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button" aria-pressed={showTranslation}>
-                      {({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}
-                    </button>
-                    <button ref={pinyinBtnRef} className={`reader__nav-toggle ${showPinyin ? 'reader__nav-toggle--active' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button" aria-pressed={showPinyin}>
-                      Pinyin
-                    </button>
-                  </div>
-                </nav>
-
-                <div ref={fontControlsRef} className={`dr-font-controls${fontActive ? ' dr-font-controls--active' : ''}${fontEngaged && !fontActive ? ' dr-font-controls--idle' : ''}`}>
-                  <button className="dr-font-btn" onClick={() => { setFontSize(s => Math.min(s + 10, 150)); flashFont(); }} type="button">A+</button>
-                  <div className="dr-font-divider" />
-                  <button className="dr-font-btn" onClick={() => { setFontSize(s => Math.max(s - 10, 80)); flashFont(); }} type="button">A-</button>
-                </div>
               </>
             )}
 
@@ -928,10 +892,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
         lang={language}
         steps={[
           { tipId: 'tour-tap', targetRef: firstLineRef, text: { uz: "Audioni eshitish uchun gapni bosing", ru: "Нажмите на предложение чтобы услышать аудио", en: "Tap any sentence to hear audio" } },
-          { tipId: 'tour-focus', targetRef: focusBtnRef, forceAbove: true, text: { uz: "Fokus rejimi — bir vaqtda bir gap ko'rsatadi", ru: "Режим фокуса — показывает по одному предложению", en: "Focus mode shows one sentence at a time" } },
-          { tipId: 'tour-translation', targetRef: translationBtnRef, forceAbove: true, text: { uz: "Tarjimani ko'rish uchun bosing", ru: "Нажмите, чтобы увидеть перевод", en: "Toggle translation to see the meaning" } },
-          { tipId: 'tour-pinyin', targetRef: pinyinBtnRef, forceAbove: true, text: { uz: "Pinyinni yoqish yoki o'chirish", ru: "Нажмите чтобы вкл/выкл пиньинь", en: "Toggle pinyin on or off" } },
-          { tipId: 'tour-font', targetRef: fontControlsRef, text: { uz: "Shrift o'lchamini o'zgartirish", ru: "Нажмите чтобы изменить размер шрифта", en: "Change font size" } },
+          { tipId: 'tour-more', targetRef: moreBtnRef, forceAbove: true, text: { uz: "Tarjima, pinyin, fokus va shrift — shu yerda", ru: "Перевод, пиньинь, фокус и шрифт — здесь", en: "Translation, pinyin, focus and text size live here" } },
         ] as TourStep[]}
       />
       <PageFooter />
