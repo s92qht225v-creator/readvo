@@ -3,6 +3,7 @@
 import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { Link } from '@/i18n/navigation';
 import { useLanguage } from '../hooks/useLanguage';
+import { useClientSearchParam } from '../hooks/useClientSearchParam';
 import { useAuth } from '../hooks/useAuth';
 import { DialoguePreviewBody } from './DialoguePreviewBody';
 import { BannerMenu } from './BannerMenu';
@@ -155,6 +156,13 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     : preview.description_uz)
     || titleTr;
   const { saveStars: saveDialogueStars } = useStars('dialogue');
+
+  // Nav layout experiment: ?nav=dots | ?nav=pill. Read post-mount via
+  // useClientSearchParam so a query string never opts this statically rendered
+  // page out of prerendering. Absent → today's layout, byte for byte.
+  const navParam = useClientSearchParam('nav');
+  const navVariant = navParam === 'dots' || navParam === 'pill' ? navParam : null;
+  const [sheetOpen, setSheetOpen] = useState(false);
 
   // Font size
   const [fontSize, setFontSize] = useState(100);
@@ -556,7 +564,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
 
   return (
     <>
-      <div className="dialogue-reader" style={{ fontSize: `${fontSize}%` }}>
+      <div className={`dialogue-reader${navVariant ? ` dr-nav dr-nav--${navVariant}` : ''}`} style={{ fontSize: `${fontSize}%` }}>
 
         {/* ── Classic banner hero — same across the app ── */}
         <div className="dr-hero">
@@ -627,6 +635,15 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                     {(t as Record<string, string>)[language] ?? t.uz}
                   </button>
                 ))}
+                {navVariant === 'dots' && (
+                  <button
+                    className="dr-tabs__tab dr-more"
+                    onClick={(e) => { e.stopPropagation(); setSheetOpen(o => !o); }}
+                    type="button"
+                    aria-label="More"
+                    aria-expanded={sheetOpen}
+                  >⋮</button>
+                )}
               </div>
             </div>
 
@@ -769,6 +786,42 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                 )}
 
                 {/* Tarjima / Fokus / Pinyin bottom bar — unchanged */}
+                {navVariant && (
+                  <>
+                    {/* Same three toggles, relocated. Dots: a menu above the bar.
+                        Pill: a slide-in panel off the right edge. */}
+                    {sheetOpen && navVariant === 'dots' && (
+                      <div className="dr-scrim" onClick={() => setSheetOpen(false)} />
+                    )}
+                    <div className={`dr-ctl dr-ctl--${navVariant}${sheetOpen ? ' dr-ctl--open' : ''}`}>
+                      {navVariant === 'pill' && (
+                        <button className="dr-ctl__handle" onClick={() => setSheetOpen(o => !o)} type="button" aria-label="Controls">
+                          {sheetOpen ? '›' : '‹'}
+                        </button>
+                      )}
+                      <div className="dr-ctl__body">
+                        <button className={`dr-ctl__item${showTranslation ? ' is-on' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button" aria-pressed={showTranslation}>
+                          <span>{({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}</span><b>✓</b>
+                        </button>
+                        <button className={`dr-ctl__item${showPinyin ? ' is-on' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button" aria-pressed={showPinyin}>
+                          <span>Pinyin</span><b>✓</b>
+                        </button>
+                        <button className={`dr-ctl__item${focusMode ? ' is-on' : ''}`} onClick={toggleFocusMode} type="button" aria-pressed={focusMode}>
+                          <span>{({ uz: 'Fokus', ru: 'Фокус', en: 'Focus' } as Record<string, string>)[language]}</span><b>✓</b>
+                        </button>
+                        <div className="dr-ctl__sep" />
+                        <div className="dr-ctl__row">
+                          <span>{({ uz: 'Shrift', ru: 'Шрифт', en: 'Text size' } as Record<string, string>)[language]}</span>
+                          <span>
+                            <button className="dr-ctl__sz" onClick={() => setFontSize(s => Math.max(s - 10, 80))} type="button">A−</button>
+                            <button className="dr-ctl__sz" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
+
                 <nav className="story__bottom-bar">
                   <div className="story__bottom-bar-inner">
                     <button ref={focusBtnRef} className={`reader__nav-toggle ${focusMode ? 'reader__nav-toggle--active' : ''}`} onClick={toggleFocusMode} type="button" aria-pressed={focusMode}>

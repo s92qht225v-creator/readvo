@@ -13281,3 +13281,75 @@ body {
     margin-bottom: 2px;
   }
 }
+
+/* ── Nav layout experiment (?nav=dots | ?nav=pill) ──────────────────────────
+   Everything here is scoped under .dr-nav, so a reader without the query param
+   is byte-for-byte unchanged. Delete this block and the two variant branches in
+   DialogueReader to remove the experiment entirely. */
+
+/* Tab bar to the bottom; the old toggle bar goes away since its three controls
+   move into the variant surface. */
+.dr-nav .dr-tabs {
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin-left: 0;
+  z-index: 95;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.dr-nav .story__bottom-bar { display: none; }
+.dr-nav .dr-font-controls { display: none; }   /* A+/A− moved into the surface */
+.dr-nav .story__play-fab { bottom: 92px; }     /* clear the relocated tab bar */
+.dr-nav .dr-dialog-body { padding-bottom: 96px; }
+
+.dr-nav .dr-more { flex: 0 0 44px; font-size: 20px; line-height: 1; }
+
+/* Shared surface. Dots = menu above the bar; pill = slide-in from the right. */
+.dr-ctl__item, .dr-ctl__row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  width: 100%; min-height: 46px; padding: 0 14px;
+  border: 0; background: none; font-family: inherit; font-size: 0.95rem;
+  color: #333; cursor: pointer; text-align: left;
+}
+/* On-state is visible without opening anything twice. */
+.dr-ctl__item b { color: #dc2626; opacity: 0; }
+.dr-ctl__item.is-on b { opacity: 1; }
+.dr-ctl__item.is-on span { color: #dc2626; font-weight: 600; }
+.dr-ctl__sep { height: 1px; background: #eee; margin: 6px 0; }
+.dr-ctl__sz {
+  min-width: 40px; min-height: 34px; margin-left: 6px;
+  border: 1px solid #e5e5e5; background: #fff; border-radius: 6px;
+  font-family: inherit; font-size: 0.9rem; cursor: pointer;
+}
+.dr-scrim { position: fixed; inset: 0; z-index: 94; }
+
+/* — dots — */
+.dr-ctl--dots {
+  position: fixed; right: 8px; bottom: 64px; z-index: 96;
+  background: #fff; border-radius: 10px; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+  min-width: 210px; padding: 6px 0; overflow: hidden;
+  transform-origin: bottom right;
+  transform: scale(0.92) translateY(6px); opacity: 0; pointer-events: none;
+  transition: transform 0.16s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.16s;
+}
+.dr-ctl--dots.dr-ctl--open { transform: none; opacity: 1; pointer-events: auto; }
+
+/* — pill — parked fully off-screen so only the round handle shows. */
+.dr-ctl--pill {
+  position: fixed; right: 0; top: 40%; z-index: 96;
+  background: #fff; border-radius: 12px 0 0 12px; box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
+  min-width: 210px; padding: 6px 0;
+  transform: translateX(100%);
+  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.dr-ctl--pill.dr-ctl--open { transform: translateX(0); }
+.dr-ctl__handle {
+  position: absolute; left: -34px; top: 50%; transform: translateY(-50%);
+  width: 30px; height: 30px; border-radius: 50%; border: 0;
+  background: #fff; color: #dc2626; font-size: 15px; cursor: pointer;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  display: flex; align-items: center; justify-content: center;
+}
