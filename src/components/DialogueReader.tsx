@@ -362,21 +362,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
   // re-shows it for that line (each aid's own toggle gates whether it renders).
   // Drives BOTH the translation and pinyin per-line reveal. Uses React's "adjust
   // state during render" pattern so it never lags a frame.
-  // The tab bar is sticky at top:0, so the translation panel has to stick just
-  // BELOW it — karaoke can use top:0 because nothing is pinned above it there.
-  // Measured, not hardcoded: the bar's height moves with the A+/A- control and
-  // with longer RU/EN tab labels.
-  const tabsRef = useRef<HTMLDivElement | null>(null);
-  const [tabsH, setTabsH] = useState(46);
-  useEffect(() => {
-    const el = tabsRef.current;
-    if (!el || typeof ResizeObserver === 'undefined') return;
-    const ro = new ResizeObserver(() => setTabsH(el.offsetHeight));
-    ro.observe(el);
-    setTabsH(el.offsetHeight);
-    return () => ro.disconnect();
-  }, [status]);
-
   const [revealedId, setRevealedId] = useState<string | null>(null);
   const [prevDisplayId, setPrevDisplayId] = useState<string | null>(displaySentenceId);
   if (displaySentenceId !== prevDisplayId) {
@@ -622,7 +607,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
         {status === 'loaded' && dialogue && (
           <>
             {/* ── Top tab bar ── */}
-            <div className="dr-tabs" ref={tabsRef}>
+            <div className="dr-tabs">
               <div className="dr-tabs__inner">
                 {TABS.map(t => (
                   <button
@@ -679,27 +664,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                       <span className="story__focus-counter">{allSentences.findIndex(s => s.id === displaySentenceId) + 1} / {allSentences.length}</span>
                     </div>
                   ) : (
-                  <>
-                    {/* Active line's translation, pinned under the tab bar —
-                        same idea as the karaoke player. Mounted for the whole
-                        time the Tarjima toggle is on (empty until a line is
-                        tapped) so the band appears when you press the toggle,
-                        never when you tap a line: tapping must not move the line
-                        out from under your finger. */}
-                    {showTranslation && (() => {
-                      const active = allSentences.find(s => s.id === revealedId);
-                      const tr = active
-                        ? (language === 'ru' ? active.text_translation_ru
-                          : language === 'en' ? (active.text_translation_en || active.text_translation)
-                          : active.text_translation)
-                        : '';
-                      return (
-                        <div className="dr-trpanel" style={{ top: tabsH }} aria-live="polite">
-                          <p className="dr-trpanel__text">{tr}</p>
-                        </div>
-                      );
-                    })()}
-                    {dialogue.sections.map(section => {
+                    dialogue.sections.map(section => {
                       // Group consecutive sentences that share a speaker so
                       // they flow as one wrapping row of characters instead
                       // of breaking onto a new line per sentence.
@@ -757,13 +722,22 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                                     })}
                                   </div>
                                 </div>
+                                {showTranslation && (() => {
+                                  // Tap-to-reveal: show only the active line's
+                                  // translation, one at a time (matches the
+                                  // Arabic reader). Tapping another line moves
+                                  // the reveal; re-tapping the same line hides it.
+                                  const active = group.find(s => s.id === revealedId);
+                                  if (!active) return null;
+                                  const tr = language === 'ru' ? active.text_translation_ru : language === 'en' ? (active.text_translation_en || active.text_translation) : active.text_translation;
+                                  return <div className="dr-line-tr">{tr}</div>;
+                                })()}
                               </div>
                             );
                           })}
                         </div>
                       );
-                    })}
-                  </>
+                    })
                   )}
                 </div>
 
