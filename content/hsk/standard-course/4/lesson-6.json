@@ -759,5 +759,820 @@
       ],
       "title": "绿色食品"
     }
+  ],
+  "grammar": [
+    {
+      "slug": "jingran",
+      "title": "竟然",
+      "pinyin": "jìngrán",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "竟然 — ravish bo'lib, «kutilmaganda», «hatto», «nahotki», «ajablanarlisi shundaki» degan ma'noni bildiradi.\nU gapiruvchi natijani umuman kutmaganini va bundan hayratlanganini ifodalaydi.\nOdatda fe'l yoki sifatdan oldin keladi.",
+          "ru": "竟然 — наречие со значением «неожиданно», «оказывается», «как ни странно», «представь себе».\nОно показывает, что результат оказался совершенно неожиданным для говорящего.\nОбычно ставится перед глаголом или прилагательным.",
+          "en": "竟然 is an adverb meaning “unexpectedly”, “to one's surprise”, “actually (surprisingly)”.\nIt shows that the speaker did not expect this at all and is surprised by it.\nIt normally goes before a verb or an adjective."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 竟然 + Fe'l / Sifat",
+          "ru": "Подлежащее + 竟然 + Глагол / Прилагательное",
+          "en": "Subject + 竟然 + Verb / Adjective"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "这个歌特别好听，最近很流行，你竟然没听过？",
+          "py": "Zhège gē tèbié hǎotīng, zuìjìn hěn liúxíng, nǐ jìngrán méi tīng guò?",
+          "uz": "Bu qo'shiq juda yoqimli va yaqinda ancha mashhur bo'ldi. Nahotki sen uni eshitmagan bo'lsang?",
+          "ru": "Эта песня очень приятная и сейчас популярна. Неужели ты её не слышал?",
+          "en": "This song is lovely and it's popular right now. You really haven't heard it?"
+        },
+        {
+          "type": "ex",
+          "zh": "来这家饭馆吃饭的人竟然这么多，排队都排到门口外边去了！",
+          "py": "Lái zhè jiā fànguǎn chīfàn de rén jìngrán zhème duō, páiduì dōu pái dào ménkǒu wàibian qù le!",
+          "uz": "Bu restoranga kelganlar kutilmaganda shunchalik ko'p ekanki, navbat eshikdan tashqariga chiqib ketibdi!",
+          "ru": "В этом ресторане оказалось так много посетителей, что очередь вышла за дверь!",
+          "en": "There were unexpectedly so many people at this restaurant that the queue stretched out the door!"
+        },
+        {
+          "type": "ex",
+          "zh": "回家以后，我才发现，竟然忘了去商场的超市买果汁！",
+          "py": "Huí jiā yǐhòu, wǒ cái fāxiàn, jìngrán wàng le qù shāngchǎng de chāoshì mǎi guǒzhī!",
+          "uz": "Uyga qaytganimdan keyingina bildim — savdo markazidagi supermarketdan sharbat olishni unutibman!",
+          "ru": "Только вернувшись домой, я понял, что забыл купить сок в супермаркете торгового центра!",
+          "en": "Only after I got home did I realise I'd forgotten to buy juice at the mall's supermarket!"
+        },
+        {
+          "type": "h",
+          "uz": "竟然 qachon ishlatiladi?",
+          "ru": "Когда используется 竟然?",
+          "en": "When is 竟然 used?"
+        },
+        {
+          "type": "p",
+          "uz": "竟然 quyidagi hollarda ishlatiladi:\n— kutilmagan natija;\n— hayrat;\n— ishonmaslik;\n— kutilganiga zid holat.",
+          "ru": "竟然 употребляется, чтобы выразить:\n— неожиданный результат;\n— удивление;\n— недоверие;\n— то, что противоречит ожиданиям.",
+          "en": "竟然 is used for:\n— an unexpected result;\n— surprise;\n— disbelief;\n— something contrary to expectations."
+        },
+        {
+          "type": "h",
+          "uz": "竟然 va 居然 farqi",
+          "ru": "竟然 и 居然",
+          "en": "竟然 vs. 居然"
+        },
+        {
+          "type": "ex",
+          "zh": "他竟然会说十种语言。",
+          "py": "Tā jìngrán huì shuō shí zhǒng yǔyán.",
+          "uz": "U kutilmaganda o'nta tilni bilar ekan.",
+          "ru": "Оказывается, он говорит на десяти языках!",
+          "en": "He can actually speak ten languages!"
+        },
+        {
+          "type": "ex",
+          "zh": "他居然没告诉我。",
+          "py": "Tā jūrán méi gàosu wǒ.",
+          "uz": "U hatto menga aytmabdi.",
+          "ru": "Он даже не сказал мне об этом.",
+          "en": "He didn't even tell me."
+        },
+        {
+          "type": "note",
+          "uz": "竟然 → hayrat va kutilmaganlikni kuchliroq ifodalaydi.\n居然 → ma'nosi deyarli bir xil, lekin so'zlashuvda ko'proq uchraydi va ba'zan norozilik ohangini beradi.",
+          "ru": "竟然 → сильнее выражает удивление неожиданным результатом.\n居然 → почти то же значение, но чаще в разговорной речи и иногда с оттенком упрёка.",
+          "en": "竟然 → stronger surprise at an unexpected result.\n居然 → almost the same, but more colloquial and sometimes carries a note of reproach."
+        },
+        {
+          "type": "h",
+          "uz": "竟然 va 原来 farqi",
+          "ru": "竟然 и 原来",
+          "en": "竟然 vs. 原来"
+        },
+        {
+          "type": "ex",
+          "zh": "我竟然忘了。",
+          "py": "Wǒ jìngrán wàng le.",
+          "uz": "Kutilmaganda unutibman.",
+          "ru": "Я неожиданно забыл.",
+          "en": "I actually forgot."
+        },
+        {
+          "type": "ex",
+          "zh": "原来你在这儿！",
+          "py": "Yuánlái nǐ zài zhèr!",
+          "uz": "Demak, sen shu yerda ekansan!",
+          "ru": "Так вот где ты!",
+          "en": "So you're here!"
+        },
+        {
+          "type": "note",
+          "uz": "竟然 → kutilmagan natija.\n原来 → keyinchalik haqiqatni anglash.",
+          "ru": "竟然 → неожиданный результат.\n原来 → осознание истинного положения дел.",
+          "en": "竟然 → an unexpected result.\n原来 → realising how things really are."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n竟然 = kutilmaganda, nahotki.\nFe'l yoki sifatdan oldin keladi.\nGapiruvchi hayratini bildiradi.",
+          "ru": "Запомните:\n竟然 = неожиданно, как ни странно.\nСтавится перед глаголом или прилагательным.\nВыражает удивление говорящего.",
+          "en": "Remember:\n竟然 = unexpectedly, to one's surprise.\nIt comes before a verb or adjective.\nIt expresses the speaker's surprise."
+        }
+      ]
+    },
+    {
+      "slug": "bei",
+      "title": "倍",
+      "pinyin": "bèi",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "倍 — miqdor so'zi (量词) bo'lib, bir miqdor ikkinchisidan necha baravar katta yoki kichik ekanini bildiradi.\nKo'pchilik miqdor so'zlaridan farqli o'laroq, 倍 dan keyin ot kelmaydi.",
+          "ru": "倍 — счётное слово, показывающее, во сколько раз одна величина больше или меньше другой.\nВ отличие от большинства счётных слов, после 倍 не ставится существительное.",
+          "en": "倍 is a measure word showing how many times larger or smaller one quantity is than another.\nUnlike most measure words, 倍 is not followed by a noun."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "A + 是 + B + 的 + Son + 倍",
+          "ru": "A + 是 + B + 的 + Число + 倍",
+          "en": "A + 是 + B + 的 + Number + 倍"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "二的五倍是十。",
+          "py": "Èr de wǔ bèi shì shí.",
+          "uz": "Ikkining besh baravari — o'n.",
+          "ru": "Пятью два — десять.",
+          "en": "Five times two is ten."
+        },
+        {
+          "type": "ex",
+          "zh": "我的工资是每月五千块，他的工资是我的两倍。",
+          "py": "Wǒ de gōngzī shì měi yuè wǔqiān kuài, tā de gōngzī shì wǒ de liǎng bèi.",
+          "uz": "Mening oyligim oyiga besh ming yuan. Uning oyligi menikidan ikki baravar ko'p.",
+          "ru": "Моя зарплата — пять тысяч юаней в месяц. Его зарплата в два раза больше моей.",
+          "en": "My salary is five thousand yuan a month. His is twice mine."
+        },
+        {
+          "type": "ex",
+          "zh": "我记得昨天才三块五一斤，今天的价格是昨天的两倍。",
+          "py": "Wǒ jìde zuótiān cái sān kuài wǔ yī jīn, jīntiān de jiàgé shì zuótiān de liǎng bèi.",
+          "uz": "Esimda, kecha bir jin uch yarim yuan edi. Bugungi narx kechagidan ikki baravar.",
+          "ru": "Помню, вчера было всего три с половиной юаня за цзинь. Сегодняшняя цена вдвое выше вчерашней.",
+          "en": "I remember it was only three and a half yuan a jin yesterday. Today's price is twice yesterday's."
+        },
+        {
+          "type": "h",
+          "uz": "Diqqat: 是……的……倍 va 增加了……倍",
+          "ru": "Внимание: 是……的……倍 и 增加了……倍",
+          "en": "Careful: 是……的……倍 vs. 增加了……倍"
+        },
+        {
+          "type": "ex",
+          "zh": "今年的收入增加了一倍。",
+          "py": "Jīnnián de shōurù zēngjiā le yī bèi.",
+          "uz": "Bu yilgi daromad ikki barobarga oshdi.",
+          "ru": "Доход в этом году вырос вдвое.",
+          "en": "This year's income has doubled."
+        },
+        {
+          "type": "note",
+          "uz": "是……的两倍 = ikki baravar, 是……的三倍 = uch baravar — son qanday bo'lsa, shuncha baravar.\nAmmo 增加了 / 多了 bilan hisob boshqacha: 增加了一倍 = ikki barobarga oshdi (100% ko'paydi), 增加了两倍 = uch barobarga oshdi.",
+          "ru": "是……的两倍 = в два раза, 是……的三倍 = в три раза — сколько названо, столько и раз.\nНо с 增加了 / 多了 счёт другой: 增加了一倍 = выросло вдвое (на 100%), 增加了两倍 = выросло втрое.",
+          "en": "是……的两倍 = twice, 是……的三倍 = three times — the number says it plainly.\nBut 增加了 / 多了 counts differently: 增加了一倍 = doubled (up 100%), 增加了两倍 = tripled."
+        },
+        {
+          "type": "h",
+          "uz": "倍 va 百分之 farqi",
+          "ru": "倍 и 百分之",
+          "en": "倍 vs. 百分之"
+        },
+        {
+          "type": "ex",
+          "zh": "工资是以前的三倍。",
+          "py": "Gōngzī shì yǐqián de sān bèi.",
+          "uz": "Oylik avvalgisidan uch baravar ko'p.",
+          "ru": "Зарплата в три раза больше прежней.",
+          "en": "The salary is three times what it used to be."
+        },
+        {
+          "type": "ex",
+          "zh": "增长了百分之二十。",
+          "py": "Zēngzhǎng le bǎifēnzhī èrshí.",
+          "uz": "Yigirma foizga oshdi.",
+          "ru": "Выросло на двадцать процентов.",
+          "en": "It grew by twenty per cent."
+        },
+        {
+          "type": "note",
+          "uz": "倍 → necha baravar ekanini bildiradi.\n百分之 → foizni bildiradi.",
+          "ru": "倍 → во сколько раз.\n百分之 → на сколько процентов.",
+          "en": "倍 → how many times.\n百分之 → what percentage."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n倍 = baravar.\nA 是 B 的 + Son + 倍.\n增加了一倍 = ikki barobarga oshdi — eng ko'p adashtiriladigan joyi shu.",
+          "ru": "Запомните:\n倍 = раз(а).\nA 是 B 的 + Число + 倍.\n增加了一倍 = выросло вдвое — именно здесь чаще всего ошибаются.",
+          "en": "Remember:\n倍 = times.\nA 是 B 的 + Number + 倍.\n增加了一倍 = doubled — this is where learners slip most often."
+        }
+      ]
+    },
+    {
+      "slug": "zhide",
+      "title": "值得",
+      "pinyin": "zhídé",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "值得 — fe'l bo'lib, «arziydi», «loyiq bo'lmoq», «qiymatga ega bo'lmoq» degan ma'noni bildiradi.\nU biror ishni qilish foydali, muhim yoki yaxshi natija berishini anglatadi.",
+          "ru": "值得 — глагол со значением «стоит», «заслуживает», «имеет смысл».\nОн показывает, что действие принесёт пользу или хороший результат.",
+          "en": "值得 is a verb meaning “to be worth”, “to deserve”, “to be worthwhile”.\nIt says that doing something is valuable or will pay off."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "值得 + Fe'l → … qilishga arziydi\n不值得 + Fe'l → … qilishga arzimaydi",
+          "ru": "值得 + Глагол → стоит сделать\n不值得 + Глагол → не стоит делать",
+          "en": "值得 + Verb → worth doing\n不值得 + Verb → not worth doing"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "您看看这个，不管从价格方面看，还是从质量上看，都是值得考虑的。",
+          "py": "Nín kànkan zhège, bùguǎn cóng jiàgé fāngmiàn kàn, háishì cóng zhìliàng shàng kàn, dōu shì zhídé kǎolǜ de.",
+          "uz": "Buni ko'rib chiqing. Narx tomonidan qaralsa ham, sifat tomonidan qaralsa ham — o'ylab ko'rishga arziydi.",
+          "ru": "Посмотрите на это. И с точки зрения цены, и с точки зрения качества — этот вариант стоит рассмотреть.",
+          "en": "Have a look at this. Whether you go by price or by quality, it's worth considering."
+        },
+        {
+          "type": "ex",
+          "zh": "你应该改改自己的脾气，别总是为一点儿小事生气，不值得。",
+          "py": "Nǐ yīnggāi gǎigai zìjǐ de píqi, bié zǒngshì wèi yīdiǎnr xiǎoshì shēngqì, bù zhídé.",
+          "uz": "Xarakteringni biroz o'zgartirganing ma'qul. Har mayda narsaga jahling chiqavermasin — arzimaydi.",
+          "ru": "Тебе стоит изменить свой характер. Не злись постоянно из-за мелочей — это того не стоит.",
+          "en": "You should work on your temper. Don't keep getting angry over little things — it isn't worth it."
+        },
+        {
+          "type": "ex",
+          "zh": "我们总是很容易看到一个人的缺点，但是别忘了，他身上的优点更值得我们去发现、去学习。",
+          "py": "Wǒmen zǒngshì hěn róngyì kàndào yīgè rén de quēdiǎn, dànshì bié wàng le, tā shēnshang de yōudiǎn gèng zhídé wǒmen qù fāxiàn, qù xuéxí.",
+          "uz": "Biz odamning kamchiligini juda oson ko'ramiz. Lekin unutmang — uning yaxshi tomonlarini ko'rish va ulardan o'rganish yanada arziydi.",
+          "ru": "Мы очень легко замечаем недостатки человека. Но не забывайте: его достоинства куда больше заслуживают того, чтобы их увидеть и перенять.",
+          "en": "We spot a person's faults all too easily. But don't forget — their strengths are far more worth noticing and learning from."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p ishlatiladigan iboralar",
+          "ru": "Частые сочетания",
+          "en": "Common expressions"
+        },
+        {
+          "type": "p",
+          "uz": "值得学习 — o'rganishga arziydi\n值得考虑 — ko'rib chiqishga arziydi\n值得相信 — ishonishga arziydi\n值得注意 — e'tibor berishga arziydi\n值得买 — sotib olishga arziydi",
+          "ru": "值得学习 — стоит изучить\n值得考虑 — стоит рассмотреть\n值得相信 — заслуживает доверия\n值得注意 — заслуживает внимания\n值得买 — стоит купить",
+          "en": "值得学习 — worth learning\n值得考虑 — worth considering\n值得相信 — worth trusting\n值得注意 — worth noting\n值得买 — worth buying"
+        },
+        {
+          "type": "h",
+          "uz": "值得 va 应该 farqi",
+          "ru": "值得 и 应该",
+          "en": "值得 vs. 应该"
+        },
+        {
+          "type": "ex",
+          "zh": "这本书值得看。",
+          "py": "Zhè běn shū zhídé kàn.",
+          "uz": "Bu kitobni o'qishga arziydi.",
+          "ru": "Эту книгу стоит прочитать.",
+          "en": "This book is worth reading."
+        },
+        {
+          "type": "ex",
+          "zh": "你应该看这本书。",
+          "py": "Nǐ yīnggāi kàn zhè běn shū.",
+          "uz": "Sen bu kitobni o'qishing kerak.",
+          "ru": "Тебе следует прочитать эту книгу.",
+          "en": "You should read this book."
+        },
+        {
+          "type": "note",
+          "uz": "值得 → arziydi, foydasi bor.\n应该 → kerak: tavsiya yoki majburiyat.",
+          "ru": "值得 → стоит, потому что полезно.\n应该 → следует, нужно.",
+          "en": "值得 → worth it, because it pays off.\n应该 → should, an obligation or advice."
+        },
+        {
+          "type": "h",
+          "uz": "值得 va 可以 farqi",
+          "ru": "值得 и 可以",
+          "en": "值得 vs. 可以"
+        },
+        {
+          "type": "ex",
+          "zh": "值得去。",
+          "py": "Zhídé qù.",
+          "uz": "Borishga arziydi.",
+          "ru": "Туда стоит пойти.",
+          "en": "It's worth going."
+        },
+        {
+          "type": "ex",
+          "zh": "可以去。",
+          "py": "Kěyǐ qù.",
+          "uz": "Borish mumkin.",
+          "ru": "Можно пойти.",
+          "en": "You can go."
+        },
+        {
+          "type": "note",
+          "uz": "值得 → ishning qiymati yoki foydasi.\n可以 → ruxsat yoki imkoniyat.",
+          "ru": "值得 → ценность или польза действия.\n可以 → разрешение или возможность.",
+          "en": "值得 → the value of doing it.\n可以 → permission or possibility."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n值得 = arziydi.\nUndan keyin fe'l keladi.\nIshning qiymati yoki foydasini bildiradi.",
+          "ru": "Запомните:\n值得 = стоит, имеет смысл.\nПосле него идёт глагол.\nПодчёркивает ценность или пользу действия.",
+          "en": "Remember:\n值得 = worth doing.\nA verb follows it.\nIt stresses the value or benefit of an action."
+        }
+      ]
+    },
+    {
+      "slug": "zhide-vs-zhi",
+      "title": "值得 / 值",
+      "pinyin": "zhídé / zhí",
+      "label": "比一比",
+      "labelTranslation": "Taqqoslash",
+      "labelTranslation_ru": "Сравнение",
+      "labelTranslation_en": "Compare",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "O'xshashligi",
+          "ru": "Сходство",
+          "en": "Similarities"
+        },
+        {
+          "type": "p",
+          "uz": "Ikkalasi ham biror ish yoki narsaning qiymati borligini — unga vaqt, kuch yoki pul sarflash arziydiganini bildirishi mumkin.",
+          "ru": "Оба могут выражать, что что-то имеет ценность и стоит затраченного времени, сил или денег.",
+          "en": "Both can say that something has value — that it is worth the time, effort or money."
+        },
+        {
+          "type": "ex",
+          "zh": "这个调查对今后的工作很有用，花再多时间也值得。",
+          "py": "Zhège diàochá duì jīnhòu de gōngzuò hěn yǒuyòng, huā zài duō shíjiān yě zhídé.",
+          "uz": "Bu tadqiqot kelgusidagi ish uchun juda foydali. Qancha vaqt sarflansa ham arziydi.",
+          "ru": "Это исследование очень полезно для будущей работы. Сколько бы времени ни ушло, оно того стоит.",
+          "en": "This survey is very useful for the work ahead. However much time it takes, it's worth it."
+        },
+        {
+          "type": "ex",
+          "zh": "这个调查对今后的工作很有用，花再多时间也值。",
+          "py": "Zhège diàochá duì jīnhòu de gōngzuò hěn yǒuyòng, huā zài duō shíjiān yě zhí.",
+          "uz": "Bu tadqiqot kelgusidagi ish uchun juda foydali. Qancha vaqt sarflansa ham arziydi.",
+          "ru": "Это исследование очень полезно для будущей работы. Сколько бы времени ни ушло, оно того стоит.",
+          "en": "This survey is very useful for the work ahead. However much time it takes, it's worth it."
+        },
+        {
+          "type": "note",
+          "uz": "Bu gapda ikkalasi ham ishlatilaveradi.",
+          "ru": "В этом предложении подходят оба варианта.",
+          "en": "Either word works in this sentence."
+        },
+        {
+          "type": "h",
+          "uz": "1. 值得 — fe'l, 值 — sifat",
+          "ru": "1. 值得 — глагол, 值 — прилагательное",
+          "en": "1. 值得 is a verb, 值 an adjective"
+        },
+        {
+          "type": "formula",
+          "uz": "值得 + Fe'l",
+          "ru": "值得 + Глагол",
+          "en": "值得 + Verb"
+        },
+        {
+          "type": "ex",
+          "zh": "别生气了，咱们不值得为这么点儿小事生气。",
+          "py": "Bié shēngqì le, zánmen bù zhídé wèi zhème diǎnr xiǎoshì shēngqì.",
+          "uz": "Jahling chiqmasin. Shunaqa mayda narsa uchun jahlimiz chiqishiga arzimaydi.",
+          "ru": "Не сердись. Нам не стоит злиться из-за такой мелочи.",
+          "en": "Don't be cross. It isn't worth us getting angry over such a small thing."
+        },
+        {
+          "type": "ex",
+          "zh": "为这么点儿小事生气，一点儿也不值。",
+          "py": "Wèi zhème diǎnr xiǎoshì shēngqì, yìdiǎnr yě bù zhí.",
+          "uz": "Shunaqa mayda narsa uchun jahl qilish umuman arzimaydi.",
+          "ru": "Злиться из-за такой мелочи совершенно не стоит.",
+          "en": "Getting angry over such a small thing isn't worth it at all."
+        },
+        {
+          "type": "note",
+          "uz": "值得 dan keyin fe'l yoki kichik gap keladi.\n值 bu ma'noda sifat bo'lib, odatda undan keyin hech narsa kelmaydi.",
+          "ru": "После 值得 идёт глагол или небольшое предложение.\n值 в этом значении — прилагательное, после него обычно ничего не следует.",
+          "en": "值得 takes a verb or a short clause after it.\n值 here is an adjective and usually stands alone."
+        },
+        {
+          "type": "h",
+          "uz": "2. Ikkalasi ham fe'l bo'la oladi, lekin ma'nosi boshqa",
+          "ru": "2. Оба могут быть глаголами, но с разным значением",
+          "en": "2. Both can be verbs, with different meanings"
+        },
+        {
+          "type": "ex",
+          "zh": "这个沙发价钱不贵，质量又好，值得买。",
+          "py": "Zhège shāfā jiàqián bù guì, zhìliàng yòu hǎo, zhídé mǎi.",
+          "uz": "Bu divanning narxi qimmat emas, sifati ham yaxshi — sotib olishga arziydi.",
+          "ru": "Этот диван недорогой и качественный — его стоит купить.",
+          "en": "This sofa isn't expensive and the quality is good — it's worth buying."
+        },
+        {
+          "type": "ex",
+          "zh": "这个手机值五千块。",
+          "py": "Zhège shǒujī zhí wǔqiān kuài.",
+          "uz": "Bu telefonning qiymati besh ming yuan.",
+          "ru": "Этот телефон стоит пять тысяч юаней.",
+          "en": "This phone is worth five thousand yuan."
+        },
+        {
+          "type": "table",
+          "head": [
+            "值得",
+            "值"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "Fe'l",
+                "Sifat yoki fe'l"
+              ],
+              "ru": [
+                "Глагол",
+                "Прилагательное или глагол"
+              ],
+              "en": [
+                "A verb",
+                "An adjective or a verb"
+              ]
+            },
+            {
+              "uz": [
+                "Keyin fe'l keladi",
+                "Keyin odatda pul miqdori keladi yoki hech narsa kelmaydi"
+              ],
+              "ru": [
+                "После него идёт глагол",
+                "После него идёт сумма или ничего"
+              ],
+              "en": [
+                "A verb follows",
+                "A price follows, or nothing at all"
+              ]
+            },
+            {
+              "uz": [
+                "Ishning foydasini bildiradi",
+                "Narsaning narxi yoki qiymatini bildiradi"
+              ],
+              "ru": [
+                "Оценивает пользу действия",
+                "Оценивает стоимость предмета"
+              ],
+              "en": [
+                "Rates the value of an action",
+                "Rates the price of a thing"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n值得 + Fe'l = … qilishga arziydi.\n值 + Pul = … qiymat turadi.",
+          "ru": "Запомните:\n值得 + Глагол = стоит сделать.\n值 + Деньги = стоит определённую сумму.",
+          "en": "Remember:\n值得 + Verb = worth doing.\n值 + Money = is worth that amount."
+        }
+      ]
+    },
+    {
+      "slug": "qizhong",
+      "title": "其中",
+      "pinyin": "qízhōng",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "其中 — ot bo'lib, «ularning ichida», «shular orasida», «shu tarkibda» degan ma'noni bildiradi.\nU bir guruh yoki to'plam ichidagi qismni ko'rsatish uchun ishlatiladi.",
+          "ru": "其中 — существительное со значением «среди них», «из них», «в их числе».\nОно выделяет часть из группы или множества.",
+          "en": "其中 is a noun meaning “among them”, “of those”, “within them”.\nIt picks out part of a larger group."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "A，其中 + B",
+          "ru": "Группа，其中 + Элемент",
+          "en": "Group, 其中 + Item"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "我们不仅要会读书，还要会选择其中的好书来读。",
+          "py": "Wǒmen bùjǐn yào huì dúshū, hái yào huì xuǎnzé qízhōng de hǎoshū lái dú.",
+          "uz": "Biz nafaqat kitob o'qishni, balki ular orasidan yaxshi kitoblarni tanlab o'qishni ham bilishimiz kerak.",
+          "ru": "Мы должны не только уметь читать, но и выбирать среди книг хорошие.",
+          "en": "We should know not just how to read, but how to pick the good books from among them."
+        },
+        {
+          "type": "ex",
+          "zh": "虽然妻子工作很忙，但是她忙在其中也乐在其中。",
+          "py": "Suīrán qīzi gōngzuò hěn máng, dànshì tā máng zài qízhōng yě lè zài qízhōng.",
+          "uz": "Xotini juda band bo'lsa ham, u shu ishning ichida band bo'lib, shu ishdan zavq ham oladi.",
+          "ru": "Хотя жена очень занята работой, она и погружена в неё, и находит в ней радость.",
+          "en": "His wife is very busy, but she is caught up in the work and finds her joy in it too."
+        },
+        {
+          "type": "ex",
+          "zh": "一些图书还有打折活动，其中，小说七五折，地图八折，留学考试用书六折。",
+          "py": "Yīxiē túshū hái yǒu dǎzhé huódòng, qízhōng, xiǎoshuō qī wǔ zhé, dìtú bā zhé, liúxué kǎoshì yòngshū liù zhé.",
+          "uz": "Ba'zi kitoblarga chegirma bor. Ular orasida romanlar 25%, xaritalar 20%, chet elda o'qish imtihonlariga tayyorlov kitoblari 40% chegirma bilan.",
+          "ru": "На некоторые книги есть скидки. Среди них: романы — 25%, карты — 20%, книги для зарубежных экзаменов — 40%.",
+          "en": "Some books are on sale. Among them novels are 25% off, maps 20% off, and books for overseas study exams 40% off."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p ishlatiladigan birikmalar",
+          "ru": "Частые сочетания",
+          "en": "Common patterns"
+        },
+        {
+          "type": "p",
+          "uz": "其中的… — ular orasidagi…\n其中一个 — ulardan biri\n其中包括… — ular tarkibiga … kiradi\n其中有… — ular orasida … bor",
+          "ru": "其中的… — среди…\n其中一个 — один из них\n其中包括… — включая…\n其中有… — среди них есть…",
+          "en": "其中的… — among them…\n其中一个 — one of them\n其中包括… — including…\n其中有… — among them there is…"
+        },
+        {
+          "type": "ex",
+          "zh": "其中一个学生。",
+          "py": "Qízhōng yīgè xuéshēng.",
+          "uz": "Talabalardan biri.",
+          "ru": "Один из студентов.",
+          "en": "One of the students."
+        },
+        {
+          "type": "ex",
+          "zh": "其中包括中文。",
+          "py": "Qízhōng bāokuò Zhōngwén.",
+          "uz": "Bular qatoriga Xitoy tili ham kiradi.",
+          "ru": "В том числе китайский язык.",
+          "en": "Chinese is included among them."
+        },
+        {
+          "type": "h",
+          "uz": "其中 va 里面 farqi",
+          "ru": "其中 и 里面",
+          "en": "其中 vs. 里面"
+        },
+        {
+          "type": "ex",
+          "zh": "十个人，其中三个是老师。",
+          "py": "Shí gè rén, qízhōng sān gè shì lǎoshī.",
+          "uz": "O'n kishidan uchtasi o'qituvchi.",
+          "ru": "Из десяти человек трое — учителя.",
+          "en": "Of the ten people, three are teachers."
+        },
+        {
+          "type": "ex",
+          "zh": "他在房间里面。",
+          "py": "Tā zài fángjiān lǐmiàn.",
+          "uz": "U xonaning ichida.",
+          "ru": "Он в комнате.",
+          "en": "He's inside the room."
+        },
+        {
+          "type": "note",
+          "uz": "其中 → guruh yoki to'plam ichidagi qism.\n里面 → jismoniy joy: ichkarida.",
+          "ru": "其中 → часть группы или множества.\n里面 → физическое место: внутри.",
+          "en": "其中 → part of a group.\n里面 → a physical place: inside."
+        },
+        {
+          "type": "h",
+          "uz": "其中 va 之一 farqi",
+          "ru": "其中 и 之一",
+          "en": "其中 vs. 之一"
+        },
+        {
+          "type": "ex",
+          "zh": "中国是世界上最大的国家之一。",
+          "py": "Zhōngguó shì shìjiè shàng zuì dà de guójiā zhīyī.",
+          "uz": "Xitoy dunyodagi eng yirik davlatlardan biridir.",
+          "ru": "Китай — одна из крупнейших стран мира.",
+          "en": "China is one of the largest countries in the world."
+        },
+        {
+          "type": "note",
+          "uz": "其中 → guruh ichidagi elementni tanishtiradi va odatda oldinda turadi.\n之一 → «…dan biri» ma'nosini beradi va so'z birikmasining oxirida keladi.",
+          "ru": "其中 → вводит элемент внутри группы и обычно стоит впереди.\n之一 → означает «один из…» и стоит в конце словосочетания.",
+          "en": "其中 → introduces an item inside a group and comes first.\n之一 → means “one of…” and closes the noun phrase."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n其中 = ular orasida, ular ichida.\nGuruh ichidagi bir qismni ko'rsatadi.\nKo'pincha 其中的、其中一个、其中包括 bilan keladi.",
+          "ru": "Запомните:\n其中 = среди них, из них.\nОбозначает часть группы.\nЧасто в конструкциях 其中的, 其中一个, 其中包括.",
+          "en": "Remember:\n其中 = among them, within them.\nIt marks part of a larger group.\nCommon in 其中的, 其中一个, 其中包括."
+        }
+      ]
+    },
+    {
+      "slug": "zai-xia",
+      "title": "（在）……下",
+      "pinyin": "(zài) … xià",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "（在）……下 — «… sharoitida», «… ta'siri ostida», «… yordamida» degan ma'noni bildiruvchi qolip.\nU ma'lum bir sharoit, vaziyat yoki ta'sir ostida ish sodir bo'lishini ifodalaydi.\nKo'pincha 在 ishlatiladi, ba'zan tushirib qoldiriladi.",
+          "ru": "（在）……下 — конструкция со значением «в условиях…», «под влиянием…», «с помощью…».\nОна показывает, что действие происходит при определённых условиях или благодаря чьей-либо помощи.\n在 часто употребляется, но иногда опускается.",
+          "en": "（在）……下 is a pattern meaning “under…”, “with…”, “in the situation of…”.\nIt marks the condition, influence or help under which something happens.\n在 is usually there, but it can be dropped."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "（在）+ Aniqlovchi + Ikki bo'g'inli ot / fe'l + 下，…",
+          "ru": "（在）+ Определение + Двусложное существительное / глагол + 下，…",
+          "en": "（在）+ Modifier + Disyllabic noun / verb + 下，…"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "一般情况下，你花的钱越多，买的东西也就越好。",
+          "py": "Yībān qíngkuàng xià, nǐ huā de qián yuè duō, mǎi de dōngxi yě jiù yuè hǎo.",
+          "uz": "Odatda, qancha ko'p pul sarflasangiz, shuncha yaxshi narsa sotib olasiz.",
+          "ru": "При обычных обстоятельствах чем больше денег вы тратите, тем лучше вещи покупаете.",
+          "en": "Under normal circumstances, the more you spend, the better the things you buy."
+        },
+        {
+          "type": "ex",
+          "zh": "在冬天比较冷的情况下，吃碗热面条会让人觉得很舒服。",
+          "py": "Zài dōngtiān bǐjiào lěng de qíngkuàng xià, chī wǎn rè miàntiáo huì ràng rén juéde hěn shūfu.",
+          "uz": "Qishda havo sovuq bo'lgan sharoitda bir kosa issiq lag'mon odamni juda yayratadi.",
+          "ru": "Когда зимой довольно холодно, тарелка горячей лапши даёт очень приятное чувство.",
+          "en": "When winter is cold, a bowl of hot noodles makes you feel wonderful."
+        },
+        {
+          "type": "ex",
+          "zh": "在老师和同学们的帮助下，他的汉语提高得非常快。",
+          "py": "Zài lǎoshī hé tóngxuémen de bāngzhù xià, tā de Hànyǔ tígāo de fēicháng kuài.",
+          "uz": "O'qituvchi va sinfdoshlarining yordami bilan uning Xitoy tili juda tez o'sdi.",
+          "ru": "Благодаря помощи учителя и одноклассников его китайский улучшился очень быстро.",
+          "en": "With the help of his teacher and classmates, his Chinese improved very quickly."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p ishlatiladigan birikmalar",
+          "ru": "Частые сочетания",
+          "en": "Common expressions"
+        },
+        {
+          "type": "p",
+          "uz": "一般情况下 — odatda\n在……帮助下 — … yordami bilan\n在……影响下 — … ta'siri ostida\n在……领导下 — … rahbarligida\n在……条件下 — … sharoitida\n在……环境下 — … muhitida",
+          "ru": "一般情况下 — при обычных обстоятельствах\n在……帮助下 — с помощью…\n在……影响下 — под влиянием…\n在……领导下 — под руководством…\n在……条件下 — в условиях…\n在……环境下 — в обстановке…",
+          "en": "一般情况下 — under normal circumstances\n在……帮助下 — with the help of…\n在……影响下 — under the influence of…\n在……领导下 — under the leadership of…\n在……条件下 — under … conditions\n在……环境下 — in … surroundings"
+        },
+        {
+          "type": "h",
+          "uz": "（在）……下 va 在……里 farqi",
+          "ru": "（在）……下 и 在……里",
+          "en": "（在）……下 vs. 在……里"
+        },
+        {
+          "type": "ex",
+          "zh": "在大家的帮助下，他成功了。",
+          "py": "Zài dàjiā de bāngzhù xià, tā chénggōng le.",
+          "uz": "Hammaning yordami bilan u muvaffaqiyatga erishdi.",
+          "ru": "Благодаря помощи всех он добился успеха.",
+          "en": "With everyone's help, he succeeded."
+        },
+        {
+          "type": "ex",
+          "zh": "他在房间里做作业。",
+          "py": "Tā zài fángjiān lǐ zuò zuòyè.",
+          "uz": "U xonada uy vazifasini qilyapti.",
+          "ru": "Он делает домашнее задание в комнате.",
+          "en": "He's doing his homework in the room."
+        },
+        {
+          "type": "note",
+          "uz": "（在）……下 → sharoit, sabab yoki ta'sir.\n在……里 → joy yoki vaqt ichida.",
+          "ru": "（在）……下 → условия, причина или влияние.\n在……里 → место или время.",
+          "en": "（在）……下 → a condition, cause or influence.\n在……里 → a place or a span of time."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n（在）……下 = … sharoitida, … yordamida, … ta'siri ostida.\nIsh qanday sharoitda sodir bo'lishini bildiradi.\nJuda ko'p ishlatiladigan qolip.",
+          "ru": "Запомните:\n（在）……下 = в условиях, под влиянием, благодаря.\nОбозначает условия, при которых происходит действие.\nОчень распространённая конструкция.",
+          "en": "Remember:\n（在）……下 = under…, with…, in the situation of…\nIt names the condition something happens under.\nA very common pattern."
+        }
+      ]
+    }
   ]
 }
