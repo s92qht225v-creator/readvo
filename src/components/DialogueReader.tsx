@@ -997,13 +997,13 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                     <div className={`dr-ctl dr-ctl--dots${sheetOpen ? ' dr-ctl--open' : ''}`}>
                       <div className="dr-ctl__body">
                         <button className={`dr-ctl__item${showTranslation ? ' is-on' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button" aria-pressed={showTranslation}>
-                          <span>{({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}</span><b>✓</b>
+                          <span>{({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}</span><i className="dr-sw" aria-hidden="true" />
                         </button>
                         <button className={`dr-ctl__item${showPinyin ? ' is-on' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button" aria-pressed={showPinyin}>
-                          <span>Pinyin</span><b>✓</b>
+                          <span>Pinyin</span><i className="dr-sw" aria-hidden="true" />
                         </button>
                         <button className={`dr-ctl__item${focusMode ? ' is-on' : ''}`} onClick={toggleFocusMode} type="button" aria-pressed={focusMode}>
-                          <span>{({ uz: 'Fokus', ru: 'Фокус', en: 'Focus' } as Record<string, string>)[language]}</span><b>✓</b>
+                          <span>{({ uz: 'Fokus', ru: 'Фокус', en: 'Focus' } as Record<string, string>)[language]}</span><i className="dr-sw" aria-hidden="true" />
                         </button>
                         <div className="dr-ctl__sep" />
                         <div className="dr-ctl__row">
