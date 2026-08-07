@@ -531,6 +531,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
    * would be pure annoyance.
    */
   const trTextRef = useRef<HTMLParagraphElement | null>(null);
+  const bodyRef = useRef<HTMLDivElement | null>(null);
 
   /** What the top bar says: the revealed sentence's translation, else the title. */
   const barText = useMemo(() => {
@@ -601,6 +602,15 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     const el = trTextRef.current, box = trBarRef.current;
     if (!el || !box) return;
     const fit = () => {
+      // Match the dialogue column exactly. It is width:fit-content, so it
+      // differs per dialogue and per viewport — the only way to line the
+      // translation up with the Chinese is to measure it. Both are centred,
+      // so equal widths means flush left AND right edges.
+      const body = bodyRef.current;
+      if (body) {
+        const cs = getComputedStyle(body);
+        el.style.width = `${body.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight)}px`;
+      }
       let px = 15;
       el.style.fontSize = `${px}px`;
       const room = box.clientHeight - 24;   // the bar's 12px top/bottom padding
@@ -877,7 +887,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                     <p className="dr-trbar__text" ref={trTextRef}>{barText.text}</p>
                   </div>
                 )}
-                <div className={`dr-dialog-body ${audioActive ? 'dr-dialog-body--with-audio' : ''}`}>
+                <div ref={bodyRef} className={`dr-dialog-body ${audioActive ? 'dr-dialog-body--with-audio' : ''}`}>
                   {focusMode && activeSentence ? (
                     <div className="story__focus">
                       {/* Swipeable card deck (same gesture as My Vocabulary):

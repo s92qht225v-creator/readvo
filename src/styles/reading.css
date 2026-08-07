@@ -13402,6 +13402,8 @@ body {
 
 .dr-trbar__text {
   margin: 0;
+  /* Width is measured from .dr-dialog-body at runtime; this is the pre-script
+     fallback so the line length is never the full viewport. */
   max-width: 900px;
   /* px, not em: the A-/A+ control scales .dialogue-reader, and this bar is
      chrome rather than content. The exact value is set from JS, which steps it
