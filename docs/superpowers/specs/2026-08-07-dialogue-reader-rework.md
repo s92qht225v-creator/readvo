@@ -205,6 +205,80 @@ smaller than a square one.
 
 ---
 
+## Every changed value, before → after
+
+Extracted from `git diff d1d149a^ HEAD`, not from recall. This is the part that
+would otherwise exist only in one person's head.
+
+### `.dr-trbar` — new rule, the reader's top chrome
+
+| property | value | why this number |
+|---|---|---|
+| `position` / `top` | `sticky` / `0` | nothing occupies the top since the hero went |
+| `height` | **120px** | longest translation renders 88px at phone width; half are one 22px line. Was 175px (the hero's footprint) → 55px permanently empty |
+| `width` / `margin-left` | `100vw` / `calc(-50vw + 50%)` | only correct because the bar is a **sibling** of `.dr-dialog-body`; measured from inside that column it lands 15px short on mobile, 439px off on desktop |
+| `padding` | **6px 20px** | was 12px vertical — the fit routine reserved all of it and shrank text while the band had room |
+| `background` | **`#fff`** | was `rgba(255,255,255,0.97)` + `blur(6px)`; at 0.97 the Chinese scrolling under it still read through |
+| `margin-bottom` | *removed* (was 8px) | it added to the gap above the first card |
+| `border-radius` | *removed* (was `0 0 6px 6px`) | a band spanning the viewport shouldn't have corners |
+| `align-items` | `safe center` | plain centring pushes the first line above the scrollable area when text overflows |
+
+### `.dr-trbar__text`
+
+| property | before | after |
+|---|---|---|
+| `font-size` | `0.95em` | **`18px`** — px so A−/A+ can't scale chrome. JS owns the live value (18 → 12) |
+| `text-align` | `center` | **`left`** (the idle hint stays centred via `.dr-trbar--idle`) |
+| `max-width` | — | `900px`, a pre-script fallback only; **JS sets the real width from `.dr-dialog-body`** |
+| `width` | — | `100%` |
+
+### `.dr-dialog-body`
+
+| property | before | after |
+|---|---|---|
+| `--dr-body-pt` | `30px` | **removed** — existed so the bar could cancel it; the bar left the column |
+| `padding` | `var(--dr-body-pt) 16px 24px` | **`14px 16px 24px`** — matches `.dr-line`'s own 14px margin, so the first card sits the same distance below the bar as cards sit apart (was 38px) |
+
+### `.story__focus-text` (focus mode)
+
+| property | before | after |
+|---|---|---|
+| `text-align` | `center` | **`left`** |
+| `line-height` | `3` (= 108px) | **`2.2`** — 1.95 matched the dialogue's 70px exactly, then raised for air |
+| `align-items` | `center` | `stretch` |
+
+### New rules
+
+| selector | value |
+|---|---|
+| `.dr-hero--hidden` | `display: none` — reader only; **the teaser keeps the hero and its `<h1>`** |
+| `.dr-sw` | 38×22 track, `#d8d8d8` → `#dc2626` when on, `border-radius: 999px`, 0.15s |
+| `.dr-sw::after` | 18px knob, `translateX(16px)` when on |
+| `.dr-ctl__item.is-disabled` | `opacity: 0.4` — Tarjima while focus mode owns it |
+| `.dr-ctl__sz--on` | `#dc2626` fill — selected language in the Til row |
+| `.dr-ctl__exit` / `-icon` | `#333` / `#999`, no switch track (it's an action) |
+| `.dr-nav .dr-tabs__back` | `flex: 0 0 44px`, mirrors `.dr-nav .dr-more` |
+
+### Removed rules
+
+| selector | was |
+|---|---|
+| `.dr-ctl__item b` | `color: #dc2626; opacity: 0` — the checkmark |
+| `.dr-ctl__item.is-on b` | `opacity: 1` |
+
+### Component constants (`DialogueReader.tsx`)
+
+| constant | value | note |
+|---|---|---|
+| `WHOLE_ENTRY` | `-1` | "no single sentence selected" |
+| fit start / floor | `18px` / `12px` | shrink-to-fit bounds |
+| fit reserve | `clientHeight - 12` | was `- 24`, which shrank text while the band had room |
+| scroll gap | `12px` | tapped line's distance below the bar |
+| scroll deadband | `24px` | below this a scroll reads as a twitch |
+| localStorage keys | `blim-reader-{font,pinyin,translation}` | defaults `100` / `true` / `false`; font accepted only in 80–150 |
+
+---
+
 ## Mistakes worth not repeating
 
 Every one of these was caught by measuring in a browser. None would have been
