@@ -372,12 +372,17 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
   // Set by a tap, read once by the block below. Without it an entry reached by
   // audio (play-all walking forward) would inherit the previous tap's segment.
   const pendingSegRef = useRef<number | null>(null);
+  // Mirrors revealedSeg for the click handler, which needs the CURRENT segment
+  // synchronously to tell "tap on the same sentence" from "tap on the entry's
+  // other sentence" without re-creating itself every segment change.
+  const curSegRef = useRef(0);
   const [prevDisplayId, setPrevDisplayId] = useState<string | null>(displaySentenceId);
   if (displaySentenceId !== prevDisplayId) {
     setPrevDisplayId(displaySentenceId);
     if (displaySentenceId) {
       setRevealedId(displaySentenceId);
       setRevealedSeg(pendingSegRef.current ?? 0);
+      curSegRef.current = pendingSegRef.current ?? 0;
       pendingSegRef.current = null;
     }
   }
@@ -450,12 +455,17 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
 
   const handleSentenceClick = useCallback((id: string, el?: HTMLElement, seg = 0) => {
     dismissTip('dialogue-tour');
+    // Tap-again-to-deselect only counts a tap on the SAME sentence. Before
+    // segments existed, entry === sentence and prev === id was enough; now a
+    // tap on the entry's other sentence must move the highlight, not clear it.
+    const sameSeg = curSegRef.current === seg;
+    curSegRef.current = seg;
     // Both: the ref for when this tap changes the entry (the render-time block
     // reads it), the state for when it doesn't — re-tapping a different
     // sentence of the entry you are already on must still move the bar.
     pendingSegRef.current = seg;
     setRevealedSeg(seg);
-    setActiveSentenceId(prev => focusMode ? id : prev === id ? null : id);
+    setActiveSentenceId(prev => focusMode ? id : (prev === id && sameSeg) ? null : id);
     const sentence = allSentences.find(s => s.id === id);
     playSentence(sentence);
     // Deferred to the effect below, not run here: on the first tap the bar does
