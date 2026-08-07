@@ -801,5 +801,939 @@
         }
       ]
     }
+  ],
+  "grammar": [
+    {
+      "slug": "guji",
+      "title": "估计",
+      "pinyin": "gūjì",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "估计 — fe'l bo'lib, «taxmin qilmoq», «chamalamoq», «taxminan hisoblamoq» degan ma'noni bildiradi.\nU mavjud ma'lumot yoki vaziyatga tayanib xulosa chiqarish uchun ishlatiladi.",
+          "ru": "估计 — глагол со значением «предполагать», «оценивать», «примерно считать».\nОн используется, когда вывод делается на основе имеющихся фактов или обстоятельств.",
+          "en": "估计 is a verb meaning “to estimate”, “to reckon”, “to judge roughly”.\nIt is used when you draw a conclusion from the information or circumstances at hand."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "估计 + Gap → Taxminimcha…\nEga + 估计 + Gap → … deb taxmin qilmoq",
+          "ru": "估计 + Предложение → Предположительно…\nПодлежащее + 估计 + Предложение → … предполагает, что…",
+          "en": "估计 + Clause → It's probably…\nSubject + 估计 + Clause → Someone reckons that…"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "我还不习惯北方的气候，估计是天气太干。",
+          "py": "Wǒ hái bù xíguàn běifāng de qìhòu, gūjì shì tiānqì tài gān.",
+          "uz": "Men hali shimol iqlimiga ko'nikmadim — taxminimcha, havo juda quruq.",
+          "ru": "Я ещё не привык к северному климату — предположительно, воздух слишком сухой.",
+          "en": "I'm not used to the northern climate yet — I reckon the air is too dry."
+        },
+        {
+          "type": "ex",
+          "zh": "你有没有去问问小王？估计他应该有办法。",
+          "py": "Nǐ yǒu méiyǒu qù wènwen Xiǎo Wáng? Gūjì tā yīnggāi yǒu bànfǎ.",
+          "uz": "Syao Vandan so'rab ko'rdingmi? Taxminimcha, uning bir yechimi bor.",
+          "ru": "Ты спрашивал Сяо Вана? Думаю, у него должно быть решение.",
+          "en": "Have you asked Xiao Wang? I reckon he'll have a solution."
+        },
+        {
+          "type": "ex",
+          "zh": "机场通知飞机晚点一个小时，估计他下午六点才能到上海。",
+          "py": "Jīchǎng tōngzhī fēijī wǎndiǎn yī gè xiǎoshí, gūjì tā xiàwǔ liù diǎn cái néng dào Shànghǎi.",
+          "uz": "Aeroport reys bir soat kechikishini e'lon qildi — taxminimcha, u Shanxayga faqat kechqurun soat oltida yetib boradi.",
+          "ru": "В аэропорту сообщили, что рейс задерживается на час — предположительно, он доберётся до Шанхая только к шести вечера.",
+          "en": "The airport announced an hour's delay — I reckon he won't reach Shanghai until six in the evening."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p ishlatiladigan birikmalar",
+          "ru": "Частые сочетания",
+          "en": "Common expressions"
+        },
+        {
+          "type": "p",
+          "uz": "估计是…… — taxminimcha…\n估计会…… — ehtimol…\n我估计…… — menimcha…",
+          "ru": "估计是…… — вероятно…\n估计会…… — скорее всего…\n我估计…… — я предполагаю…",
+          "en": "估计是…… — it's probably…\n估计会…… — will probably…\n我估计…… — I reckon…"
+        },
+        {
+          "type": "h",
+          "uz": "估计 va 觉得 farqi",
+          "ru": "估计 и 觉得",
+          "en": "估计 vs. 觉得"
+        },
+        {
+          "type": "ex",
+          "zh": "估计他已经到了。",
+          "py": "Gūjì tā yǐjīng dào le.",
+          "uz": "Taxminimcha, u allaqachon yetib kelgan.",
+          "ru": "Полагаю, он уже приехал.",
+          "en": "I reckon he's already arrived."
+        },
+        {
+          "type": "ex",
+          "zh": "我觉得很好。",
+          "py": "Wǒ juéde hěn hǎo.",
+          "uz": "Menimcha, bu yaxshi.",
+          "ru": "Я считаю, что это хорошо.",
+          "en": "I think it's good."
+        },
+        {
+          "type": "note",
+          "uz": "估计 → dalil yoki vaziyatga asoslangan taxmin.\n觉得 → shaxsiy fikr yoki his.",
+          "ru": "估计 → предположение на основе фактов или обстоятельств.\n觉得 → личное мнение или ощущение.",
+          "en": "估计 → an inference from facts or circumstances.\n觉得 → a personal opinion or feeling."
+        },
+        {
+          "type": "h",
+          "uz": "估计 va 猜 farqi",
+          "ru": "估计 и 猜",
+          "en": "估计 vs. 猜"
+        },
+        {
+          "type": "ex",
+          "zh": "估计今天会下雨。",
+          "py": "Gūjì jīntiān huì xià yǔ.",
+          "uz": "Taxminimcha, bugun yomg'ir yog'adi.",
+          "ru": "Вероятно, сегодня будет дождь.",
+          "en": "It'll probably rain today."
+        },
+        {
+          "type": "ex",
+          "zh": "猜一猜。",
+          "py": "Cāi yī cāi.",
+          "uz": "Topib ko'r-chi.",
+          "ru": "Попробуй угадать.",
+          "en": "Have a guess."
+        },
+        {
+          "type": "note",
+          "uz": "估计 → ma'lumotga tayangan taxmin.\n猜 → yetarli dalilsiz topishga urinish.",
+          "ru": "估计 → предположение, опирающееся на информацию.\n猜 → угадывание без достаточных оснований.",
+          "en": "估计 → a judgement grounded in information.\n猜 → a guess with nothing much to go on."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n估计 = taxmin qilmoq, chamalamoq.\nMavjud ma'lumotga tayanadi — quruq topish emas.\n觉得 (fikr) va 猜 (topish) dan farq qiladi.",
+          "ru": "Запомните:\n估计 = предполагать, оценивать.\nОпирается на имеющуюся информацию, а не на случайную догадку.\nОтличается от 觉得 (мнение) и 猜 (угадывать).",
+          "en": "Remember:\n估计 = to estimate, to reckon.\nIt rests on available information, not on pure guesswork.\nIt differs from 觉得 (opinion) and 猜 (guess)."
+        }
+      ]
+    },
+    {
+      "slug": "guji-vs-keneng",
+      "title": "估计 / 可能",
+      "pinyin": "gūjì / kěnéng",
+      "label": "比一比",
+      "labelTranslation": "Taqqoslash",
+      "labelTranslation_ru": "Сравнение",
+      "labelTranslation_en": "Compare",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "O'xshashligi",
+          "ru": "Сходство",
+          "en": "Similarities"
+        },
+        {
+          "type": "p",
+          "uz": "估计 va 可能 ikkalasi ham mavjud vaziyat yoki ma'lumotga tayanib taxmin bildiradi.",
+          "ru": "И 估计, и 可能 выражают предположение, основанное на обстоятельствах или имеющейся информации.",
+          "en": "Both 估计 and 可能 express an inference based on the situation or the information available."
+        },
+        {
+          "type": "ex",
+          "zh": "今天的工作估计完不成了，因为出了点儿问题。",
+          "py": "Jīntiān de gōngzuò gūjì wánbuchéng le, yīnwèi chū le diǎnr wèntí.",
+          "uz": "Bugungi ishni, taxminimcha, tugata olmaymiz — kichik muammo chiqdi.",
+          "ru": "Сегодняшнюю работу, вероятно, не закончим — возникла небольшая проблема.",
+          "en": "We probably won't finish today's work — a small problem came up."
+        },
+        {
+          "type": "ex",
+          "zh": "今天的工作可能完不成了，因为出了点儿问题。",
+          "py": "Jīntiān de gōngzuò kěnéng wánbuchéng le, yīnwèi chū le diǎnr wèntí.",
+          "uz": "Bugungi ishni, ehtimol, tugata olmaymiz — kichik muammo chiqdi.",
+          "ru": "Сегодняшнюю работу, возможно, не закончим — возникла небольшая проблема.",
+          "en": "We may not finish today's work — a small problem came up."
+        },
+        {
+          "type": "note",
+          "uz": "Bu gapda ikkalasi ham ishlatilaveradi.",
+          "ru": "В этом предложении подходят оба варианта.",
+          "en": "Either word works in this sentence."
+        },
+        {
+          "type": "h",
+          "uz": "1. 估计 — fe'l, 可能 — modal fe'l",
+          "ru": "1. 估计 — глагол, 可能 — модальный глагол",
+          "en": "1. 估计 is a verb, 可能 a modal verb"
+        },
+        {
+          "type": "formula",
+          "uz": "估计 + Gap\n可能 + Fe'l",
+          "ru": "估计 + Предложение\n可能 + Глагол",
+          "en": "估计 + Clause\n可能 + Verb"
+        },
+        {
+          "type": "ex",
+          "zh": "明天就可以上网查成绩了，我估计这次考试考得不错。",
+          "py": "Míngtiān jiù kěyǐ shàngwǎng chá chéngjì le, wǒ gūjì zhè cì kǎoshì kǎo de bùcuò.",
+          "uz": "Ertaga natijalarni internetdan ko'rish mumkin. Menimcha, bu safar yaxshi topshirdim.",
+          "ru": "Завтра можно будет посмотреть результаты в интернете. Думаю, в этот раз я сдал неплохо.",
+          "en": "We can check the results online tomorrow. I reckon I did well this time."
+        },
+        {
+          "type": "ex",
+          "zh": "明天就可以上网查成绩了，我这次考试可能考得不错。",
+          "py": "Míngtiān jiù kěyǐ shàngwǎng chá chéngjì le, wǒ zhè cì kǎoshì kěnéng kǎo de bùcuò.",
+          "uz": "Ertaga natijalarni internetdan ko'rish mumkin. Bu safar yaxshi topshirgan bo'lsam kerak.",
+          "ru": "Завтра можно будет посмотреть результаты. Возможно, в этот раз я сдал неплохо.",
+          "en": "We can check the results online tomorrow. I may have done well this time."
+        },
+        {
+          "type": "note",
+          "uz": "估计 o'zi kesim bo'la oladi va undan keyin butun gap kelishi mumkin.\n可能 esa odatda asosiy fe'ldan oldin turadi.",
+          "ru": "估计 может само быть сказуемым, и после него может идти целое предложение.\n可能 обычно стоит перед основным глаголом.",
+          "en": "估计 can serve as the predicate itself and take a whole clause after it.\n可能 normally sits in front of the main verb."
+        },
+        {
+          "type": "h",
+          "uz": "2. 可能 sifat ham bo'la oladi",
+          "ru": "2. 可能 может быть прилагательным",
+          "en": "2. 可能 can also be an adjective"
+        },
+        {
+          "type": "ex",
+          "zh": "他这么多天没来上课，最可能的原因就是他回国了。",
+          "py": "Tā zhème duō tiān méi lái shàngkè, zuì kěnéng de yuányīn jiùshì tā huíguó le.",
+          "uz": "U shuncha kundan beri darsga kelmayapti. Eng ehtimoliy sabab — vataniga qaytgani.",
+          "ru": "Он уже много дней не приходит на занятия. Самая вероятная причина — он вернулся на родину.",
+          "en": "He hasn't been to class for days. The most likely reason is that he's gone home."
+        },
+        {
+          "type": "note",
+          "uz": "Sifat sifatida 可能 «imkoni bor», «ehtimoliy» ma'nosini beradi. 估计 bunday ishlatilmaydi.",
+          "ru": "Как прилагательное 可能 значит «возможный», «вероятный». 估计 так не употребляется.",
+          "en": "As an adjective 可能 means “possible”, “likely”. 估计 cannot be used this way."
+        },
+        {
+          "type": "h",
+          "uz": "3. 很可能",
+          "ru": "3. 很可能",
+          "en": "3. 很可能"
+        },
+        {
+          "type": "ex",
+          "zh": "很可能他还不知道这件事。",
+          "py": "Hěn kěnéng tā hái bù zhīdào zhè jiàn shì.",
+          "uz": "Katta ehtimol bilan u hali bu voqeani bilmaydi.",
+          "ru": "Скорее всего, он ещё не знает об этом.",
+          "en": "He very likely still doesn't know about this."
+        },
+        {
+          "type": "ex",
+          "zh": "他很可能还不知道这件事。",
+          "py": "Tā hěn kěnéng hái bù zhīdào zhè jiàn shì.",
+          "uz": "U, katta ehtimol bilan, hali bu voqeani bilmaydi.",
+          "ru": "Он, скорее всего, ещё не знает об этом.",
+          "en": "He most likely still doesn't know about this."
+        },
+        {
+          "type": "note",
+          "uz": "可能 oldidan 很 kelib 很可能 shaklini beradi. 很估计 esa noto'g'ri.",
+          "ru": "Перед 可能 можно поставить 很: 很可能. Форма 很估计 недопустима.",
+          "en": "可能 takes 很 in front of it: 很可能. 很估计 is simply wrong."
+        },
+        {
+          "type": "h",
+          "uz": "Qaysi biri qachon?",
+          "ru": "Что когда использовать?",
+          "en": "Which one when?"
+        },
+        {
+          "type": "ex",
+          "zh": "我估计他已经到了。",
+          "py": "Wǒ gūjì tā yǐjīng dào le.",
+          "uz": "Menimcha, u allaqachon yetib kelgan.",
+          "ru": "Я думаю, он уже приехал.",
+          "en": "I reckon he's already arrived."
+        },
+        {
+          "type": "ex",
+          "zh": "他可能已经到了。",
+          "py": "Tā kěnéng yǐjīng dào le.",
+          "uz": "U ehtimol allaqachon yetib kelgan.",
+          "ru": "Он, возможно, уже приехал.",
+          "en": "He may have already arrived."
+        },
+        {
+          "type": "table",
+          "head": [
+            "估计",
+            "可能"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "Fe'l",
+                "Modal fe'l yoki sifat"
+              ],
+              "ru": [
+                "Глагол",
+                "Модальный глагол или прилагательное"
+              ],
+              "en": [
+                "A verb",
+                "A modal verb or an adjective"
+              ]
+            },
+            {
+              "uz": [
+                "Butun gapni kirita oladi",
+                "Fe'ldan oldin turadi"
+              ],
+              "ru": [
+                "Может вводить целое предложение",
+                "Стоит перед глаголом"
+              ],
+              "en": [
+                "Can introduce a whole clause",
+                "Sits before the verb"
+              ]
+            },
+            {
+              "uz": [
+                "Gapiruvchining taxmini",
+                "Hodisaning ehtimoli"
+              ],
+              "ru": [
+                "Предположение говорящего",
+                "Вероятность события"
+              ],
+              "en": [
+                "The speaker's estimate",
+                "The likelihood of an event"
+              ]
+            },
+            {
+              "uz": [
+                "很估计 ❌",
+                "很可能 ✅"
+              ],
+              "ru": [
+                "很估计 ❌",
+                "很可能 ✅"
+              ],
+              "en": [
+                "很估计 ❌",
+                "很可能 ✅"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n估计 = menimcha, taxmin qilmoq.\n可能 = mumkin, ehtimol.\n很可能 juda keng ishlatiladi, 很估计 esa noto'g'ri.",
+          "ru": "Запомните:\n估计 = предполагать, думаю.\n可能 = возможно, может быть.\n很可能 — очень частое выражение, 很估计 недопустимо.",
+          "en": "Remember:\n估计 = to reckon, I'd say.\n可能 = may, possibly.\n很可能 is very common; 很估计 is incorrect."
+        }
+      ]
+    },
+    {
+      "slug": "laibuji",
+      "title": "来不及",
+      "pinyin": "láibují",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "来不及 — fe'l bo'lib, vaqt yetmagani uchun biror ishga ulgurmaslik yoki kech qolmoq ma'nosini bildiradi.\nMustaqil ham ishlatiladi, undan keyin fe'l ham kelishi mumkin.",
+          "ru": "来不及 — глагол со значением «не успевать», «не хватает времени», «уже поздно».\nУпотребляется самостоятельно или с последующим глаголом.",
+          "en": "来不及 is a verb meaning “not to have enough time”, “to be too late”.\nIt stands alone or takes a verb after it."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "来不及 + Fe'l → … qilishga ulgurmaslik\n……，来不及了。→ Endi juda kech.",
+          "ru": "来不及 + Глагол → не успеть сделать\n……，来不及了。→ Уже слишком поздно.",
+          "en": "来不及 + Verb → not have time to…\n……，来不及了。→ It's too late now."
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "等你身体出现问题了，后悔就来不及了。",
+          "py": "Děng nǐ shēntǐ chūxiàn wèntí le, hòuhuǐ jiù láibují le.",
+          "uz": "Sog'ligingda muammo paydo bo'lganda pushaymon bo'lishga kech bo'ladi.",
+          "ru": "Когда появятся проблемы со здоровьем, жалеть будет уже поздно.",
+          "en": "Once your health starts to suffer, it'll be too late for regrets."
+        },
+        {
+          "type": "ex",
+          "zh": "今天来不及开会了，明天我们再找时间说这个问题吧。",
+          "py": "Jīntiān láibují kāihuì le, míngtiān wǒmen zài zhǎo shíjiān shuō zhège wèntí ba.",
+          "uz": "Bugun yig'ilishga ulgurmaymiz. Bu masalani ertaga vaqt topib gaplashaylik.",
+          "ru": "Сегодня уже не успеем провести собрание. Давайте найдём время и обсудим это завтра.",
+          "en": "There isn't time for the meeting today. Let's find a moment tomorrow to talk it over."
+        },
+        {
+          "type": "ex",
+          "zh": "你不是和同学约了下午两点见面吗？再不走就来不及了。",
+          "py": "Nǐ bùshì hé tóngxué yuē le xiàwǔ liǎng diǎn jiànmiàn ma? Zài bù zǒu jiù láibují le.",
+          "uz": "Sinfdoshing bilan soat ikkida uchrashishga kelishmaganmiding? Hozir chiqmasang, kech qolasan.",
+          "ru": "Разве ты не договорился встретиться с одногруппником в два часа? Если сейчас не выйдешь, опоздаешь.",
+          "en": "Didn't you arrange to meet your classmate at two? If you don't set off now you'll be late."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p ishlatiladigan birikmalar",
+          "ru": "Частые сочетания",
+          "en": "Common expressions"
+        },
+        {
+          "type": "p",
+          "uz": "来不及吃饭 — ovqatga ulgurmaslik\n来不及上课 — darsga ulgurmaslik\n来不及准备 — tayyorlanishga ulgurmaslik\n来不及回家 — uyga qaytishga ulgurmaslik\n来不及了 — endi juda kech",
+          "ru": "来不及吃饭 — не успеть поесть\n来不及上课 — не успеть на урок\n来不及准备 — не успеть подготовиться\n来不及回家 — не успеть вернуться домой\n来不及了 — уже поздно",
+          "en": "来不及吃饭 — no time to eat\n来不及上课 — not make it to class\n来不及准备 — no time to prepare\n来不及回家 — no time to get home\n来不及了 — it's too late"
+        },
+        {
+          "type": "h",
+          "uz": "来不及 va 没时间 farqi",
+          "ru": "来不及 и 没时间",
+          "en": "来不及 vs. 没时间"
+        },
+        {
+          "type": "ex",
+          "zh": "来不及吃饭。",
+          "py": "Láibují chīfàn.",
+          "uz": "Ovqatlanishga ulgurmadim.",
+          "ru": "Не успеваю поесть.",
+          "en": "There isn't time to eat."
+        },
+        {
+          "type": "ex",
+          "zh": "我没时间吃饭。",
+          "py": "Wǒ méi shíjiān chīfàn.",
+          "uz": "Ovqatlanishga vaqtim yo'q.",
+          "ru": "У меня нет времени поесть.",
+          "en": "I don't have time to eat."
+        },
+        {
+          "type": "note",
+          "uz": "来不及 → muddat siqib qo'ygan: endi ulgurib bo'lmaydi.\n没时间 → shunchaki bo'sh vaqt yo'q.",
+          "ru": "来不及 → поджимает срок: уже не успеть.\n没时间 → просто нет свободного времени.",
+          "en": "来不及 → a deadline is closing in: it can't be done in time.\n没时间 → simply having no free time."
+        },
+        {
+          "type": "h",
+          "uz": "来不及 va 赶不上 farqi",
+          "ru": "来不及 и 赶不上",
+          "en": "来不及 vs. 赶不上"
+        },
+        {
+          "type": "ex",
+          "zh": "来不及准备。",
+          "py": "Láibují zhǔnbèi.",
+          "uz": "Tayyorlanishga ulgurmadim.",
+          "ru": "Не успеть подготовиться.",
+          "en": "There's no time to prepare."
+        },
+        {
+          "type": "ex",
+          "zh": "赶不上火车。",
+          "py": "Gǎnbushàng huǒchē.",
+          "uz": "Poyezdga ulgurmay qolmoq.",
+          "ru": "Не успеть на поезд.",
+          "en": "To miss the train."
+        },
+        {
+          "type": "note",
+          "uz": "来不及 → ishni bajarishga vaqt yetmaydi.\n赶不上 → transportni yoki kimnidir quvib yetolmaslik.",
+          "ru": "来不及 → не хватает времени на действие.\n赶不上 → не догнать кого-то или не успеть на транспорт.",
+          "en": "来不及 → not enough time to do the thing.\n赶不上 → failing to catch a train, or to catch up with someone."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n来不及 = ulgurmaslik, kech qolmoq.\nSababi doim vaqt yetishmasligi.\nMustaqil ham, fe'l bilan ham ishlatiladi.",
+          "ru": "Запомните:\n来不及 = не успевать, слишком поздно.\nПричина всегда — нехватка времени.\nУпотребляется и самостоятельно, и с глаголом.",
+          "en": "Remember:\n来不及 = not to make it in time, too late.\nThe cause is always a shortage of time.\nIt works alone or with a verb."
+        }
+      ]
+    },
+    {
+      "slug": "lihe-chongdie",
+      "title": "离合词重叠",
+      "pinyin": "líhécí chóngdié",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "Ba'zi ajraluvchi fe'llar (离合词) takrorlanganda AAB shaklini oladi.\nBu shakl odatda quyidagilarni bildiradi:\n— qisqa vaqt davom etgan harakat;\n— sinab ko'rish;\n— yengil, bemalol bajarilgan ish.",
+          "ru": "Некоторые разделяемые глаголы (离合词) при повторении дают схему AAB.\nТакая форма обычно выражает:\n— кратковременное действие;\n— попытку;\n— непринуждённое, лёгкое действие.",
+          "en": "Some separable verbs (离合词) reduplicate in an AAB pattern.\nIt usually conveys:\n— an action lasting a short while;\n— giving something a try;\n— doing something casually."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "AAB\n散步 → 散散步、帮忙 → 帮帮忙、睡觉 → 睡睡觉、游泳 → 游游泳",
+          "ru": "AAB\n散步 → 散散步, 帮忙 → 帮帮忙, 睡觉 → 睡睡觉, 游泳 → 游游泳",
+          "en": "AAB\n散步 → 散散步, 帮忙 → 帮帮忙, 睡觉 → 睡睡觉, 游泳 → 游游泳"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "咱们午饭后就去附近的公园散散步吧。",
+          "py": "Zánmen wǔfàn hòu jiù qù fùjìn de gōngyuán sànsan bù ba.",
+          "uz": "Tushlikdan keyin yaqin atrofdagi bog'da biroz sayr qilaylik.",
+          "ru": "Давайте после обеда немного прогуляемся в парке неподалёку.",
+          "en": "Let's go for a short walk in the nearby park after lunch."
+        },
+        {
+          "type": "ex",
+          "zh": "行李箱怎么这么重啊！你快来帮帮我的忙。",
+          "py": "Xínglixiāng zěnme zhème zhòng a! Nǐ kuài lái bāngbang wǒ de máng.",
+          "uz": "Chamadon nega buncha og'ir! Tezroq kelib biroz yordam ber.",
+          "ru": "Почему чемодан такой тяжёлый! Иди скорее, помоги немного.",
+          "en": "Why is this suitcase so heavy! Come and give me a hand."
+        },
+        {
+          "type": "ex",
+          "zh": "周末马克一般在宿舍看看书、听听音乐、睡睡觉。",
+          "py": "Zhōumò Mǎkè yībān zài sùshè kànkan shū, tīngting yīnyuè, shuìshui jiào.",
+          "uz": "Dam olish kunlari Mark odatda yotoqxonada kitob o'qiydi, musiqa tinglaydi, biroz uxlaydi.",
+          "ru": "По выходным Марк обычно в общежитии немного читает, слушает музыку и спит.",
+          "en": "At weekends Mark usually reads a bit, listens to some music and gets some sleep in the dorm."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p uchraydigan ajraluvchi fe'llar",
+          "ru": "Частые разделяемые глаголы",
+          "en": "Common separable verbs"
+        },
+        {
+          "type": "p",
+          "uz": "散步 → 散散步 — biroz sayr qilmoq\n帮忙 → 帮帮忙 — biroz yordam bermoq\n睡觉 → 睡睡觉 — biroz uxlamoq\n游泳 → 游游泳 — biroz suzmoq\n聊天 → 聊聊天 — biroz suhbatlashmoq\n见面 → 见见面 — qisqa uchrashmoq",
+          "ru": "散步 → 散散步 — немного прогуляться\n帮忙 → 帮帮忙 — немного помочь\n睡觉 → 睡睡觉 — немного поспать\n游泳 → 游游泳 — немного поплавать\n聊天 → 聊聊天 — немного поболтать\n见面 → 见见面 — ненадолго встретиться",
+          "en": "散步 → 散散步 — take a short walk\n帮忙 → 帮帮忙 — give a hand\n睡觉 → 睡睡觉 — get some sleep\n游泳 → 游游泳 — go for a swim\n聊天 → 聊聊天 — have a little chat\n见面 → 见见面 — meet briefly"
+        },
+        {
+          "type": "h",
+          "uz": "Oddiy fe'llar bilan farqi",
+          "ru": "Отличие от обычных глаголов",
+          "en": "How ordinary verbs differ"
+        },
+        {
+          "type": "ex",
+          "zh": "这个问题你再想想。",
+          "py": "Zhège wèntí nǐ zài xiǎngxiang.",
+          "uz": "Bu masalani yana bir o'ylab ko'r.",
+          "ru": "Подумай ещё немного над этим вопросом.",
+          "en": "Give this question a bit more thought."
+        },
+        {
+          "type": "note",
+          "uz": "Oddiy bir bo'g'inli fe'llar AA shaklida takrorlanadi: 看看、听听、想想.\nAjraluvchi fe'llar esa AAB shaklida: 散散步、帮帮忙 (散步散步 ❌).",
+          "ru": "Обычные односложные глаголы повторяются по схеме AA: 看看, 听听, 想想.\nРазделяемые — по схеме AAB: 散散步, 帮帮忙 (散步散步 ❌).",
+          "en": "Ordinary one-syllable verbs reduplicate as AA: 看看, 听听, 想想.\nSeparable verbs go AAB: 散散步, 帮帮忙 (散步散步 ❌)."
+        },
+        {
+          "type": "table",
+          "head": [
+            "离合词",
+            "一般动词"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "AAB shakli",
+                "AA shakli"
+              ],
+              "ru": [
+                "Схема AAB",
+                "Схема AA"
+              ],
+              "en": [
+                "AAB pattern",
+                "AA pattern"
+              ]
+            },
+            {
+              "uz": [
+                "散步 → 散散步",
+                "看 → 看看"
+              ],
+              "ru": [
+                "散步 → 散散步",
+                "看 → 看看"
+              ],
+              "en": [
+                "散步 → 散散步",
+                "看 → 看看"
+              ]
+            },
+            {
+              "uz": [
+                "帮忙 → 帮帮忙",
+                "想 → 想想"
+              ],
+              "ru": [
+                "帮忙 → 帮帮忙",
+                "想 → 想想"
+              ],
+              "en": [
+                "帮忙 → 帮帮忙",
+                "想 → 想想"
+              ]
+            },
+            {
+              "uz": [
+                "Fe'l ikkiga bo'linadi, birinchi qismi takrorlanadi",
+                "Butun fe'l takrorlanadi"
+              ],
+              "ru": [
+                "Глагол делится, повторяется первая часть",
+                "Повторяется весь глагол"
+              ],
+              "en": [
+                "The verb splits; the first half repeats",
+                "The whole verb repeats"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\nAjraluvchi fe'llar AAB shaklida takrorlanadi.\nBu qisqa vaqt, sinab ko'rish yoki yengil bajarish ma'nosini beradi.\nOddiy fe'llar AA shaklida takrorlanadi.",
+          "ru": "Запомните:\nРазделяемые глаголы повторяются по схеме AAB.\nЭто выражает кратковременность, пробу или лёгкость действия.\nОбычные глаголы повторяются по схеме AA.",
+          "en": "Remember:\nSeparable verbs reduplicate as AAB.\nIt marks a short spell, a try, or a casual action.\nOrdinary verbs reduplicate as AA."
+        }
+      ]
+    },
+    {
+      "slug": "yaoshi",
+      "title": "要是",
+      "pinyin": "yàoshi",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "要是 — bog'lovchi bo'lib, «agar» degan ma'noni bildiradi.\nU shart yoki taxminni kiritadi va odatda 要是……（的话），就…… qolipida keladi:\n要是 — shartni, 就 — natijani bildiradi.",
+          "ru": "要是 — союз со значением «если».\nОн вводит условие или предположение и обычно употребляется в конструкции 要是……（的话），就……:\n要是 — условие, 就 — результат.",
+          "en": "要是 is a conjunction meaning “if”.\nIt introduces a condition or supposition, usually in the pattern 要是……（的话），就……:\n要是 marks the condition, 就 the result."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "要是 + Gap +（的话），就 + Natija",
+          "ru": "要是 + Предложение +（的话），就 + Результат",
+          "en": "要是 + Clause +（的话），就 + Result"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "要是健康是一，其他都是一后面的零。",
+          "py": "Yàoshi jiànkāng shì yī, qítā dōu shì yī hòumiàn de líng.",
+          "uz": "Agar sog'lik bir bo'lsa, qolgan hamma narsa shu birning orqasidagi nollardir.",
+          "ru": "Если здоровье — единица, то всё остальное — нули после неё.",
+          "en": "If health is a one, everything else is the zeros that follow it."
+        },
+        {
+          "type": "ex",
+          "zh": "要是你想来中国的大学留学，和中国学生一起学习专业课，那么就需要做好这些准备。",
+          "py": "Yàoshi nǐ xiǎng lái Zhōngguó de dàxué liúxué, hé Zhōngguó xuéshēng yīqǐ xuéxí zhuānyè kè, nàme jiù xūyào zuò hǎo zhèxiē zhǔnbèi.",
+          "uz": "Agar Xitoy universitetida o'qishni va Xitoy talabalari bilan birga mutaxassislik darslarini olishni istasang, unda shu tayyorgarliklarni ko'rishing kerak.",
+          "ru": "Если ты хочешь учиться в китайском университете и слушать профильные курсы вместе с китайскими студентами, тогда нужно всё это подготовить.",
+          "en": "If you want to study at a Chinese university and take subject courses alongside Chinese students, then you need to make these preparations."
+        },
+        {
+          "type": "ex",
+          "zh": "要是质量比别人的好的话，那么价格贵一点儿也是可以接受的。",
+          "py": "Yàoshi zhìliàng bǐ biérén de hǎo dehuà, nàme jiàgé guì yìdiǎnr yě shì kěyǐ jiēshòu de.",
+          "uz": "Agar sifati boshqalarnikidan yaxshiroq bo'lsa, narxi biroz qimmatroq bo'lgani ham qabul qilsa bo'ladigan gap.",
+          "ru": "Если качество лучше, чем у других, то и цена чуть выше вполне приемлема.",
+          "en": "If the quality is better than the rest, then a slightly higher price is acceptable."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p ishlatiladigan qoliplar",
+          "ru": "Частые конструкции",
+          "en": "Common patterns"
+        },
+        {
+          "type": "p",
+          "uz": "要是……就…… — agar… unda…\n要是……的话…… — agar… bo'lsa…\n要是不……就…… — agar… bo'lmasa…",
+          "ru": "要是……就…… — если…, то…\n要是……的话…… — если…\n要是不……就…… — если не…",
+          "en": "要是……就…… — if… then…\n要是……的话…… — if…\n要是不……就…… — if not…"
+        },
+        {
+          "type": "h",
+          "uz": "要是 va 如果 farqi",
+          "ru": "要是 и 如果",
+          "en": "要是 vs. 如果"
+        },
+        {
+          "type": "ex",
+          "zh": "要是有时间，我们一起去吧。",
+          "py": "Yàoshi yǒu shíjiān, wǒmen yīqǐ qù ba.",
+          "uz": "Vaqting bo'lsa, birga boraylik.",
+          "ru": "Если будет время, пойдём вместе.",
+          "en": "If you've got time, let's go together."
+        },
+        {
+          "type": "ex",
+          "zh": "如果有时间，我们一起去吧。",
+          "py": "Rúguǒ yǒu shíjiān, wǒmen yīqǐ qù ba.",
+          "uz": "Vaqting bo'lsa, birga boraylik.",
+          "ru": "Если будет время, пойдём вместе.",
+          "en": "If you have time, let's go together."
+        },
+        {
+          "type": "note",
+          "uz": "要是 → so'zlashuv tilida ko'proq.\n如果 → yozma va rasmiy uslubda ko'proq.",
+          "ru": "要是 → чаще в разговорной речи.\n如果 → чаще в письменной и официальной речи.",
+          "en": "要是 → more colloquial.\n如果 → more common in writing and formal speech."
+        },
+        {
+          "type": "h",
+          "uz": "要是 va 假如 farqi",
+          "ru": "要是 и 假如",
+          "en": "要是 vs. 假如"
+        },
+        {
+          "type": "ex",
+          "zh": "假如我是你，我会接受。",
+          "py": "Jiǎrú wǒ shì nǐ, wǒ huì jiēshòu.",
+          "uz": "Agar men sening o'rningda bo'lsam, rozi bo'lardim.",
+          "ru": "Если бы я был на твоём месте, я бы согласился.",
+          "en": "If I were you, I'd accept."
+        },
+        {
+          "type": "note",
+          "uz": "要是 → kundalik suhbat uchun.\n假如 → ko'proq faraziy, nazariy holatlar uchun.",
+          "ru": "要是 → для повседневной речи.\n假如 → чаще для гипотетических, воображаемых ситуаций.",
+          "en": "要是 → everyday conversation.\n假如 → more for hypothetical, imagined situations."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n要是 = agar.\nOdatda 就 bilan juft keladi.\n如果 ga qaraganda ancha so'zlashuvroq.",
+          "ru": "Запомните:\n要是 = если.\nОбычно идёт в паре с 就.\nЗвучит разговорнее, чем 如果.",
+          "en": "Remember:\n要是 = if.\nIt usually pairs with 就.\nIt sounds more conversational than 如果."
+        }
+      ]
+    },
+    {
+      "slug": "ji-you",
+      "title": "既……又/也/还……",
+      "pinyin": "jì… yòu / yě / hái…",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "既……又/也/还…… — bir xil grammatik turdagi ikki fe'l, fe'lli ibora yoki sifatni bog'laydigan qolip.\nU bir vaqtning o'zida ikki xususiyat yoki holat mavjudligini bildiradi.\nIkkala qism odatda yo ikkalasi ijobiy, yo ikkalasi salbiy bo'ladi.",
+          "ru": "既……又/也/还…… — конструкция, соединяющая два глагола, глагольных сочетания или прилагательных одного типа.\nОна показывает, что два качества или состояния существуют одновременно.\nОбе части обычно либо обе положительные, либо обе отрицательные.",
+          "en": "既……又/也/还…… links two verbs, verb phrases or adjectives of the same kind.\nIt says that two qualities or states hold at once.\nBoth halves are normally either both positive or both negative."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "既 + A，又/也/还 + B → ham…, ham…",
+          "ru": "既 + A，又/也/还 + B → и…, и…",
+          "en": "既 + A，又/也/还 + B → both… and…"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "散步是生活中最简单的锻炼方法，既可以活动身体，又可以减肥。",
+          "py": "Sànbù shì shēnghuó zhōng zuì jiǎndān de duànliàn fāngfǎ, jì kěyǐ huódòng shēntǐ, yòu kěyǐ jiǎnféi.",
+          "uz": "Sayr — hayotdagi eng oddiy mashq usuli: ham tanani harakatlantiradi, ham vazn tashlashga yordam beradi.",
+          "ru": "Прогулка — самый простой способ тренировки: и тело разомнёт, и похудеть поможет.",
+          "en": "Walking is the simplest exercise there is: it both moves the body and helps you lose weight."
+        },
+        {
+          "type": "ex",
+          "zh": "会说话的人既容易交到朋友，也容易求得成功。",
+          "py": "Huì shuōhuà de rén jì róngyì jiāodào péngyou, yě róngyì qiúdé chénggōng.",
+          "uz": "Gapira oladigan odam ham oson do'st orttiradi, ham muvaffaqiyatga oson erishadi.",
+          "ru": "Тот, кто умеет говорить, и друзей находит легко, и успеха добивается легче.",
+          "en": "Someone who can talk well both makes friends easily and finds success more easily."
+        },
+        {
+          "type": "ex",
+          "zh": "他那个人做事既不认真，动作还慢，这个工作这么重要，还是让别人做吧。",
+          "py": "Tā nà ge rén zuòshì jì bù rènzhēn, dòngzuò hái màn, zhège gōngzuò zhème zhòngyào, háishì ràng biérén zuò ba.",
+          "uz": "U odam ishni na puxta qiladi, ustiga-ustak sekin harakat qiladi. Bu ish juda muhim — yaxshisi boshqa kishi bajarsin.",
+          "ru": "Он и работает невнимательно, и делает всё медленно. Работа важная — пусть лучше её сделает кто-то другой.",
+          "en": "He's careless in his work and slow on top of it. This job matters — better let someone else do it."
+        },
+        {
+          "type": "h",
+          "uz": "又、也 va 还 qachon?",
+          "ru": "Когда 又, 也 и 还?",
+          "en": "When 又, 也 or 还?"
+        },
+        {
+          "type": "ex",
+          "zh": "她既漂亮又聪明。",
+          "py": "Tā jì piàoliang yòu cōngming.",
+          "uz": "U ham chiroyli, ham aqlli.",
+          "ru": "Она и красивая, и умная.",
+          "en": "She is both beautiful and clever."
+        },
+        {
+          "type": "ex",
+          "zh": "他既喜欢中文，也喜欢日文。",
+          "py": "Tā jì xǐhuan Zhōngwén, yě xǐhuan Rìwén.",
+          "uz": "U ham Xitoy tilini, ham Yapon tilini yaxshi ko'radi.",
+          "ru": "Он любит и китайский, и японский.",
+          "en": "He likes both Chinese and Japanese."
+        },
+        {
+          "type": "ex",
+          "zh": "这家饭店既便宜，还很好吃。",
+          "py": "Zhè jiā fàndiàn jì piányi, hái hěn hǎochī.",
+          "uz": "Bu restoran ham arzon, ustiga taomlari juda mazali.",
+          "ru": "Этот ресторан и недорогой, и вдобавок очень вкусный.",
+          "en": "This restaurant is cheap, and the food is delicious besides."
+        },
+        {
+          "type": "note",
+          "uz": "既……又…… → eng ko'p ishlatiladigani.\n既……也…… → ohangi neytralroq.\n既……还…… → ikkinchi xususiyatni yana kuchaytiradi.",
+          "ru": "既……又…… → самая частая форма.\n既……也…… → более нейтральный оттенок.\n既……还…… → вторая характеристика получает дополнительное усиление.",
+          "en": "既……又…… → the commonest form.\n既……也…… → a more neutral tone.\n既……还…… → adds extra weight to the second quality."
+        },
+        {
+          "type": "h",
+          "uz": "既……又…… va 又……又…… farqi",
+          "ru": "既……又…… и 又……又……",
+          "en": "既……又…… vs. 又……又……"
+        },
+        {
+          "type": "ex",
+          "zh": "这个房子既方便又便宜。",
+          "py": "Zhège fángzi jì fāngbiàn yòu piányi.",
+          "uz": "Bu uy ham qulay, ham arzon.",
+          "ru": "Этот дом и удобный, и недорогой.",
+          "en": "This flat is both convenient and cheap."
+        },
+        {
+          "type": "ex",
+          "zh": "他又高又帅。",
+          "py": "Tā yòu gāo yòu shuài.",
+          "uz": "U ham bo'ychan, ham kelishgan.",
+          "ru": "Он и высокий, и красивый.",
+          "en": "He's tall and good-looking."
+        },
+        {
+          "type": "note",
+          "uz": "既……又…… → yozma va rasmiy uslubda ko'proq.\n又……又…… → og'zaki nutqda ko'proq.",
+          "ru": "既……又…… → чаще в письменной и официальной речи.\n又……又…… → чаще в разговорной речи.",
+          "en": "既……又…… → more written and formal.\n又……又…… → more spoken."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n既 doim 又、也 yoki 还 bilan juft ishlatiladi.\nA va B bir xil grammatik shaklda bo'lishi kerak.\nOdatda ikkala qism ham ijobiy yoki ikkalasi ham salbiy.",
+          "ru": "Запомните:\n既 всегда идёт в паре с 又, 也 или 还.\nA и B должны быть одной грамматической формы.\nОбычно обе части либо положительные, либо отрицательные.",
+          "en": "Remember:\n既 always pairs with 又, 也 or 还.\nA and B must be the same grammatical shape.\nBoth halves are normally positive, or both negative."
+        }
+      ]
+    }
   ]
 }
