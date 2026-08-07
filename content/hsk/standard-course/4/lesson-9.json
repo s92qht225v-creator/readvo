@@ -792,5 +792,945 @@
         }
       ]
     }
+  ],
+  "grammar": [
+    {
+      "slug": "nandao",
+      "title": "难道",
+      "pinyin": "nándào",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "难道 — ravish bo'lib, ritorik savolni kuchaytiradi.\nGapiruvchi aslida savol bermayapti — u javobni allaqachon biladi va hayratini bildiryapti.\nOdatda gap oxirida 吗 keladi, lekin usiz ham bo'ladi.",
+          "ru": "难道 — наречие, усиливающее риторический вопрос.\nГоворящий на самом деле не спрашивает — он уже знает ответ и выражает удивление.\nОбычно в конце стоит 吗, но оно может и отсутствовать.",
+          "en": "难道 is an adverb that strengthens a rhetorical question.\nThe speaker is not really asking — they already believe they know the answer and are expressing surprise.\n吗 usually closes the sentence, but it can be left out."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "难道 + Gap + 吗？\n难道 + Gap？",
+          "ru": "难道 + Предложение + 吗？\n难道 + Предложение？",
+          "en": "难道 + Clause + 吗？\n难道 + Clause？"
+        },
+        {
+          "type": "h",
+          "uz": "Ikki asosiy holat",
+          "ru": "Два основных случая",
+          "en": "The two key cases"
+        },
+        {
+          "type": "p",
+          "uz": "1. Tasdiq shaklidagi ritorik savol → ma'nosi INKOR.\n2. Inkor (不 / 没) bilan kelgan ritorik savol → ma'nosi TASDIQ.",
+          "ru": "1. Риторический вопрос в утвердительной форме → смысл ОТРИЦАТЕЛЬНЫЙ.\n2. Риторический вопрос с 不 / 没 → смысл УТВЕРДИТЕЛЬНЫЙ.",
+          "en": "1. A positive rhetorical question → the meaning is NEGATIVE.\n2. A rhetorical question with 不 / 没 → the meaning is POSITIVE."
+        },
+        {
+          "type": "ex",
+          "zh": "难道汉语真的这么难吗？",
+          "py": "Nándào Hànyǔ zhēnde zhème nán ma?",
+          "uz": "Nahotki Xitoy tili chindan ham shunchalik qiyin bo'lsa? (Aslida ma'nosi: unchalik qiyin emas.)",
+          "ru": "Неужели китайский и правда так труден? (На самом деле: не так уж он и труден.)",
+          "en": "Is Chinese really that hard? (What it means: it isn't that hard.)"
+        },
+        {
+          "type": "ex",
+          "zh": "难道你不减肥了？",
+          "py": "Nándào nǐ bù jiǎnféi le?",
+          "uz": "Nahotki endi ozishni tashlagan bo'lsang? (Aslida ma'nosi: sen ozishing kerak edi-ku.)",
+          "ru": "Неужели ты больше не худеешь? (На самом деле: я думал, ты худеешь.)",
+          "en": "Don't tell me you've given up dieting? (What it means: I thought you were dieting.)"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "怎么又买了这么多饼干和巧克力？",
+          "py": "Zěnme yòu mǎi le zhème duō bǐnggān hé qiǎokèlì?",
+          "uz": "Nega yana buncha pechenye va shokolad olding?",
+          "ru": "Почему ты снова накупила столько печенья и шоколада?",
+          "en": "Why have you bought so many biscuits and so much chocolate again?"
+        },
+        {
+          "type": "ex",
+          "zh": "喂，都十点了，你怎么还不来？",
+          "py": "Wèi, dōu shí diǎn le, nǐ zěnme hái bù lái?",
+          "uz": "Alo, soat o'n bo'ldi-ku, nega hali kelmayapsan?",
+          "ru": "Алло, уже десять часов, почему тебя всё нет?",
+          "en": "Hello, it's ten already — why aren't you here?"
+        },
+        {
+          "type": "ex",
+          "zh": "难道你没看短信？我今天有事去不了了。",
+          "py": "Nándào nǐ méi kàn duǎnxìn? Wǒ jīntiān yǒu shì qù bùliǎo le.",
+          "uz": "Nahotki xabarimni ko'rmagan bo'lsang? Bugun ishim chiqib, bora olmadim.",
+          "ru": "Ты что, не видел сообщение? У меня сегодня дела, я не смог прийти.",
+          "en": "Didn't you see my text? Something came up today and I couldn't make it."
+        },
+        {
+          "type": "ex",
+          "zh": "你不是两点就出发了吗？难道路上花了两个多小时？",
+          "py": "Nǐ bùshì liǎng diǎn jiù chūfā le ma? Nándào lù shàng huā le liǎng gè duō xiǎoshí?",
+          "uz": "Soat ikkida yo'lga chiqmaganmiding? Nahotki yo'lda ikki soatdan ko'p vaqt ketgan bo'lsa?",
+          "ru": "Ты же выехал в два? Неужели дорога заняла больше двух часов?",
+          "en": "Didn't you set off at two? Surely the journey didn't take over two hours?"
+        },
+        {
+          "type": "ex",
+          "zh": "我那辆车出了点儿问题，刚才把车送去修了。",
+          "py": "Wǒ nà liàng chē chū le diǎnr wèntí, gāngcái bǎ chē sòng qù xiū le.",
+          "uz": "Mashinamda biroz nosozlik chiqdi, hozirgina ta'mirga topshirdim.",
+          "ru": "С моей машиной что-то случилось, я только что отвёз её в ремонт.",
+          "en": "Something went wrong with my car — I've just taken it in to be fixed."
+        },
+        {
+          "type": "h",
+          "uz": "难道 va oddiy 吗 savoli farqi",
+          "ru": "难道 и обычный вопрос с 吗",
+          "en": "难道 vs. a plain 吗 question"
+        },
+        {
+          "type": "ex",
+          "zh": "你不减肥了吗？",
+          "py": "Nǐ bù jiǎnféi le ma?",
+          "uz": "Endi ozmayapsanmi? (Haqiqiy savol.)",
+          "ru": "Ты больше не худеешь? (Настоящий вопрос.)",
+          "en": "Aren't you dieting any more? (A genuine question.)"
+        },
+        {
+          "type": "ex",
+          "zh": "难道你不减肥了吗？",
+          "py": "Nándào nǐ bù jiǎnféi le ma?",
+          "uz": "Nahotki endi ozmasang?! (Hayrat — men ozyapsan deb o'ylagandim.)",
+          "ru": "Неужели ты больше не худеешь?! (Удивление — я думал, что худеешь.)",
+          "en": "Don't tell me you're not dieting any more?! (Surprise — I thought you were.)"
+        },
+        {
+          "type": "h",
+          "uz": "Boshqa misollar",
+          "ru": "Другие примеры",
+          "en": "More examples"
+        },
+        {
+          "type": "ex",
+          "zh": "难道你忘了？",
+          "py": "Nándào nǐ wàng le?",
+          "uz": "Nahotki unutgan bo'lsang?",
+          "ru": "Неужели ты забыл?",
+          "en": "Don't tell me you forgot?"
+        },
+        {
+          "type": "ex",
+          "zh": "难道他不知道？",
+          "py": "Nándào tā bù zhīdào?",
+          "uz": "Nahotki u bilmasa? (Bilishi kerak edi-ku.)",
+          "ru": "Неужели он не знает? (Он же должен знать.)",
+          "en": "Doesn't he know? (He ought to.)"
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n难道 = nahotki, axir…\nRitorik savolni kuchaytiradi, javobni kutmaydi.\nTasdiq shakl → inkor ma'no; inkor shakl → tasdiq ma'no.",
+          "ru": "Запомните:\n难道 = неужели, разве.\nУсиливает риторический вопрос, ответа не ждёт.\nУтвердительная форма → отрицательный смысл; отрицательная → утвердительный.",
+          "en": "Remember:\n难道 = surely…?, don't tell me…\nIt strengthens a rhetorical question and expects no answer.\nPositive form → negative meaning; negative form → positive meaning."
+        }
+      ]
+    },
+    {
+      "slug": "tongguo",
+      "title": "通过",
+      "pinyin": "tōngguò",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "通过 uch xil vazifada ishlatiladi:\n1. Ko'makchi — «orqali», «vositasida».\n2. Fe'l — biror joydan «o'tib ketmoq».\n3. Fe'l — imtihon, suhbat yoki tekshiruvdan «o'tmoq», tasdiqlanmoq.",
+          "ru": "通过 употребляется в трёх значениях:\n1. Предлог — «посредством», «через».\n2. Глагол — «проходить (сквозь место)».\n3. Глагол — «пройти» экзамен, собеседование, проверку; быть утверждённым.",
+          "en": "通过 has three uses:\n1. A preposition — “through”, “by means of”.\n2. A verb — to pass through a place.\n3. A verb — to pass an exam, interview or inspection; to be approved."
+        },
+        {
+          "type": "h",
+          "uz": "1. 通过 — «orqali»",
+          "ru": "1. 通过 — «посредством»",
+          "en": "1. 通过 — “by means of”"
+        },
+        {
+          "type": "formula",
+          "uz": "通过 + Shaxs / Narsa / Usul + Fe'l",
+          "ru": "通过 + Человек / Предмет / Способ + Глагол",
+          "en": "通过 + Person / Thing / Method + Verb"
+        },
+        {
+          "type": "ex",
+          "zh": "任何成功都要通过努力才能得到。",
+          "py": "Rènhé chénggōng dōu yào tōngguò nǔlì cái néng dédào.",
+          "uz": "Har qanday muvaffaqiyat faqat mehnat orqali qo'lga kiritiladi.",
+          "ru": "Любой успех достигается только через труд.",
+          "en": "Any success has to be won through effort."
+        },
+        {
+          "type": "ex",
+          "zh": "通过学习，我提高了中文水平。",
+          "py": "Tōngguò xuéxí, wǒ tígāo le Zhōngwén shuǐpíng.",
+          "uz": "O'qish orqali Xitoy tili darajamni oshirdim.",
+          "ru": "Благодаря учёбе я повысил уровень китайского.",
+          "en": "Through study I improved my Chinese."
+        },
+        {
+          "type": "ex",
+          "zh": "我们通过微信联系。",
+          "py": "Wǒmen tōngguò Wēixìn liánxì.",
+          "uz": "Biz WeChat orqali bog'lanamiz.",
+          "ru": "Мы связываемся через WeChat.",
+          "en": "We keep in touch via WeChat."
+        },
+        {
+          "type": "h",
+          "uz": "2. 通过 — «o'tib ketmoq»",
+          "ru": "2. 通过 — «проходить сквозь»",
+          "en": "2. 通过 — to pass through"
+        },
+        {
+          "type": "ex",
+          "zh": "这条街只能步行通过。",
+          "py": "Zhè tiáo jiē zhǐ néng bùxíng tōngguò.",
+          "uz": "Bu ko'chadan faqat piyoda o'tish mumkin.",
+          "ru": "По этой улице можно пройти только пешком.",
+          "en": "This street can only be crossed on foot."
+        },
+        {
+          "type": "ex",
+          "zh": "火车通过了隧道。",
+          "py": "Huǒchē tōngguò le suìdào.",
+          "uz": "Poyezd tunneldan o'tdi.",
+          "ru": "Поезд прошёл через тоннель.",
+          "en": "The train passed through the tunnel."
+        },
+        {
+          "type": "h",
+          "uz": "3. 通过 — «o'tmoq, tasdiqlanmoq»",
+          "ru": "3. 通过 — «пройти, быть утверждённым»",
+          "en": "3. 通过 — to pass, to be approved"
+        },
+        {
+          "type": "ex",
+          "zh": "我通过那家公司的面试了。",
+          "py": "Wǒ tōngguò nà jiā gōngsī de miànshì le.",
+          "uz": "Men o'sha kompaniyaning suhbatidan o'tdim.",
+          "ru": "Я прошёл собеседование в той компании.",
+          "en": "I passed the interview at that company."
+        },
+        {
+          "type": "ex",
+          "zh": "他通过了考试。",
+          "py": "Tā tōngguò le kǎoshì.",
+          "uz": "U imtihondan o'tdi.",
+          "ru": "Он сдал экзамен.",
+          "en": "He passed the exam."
+        },
+        {
+          "type": "ex",
+          "zh": "这个计划通过了。",
+          "py": "Zhège jìhuà tōngguò le.",
+          "uz": "Bu reja tasdiqlandi.",
+          "ru": "Этот план утвердили.",
+          "en": "The plan was approved."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n通过 ning uch ma'nosini bitta fikr birlashtiradi — «o'tib olmoq».\n通过努力 → mehnat orqali o'tib olmoq.\n通过大门 → darvozadan o'tmoq.\n通过考试 → imtihondan o'tmoq.",
+          "ru": "Запомните:\nВсе три значения 通过 объединяет одна идея — «пройти насквозь».\n通过努力 → добиться через труд.\n通过大门 → пройти через ворота.\n通过考试 → сдать экзамен.",
+          "en": "Remember:\nOne idea ties all three uses of 通过 together — “to get through”.\n通过努力 → get there through hard work.\n通过大门 → get through the gate.\n通过考试 → get through the exam."
+        }
+      ]
+    },
+    {
+      "slug": "tongguo-vs-jingguo",
+      "title": "通过 / 经过",
+      "pinyin": "tōngguò / jīngguò",
+      "label": "比一比",
+      "labelTranslation": "Taqqoslash",
+      "labelTranslation_ru": "Сравнение",
+      "labelTranslation_en": "Compare",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "O'xshashligi",
+          "ru": "Сходство",
+          "en": "Similarities"
+        },
+        {
+          "type": "p",
+          "uz": "Ikkalasi ham «orqali», «tufayli» ma'nosini berishi mumkin.",
+          "ru": "Оба могут означать «через», «благодаря».",
+          "en": "Both can mean “through”, “thanks to”."
+        },
+        {
+          "type": "ex",
+          "zh": "通过大家的努力，公司生意越做越大。",
+          "py": "Tōngguò dàjiā de nǔlì, gōngsī shēngyi yuè zuò yuè dà.",
+          "uz": "Hammaning sa'y-harakati bilan kompaniya ishi tobora kengaydi.",
+          "ru": "Благодаря усилиям всех дела компании шли всё лучше.",
+          "en": "Through everyone's efforts the company's business grew and grew."
+        },
+        {
+          "type": "ex",
+          "zh": "经过大家的努力，公司生意越做越大。",
+          "py": "Jīngguò dàjiā de nǔlì, gōngsī shēngyi yuè zuò yuè dà.",
+          "uz": "Hammaning sa'y-harakatidan so'ng kompaniya ishi tobora kengaydi.",
+          "ru": "После общих усилий дела компании шли всё лучше.",
+          "en": "After everyone's efforts the company's business grew and grew."
+        },
+        {
+          "type": "note",
+          "uz": "Bu gapda ikkalasi ham ishlatilaveradi.",
+          "ru": "В этом предложении подходят оба варианта.",
+          "en": "Either word works in this sentence."
+        },
+        {
+          "type": "h",
+          "uz": "1. Usul yoki jarayon?",
+          "ru": "1. Способ или процесс?",
+          "en": "1. Method or process?"
+        },
+        {
+          "type": "p",
+          "uz": "通过 — USULga urg'u beradi: natijaga nima orqali erishilgani.\n经过 — JARAYONga urg'u beradi: nimalarni boshdan kechirgani.",
+          "ru": "通过 подчёркивает СПОСОБ: чем именно достигнут результат.\n经过 подчёркивает ПРОЦЕСС: через что пришлось пройти.",
+          "en": "通过 stresses the METHOD: what the result was achieved by.\n经过 stresses the PROCESS: what was gone through."
+        },
+        {
+          "type": "ex",
+          "zh": "希望通过这次活动引起大家的兴趣。",
+          "py": "Xīwàng tōngguò zhè cì huódòng yǐnqǐ dàjiā de xìngqù.",
+          "uz": "Shu tadbir orqali hammaning qiziqishini uyg'otishga umid qilamiz.",
+          "ru": "Надеемся с помощью этого мероприятия вызвать у всех интерес.",
+          "en": "We hope to arouse everyone's interest through this event."
+        },
+        {
+          "type": "ex",
+          "zh": "经过一次次失败之后，他终于成功了。",
+          "py": "Jīngguò yī cì cì shībài zhīhòu, tā zhōngyú chénggōng le.",
+          "uz": "Ketma-ket mag'lubiyatlarni boshdan kechirganidan so'ng u nihoyat muvaffaqiyatga erishdi.",
+          "ru": "Пройдя через неудачу за неудачей, он в конце концов добился успеха.",
+          "en": "After going through failure upon failure, he finally succeeded."
+        },
+        {
+          "type": "h",
+          "uz": "2. Joydan o'tish",
+          "ru": "2. Прохождение места",
+          "en": "2. Going past a place"
+        },
+        {
+          "type": "p",
+          "uz": "通过 — bir tomondan kirib, ikkinchi tomondan chiqmoq.\n经过 — yonidan o'tmoq, yo'l-yo'lakay o'tmoq; ichidan o'tish shart emas.",
+          "ru": "通过 — войти с одной стороны и выйти с другой.\n经过 — пройти мимо, по пути; проходить насквозь не обязательно.",
+          "en": "通过 — to enter one side and come out the other.\n经过 — to go past, to go by way of; you needn't cross it at all."
+        },
+        {
+          "type": "ex",
+          "zh": "这里正在修路，汽车无法通过。",
+          "py": "Zhèlǐ zhèngzài xiūlù, qìchē wúfǎ tōngguò.",
+          "uz": "Bu yerda yo'l ta'mirlanyapti, mashinalar o'tolmaydi.",
+          "ru": "Здесь ремонтируют дорогу, машины не могут проехать.",
+          "en": "The road here is under repair; cars cannot get through."
+        },
+        {
+          "type": "ex",
+          "zh": "我正好经过这儿，顺便过来看看你。",
+          "py": "Wǒ zhènghǎo jīngguò zhèr, shùnbiàn guòlái kànkan nǐ.",
+          "uz": "Shundoq shu yerdan o'tayotgan edim, yo'l-yo'lakay seni ko'rgani kirdim.",
+          "ru": "Я как раз проходил мимо и заодно заглянул к тебе.",
+          "en": "I happened to be passing by, so I dropped in to see you."
+        },
+        {
+          "type": "ex",
+          "zh": "我每天经过那个公园。",
+          "py": "Wǒ měitiān jīngguò nàge gōngyuán.",
+          "uz": "Men har kuni o'sha bog' yonidan o'taman.",
+          "ru": "Я каждый день прохожу мимо того парка.",
+          "en": "I go past that park every day."
+        },
+        {
+          "type": "h",
+          "uz": "3. 经过 ot ham bo'la oladi",
+          "ru": "3. 经过 может быть существительным",
+          "en": "3. 经过 can also be a noun"
+        },
+        {
+          "type": "ex",
+          "zh": "小王把事情的经过告诉我了。",
+          "py": "Xiǎo Wáng bǎ shìqing de jīngguò gàosu wǒ le.",
+          "uz": "Syao Van menga voqeaning tafsilotini aytib berdi.",
+          "ru": "Сяо Ван рассказал мне, как всё было.",
+          "en": "Xiao Wang told me the whole course of events."
+        },
+        {
+          "type": "note",
+          "uz": "Ot sifatida 经过 «voqealar tafsiloti», «qanday bo'lgani» ma'nosini beradi.\n通过 bunday ishlatilmaydi. ❌",
+          "ru": "Как существительное 经过 значит «ход событий», «как всё было».\n通过 так не употребляется. ❌",
+          "en": "As a noun 经过 means “the course of events”, “what happened”.\n通过 is never used this way. ❌"
+        },
+        {
+          "type": "h",
+          "uz": "Ikkalasi bir gapda",
+          "ru": "Оба в одном предложении",
+          "en": "Both in one sentence"
+        },
+        {
+          "type": "ex",
+          "zh": "经过一年的学习，我终于通过了考试。",
+          "py": "Jīngguò yī nián de xuéxí, wǒ zhōngyú tōngguò le kǎoshì.",
+          "uz": "Bir yillik o'qishdan so'ng nihoyat imtihondan o'tdim.",
+          "ru": "После года учёбы я наконец сдал экзамен.",
+          "en": "After a year of study I finally passed the exam."
+        },
+        {
+          "type": "note",
+          "uz": "经过一年的学习 — nimani boshdan kechirgani (jarayon).\n通过了考试 — nimaga erishgani (natija).\nFarqni eslab qolishning eng oson yo'li shu.",
+          "ru": "经过一年的学习 — через что прошёл (процесс).\n通过了考试 — чего добился (результат).\nЭто самый простой способ запомнить разницу.",
+          "en": "经过一年的学习 — what was gone through (the process).\n通过了考试 — what was achieved (the result).\nThat is the easiest way to hold the difference in mind."
+        },
+        {
+          "type": "table",
+          "head": [
+            "通过",
+            "经过"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "Usul, vosita",
+                "Jarayon, tajriba"
+              ],
+              "ru": [
+                "Способ, средство",
+                "Процесс, опыт"
+              ],
+              "en": [
+                "Method, means",
+                "Process, experience"
+              ]
+            },
+            {
+              "uz": [
+                "Bir tomondan kirib, ikkinchisidan chiqmoq",
+                "Yonidan o'tmoq, yo'l-yo'lakay o'tmoq"
+              ],
+              "ru": [
+                "Пройти насквозь",
+                "Пройти мимо, по пути"
+              ],
+              "en": [
+                "Cross from one side to the other",
+                "Go past or by way of"
+              ]
+            },
+            {
+              "uz": [
+                "Imtihon, suhbatdan o'tmoq",
+                "Bu ma'noda ishlatilmaydi"
+              ],
+              "ru": [
+                "Сдать экзамен, пройти собеседование",
+                "В этом значении не используется"
+              ],
+              "en": [
+                "Pass an exam or interview",
+                "Not used in this sense"
+              ]
+            },
+            {
+              "uz": [
+                "Ot bo'la olmaydi",
+                "Ot bo'la oladi: «voqea tafsiloti»"
+              ],
+              "ru": [
+                "Не бывает существительным",
+                "Может быть существительным: «ход событий»"
+              ],
+              "en": [
+                "Never a noun",
+                "Can be a noun: “the course of events”"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n经过 — nimani boshdan kechirgan.\n通过 — qanday erishgan yoki nimadan o'tgan.",
+          "ru": "Запомните:\n经过 — через что прошёл.\n通过 — как добился или что сдал.",
+          "en": "Remember:\n经过 — what you went through.\n通过 — how you achieved it, or what you passed."
+        }
+      ]
+    },
+    {
+      "slug": "keshi",
+      "title": "可是",
+      "pinyin": "kěshì",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "可是 — bog'lovchi bo'lib, «lekin», «ammo» degan ma'noni bildiradi.\nU ikki fikr o'rtasidagi qarama-qarshilikni kiritadi.",
+          "ru": "可是 — союз со значением «но», «однако».\nОн вводит противопоставление двух мыслей.",
+          "en": "可是 is a conjunction meaning “but”, “however”.\nIt introduces a contrast between two ideas."
+        },
+        {
+          "type": "h",
+          "uz": "1-qolip: 虽然……可是……",
+          "ru": "Конструкция 1: 虽然……可是……",
+          "en": "Pattern 1: 虽然……可是……"
+        },
+        {
+          "type": "formula",
+          "uz": "虽然 A，可是 B → A bo'lsa-da, B",
+          "ru": "虽然 A，可是 B → Хотя A, но B",
+          "en": "虽然 A, 可是 B → Although A, B"
+        },
+        {
+          "type": "ex",
+          "zh": "虽然收入高，可是经常要加班。",
+          "py": "Suīrán shōurù gāo, kěshì jīngcháng yào jiābān.",
+          "uz": "Daromad yuqori bo'lsa-da, tez-tez qo'shimcha ishlashga to'g'ri keladi.",
+          "ru": "Хотя зарплата высокая, но часто приходится работать сверхурочно.",
+          "en": "The pay is high, but you often have to work overtime."
+        },
+        {
+          "type": "ex",
+          "zh": "虽然很累，可是我很开心。",
+          "py": "Suīrán hěn lèi, kěshì wǒ hěn kāixīn.",
+          "uz": "Charchagan bo'lsam-da, juda xursandman.",
+          "ru": "Хотя я очень устал, но я счастлив.",
+          "en": "I'm tired, but I'm happy."
+        },
+        {
+          "type": "h",
+          "uz": "2-qolip: Gap + 可是……",
+          "ru": "Конструкция 2: Предложение + 可是……",
+          "en": "Pattern 2: Sentence + 可是……"
+        },
+        {
+          "type": "p",
+          "uz": "虽然 bo'lmasligi ham mumkin: bir fikrni aytib, keyin unga zid fikrni kiritasiz.",
+          "ru": "虽然 может отсутствовать: вы называете один факт, а затем вводите противоположный.",
+          "en": "虽然 can be absent: you state one fact and then introduce the contrasting one."
+        },
+        {
+          "type": "ex",
+          "zh": "小时候，大家都说我像我妈。",
+          "py": "Xiǎo shíhou, dàjiā dōu shuō wǒ xiàng wǒ mā.",
+          "uz": "Kichkinaligimda hamma meni onamga o'xshaydi derdi.",
+          "ru": "В детстве все говорили, что я похож на маму.",
+          "en": "When I was little, everyone said I looked like my mother."
+        },
+        {
+          "type": "ex",
+          "zh": "可是长大后，他们说我更像爸爸。",
+          "py": "Kěshì zhǎngdà hòu, tāmen shuō wǒ gèng xiàng bàba.",
+          "uz": "Lekin ulg'aygach, ular meni ko'proq otamga o'xshaydi deyishdi.",
+          "ru": "Но когда я вырос, стали говорить, что я больше похож на отца.",
+          "en": "But after I grew up they said I looked more like my father."
+        },
+        {
+          "type": "ex",
+          "zh": "我很想去，可是今天没有时间。",
+          "py": "Wǒ hěn xiǎng qù, kěshì jīntiān méiyǒu shíjiān.",
+          "uz": "Borishni juda istardim, lekin bugun vaqtim yo'q.",
+          "ru": "Я очень хочу пойти, но сегодня нет времени.",
+          "en": "I'd really like to go, but I've no time today."
+        },
+        {
+          "type": "ex",
+          "zh": "当时她的父母和亲戚都不支持她，可是她坚持自己的选择。",
+          "py": "Dāngshí tā de fùmǔ hé qīnqi dōu bù zhīchí tā, kěshì tā jiānchí zìjǐ de xuǎnzé.",
+          "uz": "O'shanda ota-onasi ham, qarindoshlari ham uni qo'llamadi, lekin u o'z tanlovidan qaytmadi.",
+          "ru": "Тогда ни родители, ни родственники её не поддержали, но она не отступила от своего выбора.",
+          "en": "At the time neither her parents nor her relatives backed her, but she stuck to her choice."
+        },
+        {
+          "type": "h",
+          "uz": "可是, 但是 va 不过 farqi",
+          "ru": "可是, 但是 и 不过",
+          "en": "可是 vs. 但是 vs. 不过"
+        },
+        {
+          "type": "ex",
+          "zh": "我想去，可是没时间。",
+          "py": "Wǒ xiǎng qù, kěshì méi shíjiān.",
+          "uz": "Borgim bor, lekin vaqtim yo'q.",
+          "ru": "Хочу пойти, но нет времени.",
+          "en": "I want to go, but I've no time."
+        },
+        {
+          "type": "ex",
+          "zh": "我想去，但是没时间。",
+          "py": "Wǒ xiǎng qù, dànshì méi shíjiān.",
+          "uz": "Borgim bor, ammo vaqtim yo'q.",
+          "ru": "Хочу пойти, однако времени нет.",
+          "en": "I want to go, however I've no time."
+        },
+        {
+          "type": "ex",
+          "zh": "我喜欢这辆车，不过太贵了。",
+          "py": "Wǒ xǐhuan zhè liàng chē, bùguò tài guì le.",
+          "uz": "Bu mashina menga yoqadi, faqat juda qimmat.",
+          "ru": "Мне нравится эта машина, только вот слишком дорогая.",
+          "en": "I like this car — it's just too expensive."
+        },
+        {
+          "type": "table",
+          "head": [
+            "可是",
+            "但是",
+            "不过"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "lekin",
+                "lekin, ammo",
+                "faqat, shunisi borki"
+              ],
+              "ru": [
+                "но",
+                "но, однако",
+                "только, правда"
+              ],
+              "en": [
+                "but",
+                "but, however",
+                "though, only"
+              ]
+            },
+            {
+              "uz": [
+                "So'zlashuvda ko'proq",
+                "Yozma va rasmiyroq",
+                "Eng yumshoq"
+              ],
+              "ru": [
+                "Чаще в разговоре",
+                "Письменный, официальнее",
+                "Самый мягкий"
+              ],
+              "en": [
+                "More conversational",
+                "Written, more formal",
+                "The softest"
+              ]
+            },
+            {
+              "uz": [
+                "Kuchli qarama-qarshilik",
+                "Neytral",
+                "Yengil e'tiroz"
+              ],
+              "ru": [
+                "Сильное противопоставление",
+                "Нейтральное",
+                "Лёгкая оговорка"
+              ],
+              "en": [
+                "A strong contrast",
+                "Neutral",
+                "A mild reservation"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n可是 = lekin.\n虽然……可是…… — Xitoy tilida ikkala so'z birga keladi (Ingliz va O'zbek tilidan farqli).\nKundalik nutqda «lekin» ma'nosidagi eng ko'p ishlatiladigan so'zlardan biri.",
+          "ru": "Запомните:\n可是 = но.\n虽然……可是…… — в китайском оба слова стоят вместе (в отличие от русского).\nОдно из самых частых слов со значением «но» в разговорной речи.",
+          "en": "Remember:\n可是 = but.\n虽然……可是…… — Chinese keeps both words (English drops one).\nIt is among the commonest ways to say “but” in everyday speech."
+        }
+      ]
+    },
+    {
+      "slug": "jieguo",
+      "title": "结果",
+      "pinyin": "jiéguǒ",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "结果 ikki vazifada ishlatiladi:\n1. Ot — «natija», «yakun».\n2. Bog'lovchi — «natijada», «oxir-oqibat», «oqibatda».",
+          "ru": "结果 употребляется в двух функциях:\n1. Существительное — «результат», «итог».\n2. Союз — «в результате», «в итоге», «в конце концов».",
+          "en": "结果 has two uses:\n1. A noun — “result”, “outcome”.\n2. A conjunction — “as a result”, “in the end”."
+        },
+        {
+          "type": "h",
+          "uz": "1. 结果 — ot",
+          "ru": "1. 结果 — существительное",
+          "en": "1. 结果 as a noun"
+        },
+        {
+          "type": "ex",
+          "zh": "下个月把调查结果交上来。",
+          "py": "Xià gè yuè bǎ diàochá jiéguǒ jiāo shànglái.",
+          "uz": "Kelasi oy tadqiqot natijalarini topshiring.",
+          "ru": "В следующем месяце сдайте результаты исследования.",
+          "en": "Hand in the survey results next month."
+        },
+        {
+          "type": "ex",
+          "zh": "不要担心结果。",
+          "py": "Bùyào dānxīn jiéguǒ.",
+          "uz": "Natijadan xavotirlanma.",
+          "ru": "Не переживай о результате.",
+          "en": "Don't worry about the result."
+        },
+        {
+          "type": "ex",
+          "zh": "比赛结果怎么样？",
+          "py": "Bǐsài jiéguǒ zěnmeyàng?",
+          "uz": "O'yin natijasi qanday bo'ldi?",
+          "ru": "Каков результат матча?",
+          "en": "What was the result of the match?"
+        },
+        {
+          "type": "h",
+          "uz": "2. 结果 — bog'lovchi",
+          "ru": "2. 结果 — союз",
+          "en": "2. 结果 as a conjunction"
+        },
+        {
+          "type": "formula",
+          "uz": "Vaziyat。结果 + Natija → Natijada…",
+          "ru": "Ситуация。结果 + Результат → В итоге…",
+          "en": "Situation. 结果 + Outcome → As a result…"
+        },
+        {
+          "type": "ex",
+          "zh": "我妻子想减肥，所以她每天早上都去骑马。",
+          "py": "Wǒ qīzi xiǎng jiǎnféi, suǒyǐ tā měitiān zǎoshang dōu qù qímǎ.",
+          "uz": "Xotinim ozmoqchi edi, shuning uchun har kuni ertalab otda yurgani borardi.",
+          "ru": "Моя жена хотела похудеть, поэтому каждое утро ездила верхом.",
+          "en": "My wife wanted to lose weight, so she went riding every morning."
+        },
+        {
+          "type": "ex",
+          "zh": "结果一个月之内瘦了十公斤。",
+          "py": "Jiéguǒ yī gè yuè zhī nèi shòu le shí gōngjīn.",
+          "uz": "Natijada bir oy ichida o'n kilo tashladi.",
+          "ru": "В итоге за месяц она сбросила десять килограммов.",
+          "en": "As a result she lost ten kilos within a month."
+        },
+        {
+          "type": "ex",
+          "zh": "我起得很早，结果还是迟到了。",
+          "py": "Wǒ qǐ de hěn zǎo, jiéguǒ háishì chídào le.",
+          "uz": "Erta turgan edim, lekin oxir-oqibat baribir kechikdim.",
+          "ru": "Я встал очень рано, но в итоге всё равно опоздал.",
+          "en": "I got up very early, and in the end I was still late."
+        },
+        {
+          "type": "h",
+          "uz": "结果 va 所以 farqi",
+          "ru": "结果 и 所以",
+          "en": "结果 vs. 所以"
+        },
+        {
+          "type": "ex",
+          "zh": "下雨了，所以我没去。",
+          "py": "Xià yǔ le, suǒyǐ wǒ méi qù.",
+          "uz": "Yomg'ir yog'di, shuning uchun bormadim.",
+          "ru": "Пошёл дождь, поэтому я не пошёл.",
+          "en": "It rained, so I didn't go."
+        },
+        {
+          "type": "ex",
+          "zh": "他努力学习，所以通过了考试。",
+          "py": "Tā nǔlì xuéxí, suǒyǐ tōngguò le kǎoshì.",
+          "uz": "U tirishib o'qidi, shuning uchun imtihondan o'tdi.",
+          "ru": "Он усердно учился, поэтому сдал экзамен.",
+          "en": "He studied hard, so he passed the exam."
+        },
+        {
+          "type": "ex",
+          "zh": "他每天学习到半夜，结果还是没通过考试。",
+          "py": "Tā měitiān xuéxí dào bànyè, jiéguǒ háishì méi tōngguò kǎoshì.",
+          "uz": "U har kuni yarim tungacha o'qidi, lekin oxir-oqibat baribir imtihondan o'tolmadi.",
+          "ru": "Он каждый день учился до полуночи, а в итоге всё равно не сдал экзамен.",
+          "en": "He studied until midnight every day, and in the end he still didn't pass."
+        },
+        {
+          "type": "note",
+          "uz": "所以 → mantiqiy oqibat: sabab shunday, natija ham shunday.\n结果 → oxirida nima bo'lgani; ko'pincha kutilmagan yakunni ta'kidlaydi.",
+          "ru": "所以 → логическое следствие: такова причина — таков и результат.\n结果 → что вышло в итоге; часто подчёркивает неожиданный исход.",
+          "en": "所以 → a logical consequence: this cause, therefore this result.\n结果 → what actually happened in the end, often an unexpected one."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n结果 ot bo'lganda «natija», bog'lovchi bo'lganda «natijada».\n考试结果 — imtihon natijasi.\n结果他没来。— Oxir-oqibat u kelmadi.",
+          "ru": "Запомните:\n结果 как существительное — «результат», как союз — «в итоге».\n考试结果 — результат экзамена.\n结果他没来。— В итоге он не пришёл.",
+          "en": "Remember:\n结果 as a noun is “result”, as a conjunction “in the end”.\n考试结果 — the exam result.\n结果他没来。— In the end he didn't come."
+        }
+      ]
+    },
+    {
+      "slug": "shang-shu",
+      "title": "上 + Son",
+      "pinyin": "shàng + shù",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "Bu yerda 上 odatdagi «ustida», «yuqori» ma'nosida emas.\nSondan oldin kelib, miqdor ma'lum darajaga yetgani yoki undan oshganini bildiradi: «…dan ortiq», «…ga yetadigan».",
+          "ru": "Здесь 上 не имеет обычного значения «на», «вверх».\nСтоя перед числом, оно показывает, что количество достигло или превысило определённый порядок: «свыше», «более».",
+          "en": "Here 上 does not carry its usual sense of “on” or “up”.\nPlaced before a number, it says the quantity has reached or passed a certain order of magnitude: “over”, “as many as”."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "上 + Son + Sanoq so'zi → …dan ortiq",
+          "ru": "上 + Число + Счётное слово → свыше…",
+          "en": "上 + Number + Measure word → over…"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "这个城市的地铁已经有上百年的历史了。",
+          "py": "Zhège chéngshì de dìtiě yǐjīng yǒu shàng bǎi nián de lìshǐ le.",
+          "uz": "Bu shaharning metrosi yuz yildan ortiq tarixga ega.",
+          "ru": "У метро этого города уже более чем столетняя история.",
+          "en": "This city's underground already has over a hundred years of history."
+        },
+        {
+          "type": "ex",
+          "zh": "每年有成千上万的高中毕业生参加艺术考试。",
+          "py": "Měinián yǒu chéngqiānshàngwàn de gāozhōng bìyèshēng cānjiā yìshù kǎoshì.",
+          "uz": "Har yili o'n minglab maktab bitiruvchisi san'at imtihonida qatnashadi.",
+          "ru": "Каждый год десятки тысяч выпускников школ сдают творческий экзамен.",
+          "en": "Every year tens of thousands of school leavers sit the art examination."
+        },
+        {
+          "type": "ex",
+          "zh": "爱迪生就是在找了上千种材料后才找到了能点亮电灯的材料。",
+          "py": "Àidíshēng jiùshì zài zhǎo le shàng qiān zhǒng cáiliào hòu cái zhǎodào le néng diǎnliàng diàndēng de cáiliào.",
+          "uz": "Edison mingdan ortiq materialni sinab ko'rgandan keyingina lampani yoritadigan materialni topgan.",
+          "ru": "Эдисон нашёл материал, способный зажечь лампу, лишь перебрав больше тысячи вариантов.",
+          "en": "It was only after trying over a thousand materials that Edison found the one that would light a lamp."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p uchraydigan shakllar",
+          "ru": "Частые формы",
+          "en": "Common forms"
+        },
+        {
+          "type": "p",
+          "uz": "上百 — yuzdan ortiq\n上千 — mingdan ortiq\n上万 — o'n mingdan ortiq\n上百万 — millionsan\n成千上万 — o'n minglab, son-sanoqsiz",
+          "ru": "上百 — свыше ста\n上千 — свыше тысячи\n上万 — свыше десяти тысяч\n上百万 — миллионы\n成千上万 — десятки тысяч, несметное множество",
+          "en": "上百 — over a hundred\n上千 — over a thousand\n上万 — over ten thousand\n上百万 — millions\n成千上万 — tens of thousands, countless"
+        },
+        {
+          "type": "ex",
+          "zh": "有上千人参加。",
+          "py": "Yǒu shàng qiān rén cānjiā.",
+          "uz": "Mingdan ortiq odam qatnashdi.",
+          "ru": "Участвовало более тысячи человек.",
+          "en": "Over a thousand people took part."
+        },
+        {
+          "type": "ex",
+          "zh": "这本书卖了上百万册。",
+          "py": "Zhè běn shū mài le shàng bǎi wàn cè.",
+          "uz": "Bu kitob million nusxadan ortiq sotildi.",
+          "ru": "Эта книга разошлась тиражом свыше миллиона экземпляров.",
+          "en": "This book has sold over a million copies."
+        },
+        {
+          "type": "ex",
+          "zh": "公司有上万人。",
+          "py": "Gōngsī yǒu shàng wàn rén.",
+          "uz": "Kompaniyada o'n mingdan ortiq xodim bor.",
+          "ru": "В компании свыше десяти тысяч сотрудников.",
+          "en": "The company has over ten thousand employees."
+        },
+        {
+          "type": "h",
+          "uz": "上百 va 一百多 farqi",
+          "ru": "上百 и 一百多",
+          "en": "上百 vs. 一百多"
+        },
+        {
+          "type": "p",
+          "uz": "一百多人 — yuzdan sal ortiq (taxminan 101–199).\n上百人 — yuzlik darajaga yetgan; yuqori chegara ko'rsatilmaydi.\n几百人 — bir necha yuz kishi.",
+          "ru": "一百多人 — чуть больше ста (примерно 101–199).\n上百人 — достигло сотни; верхняя граница не указана.\n几百人 — несколько сотен человек.",
+          "en": "一百多人 — a little over a hundred (roughly 101–199).\n上百人 — has reached the hundred mark; no upper limit implied.\n几百人 — several hundred people."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\nBu yerda 上 «keyingi darajaga yetdi» degani.\n上百 → yuzlikka yetdi, 上千 → minglikka, 上万 → o'n minglikka.\nBu 上 ning «ustida» ma'nosi bilan aloqasi yo'q.",
+          "ru": "Запомните:\nЗдесь 上 означает «достигло следующего порядка».\n上百 → до сотен, 上千 → до тысяч, 上万 → до десятков тысяч.\nК значению «на, сверху» это 上 отношения не имеет.",
+          "en": "Remember:\nHere 上 means “has reached the next order”.\n上百 → into the hundreds, 上千 → into the thousands, 上万 → into the tens of thousands.\nIt has nothing to do with 上 meaning “on top”."
+        }
+      ]
+    }
   ]
 }
