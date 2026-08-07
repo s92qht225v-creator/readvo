@@ -13392,9 +13392,9 @@ body {
   justify-content: center;
   padding: 12px 20px;
   margin-bottom: 8px;
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  /* Opaque, not frosted: the dialogue scrolls underneath and even at 0.97 the
+     characters read through clearly enough to fight the translation. */
+  background: #fff;
   border-bottom: 1px solid #eee;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
