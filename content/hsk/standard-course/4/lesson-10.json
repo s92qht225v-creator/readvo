@@ -1,0 +1,750 @@
+{
+  "book": "standard-course",
+  "bookTitle": "HSK Standard Course",
+  "level": 4,
+  "volume": "上",
+  "unit": 10,
+  "slug": "the-measure-of-happiness",
+  "title": "幸福的标准",
+  "pinyin": "Xìngfú de biāozhǔn",
+  "titleTranslation": "Baxtning o'lchovi",
+  "titleTranslation_ru": "Мерило счастья",
+  "titleTranslation_en": "The measure of happiness",
+  "dateAdded": "2026-08-07",
+  "texts": [
+    {
+      "id": "hsk4-l10-text-1",
+      "slug": "text-1",
+      "label": "课文一",
+      "labelTranslation": "Matn 1",
+      "labelTranslation_ru": "Текст 1",
+      "labelTranslation_en": "Text 1",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "礼拜天",
+          "py": "lǐbàitiān",
+          "uz": "yakshanba",
+          "ru": "воскресенье",
+          "en": "Sunday"
+        },
+        {
+          "zh": "空儿",
+          "py": "kòngr",
+          "uz": "bo'sh vaqt",
+          "ru": "свободное время",
+          "en": "free time"
+        },
+        {
+          "zh": "母亲",
+          "py": "mǔqīn",
+          "uz": "ona",
+          "ru": "мать",
+          "en": "mother"
+        },
+        {
+          "zh": "不过",
+          "py": "bùguò",
+          "uz": "lekin, faqat",
+          "ru": "однако, впрочем",
+          "en": "but, however"
+        },
+        {
+          "zh": "永远",
+          "py": "yǒngyuǎn",
+          "uz": "abadiy, doim",
+          "ru": "всегда, вечно",
+          "en": "always, forever"
+        },
+        {
+          "zh": "方向",
+          "py": "fāngxiàng",
+          "uz": "yo'nalish",
+          "ru": "направление",
+          "en": "direction"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l10-text-1-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l10-text-1-s1",
+              "text_original": "礼拜天有空儿吗？",
+              "pinyin": "Lǐbàitiān yǒu kòngr ma?",
+              "text_translation": "Yakshanba bo'sh vaqting bormi?",
+              "text_translation_ru": "В воскресенье будет свободное время?",
+              "text_translation_en": "Are you free on Sunday?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-1-s2",
+              "text_original": "陪我去逛街怎么样？",
+              "pinyin": "Péi wǒ qù guàngjiē zěnmeyàng?",
+              "text_translation": "Men bilan do'kon aylanishga chiqsang-chi?",
+              "text_translation_ru": "Может, пройдёшься со мной по магазинам?",
+              "text_translation_en": "How about coming shopping with me?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-1-s3",
+              "text_original": "我想去给丈夫买个生日礼物。",
+              "pinyin": "Wǒ xiǎng qù gěi zhàngfu mǎi gè shēngrì lǐwù.",
+              "text_translation": "Erimga tug'ilgan kun sovg'asi olmoqchiman.",
+              "text_translation_ru": "Хочу купить мужу подарок на день рождения.",
+              "text_translation_en": "I want to buy my husband a birthday present.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-1-s4",
+              "text_original": "我可能去不了，最近事情多。",
+              "pinyin": "Wǒ kěnéng qù bùliǎo, zuìjìn shìqing duō.",
+              "text_translation": "Bora olmasam kerak — so'nggi paytda ish ko'p.",
+              "text_translation_ru": "Я, наверное, не смогу — в последнее время много дел.",
+              "text_translation_en": "I probably can't — I've a lot on at the moment.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-1-s5",
+              "text_original": "你最近是不是工作特别忙？",
+              "pinyin": "Nǐ zuìjìn shì bùshì gōngzuò tèbié máng?",
+              "text_translation": "So'nggi paytda ishing juda bandmi?",
+              "text_translation_ru": "У тебя в последнее время очень много работы?",
+              "text_translation_en": "Have you been especially busy at work lately?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-1-s6",
+              "text_original": "我现在上有老，下有小。",
+              "pinyin": "Wǒ xiànzài shàng yǒu lǎo, xià yǒu xiǎo.",
+              "text_translation": "Hozir yuqorida keksalar, quyida bolalar — ikkalasi ham menga qaragan.",
+              "text_translation_ru": "У меня сейчас и старшие на руках, и младшие.",
+              "text_translation_en": "Right now I've the old above me and the young below me.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-1-s7",
+              "text_original": "除了工作以外，家里还有母亲和儿子需要照顾。",
+              "pinyin": "Chúle gōngzuò yǐwài, jiā lǐ hái yǒu mǔqīn hé érzi xūyào zhàogù.",
+              "text_translation": "Ishdan tashqari uyda onam va o'g'limga ham qarashim kerak.",
+              "text_translation_ru": "Кроме работы, дома ещё мама и сын, за которыми нужен уход.",
+              "text_translation_en": "Besides work, there's my mother and my son at home to look after.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-1-s8",
+              "text_original": "真是辛苦啊！",
+              "pinyin": "Zhēn shì xīnkǔ a!",
+              "text_translation": "Rostdan ham mashaqqat ekan!",
+              "text_translation_ru": "Как же тебе тяжело!",
+              "text_translation_en": "That really is hard going!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-1-s9",
+              "text_original": "你最近脸色不太好，是不是哪儿不舒服？",
+              "pinyin": "Nǐ zuìjìn liǎnsè bù tài hǎo, shì bùshì nǎr bù shūfu?",
+              "text_translation": "So'nggi paytda rangingda qon yo'q — biror joying og'riyaptimi?",
+              "text_translation_ru": "В последнее время ты неважно выглядишь — где-то нездоровится?",
+              "text_translation_en": "You've been looking pale lately — is something wrong?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-1-s10",
+              "text_original": "要注意身体啊。",
+              "pinyin": "Yào zhùyì shēntǐ a.",
+              "text_translation": "Sog'ligingga e'tibor ber.",
+              "text_translation_ru": "Береги здоровье.",
+              "text_translation_en": "Do take care of yourself.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-1-s11",
+              "text_original": "没事儿，谢谢！",
+              "pinyin": "Méishìr, xièxie!",
+              "text_translation": "Hechqisi yo'q, rahmat!",
+              "text_translation_ru": "Ничего страшного, спасибо!",
+              "text_translation_en": "It's nothing, thank you!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-1-s12",
+              "text_original": "不过现在我很幸福，因为在母亲面前我可以做一个永远长不大的孩子；在孩子面前我又是个能照顾他的母亲，这让我有了努力的方向。",
+              "pinyin": "Bùguò xiànzài wǒ hěn xìngfú, yīnwèi zài mǔqīn miànqián wǒ kěyǐ zuò yīgè yǒngyuǎn zhǎng bù dà de háizi; zài háizi miànqián wǒ yòu shì gè néng zhàogù tā de mǔqīn, zhè ràng wǒ yǒu le nǔlì de fāngxiàng.",
+              "text_translation": "Lekin hozir men baxtliman: onamning oldida men hech qachon ulg'aymaydigan bola bo'la olaman, bolamning oldida esa unga g'amxo'rlik qila oladigan onaman. Shu menga harakat qilish yo'nalishini berdi.",
+              "text_translation_ru": "И всё же сейчас я счастлива: перед мамой я могу быть ребёнком, который никогда не вырастет, а перед сыном — матерью, которая может о нём позаботиться. Это и задаёт мне направление.",
+              "text_translation_en": "Still, I'm happy now: in front of my mother I can be a child who never grows up, and in front of my son I'm a mother who can care for him. That has given me a direction to work towards.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l10-text-2",
+      "slug": "text-2",
+      "label": "课文二",
+      "labelTranslation": "Matn 2",
+      "labelTranslation_ru": "Текст 2",
+      "labelTranslation_en": "Text 2",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦",
+        "B": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "优秀",
+          "py": "yōuxiù",
+          "uz": "a'lo, zo'r",
+          "ru": "отличный, выдающийся",
+          "en": "outstanding, excellent"
+        },
+        {
+          "zh": "硕士",
+          "py": "shuòshì",
+          "uz": "magistr",
+          "ru": "магистр",
+          "en": "master's degree"
+        },
+        {
+          "zh": "翻译",
+          "py": "fānyì",
+          "uz": "tarjimon; tarjima qilmoq",
+          "ru": "переводчик; переводить",
+          "en": "translator; to translate"
+        },
+        {
+          "zh": "确实",
+          "py": "quèshí",
+          "uz": "haqiqatan, chindan",
+          "ru": "действительно, в самом деле",
+          "en": "indeed, really"
+        },
+        {
+          "zh": "兴奋",
+          "py": "xīngfèn",
+          "uz": "hayajonli, quvonchli",
+          "ru": "возбуждённый, воодушевлённый",
+          "en": "excited"
+        },
+        {
+          "zh": "拉",
+          "py": "lā",
+          "uz": "tortmoq, yetaklamoq",
+          "ru": "тянуть, тащить",
+          "en": "to pull, to drag"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l10-text-2-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l10-text-2-s1",
+              "text_original": "你看人家王老师，刚来这儿工作三年就当了教授，还有个好妻子，真让人羡慕！",
+              "pinyin": "Nǐ kàn rénjia Wáng lǎoshī, gāng lái zhèr gōngzuò sān nián jiù dāng le jiàoshòu, hái yǒu gè hǎo qīzi, zhēn ràng rén xiànmù!",
+              "text_translation": "Van o'qituvchiga qarang — bu yerga kelib atigi uch yil ishlab professor bo'ldi, ustiga yaxshi xotini bor. Havas qilsa arziydi!",
+              "text_translation_ru": "Вот посмотрите на учителя Вана — проработал здесь всего три года и уже профессор, да ещё и жена прекрасная. Как тут не позавидовать!",
+              "text_translation_en": "Look at Teacher Wang — three years here and he's already a professor, and he has a fine wife too. You can't help envying him!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-2-s2",
+              "text_original": "其实，你在别人眼中也是很幸福的，只是你自己没有发现。",
+              "pinyin": "Qíshí, nǐ zài biérén yǎn zhōng yě shì hěn xìngfú de, zhǐshì nǐ zìjǐ méiyǒu fāxiàn.",
+              "text_translation": "Aslida boshqalarning nazarida siz ham juda baxtlisiz — faqat o'zingiz buni payqamaysiz.",
+              "text_translation_ru": "На самом деле в глазах других вы тоже очень счастливы — просто сами этого не замечаете.",
+              "text_translation_en": "In fact, in other people's eyes you're very fortunate too — you just haven't noticed it yourself.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-2-s3",
+              "text_original": "是吗？",
+              "pinyin": "Shì ma?",
+              "text_translation": "Shundaymi?",
+              "text_translation_ru": "Правда?",
+              "text_translation_en": "Really?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-2-s4",
+              "text_original": "我哪能跟王老师比啊？",
+              "pinyin": "Wǒ nǎ néng gēn Wáng lǎoshī bǐ a?",
+              "text_translation": "Men qayerda-yu Van o'qituvchi qayerda?",
+              "text_translation_ru": "Куда мне до учителя Вана?",
+              "text_translation_en": "How could I possibly compare with Teacher Wang?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-2-s5",
+              "text_original": "你有一个漂亮的女儿，还那么优秀，硕士毕业后就当了翻译。",
+              "pinyin": "Nǐ yǒu yīgè piàoliang de nǚ'ér, hái nàme yōuxiù, shuòshì bìyè hòu jiù dāng le fānyì.",
+              "text_translation": "Sizning chiroyli qizingiz bor, ustiga shunday a'lochi — magistraturani bitirib tarjimon bo'ldi.",
+              "text_translation_ru": "У вас красивая дочь, да ещё такая способная — окончила магистратуру и стала переводчицей.",
+              "text_translation_en": "You have a lovely daughter, and such a bright one — she became a translator straight after her master's.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-2-s6",
+              "text_original": "我女儿确实不错，记得她刚拿到第一个月工资时，就兴奋地拉着我和她爸俩去商场，给我们买礼物，那时我和她爸心里别提多美了！",
+              "pinyin": "Wǒ nǚ'ér quèshí bùcuò, jìde tā gāng nádào dì yī gè yuè gōngzī shí, jiù xīngfèn de lāzhe wǒ hé tā bà liǎ qù shāngchǎng, gěi wǒmen mǎi lǐwù, nà shí wǒ hé tā bà xīnlǐ biétí duō měi le!",
+              "text_translation": "Qizim chindan ham yaxshi. Esimda, birinchi oyligini olishi bilan hayajonlanib meni ham, otasini ham savdo markaziga yetaklab bordi va bizga sovg'a oldi. O'shanda ikkalamizning ko'nglimiz qanchalik yayraganini aytmang!",
+              "text_translation_ru": "Дочь у меня и правда хорошая. Помню, как только получила первую зарплату, она в возбуждении потащила нас с отцом в торговый центр и купила нам подарки. Что тогда творилось у нас на душе — не передать!",
+              "text_translation_en": "My daughter really is a good one. I remember that the moment she got her first month's pay she excitedly dragged her father and me off to the shopping centre and bought us presents. How glad the two of us felt then — I can't tell you!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-2-s7",
+              "text_original": "所以说每个人有每个人的生活，不用羡慕别人。",
+              "pinyin": "Suǒyǐ shuō měi gè rén yǒu měi gè rén de shēnghuó, bùyòng xiànmù biérén.",
+              "text_translation": "Shuning uchun har kimning o'z hayoti bor — boshqaga havas qilishning hojati yo'q.",
+              "text_translation_ru": "Вот и говорят: у каждого своя жизнь, незачем завидовать другим.",
+              "text_translation_en": "That's why they say everyone has their own life — there's no need to envy others.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-2-s8",
+              "text_original": "你羡慕别人的时候，他们可能也正在羡慕你呢。",
+              "pinyin": "Nǐ xiànmù biérén de shíhou, tāmen kěnéng yě zhèngzài xiànmù nǐ ne.",
+              "text_translation": "Siz boshqaga havas qilib turganingizda, ular ham ayni damda sizga havas qilayotgan bo'lishi mumkin.",
+              "text_translation_ru": "Пока вы завидуете другим, они, возможно, как раз завидуют вам.",
+              "text_translation_en": "While you're envying other people, they may well be envying you.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l10-text-3",
+      "slug": "text-3",
+      "label": "课文三",
+      "labelTranslation": "Matn 3",
+      "labelTranslation_ru": "Текст 3",
+      "labelTranslation_en": "Text 3",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "建议",
+          "py": "jiànyì",
+          "uz": "maslahat; taklif qilmoq",
+          "ru": "совет; предлагать",
+          "en": "advice; to suggest"
+        },
+        {
+          "zh": "职业",
+          "py": "zhíyè",
+          "uz": "kasb",
+          "ru": "профессия",
+          "en": "profession, occupation"
+        },
+        {
+          "zh": "关键",
+          "py": "guānjiàn",
+          "uz": "asosiy nuqta, kalit",
+          "ru": "ключевой момент",
+          "en": "the key, the crux"
+        },
+        {
+          "zh": "将来",
+          "py": "jiānglái",
+          "uz": "kelajakda",
+          "ru": "в будущем",
+          "en": "in the future"
+        },
+        {
+          "zh": "发展",
+          "py": "fāzhǎn",
+          "uz": "rivojlanish; rivojlanmoq",
+          "ru": "развитие; развиваться",
+          "en": "development; to develop"
+        },
+        {
+          "zh": "躺",
+          "py": "tǎng",
+          "uz": "yotmoq",
+          "ru": "лежать",
+          "en": "to lie down"
+        },
+        {
+          "zh": "困",
+          "py": "kùn",
+          "uz": "uyqusi kelmoq",
+          "ru": "хотеть спать",
+          "en": "to be sleepy"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l10-text-3-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l10-text-3-s1",
+              "text_original": "时间过得真快，马上就要毕业了。",
+              "pinyin": "Shíjiān guò de zhēn kuài, mǎshàng jiù yào bìyè le.",
+              "text_translation": "Vaqt juda tez o'tarkan — mana, bitiruv ham yaqinlashdi.",
+              "text_translation_ru": "Как быстро летит время — вот-вот выпуск.",
+              "text_translation_en": "Time goes so fast — we'll be graduating any moment.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-3-s2",
+              "text_original": "毕业后你打算做什么？",
+              "pinyin": "Bìyè hòu nǐ dǎsuàn zuò shénme?",
+              "text_translation": "Bitirgach nima qilmoqchisan?",
+              "text_translation_ru": "Что собираешься делать после выпуска?",
+              "text_translation_en": "What do you plan to do after graduating?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-3-s3",
+              "text_original": "我还没想好呢，正想听听你的建议。",
+              "pinyin": "Wǒ hái méi xiǎng hǎo ne, zhèng xiǎng tīngting nǐ de jiànyì.",
+              "text_translation": "Hali hal qilganim yo'q — aynan sening maslahatingni eshitmoqchi edim.",
+              "text_translation_ru": "Я ещё не решил — как раз хотел послушать твой совет.",
+              "text_translation_en": "I haven't decided yet — I was just hoping to hear your advice.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-3-s4",
+              "text_original": "你觉得在选择职业时，收入重要吗？",
+              "pinyin": "Nǐ juéde zài xuǎnzé zhíyè shí, shōurù zhòngyào ma?",
+              "text_translation": "Sencha, kasb tanlashda daromad muhimmi?",
+              "text_translation_ru": "Как думаешь, при выборе профессии важен ли доход?",
+              "text_translation_en": "Do you think income matters when choosing a career?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-3-s5",
+              "text_original": "在我看来，赚钱多少不是最重要的，兴趣才是关键。",
+              "pinyin": "Zài wǒ kànlái, zhuànqián duōshao bùshì zuì zhòngyào de, xìngqù cái shì guānjiàn.",
+              "text_translation": "Menimcha, qancha pul topish eng muhimi emas — asosiysi qiziqish.",
+              "text_translation_ru": "По-моему, важнее всего не то, сколько зарабатываешь, а интерес.",
+              "text_translation_en": "The way I see it, how much you earn isn't the main thing — interest is what counts.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-3-s6",
+              "text_original": "只有做自己喜欢的事，才会觉得幸福，将来也会有更好的发展。",
+              "pinyin": "Zhǐyǒu zuò zìjǐ xǐhuan de shì, cái huì juéde xìngfú, jiānglái yě huì yǒu gèng hǎo de fāzhǎn.",
+              "text_translation": "Faqat o'zing yoqtirgan ishni qilgandagina baxtli his qilasan, kelajakda ham yaxshiroq rivojlanasan.",
+              "text_translation_ru": "Только занимаясь тем, что нравится, чувствуешь себя счастливым — и в будущем развитие идёт лучше.",
+              "text_translation_en": "Only by doing what you love will you feel happy — and you'll grow further in the future too.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-3-s7",
+              "text_original": "我也这么想。",
+              "pinyin": "Wǒ yě zhème xiǎng.",
+              "text_translation": "Men ham shunday o'ylayman.",
+              "text_translation_ru": "Я тоже так думаю.",
+              "text_translation_en": "I think so too.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-3-s8",
+              "text_original": "如果我带着热情去做自己喜欢的工作，就不会感到累。",
+              "pinyin": "Rúguǒ wǒ dàizhe rèqíng qù zuò zìjǐ xǐhuan de gōngzuò, jiù bù huì gǎndào lèi.",
+              "text_translation": "Agar yoqtirgan ishimni ishtiyoq bilan qilsam, charchoq sezmayman.",
+              "text_translation_ru": "Если я с увлечением займусь любимой работой, усталости не почувствую.",
+              "text_translation_en": "If I go at work I love with enthusiasm, I won't feel tired.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-3-s9",
+              "text_original": "不过，现在什么东西都那么贵，生活压力太大了，没有钱也不会过得幸福啊！",
+              "pinyin": "Bùguò, xiànzài shénme dōngxi dōu nàme guì, shēnghuó yālì tài dà le, méiyǒu qián yě bù huì guò de xìngfú a!",
+              "text_translation": "Lekin hozir hamma narsa juda qimmat, hayot bosimi og'ir — pulsiz ham baxtli yashab bo'lmaydi-ku!",
+              "text_translation_ru": "Но сейчас всё такое дорогое, нагрузка большая — без денег ведь тоже счастливо не проживёшь!",
+              "text_translation_en": "But everything is so expensive now and the pressure is so great — you can't live happily without money either!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-3-s10",
+              "text_original": "幸福其实很简单，它不是只要有钱就能买到的。",
+              "pinyin": "Xìngfú qíshí hěn jiǎndān, tā bùshì zhǐyào yǒu qián jiù néng mǎi dào de.",
+              "text_translation": "Baxt aslida juda oddiy narsa — puling bo'lsa bas deb sotib olib bo'lmaydi.",
+              "text_translation_ru": "Счастье на самом деле простая вещь — его не купишь просто потому, что есть деньги.",
+              "text_translation_en": "Happiness is really quite simple — it isn't something you can buy just by having money.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-3-s11",
+              "text_original": "我觉得工作结束回家后，洗个热水澡，然后躺在床上看看书、听听音乐，困了睡睡觉，就很幸福。",
+              "pinyin": "Wǒ juéde gōngzuò jiéshù huí jiā hòu, xǐ gè rèshuǐzǎo, ránhòu tǎng zài chuáng shàng kànkan shū, tīngting yīnyuè, kùn le shuìshui jiào, jiù hěn xìngfú.",
+              "text_translation": "Menimcha, ishdan keyin uyga qaytib issiq suvda yuvinsang, keyin karavotda yotib kitob o'qisang, musiqa tinglasang, uyqung kelganda uxlab olsang — bu ham katta baxt.",
+              "text_translation_ru": "По-моему, вернуться с работы, принять горячий душ, потом лечь и почитать, послушать музыку, а как захочется спать — поспать: вот это счастье.",
+              "text_translation_en": "For me, getting home after work, taking a hot bath, then lying in bed with a book and some music, and sleeping when you're sleepy — that's happiness.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-3-s12",
+              "text_original": "你说的也对。",
+              "pinyin": "Nǐ shuō de yě duì.",
+              "text_translation": "Sening gaping ham to'g'ri.",
+              "text_translation_ru": "Ты тоже прав.",
+              "text_translation_en": "You're right too.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l10-text-3-s13",
+              "text_original": "如果能找到一份自己既感兴趣，收入又不错的工作，那就最好了。",
+              "pinyin": "Rúguǒ néng zhǎodào yī fèn zìjǐ jì gǎn xìngqù, shōurù yòu bùcuò de gōngzuò, nà jiù zuì hǎo le.",
+              "text_translation": "Ham qiziqarli, ham daromadi yaxshi ish topsang — eng zo'ri shu bo'lardi.",
+              "text_translation_ru": "Если найдёшь работу, которая и интересна, и хорошо оплачивается, — лучше и не придумаешь.",
+              "text_translation_en": "If you can find a job that both interests you and pays well, that would be best of all.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l10-text-4",
+      "slug": "text-4",
+      "label": "课文四",
+      "labelTranslation": "Matn 4",
+      "labelTranslation_ru": "Текст 4",
+      "labelTranslation_en": "Text 4",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "经济",
+          "py": "jīngjì",
+          "uz": "iqtisod; moliyaviy",
+          "ru": "экономика; материальный",
+          "en": "economy; financial"
+        },
+        {
+          "zh": "条件",
+          "py": "tiáojiàn",
+          "uz": "shart, sharoit",
+          "ru": "условие",
+          "en": "condition"
+        },
+        {
+          "zh": "富",
+          "py": "fù",
+          "uz": "boy",
+          "ru": "богатый",
+          "en": "rich"
+        },
+        {
+          "zh": "穷",
+          "py": "qióng",
+          "uz": "kambag'al",
+          "ru": "бедный",
+          "en": "poor"
+        },
+        {
+          "zh": "等",
+          "py": "děng",
+          "uz": "va hokazo",
+          "ru": "и так далее",
+          "en": "and so on, etc."
+        },
+        {
+          "zh": "由于",
+          "py": "yóuyú",
+          "uz": "… tufayli, sababli",
+          "ru": "из-за, вследствие",
+          "en": "due to, owing to"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l10-text-4-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l10-text-4-s1",
+              "text_original": "有的人希望穿得再好一些，房子再大一些，认为经济条件越好人就越幸福。",
+              "pinyin": "Yǒu de rén xīwàng chuān de zài hǎo yīxiē, fángzi zài dà yīxiē, rènwéi jīngjì tiáojiàn yuè hǎo rén jiù yuè xìngfú.",
+              "text_translation": "Ba'zilar yanada yaxshiroq kiyinishni, yanada kattaroq uyni istaydi va moliyaviy sharoit qanchalik yaxshi bo'lsa, odam shunchalik baxtli deb o'ylaydi.",
+              "text_translation_ru": "Некоторые хотят одеваться получше, иметь дом побольше и считают, что чем лучше материальные условия, тем счастливее человек.",
+              "text_translation_en": "Some people want to dress better and have a bigger house, and think that the better off you are, the happier you'll be.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-4-s2",
+              "text_original": "其实有很多富人过得并不愉快，而有些穷人却过得很快乐。",
+              "pinyin": "Qíshí yǒu hěn duō fùrén guò de bìng bù yúkuài, ér yǒuxiē qióngrén què guò de hěn kuàilè.",
+              "text_translation": "Aslida ko'p boy odam quvonchsiz yashaydi, ba'zi kambag'allar esa juda xursand yashaydi.",
+              "text_translation_ru": "На деле многие богатые живут вовсе не радостно, а некоторые бедняки — очень весело.",
+              "text_translation_en": "In fact many rich people live without much joy, while some poor people live very cheerfully.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-4-s3",
+              "text_original": "有钱不一定幸福，因为很多东西都是不能用钱买到的，例如时间、感情、生活经历等。",
+              "pinyin": "Yǒu qián bù yīdìng xìngfú, yīnwèi hěn duō dōngxi dōu shì bù néng yòng qián mǎi dào de, lìrú shíjiān, gǎnqíng, shēnghuó jīnglì děng.",
+              "text_translation": "Pulli bo'lish albatta baxt degani emas, chunki ko'p narsani pulga sotib bo'lmaydi — masalan, vaqt, mehr, hayotiy tajriba va hokazo.",
+              "text_translation_ru": "Деньги не обязательно означают счастье: многого за них не купишь — например, времени, чувств, жизненного опыта и так далее.",
+              "text_translation_en": "Having money doesn't necessarily mean happiness, because many things can't be bought with it — time, feelings, life experience and so on.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-4-s4",
+              "text_original": "但是，从另外一个方面看，如果没钱，也很难过得幸福。",
+              "pinyin": "Dànshì, cóng lìngwài yīgè fāngmiàn kàn, rúguǒ méi qián, yě hěn nán guò de xìngfú.",
+              "text_translation": "Lekin boshqa tomondan qaralsa, pul bo'lmasa ham baxtli yashash qiyin.",
+              "text_translation_ru": "Но с другой стороны, без денег счастливо жить тоже трудно.",
+              "text_translation_en": "But looked at from another angle, it's hard to live happily without money either.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-4-s5",
+              "text_original": "当你生病了，如果由于缺钱而不能及时去看医生，你的健康都很难得到保证，就更别说幸福了。",
+              "pinyin": "Dāng nǐ shēngbìng le, rúguǒ yóuyú quē qián ér bù néng jíshí qù kàn yīshēng, nǐ de jiànkāng dōu hěn nán dédào bǎozhèng, jiù gèng bié shuō xìngfú le.",
+              "text_translation": "Kasal bo'lib qolganingda pul yetishmagani uchun o'z vaqtida shifokorga bora olmasang, sog'liging ham kafolatlanmaydi — baxt haqida-ku gapirmasa ham bo'ladi.",
+              "text_translation_ru": "Если ты заболел и из-за нехватки денег не можешь вовремя обратиться к врачу, то и здоровье под угрозой — а о счастье и говорить не приходится.",
+              "text_translation_en": "If you fall ill and can't see a doctor in time for lack of money, even your health can't be assured — let alone your happiness.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l10-text-5",
+      "slug": "text-5",
+      "label": "课文五",
+      "labelTranslation": "Matn 5",
+      "labelTranslation_ru": "Текст 5",
+      "labelTranslation_en": "Text 5",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "比如",
+          "py": "bǐrú",
+          "uz": "masalan",
+          "ru": "например",
+          "en": "for example"
+        },
+        {
+          "zh": "橡皮",
+          "py": "xiàngpí",
+          "uz": "o'chirg'ich",
+          "ru": "ластик",
+          "en": "eraser, rubber"
+        },
+        {
+          "zh": "糖",
+          "py": "táng",
+          "uz": "shakar; konfet",
+          "ru": "сахар; конфета",
+          "en": "sugar; sweet"
+        },
+        {
+          "zh": "低",
+          "py": "dī",
+          "uz": "past",
+          "ru": "низкий",
+          "en": "low"
+        },
+        {
+          "zh": "答案",
+          "py": "dá'àn",
+          "uz": "javob",
+          "ru": "ответ",
+          "en": "answer"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l10-text-5-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l10-text-5-s1",
+              "text_original": "什么是幸福？",
+              "pinyin": "Shénme shì xìngfú?",
+              "text_translation": "Baxt nima o'zi?",
+              "text_translation_ru": "Что такое счастье?",
+              "text_translation_en": "What is happiness?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-5-s2",
+              "text_original": "有的人认为，工资高、能赚钱就是幸福；有的人认为，心情放松、身体健康才是幸福；也有人认为，能帮助别人就是一种幸福。",
+              "pinyin": "Yǒu de rén rènwéi, gōngzī gāo, néng zhuànqián jiùshì xìngfú; yǒu de rén rènwéi, xīnqíng fàngsōng, shēntǐ jiànkāng cái shì xìngfú; yě yǒu rén rènwéi, néng bāngzhù biérén jiùshì yī zhǒng xìngfú.",
+              "text_translation": "Ba'zilar oylik yuqori, pul topa olish — shu baxt deydi; boshqalar kayfiyat xotirjam, tan sog'lom bo'lsa — shu baxt deydi; yana kimlardir boshqalarga yordam bera olish ham bir baxt deb biladi.",
+              "text_translation_ru": "Одни считают, что счастье — это высокая зарплата и возможность зарабатывать; другие — что спокойствие на душе и здоровье; третьи — что счастье в возможности помогать людям.",
+              "text_translation_en": "Some think happiness is a high salary and the ability to earn; others that it is a calm mind and a healthy body; still others that being able to help people is a kind of happiness.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-5-s3",
+              "text_original": "还有人说，小时候幸福是一件东西，比如一块橡皮、一块糖，得到了就很幸福；长大后幸福是一种态度，生活的态度决定了我们幸福感的高低。",
+              "pinyin": "Hái yǒu rén shuō, xiǎo shíhou xìngfú shì yī jiàn dōngxi, bǐrú yī kuài xiàngpí, yī kuài táng, dédào le jiù hěn xìngfú; zhǎngdà hòu xìngfú shì yī zhǒng tàidù, shēnghuó de tàidù juédìng le wǒmen xìngfúgǎn de gāodī.",
+              "text_translation": "Yana kimdir shunday deydi: bolalikda baxt — bu bir narsa, masalan bir bo'lak o'chirg'ich yoki bir dona konfet; uni olsang bas, baxtlisan. Ulg'aygach esa baxt — bu munosabat; hayotga munosabatimiz baxt tuyg'usining darajasini belgilaydi.",
+              "text_translation_ru": "А кто-то говорит так: в детстве счастье — это вещь, скажем, ластик или конфета: получил — и счастлив. А когда вырастешь, счастье — это отношение; наше отношение к жизни и определяет, насколько мы счастливы.",
+              "text_translation_en": "Others say this: in childhood happiness is a thing — a rubber, a sweet — and getting it makes you happy. Once you grow up, happiness is an attitude, and your attitude to life decides how happy you feel.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-5-s4",
+              "text_original": "那怎样才算是真正的幸福？",
+              "pinyin": "Nà zěnyàng cái suàn shì zhēnzhèng de xìngfú?",
+              "text_translation": "Xo'sh, nima haqiqiy baxt hisoblanadi?",
+              "text_translation_ru": "Так что же считать настоящим счастьем?",
+              "text_translation_en": "So what counts as real happiness?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-5-s5",
+              "text_original": "其实，幸福并没有一个标准答案，每个人对幸福都有不同的理解。",
+              "pinyin": "Qíshí, xìngfú bìng méiyǒu yīgè biāozhǔn dá'àn, měi gè rén duì xìngfú dōu yǒu bùtóng de lǐjiě.",
+              "text_translation": "Aslida baxtning yagona to'g'ri javobi yo'q — har kim baxtni o'zicha tushunadi.",
+              "text_translation_ru": "На самом деле у счастья нет единственно верного ответа: каждый понимает его по-своему.",
+              "text_translation_en": "In truth there is no standard answer to happiness — everyone understands it differently.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l10-text-5-s6",
+              "text_original": "不管你认为幸福是什么，只要你用心去找，就一定能发现它。",
+              "pinyin": "Bùguǎn nǐ rènwéi xìngfú shì shénme, zhǐyào nǐ yòngxīn qù zhǎo, jiù yīdìng néng fāxiàn tā.",
+              "text_translation": "Baxtni nima deb bilishingdan qat'i nazar, chin dildan izlasang, albatta uni topasan.",
+              "text_translation_ru": "Что бы ты ни считал счастьем, стоит искать его от души — и ты обязательно его найдёшь.",
+              "text_translation_en": "Whatever you take happiness to be, so long as you look for it with all your heart, you will surely find it.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
