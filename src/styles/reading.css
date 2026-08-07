@@ -1326,10 +1326,11 @@ body {
 
 /* ── Dialog body ── */
 .dr-dialog-body {
-  /* Named so .dr-trbar can cancel it exactly — the bar has to start flush
-     against the hero, and this padding is the only thing between them. */
-  --dr-body-pt: 30px;
-  padding: var(--dr-body-pt) 16px 24px;
+  /* Top padding matches .dr-line's own 14px margin, so the first card sits the
+     same distance below the bar as the cards sit from each other. (The variable
+     this used to expose existed for the bar to cancel; the bar is no longer
+     inside this column, so nothing reads it.) */
+  padding: 14px 16px 24px;
   width: fit-content;
   min-width: 300px;
   max-width: 90vw;
@@ -13402,7 +13403,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 6px 20px;
-  margin-bottom: 8px;
   /* Opaque, not frosted: the dialogue scrolls underneath and even at 0.97 the
      characters read through clearly enough to fight the translation. */
   background: #fff;
