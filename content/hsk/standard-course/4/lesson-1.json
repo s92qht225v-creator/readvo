@@ -1112,10 +1112,10 @@
       "slug": "gang-vs-gangcai",
       "title": "刚 / 刚才",
       "pinyin": "gāng / gāngcái",
-      "label": "语法",
-      "labelTranslation": "Grammatika",
-      "labelTranslation_ru": "Грамматика",
-      "labelTranslation_en": "Grammar",
+      "label": "比一比",
+      "labelTranslation": "Taqqoslash",
+      "labelTranslation_ru": "Сравнение",
+      "labelTranslation_en": "Compare",
       "blocks": [
         {
           "type": "p",
