@@ -981,8 +981,12 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                                         // hide pinyin for a word whose level < this dialogue's level
                                         const hidePy = typeof wl === 'number' && wl < dialogueLevel;
                                         const isPunct = /[，。？！、,.\s]/.test(pair.char);
-                                        const reservePy = sPinyin && !isPunct;
-                                        const pyText = (!hidePy && pair.pinyin) ? pair.pinyin : null;
+                                        // Reserve the pinyin row even when pinyin is OFF, so
+                                        // toggling it changes what you see and not where the
+                                        // characters sit. Rows were 70px apart with it on and
+                                        // 47px off — every toggle reflowed the whole dialogue.
+                                        const reservePy = !isPunct;
+                                        const pyText = (sPinyin && !hidePy && pair.pinyin) ? pair.pinyin : null;
                                         return (
                                           <div
                                             key={`${si}-${ci}`}
