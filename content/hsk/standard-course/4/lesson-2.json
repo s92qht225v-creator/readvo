@@ -1832,6 +1832,75 @@
           "en": "而 connects two related or contrasting ideas.\n却 highlights an unexpected contrast or result."
         }
       ]
+    },
+    {
+      "slug": "culture",
+      "title": "在家靠父母，出门靠朋友",
+      "pinyin": "zài jiā kào fùmǔ, chūmén kào péngyou",
+      "label": "文化",
+      "labelTranslation": "Madaniyat",
+      "labelTranslation_ru": "Культура",
+      "labelTranslation_en": "Culture",
+      "blocks": [
+        {
+          "type": "p",
+          "uz": "«Uyda ota-onaga, uydan chiqsang do'stga suyanasan.»",
+          "ru": "«Дома полагаешься на родителей, вне дома — на друзей.»",
+          "en": "“At home one relies on his parents; away from home one relies on friends.”"
+        },
+        {
+          "type": "h",
+          "uz": "Matn",
+          "ru": "Текст",
+          "en": "Text"
+        },
+        {
+          "type": "ex",
+          "zh": "中国有句俗话叫“在家靠父母，出门靠朋友”。",
+          "py": "Zhōngguó yǒu jù súhuà jiào “zài jiā kào fùmǔ, chūmén kào péngyou”.",
+          "uz": "Xitoyda «uyda ota-onaga, uydan chiqsang do'stga suyanasan» degan maqol bor.",
+          "ru": "В Китае есть пословица: «дома полагаешься на родителей, вне дома — на друзей».",
+          "en": "There is a Chinese saying: “at home you rely on your parents, away from home you rely on your friends”."
+        },
+        {
+          "type": "ex",
+          "zh": "朋友在我们的生活中非常重要。",
+          "py": "Péngyou zài wǒmen de shēnghuó zhōng fēicháng zhòngyào.",
+          "uz": "Do'stlar hayotimizda juda muhim o'rin tutadi.",
+          "ru": "Друзья играют очень важную роль в нашей жизни.",
+          "en": "Friends are very important in our lives."
+        },
+        {
+          "type": "ex",
+          "zh": "交朋友是一种文化，也是一种学问。",
+          "py": "Jiāo péngyou shì yī zhǒng wénhuà, yě shì yī zhǒng xuéwen.",
+          "uz": "Do'st orttirish — bu ham madaniyat, ham bir ilm.",
+          "ru": "Заводить друзей — это и культура, и своего рода наука.",
+          "en": "Making friends is a kind of culture, and also a kind of skill."
+        },
+        {
+          "type": "ex",
+          "zh": "中国人的交友观可以用八个字来形容，那就是“有福同享，有难同当”，你有什么高兴或者好的事情，说出来与朋友分享；你有什么难处，说出来与朋友一起想解决的办法。",
+          "py": "Zhōngguórén de jiāoyǒuguān kěyǐ yòng bā gè zì lái xíngróng, nà jiù shì “yǒu fú tóng xiǎng, yǒu nàn tóng dāng”, nǐ yǒu shénme gāoxìng huòzhě hǎo de shìqing, shuō chūlái yǔ péngyou fēnxiǎng; nǐ yǒu shénme nánchu, shuō chūlái yǔ péngyou yīqǐ xiǎng jiějué de bànfǎ.",
+          "uz": "Xitoyliklarning do'stlik haqidagi qarashini sakkiz ieroglif bilan ifodalash mumkin: «baxtni birga bo'lishmoq, qiyinchilikka birga bardosh bermoq». Quvonchli yoki yaxshi bir voqea bo'lsa, do'sting bilan bo'lishasan; qiyinchiliging bo'lsa, uni aytib, do'sting bilan birga yechim izlaysan.",
+          "ru": "Взгляд китайцев на дружбу можно выразить восемью иероглифами: «радость делить вместе, беду переносить вместе». Если у тебя радость или хорошая новость — поделись с другом; если трудность — расскажи и вместе ищите выход.",
+          "en": "The Chinese view of friendship can be summed up in eight characters: “share happiness together, bear hardship together”. When something good or happy happens, you share it with your friends; when you have a difficulty, you speak up and look for a solution together."
+        },
+        {
+          "type": "ex",
+          "zh": "多为他人想想，站在别人的立场上想问题更容易获得一份友谊。",
+          "py": "Duō wèi tārén xiǎngxiang, zhàn zài biérén de lìchǎng shàng xiǎng wèntí gèng róngyì huòdé yī fèn yǒuyì.",
+          "uz": "Boshqalar haqida ko'proq o'ylash, ularning o'rniga turib fikr yuritish do'stlikka erishishni osonlashtiradi.",
+          "ru": "Если чаще думать о других и смотреть на вещи с их позиции, обрести дружбу гораздо легче.",
+          "en": "Thinking of others more, and looking at things from their point of view, makes friendship much easier to gain."
+        },
+        {
+          "type": "note",
+          "uz": "有福同享，有难同当\nyǒu fú tóng xiǎng, yǒu nàn tóng dāng\nBaxtni birga bo'lishmoq, qiyinchilikka birga bardosh bermoq — Xitoy do'stlik tushunchasining mag'zi.",
+          "ru": "有福同享，有难同当\nyǒu fú tóng xiǎng, yǒu nàn tóng dāng\nРадость делить вместе, беду переносить вместе — суть китайского понимания дружбы.",
+          "en": "有福同享，有难同当\nyǒu fú tóng xiǎng, yǒu nàn tóng dāng\nShare happiness together, bear hardship together — the core of the Chinese idea of friendship."
+        }
+      ]
     }
   ]
 }
