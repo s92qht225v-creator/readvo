@@ -544,8 +544,17 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     const tr = (segs.length && revealedSeg !== WHOLE_ENTRY)
       ? (segs[Math.min(revealedSeg, segs.length - 1)]?.tr || whole)
       : whole;
-    return { text: tr || `${meta.title} · ${titleTr}`, isTranslation: !!tr };
-  }, [showTranslation, allSentences, revealedId, revealedSeg, trOf, meta.title, titleTr]);
+    // Idle: a hint, not the title. You just chose the dialogue, so its name
+    // tells you nothing — whereas the empty bar is the one moment worth
+    // explaining what fills it. Says "sentence" because that is the unit:
+    // tapping one line of a two-sentence turn translates only that sentence.
+    const hint = ({
+      uz: "Tarjimani ko'rish uchun gapni bosing",
+      ru: 'Нажмите на предложение, чтобы увидеть перевод',
+      en: 'Tap a sentence to see its translation',
+    } as Record<string, string>)[language];
+    return { text: tr || hint, isTranslation: !!tr };
+  }, [showTranslation, allSentences, revealedId, revealedSeg, trOf, language]);
 
   const pendingScrollRef = useRef<HTMLElement | null>(null);
   const [scrollTick, setScrollTick] = useState(0);
