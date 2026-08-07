@@ -1,0 +1,694 @@
+{
+  "book": "standard-course",
+  "bookTitle": "HSK标准教程",
+  "level": 4,
+  "volume": "上",
+  "unit": 5,
+  "slug": "buy-right-not-expensive",
+  "title": "只买对的，不买贵的",
+  "pinyin": "Zhǐ mǎi duì de, bù mǎi guì de",
+  "titleTranslation": "Faqat mosini oling, qimmatini emas",
+  "titleTranslation_ru": "Покупай подходящее, а не дорогое",
+  "titleTranslation_en": "Buy What's Right, Not What's Expensive",
+  "dateAdded": "2026-08-07",
+  "texts": [
+    {
+      "id": "hsk4-l5-text-1",
+      "slug": "text-1",
+      "label": "课文一",
+      "labelTranslation": "Matn 1",
+      "labelTranslation_ru": "Текст 1",
+      "labelTranslation_en": "Text 1",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦",
+        "B": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "家具",
+          "py": "jiājù",
+          "uz": "mebel",
+          "ru": "мебель",
+          "en": "furniture"
+        },
+        {
+          "zh": "沙发",
+          "py": "shāfā",
+          "uz": "divan",
+          "ru": "диван",
+          "en": "sofa"
+        },
+        {
+          "zh": "打折",
+          "py": "dǎzhé",
+          "uz": "chegirma qilmoq",
+          "ru": "делать скидку",
+          "en": "to give a discount"
+        },
+        {
+          "zh": "价格",
+          "py": "jiàgé",
+          "uz": "narx",
+          "ru": "цена",
+          "en": "price"
+        },
+        {
+          "zh": "质量",
+          "py": "zhìliàng",
+          "uz": "sifat",
+          "ru": "качество",
+          "en": "quality"
+        },
+        {
+          "zh": "肯定",
+          "py": "kěndìng",
+          "uz": "albatta, shubhasiz",
+          "ru": "определённо, безусловно",
+          "en": "certainly, definitely"
+        },
+        {
+          "zh": "流行",
+          "py": "liúxíng",
+          "uz": "ommabop, modada",
+          "ru": "популярный, модный",
+          "en": "popular, fashionable"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l5-text-1-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l5-text-1-s1",
+              "text_original": "小姐，您好！",
+              "pinyin": "Xiǎojiě, nín hǎo!",
+              "text_translation": "Xonim, assalomu alaykum!",
+              "text_translation_ru": "Девушка, здравствуйте!",
+              "text_translation_en": "Hello, miss!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-1-s2",
+              "text_original": "您想买什么家具？",
+              "pinyin": "Nín xiǎng mǎi shénme jiājù?",
+              "text_translation": "Qanday mebel sotib olmoqchisiz?",
+              "text_translation_ru": "Какую мебель вы хотите купить?",
+              "text_translation_en": "What furniture are you looking for?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-1-s3",
+              "text_original": "需要我为您介绍一下吗？",
+              "pinyin": "Xūyào wǒ wèi nín jièshào yīxià ma?",
+              "text_translation": "Sizga tanishtirib beraymi?",
+              "text_translation_ru": "Хотите, я вам расскажу?",
+              "text_translation_en": "Would you like me to show you around?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-1-s4",
+              "text_original": "谢谢，我想买沙发。",
+              "pinyin": "Xièxie, wǒ xiǎng mǎi shāfā.",
+              "text_translation": "Rahmat, men divan olmoqchiman.",
+              "text_translation_ru": "Спасибо, я хочу купить диван.",
+              "text_translation_en": "Thank you — I'd like to buy a sofa.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l5-text-1-s5",
+              "text_original": "您看这个沙发怎么样？",
+              "pinyin": "Nín kàn zhège shāfā zěnmeyàng?",
+              "text_translation": "Mana bu divan qanday?",
+              "text_translation_ru": "Как вам вот этот диван?",
+              "text_translation_en": "How about this sofa?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-1-s6",
+              "text_original": "现在正在打折，比平时便宜了一千块。",
+              "pinyin": "Xiànzài zhèngzài dǎzhé, bǐ píngshí piányi le yīqiān kuài.",
+              "text_translation": "Hozir chegirma bor — odatdagidan ming yuan arzon.",
+              "text_translation_ru": "Сейчас идёт скидка — на тысячу юаней дешевле обычного.",
+              "text_translation_en": "It's on sale at the moment — a thousand yuan cheaper than usual.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-1-s7",
+              "text_original": "价格还可以，就是不知道质量有没有保证。",
+              "pinyin": "Jiàgé hái kěyǐ, jiùshì bù zhīdào zhìliàng yǒu méiyǒu bǎozhèng.",
+              "text_translation": "Narxi yomon emas, faqat sifatiga kafolat bor-yo'qligini bilmayman.",
+              "text_translation_ru": "Цена нормальная, только не знаю, есть ли гарантия качества.",
+              "text_translation_en": "The price is fine — I just don't know whether the quality is guaranteed.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l5-text-1-s8",
+              "text_original": "您放心，质量肯定不“打折”，这种沙发是今年最流行的。",
+              "pinyin": "Nín fàngxīn, zhìliàng kěndìng bù dǎzhé, zhè zhǒng shāfā shì jīnnián zuì liúxíng de.",
+              "text_translation": "Xotirjam bo'ling, sifatga hech qanday «chegirma» yo'q — bu divan shu yilning eng ommabop modeli.",
+              "text_translation_ru": "Не волнуйтесь, на качестве никакой «скидки» нет — это самая популярная модель этого года.",
+              "text_translation_en": "Don't worry, there's certainly no “discount” on quality — this sofa is the most popular model this year.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-1-s9",
+              "text_original": "有很多种颜色可以选择，您可以看一下。",
+              "pinyin": "Yǒu hěn duō zhǒng yánsè kěyǐ xuǎnzé, nín kěyǐ kàn yīxià.",
+              "text_translation": "Tanlash uchun juda ko'p rang bor, ko'rib chiqing.",
+              "text_translation_ru": "Есть много цветов на выбор, посмотрите.",
+              "text_translation_en": "There are many colours to choose from — do have a look.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-1-s10",
+              "text_original": "这个蓝色的看上去不错，就要这个吧。",
+              "pinyin": "Zhège lánsè de kàn shàngqu bùcuò, jiù yào zhège ba.",
+              "text_translation": "Bu ko'k rangdagisi yaxshi ko'rinadi — shuni olaman.",
+              "text_translation_ru": "Этот синий выглядит неплохо — возьму его.",
+              "text_translation_en": "This blue one looks good — I'll take it.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l5-text-2",
+      "slug": "text-2",
+      "label": "课文二",
+      "labelTranslation": "Matn 2",
+      "labelTranslation_ru": "Текст 2",
+      "labelTranslation_en": "Text 2",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "顺便",
+          "py": "shùnbiàn",
+          "uz": "yo'l-yo'lakay",
+          "ru": "заодно, попутно",
+          "en": "in passing, while at it"
+        },
+        {
+          "zh": "台",
+          "py": "tái",
+          "uz": "(texnika uchun sanoq so'zi)",
+          "ru": "(счётное слово для техники)",
+          "en": "(measure word for machines)"
+        },
+        {
+          "zh": "光",
+          "py": "guāng",
+          "uz": "faqat, yolg'iz",
+          "ru": "только, лишь",
+          "en": "only, merely"
+        },
+        {
+          "zh": "实在",
+          "py": "shízài",
+          "uz": "rostdan ham",
+          "ru": "действительно, по-настоящему",
+          "en": "really, truly"
+        },
+        {
+          "zh": "制冷",
+          "py": "zhìlěng",
+          "uz": "sovutish",
+          "ru": "охлаждение",
+          "en": "cooling, refrigeration"
+        },
+        {
+          "zh": "效果",
+          "py": "xiàoguǒ",
+          "uz": "samara, natija",
+          "ru": "эффект, результат",
+          "en": "effect, result"
+        },
+        {
+          "zh": "现金",
+          "py": "xiànjīn",
+          "uz": "naqd pul",
+          "ru": "наличные",
+          "en": "cash"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l5-text-2-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l5-text-2-s1",
+              "text_original": "咱家的冰箱太旧了，商场正好打折，我们顺便也买一台吧。",
+              "pinyin": "Zán jiā de bīngxiāng tài jiù le, shāngchǎng zhènghǎo dǎzhé, wǒmen shùnbiàn yě mǎi yī tái ba.",
+              "text_translation": "Uydagi muzlatkichimiz juda eski, do'konda ayni chegirma ham bor — yo'l-yo'lakay bittasini olaylik.",
+              "text_translation_ru": "Наш холодильник совсем старый, а в магазине как раз скидки — давай заодно купим новый.",
+              "text_translation_en": "Our fridge is far too old, and the shop happens to have a sale — let's pick one up while we're here.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-2-s2",
+              "text_original": "今天买的东西太多了。",
+              "pinyin": "Jīntiān mǎi de dōngxi tài duō le.",
+              "text_translation": "Bugun juda ko'p narsa oldik.",
+              "text_translation_ru": "Мы сегодня и так много всего купили.",
+              "text_translation_en": "We've bought far too much today.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l5-text-2-s3",
+              "text_original": "再说，这个月家里已经花了五千多了。",
+              "pinyin": "Zàishuō, zhège yuè jiālǐ yǐjīng huā le wǔqiān duō le.",
+              "text_translation": "Qolaversa, bu oy uy uchun allaqachon besh mingdan ortiq sarfladik.",
+              "text_translation_ru": "К тому же в этом месяце мы уже потратили больше пяти тысяч.",
+              "text_translation_en": "Besides, we've already spent over five thousand on the house this month.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l5-text-2-s4",
+              "text_original": "这么多？",
+              "pinyin": "Zhème duō?",
+              "text_translation": "Shunchamiz?",
+              "text_translation_ru": "Так много?",
+              "text_translation_en": "That much?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-2-s5",
+              "text_original": "你不会是记错了吧？",
+              "pinyin": "Nǐ bù huì shì jì cuò le ba?",
+              "text_translation": "Xato eslab qolmadingmi?",
+              "text_translation_ru": "Ты не ошибся ли в подсчётах?",
+              "text_translation_en": "You haven't remembered it wrong, have you?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-2-s6",
+              "text_original": "没错。",
+              "pinyin": "Méi cuò.",
+              "text_translation": "Xato emas.",
+              "text_translation_ru": "Всё верно.",
+              "text_translation_en": "No, that's right.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l5-text-2-s7",
+              "text_original": "上个星期光买沙发就花了两千多。",
+              "pinyin": "Shàng gè xīngqī guāng mǎi shāfā jiù huā le liǎngqiān duō.",
+              "text_translation": "O'tgan hafta faqat divanga ikki mingdan ortiq ketdi.",
+              "text_translation_ru": "На прошлой неделе только на диван ушло больше двух тысяч.",
+              "text_translation_en": "Last week the sofa alone cost over two thousand.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l5-text-2-s8",
+              "text_original": "但是咱家的冰箱实在太旧了，制冷效果也不太好了，还是买个新的吧。",
+              "pinyin": "Dànshì zán jiā de bīngxiāng shízài tài jiù le, zhìlěng xiàoguǒ yě bù tài hǎo le, háishi mǎi gè xīn de ba.",
+              "text_translation": "Lekin muzlatkichimiz rostdan ham juda eski, sovutish quvvati ham yaxshi emas — yangisini olganimiz ma'qul.",
+              "text_translation_ru": "Но холодильник у нас действительно очень старый, и морозит уже плохо — лучше купить новый.",
+              "text_translation_en": "But our fridge really is too old, and it barely cools any more — better to buy a new one.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-2-s9",
+              "text_original": "那好吧，我带的现金不够，用你的信用卡吧。",
+              "pinyin": "Nà hǎo ba, wǒ dài de xiànjīn bù gòu, yòng nǐ de xìnyòngkǎ ba.",
+              "text_translation": "Mayli, olib kelgan naqd pulim yetmaydi — sening kredit kartangdan foydalanaylik.",
+              "text_translation_ru": "Ладно. Наличных у меня не хватает, давай оплатим твоей кредиткой.",
+              "text_translation_en": "All right. I don't have enough cash on me — let's use your credit card.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l5-text-3",
+      "slug": "text-3",
+      "label": "课文三",
+      "labelTranslation": "Matn 3",
+      "labelTranslation_ru": "Текст 3",
+      "labelTranslation_en": "Text 3",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦",
+        "B": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "邀请",
+          "py": "yāoqǐng",
+          "uz": "taklif qilmoq",
+          "ru": "приглашать",
+          "en": "to invite"
+        },
+        {
+          "zh": "葡萄",
+          "py": "pútao",
+          "uz": "uzum",
+          "ru": "виноград",
+          "en": "grape"
+        },
+        {
+          "zh": "艺术",
+          "py": "yìshù",
+          "uz": "san'at; badiiy",
+          "ru": "искусство; художественный",
+          "en": "art; artistic"
+        },
+        {
+          "zh": "广告",
+          "py": "guǎnggào",
+          "uz": "reklama",
+          "ru": "реклама",
+          "en": "advertisement"
+        },
+        {
+          "zh": "味道",
+          "py": "wèidao",
+          "uz": "ta'm",
+          "ru": "вкус",
+          "en": "taste, flavour"
+        },
+        {
+          "zh": "优点",
+          "py": "yōudiǎn",
+          "uz": "afzallik",
+          "ru": "достоинство, плюс",
+          "en": "strong point, advantage"
+        },
+        {
+          "zh": "实际",
+          "py": "shíjì",
+          "uz": "haqiqiy; amalda",
+          "ru": "реальный; фактически",
+          "en": "actual; in reality"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l5-text-3-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l5-text-3-s1",
+              "text_original": "李老师邀请咱们去他家做客，给他带点儿什么礼物好呢？",
+              "pinyin": "Lǐ lǎoshī yāoqǐng zánmen qù tā jiā zuòkè, gěi tā dài diǎnr shénme lǐwù hǎo ne?",
+              "text_translation": "Li ustoz bizni uyiga mehmonga taklif qildi — unga qanday sovg'a olib borsak ekan?",
+              "text_translation_ru": "Учитель Ли пригласил нас в гости — какой подарок ему лучше взять?",
+              "text_translation_en": "Teacher Li has invited us to his home — what present should we take him?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-3-s2",
+              "text_original": "他很喜欢葡萄酒，我们就给他买两瓶葡萄酒吧。",
+              "pinyin": "Tā hěn xǐhuan pútaojiǔ, wǒmen jiù gěi tā mǎi liǎng píng pútaojiǔ ba.",
+              "text_translation": "U uzum sharobini juda yaxshi ko'radi — unga ikki shisha olaylik.",
+              "text_translation_ru": "Он очень любит вино — давай купим ему две бутылки.",
+              "text_translation_en": "He's very fond of wine — let's buy him two bottles.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l5-text-3-s3",
+              "text_original": "可是这里有这么多种，你知道哪种好吗？",
+              "pinyin": "Kěshì zhèlǐ yǒu zhème duō zhǒng, nǐ zhīdào nǎ zhǒng hǎo ma?",
+              "text_translation": "Lekin bu yerda juda ko'p turi bor — qaysi biri yaxshiligini bilasanmi?",
+              "text_translation_ru": "Но здесь столько сортов — ты знаешь, какой лучше?",
+              "text_translation_en": "But there are so many kinds here — do you know which is good?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-3-s4",
+              "text_original": "我觉得这种不错，你看它酒瓶做得都这么艺术。",
+              "pinyin": "Wǒ juéde zhè zhǒng bùcuò, nǐ kàn tā jiǔpíng zuò de dōu zhème yìshù.",
+              "text_translation": "Menimcha, bu yaxshi — qara, shishasi ham qanday badiiy ishlangan.",
+              "text_translation_ru": "По-моему, вот этот неплох — посмотри, даже бутылка сделана так изящно.",
+              "text_translation_en": "I think this one's good — look how artistic even the bottle is.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l5-text-3-s5",
+              "text_original": "而且电视上经常有它的广告，我想味道应该不错。",
+              "pinyin": "Érqiě diànshì shàng jīngcháng yǒu tā de guǎnggào, wǒ xiǎng wèidao yīnggāi bùcuò.",
+              "text_translation": "Ustiga-ustak, televizorda uning reklamasi tez-tez chiqadi — ta'mi ham yaxshi bo'lsa kerak.",
+              "text_translation_ru": "К тому же его часто рекламируют по телевизору — думаю, вкус должен быть хороший.",
+              "text_translation_en": "And it's advertised on TV a lot, so I imagine it tastes good.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l5-text-3-s6",
+              "text_original": "广告只会介绍优点，却不会说它的缺点。",
+              "pinyin": "Guǎnggào zhǐ huì jièshào yōudiǎn, què bù huì shuō tā de quēdiǎn.",
+              "text_translation": "Reklama faqat afzalliklarni ko'rsatadi, kamchiliklari haqida esa gapirmaydi.",
+              "text_translation_ru": "Реклама показывает только достоинства и никогда не говорит о недостатках.",
+              "text_translation_en": "Advertising only presents the good points; it never mentions the flaws.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-3-s7",
+              "text_original": "实际上，很多东西并不像广告上说的那么好，所以不能完全相信广告。",
+              "pinyin": "Shíjì shàng, hěn duō dōngxi bìng bù xiàng guǎnggào shàng shuō de nàme hǎo, suǒyǐ bù néng wánquán xiāngxìn guǎnggào.",
+              "text_translation": "Aslida ko'p narsalar reklamada aytilganchalik yaxshi emas, shuning uchun reklamaga to'liq ishonib bo'lmaydi.",
+              "text_translation_ru": "На самом деле многое вовсе не так хорошо, как говорят в рекламе, поэтому полностью верить ей нельзя.",
+              "text_translation_en": "In fact many things are not nearly as good as the adverts say, so you can't trust advertising completely.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-3-s8",
+              "text_original": "你说的也对。",
+              "pinyin": "Nǐ shuō de yě duì.",
+              "text_translation": "Sen aytganing ham to'g'ri.",
+              "text_translation_ru": "Ты тоже прав.",
+              "text_translation_en": "You're right too.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l5-text-4",
+      "slug": "text-4",
+      "label": "课文四",
+      "labelTranslation": "Matn 4",
+      "labelTranslation_ru": "Текст 4",
+      "labelTranslation_en": "Text 4",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "考虑",
+          "py": "kǎolǜ",
+          "uz": "o'ylab ko'rmoq",
+          "ru": "обдумывать, учитывать",
+          "en": "to consider"
+        },
+        {
+          "zh": "标准",
+          "py": "biāozhǔn",
+          "uz": "mezon, standart",
+          "ru": "критерий, стандарт",
+          "en": "standard, criterion"
+        },
+        {
+          "zh": "样子",
+          "py": "yàngzi",
+          "uz": "ko'rinish, fason",
+          "ru": "вид, фасон",
+          "en": "appearance, style"
+        },
+        {
+          "zh": "年龄",
+          "py": "niánlíng",
+          "uz": "yosh",
+          "ru": "возраст",
+          "en": "age"
+        },
+        {
+          "zh": "浪费",
+          "py": "làngfèi",
+          "uz": "isrof qilmoq",
+          "ru": "тратить впустую",
+          "en": "to waste"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l5-text-4-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l5-text-4-s1",
+              "text_original": "买衣服只考虑价格当然不好，但是只考虑买好看的也不一定对。",
+              "pinyin": "Mǎi yīfu zhǐ kǎolǜ jiàgé dāngrán bù hǎo, dànshì zhǐ kǎolǜ mǎi hǎokàn de yě bù yīdìng duì.",
+              "text_translation": "Kiyim olayotganda faqat narxni o'ylash, albatta, yaxshi emas; lekin faqat chiroyliligini o'ylash ham har doim to'g'ri emas.",
+              "text_translation_ru": "Покупая одежду, думать только о цене, конечно, плохо, но думать только о красоте тоже не всегда верно.",
+              "text_translation_en": "Considering only price when buying clothes is of course wrong, but considering only looks isn't necessarily right either.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-4-s2",
+              "text_original": "我买衣服的标准是“只买对的，不买贵的”。",
+              "pinyin": "Wǒ mǎi yīfu de biāozhǔn shì zhǐ mǎi duì de, bù mǎi guì de.",
+              "text_translation": "Mening kiyim tanlash mezonim — «faqat mosini olish, qimmatini emas».",
+              "text_translation_ru": "Мой критерий при покупке одежды: «покупать подходящее, а не дорогое».",
+              "text_translation_en": "My standard for buying clothes is: “buy what's right, not what's expensive”.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-4-s3",
+              "text_original": "第一，自己穿着舒服；第二，衣服的质量要好，而且又不能太贵。",
+              "pinyin": "Dì yī, zìjǐ chuānzhe shūfu; dì èr, yīfu de zhìliàng yào hǎo, érqiě yòu bù néng tài guì.",
+              "text_translation": "Birinchidan, kiyganda o'zimga qulay bo'lsin; ikkinchidan, sifati yaxshi, ammo narxi ham juda qimmat bo'lmasin.",
+              "text_translation_ru": "Во-первых, чтобы было удобно носить; во-вторых, чтобы качество было хорошим и при этом не слишком дорого.",
+              "text_translation_en": "First, it must be comfortable to wear; second, the quality must be good without being too expensive.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-4-s4",
+              "text_original": "对我来说，衣服的样子流行不流行并不是很重要。",
+              "pinyin": "Duì wǒ lái shuō, yīfu de yàngzi liúxíng bù liúxíng bìng bù shì hěn zhòngyào.",
+              "text_translation": "Men uchun kiyimning fasoni modamimi yoki yo'qmi — unchalik muhim emas.",
+              "text_translation_ru": "Для меня не так уж важно, модный фасон или нет.",
+              "text_translation_en": "For me, whether the style is fashionable or not really isn't very important.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-4-s5",
+              "text_original": "很多年龄大的人喜欢在打折的时候买便宜的衣服，但对那些衣服是不是适合自己却考虑得不多。",
+              "pinyin": "Hěn duō niánlíng dà de rén xǐhuan zài dǎzhé de shíhou mǎi piányi de yīfu, dàn duì nàxiē yīfu shì bù shì shìhé zìjǐ què kǎolǜ de bù duō.",
+              "text_translation": "Ko'p yoshi ulug' odamlar chegirma paytida arzon kiyim olishni yoqtiradi, ammo o'sha kiyim o'ziga to'g'ri keladimi-yo'qmi — buni kam o'ylaydi.",
+              "text_translation_ru": "Многие пожилые люди любят покупать дешёвую одежду на распродаже, но мало думают о том, подходит ли она им.",
+              "text_translation_en": "Many older people like buying cheap clothes in the sales, yet give little thought to whether those clothes suit them.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-4-s6",
+              "text_original": "这点是我理解不了的，因为如果不适合自己，即使花钱很少，也是一种浪费。",
+              "pinyin": "Zhè diǎn shì wǒ lǐjiě bù liǎo de, yīnwèi rúguǒ bù shìhé zìjǐ, jíshǐ huā qián hěn shǎo, yě shì yī zhǒng làngfèi.",
+              "text_translation": "Buni men tushuna olmayman: agar o'zingga to'g'ri kelmasa, kam pul sarflagan bo'lsang ham, bu isrofgarchilik.",
+              "text_translation_ru": "Этого я не понимаю: если вещь не подходит, то даже потратив мало, ты всё равно тратишь впустую.",
+              "text_translation_en": "That's something I can't understand: if it doesn't suit you, then even spending very little is still a waste.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l5-text-5",
+      "slug": "text-5",
+      "label": "课文五",
+      "labelTranslation": "Matn 5",
+      "labelTranslation_ru": "Текст 5",
+      "labelTranslation_en": "Text 5",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "购物",
+          "py": "gòuwù",
+          "uz": "xarid qilish",
+          "ru": "покупки, шопинг",
+          "en": "shopping"
+        },
+        {
+          "zh": "尤其",
+          "py": "yóuqí",
+          "uz": "ayniqsa",
+          "ru": "особенно",
+          "en": "especially"
+        },
+        {
+          "zh": "受到",
+          "py": "shòudào",
+          "uz": "(e'tibor, sevgi) ko'rmoq",
+          "ru": "получать, пользоваться",
+          "en": "to receive, to enjoy"
+        },
+        {
+          "zh": "任何",
+          "py": "rènhé",
+          "uz": "har qanday, istalgan",
+          "ru": "любой",
+          "en": "any"
+        },
+        {
+          "zh": "寄",
+          "py": "jì",
+          "uz": "jo'natmoq (pochta orqali)",
+          "ru": "отправлять (по почте)",
+          "en": "to send, to post"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l5-text-5-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l5-text-5-s1",
+              "text_original": "现在网上购物变得越来越流行了，年轻人尤其喜欢在网上买东西。",
+              "pinyin": "Xiànzài wǎngshàng gòuwù biàn de yuè lái yuè liúxíng le, niánqīngrén yóuqí xǐhuan zài wǎngshàng mǎi dōngxi.",
+              "text_translation": "Hozir onlayn xarid tobora ommalashib boryapti, ayniqsa yoshlar internetdan xarid qilishni yoqtiradi.",
+              "text_translation_ru": "Сейчас интернет-покупки становятся всё популярнее, особенно среди молодёжи.",
+              "text_translation_en": "Online shopping is becoming more and more popular, and young people especially like buying things online.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-5-s2",
+              "text_original": "在网上几乎什么都可以买到，你可以上网买书、买衣服、买包，还可以买家具、买手机。",
+              "pinyin": "Zài wǎngshàng jīhū shénme dōu kěyǐ mǎidào, nǐ kěyǐ shàngwǎng mǎi shū, mǎi yīfu, mǎi bāo, hái kěyǐ mǎi jiājù, mǎi shǒujī.",
+              "text_translation": "Internetdan deyarli hamma narsani topish mumkin: kitob, kiyim, sumka, hatto mebel va telefon ham.",
+              "text_translation_ru": "В интернете можно купить почти всё: книги, одежду, сумки, а также мебель и телефоны.",
+              "text_translation_en": "You can buy almost anything online — books, clothes, bags, and furniture and phones too.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-5-s3",
+              "text_original": "网上购物能够受到人们的喜爱，原因主要有两个：首先，网上的东西很多，而且比去商店买便宜，这是吸引人们购买的主要原因。",
+              "pinyin": "Wǎngshàng gòuwù nénggòu shòudào rénmen de xǐ'ài, yuányīn zhǔyào yǒu liǎng gè: shǒuxiān, wǎngshàng de dōngxi hěn duō, érqiě bǐ qù shāngdiàn mǎi piányi, zhè shì xīyǐn rénmen gòumǎi de zhǔyào yuányīn.",
+              "text_translation": "Onlayn xaridning odamlarga yoqishining ikkita asosiy sababi bor: birinchidan, internetda mahsulot juda ko'p va do'kondan olishga qaraganda arzon — bu odamlarni jalb qiladigan asosiy sabab.",
+              "text_translation_ru": "У популярности интернет-покупок две главные причины: во-первых, товаров в сети очень много и они дешевле, чем в магазине, — это и привлекает покупателей.",
+              "text_translation_en": "There are two main reasons online shopping is so popular: first, there is a huge range and it's cheaper than in shops, which is the main draw.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-text-5-s4",
+              "text_original": "其次，人们可以在任何时间上网购买自己喜欢的东西，卖家可以把你买的东西寄到你办公室或者家里，非常方便。",
+              "pinyin": "Qícì, rénmen kěyǐ zài rènhé shíjiān shàngwǎng gòumǎi zìjǐ xǐhuan de dōngxi, màijiā kěyǐ bǎ nǐ mǎi de dōngxi jì dào nǐ bàngōngshì huòzhě jiālǐ, fēicháng fāngbiàn.",
+              "text_translation": "Ikkinchidan, odamlar istalgan vaqtda internetga kirib yoqqan narsasini sotib olishi mumkin; sotuvchi esa uni ofisingizga yoki uyingizga jo'natadi — juda qulay.",
+              "text_translation_ru": "Во-вторых, покупать можно в любое время, а продавец отправит покупку в офис или домой — очень удобно.",
+              "text_translation_en": "Second, people can shop at any time, and the seller posts what you buy to your office or home — very convenient.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
