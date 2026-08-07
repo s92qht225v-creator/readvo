@@ -1,0 +1,763 @@
+{
+  "book": "standard-course",
+  "bookTitle": "HSK标准教程",
+  "level": 4,
+  "volume": "上",
+  "unit": 6,
+  "slug": "you-get-what-you-pay-for",
+  "title": "一分钱一分货",
+  "pinyin": "Yī fēn qián yī fēn huò",
+  "titleTranslation": "Har bir tiyinning o'z qiymati bor",
+  "titleTranslation_ru": "Какова цена, таков и товар",
+  "titleTranslation_en": "You Get What You Pay For",
+  "dateAdded": "2026-08-07",
+  "texts": [
+    {
+      "id": "hsk4-l6-text-1",
+      "slug": "text-1",
+      "label": "课文一",
+      "labelTranslation": "Matn 1",
+      "labelTranslation_ru": "Текст 1",
+      "labelTranslation_en": "Text 1",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "苏打",
+        "B": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l6-text-1-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l6-text-1-s1",
+              "text_original": "昨天晚上我给你打电话一直没人接，你忙什么呢？",
+              "pinyin": "Zuótiān wǎnshang wǒ gěi nǐ dǎ diànhuà yīzhí méi rén jiē, nǐ máng shénme ne?",
+              "text_translation": "Kecha kechqurun senga qo'ng'iroq qildim, hech kim ko'tarmadi — nima bilan band eding?",
+              "text_translation_ru": "Вчера вечером я тебе звонил, но никто не брал трубку — чем ты был занят?",
+              "text_translation_en": "I rang you last night and nobody picked up — what were you busy with?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-1-s2",
+              "text_original": "昨天妻子让我陪她去超市买果汁。",
+              "pinyin": "Zuótiān qīzi ràng wǒ péi tā qù chāoshì mǎi guǒzhī.",
+              "text_translation": "Kecha xotinim meni supermarketga sharbat olishga hamroh qildi.",
+              "text_translation_ru": "Вчера жена попросила сходить с ней в супермаркет за соком.",
+              "text_translation_en": "My wife asked me to go with her to the supermarket to buy juice.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-1-s3",
+              "text_original": "我把手机忘在家里了。",
+              "pinyin": "Wǒ bǎ shǒujī wàng zài jiālǐ le.",
+              "text_translation": "Telefonimni uyda unutib qoldiribman.",
+              "text_translation_ru": "Я забыл телефон дома.",
+              "text_translation_en": "I'd left my phone at home.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-1-s4",
+              "text_original": "买这么点儿东西也用不了那么长时间啊！",
+              "pinyin": "Mǎi zhème diǎnr dōngxi yě yòng bù liǎo nàme cháng shíjiān a!",
+              "text_translation": "Shuncha ozgina narsa olishga bunchalik ko'p vaqt ketmaydi-ku!",
+              "text_translation_ru": "На такую мелочь столько времени не нужно!",
+              "text_translation_en": "Buying so little shouldn't take that long!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-1-s5",
+              "text_original": "我们先去逛了会儿商场。",
+              "pinyin": "Wǒmen xiān qù guàng le huìr shāngchǎng.",
+              "text_translation": "Avval biroz savdo markazini aylandik.",
+              "text_translation_ru": "Сначала мы немного походили по торговому центру.",
+              "text_translation_en": "We wandered round the mall for a while first.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-1-s6",
+              "text_original": "一进门，售货员就热情地为我们介绍这、介绍那，她买了一条裤子、一件衬衫、两双袜子，然后我们就高高兴兴地回家了。",
+              "pinyin": "Yī jìn mén, shòuhuòyuán jiù rèqíng de wèi wǒmen jièshào zhè, jièshào nà, tā mǎi le yī tiáo kùzi, yī jiàn chènshān, liǎng shuāng wàzi, ránhòu wǒmen jiù gāogāoxìngxìng de huí jiā le.",
+              "text_translation": "Eshikdan kirishimiz bilan sotuvchi qizg'in tarzda u-buni ko'rsatib berdi; xotinim bitta shim, bitta ko'ylak va ikki juft paypoq oldi, keyin biz xursand holda uyga qaytdik.",
+              "text_translation_ru": "Как только мы вошли, продавщица радушно принялась показывать нам то одно, то другое; жена купила брюки, рубашку и две пары носков, и мы довольные пошли домой.",
+              "text_translation_en": "The moment we walked in, the assistant enthusiastically showed us this and that; she bought a pair of trousers, a shirt and two pairs of socks, and then we went happily home.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-1-s7",
+              "text_original": "买东西时我只看自己想买的，而且喜欢自己看、自己选，不希望被别人打扰。",
+              "pinyin": "Mǎi dōngxi shí wǒ zhǐ kàn zìjǐ xiǎng mǎi de, érqiě xǐhuan zìjǐ kàn, zìjǐ xuǎn, bù xīwàng bèi biérén dǎrǎo.",
+              "text_translation": "Men xarid qilganda faqat olmoqchi bo'lgan narsamga qarayman, o'zim ko'rib, o'zim tanlashni yoqtiraman — birov xalaqit berishini istamayman.",
+              "text_translation_ru": "Когда я покупаю, я смотрю только то, что собирался купить, и люблю выбирать сам, без чужого вмешательства.",
+              "text_translation_en": "When I shop I only look at what I came for, and I like to browse and choose myself, without being bothered.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-1-s8",
+              "text_original": "是啊！",
+              "pinyin": "Shì a!",
+              "text_translation": "Ha-ya!",
+              "text_translation_ru": "Вот именно!",
+              "text_translation_en": "Exactly!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-1-s9",
+              "text_original": "回家以后，我才发现，竟然忘了去商场的超市买果汁！",
+              "pinyin": "Huí jiā yǐhòu, wǒ cái fāxiàn, jìngrán wàng le qù shāngchǎng de chāoshì mǎi guǒzhī!",
+              "text_translation": "Uyga kelganimdan keyingina angladim — savdo markazidagi supermarketdan sharbat olishni butunlay unutibmiz!",
+              "text_translation_ru": "Только дома я понял, что мы совсем забыли купить сок в супермаркете!",
+              "text_translation_en": "It was only after we got home that I realised we'd completely forgotten to buy the juice!",
+              "speaker": "B"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "果汁",
+          "py": "guǒzhī",
+          "uz": "sharbat",
+          "ru": "сок",
+          "en": "juice"
+        },
+        {
+          "zh": "售货员",
+          "py": "shòuhuòyuán",
+          "uz": "sotuvchi",
+          "ru": "продавец",
+          "en": "shop assistant"
+        },
+        {
+          "zh": "袜子",
+          "py": "wàzi",
+          "uz": "paypoq",
+          "ru": "носки",
+          "en": "socks"
+        },
+        {
+          "zh": "打扰",
+          "py": "dǎrǎo",
+          "uz": "bezovta qilmoq",
+          "ru": "беспокоить, мешать",
+          "en": "to disturb, to bother"
+        },
+        {
+          "zh": "竟然",
+          "py": "jìngrán",
+          "uz": "kutilmaganda, hayronki",
+          "ru": "неожиданно, оказывается",
+          "en": "unexpectedly, to one's surprise"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l6-text-2",
+      "slug": "text-2",
+      "label": "课文二",
+      "labelTranslation": "Matn 2",
+      "labelTranslation_ru": "Текст 2",
+      "labelTranslation_en": "Text 2",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l6-text-2-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l6-text-2-s1",
+              "text_original": "西红柿新鲜吗？",
+              "pinyin": "Xīhóngshì xīnxiān ma?",
+              "text_translation": "Pomidor yangimi?",
+              "text_translation_ru": "Помидоры свежие?",
+              "text_translation_en": "Are the tomatoes fresh?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-2-s2",
+              "text_original": "怎么卖？",
+              "pinyin": "Zěnme mài?",
+              "text_translation": "Qanchadan?",
+              "text_translation_ru": "Почём?",
+              "text_translation_en": "How much are they?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-2-s3",
+              "text_original": "七块钱一斤，您放心，保证百分之百新鲜。",
+              "pinyin": "Qī kuài qián yī jīn, nín fàngxīn, bǎozhèng bǎi fēn zhī bǎi xīnxiān.",
+              "text_translation": "Yarim kilosi yetti yuan. Xotirjam bo'ling — yuz foiz yangi, kafolat beraman.",
+              "text_translation_ru": "Семь юаней за полкило. Не волнуйтесь — гарантирую стопроцентную свежесть.",
+              "text_translation_en": "Seven yuan for half a kilo. Don't worry — I guarantee they're a hundred per cent fresh.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-2-s4",
+              "text_original": "怎么这么贵啊！",
+              "pinyin": "Zěnme zhème guì a!",
+              "text_translation": "Nega bunchalik qimmat!",
+              "text_translation_ru": "Почему так дорого!",
+              "text_translation_en": "Why so expensive!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-2-s5",
+              "text_original": "我记得昨天才三块五一斤，今天的价格是昨天的两倍。",
+              "pinyin": "Wǒ jìde zuótiān cái sān kuài wǔ yī jīn, jīntiān de jiàgé shì zuótiān de liǎng bèi.",
+              "text_translation": "Esimda, kecha yarim kilosi atigi uch yarim yuan edi — bugungi narx kechagining ikki barobari.",
+              "text_translation_ru": "Помню, вчера было всего три с половиной за полкило — сегодня цена вдвое выше.",
+              "text_translation_en": "I remember it was only three and a half yesterday — today's price is double.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-2-s6",
+              "text_original": "您问的这种是“绿色”的。",
+              "pinyin": "Nín wèn de zhè zhǒng shì lǜsè de.",
+              "text_translation": "Siz so'ragan tur — «ekologik toza».",
+              "text_translation_ru": "Тот сорт, о котором вы спрашиваете, — «экологический».",
+              "text_translation_en": "The kind you're asking about is the “green” sort.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-2-s7",
+              "text_original": "一分钱一分货。",
+              "pinyin": "Yī fēn qián yī fēn huò.",
+              "text_translation": "Har bir tiyinning o'z qiymati bor.",
+              "text_translation_ru": "Какова цена, таков и товар.",
+              "text_translation_en": "You get what you pay for.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-2-s8",
+              "text_original": "每天吃一两个这种新鲜的西红柿，对皮肤有好处。",
+              "pinyin": "Měitiān chī yī liǎng gè zhè zhǒng xīnxiān de xīhóngshì, duì pífū yǒu hǎochu.",
+              "text_translation": "Har kuni shunday yangi pomidordan bir-ikkitasini yeyish teri uchun foydali.",
+              "text_translation_ru": "Съедать каждый день пару таких свежих помидоров полезно для кожи.",
+              "text_translation_en": "Eating one or two of these fresh tomatoes a day is good for your skin.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-2-s9",
+              "text_original": "好，那我先买几个尝尝。",
+              "pinyin": "Hǎo, nà wǒ xiān mǎi jǐ gè chángchang.",
+              "text_translation": "Mayli, unda avval bir nechtasini olib tatib ko'ray.",
+              "text_translation_ru": "Хорошо, тогда возьму сначала несколько на пробу.",
+              "text_translation_en": "All right, I'll buy a few to try first.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-2-s10",
+              "text_original": "好的，给您西红柿，一共两斤，十四块。",
+              "pinyin": "Hǎo de, gěi nín xīhóngshì, yīgòng liǎng jīn, shísì kuài.",
+              "text_translation": "Xo'p, mana pomidoringiz — jami bir kilo, o'n to'rt yuan.",
+              "text_translation_ru": "Хорошо, вот ваши помидоры — всего кило, четырнадцать юаней.",
+              "text_translation_en": "Right, here are your tomatoes — one kilo altogether, fourteen yuan.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "西红柿",
+          "py": "xīhóngshì",
+          "uz": "pomidor",
+          "ru": "помидор",
+          "en": "tomato"
+        },
+        {
+          "zh": "百分之",
+          "py": "bǎifēnzhī",
+          "uz": "foiz",
+          "ru": "процент",
+          "en": "per cent"
+        },
+        {
+          "zh": "倍",
+          "py": "bèi",
+          "uz": "barobar, karra",
+          "ru": "раз (кратность)",
+          "en": "times, -fold"
+        },
+        {
+          "zh": "皮肤",
+          "py": "pífū",
+          "uz": "teri",
+          "ru": "кожа",
+          "en": "skin"
+        },
+        {
+          "zh": "好处",
+          "py": "hǎochu",
+          "uz": "foyda",
+          "ru": "польза",
+          "en": "benefit"
+        },
+        {
+          "zh": "尝",
+          "py": "cháng",
+          "uz": "tatib ko'rmoq",
+          "ru": "пробовать (на вкус)",
+          "en": "to taste"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l6-text-3",
+      "slug": "text-3",
+      "label": "课文三",
+      "labelTranslation": "Matn 3",
+      "labelTranslation_ru": "Текст 3",
+      "labelTranslation_en": "Text 3",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l6-text-3-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l6-text-3-s1",
+              "text_original": "先生，我们店的行李箱都在这里，请问您要什么样的？",
+              "pinyin": "Xiānsheng, wǒmen diàn de xínglǐxiāng dōu zài zhèlǐ, qǐngwèn nín yào shénmeyàng de?",
+              "text_translation": "Janob, do'konimizdagi barcha chamadonlar shu yerda — qanaqasini xohlaysiz?",
+              "text_translation_ru": "Господин, все наши чемоданы здесь — какой вы хотели бы?",
+              "text_translation_en": "Sir, all our suitcases are here — what sort are you looking for?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-3-s2",
+              "text_original": "我想买一个轻一点儿的。",
+              "pinyin": "Wǒ xiǎng mǎi yī gè qīng yīdiǎnr de.",
+              "text_translation": "Yengilroq bittasini olmoqchiman.",
+              "text_translation_ru": "Хочу что-нибудь полегче.",
+              "text_translation_en": "I'd like a lighter one.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-3-s3",
+              "text_original": "您看看这个，不管从价格方面看，还是从质量上看，都是值得考虑的。",
+              "pinyin": "Nín kànkan zhège, bùguǎn cóng jiàgé fāngmiàn kàn, háishì cóng zhìliàng shàng kàn, dōu shì zhídé kǎolǜ de.",
+              "text_translation": "Mana bunisiga qarang — narx jihatidan ham, sifat jihatidan ham e'tiborga loyiq.",
+              "text_translation_ru": "Посмотрите на этот: и по цене, и по качеству он заслуживает внимания.",
+              "text_translation_en": "Have a look at this one — worth considering both on price and on quality.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-3-s4",
+              "text_original": "质量是不错。",
+              "pinyin": "Zhìliàng shì bùcuò.",
+              "text_translation": "Sifati chindan yaxshi.",
+              "text_translation_ru": "Качество действительно неплохое.",
+              "text_translation_en": "The quality is good, certainly.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-3-s5",
+              "text_original": "请问这个多少钱？",
+              "pinyin": "Qǐngwèn zhège duōshao qián?",
+              "text_translation": "Bu qancha turadi?",
+              "text_translation_ru": "Сколько он стоит?",
+              "text_translation_en": "How much is it?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l6-text-3-s6",
+              "text_original": "现在我们商场正好有打折活动，打完折是九百九十九。",
+              "pinyin": "Xiànzài wǒmen shāngchǎng zhènghǎo yǒu dǎzhé huódòng, dǎ wán zhé shì jiǔbǎi jiǔshíjiǔ.",
+              "text_translation": "Hozir savdo markazimizda ayni chegirma aksiyasi bor — chegirmadan keyin to'qqiz yuz to'qson to'qqiz.",
+              "text_translation_ru": "Сейчас у нас как раз акция — со скидкой девятьсот девяносто девять.",
+              "text_translation_en": "We happen to have a sale on — after the discount it's nine hundred and ninety-nine.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-3-s7",
+              "text_original": "另外，一年内我们都负责免费修理。",
+              "pinyin": "Lìngwài, yī nián nèi wǒmen dōu fùzé miǎnfèi xiūlǐ.",
+              "text_translation": "Bundan tashqari, bir yil ichida ta'mirlashni bepul bajaramiz.",
+              "text_translation_ru": "Кроме того, в течение года мы бесплатно ремонтируем.",
+              "text_translation_en": "Also, we cover free repairs within a year.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-3-s8",
+              "text_original": "你们的服务不错，价格也可以，就买这个吧。",
+              "pinyin": "Nǐmen de fúwù bùcuò, jiàgé yě kěyǐ, jiù mǎi zhège ba.",
+              "text_translation": "Xizmatingiz yaxshi, narxi ham ma'qul — shuni olaman.",
+              "text_translation_ru": "У вас хороший сервис и цена подходящая — беру этот.",
+              "text_translation_en": "Your service is good and the price is fine — I'll take this one.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "轻",
+          "py": "qīng",
+          "uz": "yengil",
+          "ru": "лёгкий",
+          "en": "light (in weight)"
+        },
+        {
+          "zh": "方面",
+          "py": "fāngmiàn",
+          "uz": "jihat, tomon",
+          "ru": "сторона, аспект",
+          "en": "aspect, respect"
+        },
+        {
+          "zh": "值得",
+          "py": "zhídé",
+          "uz": "arziydi, loyiq",
+          "ru": "стоить, заслуживать",
+          "en": "to be worth"
+        },
+        {
+          "zh": "活动",
+          "py": "huódòng",
+          "uz": "tadbir, aksiya",
+          "ru": "мероприятие, акция",
+          "en": "activity, promotion"
+        },
+        {
+          "zh": "内",
+          "py": "nèi",
+          "uz": "ichida, davomida",
+          "ru": "в пределах, в течение",
+          "en": "within"
+        },
+        {
+          "zh": "免费",
+          "py": "miǎnfèi",
+          "uz": "bepul",
+          "ru": "бесплатный",
+          "en": "free of charge"
+        },
+        {
+          "zh": "修理",
+          "py": "xiūlǐ",
+          "uz": "ta'mirlamoq",
+          "ru": "ремонтировать",
+          "en": "to repair"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l6-text-4",
+      "slug": "text-4",
+      "label": "课文四",
+      "labelTranslation": "Matn 4",
+      "labelTranslation_ru": "Текст 4",
+      "labelTranslation_en": "Text 4",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l6-text-4-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l6-text-4-s1",
+              "text_original": "顾客朋友们，为了感谢大家的支持，我们书店今天举行“购书送好礼”活动，购书满一百元送一个笔记本，满两百元送一本词典。",
+              "pinyin": "Gùkè péngyoumen, wèile gǎnxiè dàjiā de zhīchí, wǒmen shūdiàn jīntiān jǔxíng gòu shū sòng hǎo lǐ huódòng, gòu shū mǎn yībǎi yuán sòng yī gè bǐjìběn, mǎn liǎngbǎi yuán sòng yī běn cídiǎn.",
+              "text_translation": "Aziz mijozlar! Qo'llab-quvvatlaganingiz uchun minnatdorchilik bildirib, kitob do'konimiz bugun «kitob oling — sovg'a oling» aksiyasini o'tkazmoqda: bir yuz yuanlik kitob olsangiz daftar, ikki yuz yuanlik olsangiz lug'at sovg'a qilinadi.",
+              "text_translation_ru": "Уважаемые покупатели! В благодарность за вашу поддержку наш книжный сегодня проводит акцию «купи книги — получи подарок»: при покупке на сто юаней — блокнот, на двести — словарь.",
+              "text_translation_en": "Dear customers, to thank you for your support our bookshop is running a “buy books, get a gift” promotion today: spend one hundred yuan and receive a notebook, two hundred and receive a dictionary.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-4-s2",
+              "text_original": "另外，一些图书还有打折活动，其中，小说七五折，地图八折，留学考试用书六折。",
+              "pinyin": "Lìngwài, yīxiē túshū hái yǒu dǎzhé huódòng, qízhōng, xiǎoshuō qīwǔ zhé, dìtú bā zhé, liúxué kǎoshì yòngshū liù zhé.",
+              "text_translation": "Bundan tashqari, ba'zi kitoblarga chegirma bor: romanlarga yigirma besh foiz, xaritalarga yigirma foiz, chet elda o'qish imtihonlariga tayyorlov kitoblariga qirq foiz.",
+              "text_translation_ru": "Кроме того, на часть книг действуют скидки: на романы — 25%, на карты — 20%, на пособия для вступительных экзаменов за рубежом — 40%.",
+              "text_translation_en": "Some books are also discounted: novels at 25% off, maps at 20% off, and study-abroad exam books at 40% off.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-4-s3",
+              "text_original": "如果购书满五百元可免费办会员卡，以后购书可打八折。",
+              "pinyin": "Rúguǒ gòu shū mǎn wǔbǎi yuán kě miǎnfèi bàn huìyuánkǎ, yǐhòu gòu shū kě dǎ bā zhé.",
+              "text_translation": "Agar besh yuz yuanlik kitob olsangiz, bepul a'zolik kartasi rasmiylashtiriladi va keyingi xaridlarga yigirma foiz chegirma beriladi.",
+              "text_translation_ru": "При покупке на пятьсот юаней бесплатно оформляется карта постоянного покупателя со скидкой 20% на будущие покупки.",
+              "text_translation_en": "Spend five hundred yuan and you can have a membership card free, giving 20% off future purchases.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-4-s4",
+              "text_original": "今天过生日的朋友和所有的小朋友还可以获得一份小礼物。",
+              "pinyin": "Jīntiān guò shēngrì de péngyou hé suǒyǒu de xiǎopéngyou hái kěyǐ huòdé yī fèn xiǎo lǐwù.",
+              "text_translation": "Bugun tug'ilgan kuni bo'lgan mijozlar va barcha bolalar kichik sovg'a olishadi.",
+              "text_translation_ru": "Те, у кого сегодня день рождения, и все дети получат небольшой подарок.",
+              "text_translation_en": "Anyone with a birthday today, and all children, will also receive a small gift.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-4-s5",
+              "text_original": "欢迎大家选购！",
+              "pinyin": "Huānyíng dàjiā xuǎngòu!",
+              "text_translation": "Xaridingiz uchun marhamat!",
+              "text_translation_ru": "Добро пожаловать за покупками!",
+              "text_translation_en": "We look forward to serving you!",
+              "speaker": "A"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "支持",
+          "py": "zhīchí",
+          "uz": "qo'llab-quvvatlash",
+          "ru": "поддержка",
+          "en": "support"
+        },
+        {
+          "zh": "举行",
+          "py": "jǔxíng",
+          "uz": "o'tkazmoq",
+          "ru": "проводить (мероприятие)",
+          "en": "to hold (an event)"
+        },
+        {
+          "zh": "满",
+          "py": "mǎn",
+          "uz": "to'lmoq, yetmoq",
+          "ru": "достигать, полный",
+          "en": "to reach, full"
+        },
+        {
+          "zh": "其中",
+          "py": "qízhōng",
+          "uz": "ular orasida, jumladan",
+          "ru": "среди них, в том числе",
+          "en": "among them"
+        },
+        {
+          "zh": "小说",
+          "py": "xiǎoshuō",
+          "uz": "roman, hikoya",
+          "ru": "роман, повесть",
+          "en": "novel, fiction"
+        },
+        {
+          "zh": "会员卡",
+          "py": "huìyuánkǎ",
+          "uz": "a'zolik kartasi",
+          "ru": "карта постоянного клиента",
+          "en": "membership card"
+        },
+        {
+          "zh": "所有",
+          "py": "suǒyǒu",
+          "uz": "barcha",
+          "ru": "все",
+          "en": "all"
+        },
+        {
+          "zh": "获得",
+          "py": "huòdé",
+          "uz": "olmoq, erishmoq",
+          "ru": "получать",
+          "en": "to obtain, to receive"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l6-text-5",
+      "slug": "text-5",
+      "label": "课文五",
+      "labelTranslation": "Matn 5",
+      "labelTranslation_ru": "Текст 5",
+      "labelTranslation_en": "Text 5",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l6-text-5-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l6-text-5-s1",
+              "text_original": "人们常说“一分钱一分货”，意思是东西的质量和价格有很大的关系，也可以说“便宜没好货，好货不便宜”。",
+              "pinyin": "Rénmen cháng shuō yī fēn qián yī fēn huò, yìsi shì dōngxi de zhìliàng hé jiàgé yǒu hěn dà de guānxi, yě kěyǐ shuō piányi méi hǎo huò, hǎo huò bù piányi.",
+              "text_translation": "Odamlar tez-tez «har bir tiyinning o'z qiymati bor» deyishadi — ya'ni narsaning sifati va narxi bir-biriga juda bog'liq; «arzonning sho'rvasi tatimas, yaxshi mol arzon bo'lmas» ham deyish mumkin.",
+              "text_translation_ru": "Часто говорят: «какова цена, таков и товар» — то есть качество и цена тесно связаны; можно сказать и так: «дёшево — значит плохо, хорошее дешёвым не бывает».",
+              "text_translation_en": "People often say “you get what you pay for” — quality and price are closely linked; you could also say “cheap goods are never good, and good goods are never cheap”.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-5-s2",
+              "text_original": "一般情况下，你花的钱越多，买的东西也就越好。",
+              "pinyin": "Yībān qíngkuàng xià, nǐ huā de qián yuè duō, mǎi de dōngxi yě jiù yuè hǎo.",
+              "text_translation": "Odatda qancha ko'p pul sarflasangiz, olgan narsangiz shuncha yaxshi bo'ladi.",
+              "text_translation_ru": "Как правило, чем больше денег тратишь, тем лучше вещь.",
+              "text_translation_en": "As a rule, the more you spend, the better what you buy.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-5-s3",
+              "text_original": "其实也不一定都是这样的。",
+              "pinyin": "Qíshí yě bù yīdìng dōu shì zhèyàng de.",
+              "text_translation": "Aslida har doim ham unday emas.",
+              "text_translation_ru": "На самом деле так бывает не всегда.",
+              "text_translation_en": "In fact that isn't always so.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-5-s4",
+              "text_original": "有的时候，质量很好的东西也会很便宜。",
+              "pinyin": "Yǒu de shíhou, zhìliàng hěn hǎo de dōngxi yě huì hěn piányi.",
+              "text_translation": "Ba'zan sifati juda yaxshi narsa ham arzon bo'ladi.",
+              "text_translation_ru": "Иногда очень качественная вещь бывает и дешёвой.",
+              "text_translation_en": "Sometimes very good things are cheap too.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-5-s5",
+              "text_original": "例如，春天来了，冬天的衣服就会打折，质量很好，还很便宜，花很少的钱就可以买到。",
+              "pinyin": "Lìrú, chūntiān lái le, dōngtiān de yīfu jiù huì dǎzhé, zhìliàng hěn hǎo, hái hěn piányi, huā hěn shǎo de qián jiù kěyǐ mǎidào.",
+              "text_translation": "Masalan, bahor kelganda qishki kiyimlarga chegirma bo'ladi: sifati yaxshi, narxi arzon — ozgina pulga olish mumkin.",
+              "text_translation_ru": "Например, с приходом весны зимняя одежда идёт со скидкой: качество хорошее, цена низкая — можно купить за небольшие деньги.",
+              "text_translation_en": "For instance, when spring comes winter clothes go on sale — good quality, cheap, and you can buy them for very little.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-text-5-s6",
+              "text_original": "一到节日，商场也会举办各种各样的活动，降低价格，这个时候我们也可以买到又便宜又好的东西。",
+              "pinyin": "Yī dào jiérì, shāngchǎng yě huì jǔbàn gèzhǒnggèyàng de huódòng, jiàngdī jiàgé, zhège shíhou wǒmen yě kěyǐ mǎidào yòu piányi yòu hǎo de dōngxi.",
+              "text_translation": "Bayram kelishi bilan savdo markazlari turli aksiyalar o'tkazib, narxlarni tushiradi — o'shanda ham arzon, ham yaxshi narsa olish mumkin.",
+              "text_translation_ru": "С наступлением праздников торговые центры устраивают разные акции и снижают цены — тогда тоже можно купить и дёшево, и хорошо.",
+              "text_translation_en": "And when a holiday comes round, malls run all sorts of promotions and cut prices — then too you can buy things that are both cheap and good.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "情况",
+          "py": "qíngkuàng",
+          "uz": "holat, vaziyat",
+          "ru": "ситуация, обстоятельства",
+          "en": "situation, circumstances"
+        },
+        {
+          "zh": "例如",
+          "py": "lìrú",
+          "uz": "masalan",
+          "ru": "например",
+          "en": "for example"
+        },
+        {
+          "zh": "举办",
+          "py": "jǔbàn",
+          "uz": "tashkil qilmoq",
+          "ru": "организовывать",
+          "en": "to organise, to hold"
+        },
+        {
+          "zh": "各",
+          "py": "gè",
+          "uz": "har bir, turli",
+          "ru": "каждый, различный",
+          "en": "each, various"
+        },
+        {
+          "zh": "降低",
+          "py": "jiàngdī",
+          "uz": "tushirmoq, pasaytirmoq",
+          "ru": "снижать",
+          "en": "to lower, to reduce"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l6-culture",
+      "slug": "culture",
+      "label": "文化",
+      "labelTranslation": "Madaniyat",
+      "labelTranslation_ru": "Культура",
+      "labelTranslation_en": "Culture",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l6-culture-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l6-culture-s1",
+              "text_original": "绿色食品主要是指那种在整个生产过程中都没有污染的、食用安全的食品。",
+              "pinyin": "Lǜsè shípǐn zhǔyào shì zhǐ nà zhǒng zài zhěnggè shēngchǎn guòchéng zhōng dōu méiyǒu wūrǎn de, shíyòng ānquán de shípǐn.",
+              "text_translation": "Ekologik toza mahsulot deganda, asosan, butun ishlab chiqarish jarayonida ifloslanmagan va iste'mol uchun xavfsiz mahsulotlar tushuniladi.",
+              "text_translation_ru": "Под «зелёными» продуктами понимают прежде всего продукты, не загрязнённые на всём протяжении производства и безопасные для употребления.",
+              "text_translation_en": "“Green food” refers mainly to food that is free of contamination throughout the entire production process and safe to eat.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-culture-s2",
+              "text_original": "中国的第一批绿色食品是在一九九〇年北京亚运会期间上市的。",
+              "pinyin": "Zhōngguó de dì yī pī lǜsè shípǐn shì zài yījiǔjiǔlíng nián Běijīng Yàyùnhuì qījiān shàngshì de.",
+              "text_translation": "Xitoyning birinchi ekologik toza mahsulotlari bir ming to'qqiz yuz to'qsoninchi yilda Pekin Osiyo o'yinlari davrida bozorga chiqarilgan.",
+              "text_translation_ru": "Первая партия «зелёных» продуктов в Китае поступила в продажу в 1990 году во время Азиатских игр в Пекине.",
+              "text_translation_en": "China's first green foods went on sale in 1990, during the Beijing Asian Games.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-culture-s3",
+              "text_original": "它一出现就受到了广大市民的欢迎。",
+              "pinyin": "Tā yī chūxiàn jiù shòudào le guǎngdà shìmín de huānyíng.",
+              "text_translation": "Ular paydo bo'lishi bilanoq shahar aholisi orasida katta e'tibor qozondi.",
+              "text_translation_ru": "Как только они появились, их тепло приняли горожане.",
+              "text_translation_en": "As soon as they appeared they were warmly received by the public.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l6-culture-s4",
+              "text_original": "绿色食品的价格一般高于普通食品，但是绿色食品对身体有好处，而且对于保护环境有着巨大的意义。",
+              "pinyin": "Lǜsè shípǐn de jiàgé yībān gāo yú pǔtōng shípǐn, dànshì lǜsè shípǐn duì shēntǐ yǒu hǎochu, érqiě duìyú bǎohù huánjìng yǒuzhe jùdà de yìyì.",
+              "text_translation": "Ekologik toza mahsulotlar narxi odatda oddiy mahsulotlardan yuqori, ammo ular sog'liq uchun foydali va atrof-muhitni muhofaza qilishda katta ahamiyatga ega.",
+              "text_translation_ru": "«Зелёные» продукты обычно дороже обычных, но они полезны для здоровья и имеют огромное значение для охраны окружающей среды.",
+              "text_translation_en": "Green foods usually cost more than ordinary ones, but they are good for health and matter enormously for protecting the environment.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ],
+      "title": "绿色食品"
+    }
+  ]
+}
