@@ -8,9 +8,17 @@ const HREF = `https://t.me/${TELEGRAM_USERNAME}`;
 export function TelegramFAB() {
   const pathname = usePathname();
 
+  // The HSK course readers: /{locale}/hsk/{book}/{level}/{lesson}/{text} and
+  // .../grammar/{point}. Matched by depth rather than by name so the lesson
+  // list one level up — a catalog, with no fixed bar to collide with — keeps
+  // the button.
+  const seg = pathname?.split('/') ?? [];
+  const isHskReader = seg[2] === 'hsk' && seg.length >= 7;
+
   // Hide on routes where the floating button would conflict with fixed UI
   // (karaoke player, lesson reader bottom bars, etc.)
   if (
+    isHskReader ||
     pathname?.includes('/karaoke/') ||
     pathname?.includes('/dialogues/') ||
     pathname?.includes('/story/') ||
