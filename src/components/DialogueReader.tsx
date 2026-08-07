@@ -802,6 +802,13 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                                       // knows WHICH sentence it landed in and the bar can
                                       // translate that one alone.
                                       const segs = splitAligned(s.text_original, trOf(s));
+                                      // With the bar showing one sentence of several, the
+                                      // highlight has to narrow to match — a highlight
+                                      // spanning both sentences implies the bar covers both,
+                                      // and the translation then reads as truncated. Only
+                                      // when translations are on: with the bar gone there is
+                                      // nothing for a narrower highlight to point at.
+                                      const narrowHl = showTranslation && segs.length > 1;
                                       let charOff = 0;
                                       return pairs.map((pair, ci) => {
                                         const wl = charLvl[charOff];
@@ -821,7 +828,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                                         return (
                                           <div
                                             key={`${si}-${ci}`}
-                                            className={`dr-char ${sActive ? 'dr-char--active' : ''} ${sPlaying ? 'dr-char--playing' : ''}`}
+                                            className={`dr-char ${sActive && (!narrowHl || segIdx === revealedSeg) ? 'dr-char--active' : ''} ${sPlaying ? 'dr-char--playing' : ''}`}
                                             onClick={(e) => { e.stopPropagation(); handleSentenceClick(s.id, e.currentTarget, segIdx); }}
                                           >
                                             {/* NBSP, not a plain space: a plain space collapses, the
