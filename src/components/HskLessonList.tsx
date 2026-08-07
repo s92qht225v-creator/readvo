@@ -82,7 +82,10 @@ export function HskLessonList({ lessons, book, level }: { lessons: HskLesson[]; 
                       <span className="hsk__chev" aria-hidden="true">{isOpen ? '▾' : '▸'}</span>
                     </button>
 
-                    {isOpen && (
+                    {/* Always mounted so the open/close can animate — a
+                        conditional render has nothing to transition from.
+                        `inert` keeps the links out of tab order while closed. */}
+                    <div className="hsk__parts-wrap" inert={!isOpen}>
                       <div className="hsk__parts">
                         {lesson.texts.map((text) => (
                           <Link
@@ -126,7 +129,7 @@ export function HskLessonList({ lessons, book, level }: { lessons: HskLesson[]; 
                           </div>
                         )}
                       </div>
-                    )}
+                    </div>
                   </li>
                 );
               })}

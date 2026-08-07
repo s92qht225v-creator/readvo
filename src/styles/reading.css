@@ -13136,11 +13136,33 @@ body {
 
 .hsk__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 
+/* A group, not a card — the head and each part are their own cards, so a
+   lesson reads as a stack of things you can open rather than one slab. */
 .hsk__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hsk__head, .hsk__part {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+}
+
+/* Animating to content height: 0fr -> 1fr resolves to the real height, so no
+   magic max-height that clips long lessons or stalls short ones. The child
+   needs overflow:hidden + min-height:0 for the row to actually compress. */
+.hsk__parts-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s ease;
+}
+.hsk__item--open .hsk__parts-wrap { grid-template-rows: 1fr; }
+.hsk__parts-wrap > .hsk__parts { overflow: hidden; min-height: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hsk__parts-wrap { transition: none; }
 }
 
 .hsk__head {
@@ -13179,15 +13201,15 @@ body {
    aligned the rows with the title but squeezed them into a narrow column with
    a dead gutter beside it — the parts are the content here, so they get the
    card's full width. */
-.hsk__parts { padding: 0 14px 12px; display: flex; flex-direction: column; gap: 6px; }
+/* Padding-top only inside the animated area, so a closed lesson collapses to
+   nothing rather than to a sliver of padding. */
+.hsk__parts { padding: 8px 0 0; display: flex; flex-direction: column; gap: 8px; }
 
 .hsk__part {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
-  border-radius: 6px;
-  background: #f7f7f7;
+  padding: 14px 16px;
   text-decoration: none;
   min-height: 44px;
 }
