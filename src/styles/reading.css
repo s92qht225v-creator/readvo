@@ -13406,7 +13406,10 @@ body {
   line-height: 1.45;
   color: #666;
   font-style: italic;
-  text-align: center;
+  /* Left-aligned: a centred paragraph gives every line a different starting
+     point, so the eye hunts for the start of each one. */
+  text-align: left;
+  width: 100%;
 }
 
 /* Selected language in the ⋮ menu's Til row. */
