@@ -870,10 +870,10 @@
       "slug": "chabuduo-vs-jihu",
       "title": "差不多 / 几乎",
       "pinyin": "chàbuduō / jīhū",
-      "label": "语法",
-      "labelTranslation": "Grammatika",
-      "labelTranslation_ru": "Грамматика",
-      "labelTranslation_en": "Grammar",
+      "label": "比一比",
+      "labelTranslation": "Taqqoslash",
+      "labelTranslation_ru": "Сравнение",
+      "labelTranslation_en": "Compare",
       "blocks": [
         {
           "type": "h",

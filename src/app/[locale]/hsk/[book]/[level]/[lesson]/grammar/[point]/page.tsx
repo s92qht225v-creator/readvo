@@ -26,7 +26,11 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   const { locale, book, level, lesson, point } = await params;
   const found = getHskGrammar(book, level, lesson, point);
   if (!found) return {};
-  const label = ({ uz: 'grammatika', ru: 'грамматика', en: 'grammar' } as Record<string, string>)[locale] || 'grammar';
+  // The point's own label — not every page under /grammar/ is 语法; 比一比
+  // comparison sections live here too and shouldn't be titled "grammar".
+  const label = (locale === 'ru' ? found.point.labelTranslation_ru
+    : locale === 'en' ? found.point.labelTranslation_en
+    : found.point.labelTranslation) || found.point.labelTranslation;
   return {
     title: `${found.point.title} — HSK ${level} ${label}`,
     description: `${found.lesson.bookTitle} HSK ${level}, ${found.lesson.unit}: ${found.point.title} (${found.point.pinyin})`,
