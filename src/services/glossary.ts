@@ -78,8 +78,19 @@ export async function resolveVocab(refs: VocabRef[]): Promise<VocabItem[]> {
     if (candidates.length === 1 && !wantPy) entry = candidates[0];
     else if (wantPy) entry = candidates.find((c) => normPy(c.py) === normPy(wantPy));
     else entry = undefined; // ambiguous bare ref: skip (validation catches authoring errors)
-    if (!entry) continue;
-    const o: { uz?: string; ru?: string; en?: string } = typeof ref === 'string' ? {} : ref;
+    const o: { py?: string; uz?: string; ru?: string; en?: string } = typeof ref === 'string' ? {} : ref;
+    if (!entry) {
+      // No glossary row. A SELF-CONTAINED ref — one that carries its own pinyin
+      // and at least an Uzbek gloss — has everything the Words tab needs, so
+      // render it rather than silently dropping authored content.
+      //
+      // Bare and partial refs still drop: that is the guard against typos, and
+      // it only works because such a ref genuinely lacks the data to render.
+      // Prefer adding the word to the glossary anyway — that is what makes it
+      // reusable across dialogues, and editable without a deploy.
+      if (o.py && o.uz) out.push({ zh, py: o.py, uz: o.uz, ru: o.ru ?? '', en: o.en ?? '' });
+      continue;
+    }
     out.push({
       zh: entry.zh,
       py: entry.py,
