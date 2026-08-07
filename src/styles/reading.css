@@ -1400,9 +1400,6 @@ body {
   /* Gap is overridden to 0 below when pinyin is off so character spacing
      stays natural without ruby labels overhead. */
   column-gap: 0.18em;
-  /* Breathing room between wrapped rows. Focus mode's line-height is set to
-     land on the same total — keep the two in step if this changes. */
-  row-gap: 8px;
 }
 
 /* When pinyin is hidden, collapse the inter-character gap so CJK rendering
@@ -1982,10 +1979,11 @@ body {
      views doesn't re-set where lines start or how far apart they sit. */
   text-align: left;
   font-size: 1.5em;
-  /* Matches the Dialog tab's row rhythm (was 108px against its 70). Expressed
-     as a multiple of the 36px type so the A-/A+ control keeps both in step —
-     if .dr-line-chars' row-gap changes, this needs to move with it. */
-  line-height: 2.17;
+  /* Focus mode only — the Dialog tab's rhythm is deliberately left alone.
+     Started at 3 (108px against the dialogue's 70), came down to 1.95 to match
+     it, then up to 2.2 for a little more air on a screen showing one line.
+     A multiple of the 36px type, so A-/A+ scales it. */
+  line-height: 2.2;
   /* Drives the focus card's height (its only consumer) — the line stays
      vertically centred inside it. */
   min-height: 48vh;
