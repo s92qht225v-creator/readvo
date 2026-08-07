@@ -1,0 +1,671 @@
+{
+  "book": "standard-course",
+  "bookTitle": "HSK Standard Course",
+  "level": 4,
+  "volume": "上",
+  "unit": 8,
+  "slug": "no-shortage-of-beauty",
+  "title": "生活中不缺少美",
+  "pinyin": "Shēnghuó zhōng bù quēshǎo měi",
+  "titleTranslation": "Hayotda go'zallik yetishmaydi degani emas",
+  "titleTranslation_ru": "В жизни не недостаёт красоты",
+  "titleTranslation_en": "Life is not short of beauty",
+  "dateAdded": "2026-08-07",
+  "texts": [
+    {
+      "id": "hsk4-l8-text-1",
+      "slug": "text-1",
+      "label": "课文一",
+      "labelTranslation": "Matn 1",
+      "labelTranslation_ru": "Текст 1",
+      "labelTranslation_en": "Text 1",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "巧克力",
+          "py": "qiǎokèlì",
+          "uz": "shokolad",
+          "ru": "шоколад",
+          "en": "chocolate"
+        },
+        {
+          "zh": "亲戚",
+          "py": "qīnqi",
+          "uz": "qarindosh",
+          "ru": "родственник",
+          "en": "relative"
+        },
+        {
+          "zh": "伤心",
+          "py": "shāngxīn",
+          "uz": "xafa bo'lmoq, ko'ngli og'rimoq",
+          "ru": "огорчаться, печалиться",
+          "en": "to be sad, heartbroken"
+        },
+        {
+          "zh": "使",
+          "py": "shǐ",
+          "uz": "… qildirmoq, sabab bo'lmoq",
+          "ru": "заставлять, делать так, что…",
+          "en": "to make, to cause"
+        },
+        {
+          "zh": "心情",
+          "py": "xīnqíng",
+          "uz": "kayfiyat",
+          "ru": "настроение",
+          "en": "mood"
+        },
+        {
+          "zh": "愉快",
+          "py": "yúkuài",
+          "uz": "xushchaqchaq, quvonchli",
+          "ru": "радостный, приятный",
+          "en": "cheerful, pleasant"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l8-text-1-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l8-text-1-s1",
+              "text_original": "这种巧克力味道不错，你在哪儿买的？",
+              "pinyin": "Zhè zhǒng qiǎokèlì wèidào bùcuò, nǐ zài nǎr mǎi de?",
+              "text_translation": "Bu shokoladning ta'mi yaxshi ekan. Qayerdan olding?",
+              "text_translation_ru": "У этого шоколада неплохой вкус. Где ты его купил?",
+              "text_translation_en": "This chocolate tastes good. Where did you buy it?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-1-s2",
+              "text_original": "不是我买的，是我女儿给我从国外带回来的礼物。",
+              "pinyin": "Bùshì wǒ mǎi de, shì wǒ nǚ'ér gěi wǒ cóng guówài dài huílái de lǐwù.",
+              "text_translation": "Men olganim yo'q — qizim chet eldan olib kelgan sovg'asi.",
+              "text_translation_ru": "Я его не покупал — это подарок, который дочь привезла мне из-за границы.",
+              "text_translation_en": "I didn't buy it — it's a present my daughter brought me from abroad.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-1-s3",
+              "text_original": "很多人出国后常常会买外国的巧克力，回来送给亲戚朋友。",
+              "pinyin": "Hěn duō rén chūguó hòu chángcháng huì mǎi wàiguó de qiǎokèlì, huílái sòng gěi qīnqi péngyou.",
+              "text_translation": "Ko'p odam chet elga chiqqanda o'sha yerdagi shokoladdan olib, qaytgach qarindosh-do'stlariga sovg'a qiladi.",
+              "text_translation_ru": "Многие, съездив за границу, покупают там шоколад и по возвращении дарят его родственникам и друзьям.",
+              "text_translation_en": "A lot of people buy foreign chocolate when they travel and give it to relatives and friends when they get back.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-1-s4",
+              "text_original": "是啊，因为很多人都爱吃巧克力，尤其是女性。",
+              "pinyin": "Shì a, yīnwèi hěn duō rén dōu ài chī qiǎokèlì, yóuqí shì nǚxìng.",
+              "text_translation": "Ha, chunki ko'pchilik shokoladni yaxshi ko'radi, ayniqsa ayollar.",
+              "text_translation_ru": "Да, ведь шоколад любят очень многие, особенно женщины.",
+              "text_translation_en": "Yes — a lot of people love chocolate, women especially.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-1-s5",
+              "text_original": "这是为什么呢？",
+              "pinyin": "Zhè shì wèishénme ne?",
+              "text_translation": "Bu nega shunday?",
+              "text_translation_ru": "А почему так?",
+              "text_translation_en": "Why is that?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-1-s6",
+              "text_original": "巧克力大多是甜的，而很多女性都喜欢吃甜的。",
+              "pinyin": "Qiǎokèlì dàduō shì tián de, ér hěn duō nǚxìng dōu xǐhuan chī tián de.",
+              "text_translation": "Shokolad ko'pincha shirin bo'ladi, ko'p ayollar esa shirinlikni yaxshi ko'radi.",
+              "text_translation_ru": "Шоколад в большинстве своём сладкий, а многие женщины любят сладкое.",
+              "text_translation_en": "Most chocolate is sweet, and a lot of women have a sweet tooth.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-1-s7",
+              "text_original": "而且，听说伤心难过的时候吃块儿巧克力，还能使人的心情变得愉快。",
+              "pinyin": "Érqiě, tīngshuō shāngxīn nánguò de shíhou chī kuàir qiǎokèlì, hái néng shǐ rén de xīnqíng biàn de yúkuài.",
+              "text_translation": "Bundan tashqari, eshitishimcha, xafa bo'lgan paytda bir bo'lak shokolad yeyish kayfiyatni ko'taradi ham.",
+              "text_translation_ru": "К тому же, говорят, если съесть кусочек шоколада, когда грустно, настроение поднимается.",
+              "text_translation_en": "Besides, they say a piece of chocolate when you're feeling low can lift your mood.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l8-text-2",
+      "slug": "text-2",
+      "label": "课文二",
+      "labelTranslation": "Matn 2",
+      "labelTranslation_ru": "Текст 2",
+      "labelTranslation_en": "Text 2",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "景色",
+          "py": "jǐngsè",
+          "uz": "manzara",
+          "ru": "пейзаж, вид",
+          "en": "scenery, view"
+        },
+        {
+          "zh": "放松",
+          "py": "fàngsōng",
+          "uz": "bo'shashmoq, dam olmoq",
+          "ru": "расслабляться",
+          "en": "to relax"
+        },
+        {
+          "zh": "压力",
+          "py": "yālì",
+          "uz": "bosim, ruhiy yuk",
+          "ru": "давление, нагрузка",
+          "en": "pressure, stress"
+        },
+        {
+          "zh": "回忆",
+          "py": "huíyì",
+          "uz": "eslamoq; xotira",
+          "ru": "вспоминать; воспоминание",
+          "en": "to recall; memory"
+        },
+        {
+          "zh": "发生",
+          "py": "fāshēng",
+          "uz": "sodir bo'lmoq",
+          "ru": "происходить, случаться",
+          "en": "to happen, to occur"
+        },
+        {
+          "zh": "成为",
+          "py": "chéngwéi",
+          "uz": "… bo'lmoq, aylanmoq",
+          "ru": "становиться",
+          "en": "to become"
+        },
+        {
+          "zh": "只要",
+          "py": "zhǐyào",
+          "uz": "faqat … bo'lsa bas",
+          "ru": "стоит только…, если только",
+          "en": "as long as, so long as"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l8-text-2-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l8-text-2-s1",
+              "text_original": "这里的景色真美，空气也好。",
+              "pinyin": "Zhèlǐ de jǐngsè zhēn měi, kōngqì yě hǎo.",
+              "text_translation": "Bu yerning manzarasi juda go'zal, havosi ham yaxshi.",
+              "text_translation_ru": "Здесь очень красивый вид, и воздух хороший.",
+              "text_translation_en": "The scenery here is lovely, and the air is good too.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-2-s2",
+              "text_original": "怎么样，心情好些了吗？",
+              "pinyin": "Zěnmeyàng, xīnqíng hǎo xiē le ma?",
+              "text_translation": "Xo'sh, kayfiyating biroz ko'tarildimi?",
+              "text_translation_ru": "Ну как, настроение немного получше?",
+              "text_translation_en": "Well, is your mood a bit better?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-2-s3",
+              "text_original": "好多了，上次足球比赛后，好久都没这么放松了。",
+              "pinyin": "Hǎo duō le, shàng cì zúqiú bǐsài hòu, hǎojiǔ dōu méi zhème fàngsōng le.",
+              "text_translation": "Ancha yaxshi. O'tgan futbol o'yinidan keyin uzoq vaqt bunchalik bo'shashmagandim.",
+              "text_translation_ru": "Гораздо лучше. После прошлого футбольного матча я давно так не расслаблялся.",
+              "text_translation_en": "Much better. I haven't felt this relaxed since the last football match.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-2-s4",
+              "text_original": "你不要有压力，好好儿准备下次比赛就好了。",
+              "pinyin": "Nǐ bùyào yǒu yālì, hǎohāor zhǔnbèi xià cì bǐsài jiù hǎo le.",
+              "text_translation": "O'zingga bosim o'tkazma — keyingi o'yinga yaxshilab tayyorlansang bo'ldi.",
+              "text_translation_ru": "Не дави на себя — просто как следует подготовься к следующему матчу.",
+              "text_translation_en": "Don't put pressure on yourself — just prepare properly for the next match.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-2-s5",
+              "text_original": "这段时间我总是一个人坐在房间里回忆那次比赛。",
+              "pinyin": "Zhè duàn shíjiān wǒ zǒngshì yīgè rén zuò zài fángjiān lǐ huíyì nà cì bǐsài.",
+              "text_translation": "Shu kunlarda men doim xonada yolg'iz o'tirib o'sha o'yinni eslayman.",
+              "text_translation_ru": "Всё это время я постоянно сижу один в комнате и вспоминаю тот матч.",
+              "text_translation_en": "All this time I've been sitting alone in my room going over that match.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-2-s6",
+              "text_original": "如果我们能再努力一点儿，就一定会多进一个球。",
+              "pinyin": "Rúguǒ wǒmen néng zài nǔlì yìdiǎnr, jiù yīdìng huì duō jìn yīgè qiú.",
+              "text_translation": "Agar bir oz ko'proq harakat qilganimizda, albatta yana bitta gol urardik.",
+              "text_translation_ru": "Если бы мы постарались чуть больше, то наверняка забили бы ещё один гол.",
+              "text_translation_en": "If we'd tried just a bit harder, we'd certainly have scored one more goal.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-2-s7",
+              "text_original": "事情已经发生了，过去的就让它成为过去吧。",
+              "pinyin": "Shìqing yǐjīng fāshēng le, guòqù de jiù ràng tā chéngwéi guòqù ba.",
+              "text_translation": "Bo'lar ish bo'ldi. O'tgan narsa o'tmish bo'lib qolaversin.",
+              "text_translation_ru": "Что случилось, то случилось. Пусть прошлое останется прошлым.",
+              "text_translation_en": "What's done is done. Let the past be the past.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-2-s8",
+              "text_original": "只要这次你好好儿准备，一定能把比赛踢好。",
+              "pinyin": "Zhǐyào zhè cì nǐ hǎohāor zhǔnbèi, yīdìng néng bǎ bǐsài tī hǎo.",
+              "text_translation": "Bu safar yaxshilab tayyorlansang bas — o'yinni albatta yaxshi o'ynaysan.",
+              "text_translation_ru": "Стоит тебе на этот раз как следует подготовиться — и матч ты обязательно отыграешь хорошо.",
+              "text_translation_en": "As long as you prepare properly this time, you're sure to play the match well.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l8-text-3",
+      "slug": "text-3",
+      "label": "课文三",
+      "labelTranslation": "Matn 3",
+      "labelTranslation_ru": "Текст 3",
+      "labelTranslation_en": "Text 3",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦",
+        "B": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "师傅",
+          "py": "shīfu",
+          "uz": "usta (haydovchi, hunarmandga murojaat)",
+          "ru": "мастер (обращение к водителю, рабочему)",
+          "en": "master (address to a driver or workman)"
+        },
+        {
+          "zh": "大使馆",
+          "py": "dàshǐguǎn",
+          "uz": "elchixona",
+          "ru": "посольство",
+          "en": "embassy"
+        },
+        {
+          "zh": "堵车",
+          "py": "dǔchē",
+          "uz": "tirbandlik",
+          "ru": "пробка на дороге",
+          "en": "traffic jam"
+        },
+        {
+          "zh": "距离",
+          "py": "jùlí",
+          "uz": "masofa",
+          "ru": "расстояние",
+          "en": "distance"
+        },
+        {
+          "zh": "耐心",
+          "py": "nàixīn",
+          "uz": "sabr",
+          "ru": "терпение",
+          "en": "patience"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l8-text-3-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l8-text-3-s1",
+              "text_original": "师傅，我去大使馆，你是不是走错了？",
+              "pinyin": "Shīfu, wǒ qù dàshǐguǎn, nǐ shì bùshì zǒu cuò le?",
+              "text_translation": "Usta, men elchixonaga ketyapman — noto'g'ri yo'ldan ketmadingizmi?",
+              "text_translation_ru": "Мастер, мне в посольство — вы, случайно, не свернули не туда?",
+              "text_translation_en": "Excuse me, I'm going to the embassy — have you taken a wrong turn?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-3-s2",
+              "text_original": "现在是上班时间，前面有点儿堵车，我们走另外一条路，距离差不多。",
+              "pinyin": "Xiànzài shì shàngbān shíjiān, qiánmiàn yǒudiǎnr dǔchē, wǒmen zǒu lìngwài yī tiáo lù, jùlí chàbuduō.",
+              "text_translation": "Hozir ish vaqti, oldinda biroz tirbandlik bor. Boshqa yo'ldan ketamiz — masofasi deyarli bir xil.",
+              "text_translation_ru": "Сейчас час пик, впереди небольшая пробка. Поедем другой дорогой — расстояние примерно то же.",
+              "text_translation_en": "It's rush hour and there's a bit of a jam ahead. We'll take another road — the distance is about the same.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-3-s3",
+              "text_original": "那就好，堵车浪费时间，遇到堵车，心情也“堵”。",
+              "pinyin": "Nà jiù hǎo, dǔchē làngfèi shíjiān, yùdào dǔchē, xīnqíng yě dǔ.",
+              "text_translation": "Yaxshi bo'ldi. Tirbandlik vaqtni yeydi — tirbandlikka tushsang, kayfiyat ham «tiqilib» qoladi.",
+              "text_translation_ru": "Вот и хорошо. Пробка — это потеря времени; попадёшь в пробку — и настроение тоже «встаёт».",
+              "text_translation_en": "Good. Traffic jams waste time — and when you're stuck in one, your mood gets “jammed” too.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-3-s4",
+              "text_original": "可不是！",
+              "pinyin": "Kě bùshì!",
+              "text_translation": "Shundaymi-a!",
+              "text_translation_ru": "Ещё бы!",
+              "text_translation_en": "Isn't that the truth!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-3-s5",
+              "text_original": "上班堵车怕迟到，下班堵车怕回家晚。",
+              "pinyin": "Shàngbān dǔchē pà chídào, xiàbān dǔchē pà huí jiā wǎn.",
+              "text_translation": "Ishga ketayotganda tirbandlik bo'lsa kechikishdan qo'rqasan, ishdan qaytayotganda esa uyga kech borishdan.",
+              "text_translation_ru": "Утром в пробке боишься опоздать на работу, вечером — поздно вернуться домой.",
+              "text_translation_en": "In the morning jam you're afraid of being late for work; in the evening one, of getting home late.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-3-s6",
+              "text_original": "每天在马路上开车，要想不遇到堵车，还真难。",
+              "pinyin": "Měitiān zài mǎlù shàng kāichē, yào xiǎng bù yùdào dǔchē, hái zhēn nán.",
+              "text_translation": "Har kuni yo'lda mashina haydab, tirbandlikka duch kelmaslik — rostdan ham qiyin.",
+              "text_translation_ru": "Каждый день за рулём — и не попасть в пробку по-настоящему трудно.",
+              "text_translation_en": "Driving every day and never hitting a jam — that really is hard.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-3-s7",
+              "text_original": "一遇到堵车，人们就容易变得没有耐心。",
+              "pinyin": "Yī yùdào dǔchē, rénmen jiù róngyì biàn de méiyǒu nàixīn.",
+              "text_translation": "Tirbandlikka tushishi bilan odamlar tez sabrini yo'qotadi.",
+              "text_translation_ru": "Стоит попасть в пробку — и люди быстро теряют терпение.",
+              "text_translation_en": "The moment people hit a jam, they easily lose their patience.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-3-s8",
+              "text_original": "长期这样，还会影响脾气甚至性格。",
+              "pinyin": "Chángqī zhèyàng, hái huì yǐngxiǎng píqi shènzhì xìnggé.",
+              "text_translation": "Uzoq vaqt shunday bo'lsa, bu fe'l-atvorga, hatto xarakterga ham ta'sir qiladi.",
+              "text_translation_ru": "Если так продолжается долго, это влияет на характер и даже на нрав.",
+              "text_translation_en": "Over time that affects your temper, even your character.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-3-s9",
+              "text_original": "但是您的心情为什么这么好呢？",
+              "pinyin": "Dànshì nín de xīnqíng wèishénme zhème hǎo ne?",
+              "text_translation": "Lekin sizning kayfiyatingiz nega bunchalik yaxshi?",
+              "text_translation_ru": "Но почему же у вас такое хорошее настроение?",
+              "text_translation_en": "But why is your mood so good?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-3-s10",
+              "text_original": "我们改变不了堵车，但是可以试着改变自己的心情。",
+              "pinyin": "Wǒmen gǎibiàn bùliǎo dǔchē, dànshì kěyǐ shìzhe gǎibiàn zìjǐ de xīnqíng.",
+              "text_translation": "Biz tirbandlikni o'zgartira olmaymiz, lekin o'z kayfiyatimizni o'zgartirishga urinib ko'rsak bo'ladi.",
+              "text_translation_ru": "Пробку мы изменить не можем, но можем попробовать изменить своё настроение.",
+              "text_translation_en": "We can't change the traffic, but we can try to change our own mood.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l8-text-3-s11",
+              "text_original": "堵车时正好可以休息一下，还可以听听自己喜欢的音乐。",
+              "pinyin": "Dǔchē shí zhènghǎo kěyǐ xiūxi yīxià, hái kěyǐ tīngting zìjǐ xǐhuan de yīnyuè.",
+              "text_translation": "Tirbandlikda turganda aynan dam olsa bo'ladi, o'zing yoqtirgan musiqani ham tinglaysan.",
+              "text_translation_ru": "В пробке как раз можно передохнуть, да ещё и послушать любимую музыку.",
+              "text_translation_en": "A jam is just the moment to take a break — and to listen to music you like.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l8-text-4",
+      "slug": "text-4",
+      "label": "课文四",
+      "labelTranslation": "Matn 4",
+      "labelTranslation_ru": "Текст 4",
+      "labelTranslation_en": "Text 4",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "生命",
+          "py": "shēngmìng",
+          "uz": "hayot, jon",
+          "ru": "жизнь",
+          "en": "life"
+        },
+        {
+          "zh": "缺少",
+          "py": "quēshǎo",
+          "uz": "yetishmaslik",
+          "ru": "недоставать, не хватать",
+          "en": "to lack, to be short of"
+        },
+        {
+          "zh": "到处",
+          "py": "dàochù",
+          "uz": "hamma joyda",
+          "ru": "повсюду",
+          "en": "everywhere"
+        },
+        {
+          "zh": "态度",
+          "py": "tàidù",
+          "uz": "munosabat, yondashuv",
+          "ru": "отношение, позиция",
+          "en": "attitude"
+        },
+        {
+          "zh": "因此",
+          "py": "yīncǐ",
+          "uz": "shuning uchun",
+          "ru": "поэтому",
+          "en": "therefore, for this reason"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l8-text-4-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l8-text-4-s1",
+              "text_original": "草绿了，那是生命的颜色；花开了，那是大自然的礼物。",
+              "pinyin": "Cǎo lǜ le, nà shì shēngmìng de yánsè; huā kāi le, nà shì dàzìrán de lǐwù.",
+              "text_translation": "O't ko'kardi — bu hayotning rangi; gul ochildi — bu tabiatning sovg'asi.",
+              "text_translation_ru": "Трава зазеленела — это цвет жизни; цветы раскрылись — это подарок природы.",
+              "text_translation_en": "The grass has turned green — that is the colour of life; the flowers have opened — that is nature's gift.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-4-s2",
+              "text_original": "生活中不缺少美，缺少的是发现美的眼睛。",
+              "pinyin": "Shēnghuó zhōng bù quēshǎo měi, quēshǎo de shì fāxiàn měi de yǎnjing.",
+              "text_translation": "Hayotda go'zallik yetishmaydi degani emas — yetishmaydigani go'zallikni ko'ra oladigan ko'z.",
+              "text_translation_ru": "В жизни не недостаёт красоты — недостаёт глаз, способных её увидеть.",
+              "text_translation_en": "Life is not short of beauty — what is short is the eye that sees it.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-4-s3",
+              "text_original": "只要有心，生活中的美到处都是。",
+              "pinyin": "Zhǐyào yǒu xīn, shēnghuó zhōng de měi dàochù dōu shì.",
+              "text_translation": "Ko'ngil qo'ysang bas — hayotdagi go'zallik hamma joyda.",
+              "text_translation_ru": "Стоит только захотеть — и красота в жизни повсюду.",
+              "text_translation_en": "So long as you care to look, the beauty in life is everywhere.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-4-s4",
+              "text_original": "生活的态度要自己选择，因此，遇到烦恼时，你应该想一些办法让自己从不高兴的心情中走出来。",
+              "pinyin": "Shēnghuó de tàidù yào zìjǐ xuǎnzé, yīncǐ, yùdào fánnǎo shí, nǐ yīnggāi xiǎng yīxiē bànfǎ ràng zìjǐ cóng bù gāoxìng de xīnqíng zhōng zǒu chūlái.",
+              "text_translation": "Hayotga munosabatni o'zing tanlaysan. Shuning uchun tashvishga duch kelganingda, o'zingni tushkun kayfiyatdan olib chiqadigan yo'l topishing kerak.",
+              "text_translation_ru": "Отношение к жизни выбираешь ты сам. Поэтому, столкнувшись с огорчением, стоит поискать способ выбраться из скверного настроения.",
+              "text_translation_en": "You choose your own attitude to life. So when trouble comes, you should find some way to pull yourself out of a low mood.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-4-s5",
+              "text_original": "窗外是什么样子，我们无法改变，但我们可以选择站在哪个窗户前。",
+              "pinyin": "Chuāng wài shì shénme yàngzi, wǒmen wúfǎ gǎibiàn, dàn wǒmen kěyǐ xuǎnzé zhàn zài nǎge chuānghu qián.",
+              "text_translation": "Deraza ortida nima borligini o'zgartira olmaymiz, lekin qaysi deraza oldida turishni tanlay olamiz.",
+              "text_translation_ru": "Мы не можем изменить то, что за окном, но можем выбрать, у какого окна встать.",
+              "text_translation_en": "We cannot change what lies outside the window, but we can choose which window to stand at.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-4-s6",
+              "text_original": "选择一个能够带给我们快乐的窗户，这样才能选对心情，选对生活的态度。",
+              "pinyin": "Xuǎnzé yīgè nénggòu dài gěi wǒmen kuàilè de chuānghu, zhèyàng cái néng xuǎn duì xīnqíng, xuǎn duì shēnghuó de tàidù.",
+              "text_translation": "Bizga quvonch keltiradigan derazani tanlaganimizdagina kayfiyatni ham, hayotga munosabatni ham to'g'ri tanlagan bo'lamiz.",
+              "text_translation_ru": "Только выбрав окно, которое приносит радость, мы верно выберем и настроение, и отношение к жизни.",
+              "text_translation_en": "Only by choosing a window that brings us joy do we choose the right mood — and the right attitude to life.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l8-text-5",
+      "slug": "text-5",
+      "label": "课文五",
+      "labelTranslation": "Matn 5",
+      "labelTranslation_ru": "Текст 5",
+      "labelTranslation_en": "Text 5",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "科学",
+          "py": "kēxué",
+          "uz": "fan; ilmiy",
+          "ru": "наука; научный",
+          "en": "science; scientific"
+        },
+        {
+          "zh": "证明",
+          "py": "zhèngmíng",
+          "uz": "isbotlamoq",
+          "ru": "доказывать",
+          "en": "to prove, to show"
+        },
+        {
+          "zh": "往往",
+          "py": "wǎngwǎng",
+          "uz": "ko'pincha",
+          "ru": "зачастую, как правило",
+          "en": "often, as a rule"
+        },
+        {
+          "zh": "阳光",
+          "py": "yángguāng",
+          "uz": "quyosh nuri; ochiq, quvnoq",
+          "ru": "солнечный свет; светлый, жизнерадостный",
+          "en": "sunshine; sunny, upbeat"
+        },
+        {
+          "zh": "积极",
+          "py": "jījí",
+          "uz": "faol, ijobiy",
+          "ru": "активный, позитивный",
+          "en": "active, positive"
+        },
+        {
+          "zh": "特点",
+          "py": "tèdiǎn",
+          "uz": "o'ziga xoslik, xususiyat",
+          "ru": "особенность, характерная черта",
+          "en": "characteristic, feature"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l8-text-5-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l8-text-5-s1",
+              "text_original": "科学研究证明，女孩子对衣服颜色的选择往往与她们的性格有关。",
+              "pinyin": "Kēxué yánjiū zhèngmíng, nǚháizi duì yīfu yánsè de xuǎnzé wǎngwǎng yǔ tāmen de xìnggé yǒuguān.",
+              "text_translation": "Ilmiy tadqiqotlar shuni ko'rsatadiki, qizlarning kiyim rangini tanlashi ko'pincha ularning xarakteri bilan bog'liq.",
+              "text_translation_ru": "Научные исследования показывают, что выбор цвета одежды у девушек зачастую связан с их характером.",
+              "text_translation_en": "Scientific research shows that the colours girls choose for their clothes are often linked to their character.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-5-s2",
+              "text_original": "喜欢穿白色衣服的女孩子性格比较阳光，生活态度积极向上是她们的共同特点；而喜欢穿红色衣服的女孩子性格比较浪漫。",
+              "pinyin": "Xǐhuan chuān báisè yīfu de nǚháizi xìnggé bǐjiào yángguāng, shēnghuó tàidù jījí xiàngshàng shì tāmen de gòngtóng tèdiǎn; ér xǐhuan chuān hóngsè yīfu de nǚháizi xìnggé bǐjiào làngmàn.",
+              "text_translation": "Oq kiyim kiyishni yoqtiradigan qizlarning tabiati ancha ochiq bo'ladi; hayotga faol va ijobiy qarash ularning umumiy xususiyati. Qizil kiyim kiyadigan qizlar esa ko'proq romantik tabiatli bo'ladi.",
+              "text_translation_ru": "У девушек, которые любят носить белое, характер довольно светлый; активное и позитивное отношение к жизни — их общая черта. А те, кто любит красное, обычно более романтичны.",
+              "text_translation_en": "Girls who like to wear white tend to have a sunny character; an active, upbeat outlook is what they share. Girls who prefer red tend to be more romantic.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-5-s3",
+              "text_original": "颜色也会影响人的心情，不同的颜色会给我们带来不同的感情变化。",
+              "pinyin": "Yánsè yě huì yǐngxiǎng rén de xīnqíng, bùtóng de yánsè huì gěi wǒmen dàilái bùtóng de gǎnqíng biànhuà.",
+              "text_translation": "Rang odamning kayfiyatiga ham ta'sir qiladi — turli ranglar bizda turlicha hissiy o'zgarish uyg'otadi.",
+              "text_translation_ru": "Цвет влияет и на настроение: разные цвета вызывают у нас разные эмоциональные перемены.",
+              "text_translation_en": "Colour also affects mood — different colours bring about different changes in how we feel.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-text-5-s4",
+              "text_original": "红色让人变得热情；黄色和白色让人心情愉快；黑色却容易让人感到伤心；人们在看到蓝色时会觉得很舒服，变得安静下来；绿色让我们的眼睛得到休息。",
+              "pinyin": "Hóngsè ràng rén biàn de rèqíng; huángsè hé báisè ràng rén xīnqíng yúkuài; hēisè què róngyì ràng rén gǎndào shāngxīn; rénmen zài kàndào lánsè shí huì juéde hěn shūfu, biàn de ānjìng xiàlái; lǜsè ràng wǒmen de yǎnjing dédào xiūxi.",
+              "text_translation": "Qizil odamni jo'shqin qiladi; sariq va oq kayfiyatni ko'taradi; qora esa ko'pincha g'amgin qiladi; ko'kni ko'rgan odam o'zini xotirjam his qilib, tinchlanadi; yashil esa ko'zimizga dam beradi.",
+              "text_translation_ru": "Красный делает человека энергичным; жёлтый и белый поднимают настроение; чёрный же нередко навевает грусть; при виде синего человеку становится спокойно и хорошо; а зелёный даёт отдых глазам.",
+              "text_translation_en": "Red makes people lively; yellow and white lift the spirits; black tends to bring sadness; blue makes people feel comfortable and calm; and green gives the eyes a rest.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
