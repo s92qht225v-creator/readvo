@@ -135,6 +135,27 @@ interface DialogueReaderProps {
 
 // ── Main component ─────────────────────────────────────────────────────────
 
+/**
+ * Icons for the two tabs that have one. Same trade the main page makes on
+ * mobile: an inactive tab shows only its icon, the active one only its label.
+ * Tabs with no icon (So'zlar, Mashq) keep their label at all times.
+ *
+ * The speech bubble is the same glyph the Arabic catalog uses for dialogues,
+ * and the pencil the same one PageFooter uses — reused rather than redrawn so
+ * one idea keeps one shape across the app.
+ */
+const TAB_ICONS: Record<string, React.ReactNode> = {
+  dialog: (
+    <svg viewBox="0 0 32 32" width="22" height="22" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinejoin="round" strokeLinecap="round" aria-hidden="true"><path d="M16.003 0.6c-4.118 0-7.979 1.595-10.895 4.51-5.582 5.582-6.013 14.465-1.113 20.541l0.246 0.305-0.18 0.348c-0.674 1.3-1.531 2.253-2.574 2.77v0.002h-0.002c-0.434 0.213-0.67 0.672-0.598 1.148 0.073 0.484 0.43 0.843 0.918 0.922h0.002c0.379 0.060 0.785 0.092 1.205 0.092 1.084 0 3.143-0.215 5.203-1.58l0.297-0.197 0.316 0.166c2.2 1.163 4.67 1.775 7.174 1.775 4.118 0 7.978-1.601 10.887-4.51s4.51-6.77 4.51-10.887-1.601-7.98-4.51-10.889c-2.916-2.922-6.769-4.516-10.887-4.516zM16.003 1.633c3.835 0 7.444 1.498 10.154 4.209s4.207 6.318 4.207 10.152c0 3.828-1.496 7.443-4.207 10.154s-6.32 4.209-10.154 4.209c-2.564 0-5.075-0.682-7.271-1.973v-0.002h-0.002c-0.082-0.049-0.169-0.072-0.262-0.072-0.114 0-0.222 0.036-0.316 0.109h-0.002c-1.621 1.256-3.305 1.645-4.453 1.744l-1.789 0.154 1.338-1.199c0.81-0.726 1.513-1.746 2.088-3.059v-0.002c0.082-0.187 0.051-0.393-0.086-0.545l-0.004-0.004c-5.017-5.664-4.751-14.311 0.607-19.668 2.711-2.71 6.318-4.209 10.152-4.209zM9.378 10.928c-0.296 0-0.525 0.229-0.525 0.525s0.228 0.523 0.525 0.523h13.252c0.298 0 0.523-0.226 0.523-0.523s-0.227-0.525-0.523-0.525zM9.378 15.471c-0.298 0-0.525 0.227-0.525 0.523s0.224 0.518 0.525 0.518h13.252c0.297 0 0.523-0.231 0.523-0.518s-0.23-0.523-0.523-0.523zM9.378 20.012c-0.296 0-0.525 0.229-0.525 0.525 0 0.286 0.229 0.518 0.525 0.518h13.252c0.297 0 0.523-0.231 0.523-0.518 0-0.298-0.227-0.525-0.523-0.525z"/></svg>
+  ),
+  dictation: (
+    <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M12 20h9" />
+      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+    </svg>
+  ),
+};
+
 const TABS = [
   { id: 'dialog', uz: 'Dialog', ru: 'Диалог', en: 'Dialogue' },
   { id: 'vocab', uz: 'So\'zlar', ru: 'Слова', en: 'Words' },
@@ -784,7 +805,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                 {TABS.map(t => (
                   <button
                     key={t.id}
-                    className={`dr-tabs__tab ${activeTab === t.id ? 'dr-tabs__tab--active' : ''}`}
+                    className={`dr-tabs__tab ${TAB_ICONS[t.id] ? 'dr-tabs__tab--icon' : ''} ${activeTab === t.id ? 'dr-tabs__tab--active' : ''}`}
                     onClick={() => {
                       setActiveTab(t.id);
                       if (t.id !== 'dialog') {
@@ -796,7 +817,8 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                     aria-pressed={activeTab === t.id}
                     aria-label={(t as Record<string, string>)[language] ?? t.uz}
                   >
-                    {(t as Record<string, string>)[language] ?? t.uz}
+                    {TAB_ICONS[t.id] && <span className="dr-tabs__icon">{TAB_ICONS[t.id]}</span>}
+                    <span className="dr-tabs__label">{(t as Record<string, string>)[language] ?? t.uz}</span>
                   </button>
                 ))}
                 {(

@@ -13304,6 +13304,16 @@ body {
 
 .dr-nav .dr-more { flex: 0 0 44px; font-size: 20px; line-height: 1; }
 
+/* Tabs that carry an icon swap it for their label when selected — the same
+   trade .lp__tab makes on the catalog. Tabs with no icon (So'zlar, Mashq) are
+   untouched by these rules and keep their label at all times. */
+.dr-tabs__icon { display: none; align-items: center; justify-content: center; }
+.dr-tabs__icon svg { display: block; }
+.dr-tabs__tab--icon .dr-tabs__icon { display: flex; }
+.dr-tabs__tab--icon .dr-tabs__label { display: none; }
+.dr-tabs__tab--icon.dr-tabs__tab--active .dr-tabs__icon { display: none; }
+.dr-tabs__tab--icon.dr-tabs__tab--active .dr-tabs__label { display: inline; }
+
 /* The menu itself. */
 .dr-ctl__item, .dr-ctl__row {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
