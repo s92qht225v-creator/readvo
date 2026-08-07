@@ -530,6 +530,22 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
    * tapping is just "play this line" and moving the page under the reader
    * would be pure annoyance.
    */
+  const trTextRef = useRef<HTMLParagraphElement | null>(null);
+
+  /** What the top bar says: the revealed sentence's translation, else the title. */
+  const barText = useMemo(() => {
+    const active = showTranslation ? allSentences.find(s => s.id === revealedId) : undefined;
+    const whole = active ? trOf(active) : '';
+    // An entry holding several sentences translates only the one that was
+    // tapped; splitAligned falls back to the whole entry when the two sides
+    // don't split evenly, and WHOLE_ENTRY means no single sentence is selected.
+    const segs = active ? splitAligned(active.text_original, whole) : [];
+    const tr = (segs.length && revealedSeg !== WHOLE_ENTRY)
+      ? (segs[Math.min(revealedSeg, segs.length - 1)]?.tr || whole)
+      : whole;
+    return { text: tr || `${meta.title} · ${titleTr}`, isTranslation: !!tr };
+  }, [showTranslation, allSentences, revealedId, revealedSeg, trOf, meta.title, titleTr]);
+
   const pendingScrollRef = useRef<HTMLElement | null>(null);
   const [scrollTick, setScrollTick] = useState(0);
 
@@ -568,6 +584,35 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
       setScrollTick(t => t + 1);
     }
   }, [focusMode, allSentences, units, playSentence, playUnit, showTranslation]);
+
+  /**
+   * Shrink the bar's text until it fits the fixed band.
+   *
+   * The band is a constant height, so on a narrow phone a long translation can
+   * need more lines than it has room for. Rather than clip it or let the box
+   * grow, step the type down — down to 11px, below which it stops being worth
+   * reading and the text just wraps.
+   *
+   * Deliberately in px and set here rather than inherited: the A-/A+ control
+   * scales .dialogue-reader, and the translation is chrome, not content — it
+   * should not resize with the Chinese.
+   */
+  useEffect(() => {
+    const el = trTextRef.current, box = trBarRef.current;
+    if (!el || !box) return;
+    const fit = () => {
+      let px = 15;
+      el.style.fontSize = `${px}px`;
+      const room = box.clientHeight - 24;   // the bar's 12px top/bottom padding
+      while (px > 11 && el.scrollHeight > room) {
+        px -= 0.5;
+        el.style.fontSize = `${px}px`;
+      }
+    };
+    fit();
+    window.addEventListener('resize', fit);
+    return () => window.removeEventListener('resize', fit);
+  }, [barText, activeTab, focusMode]);
 
   // Runs once the bar is in the DOM, so the geometry is final. Deliberately an
   // effect rather than requestAnimationFrame: rAF is starved whenever the tab
@@ -827,24 +872,11 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
 
                     Fixed height in every state so the page never shifts, and
                     never blank — with no line selected it shows the title. */}
-                {!focusMode && (() => {
-                  const active = showTranslation ? allSentences.find(s => s.id === revealedId) : undefined;
-                  const whole = active ? trOf(active) : '';
-                  // An entry holding several sentences translates only the
-                  // one that was tapped. splitAligned falls back to the
-                  // whole entry when the two sides don't split evenly.
-                  const segs = active ? splitAligned(active.text_original, whole) : [];
-                  // WHOLE_ENTRY (no single sentence selected) falls through
-                  // to the entry's full translation.
-                  const tr = (segs.length && revealedSeg !== WHOLE_ENTRY)
-                    ? (segs[Math.min(revealedSeg, segs.length - 1)]?.tr || whole)
-                    : whole;
-                  return (
-                    <div className={`dr-trbar${tr ? '' : ' dr-trbar--idle'}`} ref={trBarRef} aria-live="polite">
-                      <p className="dr-trbar__text">{tr || `${meta.title} · ${titleTr}`}</p>
-                    </div>
-                  );
-                })()}
+                {!focusMode && (
+                  <div className={`dr-trbar${barText.isTranslation ? '' : ' dr-trbar--idle'}`} ref={trBarRef} aria-live="polite">
+                    <p className="dr-trbar__text" ref={trTextRef}>{barText.text}</p>
+                  </div>
+                )}
                 <div className={`dr-dialog-body ${audioActive ? 'dr-dialog-body--with-audio' : ''}`}>
                   {focusMode && activeSentence ? (
                     <div className="story__focus">
