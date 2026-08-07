@@ -1,0 +1,796 @@
+{
+  "book": "standard-course",
+  "bookTitle": "HSK Standard Course",
+  "level": 4,
+  "volume": "上",
+  "unit": 9,
+  "slug": "sunshine-after-the-storm",
+  "title": "阳光总在风雨后",
+  "pinyin": "Yángguāng zǒng zài fēngyǔ hòu",
+  "titleTranslation": "Quyosh doim bo'rondan keyin chiqadi",
+  "titleTranslation_ru": "Солнце всегда после дождя и ветра",
+  "titleTranslation_en": "The sun always comes after the storm",
+  "dateAdded": "2026-08-07",
+  "texts": [
+    {
+      "id": "hsk4-l9-text-1",
+      "slug": "text-1",
+      "label": "课文一",
+      "labelTranslation": "Matn 1",
+      "labelTranslation_ru": "Текст 1",
+      "labelTranslation_en": "Text 1",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "饼干",
+          "py": "bǐnggān",
+          "uz": "pechenye",
+          "ru": "печенье",
+          "en": "biscuit, cookie"
+        },
+        {
+          "zh": "难道",
+          "py": "nándào",
+          "uz": "nahotki",
+          "ru": "неужели",
+          "en": "don't tell me…, surely not"
+        },
+        {
+          "zh": "得",
+          "py": "děi",
+          "uz": "kerak, shart",
+          "ru": "должен, нужно",
+          "en": "must, have to"
+        },
+        {
+          "zh": "坚持",
+          "py": "jiānchí",
+          "uz": "qat'iy turmoq, davom ettirmoq",
+          "ru": "упорно продолжать, настаивать",
+          "en": "to persist, to keep at it"
+        },
+        {
+          "zh": "放弃",
+          "py": "fàngqì",
+          "uz": "voz kechmoq",
+          "ru": "отказываться, бросать",
+          "en": "to give up"
+        },
+        {
+          "zh": "主意",
+          "py": "zhǔyi",
+          "uz": "fikr, qaror",
+          "ru": "мысль, решение",
+          "en": "idea, decision"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l9-text-1-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l9-text-1-s1",
+              "text_original": "怎么又买了这么多饼干和巧克力？",
+              "pinyin": "Zěnme yòu mǎi le zhème duō bǐnggān hé qiǎokèlì?",
+              "text_translation": "Nega yana buncha pechenye va shokolad olding?",
+              "text_translation_ru": "Почему ты снова накупила столько печенья и шоколада?",
+              "text_translation_en": "Why have you bought so many biscuits and so much chocolate again?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-1-s2",
+              "text_original": "难道你不减肥了？",
+              "pinyin": "Nándào nǐ bù jiǎnféi le?",
+              "text_translation": "Nahotki endi ozishni tashlagan bo'lsang?",
+              "text_translation_ru": "Неужели ты больше не худеешь?",
+              "text_translation_en": "Don't tell me you've given up on losing weight?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-1-s3",
+              "text_original": "减了一个月都没瘦下来，我实在没有信心了。",
+              "pinyin": "Jiǎn le yī gè yuè dōu méi shòu xiàlái, wǒ shízài méiyǒu xìnxīn le.",
+              "text_translation": "Bir oy urinib ozmadim — rostdan ham ishonchim qolmadi.",
+              "text_translation_ru": "Худею уже месяц и не похудела — у меня, честно говоря, опустились руки.",
+              "text_translation_en": "A whole month of dieting and I haven't got any thinner — I've honestly lost confidence.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l9-text-1-s4",
+              "text_original": "如果你想减肥，就得少吃东西，而且要多运动。",
+              "pinyin": "Rúguǒ nǐ xiǎng jiǎnféi, jiù děi shǎo chī dōngxi, érqiě yào duō yùndòng.",
+              "text_translation": "Ozishni istasang, kam yeyishing va ko'proq harakat qilishing kerak.",
+              "text_translation_ru": "Если хочешь похудеть, нужно меньше есть и больше двигаться.",
+              "text_translation_en": "If you want to lose weight, you have to eat less and exercise more.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-1-s5",
+              "text_original": "我就是这么做的，但这一个月下来，我只轻了一公斤。",
+              "pinyin": "Wǒ jiùshì zhème zuò de, dàn zhè yī gè yuè xiàlái, wǒ zhǐ qīng le yī gōngjīn.",
+              "text_translation": "Men aynan shunday qildim, lekin shu bir oyda atigi bir kilo yo'qotdim.",
+              "text_translation_ru": "Я именно так и делала, но за этот месяц сбросила всего килограмм.",
+              "text_translation_en": "That's exactly what I've been doing, but over the month I've lost just one kilo.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l9-text-1-s6",
+              "text_original": "一个月太短了。",
+              "pinyin": "Yī gè yuè tài duǎn le.",
+              "text_translation": "Bir oy juda qisqa muddat.",
+              "text_translation_ru": "Месяц — это слишком мало.",
+              "text_translation_en": "A month is far too short.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-1-s7",
+              "text_original": "要想减肥成功，只能坚持，才会慢慢有效果。",
+              "pinyin": "Yào xiǎng jiǎnféi chénggōng, zhǐ néng jiānchí, cái huì mànmàn yǒu xiàoguǒ.",
+              "text_translation": "Ozishda muvaffaqiyat qozonmoqchi bo'lsang, yagona yo'l — davom ettirish; natija sekin-asta ko'rinadi.",
+              "text_translation_ru": "Чтобы похудеть, остаётся только не бросать — тогда результат появится постепенно.",
+              "text_translation_en": "If you want to succeed at losing weight, the only way is to keep at it — the results come slowly.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-1-s8",
+              "text_original": "我本来已经打算放弃了，但是你刚才的话让我改变了主意。",
+              "pinyin": "Wǒ běnlái yǐjīng dǎsuàn fàngqì le, dànshì nǐ gāngcái de huà ràng wǒ gǎibiàn le zhǔyi.",
+              "text_translation": "Aslida voz kechmoqchi edim, lekin hozirgi gaping fikrimni o'zgartirdi.",
+              "text_translation_ru": "Я вообще-то уже собиралась бросить, но твои слова заставили меня передумать.",
+              "text_translation_en": "I'd actually decided to give up, but what you just said changed my mind.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l9-text-1-s9",
+              "text_original": "这些饼干和巧克力送给你了。",
+              "pinyin": "Zhèxiē bǐnggān hé qiǎokèlì sòng gěi nǐ le.",
+              "text_translation": "Bu pechenye va shokoladni senga sovg'a qildim.",
+              "text_translation_ru": "Это печенье и шоколад дарю тебе.",
+              "text_translation_en": "These biscuits and this chocolate are yours.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l9-text-2",
+      "slug": "text-2",
+      "label": "课文二",
+      "labelTranslation": "Matn 2",
+      "labelTranslation_ru": "Текст 2",
+      "labelTranslation_en": "Text 2",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦",
+        "B": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "网球",
+          "py": "wǎngqiú",
+          "uz": "tennis",
+          "ru": "теннис",
+          "en": "tennis"
+        },
+        {
+          "zh": "国际",
+          "py": "guójì",
+          "uz": "xalqaro",
+          "ru": "международный",
+          "en": "international"
+        },
+        {
+          "zh": "轻松",
+          "py": "qīngsōng",
+          "uz": "yengil, bemalol",
+          "ru": "лёгкий, непринуждённый",
+          "en": "easy, relaxed"
+        },
+        {
+          "zh": "赢",
+          "py": "yíng",
+          "uz": "yutmoq, g'olib chiqmoq",
+          "ru": "выигрывать",
+          "en": "to win"
+        },
+        {
+          "zh": "随便",
+          "py": "suíbiàn",
+          "uz": "bemalol, o'ylab o'tirmay",
+          "ru": "как попало, не задумываясь",
+          "en": "casually, any old how"
+        },
+        {
+          "zh": "汗",
+          "py": "hàn",
+          "uz": "ter",
+          "ru": "пот",
+          "en": "sweat"
+        },
+        {
+          "zh": "通过",
+          "py": "tōngguò",
+          "uz": "orqali, vositasida",
+          "ru": "посредством, через",
+          "en": "through, by means of"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l9-text-2-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l9-text-2-s1",
+              "text_original": "你网球打得真好，还得过那么多国际大奖！",
+              "pinyin": "Nǐ wǎngqiú dǎ de zhēn hǎo, hái dé guò nàme duō guójì dàjiǎng!",
+              "text_translation": "Sen tennisni juda zo'r o'ynaysan, ustiga shuncha xalqaro mukofot ham olgansan!",
+              "text_translation_ru": "Ты отлично играешь в теннис, да ещё столько международных наград получил!",
+              "text_translation_en": "You play tennis so well — and you've won so many international prizes!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-2-s2",
+              "text_original": "每次看你比赛，感觉你轻轻松松就赢了。",
+              "pinyin": "Měi cì kàn nǐ bǐsài, gǎnjué nǐ qīngqīngsōngsōng jiù yíng le.",
+              "text_translation": "Har safar o'yiningni ko'rganimda, xuddi hech qiynalmay yutayotgandek tuyulasan.",
+              "text_translation_ru": "Каждый раз, когда смотрю твои матчи, кажется, что ты выигрываешь совсем легко.",
+              "text_translation_en": "Every time I watch you play it looks as if you win without the slightest effort.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-2-s3",
+              "text_original": "哪里啊！",
+              "pinyin": "Nǎlǐ a!",
+              "text_translation": "Qayoqda!",
+              "text_translation_ru": "Да что ты!",
+              "text_translation_en": "Hardly!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l9-text-2-s4",
+              "text_original": "那是你没看到我辛苦练习的一面，没有人随随便便就能成功的。",
+              "pinyin": "Nà shì nǐ méi kàndào wǒ xīnkǔ liànxí de yī miàn, méiyǒu rén suísuíbiànbiàn jiù néng chénggōng de.",
+              "text_translation": "Bu — mening mashaqqatli mashqlarimni ko'rmaganing uchun. Hech kim shundoq bemalol muvaffaqiyatga erishmaydi.",
+              "text_translation_ru": "Просто ты не видел, как тяжело я тренируюсь. Никому успех не даётся просто так.",
+              "text_translation_en": "That's because you haven't seen the hard training. Nobody succeeds just like that.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l9-text-2-s5",
+              "text_original": "我从小也对网球感兴趣，但是到现在还是打得不怎么样。",
+              "pinyin": "Wǒ cóngxiǎo yě duì wǎngqiú gǎn xìngqù, dànshì dào xiànzài háishì dǎ de bù zěnmeyàng.",
+              "text_translation": "Men ham bolaligimdan tennisga qiziqaman, lekin hanuzgacha unchalik yaxshi o'ynay olmayman.",
+              "text_translation_ru": "Я тоже с детства увлекаюсь теннисом, но до сих пор играю так себе.",
+              "text_translation_en": "I've been interested in tennis since childhood too, but I still don't play at all well.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-2-s6",
+              "text_original": "你知道吗？",
+              "pinyin": "Nǐ zhīdào ma?",
+              "text_translation": "Bilasanmi?",
+              "text_translation_ru": "Знаешь что?",
+              "text_translation_en": "Do you know what?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l9-text-2-s7",
+              "text_original": "不管春夏秋冬，我练球从来没有休息过一天。",
+              "pinyin": "Bùguǎn chūn xià qiū dōng, wǒ liànqiú cónglái méiyǒu xiūxi guò yī tiān.",
+              "text_translation": "Bahormi, yozmi, kuzmi, qishmi — mashqni bir kun ham tashlaganim yo'q.",
+              "text_translation_ru": "Весна, лето, осень, зима — я ни дня не пропускал тренировок.",
+              "text_translation_en": "Spring, summer, autumn or winter — I have never taken a single day off from practice.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l9-text-2-s8",
+              "text_original": "真是不容易啊！",
+              "pinyin": "Zhēn shì bù róngyì a!",
+              "text_translation": "Rostdan ham oson emas ekan!",
+              "text_translation_ru": "Да, это и правда нелегко!",
+              "text_translation_en": "That really isn't easy!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-2-s9",
+              "text_original": "看来我只看到了你成功时获得的鲜花，却没注意到你成功前流下的汗水。",
+              "pinyin": "Kànlái wǒ zhǐ kàndào le nǐ chénggōng shí huòdé de xiānhuā, què méi zhùyì dào nǐ chénggōng qián liú xià de hànshuǐ.",
+              "text_translation": "Ko'rinishidan men faqat muvaffaqiyatingdagi gullarni ko'rgan ekanman, undan oldingi to'kilgan terni esa payqamabman.",
+              "text_translation_ru": "Похоже, я видел только цветы, которые тебе вручали, но не замечал пота, пролитого до победы.",
+              "text_translation_en": "It seems I only saw the flowers you were given in victory, and never noticed the sweat that came before it.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-2-s10",
+              "text_original": "任何成功都要通过努力才能得到。",
+              "pinyin": "Rènhé chénggōng dōu yào tōngguò nǔlì cái néng dédào.",
+              "text_translation": "Har qanday muvaffaqiyat faqat mehnat orqali qo'lga kiritiladi.",
+              "text_translation_ru": "Любой успех достигается только через труд.",
+              "text_translation_en": "Any success has to be won through effort.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l9-text-2-s11",
+              "text_original": "只要你坚持练习，我相信你也会越打越好的。",
+              "pinyin": "Zhǐyào nǐ jiānchí liànxí, wǒ xiāngxìn nǐ yě huì yuè dǎ yuè hǎo de.",
+              "text_translation": "Mashqni tashlamasang bas — ishonamanki, sen ham tobora yaxshi o'ynaysan.",
+              "text_translation_ru": "Стоит тебе не бросать тренировки — уверен, ты будешь играть всё лучше.",
+              "text_translation_en": "As long as you keep practising, I'm sure you'll play better and better.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l9-text-3",
+      "slug": "text-3",
+      "label": "课文三",
+      "labelTranslation": "Matn 3",
+      "labelTranslation_ru": "Текст 3",
+      "labelTranslation_en": "Text 3",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "篇",
+          "py": "piān",
+          "uz": "dona (maqola, matn uchun sanoq so'zi)",
+          "ru": "штука (счётное слово для статей, текстов)",
+          "en": "measure word for articles and written pieces"
+        },
+        {
+          "zh": "作家",
+          "py": "zuòjiā",
+          "uz": "yozuvchi",
+          "ru": "писатель",
+          "en": "writer, author"
+        },
+        {
+          "zh": "当时",
+          "py": "dāngshí",
+          "uz": "o'sha paytda",
+          "ru": "в то время, тогда",
+          "en": "at that time"
+        },
+        {
+          "zh": "可是",
+          "py": "kěshì",
+          "uz": "lekin",
+          "ru": "но, однако",
+          "en": "but, however"
+        },
+        {
+          "zh": "正确",
+          "py": "zhèngquè",
+          "uz": "to'g'ri",
+          "ru": "правильный, верный",
+          "en": "correct, right"
+        },
+        {
+          "zh": "理想",
+          "py": "lǐxiǎng",
+          "uz": "orzu, ideal",
+          "ru": "мечта, идеал",
+          "en": "ideal, aspiration"
+        },
+        {
+          "zh": "王红",
+          "py": "Wáng Hóng",
+          "uz": "Van Xun (ism)",
+          "ru": "Ван Хун (имя)",
+          "en": "Wang Hong (name)"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l9-text-3-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l9-text-3-s1",
+              "text_original": "你还记得王红吗？",
+              "pinyin": "Nǐ hái jìde Wáng Hóng ma?",
+              "text_translation": "Van Xunni eslaysanmi?",
+              "text_translation_ru": "Ты ещё помнишь Ван Хун?",
+              "text_translation_en": "Do you still remember Wang Hong?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-3-s2",
+              "text_original": "我在报纸上看到一篇关于她的新闻，她现在已经是一个有名的作家了。",
+              "pinyin": "Wǒ zài bàozhǐ shàng kàndào yī piān guānyú tā de xīnwén, tā xiànzài yǐjīng shì yīgè yǒumíng de zuòjiā le.",
+              "text_translation": "Gazetada u haqidagi bir maqolani ko'rdim — u endi mashhur yozuvchi bo'libdi.",
+              "text_translation_ru": "Я видел в газете статью о ней — она теперь известная писательница.",
+              "text_translation_en": "I saw a piece about her in the paper — she's a well-known writer now.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-3-s3",
+              "text_original": "听说她毕业后放弃了律师的工作，开始专门写小说，没想到她竟然成功了。",
+              "pinyin": "Tīngshuō tā bìyè hòu fàngqì le lǜshī de gōngzuò, kāishǐ zhuānmén xiě xiǎoshuō, méi xiǎngdào tā jìngrán chénggōng le.",
+              "text_translation": "Eshitishimcha, u bitirgach advokatlik ishidan voz kechib, faqat roman yozishga o'tgan ekan — kutilmaganda muvaffaqiyat qozonibdi.",
+              "text_translation_ru": "Говорят, после выпуска она бросила работу юриста и занялась только романами — и, надо же, добилась успеха.",
+              "text_translation_en": "I hear she gave up her job as a lawyer after graduating and started writing novels full time — and, would you believe it, she succeeded.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l9-text-3-s4",
+              "text_original": "当时她的父母和亲戚都不支持她，可是她坚持自己的选择，现在终于向所有人证明了她的选择是正确的。",
+              "pinyin": "Dāngshí tā de fùmǔ hé qīnqi dōu bù zhīchí tā, kěshì tā jiānchí zìjǐ de xuǎnzé, xiànzài zhōngyú xiàng suǒyǒu rén zhèngmíng le tā de xuǎnzé shì zhèngquè de.",
+              "text_translation": "O'shanda ota-onasi ham, qarindoshlari ham uni qo'llab-quvvatlamagan edi. Ammo u o'z tanlovidan qaytmadi va nihoyat hammaga tanlovi to'g'ri ekanini isbotladi.",
+              "text_translation_ru": "Тогда ни родители, ни родственники её не поддержали. Но она не отступила от своего выбора и теперь наконец доказала всем, что была права.",
+              "text_translation_en": "At the time neither her parents nor her relatives backed her. But she stuck to her choice, and now she has finally proved to everyone that it was the right one.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-3-s5",
+              "text_original": "看来为了自己的理想，放弃一些东西也是值得的。",
+              "pinyin": "Kànlái wèile zìjǐ de lǐxiǎng, fàngqì yīxiē dōngxi yě shì zhídé de.",
+              "text_translation": "Ko'rinishidan, o'z orzung yo'lida ba'zi narsalardan voz kechish ham arziydi.",
+              "text_translation_ru": "Похоже, ради своей мечты стоит от чего-то и отказаться.",
+              "text_translation_en": "It seems that for the sake of your dream, giving some things up is worth it.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l9-text-3-s6",
+              "text_original": "一个人只有两只手，不可能得到所有想要的东西，所以有时候放弃是一种聪明的选择。",
+              "pinyin": "Yīgè rén zhǐ yǒu liǎng zhī shǒu, bù kěnéng dédào suǒyǒu xiǎng yào de dōngxi, suǒyǐ yǒu shíhou fàngqì shì yī zhǒng cōngming de xuǎnzé.",
+              "text_translation": "Odamning bor-yo'g'i ikki qo'li bor — istagan hamma narsasini qo'lga kirita olmaydi. Shuning uchun ba'zan voz kechish aqlli tanlovdir.",
+              "text_translation_ru": "У человека всего две руки — всего желаемого не получишь. Поэтому иногда отказаться — умный выбор.",
+              "text_translation_en": "A person has only two hands and can't have everything they want, so sometimes giving something up is the clever choice.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-3-s7",
+              "text_original": "是啊，只有学会放弃，才能把自己的能力用到最该做的事情上，最后获得成功。",
+              "pinyin": "Shì a, zhǐyǒu xuéhuì fàngqì, cái néng bǎ zìjǐ de nénglì yòng dào zuì gāi zuò de shìqing shàng, zuìhòu huòdé chénggōng.",
+              "text_translation": "Ha. Faqat voz kechishni o'rgangandagina kuchingni eng zarur ishga sarflab, oxir-oqibat muvaffaqiyatga erishasan.",
+              "text_translation_ru": "Да. Только научившись отказываться, можно направить силы на самое нужное и в итоге добиться успеха.",
+              "text_translation_en": "Yes. Only by learning to let go can you put your strength into what matters most and succeed in the end.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l9-text-4",
+      "slug": "text-4",
+      "label": "课文四",
+      "labelTranslation": "Matn 4",
+      "labelTranslation_ru": "Текст 4",
+      "labelTranslation_en": "Text 4",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "勇敢",
+          "py": "yǒnggǎn",
+          "uz": "jasur",
+          "ru": "смелый, отважный",
+          "en": "brave, bold"
+        },
+        {
+          "zh": "结果",
+          "py": "jiéguǒ",
+          "uz": "natija",
+          "ru": "результат",
+          "en": "result, outcome"
+        },
+        {
+          "zh": "失败",
+          "py": "shībài",
+          "uz": "muvaffaqiyatsizlik; yutqazmoq",
+          "ru": "неудача; терпеть неудачу",
+          "en": "failure; to fail"
+        },
+        {
+          "zh": "过程",
+          "py": "guòchéng",
+          "uz": "jarayon",
+          "ru": "процесс",
+          "en": "process"
+        },
+        {
+          "zh": "至少",
+          "py": "zhìshǎo",
+          "uz": "hech bo'lmaganda",
+          "ru": "по крайней мере",
+          "en": "at least"
+        },
+        {
+          "zh": "总结",
+          "py": "zǒngjié",
+          "uz": "xulosa chiqarmoq; yakun",
+          "ru": "подводить итог; итог",
+          "en": "to sum up; a summary"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l9-text-4-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l9-text-4-s1",
+              "text_original": "如果你想做什么事情，那就勇敢地去做，不要担心结果，不要考虑会不会失败。",
+              "pinyin": "Rúguǒ nǐ xiǎng zuò shénme shìqing, nà jiù yǒnggǎn de qù zuò, bùyào dānxīn jiéguǒ, bùyào kǎolǜ huì bù huì shībài.",
+              "text_translation": "Biror ishni qilmoqchi bo'lsang, jasorat bilan kirish — natijadan xavotirlanma, muvaffaqiyatsizlikni o'ylab o'tirma.",
+              "text_translation_ru": "Если хочешь что-то сделать — смело берись, не переживай о результате и не думай, получится или нет.",
+              "text_translation_en": "If there's something you want to do, then go at it boldly — don't fret about the result, don't dwell on whether you might fail.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-4-s2",
+              "text_original": "要是太看重结果，失败就会给人们带来很多烦恼。",
+              "pinyin": "Yàoshi tài kànzhòng jiéguǒ, shībài jiù huì gěi rénmen dàilái hěn duō fánnǎo.",
+              "text_translation": "Natijaga haddan tashqari ahamiyat bersang, muvaffaqiyatsizlik odamga ko'p tashvish keltiradi.",
+              "text_translation_ru": "Если придавать результату слишком большое значение, неудача принесёт много огорчений.",
+              "text_translation_en": "If you set too much store by the result, failure will bring you a great deal of distress.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-4-s3",
+              "text_original": "我们应该把注意力放在做事情的过程上，这样你会在做的过程中发现解决问题的快乐，这是其他任何东西都给不了的。",
+              "pinyin": "Wǒmen yīnggāi bǎ zhùyìlì fàng zài zuò shìqing de guòchéng shàng, zhèyàng nǐ huì zài zuò de guòchéng zhōng fāxiàn jiějué wèntí de kuàilè, zhè shì qítā rènhé dōngxi dōu gěi bùliǎo de.",
+              "text_translation": "E'tiborni ishning jarayoniga qaratishimiz kerak. Shunda jarayonning o'zida muammoni hal qilish quvonchini topasan — buni boshqa hech narsa bera olmaydi.",
+              "text_translation_ru": "Внимание стоит направлять на сам процесс дела. Тогда в процессе ты откроешь радость решения задач — того, чего не даст ничто другое.",
+              "text_translation_en": "We ought to put our attention on the process of doing the thing. Then, in the doing, you find the joy of solving problems — something nothing else can give you.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-4-s4",
+              "text_original": "即使最后失败了也没有关系，因为至少你已经努力过，而且我们还可以从失败中总结出有用的经验，有了这些积累，成功自然离我们越来越近。",
+              "pinyin": "Jíshǐ zuìhòu shībài le yě méiyǒu guānxi, yīnwèi zhìshǎo nǐ yǐjīng nǔlì guò, érqiě wǒmen hái kěyǐ cóng shībài zhōng zǒngjié chū yǒuyòng de jīngyàn, yǒu le zhèxiē jīlěi, chénggōng zìrán lí wǒmen yuè lái yuè jìn.",
+              "text_translation": "Oxirida yutqazsang ham hechqisi yo'q — hech bo'lmaganda harakat qilding. Qolaversa, muvaffaqiyatsizlikdan foydali tajriba chiqarib olsak bo'ladi; shu to'plangan tajriba bilan muvaffaqiyat o'z-o'zidan yaqinlashaveradi.",
+              "text_translation_ru": "Даже если в итоге не получится — ничего страшного: ты по крайней мере старался. К тому же из неудачи можно извлечь полезный опыт, а с таким багажом успех сам собой становится всё ближе.",
+              "text_translation_en": "Even if you fail in the end it doesn't matter — at least you tried. And we can draw useful lessons from failure; with that store of experience, success naturally comes closer and closer.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l9-text-5",
+      "slug": "text-5",
+      "label": "课文五",
+      "labelTranslation": "Matn 5",
+      "labelTranslation_ru": "Текст 5",
+      "labelTranslation_en": "Text 5",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "取得",
+          "py": "qǔdé",
+          "uz": "qo'lga kiritmoq, erishmoq",
+          "ru": "добиваться, получать",
+          "en": "to obtain, to achieve"
+        },
+        {
+          "zh": "经历",
+          "py": "jīnglì",
+          "uz": "boshdan kechirmoq; tajriba",
+          "ru": "переживать, испытывать; опыт",
+          "en": "to go through; experience"
+        },
+        {
+          "zh": "许多",
+          "py": "xǔduō",
+          "uz": "ko'plab",
+          "ru": "много, множество",
+          "en": "many, a great many"
+        },
+        {
+          "zh": "区别",
+          "py": "qūbié",
+          "uz": "farq",
+          "ru": "различие",
+          "en": "difference"
+        },
+        {
+          "zh": "暂时",
+          "py": "zànshí",
+          "uz": "vaqtinchalik",
+          "ru": "временный",
+          "en": "temporary, for the time being"
+        },
+        {
+          "zh": "面对",
+          "py": "miànduì",
+          "uz": "yuzlashmoq, ro'para turmoq",
+          "ru": "встречать лицом к лицу",
+          "en": "to face, to confront"
+        },
+        {
+          "zh": "爱迪生",
+          "py": "Àidíshēng",
+          "uz": "Edison",
+          "ru": "Эдисон",
+          "en": "Edison"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l9-text-5-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l9-text-5-s1",
+              "text_original": "每一个人都希望成功，可是很多时候，在成功之前会遇到很多困难。",
+              "pinyin": "Měi yīgè rén dōu xīwàng chénggōng, kěshì hěn duō shíhou, zài chénggōng zhīqián huì yùdào hěn duō kùnnan.",
+              "text_translation": "Har bir inson muvaffaqiyatni istaydi, biroq ko'p hollarda muvaffaqiyatdan oldin ko'plab qiyinchilikka duch kelinadi.",
+              "text_translation_ru": "Каждый хочет успеха, но чаще всего до него приходится столкнуться с множеством трудностей.",
+              "text_translation_en": "Everyone wants to succeed, but more often than not there are many difficulties before success comes.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-5-s2",
+              "text_original": "有些人遇到困难就放弃，而有些人遇到困难却想办法解决它。",
+              "pinyin": "Yǒuxiē rén yùdào kùnnan jiù fàngqì, ér yǒuxiē rén yùdào kùnnan què xiǎng bànfǎ jiějué tā.",
+              "text_translation": "Ba'zilar qiyinchilikka duch kelishi bilan voz kechadi, boshqalar esa uni hal qilish yo'lini izlaydi.",
+              "text_translation_ru": "Одни, столкнувшись с трудностью, сдаются, а другие ищут способ её решить.",
+              "text_translation_en": "Some people give up the moment they hit a difficulty; others look for a way to solve it.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-5-s3",
+              "text_original": "对困难的态度不同，结果也是不一样的。",
+              "pinyin": "Duì kùnnan de tàidù bùtóng, jiéguǒ yě shì bù yīyàng de.",
+              "text_translation": "Qiyinchilikka munosabat har xil bo'lsa, natija ham har xil bo'ladi.",
+              "text_translation_ru": "Разное отношение к трудностям — разный и результат.",
+              "text_translation_en": "A different attitude to difficulty means a different outcome.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-5-s4",
+              "text_original": "爱迪生就是在找了上千种材料后才找到了能点亮电灯的材料。",
+              "pinyin": "Àidíshēng jiùshì zài zhǎo le shàng qiān zhǒng cáiliào hòu cái zhǎodào le néng diǎnliàng diàndēng de cáiliào.",
+              "text_translation": "Edison mingdan ortiq materialni sinab ko'rgandan keyingina lampani yoritadigan materialni topgan.",
+              "text_translation_ru": "Эдисон нашёл материал, способный зажечь лампу, лишь перебрав больше тысячи вариантов.",
+              "text_translation_en": "It was only after trying more than a thousand materials that Edison found the one that would light a lamp.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-5-s5",
+              "text_original": "取得成功的人往往都经历过许多失败，他们和普通人的区别就是他们都坚持了下来。",
+              "pinyin": "Qǔdé chénggōng de rén wǎngwǎng dōu jīnglì guò xǔduō shībài, tāmen hé pǔtōng rén de qūbié jiùshì tāmen dōu jiānchí le xiàlái.",
+              "text_translation": "Muvaffaqiyatga erishganlar odatda ko'p bor mag'lubiyatni boshdan kechirgan. Ularning oddiy odamlardan farqi shundaki, ular chidab qolgan.",
+              "text_translation_ru": "Те, кто добился успеха, как правило, пережили немало неудач. Их отличие от обычных людей в том, что они выстояли.",
+              "text_translation_en": "People who achieve success have usually been through many failures. What sets them apart from everyone else is that they kept going.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-5-s6",
+              "text_original": "所以就算只有百分之一的希望，我们也要做出百分之百的努力。",
+              "pinyin": "Suǒyǐ jiùsuàn zhǐ yǒu bǎifēnzhīyī de xīwàng, wǒmen yě yào zuòchū bǎifēnzhībǎi de nǔlì.",
+              "text_translation": "Shuning uchun bir foizgina umid bo'lsa ham, biz yuz foiz kuch sarflashimiz kerak.",
+              "text_translation_ru": "Поэтому даже если надежды всего один процент, усилий нужно приложить сто процентов.",
+              "text_translation_en": "So even if there is only one per cent of hope, we must put in a hundred per cent of the effort.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-text-5-s7",
+              "text_original": "困难只是暂时的，“阳光总在风雨后”，只有我们勇敢地面对困难，才能有希望取得成功。",
+              "pinyin": "Kùnnan zhǐshì zànshí de, yángguāng zǒng zài fēngyǔ hòu, zhǐyǒu wǒmen yǒnggǎn de miànduì kùnnan, cái néng yǒu xīwàng qǔdé chénggōng.",
+              "text_translation": "Qiyinchilik vaqtinchalik. «Quyosh doim bo'rondan keyin chiqadi» — faqat qiyinchilikka jasorat bilan ro'para bo'lsakkina muvaffaqiyatga umid bo'ladi.",
+              "text_translation_ru": "Трудности временны. «Солнце всегда после дождя и ветра» — только смело встречая трудности, можно надеяться на успех.",
+              "text_translation_en": "Difficulties are only temporary. “The sun always comes after the storm” — only by facing difficulty bravely can we hope to succeed.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l9-culture",
+      "slug": "culture",
+      "label": "文化",
+      "labelTranslation": "Madaniyat",
+      "labelTranslation_ru": "Культура",
+      "labelTranslation_en": "Culture",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "title": "成功的秘诀",
+      "vocab": [],
+      "sections": [
+        {
+          "id": "hsk4-l9-culture-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l9-culture-s1",
+              "text_original": "中国有句俗话，叫作“千里之行，始于足下”。",
+              "pinyin": "Zhōngguó yǒu jù súhuà, jiàozuò qiān lǐ zhī xíng, shǐ yú zú xià.",
+              "text_translation": "Xitoyda «Ming chaqirimlik yo'l bir qadamdan boshlanadi» degan maqol bor.",
+              "text_translation_ru": "В Китае есть пословица: «Путь в тысячу ли начинается с первого шага».",
+              "text_translation_en": "There is a Chinese saying: “A journey of a thousand li begins with a single step.”",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-culture-s2",
+              "text_original": "它告诉我们，要想成功必须从小事做起，并且懂得坚持。",
+              "pinyin": "Tā gàosu wǒmen, yào xiǎng chénggōng bìxū cóng xiǎoshì zuòqǐ, bìngqiě dǒngdé jiānchí.",
+              "text_translation": "U bizga shuni o'rgatadi: muvaffaqiyat istasang, kichik ishlardan boshla va davom ettirishni bil.",
+              "text_translation_ru": "Она учит: чтобы добиться успеха, надо начинать с малого и уметь не бросать начатое.",
+              "text_translation_en": "It tells us that to succeed you must begin with small things and know how to persevere.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-culture-s3",
+              "text_original": "世间最容易的事是坚持，最难的事也是坚持。",
+              "pinyin": "Shìjiān zuì róngyì de shì shì jiānchí, zuì nán de shì yě shì jiānchí.",
+              "text_translation": "Dunyoda eng oson ish ham davom ettirish, eng qiyin ish ham davom ettirish.",
+              "text_translation_ru": "Самое лёгкое дело на свете — упорствовать; и самое трудное — тоже упорствовать.",
+              "text_translation_en": "The easiest thing in the world is to persevere; the hardest thing is also to persevere.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-culture-s4",
+              "text_original": "说它容易，是因为只要愿意做，人人能做到；说它难，是因为真正能做到的，终究只是少数人。",
+              "pinyin": "Shuō tā róngyì, shì yīnwèi zhǐyào yuànyì zuò, rén rén néng zuòdào; shuō tā nán, shì yīnwèi zhēnzhèng néng zuòdào de, zhōngjiū zhǐshì shǎoshù rén.",
+              "text_translation": "Oson deyilishining sababi — xohlagan har kim buni qila oladi; qiyin deyilishining sababi — chindan uddasidan chiqadiganlar oxir-oqibat oz sonli kishilardir.",
+              "text_translation_ru": "Лёгкое — потому что стоит только захотеть, и это по силам каждому; трудное — потому что действительно справляются в конце концов немногие.",
+              "text_translation_en": "It is easy because anyone willing can do it; it is hard because those who truly manage it are, in the end, only a few.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-culture-s5",
+              "text_original": "成功在于坚持，这是一个并不神秘的秘诀。",
+              "pinyin": "Chénggōng zàiyú jiānchí, zhè shì yīgè bìng bù shénmì de mìjué.",
+              "text_translation": "Muvaffaqiyat davom ettirishga bog'liq — bu sirli bo'lmagan bir sirdir.",
+              "text_translation_ru": "Успех — в упорстве; это вовсе не таинственный секрет.",
+              "text_translation_en": "Success lies in perseverance — a secret that is not mysterious at all.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l9-culture-s6",
+              "text_original": "如果在努力的过程中遇到困难，也不要放弃。",
+              "pinyin": "Rúguǒ zài nǔlì de guòchéng zhōng yùdào kùnnan, yě bùyào fàngqì.",
+              "text_translation": "Harakat jarayonida qiyinchilikka duch kelsang ham, voz kechma.",
+              "text_translation_ru": "Если по пути встретятся трудности — всё равно не сдавайтесь.",
+              "text_translation_en": "And if difficulty meets you along the way, still do not give up.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
