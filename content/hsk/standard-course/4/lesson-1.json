@@ -411,6 +411,127 @@
           ]
         }
       ]
+    },
+    {
+      "id": "hsk4-l1-t5",
+      "slug": "text-5",
+      "label": "课文五",
+      "labelTranslation": "Matn 5",
+      "labelTranslation_ru": "Текст 5",
+      "labelTranslation_en": "Text 5",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "自然",
+          "py": "zìrán",
+          "uz": "tabiiy, tabiiy ravishda",
+          "ru": "естественный, естественно",
+          "en": "natural, naturally"
+        },
+        {
+          "zh": "原因",
+          "py": "yuányīn",
+          "uz": "sabab",
+          "ru": "причина",
+          "en": "reason, cause"
+        },
+        {
+          "zh": "互相",
+          "py": "hùxiāng",
+          "uz": "bir-birini, o'zaro",
+          "ru": "взаимно, друг друга",
+          "en": "each other, mutually"
+        },
+        {
+          "zh": "吸引",
+          "py": "xīyǐn",
+          "uz": "o'ziga tortmoq, jalb qilmoq",
+          "ru": "привлекать",
+          "en": "to attract"
+        },
+        {
+          "zh": "幽默",
+          "py": "yōumò",
+          "uz": "hazilkash, yumorli",
+          "ru": "юмор, остроумный",
+          "en": "humorous, humour"
+        },
+        {
+          "zh": "脾气",
+          "py": "píqi",
+          "uz": "fe'l-atvor, tabiat",
+          "ru": "характер, норов",
+          "en": "temper, temperament"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l1-t5-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l1-t5-s1",
+              "text_original": "说到结婚，人们就会很自然地想起爱情。",
+              "pinyin": "Shuō dào jiéhūn, rénmen jiù huì hěn zìrán de xiǎngqǐ àiqíng.",
+              "text_translation": "Nikoh haqida gap ketganda, odamlar tabiiy ravishda sevgini eslashadi.",
+              "text_translation_ru": "Когда речь заходит о браке, людям естественно вспоминается любовь.",
+              "text_translation_en": "When marriage comes up, people naturally think of love.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t5-s2",
+              "text_original": "爱情是结婚的重要原因，但两个人共同生活，不仅需要浪漫的爱情，更需要性格上互相吸引。",
+              "pinyin": "Àiqíng shì jiéhūn de zhòngyào yuányīn, dàn liǎng ge rén gòngtóng shēnghuó, bùjǐn xūyào làngmàn de àiqíng, gèng xūyào xìnggé shàng hùxiāng xīyǐn.",
+              "text_translation": "Sevgi — turmush qurishning muhim sababi, lekin ikki kishi birga yashar ekan, faqat romantik sevgi emas, balki fe'l-atvor jihatidan bir-birini o'ziga tortishi ham kerak.",
+              "text_translation_ru": "Любовь — важная причина вступления в брак, но когда двое живут вместе, нужна не только романтическая любовь, но и взаимное притяжение характеров.",
+              "text_translation_en": "Love is an important reason for marrying, but when two people live together they need not only romantic love but also characters that attract each other.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t5-s3",
+              "text_original": "我丈夫是个很幽默的人。",
+              "pinyin": "Wǒ zhàngfu shì ge hěn yōumò de rén.",
+              "text_translation": "Erim juda hazilkash odam.",
+              "text_translation_ru": "Мой муж — очень остроумный человек.",
+              "text_translation_en": "My husband is a very funny man.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t5-s4",
+              "text_original": "即使是很普通的事情，从他嘴里说出来也会变得很有意思。",
+              "pinyin": "Jíshǐ shì hěn pǔtōng de shìqing, cóng tā zuǐ lǐ shuō chūlái yě huì biàn de hěn yǒu yìsi.",
+              "text_translation": "Hatto juda oddiy narsa ham uning og'zidan chiqqanda qiziqarli bo'lib qoladi.",
+              "text_translation_ru": "Даже самые обычные вещи в его устах становятся интересными.",
+              "text_translation_en": "Even a very ordinary thing becomes interesting when he tells it.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t5-s5",
+              "text_original": "在我难过的时候，他总是有办法让我高兴起来。",
+              "pinyin": "Zài wǒ nánguò de shíhou, tā zǒngshì yǒu bànfǎ ràng wǒ gāoxìng qǐlái.",
+              "text_translation": "Men xafa bo'lganimda, u doim meni xursand qilishning yo'lini topadi.",
+              "text_translation_ru": "Когда мне грустно, он всегда находит способ меня развеселить.",
+              "text_translation_en": "When I'm upset, he always finds a way to cheer me up.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-t5-s6",
+              "text_original": "而且他的脾气也不错，结婚快十年了，我们俩几乎没因为什么事红过脸，很多人都特别羡慕我们。",
+              "pinyin": "Érqiě tā de píqi yě bùcuò, jiéhūn kuài shí nián le, wǒmen liǎ jīhū méi yīnwèi shénme shì hóng guo liǎn, hěn duō rén dōu tèbié xiànmù wǒmen.",
+              "text_translation": "Bundan tashqari, uning fe'li ham yaxshi; turmush qurganimizga o'n yil bo'lay deb qoldi, biz ikkimiz deyarli hech qanday narsa uchun janjallashmaganmiz, ko'p odamlar bizga juda havas qilishadi.",
+              "text_translation_ru": "К тому же у него хороший характер: мы женаты почти десять лет и почти никогда ни из-за чего не ссорились — многие нам очень завидуют.",
+              "text_translation_en": "He also has a good temper — we've been married almost ten years and have hardly ever quarrelled about anything; many people really envy us.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
     }
   ],
   "grammar": [
