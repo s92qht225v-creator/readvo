@@ -16,6 +16,9 @@ import { alignPinyinToText } from '../utils/rubyText';
 import { splitAligned } from '../utils/splitSentences';
 import { usePersistedState } from '../hooks/usePersistedState';
 
+/** revealedSeg sentinel: translate the entry as a whole, not one sentence. */
+const WHOLE_ENTRY = -1;
+
 /** Guards for restoring saved reader preferences — see usePersistedState. */
 const isBool = (v: unknown): v is boolean => typeof v === 'boolean';
 const isFontSize = (v: unknown): v is number =>
@@ -284,6 +287,42 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     [dialogue, allSentences],
   );
 
+  /** A sentence's translation in the current UI language, Uzbek as fallback. */
+  const trOf = useCallback((s: Sentence) => (
+    language === 'ru' ? s.text_translation_ru
+      : language === 'en' ? (s.text_translation_en || s.text_translation)
+      : s.text_translation
+  ), [language]);
+
+  /**
+   * Playback units — SENTENCES, not JSON entries.
+   *
+   * "Play all" used to walk entries, and an entry routinely holds several
+   * sentences (5% of HSK 1 dialogue entries, 74% of HSK 6). One entry meant one
+   * TTS clip covering all of them, so the translation bar froze on the first
+   * sentence for the length of the whole clip and the rest were never shown.
+   *
+   * HSK text-1 looked like it worked only because that one text happens to be
+   * authored one sentence per entry — texts 2-4 of the same lesson are not, and
+   * behaved exactly like the dialogues.
+   *
+   * Nothing here has recorded audio (only karaoke does); every clip is TTS
+   * resolved from text. So splitting is free — ask for the sentence instead of
+   * the paragraph and you get a clip for the sentence.
+   *
+   * Single-sentence entries keep the entry's own id as their key so they still
+   * hit the URLs warmed by the prefetch above, and generate no new audio.
+   */
+  const units = useMemo(() => allSentences.flatMap(s => {
+    const segs = splitAligned(s.text_original ?? '', trOf(s) ?? '');
+    return segs.map((sg, i) => ({
+      sentence: s,
+      seg: segs.length > 1 ? i : WHOLE_ENTRY,
+      zh: sg.zh,
+      key: segs.length > 1 ? `${s.id}#${i}` : s.id,
+    }));
+  }), [allSentences, trOf]);
+
   // ── Sequential "play all" for dialogues without a single recording ──
   // HSK 1 plays one recorded file with timestamp highlighting; HSK 2 has
   // none, so we walk the sentences, playing each one's TTS audio in order
@@ -312,14 +351,24 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
 
   const playSeqFrom = useCallback(async (idx: number) => {
     if (!seqActiveRef.current) return;
-    const s = allSentences[idx];
+    const u = units[idx];
     // End of dialogue (or every sentence skipped because TTS couldn't
     // resolve) — clear ALL playback state, including the loading spinner,
     // so the FAB never gets stuck mid-load.
-    if (!s) { seqActiveRef.current = false; setIsPlaying(false); setIsAudioLoading(false); setAudioActive(false); setActiveSentenceId(null); return; }
+    if (!u) { seqActiveRef.current = false; setIsPlaying(false); setIsAudioLoading(false); setAudioActive(false); setActiveSentenceId(null); return; }
+    const s = u.sentence;
     seqIdxRef.current = idx;
+    // Point the bar at THIS sentence. Set directly as well as through the ref:
+    // consecutive units of one entry leave activeSentenceId unchanged, so the
+    // render-time block that reads the ref never runs for them.
+    pendingSegRef.current = u.seg;
+    curSegRef.current = u.seg;
+    setRevealedSeg(u.seg);
     setActiveSentenceId(s.id);
-    const url = s.audio_url ?? ttsUrls[s.id] ?? await resolveTtsUrl(s.text_original, voiceFor(s));
+    // A recorded file would cover the whole entry, so it can only stand in for
+    // a unit that IS the whole entry.
+    const recorded = u.seg === WHOLE_ENTRY ? s.audio_url : undefined;
+    const url = recorded ?? ttsUrls[u.key] ?? await resolveTtsUrl(u.zh, voiceFor(s));
     if (!seqActiveRef.current) return;
     const a = seqAudioRef.current;
     if (!a) return;
@@ -328,7 +377,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     a.src = url;
     try { await a.play(); setIsAudioLoading(false); setIsPlaying(true); }
     catch { /* autoplay rejected — leave state as-is */ }
-  }, [allSentences, ttsUrls]);
+  }, [units, ttsUrls]);
 
   const handlePlayAll = useCallback(() => {
     if (seqActiveRef.current) { stopSeq(); return; } // toggle: pause
@@ -383,7 +432,13 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
   // Which sentence WITHIN the revealed entry to translate. Half the entries
   // hold more than one sentence, and translating the whole entry for a tap on
   // one of them puts three lines in the bar to explain five characters.
-  const [revealedSeg, setRevealedSeg] = useState(0);
+  //
+  // WHOLE_ENTRY (-1) means "no single sentence is selected — show all of it".
+  // That is the state audio playback lands in: one recording covers every
+  // sentence in the entry with no timings inside it, so there is no honest way
+  // to say which one is being spoken. Showing all of them is right; showing
+  // only the first hides the rest for the whole clip.
+  const [revealedSeg, setRevealedSeg] = useState<number>(WHOLE_ENTRY);
   // Set by a tap, read once by the block below. Without it an entry reached by
   // audio (play-all walking forward) would inherit the previous tap's segment.
   const pendingSegRef = useRef<number | null>(null);
@@ -396,8 +451,11 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     setPrevDisplayId(displaySentenceId);
     if (displaySentenceId) {
       setRevealedId(displaySentenceId);
-      setRevealedSeg(pendingSegRef.current ?? 0);
-      curSegRef.current = pendingSegRef.current ?? 0;
+      // No pending segment means this entry was reached by audio, not by a tap
+      // — play-all walking forward. Translate all of it.
+      const seg = pendingSegRef.current ?? WHOLE_ENTRY;
+      setRevealedSeg(seg);
+      curSegRef.current = seg;
       pendingSegRef.current = null;
     }
   }
@@ -448,13 +506,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
    */
   const pendingScrollRef = useRef<HTMLElement | null>(null);
   const [scrollTick, setScrollTick] = useState(0);
-
-  /** A sentence's translation in the current UI language, Uzbek as fallback. */
-  const trOf = useCallback((s: Sentence) => (
-    language === 'ru' ? s.text_translation_ru
-      : language === 'en' ? (s.text_translation_en || s.text_translation)
-      : s.text_translation
-  ), [language]);
 
   const scrollLineUnderBar = useCallback((el: HTMLElement) => {
     const line = el.closest('.dr-line');
@@ -784,7 +835,9 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                       // one that was tapped. splitAligned falls back to the
                       // whole entry when the two sides don't split evenly.
                       const segs = active ? splitAligned(active.text_original, whole) : [];
-                      const tr = segs.length
+                      // WHOLE_ENTRY (no single sentence selected) falls through
+                      // to the entry's full translation.
+                      const tr = (segs.length && revealedSeg !== WHOLE_ENTRY)
                         ? (segs[Math.min(revealedSeg, segs.length - 1)]?.tr || whole)
                         : whole;
                       if (!tr) return null;
@@ -833,7 +886,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                                       // and the translation then reads as truncated. Only
                                       // when translations are on: with the bar gone there is
                                       // nothing for a narrower highlight to point at.
-                                      const narrowHl = showTranslation && segs.length > 1;
+                                      const narrowHl = showTranslation && segs.length > 1 && revealedSeg !== WHOLE_ENTRY;
                                       let charOff = 0;
                                       return pairs.map((pair, ci) => {
                                         const wl = charLvl[charOff];
