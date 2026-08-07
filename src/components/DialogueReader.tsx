@@ -13,6 +13,7 @@ import { protectAudioUrlSync } from '../lib/audio/token-client';
 import { resolveTtsUrl } from '../utils/ttsAudio';
 import { RubyText } from './RubyText';
 import { alignPinyinToText } from '../utils/rubyText';
+import { splitAligned } from '../utils/splitSentences';
 import { voiceForWith } from '../utils/dialogueVoice';
 import { PageFooter } from './PageFooter';
 import { CoachMarkTour, dismissTip } from './CoachMark';
@@ -364,10 +365,21 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
   // Drives BOTH the translation and pinyin per-line reveal. Uses React's "adjust
   // state during render" pattern so it never lags a frame.
   const [revealedId, setRevealedId] = useState<string | null>(null);
+  // Which sentence WITHIN the revealed entry to translate. Half the entries
+  // hold more than one sentence, and translating the whole entry for a tap on
+  // one of them puts three lines in the bar to explain five characters.
+  const [revealedSeg, setRevealedSeg] = useState(0);
+  // Set by a tap, read once by the block below. Without it an entry reached by
+  // audio (play-all walking forward) would inherit the previous tap's segment.
+  const pendingSegRef = useRef<number | null>(null);
   const [prevDisplayId, setPrevDisplayId] = useState<string | null>(displaySentenceId);
   if (displaySentenceId !== prevDisplayId) {
     setPrevDisplayId(displaySentenceId);
-    if (displaySentenceId) setRevealedId(displaySentenceId);
+    if (displaySentenceId) {
+      setRevealedId(displaySentenceId);
+      setRevealedSeg(pendingSegRef.current ?? 0);
+      pendingSegRef.current = null;
+    }
   }
 
   // When a tapped line's audio finishes, drop its highlight so the line
@@ -417,6 +429,13 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
   const pendingScrollRef = useRef<HTMLElement | null>(null);
   const [scrollTick, setScrollTick] = useState(0);
 
+  /** A sentence's translation in the current UI language, Uzbek as fallback. */
+  const trOf = useCallback((s: Sentence) => (
+    language === 'ru' ? s.text_translation_ru
+      : language === 'en' ? (s.text_translation_en || s.text_translation)
+      : s.text_translation
+  ), [language]);
+
   const scrollLineUnderBar = useCallback((el: HTMLElement) => {
     const line = el.closest('.dr-line');
     if (!line) return;
@@ -429,8 +448,13 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     window.scrollBy({ top: delta, behavior: 'smooth' });
   }, []);
 
-  const handleSentenceClick = useCallback((id: string, el?: HTMLElement) => {
+  const handleSentenceClick = useCallback((id: string, el?: HTMLElement, seg = 0) => {
     dismissTip('dialogue-tour');
+    // Both: the ref for when this tap changes the entry (the render-time block
+    // reads it), the state for when it doesn't — re-tapping a different
+    // sentence of the entry you are already on must still move the bar.
+    pendingSegRef.current = seg;
+    setRevealedSeg(seg);
     setActiveSentenceId(prev => focusMode ? id : prev === id ? null : id);
     const sentence = allSentences.find(s => s.id === id);
     playSentence(sentence);
@@ -730,11 +754,14 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                         sitting under the hero is just a bar-shaped hole. */}
                     {showTranslation && (() => {
                       const active = allSentences.find(s => s.id === revealedId);
-                      const tr = active
-                        ? (language === 'ru' ? active.text_translation_ru
-                          : language === 'en' ? (active.text_translation_en || active.text_translation)
-                          : active.text_translation)
-                        : '';
+                      const whole = active ? trOf(active) : '';
+                      // An entry holding several sentences translates only the
+                      // one that was tapped. splitAligned falls back to the
+                      // whole entry when the two sides don't split evenly.
+                      const segs = active ? splitAligned(active.text_original, whole) : [];
+                      const tr = segs.length
+                        ? (segs[Math.min(revealedSeg, segs.length - 1)]?.tr || whole)
+                        : whole;
                       if (!tr) return null;
                       return (
                         <div className="dr-trbar" ref={trBarRef} aria-live="polite">
@@ -771,10 +798,21 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                                       const sPinyin = showPinyin;
                                       // char-index → HSK 3.0 level (server-attached charLvls)
                                       const charLvl = s.charLvls ?? [];
+                                      // Sentence boundaries within this entry, so a tap
+                                      // knows WHICH sentence it landed in and the bar can
+                                      // translate that one alone.
+                                      const segs = splitAligned(s.text_original, trOf(s));
                                       let charOff = 0;
                                       return pairs.map((pair, ci) => {
                                         const wl = charLvl[charOff];
+                                        // Attribute by the pair's LAST character. Alignment
+                                        // sometimes emits one token spanning a sentence break
+                                        // ("。AI"), and its visible letters belong to the
+                                        // sentence that starts, not the one that ended.
+                                        const lastOff = charOff + [...pair.char].length - 1;
                                         charOff += [...pair.char].length;
+                                        const segAt = segs.findIndex(sg => sg.end > lastOff);
+                                        const segIdx = segAt === -1 ? segs.length - 1 : segAt;
                                         // hide pinyin for a word whose level < this dialogue's level
                                         const hidePy = typeof wl === 'number' && wl < dialogueLevel;
                                         const isPunct = /[，。？！、,.\s]/.test(pair.char);
@@ -784,7 +822,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                                           <div
                                             key={`${si}-${ci}`}
                                             className={`dr-char ${sActive ? 'dr-char--active' : ''} ${sPlaying ? 'dr-char--playing' : ''}`}
-                                            onClick={(e) => { e.stopPropagation(); handleSentenceClick(s.id, e.currentTarget); }}
+                                            onClick={(e) => { e.stopPropagation(); handleSentenceClick(s.id, e.currentTarget, segIdx); }}
                                           >
                                             {/* NBSP, not a plain space: a plain space collapses, the
                                                 div gets no line box, and the row loses the pinyin's
