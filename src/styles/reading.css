@@ -1979,7 +1979,10 @@ body {
      views doesn't re-set where lines start or how far apart they sit. */
   text-align: left;
   font-size: 1.5em;
-  line-height: 3;
+  /* 1.95, not 3: measured, the Dialog tab stacks its rows 70px apart and this
+     was 108. Same multiple of the 36px type, so both views scroll at one pace
+     and the A-/A+ control keeps them in step. */
+  line-height: 1.95;
   /* Drives the focus card's height (its only consumer) — the line stays
      vertically centred inside it. */
   min-height: 48vh;
