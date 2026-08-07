@@ -13384,7 +13384,15 @@ body {
    14% of them off, three cuts 1.9%, four costs another 22px to buy 1.7%.
    The rare longer one scrolls inside the fixed box — it is never truncated. */
 /* Idle = showing the title rather than a translation: same box, quieter. */
-.dr-trbar--idle .dr-trbar__text { font-style: normal; color: #999; font-size: 0.85em; }
+/* Idle = the hint, not a translation. Centred: it is a label about the bar
+   rather than content to read, so it doesn't want the reading column's left
+   edge — and there is never a second line of it to line up with. */
+.dr-trbar--idle .dr-trbar__text {
+  font-style: normal;
+  color: #999;
+  font-size: 0.85em;
+  text-align: center;
+}
 
 .dr-trbar {
   position: sticky;
