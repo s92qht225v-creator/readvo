@@ -13254,8 +13254,12 @@ body {
 }
 
 .hskg__ex { margin: 0 0 14px; padding-left: 12px; border-left: 2px solid #eee; }
-.hskg__ex-zh { font-size: 1.15rem; line-height: 2.1; color: #1a1a2e; }
-.hskg__ex-tr { font-size: 0.9rem; color: #777; margin-top: 2px; }
+.hskg__ex-zh { font-size: 1.35rem; line-height: 2.2; color: #1a1a2e; }
+/* Ruby defaults to 50% of its base, which put the pinyin at 9.2px here —
+   unreadable, and the pinyin is half the point of an example. Sized explicitly
+   so it tracks the characters instead. */
+.hskg__ex-zh rt { font-size: 0.62em; }
+.hskg__ex-tr { font-size: 0.95rem; color: #777; margin-top: 2px; }
 
 /* Two-line rule — the line break is meaningful, so keep it. */
 .hskg__note {
