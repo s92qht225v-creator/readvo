@@ -13338,7 +13338,7 @@ body {
 /* Leaves the reader — same destination as the hero's ‹. Reads as an action, not
    as one more thing to switch on, so it carries no track. */
 .dr-ctl__exit { text-decoration: none; color: #333; }
-.dr-ctl__exit-icon { color: #999; font-style: normal; font-size: 1.05rem; }
+.dr-ctl__exit-icon { color: #999; flex: 0 0 auto; }
 .dr-ctl__sz {
   min-width: 40px; min-height: 34px; margin-left: 6px;
   border: 1px solid #e5e5e5; background: #fff; border-radius: 6px;
