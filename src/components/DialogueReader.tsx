@@ -1000,6 +1000,23 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                     {sheetOpen && <div className="dr-scrim" onClick={() => setSheetOpen(false)} />}
                     <div className={`dr-ctl dr-ctl--dots${sheetOpen ? ' dr-ctl--open' : ''}`}>
                       <div className="dr-ctl__body">
+                        {/* The hamburger held the only language switch inside the
+                            reader, and it went with the hero — so it lives here now. */}
+                        <div className="dr-ctl__row">
+                          <span>{({ uz: 'Til', ru: 'Язык', en: 'Language' } as Record<string, string>)[language]}</span>
+                          <span>
+                            {(['uz', 'ru', 'en'] as const).map(code => (
+                              <button
+                                key={code}
+                                className={`dr-ctl__sz${language === code ? ' dr-ctl__sz--on' : ''}`}
+                                onClick={() => setLanguage(code)}
+                                type="button"
+                                aria-pressed={language === code}
+                              >{code.toUpperCase()}</button>
+                            ))}
+                          </span>
+                        </div>
+                        <div className="dr-ctl__sep" />
                         <button className={`dr-ctl__item${showTranslation ? ' is-on' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button" aria-pressed={showTranslation}>
                           <span>{({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}</span><i className="dr-sw" aria-hidden="true" />
                         </button>
@@ -1015,22 +1032,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                           <span>
                             <button className="dr-ctl__sz" onClick={() => setFontSize(s => Math.max(s - 10, 80))} type="button">A−</button>
                             <button className="dr-ctl__sz" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
-                          </span>
-                        </div>
-                        {/* The hamburger held the only language switch inside the
-                            reader, and it went with the hero — so it lives here now. */}
-                        <div className="dr-ctl__row">
-                          <span>{({ uz: 'Til', ru: 'Язык', en: 'Language' } as Record<string, string>)[language]}</span>
-                          <span>
-                            {(['uz', 'ru', 'en'] as const).map(code => (
-                              <button
-                                key={code}
-                                className={`dr-ctl__sz${language === code ? ' dr-ctl__sz--on' : ''}`}
-                                onClick={() => setLanguage(code)}
-                                type="button"
-                                aria-pressed={language === code}
-                              >{code.toUpperCase()}</button>
-                            ))}
                           </span>
                         </div>
                         <div className="dr-ctl__sep" />
