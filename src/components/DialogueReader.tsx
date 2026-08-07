@@ -145,7 +145,7 @@ const TABS = [
 
 export function DialogueReader({ meta, bookPath, listPath, preview, contentPath }: DialogueReaderProps) {
   const { getAccessToken, user, isLoading: authLoading } = useAuth();
-  const [language] = useLanguage();
+  const [language, , setLanguage] = useLanguage();
 
   // Resolve a sentence's TTS voice, honouring this dialogue's per-speaker override.
   const voiceFor = (s: { speaker?: string }) => voiceForWith(s, meta.voices);
@@ -730,8 +730,11 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     <>
       <div className="dialogue-reader dr-nav" style={{ fontSize: `${fontSize}%` }}>
 
-        {/* ── Classic banner hero — same across the app ── */}
-        <div className="dr-hero">
+        {/* ── Classic banner hero — same across the app ──
+            Hidden once the reader opens: it costs ~150px of every screen to
+            repeat the title you just tapped, and back/menu move into the ⋮.
+            It stays for the teaser, which IS public and needs the h1. */}
+        <div className={`dr-hero${status === 'loaded' ? ' dr-hero--hidden' : ''}`}>
           <div className="dr-hero__watermark">对话</div>
           <div className="dr-hero__top-row">
             <Link href={listPath || `${bookPath}/dialogues`} className="dr-back-btn" aria-label={({ uz: 'Orqaga', ru: 'Назад', en: 'Back' } as Record<string, string>)[language]}>
@@ -847,15 +850,15 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                     </div>
                   ) : (
                   <>
-                    {/* Tapped line's translation, pinned at the top. Only
-                        possible now the tab bar moved to the bottom — nothing
-                        is pinned above it any more.
+                    {/* The reader's only top chrome — the hero is hidden once
+                        content loads, and this replaces it.
 
-                        Rendered only when there is a translation to show, not
-                        for as long as Tarjima is on: an empty white band
-                        sitting under the hero is just a bar-shaped hole. */}
-                    {showTranslation && (() => {
-                      const active = allSentences.find(s => s.id === revealedId);
+                        Always mounted at a fixed height so the page never
+                        shifts, and never blank: with no line selected it shows
+                        the dialogue's title, which is what the hero used to say
+                        in 150px. Back and the menu live in the ⋮. */}
+                    {(() => {
+                      const active = showTranslation ? allSentences.find(s => s.id === revealedId) : undefined;
                       const whole = active ? trOf(active) : '';
                       // An entry holding several sentences translates only the
                       // one that was tapped. splitAligned falls back to the
@@ -866,10 +869,9 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                       const tr = (segs.length && revealedSeg !== WHOLE_ENTRY)
                         ? (segs[Math.min(revealedSeg, segs.length - 1)]?.tr || whole)
                         : whole;
-                      if (!tr) return null;
                       return (
-                        <div className="dr-trbar" ref={trBarRef} aria-live="polite">
-                          <p className="dr-trbar__text">{tr}</p>
+                        <div className={`dr-trbar${tr ? '' : ' dr-trbar--idle'}`} ref={trBarRef} aria-live="polite">
+                          <p className="dr-trbar__text">{tr || `${meta.title} · ${titleTr}`}</p>
                         </div>
                       );
                     })()}
@@ -1011,6 +1013,22 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                           <span>
                             <button className="dr-ctl__sz" onClick={() => setFontSize(s => Math.max(s - 10, 80))} type="button">A−</button>
                             <button className="dr-ctl__sz" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
+                          </span>
+                        </div>
+                        {/* The hamburger held the only language switch inside the
+                            reader, and it went with the hero — so it lives here now. */}
+                        <div className="dr-ctl__row">
+                          <span>{({ uz: 'Til', ru: 'Язык', en: 'Language' } as Record<string, string>)[language]}</span>
+                          <span>
+                            {(['uz', 'ru', 'en'] as const).map(code => (
+                              <button
+                                key={code}
+                                className={`dr-ctl__sz${language === code ? ' dr-ctl__sz--on' : ''}`}
+                                onClick={() => setLanguage(code)}
+                                type="button"
+                                aria-pressed={language === code}
+                              >{code.toUpperCase()}</button>
+                            ))}
                           </span>
                         </div>
                         <div className="dr-ctl__sep" />
