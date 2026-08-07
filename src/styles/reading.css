@@ -13309,6 +13309,8 @@ body {
 .dr-nav .dr-dialog-body { padding-bottom: 96px; }
 
 .dr-nav .dr-more { flex: 0 0 44px; font-size: 20px; line-height: 1; }
+/* Way out, mirroring the ⋮ at the far end of the same bar. */
+.dr-nav .dr-tabs__back { flex: 0 0 44px; display: flex; align-items: center; justify-content: center; }
 
 /* The menu itself. */
 .dr-ctl__item, .dr-ctl__row {
