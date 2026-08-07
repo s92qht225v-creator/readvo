@@ -13379,10 +13379,11 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
-  /* Exactly the hero's footprint: same 175px, same full-bleed. It replaces the
-     hero, so it occupies the space the eye already expects — and at that height
-     every translation in the corpus fits without scrolling or truncating. */
-  height: 175px;
+  /* 120px: measured at phone width the longest translation in the corpus
+     renders 88px, plus 24px padding — so everything still fits without
+     scrolling or truncating, and 55px of permanently empty band goes back to
+     the dialogue. (The hero this replaced was 175px.) */
+  height: 120px;
   /* Same full-bleed as .dr-hero, which this replaces. Valid here only because
      the bar now sits outside the centred .dr-dialog-body column. */
   width: 100vw;
