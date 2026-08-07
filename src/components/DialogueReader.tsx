@@ -1013,6 +1013,18 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                             <button className="dr-ctl__sz" onClick={() => setFontSize(s => Math.min(s + 10, 150))} type="button">A+</button>
                           </span>
                         </div>
+                        <div className="dr-ctl__sep" />
+                        {/* Same destination as the hero's ‹ — a second way out for
+                            anyone already in this menu at the bottom of the screen,
+                            rather than reaching back up to the top corner. */}
+                        <Link
+                          href={listPath || `${bookPath}/dialogues`}
+                          className="dr-ctl__item dr-ctl__exit"
+                          onClick={() => setSheetOpen(false)}
+                        >
+                          <span>{({ uz: 'Chiqish', ru: 'Выйти', en: 'Exit' } as Record<string, string>)[language]}</span>
+                          <i className="dr-ctl__exit-icon" aria-hidden="true">↩</i>
+                        </Link>
                       </div>
                     </div>
                   </>
