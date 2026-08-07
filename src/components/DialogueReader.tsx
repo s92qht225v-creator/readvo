@@ -259,35 +259,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
   // This dialogue's HSK level — words below it get their pinyin hidden (progressive pinyin).
   const dialogueLevel = meta.level ?? 1;
 
-  // Per-sentence MiMo TTS fallback. Dialogues without recorded audio (e.g.
-  // HSK 2) have no `audio_url`; we resolve a playable URL from /api/tts
-  // (Supabase-cached, generated once) for each such sentence. Prefetching
-  // on mount warms the cache so a tap plays instantly inside the user
-  // gesture; a tap before the prefetch lands falls back to async resolve.
-  const [ttsUrls, setTtsUrls] = useState<Record<string, string>>({});
-
-  useEffect(() => {
-    const missing = allSentences.filter(s => !s.audio_url && s.text_original?.trim());
-    if (missing.length === 0) return;
-    let cancelled = false;
-    (async () => {
-      for (const s of missing) {
-        const url = await resolveTtsUrl(s.text_original, voiceFor(s));
-        if (cancelled) return;
-        if (url) setTtsUrls(prev => (prev[s.id] ? prev : { ...prev, [s.id]: url }));
-      }
-    })();
-    return () => { cancelled = true; };
-  }, [allSentences]);
-
-  // Whether the bottom-right "play all" FAB should drive a TTS sequence
-  // (no single recorded file to play, but sentences are TTS-playable).
-  const ttsPlayable = useMemo(
-    () => !dialogue?.audio_url && allSentences.some(s => !!s.text_original?.trim()),
-    [dialogue, allSentences],
-  );
-
-  /** A sentence's translation in the current UI language, Uzbek as fallback. */
   const trOf = useCallback((s: Sentence) => (
     language === 'ru' ? s.text_translation_ru
       : language === 'en' ? (s.text_translation_en || s.text_translation)
@@ -310,8 +281,8 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
    * resolved from text. So splitting is free — ask for the sentence instead of
    * the paragraph and you get a clip for the sentence.
    *
-   * Single-sentence entries keep the entry's own id as their key so they still
-   * hit the URLs warmed by the prefetch above, and generate no new audio.
+   * Single-sentence entries keep the entry's own id as their key, so the ids
+   * are unchanged for the overwhelming majority of lines.
    */
   const units = useMemo(() => allSentences.flatMap(s => {
     const segs = splitAligned(s.text_original ?? '', trOf(s) ?? '');
@@ -322,6 +293,36 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
       key: segs.length > 1 ? `${s.id}#${i}` : s.id,
     }));
   }), [allSentences, trOf]);
+
+  // Per-sentence MiMo TTS fallback. Dialogues without recorded audio (e.g.
+  // HSK 2) have no `audio_url`; we resolve a playable URL from /api/tts
+  // (Supabase-cached, generated once) for each such sentence. Prefetching
+  // on mount warms the cache so a tap plays instantly inside the user
+  // gesture; a tap before the prefetch lands falls back to async resolve.
+  const [ttsUrls, setTtsUrls] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    const missing = units.filter(u => !u.sentence.audio_url && u.zh.trim());
+    if (missing.length === 0) return;
+    let cancelled = false;
+    (async () => {
+      for (const u of missing) {
+        const url = await resolveTtsUrl(u.zh, voiceFor(u.sentence));
+        if (cancelled) return;
+        if (url) setTtsUrls(prev => (prev[u.key] ? prev : { ...prev, [u.key]: url }));
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [units]);
+
+  // Whether the bottom-right "play all" FAB should drive a TTS sequence
+  // (no single recorded file to play, but sentences are TTS-playable).
+  const ttsPlayable = useMemo(
+    () => !dialogue?.audio_url && allSentences.some(s => !!s.text_original?.trim()),
+    [dialogue, allSentences],
+  );
+
+  /** A sentence's translation in the current UI language, Uzbek as fallback. */
 
   // ── Sequential "play all" for dialogues without a single recording ──
   // HSK 1 plays one recorded file with timestamp highlighting; HSK 2 has
@@ -391,6 +392,31 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
 
   // Resolve + play a single sentence's audio: recorded `audio_url` when
   // present, otherwise the (possibly already-prefetched) MiMo TTS URL.
+  /**
+   * Play one unit — a single sentence, matching what the bar translates.
+   *
+   * A tap used to play the whole entry while the bar showed just the tapped
+   * sentence, so on a two-sentence line you heard both and read one.
+   */
+  const playUnit = useCallback((u: typeof units[number] | undefined) => {
+    if (!u) return;
+    stopSeq(); // a manual sentence tap cancels any running "play all"
+    if (audioRef.current && isPlaying) { audioRef.current.pause(); setIsPlaying(false); setAudioActive(false); }
+    // A recorded file covers the whole entry, so it can only stand in for a
+    // unit that IS the whole entry.
+    const ready = (u.seg === WHOLE_ENTRY ? u.sentence.audio_url : undefined) ?? ttsUrls[u.key];
+    if (ready) { sentenceAudio.play(u.key, ready); return; }
+    sentenceAudio.stop();
+    void resolveTtsUrl(u.zh, voiceFor(u.sentence)).then(url => {
+      if (!url) return;
+      setTtsUrls(prev => (prev[u.key] ? prev : { ...prev, [u.key]: url }));
+      sentenceAudio.play(u.key, url);
+    });
+    // voiceFor is derived from props and stable for a given dialogue.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ttsUrls, isPlaying, sentenceAudio, stopSeq]);
+
+  /** Whole-entry playback — focus mode shows the entry as one card. */
   const playSentence = useCallback((s: Sentence | undefined | null) => {
     if (!s) return;
     stopSeq(); // a manual sentence tap cancels any running "play all"
@@ -532,8 +558,8 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
     pendingSegRef.current = seg;
     setRevealedSeg(seg);
     setActiveSentenceId(prev => focusMode ? id : (prev === id && sameSeg) ? null : id);
-    const sentence = allSentences.find(s => s.id === id);
-    playSentence(sentence);
+    if (focusMode) playSentence(allSentences.find(s => s.id === id));
+    else playUnit(units.find(u => u.sentence.id === id && u.seg === seg));
     // Deferred to the effect below, not run here: on the first tap the bar does
     // not exist yet, so measuring now would size the gap against a bar that is
     // about to appear and push the line back down.
@@ -541,7 +567,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
       pendingScrollRef.current = el;
       setScrollTick(t => t + 1);
     }
-  }, [focusMode, allSentences, playSentence, showTranslation]);
+  }, [focusMode, allSentences, units, playSentence, playUnit, showTranslation]);
 
   // Runs once the bar is in the DOM, so the geometry is final. Deliberately an
   // effect rather than requestAnimationFrame: rAF is starved whenever the tab
@@ -897,7 +923,11 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                                         const lastOff = charOff + [...pair.char].length - 1;
                                         charOff += [...pair.char].length;
                                         const segAt = segs.findIndex(sg => sg.end > lastOff);
-                                        const segIdx = segAt === -1 ? segs.length - 1 : segAt;
+                                        // Match the playback unit's own numbering, so a tap
+                                        // resolves to exactly one unit.
+                                        const segIdx = segs.length > 1
+                                          ? (segAt === -1 ? segs.length - 1 : segAt)
+                                          : WHOLE_ENTRY;
                                         // hide pinyin for a word whose level < this dialogue's level
                                         const hidePy = typeof wl === 'number' && wl < dialogueLevel;
                                         const isPunct = /[，。？！、,.\s]/.test(pair.char);
