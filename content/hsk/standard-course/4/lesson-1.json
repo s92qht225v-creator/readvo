@@ -1560,6 +1560,266 @@
           "en": "即使 = even if / even though\n也 usually appears in the second clause.\n即使 can be placed before or after the subject."
         }
       ]
+    },
+    {
+      "slug": "zai-shang",
+      "title": "（在）……上",
+      "pinyin": "(zài) … shàng",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "上 — o'rinni bildiruvchi so'z bo'lib, boshqa otlardan keyin keladi.",
+          "ru": "上 — слово со значением местоположения, которое ставится после существительного.",
+          "en": "上 is a locality noun used after another noun."
+        },
+        {
+          "type": "p",
+          "uz": "U nafaqat biror narsaning ustida degan ma'noni, balki ma'lum bir soha, doira, jihat yoki masala bo'yicha degan ma'noni ham bildiradi.",
+          "ru": "Оно может означать не только «на поверхности чего-либо», но и «в отношении», «в области», «в плане» или «с точки зрения».",
+          "en": "Besides “on the surface of something”, it also expresses “in terms of”, “regarding”, or “in a certain aspect”."
+        },
+        {
+          "type": "p",
+          "uz": "Ko'pincha 在……上 shaklida ishlatiladi.",
+          "ru": "Часто используется в конструкции 在……上.",
+          "en": "It often appears in the pattern 在……上."
+        },
+        {
+          "type": "h",
+          "uz": "1. Joyni bildirganda",
+          "ru": "1. Значение места",
+          "en": "1. Referring to location"
+        },
+        {
+          "type": "formula",
+          "uz": "在 + Ot + 上  →  … ustida",
+          "ru": "在 + Существительное + 上  →  на",
+          "en": "在 + Noun + 上  →  on"
+        },
+        {
+          "type": "ex",
+          "zh": "书在桌子上。",
+          "py": "Shū zài zhuōzi shàng.",
+          "uz": "Kitob stol ustida.",
+          "ru": "Книга лежит на столе.",
+          "en": "The book is on the table."
+        },
+        {
+          "type": "ex",
+          "zh": "猫在椅子上。",
+          "py": "Māo zài yǐzi shàng.",
+          "uz": "Mushuk stul ustida.",
+          "ru": "Кошка сидит на стуле.",
+          "en": "The cat is on the chair."
+        },
+        {
+          "type": "h",
+          "uz": "2. Soha yoki jihatni bildirganda",
+          "ru": "2. Значение аспекта или области",
+          "en": "2. Referring to an aspect or field"
+        },
+        {
+          "type": "p",
+          "uz": "Bu holatda 上 «… bo'yicha», «… jihatidan», «… sohasida» degan ma'noni beradi.",
+          "ru": "В этом случае 上 означает «в отношении», «в плане», «в области» или «с точки зрения».",
+          "en": "In this usage 上 means “in terms of”, “regarding”, or “in the area of”."
+        },
+        {
+          "type": "formula",
+          "uz": "在 + Ot + 上",
+          "ru": "在 + Существительное + 上",
+          "en": "在 + Noun + 上"
+        },
+        {
+          "type": "ex",
+          "zh": "今天的作业是复习生词，明天课上听写。",
+          "py": "Jīntiān de zuòyè shì fùxí shēngcí, míngtiān kè shàng tīngxiě.",
+          "uz": "Bugungi uy vazifasi — yangi so'zlarni takrorlash. Ertaga darsda diktant bo'ladi.",
+          "ru": "Сегодняшнее домашнее задание — повторить новые слова. Завтра на уроке будет словарный диктант.",
+          "en": "Today's homework is to review the new words. Tomorrow there will be a dictation in class."
+        },
+        {
+          "type": "note",
+          "uz": "课上 — darsda, ya'ni dars jarayonida.",
+          "ru": "Здесь 课上 означает «на уроке».",
+          "en": "Here 课上 means “in class”."
+        },
+        {
+          "type": "ex",
+          "zh": "你觉得北方和南方在饮食上有什么不同？",
+          "py": "Nǐ juéde Běifāng hé Nánfāng zài yǐnshí shàng yǒu shénme bùtóng?",
+          "uz": "Sizningcha, Shimol va Janub ovqatlanish jihatidan qanday farq qiladi?",
+          "ru": "Как ты думаешь, чем Север и Юг отличаются в плане питания?",
+          "en": "What differences do you think there are between the North and the South in terms of food?"
+        },
+        {
+          "type": "note",
+          "uz": "在饮食上 — ovqatlanish jihatidan / ovqatlanish bo'yicha.",
+          "ru": "Здесь 在饮食上 означает «в плане питания».",
+          "en": "Here 在饮食上 means “in terms of diet”."
+        },
+        {
+          "type": "ex",
+          "zh": "两个人共同生活，不仅需要浪漫的爱情，更需要性格上互相吸引。",
+          "py": "Liǎng ge rén gòngtóng shēnghuó, bùjǐn xūyào làngmàn de àiqíng, gèng xūyào xìnggé shàng hùxiāng xīyǐn.",
+          "uz": "Ikki kishi birga yashashi uchun nafaqat romantik sevgi, balki xarakter jihatidan ham bir-biriga mos bo'lishi kerak.",
+          "ru": "Чтобы жить вместе, двум людям нужна не только романтическая любовь, но и совместимость в характере.",
+          "en": "For two people to live together, they need not only romantic love but also compatibility in personality."
+        },
+        {
+          "type": "note",
+          "uz": "性格上 — xarakter jihatidan.",
+          "ru": "Здесь 性格上 означает «в плане характера».",
+          "en": "Here 性格上 means “in terms of personality”."
+        },
+        {
+          "type": "h",
+          "uz": "Keng qo'llaniladigan birikmalar",
+          "ru": "Часто употребляемые выражения",
+          "en": "Common expressions"
+        },
+        {
+          "type": "table",
+          "head": [
+            "……上",
+            "→"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "学习上",
+                "o'qishda"
+              ],
+              "ru": [
+                "学习上",
+                "в учёбе"
+              ],
+              "en": [
+                "学习上",
+                "in studies"
+              ]
+            },
+            {
+              "uz": [
+                "工作上",
+                "ishda, ish bo'yicha"
+              ],
+              "ru": [
+                "工作上",
+                "в работе"
+              ],
+              "en": [
+                "工作上",
+                "at work"
+              ]
+            },
+            {
+              "uz": [
+                "生活上",
+                "hayotda"
+              ],
+              "ru": [
+                "生活上",
+                "в жизни"
+              ],
+              "en": [
+                "生活上",
+                "in daily life"
+              ]
+            },
+            {
+              "uz": [
+                "经济上",
+                "iqtisodiy jihatdan"
+              ],
+              "ru": [
+                "经济上",
+                "в экономическом плане"
+              ],
+              "en": [
+                "经济上",
+                "economically"
+              ]
+            },
+            {
+              "uz": [
+                "思想上",
+                "fikrlash jihatidan"
+              ],
+              "ru": [
+                "思想上",
+                "в плане мышления"
+              ],
+              "en": [
+                "思想上",
+                "in thinking"
+              ]
+            },
+            {
+              "uz": [
+                "技术上",
+                "texnik jihatdan"
+              ],
+              "ru": [
+                "技术上",
+                "в техническом отношении"
+              ],
+              "en": [
+                "技术上",
+                "technically"
+              ]
+            },
+            {
+              "uz": [
+                "语言上",
+                "til jihatidan"
+              ],
+              "ru": [
+                "语言上",
+                "в языковом отношении"
+              ],
+              "en": [
+                "语言上",
+                "in terms of language"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "formula",
+          "uz": "在 + Ot + 上",
+          "ru": "在 + Существительное + 上",
+          "en": "在 + Noun + 上"
+        },
+        {
+          "type": "p",
+          "uz": "→ … ustida (joy)\n→ … bo'yicha / … jihatidan / … sohasida",
+          "ru": "→ на (место)\n→ в отношении / в области / в плане",
+          "en": "→ on (location)\n→ in terms of / regarding / in the area of"
+        },
+        {
+          "type": "note",
+          "uz": "上 har doim ham «ustida» degani emas.\nKo'pincha u «… jihatidan», «… bo'yicha» yoki «… sohasida» ma'nosini bildiradi.",
+          "ru": "上 не всегда означает «на».\nОчень часто оно переводится как «в отношении», «в плане» или «в области».",
+          "en": "上 does not always mean “on”.\nIt often means “in terms of”, “regarding”, or “with respect to”."
+        }
+      ]
     }
   ]
 }
