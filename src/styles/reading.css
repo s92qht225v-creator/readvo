@@ -13379,28 +13379,30 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
-  height: 78px;
-  overflow-y: auto;
-  /* `safe` keeps the top reachable when the text overflows — plain centring in
-     a flex box pushes the first line above the scrollable area. */
-  align-items: safe center;
+  /* Exactly the hero's footprint: same 175px, same full-bleed. It replaces the
+     hero, so it occupies the space the eye already expects — and at that height
+     every translation in the corpus fits without scrolling or truncating. */
+  height: 175px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   /* Climb back out of the body's top padding so the bar starts at the very top
      of the reader. The lines below keep that padding — only the bar cancels it. */
   margin-top: calc(-1 * var(--dr-body-pt, 30px));
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 6px 12px;
+  padding: 12px 20px;
   margin-bottom: 8px;
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-bottom: 1px solid #eee;
-  border-radius: 0 0 6px 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .dr-trbar__text {
   margin: 0;
+  max-width: 900px;
   font-size: 0.95em;
   line-height: 1.45;
   color: #666;
