@@ -1377,6 +1377,189 @@
           "en": "刚 → focuses on the action having only just happened.\n刚才 → names the recent point in time itself: “just now”."
         }
       ]
+    },
+    {
+      "slug": "jishi-ye",
+      "title": "即使……也……",
+      "pinyin": "jíshǐ… yě…",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "即使……也…… qolipi «hatto…, baribir…», «garchi…, baribir…» yoki «… bo'lsa ham…» ma'nosini bildiradi.",
+          "ru": "Конструкция 即使……也…… означает «даже если…», «пусть даже…» или «даже … всё равно…».",
+          "en": "即使……也…… means “even if…”, “even though…”, or “even… still…”."
+        },
+        {
+          "type": "p",
+          "uz": "U shartga qaramay natija o'zgarmasligini ifodalaydi. Ko'pincha taxminiy holat uchun ishlatiladi, ammo allaqachon mavjud yoki sodir bo'lgan haqiqiy holatni ham ta'kidlashi mumkin.",
+          "ru": "Она показывает, что результат не изменится, несмотря на условие. Чаще всего используется для гипотетических ситуаций, но может описывать и реальные.",
+          "en": "It expresses that the result stays unchanged despite the condition. It is most often used for hypothetical situations, but it can also describe a real situation that already exists."
+        },
+        {
+          "type": "p",
+          "uz": "Ikkinchi gapda odatda 也 ishlatiladi.",
+          "ru": "Во второй части предложения обычно используется 也.",
+          "en": "The second clause is usually introduced by 也."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "即使 + A，也 + B",
+          "ru": "即使 + A，也 + B",
+          "en": "即使 + A，也 + B"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 即使 + A，也 + B",
+          "ru": "Подлежащее + 即使 + A，也 + B",
+          "en": "Subject + 即使 + A，也 + B"
+        },
+        {
+          "type": "p",
+          "uz": "即使 birinchi gapda egadan oldin ham, keyin ham kelishi mumkin.",
+          "ru": "即使 может стоять как перед подлежащим, так и после него.",
+          "en": "即使 may appear either before or after the subject of the first clause."
+        },
+        {
+          "type": "h",
+          "uz": "Taxminiy holat",
+          "ru": "Гипотетическая ситуация",
+          "en": "Hypothetical situation"
+        },
+        {
+          "type": "ex",
+          "zh": "即使下雨，我们也去。",
+          "py": "Jíshǐ xiàyǔ, wǒmen yě qù.",
+          "uz": "Hatto yomg'ir yog'sa ham, biz boramiz.",
+          "ru": "Даже если пойдёт дождь, мы всё равно пойдём.",
+          "en": "Even if it rains, we'll go."
+        },
+        {
+          "type": "ex",
+          "zh": "即使很贵，我也要买。",
+          "py": "Jíshǐ hěn guì, wǒ yě yào mǎi.",
+          "uz": "Hatto juda qimmat bo'lsa ham, men uni sotib olaman.",
+          "ru": "Даже если это дорого, я всё равно куплю.",
+          "en": "Even if it's expensive, I'll buy it."
+        },
+        {
+          "type": "h",
+          "uz": "即使 ning o'rni",
+          "ru": "Положение 即使",
+          "en": "Position of 即使"
+        },
+        {
+          "type": "ex",
+          "zh": "即使他不同意，我也会去。",
+          "py": "Jíshǐ tā bù tóngyì, wǒ yě huì qù.",
+          "uz": "Hatto u rozi bo'lmasa ham, men baribir boraman.",
+          "ru": "Даже если он не согласится, я всё равно пойду.",
+          "en": "Even if he doesn't agree, I'll still go."
+        },
+        {
+          "type": "ex",
+          "zh": "他即使不同意，我也会去。",
+          "py": "Tā jíshǐ bù tóngyì, wǒ yě huì qù.",
+          "uz": "U rozi bo'lmasa ham, men baribir boraman.",
+          "ru": "Даже если он не согласится, я всё равно пойду.",
+          "en": "Even if he doesn't agree, I'll still go."
+        },
+        {
+          "type": "note",
+          "uz": "Ikkala gapning ma'nosi bir xil.",
+          "ru": "Оба варианта имеют одинаковое значение.",
+          "en": "Both sentences mean the same thing."
+        },
+        {
+          "type": "h",
+          "uz": "Haqiqiy holatni ta'kidlash",
+          "ru": "Реальная ситуация",
+          "en": "Real situations"
+        },
+        {
+          "type": "p",
+          "uz": "Ba'zan 即使 allaqachon mavjud bo'lgan yoki sodir bo'lgan holatni ta'kidlaydi.",
+          "ru": "即使 также может подчёркивать уже существующую или реальную ситуацию.",
+          "en": "即使 can also emphasize a real situation that already exists."
+        },
+        {
+          "type": "ex",
+          "zh": "你应该多回家看看老人，即使只是跟他们吃吃饭、聊聊天，他们也会觉得很幸福。",
+          "py": "Nǐ yīnggāi duō huí jiā kànkan lǎorén, jíshǐ zhǐshì gēn tāmen chīchi fàn, liáoliao tiān, tāmen yě huì juéde hěn xìngfú.",
+          "uz": "Uyga ko'proq borib, ota-onangizni ko'rib turing. Hatto ular bilan faqat birga ovqatlanib yoki suhbatlashsangiz ham, ular o'zlarini baxtli his qilishadi.",
+          "ru": "Тебе стоит чаще навещать родителей. Даже если вы просто поедите вместе или немного поговорите, они будут очень счастливы.",
+          "en": "You should visit your parents more often. Even if you only have a meal or chat with them, they'll still feel very happy."
+        },
+        {
+          "type": "h",
+          "uz": "Yana misollar",
+          "ru": "Ещё примеры",
+          "en": "More examples"
+        },
+        {
+          "type": "ex",
+          "zh": "大部分人每天晚上最少应该睡7个小时，但有些人即使只睡5个小时也没问题。",
+          "py": "Dàbùfèn rén měi tiān wǎnshang zuìshǎo yīnggāi shuì qī gè xiǎoshí, dàn yǒuxiē rén jíshǐ zhǐ shuì wǔ gè xiǎoshí yě méi wèntí.",
+          "uz": "Aksariyat odamlar har kecha kamida 7 soat uxlashi kerak, ammo ba'zi odamlar hatto atigi 5 soat uxlasa ham muammo bo'lmaydi.",
+          "ru": "Большинству людей следует спать не менее семи часов, но некоторые чувствуют себя нормально, даже если спят всего пять часов.",
+          "en": "Most people should sleep at least seven hours a night, but some are fine even if they sleep only five."
+        },
+        {
+          "type": "ex",
+          "zh": "浪漫是即使晚上加班到零点，到家时，自己家里也还亮着灯。",
+          "py": "Làngmàn shì jíshǐ wǎnshang jiābān dào língdiǎn, dào jiā shí, zìjǐ jiā lǐ yě hái liàngzhe dēng.",
+          "uz": "Romantika — hatto yarim tungacha ishlasangiz ham, uyga kelganingizda uyingizda hali ham chiroq yonib turganidir.",
+          "ru": "Романтика — это когда после работы до полуночи ты приходишь домой и видишь, что дома всё ещё горит свет.",
+          "en": "Romance is coming home after working until midnight and still seeing the lights on at home."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "formula",
+          "uz": "即使 + A，也 + B",
+          "ru": "即使 + A，也 + B",
+          "en": "即使 + A，也 + B"
+        },
+        {
+          "type": "p",
+          "uz": "→ Hatto A bo'lsa ham, B.",
+          "ru": "→ Даже если A, всё равно B.",
+          "en": "→ Even if A, B still happens."
+        },
+        {
+          "type": "ex",
+          "zh": "即使很累，我也要学习。",
+          "py": "Jíshǐ hěn lèi, wǒ yě yào xuéxí.",
+          "uz": "Hatto juda charchagan bo'lsam ham, o'qishni davom ettiraman.",
+          "ru": "Даже если я очень устал, я всё равно буду учиться.",
+          "en": "Even if I'm very tired, I'll still study."
+        },
+        {
+          "type": "note",
+          "uz": "即使 = hatto … bo'lsa ham\nIkkinchi gapda odatda 也 ishlatiladi.\n即使 egadan oldin ham, keyin ham kelishi mumkin.",
+          "ru": "即使 = «даже если»\nВо второй части предложения обычно используется 也.\n即使 может стоять до или после подлежащего.",
+          "en": "即使 = even if / even though\n也 usually appears in the second clause.\n即使 can be placed before or after the subject."
+        }
+      ]
     }
   ]
 }
