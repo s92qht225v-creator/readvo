@@ -13171,7 +13171,9 @@ body {
   width: 100%;
   padding: 12px 14px;
   border: none;
-  background: transparent;
+  /* No background here — the shared `.hsk__head, .hsk__part` rule above paints
+     it white. This block comes later in the file, so a `transparent` here wins
+     the cascade and the head shows the page's grey through it. */
   font-family: inherit;
   text-align: left;
   cursor: pointer;
