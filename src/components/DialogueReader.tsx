@@ -914,9 +914,10 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                               <RubyText text={activeSentence.text_original} pinyin={activeSentence.pinyin} showPinyin={showPinyin} />
                             </span>
                           </div>
-                          {showTranslation && (
-                            <div className="story__focus-translation">{language === 'ru' ? activeSentence.text_translation_ru : language === 'en' ? (activeSentence.text_translation_en || activeSentence.text_translation) : activeSentence.text_translation}</div>
-                          )}
+                          {/* No translation here on purpose: focus mode is for
+                              working a line out from the Chinese and its full
+                              pinyin. The Tarjima switch is disabled while it is
+                              on, so the state is visible rather than ignored. */}
                         </div>
                       </div>
                       <span className="story__focus-counter">{allSentences.findIndex(s => s.id === displaySentenceId) + 1} / {allSentences.length}</span>
@@ -1067,7 +1068,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                           </span>
                         </div>
                         <div className="dr-ctl__sep" />
-                        <button className={`dr-ctl__item${showTranslation ? ' is-on' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button" aria-pressed={showTranslation}>
+                        <button className={`dr-ctl__item${showTranslation ? ' is-on' : ''}${focusMode ? ' is-disabled' : ''}`} onClick={() => setShowTranslation(v => !v)} type="button" aria-pressed={showTranslation} disabled={focusMode}>
                           <span>{({ uz: 'Tarjima', ru: 'Перевод', en: 'Translation' } as Record<string, string>)[language]}</span><i className="dr-sw" aria-hidden="true" />
                         </button>
                         <button className={`dr-ctl__item${showPinyin ? ' is-on' : ''}`} onClick={() => setShowPinyin(v => !v)} type="button" aria-pressed={showPinyin}>

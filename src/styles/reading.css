@@ -309,7 +309,7 @@ body {
 .grammar-table__cell--header {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 4px;
   padding: var(--spacing-md) var(--spacing-sm);
@@ -1975,7 +1975,9 @@ body {
 }
 
 .story__focus-text {
-  text-align: center;
+  /* Left-aligned and on the dialogue's own rhythm, so moving between the two
+     views doesn't re-set where lines start or how far apart they sit. */
+  text-align: left;
   font-size: 1.5em;
   line-height: 3;
   /* Drives the focus card's height (its only consumer) — the line stays
@@ -13335,6 +13337,8 @@ body {
 .dr-ctl__item.is-on .dr-sw::after { transform: translateX(16px); }
 .dr-ctl__item.is-on span { color: #dc2626; font-weight: 600; }
 .dr-ctl__sep { height: 1px; background: #eee; margin: 6px 0; }
+/* Disabled while focus mode owns the setting — see the reader's focus block. */
+.dr-ctl__item.is-disabled { opacity: 0.4; cursor: default; }
 /* Leaves the reader — same destination as the hero's ‹. Reads as an action, not
    as one more thing to switch on, so it carries no track. */
 .dr-ctl__exit { text-decoration: none; color: #333; }
