@@ -13141,7 +13141,6 @@ body {
 .hsk__item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .hsk__head, .hsk__part {
@@ -13201,9 +13200,12 @@ body {
    aligned the rows with the title but squeezed them into a narrow column with
    a dead gutter beside it — the parts are the content here, so they get the
    card's full width. */
-/* Padding-top only inside the animated area, so a closed lesson collapses to
-   nothing rather than to a sliver of padding. */
-.hsk__parts { padding: 8px 0 0; display: flex; flex-direction: column; gap: 8px; }
+/* No padding or margin on this box: min-height:0 zeroes its content, but
+   padding is not affected by it, so an 8px padding-top left an 8px sliver
+   showing when the lesson was closed. The head-to-first-part space lives on a
+   descendant instead, where overflow:hidden clips it away. */
+.hsk__parts { padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.hsk__part:first-child { margin-top: 8px; }
 
 .hsk__part {
   display: flex;
