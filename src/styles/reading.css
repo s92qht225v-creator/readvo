@@ -13391,7 +13391,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
+  padding: 6px 20px;
   margin-bottom: 8px;
   /* Opaque, not frosted: the dialogue scrolls underneath and even at 0.97 the
      characters read through clearly enough to fight the translation. */

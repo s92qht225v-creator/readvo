@@ -613,7 +613,11 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
       }
       let px = 18;
       el.style.fontSize = `${px}px`;
-      const room = box.clientHeight - 24;   // the bar's 12px top/bottom padding
+      // Reserve only a thin breathing strip, not the full CSS padding: the
+      // padding exists so short text isn't flush against the edges, but for
+      // long text that reserve was triggering a shrink while the band still
+      // had room.
+      const room = box.clientHeight - 12;
       while (px > 12 && el.scrollHeight > room) {
         px -= 0.5;
         el.style.fontSize = `${px}px`;
