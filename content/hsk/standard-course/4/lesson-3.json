@@ -1,0 +1,786 @@
+{
+  "book": "standard-course",
+  "bookTitle": "HSK标准教程",
+  "level": 4,
+  "volume": "上",
+  "unit": 3,
+  "slug": "good-impression",
+  "title": "经理对我印象不错",
+  "pinyin": "Jīnglǐ duì wǒ yìnxiàng bùcuò",
+  "titleTranslation": "Menejerda men haqimda yaxshi taassurot qoldi",
+  "titleTranslation_ru": "У менеджера сложилось обо мне хорошее впечатление",
+  "titleTranslation_en": "The Manager Has a Good Impression of Me",
+  "dateAdded": "2026-08-07",
+  "texts": [
+    {
+      "id": "hsk4-l3-text-1",
+      "slug": "text-1",
+      "label": "课文一",
+      "labelTranslation": "Matn 1",
+      "labelTranslation_ru": "Текст 1",
+      "labelTranslation_en": "Text 1",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "苏打"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l3-text-1-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l3-text-1-s1",
+              "text_original": "你上午的面试怎么样？",
+              "pinyin": "Nǐ shàngwǔ de miànshì zěnmeyàng?",
+              "text_translation": "Ertalabki suhbating qanday o'tdi?",
+              "text_translation_ru": "Как прошло твоё утреннее собеседование?",
+              "text_translation_en": "How did your interview this morning go?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-1-s2",
+              "text_original": "还可以，他们问的问题都挺容易的，就是我有点儿紧张。",
+              "pinyin": "Hái kěyǐ, tāmen wèn de wèntí dōu tǐng róngyì de, jiùshì wǒ yǒudiǎnr jǐnzhāng.",
+              "text_translation": "Yomon emas. Savollari ancha oson edi, faqat men biroz hayajonlandim.",
+              "text_translation_ru": "Неплохо. Вопросы были довольно лёгкими, только я немного волновался.",
+              "text_translation_en": "Not bad. The questions were pretty easy — I was just a bit nervous.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-1-s3",
+              "text_original": "面试的时候，一定要对自己有信心，要相信自己的能力。",
+              "pinyin": "Miànshì de shíhou, yīdìng yào duì zìjǐ yǒu xìnxīn, yào xiāngxìn zìjǐ de nénglì.",
+              "text_translation": "Suhbat paytida o'zingga ishonishing, imkoniyatlaringga ishonishing kerak.",
+              "text_translation_ru": "На собеседовании обязательно нужно быть уверенным в себе и верить в свои способности.",
+              "text_translation_en": "In an interview you must be confident and believe in your own ability.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-1-s4",
+              "text_original": "你说的对！",
+              "pinyin": "Nǐ shuō de duì!",
+              "text_translation": "To'g'ri aytasan!",
+              "text_translation_ru": "Ты прав!",
+              "text_translation_en": "You're right!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-1-s5",
+              "text_original": "三月十五号上午八点在学校体育馆还有一个招聘会，你去吗？",
+              "pinyin": "Sān yuè shíwǔ hào shàngwǔ bā diǎn zài xuéxiào tǐyùguǎn hái yǒu yī gè zhāopìnhuì, nǐ qù ma?",
+              "text_translation": "O'n beshinchi mart kuni ertalab soat sakkizda maktab sport zalida yana bir ish yarmarkasi bo'ladi — borasanmi?",
+              "text_translation_ru": "Пятнадцатого марта в восемь утра в university спортзале будет ещё одна ярмарка вакансий — пойдёшь?",
+              "text_translation_en": "There's another job fair on 15 March at eight in the morning in the school gym — are you going?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-1-s6",
+              "text_original": "我还没决定呢。",
+              "pinyin": "Wǒ hái méi juédìng ne.",
+              "text_translation": "Hali hal qilganim yo'q.",
+              "text_translation_ru": "Я ещё не решил.",
+              "text_translation_en": "I haven't decided yet.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-1-s7",
+              "text_original": "听说这次招聘会提供的工作机会很多，我们一起去看看吧。",
+              "pinyin": "Tīngshuō zhè cì zhāopìnhuì tígōng de gōngzuò jīhuì hěn duō, wǒmen yīqǐ qù kànkan ba.",
+              "text_translation": "Eshitishimcha, bu safargi yarmarka juda ko'p ish o'rni taklif qilarkan — birga borib ko'raylik.",
+              "text_translation_ru": "Говорят, на этой ярмарке предлагают много вакансий — давай сходим вместе.",
+              "text_translation_en": "I hear this fair offers a lot of job openings — let's go and have a look together.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "挺",
+          "py": "tǐng",
+          "uz": "ancha, juda",
+          "ru": "довольно, весьма",
+          "en": "quite, rather"
+        },
+        {
+          "zh": "紧张",
+          "py": "jǐnzhāng",
+          "uz": "hayajonlanmoq; zich (vaqt)",
+          "ru": "волноваться; напряжённый",
+          "en": "nervous; tight (schedule)"
+        },
+        {
+          "zh": "信心",
+          "py": "xìnxīn",
+          "uz": "ishonch",
+          "ru": "уверенность",
+          "en": "confidence"
+        },
+        {
+          "zh": "能力",
+          "py": "nénglì",
+          "uz": "qobiliyat, imkoniyat",
+          "ru": "способность",
+          "en": "ability"
+        },
+        {
+          "zh": "招聘",
+          "py": "zhāopìn",
+          "uz": "ishga qabul qilmoq",
+          "ru": "набирать сотрудников",
+          "en": "to recruit"
+        },
+        {
+          "zh": "提供",
+          "py": "tígōng",
+          "uz": "taqdim etmoq, taklif qilmoq",
+          "ru": "предоставлять",
+          "en": "to provide, to offer"
+        },
+        {
+          "zh": "小雨",
+          "py": "Xiǎo Yǔ",
+          "uz": "Syao Yuy (ism)",
+          "ru": "Сяо Юй (имя)",
+          "en": "Xiao Yu (name)"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l3-text-2",
+      "slug": "text-2",
+      "label": "课文二",
+      "labelTranslation": "Matn 2",
+      "labelTranslation_ru": "Текст 2",
+      "labelTranslation_en": "Text 2",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦",
+        "B": "茉莉"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l3-text-2-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l3-text-2-s1",
+              "text_original": "小林，这次招聘不是小李负责吗？",
+              "pinyin": "Xiǎo Lín, zhè cì zhāopìn bù shì Xiǎo Lǐ fùzé ma?",
+              "text_translation": "Syao Lin, bu safargi ishga qabul uchun Syao Li javobgar emasmidi?",
+              "text_translation_ru": "Сяо Линь, разве не Сяо Ли отвечал за этот набор?",
+              "text_translation_en": "Xiao Lin, wasn't Xiao Li in charge of this recruitment?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-2-s2",
+              "text_original": "本来是小李负责的，但是他突然生病住院了，所以就交给我来做了。",
+              "pinyin": "Běnlái shì Xiǎo Lǐ fùzé de, dànshì tā tūrán shēngbìng zhùyuàn le, suǒyǐ jiù jiāo gěi wǒ lái zuò le.",
+              "text_translation": "Aslida Syao Li javobgar edi, lekin u to'satdan kasal bo'lib kasalxonaga yotdi, shuning uchun bu ish menga topshirildi.",
+              "text_translation_ru": "Изначально отвечал Сяо Ли, но он внезапно заболел и лёг в больницу, поэтому это поручили мне.",
+              "text_translation_en": "Xiao Li was originally in charge, but he suddenly fell ill and was hospitalised, so it was handed to me.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-2-s3",
+              "text_original": "哦，这次应聘的人多吗？",
+              "pinyin": "Ó, zhè cì yìngpìn de rén duō ma?",
+              "text_translation": "Ha-a, bu safar nomzodlar ko'pmi?",
+              "text_translation_ru": "А, много ли в этот раз соискателей?",
+              "text_translation_en": "I see — were there many applicants this time?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-2-s4",
+              "text_original": "经理，这次来应聘的一共有十五人。",
+              "pinyin": "Jīnglǐ, zhè cì lái yìngpìn de yīgòng yǒu shíwǔ rén.",
+              "text_translation": "Menejer, bu safar hammasi bo'lib o'n besh kishi nomzodlik uchun keldi.",
+              "text_translation_ru": "Господин менеджер, в этот раз пришло всего пятнадцать соискателей.",
+              "text_translation_en": "Manager, fifteen people applied this time.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-2-s5",
+              "text_original": "经过笔试和面试，有两个不错。",
+              "pinyin": "Jīngguò bǐshì hé miànshì, yǒu liǎng gè bùcuò.",
+              "text_translation": "Yozma imtihon va suhbatdan so'ng ikkitasi yaxshi chiqdi.",
+              "text_translation_ru": "После письменного экзамена и собеседования двое оказались хорошими.",
+              "text_translation_en": "After the written test and the interviews, two were good.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-2-s6",
+              "text_original": "这是他们的材料，您看看。",
+              "pinyin": "Zhè shì tāmen de cáiliào, nín kànkan.",
+              "text_translation": "Mana ularning hujjatlari, ko'rib chiqing.",
+              "text_translation_ru": "Вот их документы, посмотрите.",
+              "text_translation_en": "Here are their documents — please have a look.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-2-s7",
+              "text_original": "这两个人的能力都比较符合我们的要求。",
+              "pinyin": "Zhè liǎng gè rén de nénglì dōu bǐjiào fúhé wǒmen de yāoqiú.",
+              "text_translation": "Bu ikkovining qobiliyati talablarimizga ancha mos keladi.",
+              "text_translation_ru": "Способности обоих вполне соответствуют нашим требованиям.",
+              "text_translation_en": "Both of them meet our requirements fairly well.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-2-s8",
+              "text_original": "你通知他们下周一上午九点来我办公室吧。",
+              "pinyin": "Nǐ tōngzhī tāmen xià zhōuyī shàngwǔ jiǔ diǎn lái wǒ bàngōngshì ba.",
+              "text_translation": "Ularga xabar ber, kelasi dushanba ertalab soat to'qqizda kabinetimga kelishsin.",
+              "text_translation_ru": "Сообщи им, чтобы в следующий понедельник в девять утра пришли ко мне в кабинет.",
+              "text_translation_en": "Let them know to come to my office at nine next Monday morning.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-2-s9",
+              "text_original": "好的，那我马上跟他们联系。",
+              "pinyin": "Hǎo de, nà wǒ mǎshàng gēn tāmen liánxì.",
+              "text_translation": "Xo'p, hoziroq ular bilan bog'lanaman.",
+              "text_translation_ru": "Хорошо, я сейчас же с ними свяжусь.",
+              "text_translation_en": "All right, I'll contact them right away.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "负责",
+          "py": "fùzé",
+          "uz": "javobgar bo'lmoq",
+          "ru": "отвечать за, нести ответственность",
+          "en": "to be in charge of"
+        },
+        {
+          "zh": "本来",
+          "py": "běnlái",
+          "uz": "aslida, dastlab",
+          "ru": "изначально, вообще-то",
+          "en": "originally, actually"
+        },
+        {
+          "zh": "应聘",
+          "py": "yìngpìn",
+          "uz": "ishga nomzod bo'lmoq",
+          "ru": "претендовать на должность",
+          "en": "to apply for a job"
+        },
+        {
+          "zh": "材料",
+          "py": "cáiliào",
+          "uz": "hujjat, material",
+          "ru": "документы, материалы",
+          "en": "documents, materials"
+        },
+        {
+          "zh": "符合",
+          "py": "fúhé",
+          "uz": "mos kelmoq",
+          "ru": "соответствовать",
+          "en": "to meet, to conform to"
+        },
+        {
+          "zh": "通知",
+          "py": "tōngzhī",
+          "uz": "xabar bermoq; xabarnoma",
+          "ru": "сообщать; уведомление",
+          "en": "to notify; notice"
+        },
+        {
+          "zh": "马",
+          "py": "Mǎ",
+          "uz": "Ma (familiya)",
+          "ru": "Ма (фамилия)",
+          "en": "Ma (surname)"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l3-text-3",
+      "slug": "text-3",
+      "label": "课文三",
+      "labelTranslation": "Matn 3",
+      "labelTranslation_ru": "Текст 3",
+      "labelTranslation_en": "Text 3",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦",
+        "B": "茉莉"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l3-text-3-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l3-text-3-s1",
+              "text_original": "王静，好久不见了！",
+              "pinyin": "Wáng Jìng, hǎojiǔ bù jiàn le!",
+              "text_translation": "Van Tszin, ko'rishmaganimizga ancha bo'ldi!",
+              "text_translation_ru": "Ван Цзин, давно не виделись!",
+              "text_translation_en": "Wang Jing, long time no see!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-3-s2",
+              "text_original": "大学毕业后就没联系了，你现在在哪儿工作呢？",
+              "pinyin": "Dàxué bìyè hòu jiù méi liánxì le, nǐ xiànzài zài nǎr gōngzuò ne?",
+              "text_translation": "Universitetni bitirganimizdan keyin bog'lanmadik — hozir qayerda ishlaysan?",
+              "text_translation_ru": "После университета мы не общались — где ты сейчас работаешь?",
+              "text_translation_en": "We lost touch after graduating — where are you working now?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-3-s3",
+              "text_original": "我一毕业就去上海当律师了。",
+              "pinyin": "Wǒ yī bìyè jiù qù Shànghǎi dāng lǜshī le.",
+              "text_translation": "Bitirishim bilanoq Shanxayga borib advokat bo'ldim.",
+              "text_translation_ru": "Сразу после выпуска я уехала в Шанхай и стала юристом.",
+              "text_translation_en": "As soon as I graduated I went to Shanghai to work as a lawyer.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-3-s4",
+              "text_original": "你对现在的工作一定非常满意吧？",
+              "pinyin": "Nǐ duì xiànzài de gōngzuò yīdìng fēicháng mǎnyì ba?",
+              "text_translation": "Hozirgi ishingdan juda mamnundirsan?",
+              "text_translation_ru": "Ты, наверное, очень довольна нынешней работой?",
+              "text_translation_en": "You must be very satisfied with your job?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-3-s5",
+              "text_original": "我很喜欢现在的工作，因为我学的就是法律专业，而且同事们都很喜欢我。",
+              "pinyin": "Wǒ hěn xǐhuan xiànzài de gōngzuò, yīnwèi wǒ xué de jiù shì fǎlǜ zhuānyè, érqiě tóngshìmen dōu hěn xǐhuan wǒ.",
+              "text_translation": "Hozirgi ishimni juda yoqtiraman, chunki men aynan huquq yo'nalishida o'qiganman, ustiga-ustak hamkasblarim ham meni yaxshi ko'rishadi.",
+              "text_translation_ru": "Мне очень нравится нынешняя работа: я как раз училась на юриста, к тому же коллеги меня любят.",
+              "text_translation_en": "I really like my job — law is exactly what I studied, and my colleagues all like me.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-3-s6",
+              "text_original": "另外，收入也不错。",
+              "pinyin": "Lìngwài, shōurù yě bùcuò.",
+              "text_translation": "Bundan tashqari, daromad ham yomon emas.",
+              "text_translation_ru": "Кроме того, и доход неплохой.",
+              "text_translation_en": "Besides, the income is good too.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-3-s7",
+              "text_original": "星期天咱们同学聚会，你能来参加吗？",
+              "pinyin": "Xīngqītiān zánmen tóngxué jùhuì, nǐ néng lái cānjiā ma?",
+              "text_translation": "Yakshanba kuni sinfdoshlar uchrashuvimiz bor — kela olasanmi?",
+              "text_translation_ru": "В воскресенье у нас встреча одноклассников — сможешь прийти?",
+              "text_translation_en": "We're having a class reunion on Sunday — can you come?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-3-s8",
+              "text_original": "能来。",
+              "pinyin": "Néng lái.",
+              "text_translation": "Kela olaman.",
+              "text_translation_ru": "Смогу.",
+              "text_translation_en": "Yes, I can.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l3-text-3-s9",
+              "text_original": "虽然这次来北京，时间安排得很紧张，但我一定借这次机会去跟大家见见面。",
+              "pinyin": "Suīrán zhè cì lái Běijīng, shíjiān ānpái de hěn jǐnzhāng, dàn wǒ yīdìng jiè zhè cì jīhuì qù gēn dàjiā jiànjian miàn.",
+              "text_translation": "Bu safar Pekinga kelganimda vaqtim juda zich bo'lsa ham, shu imkoniyatdan foydalanib hamma bilan albatta uchrashaman.",
+              "text_translation_ru": "Хотя в этот приезд в Пекин у меня очень плотный график, я обязательно воспользуюсь случаем и повидаюсь со всеми.",
+              "text_translation_en": "Although my schedule in Beijing is very tight this time, I'll certainly take the chance to see everyone.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "律师",
+          "py": "lǜshī",
+          "uz": "advokat, yurist",
+          "ru": "юрист, адвокат",
+          "en": "lawyer"
+        },
+        {
+          "zh": "专业",
+          "py": "zhuānyè",
+          "uz": "mutaxassislik, yo'nalish",
+          "ru": "специальность",
+          "en": "major, speciality"
+        },
+        {
+          "zh": "另外",
+          "py": "lìngwài",
+          "uz": "bundan tashqari",
+          "ru": "кроме того",
+          "en": "besides, in addition"
+        },
+        {
+          "zh": "收入",
+          "py": "shōurù",
+          "uz": "daromad",
+          "ru": "доход",
+          "en": "income"
+        },
+        {
+          "zh": "咱们",
+          "py": "zánmen",
+          "uz": "biz (suhbatdoshni ham qo'shib)",
+          "ru": "мы (с тобой)",
+          "en": "we (including you)"
+        },
+        {
+          "zh": "安排",
+          "py": "ānpái",
+          "uz": "rejalashtirmoq; tartib",
+          "ru": "планировать; расписание",
+          "en": "to arrange; arrangement"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l3-text-4",
+      "slug": "text-4",
+      "label": "课文四",
+      "labelTranslation": "Matn 4",
+      "labelTranslation_ru": "Текст 4",
+      "labelTranslation_en": "Text 4",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l3-text-4-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l3-text-4-s1",
+              "text_original": "面试的时候，经理对我印象不错，还通知我明天就可以上班了。",
+              "pinyin": "Miànshì de shíhou, jīnglǐ duì wǒ yìnxiàng bùcuò, hái tōngzhī wǒ míngtiān jiù kěyǐ shàngbān le.",
+              "text_translation": "Suhbat paytida menejerda men haqimda yaxshi taassurot qoldi, hatto ertadanoq ishga chiqishim mumkinligini aytdi.",
+              "text_translation_ru": "На собеседовании у менеджера сложилось обо мне хорошее впечатление, и он сообщил, что завтра я уже могу выходить на работу.",
+              "text_translation_en": "At the interview the manager had a good impression of me, and even told me I could start work tomorrow.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-4-s2",
+              "text_original": "真没想到，找工作这么顺利。",
+              "pinyin": "Zhēn méi xiǎngdào, zhǎo gōngzuò zhème shùnlì.",
+              "text_translation": "Ish topish shunchalik oson kechishini kutmagandim.",
+              "text_translation_ru": "Вот уж не думал, что поиск работы пройдёт так гладко.",
+              "text_translation_en": "I never expected job-hunting to go so smoothly.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-4-s3",
+              "text_original": "你想知道面试需要注意什么吗？",
+              "pinyin": "Nǐ xiǎng zhīdào miànshì xūyào zhùyì shénme ma?",
+              "text_translation": "Suhbatda nimalarga e'tibor berish kerakligini bilmoqchimisan?",
+              "text_translation_ru": "Хочешь узнать, на что нужно обращать внимание на собеседовании?",
+              "text_translation_en": "Would you like to know what to pay attention to in an interview?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-4-s4",
+              "text_original": "首先，要穿正式的衣服，这会给面试者留下一个好的印象，让他觉得你是一个认真的人。",
+              "pinyin": "Shǒuxiān, yào chuān zhèngshì de yīfu, zhè huì gěi miànshìzhě liúxià yī gè hǎo de yìnxiàng, ràng tā juéde nǐ shì yī gè rènzhēn de rén.",
+              "text_translation": "Avvalo, rasmiy kiyim kiyish kerak — bu suhbat oluvchida yaxshi taassurot qoldiradi va sizni jiddiy odam deb o'ylashiga sabab bo'ladi.",
+              "text_translation_ru": "Во-первых, нужно надеть официальную одежду: это оставит у интервьюера хорошее впечатление и покажет, что вы серьёзный человек.",
+              "text_translation_en": "First, wear formal clothes — this leaves the interviewer with a good impression and makes them see you as a serious person.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-4-s5",
+              "text_original": "其次，应聘时不要紧张。",
+              "pinyin": "Qícì, yìngpìn shí bùyào jǐnzhāng.",
+              "text_translation": "Ikkinchidan, suhbat paytida hayajonlanmang.",
+              "text_translation_ru": "Во-вторых, не волнуйтесь во время собеседования.",
+              "text_translation_en": "Second, don't be nervous during the interview.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-4-s6",
+              "text_original": "回答问题时，说得不要太快，声音也不要太小，要相信自己有能力做好。",
+              "pinyin": "Huídá wèntí shí, shuō de bùyào tài kuài, shēngyīn yě bùyào tài xiǎo, yào xiāngxìn zìjǐ yǒu nénglì zuòhǎo.",
+              "text_translation": "Savollarga javob berayotganda juda tez gapirmang, ovozingiz ham juda past bo'lmasin — buni uddalay olishingizga ishoning.",
+              "text_translation_ru": "Отвечая на вопросы, не говорите слишком быстро и не слишком тихо — верьте, что вы способны справиться.",
+              "text_translation_en": "When answering questions, don't speak too fast or too quietly, and believe you're capable of doing well.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-4-s7",
+              "text_original": "当然，最重要的是回答问题要诚实。",
+              "pinyin": "Dāngrán, zuì zhòngyào de shì huídá wèntí yào chéngshí.",
+              "text_translation": "Albatta, eng muhimi — savollarga rostgo'ylik bilan javob berish.",
+              "text_translation_ru": "И, конечно, самое главное — отвечать честно.",
+              "text_translation_en": "And of course, the most important thing is to answer honestly.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "首先",
+          "py": "shǒuxiān",
+          "uz": "avvalo, birinchidan",
+          "ru": "прежде всего, во-первых",
+          "en": "first of all"
+        },
+        {
+          "zh": "正式",
+          "py": "zhèngshì",
+          "uz": "rasmiy",
+          "ru": "официальный, формальный",
+          "en": "formal, official"
+        },
+        {
+          "zh": "留",
+          "py": "liú",
+          "uz": "qoldirmoq",
+          "ru": "оставлять",
+          "en": "to leave (behind)"
+        },
+        {
+          "zh": "其次",
+          "py": "qícì",
+          "uz": "ikkinchidan",
+          "ru": "во-вторых",
+          "en": "secondly, next"
+        },
+        {
+          "zh": "诚实",
+          "py": "chéngshí",
+          "uz": "halol, rostgo'y",
+          "ru": "честный",
+          "en": "honest"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l3-text-5",
+      "slug": "text-5",
+      "label": "课文五",
+      "labelTranslation": "Matn 5",
+      "labelTranslation_ru": "Текст 5",
+      "labelTranslation_en": "Text 5",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l3-text-5-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l3-text-5-s1",
+              "text_original": "第一印象就是在第一次见面时给别人留下的印象。",
+              "pinyin": "Dì-yī yìnxiàng jiù shì zài dì-yī cì jiànmiàn shí gěi biérén liúxià de yìnxiàng.",
+              "text_translation": "Birinchi taassurot — bu birinchi uchrashuvda boshqalarda qoldirgan taassurotingiz.",
+              "text_translation_ru": "Первое впечатление — это то впечатление, которое вы производите на других при первой встрече.",
+              "text_translation_en": "A first impression is the impression you leave on someone when you first meet.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-5-s2",
+              "text_original": "虽然第一印象不总是对的，但如果想改变却很困难。",
+              "pinyin": "Suīrán dì-yī yìnxiàng bù zǒngshì duì de, dàn rúguǒ xiǎng gǎibiàn què hěn kùnnan.",
+              "text_translation": "Birinchi taassurot har doim ham to'g'ri bo'lavermaydi, ammo uni o'zgartirmoqchi bo'lsangiz — bu juda qiyin.",
+              "text_translation_ru": "Хотя первое впечатление не всегда верное, изменить его очень трудно.",
+              "text_translation_en": "A first impression isn't always accurate, yet changing it is very difficult.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-5-s3",
+              "text_original": "你给别人的第一印象会影响他们以后对你的感觉和判断。",
+              "pinyin": "Nǐ gěi biérén de dì-yī yìnxiàng huì yǐngxiǎng tāmen yǐhòu duì nǐ de gǎnjué hé pànduàn.",
+              "text_translation": "Boshqalarda qoldirgan birinchi taassurotingiz ularning keyingi his-tuyg'ulari va sizga bergan bahosiga ta'sir qiladi.",
+              "text_translation_ru": "Первое впечатление влияет на то, как люди будут воспринимать и оценивать вас в дальнейшем.",
+              "text_translation_en": "The first impression you give affects how people feel about and judge you later.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-5-s4",
+              "text_original": "所以，给第一次见面的同事留下好的印象，以后的工作可能会更顺利；给第一次见面的顾客留下好的印象，你可能会卖出更多的东西。",
+              "pinyin": "Suǒyǐ, gěi dì-yī cì jiànmiàn de tóngshì liúxià hǎo de yìnxiàng, yǐhòu de gōngzuò kěnéng huì gèng shùnlì; gěi dì-yī cì jiànmiàn de gùkè liúxià hǎo de yìnxiàng, nǐ kěnéng huì mài chū gèng duō de dōngxi.",
+              "text_translation": "Shuning uchun ilk bor uchrashgan hamkasbingizda yaxshi taassurot qoldirsangiz, keyingi ishingiz osonroq kechishi mumkin; ilk bor uchrashgan mijozda yaxshi taassurot qoldirsangiz, ko'proq mahsulot sotishingiz mumkin.",
+              "text_translation_ru": "Поэтому если вы произведёте хорошее впечатление на коллегу при первой встрече, дальнейшая работа может пойти легче; а на клиента — вы, возможно, продадите больше.",
+              "text_translation_en": "So if you leave a good impression on a colleague you're meeting for the first time, work may go more smoothly afterwards; leave a good impression on a new customer and you may sell more.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-5-s5",
+              "text_original": "但是，如果第一次见面给别人留下像不准时这样的坏印象，那么以后就很难让别人相信你。",
+              "pinyin": "Dànshì, rúguǒ dì-yī cì jiànmiàn gěi biérén liúxià xiàng bù zhǔnshí zhèyàng de huài yìnxiàng, nàme yǐhòu jiù hěn nán ràng biérén xiāngxìn nǐ.",
+              "text_translation": "Ammo birinchi uchrashuvda vaqtida kelmaslik kabi yomon taassurot qoldirsangiz, keyin boshqalarni o'zingizga ishontirish qiyin bo'ladi.",
+              "text_translation_ru": "Но если при первой встрече вы оставите плохое впечатление — например, опоздаете, — потом будет очень трудно заслужить доверие.",
+              "text_translation_en": "But if you leave a bad impression at the first meeting — being late, for instance — it will be hard to win people's trust afterwards.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-text-5-s6",
+              "text_original": "所以不管是上课、上班，还是与别人约会，准时都非常重要。",
+              "pinyin": "Suǒyǐ bùguǎn shì shàngkè, shàngbān, háishì yǔ biérén yuēhuì, zhǔnshí dōu fēicháng zhòngyào.",
+              "text_translation": "Shuning uchun darsga, ishga yoki uchrashuvga bo'ladimi — o'z vaqtida yetib borish juda muhim.",
+              "text_translation_ru": "Поэтому идёте ли вы на занятия, на работу или на встречу — пунктуальность очень важна.",
+              "text_translation_en": "So whether it's class, work, or meeting someone, being on time matters a great deal.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "改变",
+          "py": "gǎibiàn",
+          "uz": "o'zgartirmoq, o'zgarmoq",
+          "ru": "менять, изменяться",
+          "en": "to change"
+        },
+        {
+          "zh": "感觉",
+          "py": "gǎnjué",
+          "uz": "his, tuyg'u; his qilmoq",
+          "ru": "чувство; чувствовать",
+          "en": "feeling; to feel"
+        },
+        {
+          "zh": "判断",
+          "py": "pànduàn",
+          "uz": "baho, hukm; baholamoq",
+          "ru": "суждение; судить",
+          "en": "judgement; to judge"
+        },
+        {
+          "zh": "顾客",
+          "py": "gùkè",
+          "uz": "mijoz, xaridor",
+          "ru": "клиент, покупатель",
+          "en": "customer"
+        },
+        {
+          "zh": "准时",
+          "py": "zhǔnshí",
+          "uz": "o'z vaqtida",
+          "ru": "вовремя, пунктуально",
+          "en": "on time, punctual"
+        },
+        {
+          "zh": "不管",
+          "py": "bùguǎn",
+          "uz": "…bo'ladimi, qat'i nazar",
+          "ru": "независимо от того",
+          "en": "no matter, regardless"
+        },
+        {
+          "zh": "与",
+          "py": "yǔ",
+          "uz": "va, bilan",
+          "ru": "и, с",
+          "en": "and, with"
+        },
+        {
+          "zh": "约会",
+          "py": "yuēhuì",
+          "uz": "uchrashuv",
+          "ru": "встреча, свидание",
+          "en": "appointment, date"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l3-culture",
+      "slug": "culture",
+      "label": "文化",
+      "labelTranslation": "Madaniyat",
+      "labelTranslation_ru": "Культура",
+      "labelTranslation_en": "Culture",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l3-culture-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l3-culture-s1",
+              "text_original": "中山装和旗袍分别是中国男士和女士的传统正式服装。",
+              "pinyin": "Zhōngshānzhuāng hé qípáo fēnbié shì Zhōngguó nánshì hé nǚshì de chuántǒng zhèngshì fúzhuāng.",
+              "text_translation": "Chjunshan kostyumi va sipao — mos ravishda Xitoy erkaklari va ayollarining an'anaviy rasmiy kiyimi.",
+              "text_translation_ru": "Френч Сунь Ятсена и ципао — традиционная официальная одежда китайских мужчин и женщин соответственно.",
+              "text_translation_en": "The Chinese tunic suit and the cheongsam are the traditional formal dress of Chinese men and women respectively.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-culture-s2",
+              "text_original": "“中山装”是中国民主革命的开拓者孙中山先生综合了西式服装与中式服装的特点设计出来的。",
+              "pinyin": "Zhōngshānzhuāng shì Zhōngguó mínzhǔ gémìng de kāità zhě Sūn Zhōngshān xiānsheng zōnghé le xīshì fúzhuāng yǔ zhōngshì fúzhuāng de tèdiǎn shèjì chūlái de.",
+              "text_translation": "«Chjunshan kostyumi»ni Xitoy demokratik inqilobining asoschisi Sun Yatsen G'arb va Xitoy kiyimlarining xususiyatlarini birlashtirib yaratgan.",
+              "text_translation_ru": "«Френч Сунь Ятсена» создал зачинатель китайской демократической революции Сунь Ятсен, соединив черты западной и китайской одежды.",
+              "text_translation_en": "The tunic suit was designed by Sun Yat-sen, pioneer of China's democratic revolution, combining features of Western and Chinese dress.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-culture-s3",
+              "text_original": "它的直翻领代表孙中山严谨的治国理念，四个口袋代表中国四种传统的道德思想，即礼、义、廉、耻。",
+              "pinyin": "Tā de zhí fānlǐng dàibiǎo Sūn Zhōngshān yánjǐn de zhìguó lǐniàn, sì gè kǒudài dàibiǎo Zhōngguó sì zhǒng chuántǒng de dàodé sīxiǎng, jí lǐ, yì, lián, chǐ.",
+              "text_translation": "Uning tik qaytarma yoqasi Sun Yatsenning davlatni boshqarishdagi qat'iy qarashlarini, to'rtta cho'ntagi esa Xitoyning to'rt an'anaviy axloqiy tamoyilini — odob, burch, halollik va uyat — anglatadi.",
+              "text_translation_ru": "Его прямой отложной воротник символизирует строгие взгляды Сунь Ятсена на управление государством, а четыре кармана — четыре традиционные моральные категории: ритуал, долг, честность и стыд.",
+              "text_translation_en": "Its straight turned-down collar represents Sun Yat-sen's rigorous philosophy of governance, and its four pockets the four traditional Chinese virtues: propriety, righteousness, integrity and shame.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-culture-s4",
+              "text_original": "旗袍，被当代国际服装界誉为“东方女装”的代表，旗袍的造型与妇女的体态相适合，线条简单，优美大方。",
+              "pinyin": "Qípáo, bèi dāngdài guójì fúzhuāngjiè yù wéi dōngfāng nǚzhuāng de dàibiǎo, qípáo de zàoxíng yǔ fùnǚ de tǐtài xiāng shìhé, xiàntiáo jiǎndān, yōuměi dàfang.",
+              "text_translation": "Sipao zamonaviy xalqaro moda olamida «Sharq ayollar kiyimi»ning namunasi deb e'tirof etilgan; uning shakli ayol qomatiga mos, chiziqlari sodda, nafis va viqorli.",
+              "text_translation_ru": "Ципао признано современным международным миром моды образцом «восточной женской одежды»: его силуэт соответствует женской фигуре, линии просты, изящны и благородны.",
+              "text_translation_en": "The cheongsam is hailed by today's international fashion world as the representative of “Oriental women's dress”: its cut suits a woman's figure, and its lines are simple, graceful and elegant.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l3-culture-s5",
+              "text_original": "在电影、电视、时装展中经常会看到，现在女人穿旗袍已经成了一种时尚。",
+              "pinyin": "Zài diànyǐng, diànshì, shízhuāngzhǎn zhōng jīngcháng huì kàndào, xiànzài nǚrén chuān qípáo yǐjīng chéng le yī zhǒng shíshàng.",
+              "text_translation": "Uni kinolarda, teleko'rsatuvlarda va moda namoyishlarida tez-tez ko'rish mumkin — hozir ayollarning sipao kiyishi modaga aylangan.",
+              "text_translation_ru": "Его часто можно увидеть в кино, на телевидении и на показах мод: сегодня носить ципао стало модой.",
+              "text_translation_en": "You often see it in films, on television and at fashion shows — wearing a cheongsam has become a trend.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ],
+      "title": "中山装和旗袍"
+    }
+  ]
+}
