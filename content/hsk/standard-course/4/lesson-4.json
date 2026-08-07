@@ -1,0 +1,743 @@
+{
+  "book": "standard-course",
+  "bookTitle": "HSK标准教程",
+  "level": 4,
+  "volume": "上",
+  "unit": 4,
+  "slug": "dont-rush-for-money",
+  "title": "不要太着急赚钱",
+  "pinyin": "Bùyào tài zháojí zhuànqián",
+  "titleTranslation": "Pul topishga juda shoshilmang",
+  "titleTranslation_ru": "Не спеши зарабатывать",
+  "titleTranslation_en": "Don't Be in Too Much of a Hurry to Earn Money",
+  "dateAdded": "2026-08-07",
+  "texts": [
+    {
+      "id": "hsk4-l4-text-1",
+      "slug": "text-1",
+      "label": "课文一",
+      "labelTranslation": "Matn 1",
+      "labelTranslation_ru": "Текст 1",
+      "labelTranslation_en": "Text 1",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l4-text-1-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l4-text-1-s1",
+              "text_original": "听说你又换工作了？",
+              "pinyin": "Tīngshuō nǐ yòu huàn gōngzuò le?",
+              "text_translation": "Eshitishimcha, yana ish almashtiribsan?",
+              "text_translation_ru": "Слышал, ты снова сменил работу?",
+              "text_translation_en": "I hear you've changed jobs again?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-1-s2",
+              "text_original": "今年已经换了三次工作了吧？",
+              "pinyin": "Jīnnián yǐjīng huàn le sān cì gōngzuò le ba?",
+              "text_translation": "Bu yil allaqachon uch marta ish almashtirding-a?",
+              "text_translation_ru": "В этом году ты уже трижды менял работу, да?",
+              "text_translation_en": "That's three times this year already, isn't it?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-1-s3",
+              "text_original": "别提了！",
+              "pinyin": "Bié tí le!",
+              "text_translation": "Gapirmasang ham bo'ladi!",
+              "text_translation_ru": "И не говори!",
+              "text_translation_en": "Don't even mention it!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-1-s4",
+              "text_original": "我以为新工作比以前的好，没想到还没有以前好呢。",
+              "pinyin": "Wǒ yǐwéi xīn gōngzuò bǐ yǐqián de hǎo, méi xiǎngdào hái méiyǒu yǐqián hǎo ne.",
+              "text_translation": "Yangi ish avvalgisidan yaxshiroq deb o'ylagandim, kutilmaganda avvalgisichalik ham emas ekan.",
+              "text_translation_ru": "Я думал, новая работа лучше прежней, а оказалось — даже хуже.",
+              "text_translation_en": "I thought the new job would be better than the old one, but it turned out worse.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-1-s5",
+              "text_original": "上次那份工作你只做了两个月就离开了，其实，完全适应一个新的工作需要一年时间，所以，经常换工作不一定好。",
+              "pinyin": "Shàng cì nà fèn gōngzuò nǐ zhǐ zuò le liǎng gè yuè jiù líkāi le, qíshí, wánquán shìyìng yī gè xīn de gōngzuò xūyào yī nián shíjiān, suǒyǐ, jīngcháng huàn gōngzuò bù yīdìng hǎo.",
+              "text_translation": "O'tgan safargi ishda atigi ikki oy ishlab ketding. Aslida yangi ishga to'liq moslashish uchun bir yil kerak, shuning uchun tez-tez ish almashtirish har doim ham yaxshi emas.",
+              "text_translation_ru": "На прошлой работе ты проработал всего два месяца и ушёл. На самом деле, чтобы полностью привыкнуть к новой работе, нужен год, поэтому часто менять работу не всегда хорошо.",
+              "text_translation_en": "You only did that last job for two months before leaving. In fact it takes a year to fully settle into a new job, so changing often isn't necessarily good.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-1-s6",
+              "text_original": "我也明白。",
+              "pinyin": "Wǒ yě míngbai.",
+              "text_translation": "Men ham tushunaman.",
+              "text_translation_ru": "Я тоже это понимаю.",
+              "text_translation_en": "I understand that too.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-1-s7",
+              "text_original": "但是那份工作的收入太少了！",
+              "pinyin": "Dànshì nà fèn gōngzuò de shōurù tài shǎo le!",
+              "text_translation": "Lekin u ishning daromadi juda kam edi!",
+              "text_translation_ru": "Но доход на той работе был слишком маленьким!",
+              "text_translation_en": "But the pay in that job was just too low!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-1-s8",
+              "text_original": "你才到新公司，不要太急着赚钱，多学习才是最重要的。",
+              "pinyin": "Nǐ cái dào xīn gōngsī, bùyào tài jízhe zhuànqián, duō xuéxí cái shì zuì zhòngyào de.",
+              "text_translation": "Yangi kompaniyaga endi kelding — pul topishga juda shoshilma, ko'proq o'rganish eng muhimi.",
+              "text_translation_ru": "Ты только пришёл в новую компанию — не спеши зарабатывать, важнее побольше учиться.",
+              "text_translation_en": "You've only just joined the company — don't rush to earn money; learning more is what matters most.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-1-s9",
+              "text_original": "好。",
+              "pinyin": "Hǎo.",
+              "text_translation": "Xo'p.",
+              "text_translation_ru": "Хорошо.",
+              "text_translation_en": "All right.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-1-s10",
+              "text_original": "我一定会努力把现在这份工作做好。",
+              "pinyin": "Wǒ yīdìng huì nǔlì bǎ xiànzài zhè fèn gōngzuò zuòhǎo.",
+              "text_translation": "Hozirgi ishimni yaxshi bajarish uchun albatta harakat qilaman.",
+              "text_translation_ru": "Я обязательно постараюсь хорошо выполнять нынешнюю работу.",
+              "text_translation_en": "I'll certainly work hard to do this job well.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "提",
+          "py": "tí",
+          "uz": "tilga olmoq, eslatmoq",
+          "ru": "упоминать",
+          "en": "to mention"
+        },
+        {
+          "zh": "以为",
+          "py": "yǐwéi",
+          "uz": "deb o'ylamoq (noto'g'ri)",
+          "ru": "полагать, думать (ошибочно)",
+          "en": "to think (mistakenly)"
+        },
+        {
+          "zh": "份",
+          "py": "fèn",
+          "uz": "(ish, hujjat uchun sanoq so'zi)",
+          "ru": "(счётное слово: работа, документ)",
+          "en": "(measure word: job, document)"
+        },
+        {
+          "zh": "完全",
+          "py": "wánquán",
+          "uz": "to'liq, butunlay",
+          "ru": "полностью, совершенно",
+          "en": "completely, fully"
+        },
+        {
+          "zh": "赚",
+          "py": "zhuàn",
+          "uz": "(pul) topmoq",
+          "ru": "зарабатывать",
+          "en": "to earn (money)"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l4-text-2",
+      "slug": "text-2",
+      "label": "课文二",
+      "labelTranslation": "Matn 2",
+      "labelTranslation_ru": "Текст 2",
+      "labelTranslation_en": "Text 2",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "苏打",
+        "B": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l4-text-2-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l4-text-2-s1",
+              "text_original": "那份调查还要多长时间才能做完？",
+              "pinyin": "Nà fèn diàochá hái yào duō cháng shíjiān cái néng zuòwán?",
+              "text_translation": "U so'rovnomani tugatish uchun yana qancha vaqt kerak?",
+              "text_translation_ru": "Сколько ещё времени нужно, чтобы закончить то исследование?",
+              "text_translation_en": "How much longer will that survey take to finish?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-2-s2",
+              "text_original": "按原来的计划应该是两周，但是我们可以提前完成，周末保证做完。",
+              "pinyin": "Àn yuánlái de jìhuà yīnggāi shì liǎng zhōu, dànshì wǒmen kěyǐ tíqián wánchéng, zhōumò bǎozhèng zuòwán.",
+              "text_translation": "Dastlabki rejaga ko'ra ikki hafta bo'lishi kerak edi, lekin muddatidan oldin tugatishimiz mumkin — dam olish kunigacha tugatishga kafolat beraman.",
+              "text_translation_ru": "По первоначальному плану — две недели, но мы можем закончить раньше: к выходным гарантированно сделаем.",
+              "text_translation_en": "The original plan was two weeks, but we can finish early — I guarantee it'll be done by the weekend.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-2-s3",
+              "text_original": "虽然最近工作很忙，但你们也要注意身体啊。",
+              "pinyin": "Suīrán zuìjìn gōngzuò hěn máng, dàn nǐmen yě yào zhùyì shēntǐ a.",
+              "text_translation": "So'nggi paytda ish ko'p bo'lsa ham, sog'lig'ingizga ham e'tibor bering.",
+              "text_translation_ru": "Хотя в последнее время много работы, берегите здоровье.",
+              "text_translation_en": "Work's been busy lately, but do look after your health.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-2-s4",
+              "text_original": "谢谢您！",
+              "pinyin": "Xièxie nín!",
+              "text_translation": "Rahmat sizga!",
+              "text_translation_ru": "Спасибо вам!",
+              "text_translation_en": "Thank you!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-2-s5",
+              "text_original": "现在有很多事情等着我做，真不知道该先做哪个好。",
+              "pinyin": "Xiànzài yǒu hěn duō shìqing děngzhe wǒ zuò, zhēn bù zhīdào gāi xiān zuò nǎge hǎo.",
+              "text_translation": "Hozir meni kutayotgan ish ko'p — qaysi birini avval qilishni bilmayapman.",
+              "text_translation_ru": "Сейчас меня ждёт масса дел, и я даже не знаю, за что взяться первым.",
+              "text_translation_en": "There's so much waiting for me to do that I don't know which to start with.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-2-s6",
+              "text_original": "每天早上我都把当天计划要做的事情写在笔记本上，提醒自己安排好时间。",
+              "pinyin": "Měi tiān zǎoshang wǒ dōu bǎ dàngtiān jìhuà yào zuò de shìqing xiě zài bǐjìběn shàng, tíxǐng zìjǐ ānpái hǎo shíjiān.",
+              "text_translation": "Har kuni ertalab o'sha kunga rejalashtirgan ishlarimni daftarga yozaman va o'zimga vaqtni to'g'ri taqsimlashni eslataman.",
+              "text_translation_ru": "Каждое утро я записываю в блокнот дела, запланированные на день, и напоминаю себе правильно распределить время.",
+              "text_translation_en": "Every morning I write the day's planned tasks in a notebook, to remind myself to organise my time.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-2-s7",
+              "text_original": "你也可以试试这样做。",
+              "pinyin": "Nǐ yě kěyǐ shìshi zhèyàng zuò.",
+              "text_translation": "Sen ham shunday qilib ko'r.",
+              "text_translation_ru": "Попробуй и ты так делать.",
+              "text_translation_en": "You could try doing the same.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-2-s8",
+              "text_original": "这个办法真不错！",
+              "pinyin": "Zhège bànfǎ zhēn bùcuò!",
+              "text_translation": "Bu usul juda yaxshi ekan!",
+              "text_translation_ru": "Отличный способ!",
+              "text_translation_en": "That's a really good method!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-2-s9",
+              "text_original": "这样我就不会手忙脚乱了。",
+              "pinyin": "Zhèyàng wǒ jiù bù huì shǒumángjiǎoluàn le.",
+              "text_translation": "Shunday qilsam, sarosimaga tushmayman.",
+              "text_translation_ru": "Так я не буду суетиться.",
+              "text_translation_en": "That way I won't be all over the place.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "调查",
+          "py": "diàochá",
+          "uz": "so'rov, tekshiruv",
+          "ru": "исследование, опрос",
+          "en": "survey, investigation"
+        },
+        {
+          "zh": "原来",
+          "py": "yuánlái",
+          "uz": "dastlabki; ma'lum bo'lishicha",
+          "ru": "первоначальный; оказывается",
+          "en": "original; as it turns out"
+        },
+        {
+          "zh": "计划",
+          "py": "jìhuà",
+          "uz": "reja; rejalashtirmoq",
+          "ru": "план; планировать",
+          "en": "plan; to plan"
+        },
+        {
+          "zh": "提前",
+          "py": "tíqián",
+          "uz": "muddatidan oldin",
+          "ru": "заранее, досрочно",
+          "en": "ahead of time"
+        },
+        {
+          "zh": "保证",
+          "py": "bǎozhèng",
+          "uz": "kafolat bermoq",
+          "ru": "гарантировать",
+          "en": "to guarantee"
+        },
+        {
+          "zh": "提醒",
+          "py": "tíxǐng",
+          "uz": "eslatmoq",
+          "ru": "напоминать",
+          "en": "to remind"
+        },
+        {
+          "zh": "乱",
+          "py": "luàn",
+          "uz": "tartibsiz",
+          "ru": "беспорядочный",
+          "en": "disorderly, in a mess"
+        },
+        {
+          "zh": "王",
+          "py": "Wáng",
+          "uz": "Van (familiya)",
+          "ru": "Ван (фамилия)",
+          "en": "Wang (surname)"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l4-text-3",
+      "slug": "text-3",
+      "label": "课文三",
+      "labelTranslation": "Matn 3",
+      "labelTranslation_ru": "Текст 3",
+      "labelTranslation_en": "Text 3",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "苏打",
+        "B": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l4-text-3-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l4-text-3-s1",
+              "text_original": "什么事让你这么高兴啊？",
+              "pinyin": "Shénme shì ràng nǐ zhème gāoxìng a?",
+              "text_translation": "Nima sizni bunchalik xursand qildi?",
+              "text_translation_ru": "Что тебя так обрадовало?",
+              "text_translation_en": "What's made you so happy?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-3-s2",
+              "text_original": "我们和上次那个公司的生意终于谈成了。",
+              "pinyin": "Wǒmen hé shàng cì nàge gōngsī de shēngyi zhōngyú tán chéng le.",
+              "text_translation": "O'tgan safargi kompaniya bilan bitim nihoyat kelishildi.",
+              "text_translation_ru": "Мы наконец договорились о сделке с той компанией.",
+              "text_translation_en": "We've finally closed the deal with that company from last time.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-3-s3",
+              "text_original": "太好了！",
+              "pinyin": "Tài hǎo le!",
+              "text_translation": "Juda yaxshi!",
+              "text_translation_ru": "Отлично!",
+              "text_translation_en": "That's great!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-3-s4",
+              "text_original": "你工作那么努力，公司会越来越好的。",
+              "pinyin": "Nǐ gōngzuò nàme nǔlì, gōngsī huì yuè lái yuè hǎo de.",
+              "text_translation": "Siz shunchalik tirishqoq ishlaysiz — kompaniya tobora yaxshilanadi.",
+              "text_translation_ru": "Ты так усердно работаешь — у компании дела будут идти всё лучше.",
+              "text_translation_en": "You work so hard — the company will keep going from strength to strength.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-3-s5",
+              "text_original": "我原来以为做生意很简单，后来才发现其实并不容易，现在赚钱越来越难了。",
+              "pinyin": "Wǒ yuánlái yǐwéi zuò shēngyi hěn jiǎndān, hòulái cái fāxiàn qíshí bìng bù róngyì, xiànzài zhuànqián yuè lái yuè nán le.",
+              "text_translation": "Avvaliga savdo qilish oson deb o'ylagandim, keyin bu aslida oson emasligini angladim — hozir pul topish tobora qiyinlashyapti.",
+              "text_translation_ru": "Раньше я думал, что вести дела просто, а потом понял, что это совсем не легко: зарабатывать становится всё труднее.",
+              "text_translation_en": "I used to think business was simple, and only later found it really isn't — making money is getting harder and harder.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l4-text-3-s6",
+              "text_original": "慢慢来，万事开头难，重要的是要多积累经验。",
+              "pinyin": "Mànmàn lái, wànshì kāitóu nán, zhòngyào de shì yào duō jīlěi jīngyàn.",
+              "text_translation": "Shoshilmang — har ishning boshi qiyin, muhimi ko'proq tajriba to'plash.",
+              "text_translation_ru": "Не торопись: лиха беда начало, главное — накапливать опыт.",
+              "text_translation_en": "Take it slowly — every beginning is hard; what matters is building up experience.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-3-s7",
+              "text_original": "我相信经过我们大家的努力，公司的生意会越做越大，一切都会好的。",
+              "pinyin": "Wǒ xiāngxìn jīngguò wǒmen dàjiā de nǔlì, gōngsī de shēngyi huì yuè zuò yuè dà, yīqiè dōu huì hǎo de.",
+              "text_translation": "Ishonamanki, barchamizning sa'y-harakatimiz bilan kompaniya ishi tobora kengayadi va hammasi yaxshi bo'ladi.",
+              "text_translation_ru": "Уверен, что благодаря нашим общим усилиям дела компании будут расти и всё будет хорошо.",
+              "text_translation_en": "I believe that with everyone's effort the company's business will keep growing and everything will be fine.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "生意",
+          "py": "shēngyi",
+          "uz": "savdo, biznes",
+          "ru": "дело, бизнес",
+          "en": "business"
+        },
+        {
+          "zh": "谈",
+          "py": "tán",
+          "uz": "gaplashmoq, muzokara qilmoq",
+          "ru": "беседовать, вести переговоры",
+          "en": "to talk, to negotiate"
+        },
+        {
+          "zh": "并",
+          "py": "bìng",
+          "uz": "(inkorni kuchaytiradi) aslo",
+          "ru": "(усиливает отрицание) вовсе",
+          "en": "(intensifies negation) not at all"
+        },
+        {
+          "zh": "积累",
+          "py": "jīlěi",
+          "uz": "to'plamoq",
+          "ru": "накапливать",
+          "en": "to accumulate"
+        },
+        {
+          "zh": "经验",
+          "py": "jīngyàn",
+          "uz": "tajriba",
+          "ru": "опыт",
+          "en": "experience"
+        },
+        {
+          "zh": "一切",
+          "py": "yīqiè",
+          "uz": "hamma narsa",
+          "ru": "всё",
+          "en": "everything"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l4-text-4",
+      "slug": "text-4",
+      "label": "课文四",
+      "labelTranslation": "Matn 4",
+      "labelTranslation_ru": "Текст 4",
+      "labelTranslation_en": "Text 4",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l4-text-4-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l4-text-4-s1",
+              "text_original": "我们今年的工作都已经按照计划完成了。",
+              "pinyin": "Wǒmen jīnnián de gōngzuò dōu yǐjīng ànzhào jìhuà wánchéng le.",
+              "text_translation": "Bu yilgi ishlarimizni reja bo'yicha yakunladik.",
+              "text_translation_ru": "Всю работу этого года мы выполнили согласно плану.",
+              "text_translation_en": "We have completed all of this year's work according to plan.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-4-s2",
+              "text_original": "这一段时间，尽管工作很紧张，中间也遇到了很多困难，但是因为有大家的努力，我们成功地解决了问题，顺利地完成了工作，非常感谢大家对我的帮助！",
+              "pinyin": "Zhè yī duàn shíjiān, jǐnguǎn gōngzuò hěn jǐnzhāng, zhōngjiān yě yùdào le hěn duō kùnnan, dànshì yīnwèi yǒu dàjiā de nǔlì, wǒmen chénggōng de jiějué le wèntí, shùnlì de wánchéng le gōngzuò, fēicháng gǎnxiè dàjiā duì wǒ de bāngzhù!",
+              "text_translation": "Bu davrda ish juda zich bo'lsa-da, yo'lda ko'p qiyinchiliklarga duch kelgan bo'lsak ham, hammangizning sa'y-harakatingiz tufayli muammolarni muvaffaqiyatli hal qildik va ishni muvaffaqiyatli yakunladik. Menga ko'rsatgan yordamingiz uchun katta rahmat!",
+              "text_translation_ru": "За это время, хотя работа была напряжённой и мы столкнулись с множеством трудностей, благодаря общим усилиям мы успешно решили проблемы и благополучно завершили работу. Огромное спасибо всем за помощь!",
+              "text_translation_en": "Over this period, although the work was demanding and we ran into many difficulties, thanks to everyone's effort we solved the problems and completed the work smoothly. Thank you all so much for your help!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-4-s3",
+              "text_original": "另外，马经理让我告诉大家一个好消息，因为大家按时完成了工作，公司决定这个月给每人多发三千元奖金。",
+              "pinyin": "Lìngwài, Mǎ jīnglǐ ràng wǒ gàosu dàjiā yī gè hǎo xiāoxi, yīnwèi dàjiā ànshí wánchéng le gōngzuò, gōngsī juédìng zhège yuè gěi měi rén duō fā sānqiān yuán jiǎngjīn.",
+              "text_translation": "Bundan tashqari, Ma menejer sizlarga bir xushxabarni yetkazishimni so'radi: ishni o'z vaqtida bajarganingiz uchun kompaniya bu oy har biringizga qo'shimcha uch ming yuan mukofot berishga qaror qildi.",
+              "text_translation_ru": "Кроме того, менеджер Ма просил передать вам хорошую новость: за то, что работа сделана в срок, компания решила выплатить каждому в этом месяце премию в три тысячи юаней.",
+              "text_translation_en": "Also, Manager Ma asked me to share good news: because everyone finished on time, the company has decided to pay each of you an extra three thousand yuan bonus this month.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-4-s4",
+              "text_original": "感谢大家这三个多月的努力工作，希望明年能有更大的成绩！",
+              "pinyin": "Gǎnxiè dàjiā zhè sān gè duō yuè de nǔlì gōngzuò, xīwàng míngnián néng yǒu gèng dà de chéngjì!",
+              "text_translation": "Bu uch oydan ortiq vaqt davomidagi mehnatingiz uchun rahmat — kelasi yil yanada katta natijalarga erishishimizni tilayman!",
+              "text_translation_ru": "Спасибо за упорную работу этих трёх с лишним месяцев — надеюсь, в следующем году результаты будут ещё выше!",
+              "text_translation_en": "Thank you for your hard work over these three-plus months — I hope next year brings even greater results!",
+              "speaker": "A"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "按照",
+          "py": "ànzhào",
+          "uz": "…ga muvofiq, bo'yicha",
+          "ru": "согласно, по",
+          "en": "according to"
+        },
+        {
+          "zh": "成功",
+          "py": "chénggōng",
+          "uz": "muvaffaqiyat; muvaffaqiyatli",
+          "ru": "успех; успешный",
+          "en": "success; successful"
+        },
+        {
+          "zh": "顺利",
+          "py": "shùnlì",
+          "uz": "muvaffaqiyatli, silliq",
+          "ru": "благополучно, гладко",
+          "en": "smoothly, successfully"
+        },
+        {
+          "zh": "感谢",
+          "py": "gǎnxiè",
+          "uz": "minnatdorchilik bildirmoq",
+          "ru": "благодарить",
+          "en": "to thank"
+        },
+        {
+          "zh": "消息",
+          "py": "xiāoxi",
+          "uz": "xabar",
+          "ru": "новость, известие",
+          "en": "news, message"
+        },
+        {
+          "zh": "按时",
+          "py": "ànshí",
+          "uz": "o'z vaqtida",
+          "ru": "вовремя, в срок",
+          "en": "on time"
+        },
+        {
+          "zh": "奖金",
+          "py": "jiǎngjīn",
+          "uz": "mukofot puli",
+          "ru": "премия",
+          "en": "bonus"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l4-text-5",
+      "slug": "text-5",
+      "label": "课文五",
+      "labelTranslation": "Matn 5",
+      "labelTranslation_ru": "Текст 5",
+      "labelTranslation_en": "Text 5",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l4-text-5-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l4-text-5-s1",
+              "text_original": "年轻人刚开始工作的时候，不要太急着赚钱，不要眼睛里只有工资和奖金。",
+              "pinyin": "Niánqīngrén gāng kāishǐ gōngzuò de shíhou, bùyào tài jízhe zhuànqián, bùyào yǎnjing lǐ zhǐ yǒu gōngzī hé jiǎngjīn.",
+              "text_translation": "Yoshlar endi ishlay boshlaganda pul topishga juda shoshilmasin, ko'zi faqat maosh va mukofotni ko'rmasin.",
+              "text_translation_ru": "Когда молодые только начинают работать, не стоит слишком спешить зарабатывать и видеть перед собой только зарплату и премии.",
+              "text_translation_en": "When young people are just starting out, they shouldn't rush to earn money or see nothing but salary and bonuses.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-5-s2",
+              "text_original": "在工作的前几年，重要的是丰富自己的工作经验，学习与同事交流的方法，积累专业知识，这些比收入重要多了。",
+              "pinyin": "Zài gōngzuò de qián jǐ nián, zhòngyào de shì fēngfù zìjǐ de gōngzuò jīngyàn, xuéxí yǔ tóngshì jiāoliú de fāngfǎ, jīlěi zhuānyè zhīshi, zhèxiē bǐ shōurù zhòngyào duō le.",
+              "text_translation": "Ishning dastlabki bir necha yilida muhimi — ish tajribangizni boyitish, hamkasblar bilan muloqot usullarini o'rganish va kasbiy bilim to'plash; bular daromaddan ancha muhimroq.",
+              "text_translation_ru": "В первые годы работы важно обогащать свой опыт, учиться общаться с коллегами и накапливать профессиональные знания — это куда важнее дохода.",
+              "text_translation_en": "In the first few years of work, what matters is broadening your experience, learning how to communicate with colleagues, and building professional knowledge — all far more important than income.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-5-s3",
+              "text_original": "但是很多时候，我们不得不去做一些自己不愿意做甚至是非常不喜欢的工作。",
+              "pinyin": "Dànshì hěn duō shíhou, wǒmen bùdébù qù zuò yīxiē zìjǐ bù yuànyì zuò shènzhì shì fēicháng bù xǐhuan de gōngzuò.",
+              "text_translation": "Ammo ko'p hollarda biz o'zimiz xohlamagan, hatto juda yoqtirmagan ishlarni bajarishga majbur bo'lamiz.",
+              "text_translation_ru": "Но часто нам приходится делать работу, которую мы не хотим и даже очень не любим.",
+              "text_translation_en": "But often we have to do work we don't want to do, or even strongly dislike.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-5-s4",
+              "text_original": "这时，我们最需要的就是对工作的责任心。",
+              "pinyin": "Zhè shí, wǒmen zuì xūyào de jiù shì duì gōngzuò de zérènxīn.",
+              "text_translation": "Ana shunda bizga eng kerak bo'lgan narsa — ishga bo'lgan mas'uliyat hissi.",
+              "text_translation_ru": "И вот тогда нам больше всего нужно чувство ответственности за работу.",
+              "text_translation_en": "At such times, what we need most is a sense of responsibility towards the work.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-text-5-s5",
+              "text_original": "一个人即使能力再高，经验再丰富，如果对工作没有责任心，也很难把工作做好。",
+              "pinyin": "Yī gè rén jíshǐ nénglì zài gāo, jīngyàn zài fēngfù, rúguǒ duì gōngzuò méiyǒu zérènxīn, yě hěn nán bǎ gōngzuò zuòhǎo.",
+              "text_translation": "Odamning qobiliyati qanchalik yuqori, tajribasi qanchalik boy bo'lmasin, agar ishga mas'uliyati bo'lmasa, uni yaxshi bajarish qiyin.",
+              "text_translation_ru": "Каким бы способным и опытным ни был человек, без ответственности за работу выполнить её хорошо очень трудно.",
+              "text_translation_en": "However able and experienced someone is, without a sense of responsibility they will struggle to do the job well.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ],
+      "vocab": [
+        {
+          "zh": "工资",
+          "py": "gōngzī",
+          "uz": "maosh",
+          "ru": "зарплата",
+          "en": "salary, wages"
+        },
+        {
+          "zh": "方法",
+          "py": "fāngfǎ",
+          "uz": "usul",
+          "ru": "способ, метод",
+          "en": "method"
+        },
+        {
+          "zh": "知识",
+          "py": "zhīshi",
+          "uz": "bilim",
+          "ru": "знания",
+          "en": "knowledge"
+        },
+        {
+          "zh": "不得不",
+          "py": "bùdébù",
+          "uz": "majbur bo'lmoq",
+          "ru": "приходится, вынужден",
+          "en": "to have no choice but to"
+        },
+        {
+          "zh": "甚至",
+          "py": "shènzhì",
+          "uz": "hatto",
+          "ru": "даже",
+          "en": "even"
+        },
+        {
+          "zh": "责任",
+          "py": "zérèn",
+          "uz": "mas'uliyat",
+          "ru": "ответственность",
+          "en": "responsibility"
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l4-culture",
+      "slug": "culture",
+      "label": "文化",
+      "labelTranslation": "Madaniyat",
+      "labelTranslation_ru": "Культура",
+      "labelTranslation_en": "Culture",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l4-culture-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l4-culture-s1",
+              "text_original": "中国有句话叫“授人以鱼不如授人以渔”。",
+              "pinyin": "Zhōngguó yǒu jù huà jiào shòu rén yǐ yú bùrú shòu rén yǐ yú.",
+              "text_translation": "Xitoyda «odamga baliq bergandan ko'ra, baliq tutishni o'rgatgan afzal» degan gap bor.",
+              "text_translation_ru": "В Китае есть выражение: «лучше научить человека ловить рыбу, чем дать ему рыбу».",
+              "text_translation_en": "There is a Chinese saying: “better to teach someone to fish than to give them a fish”.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-culture-s2",
+              "text_original": "意思是说传授给人既有知识或财富等，不如传授给人学习知识或获得财富的方法。",
+              "pinyin": "Yìsi shì shuō chuánshòu gěi rén jìyǒu zhīshi huò cáifù děng, bùrú chuánshòu gěi rén xuéxí zhīshi huò huòdé cáifù de fāngfǎ.",
+              "text_translation": "Ya'ni odamga tayyor bilim yoki boylik bergandan ko'ra, unga bilim olish yoki boylik topish usulini o'rgatgan yaxshiroq.",
+              "text_translation_ru": "То есть передать человеку готовые знания или богатство хуже, чем научить его самому получать знания и достаток.",
+              "text_translation_en": "That is, handing someone existing knowledge or wealth is worse than teaching them how to acquire knowledge or wealth themselves.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-culture-s3",
+              "text_original": "这句话道理其实很简单，“鱼”是目的，“渔”是方法，如果想永远有鱼吃，那就要学会钓鱼的方法。",
+              "pinyin": "Zhè jù huà dàolǐ qíshí hěn jiǎndān, yú shì mùdì, yú shì fāngfǎ, rúguǒ xiǎng yǒngyuǎn yǒu yú chī, nà jiù yào xuéhuì diàoyú de fāngfǎ.",
+              "text_translation": "Bu gapning mantig'i juda oddiy: «baliq» — maqsad, «baliq tutish» — usul. Agar doim baliqli bo'lishni istasang, baliq tutishni o'rganishing kerak.",
+              "text_translation_ru": "Смысл прост: «рыба» — это цель, «ловля» — это способ. Если хочешь всегда иметь рыбу, научись её ловить.",
+              "text_translation_en": "The idea is simple: the “fish” is the goal, “fishing” is the method. If you want fish forever, you must learn how to fish.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l4-culture-s4",
+              "text_original": "在工作中也是这样，如果别人遇到困难，最好的办法不是替他完成工作，而是教给他解决问题、克服困难的方法。",
+              "pinyin": "Zài gōngzuò zhōng yě shì zhèyàng, rúguǒ biérén yùdào kùnnan, zuì hǎo de bànfǎ bù shì tì tā wánchéng gōngzuò, ér shì jiāo gěi tā jiějué wèntí, kèfú kùnnan de fāngfǎ.",
+              "text_translation": "Ishda ham shunday: birov qiyinchilikka duch kelsa, eng yaxshi yo'l uning ishini o'zing bajarib berish emas, balki unga muammoni hal qilish va qiyinchilikni yengish usulini o'rgatishdir.",
+              "text_translation_ru": "В работе так же: если у кого-то трудности, лучший выход — не сделать работу за него, а научить его решать проблемы и преодолевать трудности.",
+              "text_translation_en": "It is the same at work: if someone runs into difficulty, the best approach is not to do the work for them but to teach them how to solve problems and overcome obstacles.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ],
+      "title": "授人以鱼不如授人以渔"
+    }
+  ]
+}
