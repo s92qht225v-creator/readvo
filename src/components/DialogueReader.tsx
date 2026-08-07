@@ -14,6 +14,12 @@ import { resolveTtsUrl } from '../utils/ttsAudio';
 import { RubyText } from './RubyText';
 import { alignPinyinToText } from '../utils/rubyText';
 import { splitAligned } from '../utils/splitSentences';
+import { usePersistedState } from '../hooks/usePersistedState';
+
+/** Guards for restoring saved reader preferences — see usePersistedState. */
+const isBool = (v: unknown): v is boolean => typeof v === 'boolean';
+const isFontSize = (v: unknown): v is number =>
+  typeof v === 'number' && Number.isFinite(v) && v >= 80 && v <= 150;
 import { voiceForWith } from '../utils/dialogueVoice';
 import { PageFooter } from './PageFooter';
 import { CoachMarkTour, dismissTip } from './CoachMark';
@@ -161,15 +167,24 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
   const [sheetOpen, setSheetOpen] = useState(false);
   const moreBtnRef = useRef<HTMLButtonElement | null>(null);
 
-  // Font size
-  const [fontSize, setFontSize] = useState(100);
+  // Font size. Persisted: it is a property of the reader's eyes, not of the
+  // dialogue — see the pinyin/translation toggles below.
+  const [fontSize, setFontSize] = usePersistedState('blim-reader-font', 100, isFontSize);
 
   // Tab state
   const [activeTab, setActiveTab] = useState('dialog');
 
-  // Dialog tab state
-  const [showPinyin, setShowPinyin] = useState(true);
-  const [showTranslation, setShowTranslation] = useState(false);
+  // Dialog tab state.
+  //
+  // Pinyin and translation persist across dialogues: whether you need them is a
+  // fact about your level, not about the dialogue you happen to have opened, so
+  // re-toggling them on every one is pure friction.
+  //
+  // Focus mode deliberately does NOT persist. It shows one line at a time and
+  // is a way to work through a specific dialogue, not a standing preference —
+  // landing in it on a dialogue you just opened would look like a broken page.
+  const [showPinyin, setShowPinyin] = usePersistedState('blim-reader-pinyin', true, isBool);
+  const [showTranslation, setShowTranslation] = usePersistedState('blim-reader-translation', false, isBool);
   const [focusMode, setFocusMode] = useState(false);
   const [activeSentenceId, setActiveSentenceId] = useState<string | null>(null);
   const sentenceAudio = useAudioPlayer();
