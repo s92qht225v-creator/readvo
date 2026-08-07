@@ -118,9 +118,24 @@ Speaker turns are white cards with a coloured left strip — the old `A:` / `B:`
 - `.dr-lines` - Turn list (flex column)
 - `.dr-line` - One turn: white card, `border-left: 3px solid var(--dr-speaker, #378add)`, `border-radius: 0 8px 8px 0`, `box-shadow`, `margin-bottom: 14px`, `padding: 8px 12px`, `cursor: pointer`
 - `.dr-line--spa` / `--spb` / `--spc` - Speaker hue via `--dr-speaker`: `#dc2626` (red, A) / `#378add` (blue, B) / `#ef9f27` (amber, C). Colour only — the strip stays on the left for all speakers
-- `.dr-line-chars` - Char row (flex wrap, `column-gap: 0.18em`; collapses to `0` when pinyin hidden via `:not(:has(.dr-char-py))`)
+- `.dr-line-chars` - Char row (flex wrap, `column-gap: 0.18em`). ⚠️ The `:not(:has(.dr-char-py))` collapse below it is **dead since 2026-08-07** — the pinyin row is reserved even when pinyin is off, so toggling changes neither line spacing nor character spacing.
 - `.dr-char-py` - Per-char progressive pinyin (`font-size: 0.69em`, `color: #dc2626`, `margin-bottom: 4px`)
 - `.dr-char-py--empty` - `visibility: hidden` placeholder (component fills it with a non-breaking space so below-level words still reserve the pinyin-row height, keeping line heights even)
+
+### Reader chrome — translation bar & ⋮ menu (2026-08-07)
+Full detail: `docs/superpowers/specs/2026-08-07-dialogue-reader-rework.md`.
+- `.dr-hero--hidden` — the hero is hidden once the reader loads. It STAYS on the public teaser (its `<h1>`).
+- `.dr-trbar` — the reader's top chrome. `position: sticky; top: 0`, **`height: 120px`** (fixed in every state), full-bleed via `width: 100vw` + `margin-left: calc(-50vw + 50%)`, opaque `#fff`. **Must stay a sibling of `.dr-dialog-body`** — that column is centred `fit-content`, so full-bleed measured from inside it lands off-centre. Only rendered while Tarjima is on.
+- `.dr-trbar__text` — **`font-size: 17px` is only a pre-script fallback**; the component sets an absolute px size (18px) and steps it down to 12px to fit. Deliberately NOT `em` — the A−/A+ control scales `.dialogue-reader` and this is chrome. `text-align: left`; **width is measured from `.dr-dialog-body` at runtime** so it aligns with the Chinese on both edges.
+- `.dr-trbar--idle .dr-trbar__text` — the "tap a sentence" hint: centred, grey, non-italic.
+- `.dr-sw` — on/off switch in the ⋮ menu (38×22 track + knob, red when `.is-on`). Replaced the checkmarks.
+- `.dr-ctl__item.is-disabled` — greyed row; used for Tarjima while focus mode owns the setting.
+- `.dr-ctl__sz--on` — selected language in the Til row.
+- `.dr-ctl__exit` / `.dr-ctl__exit-icon` — the Chiqish row (a `Link`, same destination as the bottom bar's ‹).
+- `.dr-nav .dr-tabs__back` — 44px ‹ at the left of the bottom tab bar, mirroring `.dr-nav .dr-more` at the right.
+- **`--dr-body-pt` was removed.** It existed so the bar could cancel `.dr-dialog-body`'s top padding; the bar is no longer inside that column. `.dr-dialog-body`'s top padding is now **14px**, matching `.dr-line`'s own margin so the first card sits the same distance below the bar as the cards sit apart.
+- `.story__focus-text` — focus mode: `text-align: left`, **`line-height: 2.2`** (was 3 = 108px against the dialogue's 70). Keep it a multiple of the type so A−/A+ scales it.
+- ⚠️ `.dr-line-chars:not(:has(.dr-char-py))` is now **dead** — the pinyin row is reserved even when pinyin is off, so line spacing doesn't change on toggle.
 
 ### Dictation (`.dr-dict__*`)
 Pinyin-syllable / hanzi dictation keyboard. Base tile `.dr-dict__tile` (`min-width: 46px`, `height: 50px`, `font-size: 24px`).
