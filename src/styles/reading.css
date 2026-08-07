@@ -13408,7 +13408,7 @@ body {
   /* px, not em: the A-/A+ control scales .dialogue-reader, and this bar is
      chrome rather than content. The exact value is set from JS, which steps it
      down when a long translation would overflow the fixed band. */
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.45;
   color: #666;
   font-style: italic;

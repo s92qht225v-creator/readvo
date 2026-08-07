@@ -591,7 +591,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
    *
    * The band is a constant height, so on a narrow phone a long translation can
    * need more lines than it has room for. Rather than clip it or let the box
-   * grow, step the type down from 17px — down to 12px, below which it stops
+   * grow, step the type down from 18px — down to 12px, below which it stops
    * being worth reading and the text just wraps.
    *
    * Deliberately in px and set here rather than inherited: the A-/A+ control
@@ -611,7 +611,7 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
         const cs = getComputedStyle(body);
         el.style.width = `${body.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight)}px`;
       }
-      let px = 17;
+      let px = 18;
       el.style.fontSize = `${px}px`;
       const room = box.clientHeight - 24;   // the bar's 12px top/bottom padding
       while (px > 12 && el.scrollHeight > room) {
