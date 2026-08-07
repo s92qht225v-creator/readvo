@@ -567,6 +567,264 @@
           ]
         }
       ]
+    },
+    {
+      "id": "hsk4-l2-t4",
+      "slug": "text-4",
+      "label": "课文四",
+      "labelTranslation": "Matn 4",
+      "labelTranslation_ru": "Текст 4",
+      "labelTranslation_en": "Text 4",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "丰富",
+          "py": "fēngfù",
+          "uz": "boy, boyitmoq",
+          "ru": "богатый; обогащать",
+          "en": "rich; to enrich"
+        },
+        {
+          "zh": "无聊",
+          "py": "wúliáo",
+          "uz": "zerikarli, zerikmoq",
+          "ru": "скучный; скучать",
+          "en": "bored; boring"
+        },
+        {
+          "zh": "讨厌",
+          "py": "tǎoyàn",
+          "uz": "yoqtirmaslik; yoqimsiz",
+          "ru": "не нравиться; неприятный",
+          "en": "to dislike; annoying"
+        },
+        {
+          "zh": "却",
+          "py": "què",
+          "uz": "ammo, biroq, lekin",
+          "ru": "однако, тем не менее",
+          "en": "yet, however"
+        },
+        {
+          "zh": "周围",
+          "py": "zhōuwéi",
+          "uz": "atrof, atrofdagi",
+          "ru": "вокруг, окружающий",
+          "en": "surroundings, around"
+        },
+        {
+          "zh": "交流",
+          "py": "jiāoliú",
+          "uz": "muloqot qilmoq, fikr almashmoq",
+          "ru": "общаться, обмениваться",
+          "en": "to communicate, to exchange"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l2-t4-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l2-t4-s1",
+              "text_original": "每个人都需要朋友，朋友可以丰富我们的生活。",
+              "pinyin": "Měi ge rén dōu xūyào péngyou, péngyou kěyǐ fēngfù wǒmen de shēnghuó.",
+              "text_translation": "Har bir odamga do'st kerak — do'stlar hayotimizni boyitadi.",
+              "text_translation_ru": "Каждому нужны друзья: друзья делают нашу жизнь богаче.",
+              "text_translation_en": "Everyone needs friends — friends enrich our lives.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t4-s2",
+              "text_original": "离开朋友，我们的生活一定会非常无聊。",
+              "pinyin": "Líkāi péngyou, wǒmen de shēnghuó yīdìng huì fēicháng wúliáo.",
+              "text_translation": "Do'stlarsiz hayotimiz, albatta, juda zerikarli bo'lardi.",
+              "text_translation_ru": "Без друзей наша жизнь была бы очень скучной.",
+              "text_translation_en": "Without friends our lives would certainly be very dull.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t4-s3",
+              "text_original": "那么，怎样才能交到更多的朋友呢？",
+              "pinyin": "Nàme, zěnyàng cái néng jiāodào gèng duō de péngyou ne?",
+              "text_translation": "Xo'sh, ko'proq do'st orttirish uchun nima qilish kerak?",
+              "text_translation_ru": "Так как же завести больше друзей?",
+              "text_translation_en": "So how can we make more friends?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t4-s4",
+              "text_original": "当然，要有好脾气。",
+              "pinyin": "Dāngrán, yào yǒu hǎo píqi.",
+              "text_translation": "Albatta, yaxshi fe'l-atvor kerak.",
+              "text_translation_ru": "Конечно, нужен хороший характер.",
+              "text_translation_en": "First of all, you need a good temper.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t4-s5",
+              "text_original": "一个脾气不好的人虽然不一定让人讨厌，但是却很难跟人交朋友。",
+              "pinyin": "Yī ge píqi bù hǎo de rén suīrán bù yīdìng ràng rén tǎoyàn, dànshì què hěn nán gēn rén jiāo péngyou.",
+              "text_translation": "Fe'li yomon odam har doim ham yoqimsiz bo'lmasligi mumkin, ammo u do'st orttirishi qiyin.",
+              "text_translation_ru": "Хотя человек с плохим характером не обязательно вызывает неприязнь, ему всё же трудно заводить друзей.",
+              "text_translation_en": "A bad-tempered person isn't necessarily disliked, yet they find it hard to make friends.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t4-s6",
+              "text_original": "因为没有人会喜欢跟一个总是容易生气的人在一起。",
+              "pinyin": "Yīnwèi méiyǒu rén huì xǐhuan gēn yī ge zǒngshì róngyì shēngqì de rén zài yīqǐ.",
+              "text_translation": "Chunki hech kim doim tez jahli chiqadigan odam bilan birga bo'lishni yoqtirmaydi.",
+              "text_translation_ru": "Ведь никому не нравится быть рядом с тем, кто постоянно раздражается.",
+              "text_translation_en": "Because nobody enjoys being around someone who is always quick to anger.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t4-s7",
+              "text_original": "我们还要经常跟周围的人交流。",
+              "pinyin": "Wǒmen hái yào jīngcháng gēn zhōuwéi de rén jiāoliú.",
+              "text_translation": "Bundan tashqari, atrofdagilar bilan tez-tez muloqot qilib turishimiz kerak.",
+              "text_translation_ru": "Кроме того, нужно чаще общаться с окружающими.",
+              "text_translation_en": "We should also communicate often with the people around us.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t4-s8",
+              "text_original": "交流能让人们互相了解，如果有共同的兴趣、爱好或者习惯，就更容易成为朋友了。",
+              "pinyin": "Jiāoliú néng ràng rénmen hùxiāng liǎojiě, rúguǒ yǒu gòngtóng de xìngqù, àihào huòzhě xíguàn, jiù gèng róngyì chéngwéi péngyou le.",
+              "text_translation": "Muloqot odamlarga bir-birini tushunish imkonini beradi; umumiy qiziqish, mashg'ulot yoki odat bo'lsa, do'st bo'lish yanada osonlashadi.",
+              "text_translation_ru": "Общение позволяет людям лучше понимать друг друга, а если есть общие интересы, увлечения или привычки, подружиться ещё легче.",
+              "text_translation_en": "Communication lets people understand each other, and shared interests, hobbies or habits make it even easier to become friends.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l2-t5",
+      "slug": "text-5",
+      "label": "课文五",
+      "labelTranslation": "Matn 5",
+      "labelTranslation_ru": "Текст 5",
+      "labelTranslation_en": "Text 5",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "理解",
+          "py": "lǐjiě",
+          "uz": "tushunish, tushunmoq",
+          "ru": "понимание; понимать",
+          "en": "understanding; to understand"
+        },
+        {
+          "zh": "镜子",
+          "py": "jìngzi",
+          "uz": "oyna",
+          "ru": "зеркало",
+          "en": "mirror"
+        },
+        {
+          "zh": "而",
+          "py": "ér",
+          "uz": "esa; ammo",
+          "ru": "а; тогда как",
+          "en": "while, whereas; but"
+        },
+        {
+          "zh": "当",
+          "py": "dāng",
+          "uz": "…paytda, …vaqtda",
+          "ru": "когда, в то время как",
+          "en": "when, at the time of"
+        },
+        {
+          "zh": "困难",
+          "py": "kùnnan",
+          "uz": "qiyinchilik; qiyin",
+          "ru": "трудность; трудный",
+          "en": "difficulty; difficult"
+        },
+        {
+          "zh": "及时",
+          "py": "jíshí",
+          "uz": "o'z vaqtida",
+          "ru": "вовремя, своевременно",
+          "en": "in time, promptly"
+        },
+        {
+          "zh": "陪",
+          "py": "péi",
+          "uz": "hamroh bo'lmoq, yonida bo'lmoq",
+          "ru": "сопровождать, быть рядом",
+          "en": "to accompany, to keep company"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l2-t5-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l2-t5-s1",
+              "text_original": "人的一生可以什么也没有，但不能没有朋友，而且必须要有自己真正的朋友。",
+              "pinyin": "Rén de yīshēng kěyǐ shénme yě méiyǒu, dàn bù néng méiyǒu péngyou, érqiě bìxū yào yǒu zìjǐ zhēnzhèng de péngyou.",
+              "text_translation": "Inson umri davomida hech narsasiz ham yashashi mumkin, lekin do'stsiz yashay olmaydi — va, albatta, o'zining haqiqiy do'sti bo'lishi shart.",
+              "text_translation_ru": "Человек может прожить жизнь без многого, но не без друзей — и притом у него обязательно должны быть настоящие друзья.",
+              "text_translation_en": "A person can go through life without many things, but not without friends — and they must have true friends of their own.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t5-s2",
+              "text_original": "什么是真正的朋友？",
+              "pinyin": "Shénme shì zhēnzhèng de péngyou?",
+              "text_translation": "Haqiqiy do'st degani nima?",
+              "text_translation_ru": "Что такое настоящий друг?",
+              "text_translation_en": "What is a true friend?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t5-s3",
+              "text_original": "不同的人会有不同的理解。",
+              "pinyin": "Bùtóng de rén huì yǒu bùtóng de lǐjiě.",
+              "text_translation": "Har xil odamlar buni har xil tushunadi.",
+              "text_translation_ru": "У разных людей разное понимание.",
+              "text_translation_en": "Different people understand it differently.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t5-s4",
+              "text_original": "有些人觉得朋友就是能和自己一起快乐的人；有些人觉得朋友应该像镜子，能帮自己看到缺点。",
+              "pinyin": "Yǒuxiē rén juéde péngyou jiù shì néng hé zìjǐ yīqǐ kuàilè de rén; yǒuxiē rén juéde péngyou yīnggāi xiàng jìngzi, néng bāng zìjǐ kàndào quēdiǎn.",
+              "text_translation": "Ba'zilar do'st — bu siz bilan birga quvona oladigan odam deb biladi; boshqalar esa do'st oyna kabi bo'lishi, kamchiliklaringizni ko'rsata olishi kerak deb hisoblaydi.",
+              "text_translation_ru": "Одни считают, что друг — это тот, с кем можно вместе радоваться; другие думают, что друг должен быть как зеркало и помогать увидеть свои недостатки.",
+              "text_translation_en": "Some think a friend is someone you can be happy with; others think a friend should be like a mirror, helping you see your own flaws.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t5-s5",
+              "text_original": "而我的理解是：当你遇到困难的时候，真正的朋友会站出来，及时给你帮助；当你无聊或者难过的时候，真正的朋友会陪在你身边，想办法让你感到幸福。",
+              "pinyin": "Ér wǒ de lǐjiě shì: dāng nǐ yùdào kùnnan de shíhou, zhēnzhèng de péngyou huì zhàn chūlái, jíshí gěi nǐ bāngzhù; dāng nǐ wúliáo huòzhě nánguò de shíhou, zhēnzhèng de péngyou huì péi zài nǐ shēnbiān, xiǎng bànfǎ ràng nǐ gǎndào xìngfú.",
+              "text_translation": "Mening tushunishimcha esa: qiyinchilikka duch kelganingda haqiqiy do'st oldinga chiqadi va o'z vaqtida yordam beradi; zerikkaningda yoki xafa bo'lganingda haqiqiy do'st yoningda bo'lib, seni xursand qilishning yo'lini izlaydi.",
+              "text_translation_ru": "А я понимаю это так: когда ты сталкиваешься с трудностями, настоящий друг выходит вперёд и вовремя помогает; когда тебе скучно или грустно, настоящий друг остаётся рядом и ищет способ тебя порадовать.",
+              "text_translation_en": "My own understanding is this: when you meet difficulties, a true friend steps forward and helps you in time; when you're bored or sad, a true friend stays by your side and finds a way to make you happy.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
     }
   ],
   "grammar": [
@@ -1269,6 +1527,309 @@
           "uz": "尽管 → haqiqiy holatga qaramay\n即使 → taxminiy holatda ham",
           "ru": "尽管 → несмотря на реальный факт\n即使 → даже при предполагаемом условии",
           "en": "尽管 → despite a real fact\n即使 → even under a hypothetical condition"
+        }
+      ]
+    },
+    {
+      "slug": "que",
+      "title": "却",
+      "pinyin": "què",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "却 — burilish (qarama-qarshilik) ma'nosini bildiruvchi ravish. Odatda kutilgan natijaga zid holatni ifodalaydi: «ammo», «lekin», «biroq», «esa», «baribir».",
+          "ru": "却 — наречие, выражающее противопоставление или неожиданный результат: «однако», «но», «зато», «тем не менее».",
+          "en": "却 is an adverb expressing contrast or an unexpected result: “yet”, “however”, “but”, “instead”."
+        },
+        {
+          "type": "p",
+          "uz": "却 odatda egadan keyin va fe'ldan oldin keladi.",
+          "ru": "却 обычно ставится после подлежащего и перед глаголом.",
+          "en": "却 is usually placed after the subject and before the verb."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 却 + Fe'l / Sifat",
+          "ru": "Подлежащее + 却 + Глагол / Прилагательное",
+          "en": "Subject + 却 + Verb / Adjective"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "有人觉得有房子和汽车就是幸福，有人却认为找到真正的爱情才是幸福。",
+          "py": "Yǒurén juéde yǒu fángzi hé qìchē jiù shì xìngfú, yǒurén què rènwéi zhǎodào zhēnzhèng de àiqíng cái shì xìngfú.",
+          "uz": "Ba'zilar uy va mashinaga ega bo'lishni baxt deb biladi, boshqalar esa haqiqiy sevgini topishni baxt deb hisoblaydi.",
+          "ru": "Одни считают, что счастье — это иметь дом и машину, а другие — что настоящее счастье это найти настоящую любовь.",
+          "en": "Some think owning a house and a car is happiness, while others believe finding true love is."
+        },
+        {
+          "type": "ex",
+          "zh": "一个脾气不好的人虽然不一定让人讨厌，但是却很难跟人交朋友。",
+          "py": "Yī ge píqi bù hǎo de rén suīrán bù yīdìng ràng rén tǎoyàn, dànshì què hěn nán gēn rén jiāo péngyou.",
+          "uz": "Fe'li yomon odam har doim ham yoqimsiz bo'lmasligi mumkin, ammo u do'st orttirishi qiyin.",
+          "ru": "Хотя человек с плохим характером не обязательно вызывает неприязнь, ему всё же трудно заводить друзей.",
+          "en": "Although a bad-tempered person isn't necessarily disliked, they still find it hard to make friends."
+        },
+        {
+          "type": "ex",
+          "zh": "现在很多人虽然住在同一个楼里，但是却从来没说过话。",
+          "py": "Xiànzài hěn duō rén suīrán zhù zài tóng yī ge lóu lǐ, dànshì què cónglái méi shuōguo huà.",
+          "uz": "Hozir ko'p odamlar bir binoda yashasa ham, hech qachon gaplashmagan.",
+          "ru": "Сегодня многие живут в одном доме, но при этом никогда друг с другом не разговаривали.",
+          "en": "Nowadays many people live in the same building, yet have never spoken to each other."
+        },
+        {
+          "type": "h",
+          "uz": "却 qayerda ishlatiladi?",
+          "ru": "Когда используется 却?",
+          "en": "When is 却 used?"
+        },
+        {
+          "type": "p",
+          "uz": "却 odatda quyidagi bog'lovchilar bilan birga keladi va ikkinchi gapdagi qarama-qarshilikni kuchaytiradi:\n虽然……却……\n尽管……却……\n但是……却……",
+          "ru": "却 часто встречается после таких конструкций и усиливает противопоставление во второй части:\n虽然……却……\n尽管……却……\n但是……却……",
+          "en": "却 commonly appears after these, strengthening the contrast in the second clause:\n虽然……却……\n尽管……却……\n但是……却……"
+        },
+        {
+          "type": "h",
+          "uz": "却 va 但是 farqi",
+          "ru": "却 и 但是",
+          "en": "却 vs. 但是"
+        },
+        {
+          "type": "p",
+          "uz": "但是 — ikki gapni bog'laydigan bog'lovchi; 却 — gap ichida ishlatiladigan ravish. Ularni birga ham ishlatish mumkin.",
+          "ru": "但是 — союз, соединяющий две части; 却 — наречие внутри второй части. Их можно использовать вместе.",
+          "en": "但是 is a conjunction joining two clauses; 却 is an adverb inside the second clause. They can be used together."
+        },
+        {
+          "type": "ex",
+          "zh": "我很累，但是我要工作。",
+          "py": "Wǒ hěn lèi, dànshì wǒ yào gōngzuò.",
+          "uz": "Men juda charchaganman, lekin ishlashim kerak.",
+          "ru": "Я очень устал, но мне нужно работать.",
+          "en": "I'm very tired, but I have to work."
+        },
+        {
+          "type": "ex",
+          "zh": "我很累，却要工作。",
+          "py": "Wǒ hěn lèi, què yào gōngzuò.",
+          "uz": "Men juda charchaganman, ammo ishlashim kerak.",
+          "ru": "Я очень устал, однако мне всё равно нужно работать.",
+          "en": "I'm very tired, yet I have to work."
+        },
+        {
+          "type": "ex",
+          "zh": "我很累，但是却要工作。",
+          "py": "Wǒ hěn lèi, dànshì què yào gōngzuò.",
+          "uz": "Men juda charchaganman, lekin baribir ishlashim kerak.",
+          "ru": "Я очень устал, но всё равно должен работать.",
+          "en": "I'm very tired, but I still have to work."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 却 + Fe'l  →  ammo / biroq / lekin",
+          "ru": "Подлежащее + 却 + Глагол  →  однако / но / тем не менее",
+          "en": "Subject + 却 + Verb  →  yet / however / but"
+        },
+        {
+          "type": "ex",
+          "zh": "他很年轻，却很有经验。",
+          "py": "Tā hěn niánqīng, què hěn yǒu jīngyàn.",
+          "uz": "U juda yosh, ammo tajribasi katta.",
+          "ru": "Он очень молод, однако у него большой опыт.",
+          "en": "He is very young, yet very experienced."
+        },
+        {
+          "type": "note",
+          "uz": "却 = ammo / biroq / lekin\nOdatda egadan keyin, fe'ldan oldin keladi.\nQarama-qarshilikni yumshoq tarzda bildiradi.",
+          "ru": "却 = однако / тем не менее\nОбычно после подлежащего и перед глаголом.\nВыражает мягкое противопоставление.",
+          "en": "却 = yet / however\nUsually after the subject and before the verb.\nIntroduces a mild contrast or unexpected result."
+        }
+      ]
+    },
+    {
+      "slug": "er",
+      "title": "而",
+      "pinyin": "ér",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "而 — gapning ikki qismini bog'lovchi so'z. Asosan ikki ma'noda ishlatiladi:\n1. Parallel yoki taqqoslash — «esa», «va», «boshqa tomondan».\n2. Qarama-qarshilik — «ammo», «lekin», «biroq».",
+          "ru": "而 — союз, соединяющий две части предложения. Имеет два основных значения:\n1. Сопоставление — «а», «в то время как», «при этом».\n2. Противопоставление — «а», «но», «тогда как».",
+          "en": "而 is a conjunction connecting two clauses. It has two main uses:\n1. Coordination or comparison — “while”, “whereas”, “and”.\n2. Contrast — “but”, “whereas”."
+        },
+        {
+          "type": "h",
+          "uz": "1. Parallel yoki taqqoslash",
+          "ru": "1. Сопоставление",
+          "en": "1. Coordination or comparison"
+        },
+        {
+          "type": "formula",
+          "uz": "A，而 B",
+          "ru": "A，而 B",
+          "en": "A，而 B"
+        },
+        {
+          "type": "ex",
+          "zh": "“明”字，左边的“日”意思是太阳，而右边的“月”意思是月亮。",
+          "py": "“Míng” zì, zuǒbiān de “rì” yìsi shì tàiyáng, ér yòubiān de “yuè” yìsi shì yuèliàng.",
+          "uz": "«明» ieroglifining chap tomonidagi «日» quyosh, o'ng tomonidagi «月» esa oy ma'nosini bildiradi.",
+          "ru": "В иероглифе 明 левая часть 日 означает «солнце», а правая 月 — «луна».",
+          "en": "In the character 明, the 日 on the left means “sun”, while the 月 on the right means “moon”."
+        },
+        {
+          "type": "ex",
+          "zh": "结婚前，我们都要清楚自己想要的是什么，而不要被别人对幸福的看法影响。",
+          "py": "Jiéhūn qián, wǒmen dōu yào qīngchu zìjǐ xiǎng yào de shì shénme, ér bùyào bèi biérén duì xìngfú de kànfǎ yǐngxiǎng.",
+          "uz": "Turmush qurishdan oldin nimani xohlashimizni aniq bilishimiz, boshqalarning baxt haqidagi qarashlari ta'siriga tushmasligimiz kerak.",
+          "ru": "Перед вступлением в брак нужно ясно понимать, чего мы хотим, и не позволять чужим представлениям о счастье влиять на нас.",
+          "en": "Before marrying, we should be clear about what we want, and not be influenced by other people's ideas of happiness."
+        },
+        {
+          "type": "h",
+          "uz": "2. Qarama-qarshilik",
+          "ru": "2. Противопоставление",
+          "en": "2. Contrast"
+        },
+        {
+          "type": "ex",
+          "zh": "在工作中遇到了问题，男人回到家不喜欢跟妻子说，而女人喜欢跟丈夫说。",
+          "py": "Zài gōngzuò zhōng yùdào le wèntí, nánrén huídào jiā bù xǐhuan gēn qīzi shuō, ér nǚrén xǐhuan gēn zhàngfu shuō.",
+          "uz": "Ishda muammoga duch kelganda, erkaklar uyga kelib xotiniga aytishni yoqtirmaydi, ayollar esa eriga aytishni yoqtiradi.",
+          "ru": "Когда на работе возникают проблемы, мужчины дома не любят рассказывать о них жёнам, а женщины любят рассказывать мужьям.",
+          "en": "When problems come up at work, men don't like telling their wives at home, whereas women like telling their husbands."
+        },
+        {
+          "type": "ex",
+          "zh": "有些人觉得朋友就是能和自己一起快乐的人，而我的理解是：当你遇到困难的时候，真正的朋友会站出来，及时给你帮助。",
+          "py": "Yǒuxiē rén juéde péngyou jiù shì néng hé zìjǐ yīqǐ kuàilè de rén, ér wǒ de lǐjiě shì: dāng nǐ yùdào kùnnan de shíhou, zhēnzhèng de péngyou huì zhàn chūlái, jíshí gěi nǐ bāngzhù.",
+          "uz": "Ba'zilar do'st — birga quvonadigan odam deb biladi, mening tushunishimcha esa qiyin paytda oldinga chiqib, o'z vaqtida yordam beradigan odam haqiqiy do'stdir.",
+          "ru": "Некоторые считают, что друг — это тот, с кем можно разделить радость, а я считаю, что настоящий друг выходит вперёд и вовремя помогает в трудную минуту.",
+          "en": "Some think a friend is someone to share happiness with, whereas I believe a true friend steps forward and helps you in time when you meet difficulties."
+        },
+        {
+          "type": "h",
+          "uz": "而 va 却 farqi",
+          "ru": "而 и 却",
+          "en": "而 vs. 却"
+        },
+        {
+          "type": "ex",
+          "zh": "男人喜欢安静，而女人喜欢聊天。",
+          "py": "Nánrén xǐhuan ānjìng, ér nǚrén xǐhuan liáotiān.",
+          "uz": "Erkaklar tinchlikni yoqtiradi, ayollar esa suhbatlashishni.",
+          "ru": "Мужчины любят тишину, а женщины любят общаться.",
+          "en": "Men like peace and quiet, whereas women enjoy chatting."
+        },
+        {
+          "type": "ex",
+          "zh": "他很年轻，却很有经验。",
+          "py": "Tā hěn niánqīng, què hěn yǒu jīngyàn.",
+          "uz": "U juda yosh, ammo juda tajribali.",
+          "ru": "Он очень молод, однако у него большой опыт.",
+          "en": "He is very young, yet very experienced."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa taqqoslash",
+          "ru": "Краткое сравнение",
+          "en": "Quick comparison"
+        },
+        {
+          "type": "table",
+          "head": [
+            "而",
+            "却"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "ikki fikrni bog'laydi",
+                "qarama-qarshilikni ta'kidlaydi"
+              ],
+              "ru": [
+                "соединяет две идеи",
+                "подчёркивает противопоставление"
+              ],
+              "en": [
+                "connects two ideas",
+                "emphasises the contrast"
+              ]
+            },
+            {
+              "uz": [
+                "«esa», «va», «ammo»",
+                "«ammo», «biroq», «shunga qaramay»"
+              ],
+              "ru": [
+                "«а», «тогда как»",
+                "«однако», «тем не менее»"
+              ],
+              "en": [
+                "while, whereas, and",
+                "yet, however, but"
+              ]
+            },
+            {
+              "uz": [
+                "taqqoslash uchun ham ishlatiladi",
+                "kutilmagan natija uchun ishlatiladi"
+              ],
+              "ru": [
+                "используется для сравнения",
+                "используется для неожиданного результата"
+              ],
+              "en": [
+                "used for comparison or coordination",
+                "used for unexpected results"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "而 → esa, va, ammo (ikki fikrni bog'laydi)\n却 → ammo, biroq (kutilmagan natijani ta'kidlaydi)",
+          "ru": "而 = «а», «тогда как» — соединяет две идеи\n却 = «однако», «тем не менее» — подчёркивает неожиданное противопоставление",
+          "en": "而 connects two related or contrasting ideas.\n却 highlights an unexpected contrast or result."
         }
       ]
     }
