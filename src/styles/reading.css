@@ -13383,15 +13383,10 @@ body {
      hero, so it occupies the space the eye already expects — and at that height
      every translation in the corpus fits without scrolling or truncating. */
   height: 175px;
-  /* Centre-then-shift rather than a negative margin: .dr-dialog-body already
-     carries its own offsets on mobile, which a `-50vw + 50%` margin measures
-     from and lands 15px short. This is what .home__hero uses. */
+  /* Same full-bleed as .dr-hero, which this replaces. Valid here only because
+     the bar now sits outside the centred .dr-dialog-body column. */
   width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  /* Climb back out of the body's top padding so the bar starts at the very top
-     of the reader. The lines below keep that padding — only the bar cancels it. */
-  margin-top: calc(-1 * var(--dr-body-pt, 30px));
+  margin-left: calc(-50vw + 50%);
   display: flex;
   align-items: center;
   justify-content: center;

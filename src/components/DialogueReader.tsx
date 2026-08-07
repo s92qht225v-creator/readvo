@@ -818,6 +818,33 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
             {/* ── DIALOG TAB ── */}
             {activeTab === 'dialog' && (
               <>
+                {/* The reader's only top chrome — the hero is hidden once
+                    content loads, and this replaces it.
+
+                    A sibling of .dr-dialog-body, not a child: that column is
+                    centred fit-content, so a full-bleed width measured from it
+                    lands off-centre. Out here the viewport is the reference.
+
+                    Fixed height in every state so the page never shifts, and
+                    never blank — with no line selected it shows the title. */}
+                {!focusMode && (() => {
+                  const active = showTranslation ? allSentences.find(s => s.id === revealedId) : undefined;
+                  const whole = active ? trOf(active) : '';
+                  // An entry holding several sentences translates only the
+                  // one that was tapped. splitAligned falls back to the
+                  // whole entry when the two sides don't split evenly.
+                  const segs = active ? splitAligned(active.text_original, whole) : [];
+                  // WHOLE_ENTRY (no single sentence selected) falls through
+                  // to the entry's full translation.
+                  const tr = (segs.length && revealedSeg !== WHOLE_ENTRY)
+                    ? (segs[Math.min(revealedSeg, segs.length - 1)]?.tr || whole)
+                    : whole;
+                  return (
+                    <div className={`dr-trbar${tr ? '' : ' dr-trbar--idle'}`} ref={trBarRef} aria-live="polite">
+                      <p className="dr-trbar__text">{tr || `${meta.title} · ${titleTr}`}</p>
+                    </div>
+                  );
+                })()}
                 <div className={`dr-dialog-body ${audioActive ? 'dr-dialog-body--with-audio' : ''}`}>
                   {focusMode && activeSentence ? (
                     <div className="story__focus">
@@ -850,31 +877,6 @@ export function DialogueReader({ meta, bookPath, listPath, preview, contentPath 
                     </div>
                   ) : (
                   <>
-                    {/* The reader's only top chrome — the hero is hidden once
-                        content loads, and this replaces it.
-
-                        Always mounted at a fixed height so the page never
-                        shifts, and never blank: with no line selected it shows
-                        the dialogue's title, which is what the hero used to say
-                        in 150px. Back and the menu live in the ⋮. */}
-                    {(() => {
-                      const active = showTranslation ? allSentences.find(s => s.id === revealedId) : undefined;
-                      const whole = active ? trOf(active) : '';
-                      // An entry holding several sentences translates only the
-                      // one that was tapped. splitAligned falls back to the
-                      // whole entry when the two sides don't split evenly.
-                      const segs = active ? splitAligned(active.text_original, whole) : [];
-                      // WHOLE_ENTRY (no single sentence selected) falls through
-                      // to the entry's full translation.
-                      const tr = (segs.length && revealedSeg !== WHOLE_ENTRY)
-                        ? (segs[Math.min(revealedSeg, segs.length - 1)]?.tr || whole)
-                        : whole;
-                      return (
-                        <div className={`dr-trbar${tr ? '' : ' dr-trbar--idle'}`} ref={trBarRef} aria-live="polite">
-                          <p className="dr-trbar__text">{tr || `${meta.title} · ${titleTr}`}</p>
-                        </div>
-                      );
-                    })()}
                     {dialogue.sections.map(section => {
                       // Group consecutive sentences that share a speaker so
                       // they flow as one wrapping row of characters instead
