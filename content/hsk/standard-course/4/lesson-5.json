@@ -689,6 +689,597 @@
           ]
         }
       ]
+    },
+    {
+      "id": "hsk4-l5-culture",
+      "slug": "culture",
+      "label": "文化",
+      "title": "中国人的购物习惯",
+      "labelTranslation": "Madaniyat",
+      "labelTranslation_ru": "Культура",
+      "labelTranslation_en": "Culture",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l5-culture-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l5-culture-s1",
+              "text_original": "购物是我们生活中几乎每天都要发生的事情。",
+              "pinyin": "Gòuwù shì wǒmen shēnghuó zhōng jīhū měitiān dōu yào fāshēng de shìqing.",
+              "text_translation": "Xarid qilish — hayotimizda deyarli har kuni sodir bo'ladigan ish.",
+              "text_translation_ru": "Покупки — то, что происходит в нашей жизни почти каждый день.",
+              "text_translation_en": "Shopping is something that happens in our lives almost every day.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-culture-s2",
+              "text_original": "目前很多商场集购物、休闲、娱乐、餐饮等多种功能于一体，可以满足一个家庭所有成员的需求。",
+              "pinyin": "Mùqián hěn duō shāngchǎng jí gòuwù, xiūxián, yúlè, cānyǐn děng duō zhǒng gōngnéng yú yītǐ, kěyǐ mǎnzú yī gè jiātíng suǒyǒu chéngyuán de xūqiú.",
+              "text_translation": "Hozir ko'p savdo markazlari xarid, dam olish, ko'ngilochar tadbir va ovqatlanish kabi bir necha vazifani birlashtirgan — bir oilaning barcha a'zolari ehtiyojini qondira oladi.",
+              "text_translation_ru": "Сегодня многие торговые центры объединяют покупки, отдых, развлечения и питание, удовлетворяя потребности всех членов семьи.",
+              "text_translation_en": "Many malls today combine shopping, leisure, entertainment and dining in one place, meeting the needs of every member of a family.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-culture-s3",
+              "text_original": "逛商场已经成为人们家庭生活的一部分。",
+              "pinyin": "Guàng shāngchǎng yǐjīng chéngwéi rénmen jiātíng shēnghuó de yī bùfen.",
+              "text_translation": "Savdo markazlarini aylanish odamlarning oilaviy hayotining bir qismiga aylangan.",
+              "text_translation_ru": "Походы по торговым центрам стали частью семейной жизни.",
+              "text_translation_en": "Going round the shops has become part of family life.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-culture-s4",
+              "text_original": "在一些小店里买东西还可以砍价，如果掌握一些砍价的方法，你就可以用更低的价格买到你想要的东西。",
+              "pinyin": "Zài yīxiē xiǎo diàn lǐ mǎi dōngxi hái kěyǐ kǎnjià, rúguǒ zhǎngwò yīxiē kǎnjià de fāngfǎ, nǐ jiù kěyǐ yòng gèng dī de jiàgé mǎidào nǐ xiǎng yào de dōngxi.",
+              "text_translation": "Ba'zi kichik do'konlarda savdolashish ham mumkin — savdolashish usullarini bilsangiz, xohlagan narsangizni arzonroqqa olasiz.",
+              "text_translation_ru": "В небольших магазинах можно и поторговаться: освоив приёмы торга, вы купите нужное дешевле.",
+              "text_translation_en": "In smaller shops you can also haggle — master a few bargaining techniques and you'll get what you want for less.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-culture-s5",
+              "text_original": "另外，现在网上购物也越来越流行了。",
+              "pinyin": "Lìngwài, xiànzài wǎngshàng gòuwù yě yuè lái yuè liúxíng le.",
+              "text_translation": "Bundan tashqari, hozir onlayn xarid ham tobora ommalashyapti.",
+              "text_translation_ru": "Кроме того, всё более популярными становятся интернет-покупки.",
+              "text_translation_en": "Besides, online shopping is becoming more and more popular too.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l5-culture-s6",
+              "text_original": "总之，人们购物的方式越来越丰富了。",
+              "pinyin": "Zǒngzhī, rénmen gòuwù de fāngshì yuè lái yuè fēngfù le.",
+              "text_translation": "Xullas, odamlarning xarid qilish usullari tobora xilma-xil bo'lib boryapti.",
+              "text_translation_ru": "Словом, способы совершать покупки становятся всё разнообразнее.",
+              "text_translation_en": "In short, the ways people shop are becoming ever more varied.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "slug": "kending",
+      "title": "肯定",
+      "pinyin": "kěndìng",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "肯定 uch xil vazifada ishlatiladi:\n1. Ravish — «albatta», «aniq», «shubhasiz».\n2. Sifat — «aniq», «ishonchli».\n3. Sifat — «ijobiy», «tasdiqlovchi».",
+          "ru": "肯定 имеет три значения:\n1. Наречие — «обязательно», «точно».\n2. Прилагательное — «определённый», «достоверный».\n3. Прилагательное — «утвердительный».",
+          "en": "肯定 has three uses:\n1. Adverb — “certainly”, “definitely”.\n2. Adjective — “certain”, “definite”.\n3. Adjective — “affirmative”, “positive”."
+        },
+        {
+          "type": "h",
+          "uz": "1. 肯定 — ravish",
+          "ru": "1. 肯定 как наречие",
+          "en": "1. 肯定 as an adverb"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 肯定 + Fe'l / Sifat",
+          "ru": "Подлежащее + 肯定 + Глагол / Прилагательное",
+          "en": "Subject + 肯定 + Verb / Adjective"
+        },
+        {
+          "type": "ex",
+          "zh": "您放心，质量肯定不“打折”。",
+          "py": "Nín fàngxīn, zhìliàng kěndìng bù dǎzhé.",
+          "uz": "Xotirjam bo'ling, sifatga albatta «chegirma» yo'q.",
+          "ru": "Не волнуйтесь, на качестве точно никакой «скидки».",
+          "en": "Don't worry — the quality certainly won't be “discounted”."
+        },
+        {
+          "type": "ex",
+          "zh": "每天喝一点儿葡萄酒，对身体是有好处的。",
+          "py": "Měitiān hē yīdiǎnr pútaojiǔ, duì shēntǐ shì yǒu hǎochu de.",
+          "uz": "Har kuni ozgina uzum sharobi ichish sog'liq uchun foydali.",
+          "ru": "Немного вина каждый день полезно для здоровья.",
+          "en": "Drinking a little wine each day is good for you."
+        },
+        {
+          "type": "ex",
+          "zh": "但是不能喝太多，喝太多酒肯定对身体不好。",
+          "py": "Dànshì bù néng hē tài duō, hē tài duō jiǔ kěndìng duì shēntǐ bù hǎo.",
+          "uz": "Ammo ko'p ichmaslik kerak — ko'p ichish albatta sog'liqqa zarar.",
+          "ru": "Но пить много нельзя — это определённо вредно для здоровья.",
+          "en": "But you mustn't drink too much — that is definitely bad for your health."
+        },
+        {
+          "type": "h",
+          "uz": "2. 肯定 — sifat («aniq»)",
+          "ru": "2. 肯定 как прилагательное («определённый»)",
+          "en": "2. 肯定 as an adjective (certain)"
+        },
+        {
+          "type": "ex",
+          "zh": "不能肯定的事、没发生过的事，最好不要说。",
+          "py": "Bù néng kěndìng de shì, méi fāshēng guò de shì, zuì hǎo bùyào shuō.",
+          "uz": "Aniq bo'lmagan yoki sodir bo'lmagan narsalar haqida gapirmagan ma'qul.",
+          "ru": "Лучше не говорить о том, в чём не уверен или чего не происходило.",
+          "en": "It's best not to talk about things you're not sure of, or that never happened."
+        },
+        {
+          "type": "h",
+          "uz": "3. 肯定 — sifat («ijobiy»)",
+          "ru": "3. 肯定 как прилагательное («утвердительный»)",
+          "en": "3. 肯定 as an adjective (affirmative)"
+        },
+        {
+          "type": "ex",
+          "zh": "相信大部分人的回答都是肯定的。",
+          "py": "Xiāngxìn dà bùfen rén de huídá dōu shì kěndìng de.",
+          "uz": "Ishonamanki, ko'pchilikning javobi ijobiy bo'ladi.",
+          "ru": "Думаю, большинство ответит утвердительно.",
+          "en": "I believe most people's answer would be yes."
+        },
+        {
+          "type": "h",
+          "uz": "肯定 va 一定 farqi",
+          "ru": "肯定 и 一定",
+          "en": "肯定 vs. 一定"
+        },
+        {
+          "type": "ex",
+          "zh": "你一定要来。",
+          "py": "Nǐ yīdìng yào lái.",
+          "uz": "Albatta kelishing kerak.",
+          "ru": "Ты обязательно должен прийти.",
+          "en": "You must come."
+        },
+        {
+          "type": "ex",
+          "zh": "他肯定会来。",
+          "py": "Tā kěndìng huì lái.",
+          "uz": "U albatta keladi.",
+          "ru": "Он точно придёт.",
+          "en": "He'll definitely come."
+        },
+        {
+          "type": "note",
+          "uz": "一定 → ishonch yoki zarurat.\n肯定 → shubhasiz ishonch; sifat ham bo'la oladi.",
+          "ru": "一定 → уверенность или необходимость.\n肯定 → уверенность; может быть и прилагательным.",
+          "en": "一定 → certainty or obligation.\n肯定 → confidence; it can also be an adjective."
+        }
+      ]
+    },
+    {
+      "slug": "zaishuo",
+      "title": "再说",
+      "pinyin": "zàishuō",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "再说 ikki xil vazifada ishlatiladi:\n1. Fe'l — «keyinroq ko'rib chiqmoq», «keyinga qoldirmoq».\n2. Bog'lovchi — «bundan tashqari», «qolaversa».",
+          "ru": "再说 имеет две функции:\n1. Глагол — «обсудить позже», «отложить».\n2. Союз — «кроме того», «к тому же».",
+          "en": "再说 has two uses:\n1. Verb — “to leave it until later”.\n2. Conjunction — “besides”, “what's more”."
+        },
+        {
+          "type": "h",
+          "uz": "1. 再说 — fe'l",
+          "ru": "1. 再说 как глагол",
+          "en": "1. 再说 as a verb"
+        },
+        {
+          "type": "ex",
+          "zh": "现在的事，做了再说；以后的事，以后再说。",
+          "py": "Xiànzài de shì, zuò le zàishuō; yǐhòu de shì, yǐhòu zàishuō.",
+          "uz": "Hozirgi ishni avval bajar, keyingi ishlarni keyin hal qilamiz.",
+          "ru": "Сначала сделаем то, что нужно сейчас, а о будущем поговорим позже.",
+          "en": "Deal with today's matters first; future ones can wait."
+        },
+        {
+          "type": "ex",
+          "zh": "你不是很喜欢那件大衣吗？怎么不买了呢？",
+          "py": "Nǐ bù shì hěn xǐhuan nà jiàn dàyī ma? Zěnme bù mǎi le ne?",
+          "uz": "O'sha paltoni juda yoqtirganding-ku, nega olmading?",
+          "ru": "Тебе ведь очень понравилось то пальто — почему не купил?",
+          "en": "Didn't you really like that coat? Why didn't you buy it?"
+        },
+        {
+          "type": "ex",
+          "zh": "我真的很喜欢，不过没我的号了，下次再说吧。",
+          "py": "Wǒ zhēn de hěn xǐhuan, bùguò méi wǒ de hào le, xià cì zàishuō ba.",
+          "uz": "Rostdan yoqdi, lekin mening o'lchamim qolmabdi — keyingi safar ko'ramiz.",
+          "ru": "Очень понравилось, но моего размера не было — в следующий раз.",
+          "en": "I really do like it, but they didn't have my size — maybe next time."
+        },
+        {
+          "type": "h",
+          "uz": "2. 再说 — bog'lovchi",
+          "ru": "2. 再说 как союз",
+          "en": "2. 再说 as a conjunction"
+        },
+        {
+          "type": "ex",
+          "zh": "今天买的东西太多了。",
+          "py": "Jīntiān mǎi de dōngxi tài duō le.",
+          "uz": "Bugun juda ko'p narsa oldik.",
+          "ru": "Сегодня мы купили слишком много.",
+          "en": "We've bought too much today."
+        },
+        {
+          "type": "ex",
+          "zh": "再说，这个月家里已经花了五千多了。",
+          "py": "Zàishuō, zhège yuè jiālǐ yǐjīng huā le wǔqiān duō le.",
+          "uz": "Qolaversa, bu oy uy uchun besh mingdan ortiq sarfladik.",
+          "ru": "К тому же в этом месяце мы уже потратили больше пяти тысяч.",
+          "en": "Besides, we've already spent over five thousand this month."
+        },
+        {
+          "type": "ex",
+          "zh": "晚上八点的，不用急。",
+          "py": "Wǎnshang bā diǎn de, bùyòng jí.",
+          "uz": "Kechki sakkizda — shoshilishning hojati yo'q.",
+          "ru": "В восемь вечера, спешить не нужно.",
+          "en": "It's at eight in the evening — no rush."
+        },
+        {
+          "type": "ex",
+          "zh": "再说，我就去几天，不用带多少东西。",
+          "py": "Zàishuō, wǒ jiù qù jǐ tiān, bùyòng dài duōshao dōngxi.",
+          "uz": "Qolaversa, atigi bir necha kunga ketyapman — ko'p narsa olishim shart emas.",
+          "ru": "К тому же я еду всего на несколько дней — много вещей не нужно.",
+          "en": "Besides, I'm only going for a few days, so I don't need to take much."
+        },
+        {
+          "type": "note",
+          "uz": "再说 → oldingi fikrga yana bir sabab qo'shadi.\n另外 → shunchaki qo'shimcha ma'lumot qo'shadi.",
+          "ru": "再说 → добавляет ещё один довод к сказанному.\n另外 → просто добавляет информацию.",
+          "en": "再说 → adds another reason supporting what was just said.\n另外 → simply adds further information."
+        }
+      ]
+    },
+    {
+      "slug": "shiji",
+      "title": "实际 / 实际上",
+      "pinyin": "shíjì / shíjìshàng",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "实际 ot yoki sifat bo'ladi:\n1. Ot — «haqiqat», «real holat».\n2. Sifat — «haqiqiy», «amaliy».\n实际上 esa ravish: «aslida», «haqiqatda», «amalda».",
+          "ru": "实际 — существительное или прилагательное:\n1. Существительное — «реальность», «фактическая ситуация».\n2. Прилагательное — «реальный», «практический».\n实际上 — наречие: «на самом деле», «фактически».",
+          "en": "实际 is a noun or adjective:\n1. Noun — “reality”, “the actual situation”.\n2. Adjective — “actual”, “practical”.\n实际上 is an adverb: “actually”, “in fact”."
+        },
+        {
+          "type": "h",
+          "uz": "1. 实际 — ot",
+          "ru": "1. 实际 как существительное",
+          "en": "1. 实际 as a noun"
+        },
+        {
+          "type": "ex",
+          "zh": "你们做计划应该联系实际。",
+          "py": "Nǐmen zuò jìhuà yīnggāi liánxì shíjì.",
+          "uz": "Reja tuzayotganda haqiqiy vaziyatni hisobga olishingiz kerak.",
+          "ru": "При составлении плана нужно учитывать реальную ситуацию.",
+          "en": "When making plans you should take the actual situation into account."
+        },
+        {
+          "type": "h",
+          "uz": "2. 实际 — sifat",
+          "ru": "2. 实际 как прилагательное",
+          "en": "2. 实际 as an adjective"
+        },
+        {
+          "type": "ex",
+          "zh": "听说你大学二年级的时候就开始在广告公司工作了。",
+          "py": "Tīngshuō nǐ dàxué èr niánjí de shíhou jiù kāishǐ zài guǎnggào gōngsī gōngzuò le.",
+          "uz": "Eshitishimcha, universitetning ikkinchi kursidayoq reklama kompaniyasida ishlay boshlagansan.",
+          "ru": "Слышал, ты начал работать в рекламной компании уже на втором курсе.",
+          "en": "I hear you started working at an advertising company in your second year at university."
+        },
+        {
+          "type": "ex",
+          "zh": "我认为不会，实际工作能让我更理解书本上的知识。",
+          "py": "Wǒ rènwéi bù huì, shíjì gōngzuò néng ràng wǒ gèng lǐjiě shūběn shàng de zhīshi.",
+          "uz": "Menimcha, yo'q — amaliy ish kitobdagi bilimlarni yaxshiroq tushunishga yordam beradi.",
+          "ru": "Думаю, нет — практическая работа помогает лучше понимать знания из учебников.",
+          "en": "I don't think so — practical work helps me understand what's in the books."
+        },
+        {
+          "type": "h",
+          "uz": "3. 实际上 — ravish",
+          "ru": "3. 实际上 как наречие",
+          "en": "3. 实际上 as an adverb"
+        },
+        {
+          "type": "p",
+          "uz": "Ko'pincha kutilgan natija bilan haqiqiy vaziyat o'rtasidagi farqni ko'rsatadi.",
+          "ru": "Часто показывает разницу между ожидаемым и реальным.",
+          "en": "It often marks the gap between what's expected and what's actually so."
+        },
+        {
+          "type": "ex",
+          "zh": "要想别人对你好，你得先对别人好。",
+          "py": "Yào xiǎng biérén duì nǐ hǎo, nǐ děi xiān duì biérén hǎo.",
+          "uz": "Boshqalar sizga yaxshi munosabatda bo'lishini istasangiz, avval o'zingiz ularga yaxshi bo'ling.",
+          "ru": "Хочешь, чтобы к тебе относились хорошо, — сначала сам относись хорошо.",
+          "en": "If you want others to treat you well, treat them well first."
+        },
+        {
+          "type": "ex",
+          "zh": "实际上，我们很多人做不到这一点。",
+          "py": "Shíjìshàng, wǒmen hěn duō rén zuò bù dào zhè yī diǎn.",
+          "uz": "Aslida ko'pchiligimiz bunga amal qila olmaymiz.",
+          "ru": "На самом деле многие из нас так не умеют.",
+          "en": "In fact, many of us fail to do this."
+        },
+        {
+          "type": "h",
+          "uz": "实际 va 实际上 farqi",
+          "ru": "实际 и 实际上",
+          "en": "实际 vs. 实际上"
+        },
+        {
+          "type": "note",
+          "uz": "实际 → ot yoki sifat: 实际情况, 实际工作.\n实际上 → ravish: 实际上不是这样。",
+          "ru": "实际 → существительное или прилагательное: 实际情况, 实际工作.\n实际上 → наречие: 实际上不是这样。",
+          "en": "实际 → a noun or adjective: 实际情况, 实际工作.\n实际上 → an adverb: 实际上不是这样。"
+        },
+        {
+          "type": "note",
+          "uz": "实际 → haqiqiy holat, amaldagi vaziyat.\n现实 → reallik, hayotning o'zi: 现实生活.",
+          "ru": "实际 → фактическая ситуация.\n现实 → реальность, сама жизнь: 现实生活.",
+          "en": "实际 → the actual, practical situation.\n现实 → reality, real life: 现实生活."
+        }
+      ]
+    },
+    {
+      "slug": "dui-lai-shuo",
+      "title": "对……来说",
+      "pinyin": "duì… lái shuō",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "对……来说 — «… uchun», «… nuqtai nazaridan» ma'nosini bildiradi. Biror masalani ma'lum bir odam, guruh yoki narsa nuqtai nazaridan baholash uchun ishlatiladi.",
+          "ru": "对……来说 означает «для…», «с точки зрения…». Используется, чтобы оценить что-либо с позиции конкретного человека, группы или предмета.",
+          "en": "对……来说 means “for…”, “from the point of view of…”. It frames something from a particular person's, group's or thing's perspective."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "对 + Odam / Narsa + 来说，……",
+          "ru": "对 + Человек / Предмет + 来说，……",
+          "en": "对 + Person / Thing + 来说，…"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "对我来说，衣服的样子流行不流行并不是很重要。",
+          "py": "Duì wǒ lái shuō, yīfu de yàngzi liúxíng bù liúxíng bìng bù shì hěn zhòngyào.",
+          "uz": "Men uchun kiyimning fasoni modamimi yoki yo'qmi — unchalik muhim emas.",
+          "ru": "Для меня не так важно, модный фасон одежды или нет.",
+          "en": "For me, whether clothes are fashionable isn't very important."
+        },
+        {
+          "type": "ex",
+          "zh": "对一个女人来说，漂亮、聪明都很重要，但其实更重要的是快乐。",
+          "py": "Duì yī gè nǚrén lái shuō, piàoliang, cōngming dōu hěn zhòngyào, dàn qíshí gèng zhòngyào de shì kuàilè.",
+          "uz": "Ayol uchun chiroyli va aqlli bo'lish muhim, ammo aslida eng muhimi — baxtli bo'lish.",
+          "ru": "Для женщины важно быть красивой и умной, но на самом деле важнее быть счастливой.",
+          "en": "For a woman, being beautiful and clever both matter, but being happy matters more."
+        },
+        {
+          "type": "ex",
+          "zh": "一杯水，对一条小鱼来说，可能很有帮助，它可以在里面游得很好。",
+          "py": "Yī bēi shuǐ, duì yī tiáo xiǎoyú lái shuō, kěnéng hěn yǒu bāngzhù, tā kěyǐ zài lǐmiàn yóu de hěn hǎo.",
+          "uz": "Bir stakan suv kichik baliq uchun juda foydali bo'lishi mumkin — u ichida bemalol suza oladi.",
+          "ru": "Стакан воды для маленькой рыбки может быть очень кстати — она сможет там плавать.",
+          "en": "A cup of water may be a great help to a small fish — it can swim in it perfectly well."
+        },
+        {
+          "type": "ex",
+          "zh": "但是，对一条大鱼来说，一杯水是没有什么帮助的，它需要的是一条河。",
+          "py": "Dànshì, duì yī tiáo dà yú lái shuō, yī bēi shuǐ shì méiyǒu shénme bāngzhù de, tā xūyào de shì yī tiáo hé.",
+          "uz": "Ammo katta baliq uchun bir stakan suvning foydasi yo'q — unga daryo kerak.",
+          "ru": "Но для большой рыбы стакан воды бесполезен — ей нужна река.",
+          "en": "But for a big fish a cup of water is no help at all — what it needs is a river."
+        },
+        {
+          "type": "h",
+          "uz": "对……来说 va 对……而言",
+          "ru": "对……来说 и 对……而言",
+          "en": "对……来说 vs. 对……而言"
+        },
+        {
+          "type": "ex",
+          "zh": "对我来说，很简单。",
+          "py": "Duì wǒ lái shuō, hěn jiǎndān.",
+          "uz": "Men uchun bu juda oson.",
+          "ru": "Для меня это просто.",
+          "en": "For me it's easy."
+        },
+        {
+          "type": "ex",
+          "zh": "对公司而言，这是一个重要的决定。",
+          "py": "Duì gōngsī ér yán, zhè shì yī gè zhòngyào de juédìng.",
+          "uz": "Kompaniya nuqtai nazaridan bu muhim qaror.",
+          "ru": "Для компании это важное решение.",
+          "en": "For the company, this is an important decision."
+        },
+        {
+          "type": "note",
+          "uz": "对……来说 → kundalik nutqda eng ko'p ishlatiladi.\n对……而言 → ma'nosi bir xil, ammo rasmiyroq va yozma uslubda.",
+          "ru": "对……来说 → чаще всего в разговорной речи.\n对……而言 → то же значение, но более официально и книжно.",
+          "en": "对……来说 → the everyday form.\n对……而言 → the same meaning, but more formal and written."
+        }
+      ]
+    },
+    {
+      "slug": "youqi",
+      "title": "尤其",
+      "pinyin": "yóuqí",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "尤其 — ravish bo'lib, «ayniqsa», «xususan» ma'nosini bildiradi. Umumiy holat ichidagi eng muhim yoki eng ajralib turadigan qismni ta'kidlaydi.",
+          "ru": "尤其 — наречие «особенно», «в особенности». Выделяет самую важную часть общей ситуации.",
+          "en": "尤其 is an adverb meaning “especially”, “particularly”. It highlights the most notable part of a wider situation."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "Umumiy holat，尤其 + ta'kidlanayotgan qism",
+          "ru": "Общая ситуация，尤其 + то, что выделяется",
+          "en": "General statement，尤其 + the highlighted item"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "您女儿真可爱，长得真像您，尤其是眼睛。",
+          "py": "Nín nǚ'ér zhēn kě'ài, zhǎng de zhēn xiàng nín, yóuqí shì yǎnjing.",
+          "uz": "Qizingiz juda yoqimtoy, sizga juda o'xshaydi — ayniqsa ko'zlari.",
+          "ru": "Ваша дочь очень милая и очень на вас похожа — особенно глазами.",
+          "en": "Your daughter is lovely and really looks like you — especially her eyes."
+        },
+        {
+          "type": "ex",
+          "zh": "现在网上购物变得越来越流行了，年轻人尤其喜欢在网上买东西。",
+          "py": "Xiànzài wǎngshàng gòuwù biàn de yuè lái yuè liúxíng le, niánqīngrén yóuqí xǐhuan zài wǎngshàng mǎi dōngxi.",
+          "uz": "Hozir onlayn xarid tobora ommalashyapti — ayniqsa yoshlar internetdan xarid qilishni yoqtiradi.",
+          "ru": "Интернет-покупки становятся всё популярнее — особенно их любит молодёжь.",
+          "en": "Online shopping keeps growing in popularity — young people especially like buying online."
+        },
+        {
+          "type": "ex",
+          "zh": "为了健康，我们应该每年都去医院做一次身体检查，尤其是那些四五十岁的人。",
+          "py": "Wèile jiànkāng, wǒmen yīnggāi měi nián dōu qù yīyuàn zuò yī cì shēntǐ jiǎnchá, yóuqí shì nàxiē sìwǔshí suì de rén.",
+          "uz": "Sog'lik uchun har yili tibbiy ko'rikdan o'tishimiz kerak — ayniqsa qirq-ellik yoshdagilar.",
+          "ru": "Ради здоровья нужно раз в год проходить обследование — особенно людям сорока-пятидесяти лет.",
+          "en": "For our health we should have a check-up every year — especially those in their forties and fifties."
+        },
+        {
+          "type": "h",
+          "uz": "尤其 va 特别 farqi",
+          "ru": "尤其 и 特别",
+          "en": "尤其 vs. 特别"
+        },
+        {
+          "type": "ex",
+          "zh": "我喜欢水果，尤其是苹果。",
+          "py": "Wǒ xǐhuan shuǐguǒ, yóuqí shì píngguǒ.",
+          "uz": "Men mevalarni yaxshi ko'raman, ayniqsa olmani.",
+          "ru": "Я люблю фрукты, особенно яблоки.",
+          "en": "I like fruit, especially apples."
+        },
+        {
+          "type": "ex",
+          "zh": "今天特别冷。",
+          "py": "Jīntiān tèbié lěng.",
+          "uz": "Bugun juda sovuq.",
+          "ru": "Сегодня особенно холодно.",
+          "en": "It's especially cold today."
+        },
+        {
+          "type": "note",
+          "uz": "尤其 → guruh ichidagi eng muhim qismni ajratadi.\n特别 → darajaning yuqoriligini bildiradi.\n特别是 → 尤其是 bilan ma'nodosh, so'zlashuvda ko'proq.",
+          "ru": "尤其 → выделяет один элемент из группы.\n特别 → подчёркивает высокую степень.\n特别是 → синоним 尤其是, чаще в разговорной речи.",
+          "en": "尤其 → singles out one item within a group.\n特别 → emphasises a high degree.\n特别是 → the same as 尤其是, more colloquial."
+        }
+      ]
     }
   ]
 }
