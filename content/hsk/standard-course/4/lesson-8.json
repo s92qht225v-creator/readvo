@@ -666,6 +666,876 @@
           ]
         }
       ]
+    },
+    {
+      "id": "hsk4-l8-culture",
+      "slug": "culture",
+      "label": "文化",
+      "labelTranslation": "Madaniyat",
+      "labelTranslation_ru": "Культура",
+      "labelTranslation_en": "Culture",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "title": "中国人眼中的“红”与“白”",
+      "vocab": [],
+      "sections": [
+        {
+          "id": "hsk4-l8-culture-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l8-culture-s1",
+              "text_original": "红色和白色在中西方文化中有不同的意义。",
+              "pinyin": "Hóngsè hé báisè zài Zhōng Xīfāng wénhuà zhōng yǒu bùtóng de yìyì.",
+              "text_translation": "Qizil va oq ranglar Xitoy hamda G'arb madaniyatida turlicha ma'no kasb etadi.",
+              "text_translation_ru": "Красный и белый цвета имеют разное значение в китайской и западной культуре.",
+              "text_translation_en": "Red and white carry different meanings in Chinese and Western culture.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-culture-s2",
+              "text_original": "中国人喜欢红色，因为它象征着吉祥、喜庆，代表生活红红火火，特别是人们结婚时，家里到处都是红色，所以结婚又称为“红事儿”。",
+              "pinyin": "Zhōngguórén xǐhuan hóngsè, yīnwèi tā xiàngzhēngzhe jíxiáng, xǐqìng, dàibiǎo shēnghuó hónghónghuǒhuǒ, tèbié shì rénmen jiéhūn shí, jiā lǐ dàochù dōu shì hóngsè, suǒyǐ jiéhūn yòu chēngwéi hóng shìr.",
+              "text_translation": "Xitoyliklar qizil rangni yaxshi ko'radi, chunki u omad va shodlik ramzi bo'lib, hayotning gullab-yashnashini bildiradi. Ayniqsa to'y paytida uy-joyning hamma yeri qizil bo'ladi — shuning uchun to'y «qizil ish» («红事儿») deb ham ataladi.",
+              "text_translation_ru": "Китайцы любят красный цвет: он символизирует счастье и радость, означает, что жизнь идёт в достатке. Особенно на свадьбе — весь дом в красном, поэтому свадьбу называют «красным делом» («红事儿»).",
+              "text_translation_en": "Chinese people love red: it stands for good fortune and joy, and for a life that flourishes. At a wedding especially the whole house is red — which is why a wedding is also called a “red affair” (红事儿).",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-culture-s3",
+              "text_original": "白色在中国除了表示干净、纯洁的意思以外，还象征着悲伤、死亡。",
+              "pinyin": "Báisè zài Zhōngguó chúle biǎoshì gānjìng, chúnjié de yìsi yǐwài, hái xiàngzhēngzhe bēishāng, sǐwáng.",
+              "text_translation": "Xitoyda oq rang tozalik va poklikdan tashqari, qayg'u va o'limni ham anglatadi.",
+              "text_translation_ru": "Белый цвет в Китае означает не только чистоту и непорочность, но и скорбь, смерть.",
+              "text_translation_en": "In China white means not only cleanliness and purity but also grief and death.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l8-culture-s4",
+              "text_original": "要是你看到有人家里到处是白色的花和布时，这说明他们家有“白事儿”，家里一定是有人去世了。",
+              "pinyin": "Yàoshi nǐ kàndào yǒu rén jiā lǐ dàochù shì báisè de huā hé bù shí, zhè shuōmíng tāmen jiā yǒu bái shìr, jiā lǐ yīdìng shì yǒu rén qùshì le.",
+              "text_translation": "Agar birovning uyida hamma yer oq gul va oq matoga to'la bo'lsa, demak, o'sha xonadonda «oq ish» («白事儿») bor — kimdir vafot etgan.",
+              "text_translation_ru": "Если вы видите, что дом полон белых цветов и белой ткани, значит, в семье «белое дело» («白事儿») — кто-то умер.",
+              "text_translation_en": "If you see a house filled with white flowers and white cloth, it means that family has a “white affair” (白事儿) — someone has died.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "slug": "shi",
+      "title": "使",
+      "pinyin": "shǐ",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "使 — fe'l bo'lib, «qildirmoq», «sabab bo'lmoq», «olib kelmoq» ma'nolarini bildiradi.\nMa'nosi 让 ga yaqin, ammo 使 ko'proq yozma va rasmiy uslubda ishlatiladi.",
+          "ru": "使 — глагол со значением «заставить», «сделать так, чтобы», «вызвать».\nБлизок по значению к 让, но употребляется главным образом в письменной и официальной речи.",
+          "en": "使 is a verb meaning “to make”, “to cause”, “to bring about”.\nIt is close to 让 in meaning but belongs more to written and formal Chinese."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "使 + To'ldiruvchi + Fe'l / Sifat",
+          "ru": "使 + Дополнение + Глагол / Прилагательное",
+          "en": "使 + Object + Verb / Adjective"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "她看都没看过我一眼，怎么样才能使她喜欢我呢？",
+          "py": "Tā kàn dōu méi kànguo wǒ yī yǎn, zěnmeyàng cái néng shǐ tā xǐhuan wǒ ne?",
+          "uz": "U menga bir marta ham qaramadi. Uni o'zimga qanday qilib yoqtira olaman?",
+          "ru": "Она на меня ни разу даже не взглянула. Как же сделать так, чтобы я ей понравился?",
+          "en": "She hasn't so much as glanced at me. How can I make her like me?"
+        },
+        {
+          "type": "ex",
+          "zh": "在中国生活的三年使他在音乐方面有了很多新的想法。",
+          "py": "Zài Zhōngguó shēnghuó de sān nián shǐ tā zài yīnyuè fāngmiàn yǒu le hěn duō xīn de xiǎngfǎ.",
+          "uz": "Xitoyda yashagan uch yil unda musiqa borasida ko'plab yangi g'oyalar tug'ilishiga sabab bo'ldi.",
+          "ru": "Три года жизни в Китае дали ему множество новых идей в области музыки.",
+          "en": "Three years living in China gave him a great many new ideas about music."
+        },
+        {
+          "type": "ex",
+          "zh": "听说伤心难过的时候吃块儿巧克力，还能使人的心情变得愉快。",
+          "py": "Tīngshuō shāngxīn nánguò de shíhou chī kuàir qiǎokèlì, hái néng shǐ rén de xīnqíng biàn de yúkuài.",
+          "uz": "Eshitishimcha, xafa bo'lgan paytda bir bo'lak shokolad yeyish kayfiyatni ko'taradi.",
+          "ru": "Говорят, кусочек шоколада, съеденный в грустную минуту, поднимает настроение.",
+          "en": "They say a piece of chocolate when you're feeling low can lift your mood."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p ishlatiladigan birikmalar",
+          "ru": "Частые сочетания",
+          "en": "Common expressions"
+        },
+        {
+          "type": "p",
+          "uz": "使人高兴 — odamni xursand qilmoq\n使人失望 — hafsalasini pir qilmoq\n使生活更方便 — hayotni qulayroq qilmoq\n使事情变得简单 — ishni soddalashtirmoq",
+          "ru": "使人高兴 — обрадовать человека\n使人失望 — разочаровать\n使生活更方便 — сделать жизнь удобнее\n使事情变得简单 — упростить дело",
+          "en": "使人高兴 — make people happy\n使人失望 — disappoint people\n使生活更方便 — make life more convenient\n使事情变得简单 — make things simpler"
+        },
+        {
+          "type": "h",
+          "uz": "使 va 让 farqi",
+          "ru": "使 и 让",
+          "en": "使 vs. 让"
+        },
+        {
+          "type": "ex",
+          "zh": "音乐使人放松。",
+          "py": "Yīnyuè shǐ rén fàngsōng.",
+          "uz": "Musiqa odamni bo'shashtiradi.",
+          "ru": "Музыка расслабляет людей.",
+          "en": "Music relaxes people."
+        },
+        {
+          "type": "ex",
+          "zh": "音乐让我放松。",
+          "py": "Yīnyuè ràng wǒ fàngsōng.",
+          "uz": "Musiqa meni bo'shashtiradi.",
+          "ru": "Музыка расслабляет меня.",
+          "en": "Music relaxes me."
+        },
+        {
+          "type": "note",
+          "uz": "使 → rasmiy va yozma uslub.\n让 → og'zaki nutqda eng ko'p ishlatiladi.",
+          "ru": "使 → письменная и официальная речь.\n让 → чаще всего в разговорной речи.",
+          "en": "使 → formal and written.\n让 → the everyday spoken choice."
+        },
+        {
+          "type": "h",
+          "uz": "使 va 令 farqi",
+          "ru": "使 и 令",
+          "en": "使 vs. 令"
+        },
+        {
+          "type": "ex",
+          "zh": "这件事令人感动。",
+          "py": "Zhè jiàn shì lìng rén gǎndòng.",
+          "uz": "Bu voqea odamni hayajonga soladi.",
+          "ru": "Это событие трогает до глубины души.",
+          "en": "This moved people deeply."
+        },
+        {
+          "type": "note",
+          "uz": "使 → rasmiy, lekin keng qo'llanadi.\n令 → yanada rasmiy, ko'proq adabiy va rasmiy matnlarda.",
+          "ru": "使 → официальный, но широко употребимый.\n令 → ещё более книжный, встречается в литературных и официальных текстах.",
+          "en": "使 → formal but widely used.\n令 → more literary still, found in written and official prose."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n使 = qildirmoq, sabab bo'lmoq.\n让 bilan ma'nodosh, lekin ancha rasmiyroq.\nQolip: 使 + to'ldiruvchi + fe'l/sifat.",
+          "ru": "Запомните:\n使 = заставить, вызвать.\nБлизко к 让, но заметно официальнее.\nСхема: 使 + дополнение + глагол/прилагательное.",
+          "en": "Remember:\n使 = to make, to cause.\nSynonymous with 让 but distinctly more formal.\nPattern: 使 + object + verb/adjective."
+        }
+      ]
+    },
+    {
+      "slug": "zhiyao",
+      "title": "只要",
+      "pinyin": "zhǐyào",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "只要 — bog'lovchi bo'lib, «faqat … bo'lsa», «… bo'lsa kifoya» degan ma'noni bildiradi.\nOdatda 只要……就…… qolipida keladi:\n只要 — zarur va yetarli shartni, 就 — natijani bildiradi.",
+          "ru": "只要 — союз со значением «если только…», «достаточно, чтобы…».\nОбычно употребляется в конструкции 只要……就……:\n只要 вводит необходимое и достаточное условие, 就 — результат.",
+          "en": "只要 is a conjunction meaning “as long as”, “provided that”.\nIt usually appears in the pattern 只要……就……:\n只要 gives the sufficient condition, 就 the result."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "只要 + Shart，就 + Natija",
+          "ru": "只要 + Условие，就 + Результат",
+          "en": "只要 + Condition, 就 + Result"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "只要这次你好好儿准备，一定能把比赛踢好。",
+          "py": "Zhǐyào zhè cì nǐ hǎohāor zhǔnbèi, yīdìng néng bǎ bǐsài tī hǎo.",
+          "uz": "Bu safar yaxshilab tayyorlansang bas — o'yinni albatta yaxshi o'ynaysan.",
+          "ru": "Стоит тебе на этот раз как следует подготовиться — и матч ты обязательно отыграешь хорошо.",
+          "en": "As long as you prepare properly this time, you're sure to play the match well."
+        },
+        {
+          "type": "ex",
+          "zh": "只要你用心就会发现，身边有那么多有意思的事情，有那么多不一样的生活。",
+          "py": "Zhǐyào nǐ yòngxīn jiù huì fāxiàn, shēnbiān yǒu nàme duō yǒu yìsi de shìqing, yǒu nàme duō bù yīyàng de shēnghuó.",
+          "uz": "Ko'ngil qo'ysang bas — atrofingda qancha qiziqarli narsa, qancha turfa hayot borligini ko'rasan.",
+          "ru": "Стоит только приглядеться — и увидишь, сколько вокруг интересного, сколько разных жизней.",
+          "en": "As long as you look with care, you'll find how many interesting things are around you, how many different lives."
+        },
+        {
+          "type": "ex",
+          "zh": "每个人对幸福有不同的理解，对我来说，只要能做自己喜欢的事，就是幸福。",
+          "py": "Měi gè rén duì xìngfú yǒu bùtóng de lǐjiě, duì wǒ lái shuō, zhǐyào néng zuò zìjǐ xǐhuan de shì, jiùshì xìngfú.",
+          "uz": "Har kim baxtni turlicha tushunadi. Men uchun esa o'zim yoqtirgan ishni qila olsam — shu baxt.",
+          "ru": "У каждого своё понимание счастья. Для меня счастье — это возможность заниматься любимым делом.",
+          "en": "Everyone understands happiness differently. For me, being able to do what I love is happiness."
+        },
+        {
+          "type": "h",
+          "uz": "只要 va 如果 farqi",
+          "ru": "只要 и 如果",
+          "en": "只要 vs. 如果"
+        },
+        {
+          "type": "ex",
+          "zh": "只要努力，就会成功。",
+          "py": "Zhǐyào nǔlì, jiù huì chénggōng.",
+          "uz": "Mehnat qilsang bas — muvaffaqiyatga erishasan.",
+          "ru": "Стоит только постараться — и добьёшься успеха.",
+          "en": "As long as you work hard, you'll succeed."
+        },
+        {
+          "type": "ex",
+          "zh": "如果努力，你会成功。",
+          "py": "Rúguǒ nǔlì, nǐ huì chénggōng.",
+          "uz": "Agar mehnat qilsang, muvaffaqiyatga erishasan.",
+          "ru": "Если будешь стараться, добьёшься успеха.",
+          "en": "If you work hard, you'll succeed."
+        },
+        {
+          "type": "note",
+          "uz": "只要 → bitta shartning o'zi yetarli ekanini ta'kidlaydi.\n如果 → shunchaki «agar»; yetarlilikni ta'kidlamaydi.",
+          "ru": "只要 → подчёркивает, что одного условия достаточно.\n如果 → просто «если», без указания на достаточность.",
+          "en": "只要 → stresses that this one condition is enough.\n如果 → plain “if”, with no claim of sufficiency."
+        },
+        {
+          "type": "h",
+          "uz": "只要 va 要是 farqi",
+          "ru": "只要 и 要是",
+          "en": "只要 vs. 要是"
+        },
+        {
+          "type": "ex",
+          "zh": "要是下雨，我们就不去了。",
+          "py": "Yàoshi xià yǔ, wǒmen jiù bù qù le.",
+          "uz": "Agar yomg'ir yog'sa, bormaymiz.",
+          "ru": "Если пойдёт дождь, мы не пойдём.",
+          "en": "If it rains, we won't go."
+        },
+        {
+          "type": "note",
+          "uz": "只要 → zarur va yetarli shart.\n要是 → oddiy taxminiy shart.",
+          "ru": "只要 → необходимое и достаточное условие.\n要是 → обычное предположительное условие.",
+          "en": "只要 → a necessary and sufficient condition.\n要是 → an ordinary hypothetical condition."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n只要 = … bo'lsa kifoya.\nOdatda 就 bilan juft keladi.\n如果 va 要是 dan farqi — shartning yetarliligini ta'kidlaydi.",
+          "ru": "Запомните:\n只要 = если только, при условии, что.\nОбычно идёт в паре с 就.\nВ отличие от 如果 и 要是 подчёркивает достаточность условия.",
+          "en": "Remember:\n只要 = as long as, provided that.\nIt usually pairs with 就.\nUnlike 如果 and 要是, it says the one condition is enough."
+        }
+      ]
+    },
+    {
+      "slug": "kebushi",
+      "title": "可不是",
+      "pinyin": "kě bùshì",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "可不是 — suhbatdoshning gapini kuchli tasdiqlash, unga to'liq qo'shilish uchun ishlatiladigan so'zlashuv ifodasi.\nKo'pincha mustaqil javob sifatida keladi. Qisqaroq shakli — 可不.",
+          "ru": "可不是 — разговорное выражение, которым полностью соглашаются с собеседником.\nЧасто употребляется как самостоятельный ответ. Сокращённая форма — 可不.",
+          "en": "可不是 is a colloquial expression of strong agreement with what the other person has said.\nIt often stands alone as a complete reply. The short form is 可不."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "A: …\nB: 可不是！→ Aynan shunday! / Rostdan ham!",
+          "ru": "A: …\nB: 可不是！→ Вот именно! / Точно!",
+          "en": "A: …\nB: 可不是！→ Exactly! / Isn't that the truth!"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "没想到咱们毕业都已经十年了。",
+          "py": "Méi xiǎngdào zánmen bìyè dōu yǐjīng shí nián le.",
+          "uz": "Bitirganimizga o'n yil bo'libdi — o'ylamagan ekanman.",
+          "ru": "Не думал, что с выпуска уже десять лет прошло.",
+          "en": "I can't believe it's ten years since we graduated."
+        },
+        {
+          "type": "ex",
+          "zh": "可不是！时间过得太快了，真想大家。",
+          "py": "Kě bùshì! Shíjiān guò de tài kuài le, zhēn xiǎng dàjiā.",
+          "uz": "Aynan shunday! Vaqt juda tez o'tibdi. Hammani rosa sog'indim.",
+          "ru": "Вот именно! Время летит слишком быстро. Очень скучаю по всем.",
+          "en": "Exactly! Time goes far too fast. I really miss everyone."
+        },
+        {
+          "type": "ex",
+          "zh": "遇到堵车，心情也“堵”。",
+          "py": "Yùdào dǔchē, xīnqíng yě dǔ.",
+          "uz": "Tirbandlikka tushsang, kayfiyat ham «tiqilib» qoladi.",
+          "ru": "Попадёшь в пробку — и настроение тоже «встаёт».",
+          "en": "Get stuck in a jam and your mood gets “jammed” too."
+        },
+        {
+          "type": "ex",
+          "zh": "可不是！上班堵车怕迟到，下班堵车怕回家晚。",
+          "py": "Kě bùshì! Shàngbān dǔchē pà chídào, xiàbān dǔchē pà huí jiā wǎn.",
+          "uz": "Rostdan ham! Ishga ketayotganda kechikishdan, qaytayotganda uyga kech borishdan qo'rqasan.",
+          "ru": "Вот именно! Утром боишься опоздать на работу, вечером — поздно вернуться домой.",
+          "en": "Isn't that the truth! In the morning you fear being late for work, in the evening getting home late."
+        },
+        {
+          "type": "ex",
+          "zh": "这家网球馆的服务不错，给我的印象很好。",
+          "py": "Zhè jiā wǎngqiúguǎn de fúwù bùcuò, gěi wǒ de yìnxiàng hěn hǎo.",
+          "uz": "Bu tennis zalining xizmati yaxshi ekan, menda juda yaxshi taassurot qoldirdi.",
+          "ru": "В этом теннисном центре хорошее обслуживание, у меня осталось приятное впечатление.",
+          "en": "The service at this tennis club is good — it made a fine impression on me."
+        },
+        {
+          "type": "ex",
+          "zh": "可不是！这儿不仅环境好，还免费提供吃的和水。",
+          "py": "Kě bùshì! Zhèr bùjǐn huánjìng hǎo, hái miǎnfèi tígōng chī de hé shuǐ.",
+          "uz": "Aynan! Bu yerda nafaqat muhit yaxshi, hatto ovqat va suvni bepul berishadi.",
+          "ru": "Вот именно! Здесь не только приятная обстановка, но ещё и еду с водой дают бесплатно.",
+          "en": "Exactly! Not only is the setting pleasant, they give you food and water free as well."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p ishlatiladigan shakllar",
+          "ru": "Частые формы",
+          "en": "Common forms"
+        },
+        {
+          "type": "p",
+          "uz": "可不是！ — Aynan shunday!\n可不！ — Ha-da!\n可不是嘛！ — Xuddi shunday-ku!",
+          "ru": "可不是！ — Вот именно!\n可不！ — Точно!\n可不是嘛！ — Именно так!",
+          "en": "可不是！ — Exactly!\n可不！ — That's right!\n可不是嘛！ — Absolutely!"
+        },
+        {
+          "type": "h",
+          "uz": "可不是, 对 va 是啊 farqi",
+          "ru": "可不是, 对 и 是啊",
+          "en": "可不是 vs. 对 vs. 是啊"
+        },
+        {
+          "type": "ex",
+          "zh": "今天真热。",
+          "py": "Jīntiān zhēn rè.",
+          "uz": "Bugun rosa issiq.",
+          "ru": "Сегодня и правда жарко.",
+          "en": "It's really hot today."
+        },
+        {
+          "type": "note",
+          "uz": "可不是！→ kuchli qo'shilish: «Aynan shunday!»\n对。→ oddiy tasdiq: «To'g'ri».\n是啊。→ yumshoqroq: «Ha, shunday».",
+          "ru": "可不是！→ сильное согласие: «Вот именно!»\n对。→ простое подтверждение: «Верно».\n是啊。→ мягче: «Да, это так».",
+          "en": "可不是！→ strong agreement: “Exactly!”\n对。→ a plain confirmation: “Right.”\n是啊。→ softer: “Yeah, true.”"
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n可不是 suhbatdoshning fikriga to'liq qo'shilishni bildiradi.\nKo'pincha yakka javob bo'lib keladi.\nSo'zlashuvda 可不 shakli ham keng ishlatiladi.",
+          "ru": "Запомните:\n可不是 выражает полное согласие с собеседником.\nЧасто это самостоятельный ответ.\nВ разговорной речи широко употребляется и форма 可不.",
+          "en": "Remember:\n可不是 signals full agreement with the speaker.\nIt often stands alone as the whole reply.\nThe short form 可不 is common in speech."
+        }
+      ]
+    },
+    {
+      "slug": "yinci",
+      "title": "因此",
+      "pinyin": "yīncǐ",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "因此 — bog'lovchi bo'lib, «shu sababli», «shuning uchun», «natijada» degan ma'noni bildiradi.\nU oldingi gapdagi sababdan kelib chiqadigan natijani kiritadi.\nMa'nosi 所以 ga yaqin, lekin 因此 ko'proq yozma va rasmiy uslubda ishlatiladi.",
+          "ru": "因此 — союз со значением «поэтому», «вследствие этого».\nОн вводит результат того, о чём сказано ранее.\nБлизок к 所以, но 因此 чаще встречается в письменной и официальной речи.",
+          "en": "因此 is a conjunction meaning “therefore”, “thus”, “as a result”.\nIt introduces the consequence of what came before.\nIt is close to 所以, but 因此 belongs more to formal and written Chinese."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "Sabab，因此，Natija",
+          "ru": "Причина，因此，Результат",
+          "en": "Cause, 因此, Result"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "我认识他很多年，因此，很了解他的性格。",
+          "py": "Wǒ rènshi tā hěn duō nián, yīncǐ, hěn liǎojiě tā de xìnggé.",
+          "uz": "Men uni ko'p yildan beri taniyman, shu sababli fe'l-atvorini yaxshi bilaman.",
+          "ru": "Я знаю его много лет, поэтому хорошо понимаю его характер.",
+          "en": "I've known him for many years; therefore I understand his character well."
+        },
+        {
+          "type": "ex",
+          "zh": "每个学生的性格、能力不同，因此，老师要根据学生的特点，用不同的方法。",
+          "py": "Měi gè xuéshēng de xìnggé, nénglì bùtóng, yīncǐ, lǎoshī yào gēnjù xuéshēng de tèdiǎn, yòng bùtóng de fāngfǎ.",
+          "uz": "Har bir o'quvchining fe'l-atvori va qobiliyati har xil, shu sababli o'qituvchi ularning xususiyatiga qarab turli usul qo'llashi kerak.",
+          "ru": "У каждого ученика свой характер и способности, поэтому учителю нужно подбирать разные методы под особенности учеников.",
+          "en": "Every student differs in character and ability; therefore a teacher must use different methods to suit them."
+        },
+        {
+          "type": "ex",
+          "zh": "生活的态度要自己选择，因此，遇到烦恼时，你应该想一些办法让自己从不高兴的心情中走出来。",
+          "py": "Shēnghuó de tàidù yào zìjǐ xuǎnzé, yīncǐ, yùdào fánnǎo shí, nǐ yīnggāi xiǎng yīxiē bànfǎ ràng zìjǐ cóng bù gāoxìng de xīnqíng zhōng zǒu chūlái.",
+          "uz": "Hayotga munosabatni o'zing tanlaysan. Shu sababli tashvishga duch kelganingda, o'zingni tushkun kayfiyatdan olib chiqadigan yo'l topishing kerak.",
+          "ru": "Отношение к жизни выбираешь ты сам. Поэтому, столкнувшись с огорчением, стоит поискать способ выбраться из скверного настроения.",
+          "en": "You choose your own attitude to life. Therefore, when trouble comes, you should find some way to pull yourself out of a low mood."
+        },
+        {
+          "type": "h",
+          "uz": "因此 va 所以 farqi",
+          "ru": "因此 и 所以",
+          "en": "因此 vs. 所以"
+        },
+        {
+          "type": "ex",
+          "zh": "天气不好，因此比赛取消了。",
+          "py": "Tiānqì bù hǎo, yīncǐ bǐsài qǔxiāo le.",
+          "uz": "Ob-havo yomon edi, shu sababli musobaqa bekor qilindi.",
+          "ru": "Погода была плохой, поэтому соревнование отменили.",
+          "en": "The weather was bad; therefore the match was cancelled."
+        },
+        {
+          "type": "ex",
+          "zh": "天气不好，所以比赛取消了。",
+          "py": "Tiānqì bù hǎo, suǒyǐ bǐsài qǔxiāo le.",
+          "uz": "Ob-havo yomon edi, shuning uchun musobaqa bekor qilindi.",
+          "ru": "Погода была плохой, так что соревнование отменили.",
+          "en": "The weather was bad, so the match was cancelled."
+        },
+        {
+          "type": "note",
+          "uz": "因此 → rasmiy va yozma uslub.\n所以 → kundalik suhbatda ko'proq.",
+          "ru": "因此 → письменная и официальная речь.\n所以 → чаще в повседневной речи.",
+          "en": "因此 → formal and written.\n所以 → the everyday spoken choice."
+        },
+        {
+          "type": "h",
+          "uz": "因此 va 因为……所以…… farqi",
+          "ru": "因此 и 因为……所以……",
+          "en": "因此 vs. 因为……所以……"
+        },
+        {
+          "type": "ex",
+          "zh": "他很努力，因此成功了。",
+          "py": "Tā hěn nǔlì, yīncǐ chénggōng le.",
+          "uz": "U juda mehnat qildi, shu sababli muvaffaqiyat qozondi.",
+          "ru": "Он много трудился, поэтому добился успеха.",
+          "en": "He worked hard; therefore he succeeded."
+        },
+        {
+          "type": "ex",
+          "zh": "因为他很努力，所以成功了。",
+          "py": "Yīnwèi tā hěn nǔlì, suǒyǐ chénggōng le.",
+          "uz": "U juda mehnat qilgani uchun muvaffaqiyat qozondi.",
+          "ru": "Поскольку он много трудился, он добился успеха.",
+          "en": "Because he worked hard, he succeeded."
+        },
+        {
+          "type": "note",
+          "uz": "因此 mustaqil bog'lovchi — natijani o'zi kiritadi.\n因为……所以…… juft qolip.\n因为……因此…… ❌ — bunday ishlatilmaydi.",
+          "ru": "因此 — самостоятельный союз, сам вводит результат.\n因为……所以…… — парная конструкция.\n因为……因此…… ❌ — так не говорят.",
+          "en": "因此 stands on its own and introduces the result.\n因为……所以…… is the paired pattern.\n因为……因此…… ❌ — never combine them."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n因此 = shu sababli, natijada.\nKo'proq yozma va rasmiy uslubda.\n因为 bilan birga ishlatilmaydi.",
+          "ru": "Запомните:\n因此 = поэтому, вследствие этого.\nЧаще в письменной и официальной речи.\nНе употребляется вместе с 因为.",
+          "en": "Remember:\n因此 = therefore, as a result.\nMostly formal and written.\nNever use it together with 因为."
+        }
+      ]
+    },
+    {
+      "slug": "wangwang",
+      "title": "往往",
+      "pinyin": "wǎngwǎng",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "往往 — ravish bo'lib, o'tgan tajribaga tayanib, ma'lum sharoitda biror holat tez-tez takrorlanishini bildiradi.\nU qonuniyat, odatiy hol yoki umumiy kuzatuvni ifodalaydi — shaxsiy odatni emas.",
+          "ru": "往往 — наречие, показывающее, что на основании прошлого опыта некая ситуация регулярно возникает при определённых условиях.\nОно описывает закономерность или общее наблюдение, а не личную привычку.",
+          "en": "往往 is an adverb saying that, judging by past experience, something regularly happens under certain conditions.\nIt describes a pattern or general observation, not a personal habit."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 往往 + Fe'l / Sifat",
+          "ru": "Подлежащее + 往往 + Глагол / Прилагательное",
+          "en": "Subject + 往往 + Verb / Adjective"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "女孩子对衣服颜色的选择往往与她们的性格有关。",
+          "py": "Nǚháizi duì yīfu yánsè de xuǎnzé wǎngwǎng yǔ tāmen de xìnggé yǒuguān.",
+          "uz": "Qizlarning kiyim rangini tanlashi ko'pincha ularning fe'l-atvori bilan bog'liq bo'ladi.",
+          "ru": "Выбор цвета одежды у девушек зачастую связан с их характером.",
+          "en": "The colours girls choose for their clothes are often linked to their character."
+        },
+        {
+          "type": "ex",
+          "zh": "有经验的出租车司机往往对道路情况都非常熟悉，他们知道一天的每个时段什么地方可能堵车。",
+          "py": "Yǒu jīngyàn de chūzūchē sījī wǎngwǎng duì dàolù qíngkuàng dōu fēicháng shúxī, tāmen zhīdào yī tiān de měi gè shíduàn shénme dìfang kěnéng dǔchē.",
+          "uz": "Tajribali taksi haydovchilari odatda yo'l holatini juda yaxshi biladi — kunning qaysi vaqtida qayerda tirbandlik bo'lishini ular biladi.",
+          "ru": "Опытные таксисты, как правило, отлично знают дорожную обстановку: в какое время суток где бывает пробка.",
+          "en": "Experienced taxi drivers usually know the roads inside out — they know where jams form at each hour of the day."
+        },
+        {
+          "type": "ex",
+          "zh": "除了正式的名字，中国人一般都有个小名。",
+          "py": "Chúle zhèngshì de míngzi, Zhōngguórén yībān dōu yǒu gè xiǎomíng.",
+          "uz": "Rasmiy ismdan tashqari, Xitoyliklarda odatda yana erkalama ism ham bo'ladi.",
+          "ru": "Помимо официального имени, у китайцев обычно есть и домашнее имя.",
+          "en": "Besides their formal name, Chinese people usually have a pet name as well."
+        },
+        {
+          "type": "ex",
+          "zh": "在家里，父母往往只叫孩子的小名。",
+          "py": "Zài jiā lǐ, fùmǔ wǎngwǎng zhǐ jiào háizi de xiǎomíng.",
+          "uz": "Uyda ota-onalar ko'pincha bolani faqat shu erkalama ismi bilan chaqiradi.",
+          "ru": "Дома родители чаще всего зовут ребёнка только домашним именем.",
+          "en": "At home parents usually call the child by that pet name alone."
+        },
+        {
+          "type": "h",
+          "uz": "往往 va 常常 farqi",
+          "ru": "往往 и 常常",
+          "en": "往往 vs. 常常"
+        },
+        {
+          "type": "ex",
+          "zh": "天气热的时候，人们往往喜欢喝冷饮。",
+          "py": "Tiānqì rè de shíhou, rénmen wǎngwǎng xǐhuan hē lěngyǐn.",
+          "uz": "Havo issiq bo'lganda odamlar odatda sovuq ichimlik ichishni yoqtiradi.",
+          "ru": "В жару люди обычно любят холодные напитки.",
+          "en": "When the weather is hot, people usually like cold drinks."
+        },
+        {
+          "type": "ex",
+          "zh": "我常常去图书馆。",
+          "py": "Wǒ chángcháng qù túshūguǎn.",
+          "uz": "Men tez-tez kutubxonaga boraman.",
+          "ru": "Я часто хожу в библиотеку.",
+          "en": "I often go to the library."
+        },
+        {
+          "type": "note",
+          "uz": "往往 → tajriba yoki umumiy qonuniyatga tayangan «ko'pincha».\n常常 → shaxsiy odat yoki tez-tez takrorlanadigan harakat.",
+          "ru": "往往 → «часто» на основе опыта или общей закономерности.\n常常 → личная привычка или регулярно повторяющееся действие.",
+          "en": "往往 → “often” drawn from experience or a general rule.\n常常 → a personal habit or a repeated action."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n往往 = ko'pincha, odatda.\nO'tgan tajriba va umumiy qonuniyat uchun.\n常常 esa shaxsiy odatlar uchun.",
+          "ru": "Запомните:\n往往 = обычно, как правило.\nДля закономерностей и опыта.\n常常 — для личных привычек.",
+          "en": "Remember:\n往往 = usually, as a rule.\nFor patterns and experience.\n常常 is for personal habits."
+        }
+      ]
+    },
+    {
+      "slug": "wangwang-vs-jingchang",
+      "title": "往往 / 经常",
+      "pinyin": "wǎngwǎng / jīngcháng",
+      "label": "比一比",
+      "labelTranslation": "Taqqoslash",
+      "labelTranslation_ru": "Сравнение",
+      "labelTranslation_en": "Compare",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "O'xshashligi",
+          "ru": "Сходство",
+          "en": "Similarities"
+        },
+        {
+          "type": "p",
+          "uz": "Ikkalasi ham ravish bo'lib, biror harakat yoki holatning tez-tez takrorlanishini bildiradi.",
+          "ru": "Оба — наречия, обозначающие, что действие или ситуация повторяются часто.",
+          "en": "Both are adverbs saying that an action or situation happens frequently."
+        },
+        {
+          "type": "h",
+          "uz": "1. 往往 — qonuniyat, 经常 — odat",
+          "ru": "1. 往往 — закономерность, 经常 — привычка",
+          "en": "1. 往往 is a pattern, 经常 a habit"
+        },
+        {
+          "type": "p",
+          "uz": "往往 o'tgan tajriba asosidagi qonuniyat yoki umumiy xulosani bildiradi — faqat allaqachon kuzatilgan holatlar uchun.\n经常 esa shunchaki tez-tez takrorlanadigan harakat: shaxsiy odat, rejalashtirilgan yoki kelajakdagi takroriy ish uchun ham ishlatiladi.",
+          "ru": "往往 выражает закономерность или общий вывод из прошлого опыта — только для уже наблюдавшихся ситуаций.\n经常 просто означает частое повторение: годится и для привычек, и для планов на будущее.",
+          "en": "往往 states a pattern or conclusion drawn from past experience — only for what has already been observed.\n经常 simply means often: it covers habits and future repeated actions too."
+        },
+        {
+          "type": "ex",
+          "zh": "吃完晚饭，他们一家往往去附近的公园散散步。",
+          "py": "Chī wán wǎnfàn, tāmen yī jiā wǎngwǎng qù fùjìn de gōngyuán sànsan bù.",
+          "uz": "Kechki ovqatdan keyin ular oilasi bilan odatda yaqin bog'da sayr qiladi.",
+          "ru": "После ужина их семья обычно гуляет в ближайшем парке.",
+          "en": "After dinner the family usually goes for a walk in the park nearby."
+        },
+        {
+          "type": "ex",
+          "zh": "长时间对着电脑工作对身体不好，我们以后也经常去公园散散步吧。",
+          "py": "Cháng shíjiān duìzhe diànnǎo gōngzuò duì shēntǐ bù hǎo, wǒmen yǐhòu yě jīngcháng qù gōngyuán sànsan bù ba.",
+          "uz": "Kompyuter qarshisida uzoq ishlash sog'liq uchun zararli — kelgusida biz ham tez-tez bog'da sayr qilaylik.",
+          "ru": "Долго работать за компьютером вредно — давайте и мы впредь почаще гулять в парке.",
+          "en": "Working at a computer for hours is bad for you — let's go walking in the park often from now on."
+        },
+        {
+          "type": "note",
+          "uz": "Ikkinchi gapda kelajak rejasi haqida gap ketyapti — u yerda faqat 经常 mumkin, 往往 emas.",
+          "ru": "Во втором предложении речь о планах на будущее — там возможно только 经常, но не 往往.",
+          "en": "The second sentence is about a future plan — only 经常 works there, never 往往."
+        },
+        {
+          "type": "h",
+          "uz": "2. 往往 sharoit bilan keladi",
+          "ru": "2. 往往 требует условия",
+          "en": "2. 往往 comes with a condition"
+        },
+        {
+          "type": "p",
+          "uz": "往往 ishlatilgan gapda odatda qaysi sharoitda, qachon yoki nima sababdan bu holat yuz berishi ko'rsatiladi.\n经常 uchun bunday cheklov yo'q.",
+          "ru": "В предложении с 往往 обычно указывается, при каких условиях, когда или почему происходит действие.\nУ 经常 такого ограничения нет.",
+          "en": "A sentence with 往往 normally names the condition, time or reason involved.\n经常 carries no such requirement."
+        },
+        {
+          "type": "ex",
+          "zh": "上大学时我很喜欢运动，往往在周末打篮球、踢足球。",
+          "py": "Shàng dàxué shí wǒ hěn xǐhuan yùndòng, wǎngwǎng zài zhōumò dǎ lánqiú, tī zúqiú.",
+          "uz": "Universitetda o'qiganimda sportni juda yaxshi ko'rardim — dam olish kunlari ko'pincha basketbol va futbol o'ynardim.",
+          "ru": "Когда я учился в университете, я очень любил спорт — по выходным обычно играл в баскетбол и футбол.",
+          "en": "At university I loved sport — at weekends I would usually play basketball and football."
+        },
+        {
+          "type": "ex",
+          "zh": "上大学时我很喜欢运动，经常打篮球、踢足球。",
+          "py": "Shàng dàxué shí wǒ hěn xǐhuan yùndòng, jīngcháng dǎ lánqiú, tī zúqiú.",
+          "uz": "Universitetda sportni juda yaxshi ko'rardim, tez-tez basketbol va futbol o'ynardim.",
+          "ru": "Когда я учился в университете, я очень любил спорт и часто играл в баскетбол и футбол.",
+          "en": "At university I loved sport and often played basketball and football."
+        },
+        {
+          "type": "note",
+          "uz": "Birinchi gapda «在周末» sharoiti bor — shuning uchun 往往 mumkin.\nIkkinchi gapda sharoit yo'q, shuning uchun faqat 经常.",
+          "ru": "В первом предложении есть условие «在周末», поэтому возможно 往往.\nВо втором условия нет — только 经常.",
+          "en": "The first sentence has the condition 在周末, so 往往 fits.\nThe second has none, so only 经常 works."
+        },
+        {
+          "type": "h",
+          "uz": "3. 经常 qisqartiriladi",
+          "ru": "3. 经常 сокращается",
+          "en": "3. 经常 can be shortened"
+        },
+        {
+          "type": "ex",
+          "zh": "在商家打折的时候，有的人常会买一些自己本来不需要的东西。",
+          "py": "Zài shāngjiā dǎzhé de shíhou, yǒu de rén cháng huì mǎi yīxiē zìjǐ běnlái bù xūyào de dōngxi.",
+          "uz": "Do'konlar chegirma e'lon qilganda, ba'zilar aslida o'zlariga kerak bo'lmagan narsalarni tez-tez sotib olishadi.",
+          "ru": "Во время распродаж некоторые часто покупают вещи, которые им на самом деле не нужны.",
+          "en": "During sales some people often buy things they don't actually need."
+        },
+        {
+          "type": "note",
+          "uz": "经常 ko'pincha 常 shaklida qisqartiriladi.\n往往 esa 往 tarzida qisqartirilmaydi. ❌",
+          "ru": "经常 часто сокращается до 常.\n往往 до 往 сокращать нельзя. ❌",
+          "en": "经常 is often shortened to 常.\n往往 can never be shortened to 往. ❌"
+        },
+        {
+          "type": "table",
+          "head": [
+            "往往",
+            "经常"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "Qonuniyat yoki umumiy kuzatuv",
+                "Tez-tez bajariladigan harakat"
+              ],
+              "ru": [
+                "Закономерность, общее наблюдение",
+                "Частое действие"
+              ],
+              "en": [
+                "A pattern or general observation",
+                "A frequent action"
+              ]
+            },
+            {
+              "uz": [
+                "O'tgan tajribaga asoslanadi",
+                "Odat yoki takroriy ish"
+              ],
+              "ru": [
+                "Опирается на прошлый опыт",
+                "Привычка или повторение"
+              ],
+              "en": [
+                "Rests on past experience",
+                "A habit or repetition"
+              ]
+            },
+            {
+              "uz": [
+                "Odatda sharoit bilan keladi",
+                "Erkin qo'llanadi"
+              ],
+              "ru": [
+                "Обычно с указанием условия",
+                "Без ограничений"
+              ],
+              "en": [
+                "Normally names a condition",
+                "No restriction"
+              ]
+            },
+            {
+              "uz": [
+                "Kelajak rejalari uchun ishlatilmaydi",
+                "Kelajak rejalari bilan ishlatiladi"
+              ],
+              "ru": [
+                "Не для планов на будущее",
+                "Годится для планов на будущее"
+              ],
+              "en": [
+                "Not used for future plans",
+                "Fine for future plans"
+              ]
+            },
+            {
+              "uz": [
+                "往 deb qisqartirilmaydi",
+                "常 deb qisqartiriladi"
+              ],
+              "ru": [
+                "Не сокращается до 往",
+                "Сокращается до 常"
+              ],
+              "en": [
+                "Never shortened to 往",
+                "Shortens to 常"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n往往 = odatda, ko'pincha (qonuniyat).\n经常 = tez-tez, muntazam (odat).",
+          "ru": "Запомните:\n往往 = обычно, как правило (закономерность).\n经常 = часто, регулярно (привычка).",
+          "en": "Remember:\n往往 = usually, as a rule (a pattern).\n经常 = often, regularly (a habit)."
+        }
+      ]
     }
   ]
 }
