@@ -1,0 +1,805 @@
+{
+  "book": "standard-course",
+  "bookTitle": "HSK Standard Course",
+  "level": 4,
+  "volume": "上",
+  "unit": 7,
+  "slug": "you-are-your-own-best-doctor",
+  "title": "最好的医生是自己",
+  "pinyin": "Zuì hǎo de yīshēng shì zìjǐ",
+  "titleTranslation": "Eng yaxshi shifokor — o'zing",
+  "titleTranslation_ru": "Лучший врач — ты сам",
+  "titleTranslation_en": "The best doctor is yourself",
+  "dateAdded": "2026-08-07",
+  "texts": [
+    {
+      "id": "hsk4-l7-text-1",
+      "slug": "text-1",
+      "label": "课文一",
+      "labelTranslation": "Matn 1",
+      "labelTranslation_ru": "Текст 1",
+      "labelTranslation_en": "Text 1",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "流血",
+          "py": "liúxiě",
+          "uz": "qon oqmoq",
+          "ru": "кровоточить, идти (о крови)",
+          "en": "to bleed"
+        },
+        {
+          "zh": "擦",
+          "py": "cā",
+          "uz": "artmoq, sidirmoq",
+          "ru": "вытирать",
+          "en": "to wipe"
+        },
+        {
+          "zh": "气候",
+          "py": "qìhòu",
+          "uz": "iqlim",
+          "ru": "климат",
+          "en": "climate"
+        },
+        {
+          "zh": "估计",
+          "py": "gūjì",
+          "uz": "taxmin qilmoq",
+          "ru": "полагать, предполагать",
+          "en": "to reckon, to guess"
+        },
+        {
+          "zh": "咳嗽",
+          "py": "késou",
+          "uz": "yo'talmoq",
+          "ru": "кашлять",
+          "en": "to cough"
+        },
+        {
+          "zh": "严重",
+          "py": "yánzhòng",
+          "uz": "jiddiy, og'ir",
+          "ru": "серьёзный, тяжёлый",
+          "en": "serious, severe"
+        },
+        {
+          "zh": "窗户",
+          "py": "chuānghu",
+          "uz": "deraza",
+          "ru": "окно",
+          "en": "window"
+        },
+        {
+          "zh": "空气",
+          "py": "kōngqì",
+          "uz": "havo",
+          "ru": "воздух",
+          "en": "air"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l7-text-1-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l7-text-1-s1",
+              "text_original": "你的鼻子怎么流血了？",
+              "pinyin": "Nǐ de bízi zěnme liúxiě le?",
+              "text_translation": "Burningdan nega qon ketyapti?",
+              "text_translation_ru": "Почему у тебя из носа идёт кровь?",
+              "text_translation_en": "Why is your nose bleeding?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-1-s2",
+              "text_original": "快用纸擦擦。",
+              "pinyin": "Kuài yòng zhǐ cāca.",
+              "text_translation": "Tez salfetka bilan artib ol.",
+              "text_translation_ru": "Быстрее вытри салфеткой.",
+              "text_translation_en": "Quick, wipe it with a tissue.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-1-s3",
+              "text_original": "我还不习惯北方的气候，估计是天气太干。",
+              "pinyin": "Wǒ hái bù xíguàn běifāng de qìhòu, gūjì shì tiānqì tài gān.",
+              "text_translation": "Men shimol iqlimiga hali ko'nikmadim — havo juda quruq bo'lsa kerak.",
+              "text_translation_ru": "Я ещё не привык к северному климату — наверное, воздух слишком сухой.",
+              "text_translation_en": "I'm not used to the northern climate yet — the air is probably too dry.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-1-s4",
+              "text_original": "今天天气不是很冷，你怎么穿这么多？",
+              "pinyin": "Jīntiān tiānqì bùshì hěn lěng, nǐ zěnme chuān zhème duō?",
+              "text_translation": "Bugun havo unchalik sovuq emas-ku, nega buncha qalin kiyinding?",
+              "text_translation_ru": "Сегодня не очень холодно — почему ты так тепло оделся?",
+              "text_translation_en": "It's not very cold today — why are you wearing so much?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-1-s5",
+              "text_original": "就是因为昨天穿得太少，我都感冒了。",
+              "pinyin": "Jiùshì yīnwèi zuótiān chuān de tài shǎo, wǒ dōu gǎnmào le.",
+              "text_translation": "Kecha juda yupqa kiyinganim uchun shamollab qoldim-da.",
+              "text_translation_ru": "Как раз потому, что вчера оделся слишком легко, и простудился.",
+              "text_translation_en": "Precisely because I dressed too lightly yesterday — I've caught a cold.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-1-s6",
+              "text_original": "最近感冒的人特别多。",
+              "pinyin": "Zuìjìn gǎnmào de rén tèbié duō.",
+              "text_translation": "So'nggi paytda shamollaganlar juda ko'p.",
+              "text_translation_ru": "В последнее время очень многие простужаются.",
+              "text_translation_en": "A lot of people have colds lately.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-1-s7",
+              "text_original": "你去看医生了吗？",
+              "pinyin": "Nǐ qù kàn yīshēng le ma?",
+              "text_translation": "Shifokorga bordingmi?",
+              "text_translation_ru": "Ты был у врача?",
+              "text_translation_en": "Have you been to see a doctor?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-1-s8",
+              "text_original": "没有，我只是咳嗽，有点儿头疼，不严重，多喝点儿水就好了。",
+              "pinyin": "Méiyǒu, wǒ zhǐshì késou, yǒudiǎnr tóuténg, bù yánzhòng, duō hē diǎnr shuǐ jiù hǎo le.",
+              "text_translation": "Yo'q. Faqat yo'talyapman, boshim biroz og'riyapti — jiddiy emas, ko'proq suv ichsam tuzalib ketaman.",
+              "text_translation_ru": "Нет. Просто кашель и немного болит голова — ничего серьёзного, попью побольше воды и пройдёт.",
+              "text_translation_en": "No. I just have a cough and a bit of a headache — nothing serious; I'll be fine if I drink more water.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-1-s9",
+              "text_original": "春天天气时冷时热，特别容易感冒。",
+              "pinyin": "Chūntiān tiānqì shí lěng shí rè, tèbié róngyì gǎnmào.",
+              "text_translation": "Bahorda havo goh sovuq, goh issiq — shamollash juda oson.",
+              "text_translation_ru": "Весной погода то холодная, то тёплая — простудиться очень легко.",
+              "text_translation_en": "In spring the weather turns cold and warm by turns — it's very easy to catch a cold.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-1-s10",
+              "text_original": "这时候一定要多注意保暖，另外，最好经常打开窗户换换空气。",
+              "pinyin": "Zhè shíhou yīdìng yào duō zhùyì bǎonuǎn, lìngwài, zuì hǎo jīngcháng dǎkāi chuānghu huànhuan kōngqì.",
+              "text_translation": "Bunday paytda issiq kiyinishga alohida e'tibor bering. Bundan tashqari, tez-tez derazani ochib havoni almashtirgan ma'qul.",
+              "text_translation_ru": "В такое время особенно важно тепло одеваться. Кроме того, лучше почаще открывать окно и проветривать.",
+              "text_translation_en": "At times like this you must take care to keep warm. Besides that, it's best to open the window often and let fresh air in.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l7-text-2",
+      "slug": "text-2",
+      "label": "课文二",
+      "labelTranslation": "Matn 2",
+      "labelTranslation_ru": "Текст 2",
+      "labelTranslation_en": "Text 2",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦",
+        "B": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "抽烟",
+          "py": "chōuyān",
+          "uz": "chekmoq",
+          "ru": "курить",
+          "en": "to smoke"
+        },
+        {
+          "zh": "动作",
+          "py": "dòngzuò",
+          "uz": "harakat",
+          "ru": "движение, жест",
+          "en": "movement, action"
+        },
+        {
+          "zh": "帅",
+          "py": "shuài",
+          "uz": "kelishgan, zo'r",
+          "ru": "красивый (о мужчине), крутой",
+          "en": "handsome, cool"
+        },
+        {
+          "zh": "出现",
+          "py": "chūxiàn",
+          "uz": "paydo bo'lmoq, yuzaga kelmoq",
+          "ru": "появляться, возникать",
+          "en": "to appear, to arise"
+        },
+        {
+          "zh": "后悔",
+          "py": "hòuhuǐ",
+          "uz": "pushaymon bo'lmoq",
+          "ru": "жалеть, раскаиваться",
+          "en": "to regret"
+        },
+        {
+          "zh": "来不及",
+          "py": "láibují",
+          "uz": "ulgurmaslik, kech bo'lmoq",
+          "ru": "не успеть, поздно",
+          "en": "to be too late, not to have time"
+        },
+        {
+          "zh": "反对",
+          "py": "fǎnduì",
+          "uz": "qarshi chiqmoq",
+          "ru": "возражать, быть против",
+          "en": "to oppose, to object"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l7-text-2-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l7-text-2-s1",
+              "text_original": "你咳嗽好点儿了吗？",
+              "pinyin": "Nǐ késou hǎo diǎnr le ma?",
+              "text_translation": "Yo'taling biroz yaxshi bo'ldimi?",
+              "text_translation_ru": "Кашель немного прошёл?",
+              "text_translation_en": "Is your cough any better?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-2-s2",
+              "text_original": "医生怎么说的？",
+              "pinyin": "Yīshēng zěnme shuō de?",
+              "text_translation": "Shifokor nima dedi?",
+              "text_translation_ru": "Что сказал врач?",
+              "text_translation_en": "What did the doctor say?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-2-s3",
+              "text_original": "还是老样子，他让我以后不要再抽烟了。",
+              "pinyin": "Háishì lǎo yàngzi, tā ràng wǒ yǐhòu bùyào zài chōuyān le.",
+              "text_translation": "Hammasi eskicha. U menga bundan keyin chekmaslikni aytdi.",
+              "text_translation_ru": "Всё по-старому. Он сказал мне больше не курить.",
+              "text_translation_en": "Same as before. He told me not to smoke any more.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-2-s4",
+              "text_original": "抽烟对身体一点儿好处也没有。",
+              "pinyin": "Chōuyān duì shēntǐ yìdiǎnr hǎochu yě méiyǒu.",
+              "text_translation": "Chekishning sog'liq uchun zarracha foydasi yo'q.",
+              "text_translation_ru": "От курения нет ни малейшей пользы для здоровья.",
+              "text_translation_en": "Smoking does your body not the slightest good.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-2-s5",
+              "text_original": "我也知道，可是我觉得抽烟这个动作看上去很帅。",
+              "pinyin": "Wǒ yě zhīdào, kěshì wǒ juéde chōuyān zhège dòngzuò kàn shàngqù hěn shuài.",
+              "text_translation": "Bilaman, lekin menimcha chekish harakati juda kelishgan ko'rinadi.",
+              "text_translation_ru": "Я знаю, но мне кажется, что сам жест курения выглядит очень эффектно.",
+              "text_translation_en": "I know, but I think the act of smoking looks pretty cool.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-2-s6",
+              "text_original": "等你身体出现问题了，后悔就来不及了。",
+              "pinyin": "Děng nǐ shēntǐ chūxiàn wèntí le, hòuhuǐ jiù láibují le.",
+              "text_translation": "Sog'ligingda muammo paydo bo'lganda pushaymon bo'lishga kech bo'ladi.",
+              "text_translation_ru": "Когда со здоровьем начнутся проблемы, жалеть будет уже поздно.",
+              "text_translation_en": "Once your health starts to suffer, it'll be too late for regrets.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-2-s7",
+              "text_original": "其实家人也一直反对我抽烟，我自己却觉得没什么。",
+              "pinyin": "Qíshí jiārén yě yīzhí fǎnduì wǒ chōuyān, wǒ zìjǐ què juéde méi shénme.",
+              "text_translation": "Aslida oilam ham doim chekishimga qarshi, men esa hech gap emas deb o'ylardim.",
+              "text_translation_ru": "Вообще-то родные тоже всегда были против, а мне самому казалось, что ничего страшного.",
+              "text_translation_en": "My family have always been against my smoking, actually — but I myself thought it was nothing.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-2-s8",
+              "text_original": "但最近总是咳嗽，所以我有些担心了。",
+              "pinyin": "Dàn zuìjìn zǒngshì késou, suǒyǐ wǒ yǒuxiē dānxīn le.",
+              "text_translation": "Lekin so'nggi paytda doim yo'talyapman, shuning uchun biroz xavotirlanyapman.",
+              "text_translation_ru": "Но в последнее время постоянно кашляю, так что немного забеспокоился.",
+              "text_translation_en": "But lately I cough all the time, so I've started to worry a little.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-2-s9",
+              "text_original": "抽烟不仅对自己没好处，还会影响周围人的身体健康。",
+              "pinyin": "Chōuyān bùjǐn duì zìjǐ méi hǎochu, hái huì yǐngxiǎng zhōuwéi rén de shēntǐ jiànkāng.",
+              "text_translation": "Chekish nafaqat o'zingga foydasiz, balki atrofdagilarning sog'ligiga ham ta'sir qiladi.",
+              "text_translation_ru": "Курение не только не приносит пользы тебе самому, но и вредит здоровью окружающих.",
+              "text_translation_en": "Smoking not only does you no good, it also affects the health of the people around you.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-2-s10",
+              "text_original": "为了你和你的家人，别再抽了。",
+              "pinyin": "Wèile nǐ hé nǐ de jiārén, bié zài chōu le.",
+              "text_translation": "O'zing va oilang uchun endi chekma.",
+              "text_translation_ru": "Ради себя и своей семьи — брось курить.",
+              "text_translation_en": "For your own sake and your family's, stop smoking.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l7-text-3",
+      "slug": "text-3",
+      "label": "课文三",
+      "labelTranslation": "Matn 3",
+      "labelTranslation_ru": "Текст 3",
+      "labelTranslation_en": "Text 3",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "大夫",
+          "py": "dàifu",
+          "uz": "shifokor, doktor",
+          "ru": "врач, доктор",
+          "en": "doctor"
+        },
+        {
+          "zh": "植物",
+          "py": "zhíwù",
+          "uz": "o'simlik",
+          "ru": "растение",
+          "en": "plant"
+        },
+        {
+          "zh": "研究",
+          "py": "yánjiū",
+          "uz": "tadqiqot; tadqiq qilmoq",
+          "ru": "исследование; исследовать",
+          "en": "research; to research"
+        },
+        {
+          "zh": "超过",
+          "py": "chāoguò",
+          "uz": "oshib ketmoq",
+          "ru": "превышать",
+          "en": "to exceed, to be more than"
+        },
+        {
+          "zh": "散步",
+          "py": "sànbù",
+          "uz": "sayr qilmoq",
+          "ru": "гулять, прогуливаться",
+          "en": "to take a walk"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l7-text-3-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l7-text-3-s1",
+              "text_original": "我最近眼睛总是跳，大夫说是因为我长时间看电脑，眼睛太累。",
+              "pinyin": "Wǒ zuìjìn yǎnjing zǒngshì tiào, dàifu shuō shì yīnwèi wǒ cháng shíjiān kàn diànnǎo, yǎnjing tài lèi.",
+              "text_translation": "So'nggi paytda ko'zim tinmay uchyapti. Shifokor uzoq vaqt kompyuterga qarab ko'zim juda charchaganini aytdi.",
+              "text_translation_ru": "В последнее время у меня постоянно дёргается глаз. Врач сказал, это оттого, что я подолгу смотрю в компьютер и глаза очень устают.",
+              "text_translation_en": "My eye keeps twitching lately. The doctor said it's because I look at the computer for hours and my eyes are worn out.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-3-s2",
+              "text_original": "长时间坐在电脑前面工作，眼睛很容易累。",
+              "pinyin": "Cháng shíjiān zuò zài diànnǎo qiánmiàn gōngzuò, yǎnjing hěn róngyì lèi.",
+              "text_translation": "Uzoq vaqt kompyuter oldida o'tirib ishlasang, ko'z tez charchaydi.",
+              "text_translation_ru": "Если долго работать сидя за компьютером, глаза устают очень быстро.",
+              "text_translation_en": "If you sit working in front of a computer for a long time, your eyes tire easily.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-3-s3",
+              "text_original": "最好是每过一小时就休息休息，然后再开始工作。",
+              "pinyin": "Zuì hǎo shì měi guò yī xiǎoshí jiù xiūxi xiūxi, ránhòu zài kāishǐ gōngzuò.",
+              "text_translation": "Har bir soatda bir oz dam olib, keyin ishni davom ettirgan ma'qul.",
+              "text_translation_ru": "Лучше всего каждый час немного отдыхать, а потом снова браться за работу.",
+              "text_translation_en": "It's best to rest a little every hour and then get back to work.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-3-s4",
+              "text_original": "医生也这么说，他还告诉我要多向远处看看，尤其是多看看绿色的植物。",
+              "pinyin": "Yīshēng yě zhème shuō, tā hái gàosu wǒ yào duō xiàng yuǎnchù kànkan, yóuqí shì duō kànkan lǜsè de zhíwù.",
+              "text_translation": "Shifokor ham shunday dedi. U yana ko'proq uzoqqa, ayniqsa yashil o'simliklarga qarab turishni aytdi.",
+              "text_translation_ru": "Врач сказал то же самое. Ещё он посоветовал чаще смотреть вдаль, особенно на зелёные растения.",
+              "text_translation_en": "The doctor said the same. He also told me to look into the distance more, especially at green plants.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-3-s5",
+              "text_original": "长时间对着电脑不仅对眼睛不好，身体也会不舒服。",
+              "pinyin": "Cháng shíjiān duìzhe diànnǎo bùjǐn duì yǎnjing bù hǎo, shēntǐ yě huì bù shūfu.",
+              "text_translation": "Uzoq vaqt kompyuterga tikilib o'tirish nafaqat ko'zga zarar, balki butun tanani ham bezovta qiladi.",
+              "text_translation_ru": "Долго сидеть перед компьютером вредно не только для глаз — всё тело начинает ныть.",
+              "text_translation_en": "Facing a computer for hours is bad not just for your eyes — your body starts to ache too.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-3-s6",
+              "text_original": "研究发现，如果人一天静坐超过六小时，就会影响身体健康。",
+              "pinyin": "Yánjiū fāxiàn, rúguǒ rén yī tiān jìngzuò chāoguò liù xiǎoshí, jiù huì yǐngxiǎng shēntǐ jiànkāng.",
+              "text_translation": "Tadqiqotlar shuni ko'rsatdiki, odam kuniga olti soatdan ortiq qimirlamay o'tirsa, bu sog'ligiga ta'sir qiladi.",
+              "text_translation_ru": "Исследования показали: если человек за день сидит неподвижно больше шести часов, это сказывается на здоровье.",
+              "text_translation_en": "Research has found that sitting still for more than six hours a day affects your health.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l7-text-3-s7",
+              "text_original": "是啊！",
+              "pinyin": "Shì a!",
+              "text_translation": "Rost-da!",
+              "text_translation_ru": "Вот именно!",
+              "text_translation_en": "Exactly!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-3-s8",
+              "text_original": "像咱们这些久坐办公室的人要注意，有时间应该多站起来活动活动。",
+              "pinyin": "Xiàng zánmen zhèxiē jiǔ zuò bàngōngshì de rén yào zhùyì, yǒu shíjiān yīnggāi duō zhàn qǐlái huódòng huódòng.",
+              "text_translation": "Biz kabi ofisda uzoq o'tiradiganlar ehtiyot bo'lishi kerak — imkon bo'lganda turib, biroz harakat qilgan yaxshi.",
+              "text_translation_ru": "Таким, как мы, кто подолгу сидит в офисе, надо быть внимательнее: как есть время — вставать и двигаться.",
+              "text_translation_en": "People like us, stuck at an office desk, need to watch out — whenever there's time we should get up and move about.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-3-s9",
+              "text_original": "好，咱们午饭后就去附近的公园散散步吧。",
+              "pinyin": "Hǎo, zánmen wǔfàn hòu jiù qù fùjìn de gōngyuán sànsan bù ba.",
+              "text_translation": "Yaxshi, tushlikdan keyin yaqin atrofdagi bog'ga sayr qilgani boraylik.",
+              "text_translation_ru": "Хорошо, давай после обеда сходим погулять в парк неподалёку.",
+              "text_translation_en": "All right — after lunch let's go for a walk in the park nearby.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l7-text-4",
+      "slug": "text-4",
+      "label": "课文四",
+      "labelTranslation": "Matn 4",
+      "labelTranslation_ru": "Текст 4",
+      "labelTranslation_en": "Text 4",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "指",
+          "py": "zhǐ",
+          "uz": "ko'rsatmoq; nazarda tutmoq",
+          "ru": "указывать; иметь в виду",
+          "en": "to point to; to refer to"
+        },
+        {
+          "zh": "精神",
+          "py": "jīngshén",
+          "uz": "ruh, ruhiyat",
+          "ru": "дух, психика",
+          "en": "spirit, mind"
+        },
+        {
+          "zh": "教授",
+          "py": "jiàoshòu",
+          "uz": "professor",
+          "ru": "профессор",
+          "en": "professor"
+        },
+        {
+          "zh": "数字",
+          "py": "shùzì",
+          "uz": "raqam, son",
+          "ru": "цифра, число",
+          "en": "figure, number"
+        },
+        {
+          "zh": "说明",
+          "py": "shuōmíng",
+          "uz": "tushuntirmoq, ko'rsatmoq",
+          "ru": "объяснять, показывать",
+          "en": "to explain, to illustrate"
+        },
+        {
+          "zh": "要是",
+          "py": "yàoshi",
+          "uz": "agar",
+          "ru": "если",
+          "en": "if"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l7-text-4-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l7-text-4-s1",
+              "text_original": "每个人都希望自己健康，那么什么才是健康呢？",
+              "pinyin": "Měi gè rén dōu xīwàng zìjǐ jiànkāng, nàme shénme cái shì jiànkāng ne?",
+              "text_translation": "Har bir inson sog'lom bo'lishni istaydi. Xo'sh, sog'lik nima o'zi?",
+              "text_translation_ru": "Каждый хочет быть здоровым. Но что же такое здоровье?",
+              "text_translation_en": "Everyone wants to be healthy. But what exactly is health?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-4-s2",
+              "text_original": "过去，人们认为健康就是指身体不生病。",
+              "pinyin": "Guòqù, rénmen rènwéi jiànkāng jiùshì zhǐ shēntǐ bù shēngbìng.",
+              "text_translation": "Ilgari odamlar sog'lik deganda tananing kasal bo'lmasligini tushunishardi.",
+              "text_translation_ru": "Раньше люди считали, что здоровье — это когда тело не болеет.",
+              "text_translation_en": "In the past people took health to mean simply that the body wasn't ill.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-4-s3",
+              "text_original": "但是，现在人们认识到，健康还指精神上的健康。",
+              "pinyin": "Dànshì, xiànzài rénmen rènshi dào, jiànkāng hái zhǐ jīngshén shàng de jiànkāng.",
+              "text_translation": "Ammo hozir odamlar sog'lik ruhiy sog'likni ham anglatishini tushunib yetishdi.",
+              "text_translation_ru": "Но теперь люди поняли, что здоровье — это ещё и здоровье душевное.",
+              "text_translation_en": "Now, though, people have realised that health also means mental health.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-4-s4",
+              "text_original": "只有身体和精神都健康，才算是真正的健康。",
+              "pinyin": "Zhǐyǒu shēntǐ hé jīngshén dōu jiànkāng, cái suàn shì zhēnzhèng de jiànkāng.",
+              "text_translation": "Faqat tan ham, ruh ham sog'lom bo'lgandagina bu haqiqiy sog'lik hisoblanadi.",
+              "text_translation_ru": "Только когда здоровы и тело, и дух, это можно считать настоящим здоровьем.",
+              "text_translation_en": "Only when both body and mind are well can it count as real health.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-4-s5",
+              "text_original": "有一位教授用数字来说明健康有多么重要：要是健康是一，其他都是一后面的零；如果没有一，不管有多少零也没用。",
+              "pinyin": "Yǒu yī wèi jiàoshòu yòng shùzì lái shuōmíng jiànkāng yǒu duōme zhòngyào: yàoshi jiànkāng shì yī, qítā dōu shì yī hòumiàn de líng; rúguǒ méiyǒu yī, bùguǎn yǒu duōshao líng yě méi yòng.",
+              "text_translation": "Bir professor sog'lik naqadar muhimligini raqamlar bilan tushuntirgan: agar sog'lik bir bo'lsa, qolgan hamma narsa shu birning orqasidagi nollardir; bir bo'lmasa, nechta nol bo'lishidan qat'i nazar, foydasi yo'q.",
+              "text_translation_ru": "Один профессор объяснил важность здоровья через цифры: если здоровье — это единица, то всё остальное — нули после неё; а если единицы нет, то сколько бы ни было нулей, толку никакого.",
+              "text_translation_en": "One professor used numbers to show how important health is: if health is a one, everything else is the zeros that follow it; without the one, no number of zeros is worth anything.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-4-s6",
+              "text_original": "所以我们平时一定要注意锻炼，别等健康出问题了才后悔。",
+              "pinyin": "Suǒyǐ wǒmen píngshí yīdìng yào zhùyì duànliàn, bié děng jiànkāng chū wèntí le cái hòuhuǐ.",
+              "text_translation": "Shuning uchun kundalik hayotda mashq qilishga e'tibor bering — sog'lik buzilgandan keyin pushaymon bo'lmang.",
+              "text_translation_ru": "Поэтому нужно постоянно уделять внимание тренировкам, а не жалеть, когда здоровье уже подведёт.",
+              "text_translation_en": "So we must make a habit of exercising, rather than regretting it only once our health fails.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l7-text-5",
+      "slug": "text-5",
+      "label": "课文五",
+      "labelTranslation": "Matn 5",
+      "labelTranslation_ru": "Текст 5",
+      "labelTranslation_en": "Text 5",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉"
+      },
+      "vocab": [
+        {
+          "zh": "既",
+          "py": "jì",
+          "uz": "ham … ham (既……又……)",
+          "ru": "и… и… (既……又……)",
+          "en": "both … and … (既……又……)"
+        },
+        {
+          "zh": "减肥",
+          "py": "jiǎnféi",
+          "uz": "vazn tashlamoq",
+          "ru": "худеть, сбрасывать вес",
+          "en": "to lose weight"
+        },
+        {
+          "zh": "辛苦",
+          "py": "xīnkǔ",
+          "uz": "mashaqqatli, og'ir",
+          "ru": "тяжёлый, утомительный",
+          "en": "hard, tiring"
+        },
+        {
+          "zh": "肚子",
+          "py": "dùzi",
+          "uz": "qorin",
+          "ru": "живот",
+          "en": "belly, stomach"
+        },
+        {
+          "zh": "感情",
+          "py": "gǎnqíng",
+          "uz": "his-tuyg'u, mehr",
+          "ru": "чувства, привязанность",
+          "en": "feelings, affection"
+        },
+        {
+          "zh": "烦恼",
+          "py": "fánnǎo",
+          "uz": "tashvish, xafagarchilik",
+          "ru": "огорчение, тревога",
+          "en": "worry, trouble"
+        },
+        {
+          "zh": "掉",
+          "py": "diào",
+          "uz": "tushmoq; (fe'ldan keyin) yo'q bo'lib ketmoq",
+          "ru": "падать; (после глагола) прочь",
+          "en": "to fall; (after a verb) away, off"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l7-text-5-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l7-text-5-s1",
+              "text_original": "我听一位医生说过一句话：“最好的医生是自己，最好的药是时间，最好的运动是散步。”",
+              "pinyin": "Wǒ tīng yī wèi yīshēng shuō guò yī jù huà: zuì hǎo de yīshēng shì zìjǐ, zuì hǎo de yào shì shíjiān, zuì hǎo de yùndòng shì sànbù.",
+              "text_translation": "Bir shifokorning shunday gapini eshitganman: «Eng yaxshi shifokor — o'zing, eng yaxshi dori — vaqt, eng yaxshi mashq — sayr».",
+              "text_translation_ru": "Я слышал слова одного врача: «Лучший врач — ты сам, лучшее лекарство — время, лучшее упражнение — прогулка».",
+              "text_translation_en": "I once heard a doctor say: “The best doctor is yourself, the best medicine is time, the best exercise is walking.”",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-5-s2",
+              "text_original": "前两条我理解得不深，最后一条我完全同意。",
+              "pinyin": "Qián liǎng tiáo wǒ lǐjiě de bù shēn, zuìhòu yī tiáo wǒ wánquán tóngyì.",
+              "text_translation": "Dastlabki ikkitasini chuqur tushunmagandirman, lekin oxirgisiga to'liq qo'shilaman.",
+              "text_translation_ru": "Первые два я понимаю не слишком глубоко, а с последним согласен полностью.",
+              "text_translation_en": "I don't understand the first two very deeply, but I agree completely with the last.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-5-s3",
+              "text_original": "散步是生活中最简单的锻炼方法，既可以活动身体，又可以减肥，而且不会像跑步那样辛苦。",
+              "pinyin": "Sànbù shì shēnghuó zhōng zuì jiǎndān de duànliàn fāngfǎ, jì kěyǐ huódòng shēntǐ, yòu kěyǐ jiǎnféi, érqiě bù huì xiàng pǎobù nàyàng xīnkǔ.",
+              "text_translation": "Sayr — hayotdagi eng oddiy mashq usuli: ham tanani harakatlantiradi, ham vazn tashlashga yordam beradi, ustiga-ustak yugurishdek mashaqqatli emas.",
+              "text_translation_ru": "Прогулка — самый простой способ тренировки: и тело разомнёшь, и вес сбросишь, и при этом не так тяжело, как бег.",
+              "text_translation_en": "Walking is the simplest form of exercise there is: it moves the body, it helps you lose weight, and it isn't punishing the way running is.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-5-s4",
+              "text_original": "晚饭后，一家人一起出去散散步，是一件很幸福的事情。",
+              "pinyin": "Wǎnfàn hòu, yī jiā rén yīqǐ chūqù sànsan bù, shì yī jiàn hěn xìngfú de shìqing.",
+              "text_translation": "Kechki ovqatdan keyin butun oila birga sayrga chiqishi — juda baxtli ish.",
+              "text_translation_ru": "После ужина всей семьёй выйти прогуляться — очень счастливое дело.",
+              "text_translation_en": "Going out for a walk together as a family after supper is a very happy thing.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-text-5-s5",
+              "text_original": "肚子吃饱了需要活动，家人忙了一天需要交流，夫妻说说一天的工作能加深感情，听孩子谈谈学校里有意思的事，一天的烦恼就都跑掉了。",
+              "pinyin": "Dùzi chī bǎo le xūyào huódòng, jiārén máng le yī tiān xūyào jiāoliú, fūqī shuōshuo yī tiān de gōngzuò néng jiāshēn gǎnqíng, tīng háizi tántan xuéxiào lǐ yǒu yìsi de shì, yī tiān de fánnǎo jiù dōu pǎo diào le.",
+              "text_translation": "To'ygan qorin harakatga muhtoj, kun bo'yi band bo'lgan oila esa suhbatga. Er-xotin kunlik ishini gaplashsa mehr ortadi, bolaning maktabdagi qiziq voqealarini eshitsangiz, kunning barcha tashvishi qochib ketadi.",
+              "text_translation_ru": "Полному желудку нужно движение, а семье после занятого дня — общение. Супруги обсудят рабочий день — и чувства станут теплее; послушаешь, что интересного было у ребёнка в школе, — и все дневные тревоги разбегутся.",
+              "text_translation_en": "A full stomach needs movement, and a family busy all day needs to talk. Husband and wife go over the day's work and grow closer; you listen to your child's stories from school — and the whole day's worries simply run away.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l7-culture",
+      "slug": "culture",
+      "label": "文化",
+      "labelTranslation": "Madaniyat",
+      "labelTranslation_ru": "Культура",
+      "labelTranslation_en": "Culture",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "title": "太极和太极拳",
+      "vocab": [],
+      "sections": [
+        {
+          "id": "hsk4-l7-culture-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l7-culture-s1",
+              "text_original": "太极是中国古代哲学思想中重要的基本概念，指宇宙的本原。",
+              "pinyin": "Tàijí shì Zhōngguó gǔdài zhéxué sīxiǎng zhōng zhòngyào de jīběn gàiniàn, zhǐ yǔzhòu de běnyuán.",
+              "text_translation": "Tayczi — Xitoy qadimgi falsafiy tafakkuridagi muhim asosiy tushuncha bo'lib, u koinotning ibtidosini bildiradi.",
+              "text_translation_ru": "Тайцзи — важное базовое понятие древнекитайской философии, обозначающее первоначало Вселенной.",
+              "text_translation_en": "Taiji is a key basic concept in ancient Chinese philosophy, referring to the origin of the universe.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-culture-s2",
+              "text_original": "太极拳是一种以太极阴阳为基本理念，结合艺术、中医等理论的一种武术拳法。",
+              "pinyin": "Tàijíquán shì yī zhǒng yǐ tàijí yīnyáng wéi jīběn lǐniàn, jiéhé yìshù, Zhōngyī děng lǐlùn de yī zhǒng wǔshù quánfǎ.",
+              "text_translation": "Tayczicyuan — tayczi va in-yan g'oyasiga asoslangan, san'at hamda Xitoy tabobati nazariyalarini birlashtirgan jang san'ati uslubidir.",
+              "text_translation_ru": "Тайцзицюань — вид ушу, в основе которого лежат идеи тайцзи и инь-ян, соединённые с теориями искусства и китайской медицины.",
+              "text_translation_en": "Taijiquan is a martial art built on the idea of taiji and yin-yang, combined with theories from art and Chinese medicine.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-culture-s3",
+              "text_original": "太极拳动作柔和，速度比较慢，而且学起来也不难，尤其适合中老年人练习。",
+              "pinyin": "Tàijíquán dòngzuò róuhé, sùdù bǐjiào màn, érqiě xué qǐlái yě bù nán, yóuqí shìhé zhōnglǎonián rén liànxí.",
+              "text_translation": "Tayczicyuan harakatlari yumshoq, sur'ati ancha sekin, o'rganish ham qiyin emas — ayniqsa o'rta va keksa yoshdagilarga mos keladi.",
+              "text_translation_ru": "Движения тайцзицюань мягкие, темп довольно медленный, да и учиться несложно — особенно подходит людям среднего и старшего возраста.",
+              "text_translation_en": "The movements of taijiquan are gentle and fairly slow, and it isn't hard to learn — it suits middle-aged and older people especially well.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-culture-s4",
+              "text_original": "每个人可以根据自己的身体情况，选择合适的运动量。",
+              "pinyin": "Měi gè rén kěyǐ gēnjù zìjǐ de shēntǐ qíngkuàng, xuǎnzé héshì de yùndòngliàng.",
+              "text_translation": "Har kim o'z sog'lig'iga qarab o'ziga mos yuklamani tanlashi mumkin.",
+              "text_translation_ru": "Каждый может выбрать подходящую нагрузку в соответствии с состоянием своего здоровья.",
+              "text_translation_en": "Everyone can choose a suitable amount of exercise according to their own physical condition.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l7-culture-s5",
+              "text_original": "经常练习太极拳，不仅可以保持身体健康，而且还能提高人的修养。",
+              "pinyin": "Jīngcháng liànxí tàijíquán, bùjǐn kěyǐ bǎochí shēntǐ jiànkāng, érqiě hái néng tígāo rén de xiūyǎng.",
+              "text_translation": "Muntazam tayczicyuan mashq qilish nafaqat sog'liqni saqlaydi, balki insonning ma'naviy kamolotini ham oshiradi.",
+              "text_translation_ru": "Регулярные занятия тайцзицюань не только поддерживают здоровье, но и повышают внутреннюю культуру человека.",
+              "text_translation_en": "Practising taijiquan regularly not only keeps you healthy but also cultivates the person.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
