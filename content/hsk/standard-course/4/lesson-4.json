@@ -739,5 +739,773 @@
       ],
       "title": "授人以鱼不如授人以渔"
     }
+  ],
+  "grammar": [
+    {
+      "slug": "yiwei",
+      "title": "以为",
+      "pinyin": "yǐwéi",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "以为 — fe'l bo'lib, «deb o'ylamoq», «adashib shunday deb hisoblamoq» ma'nosini bildiradi. Gapiruvchining o'ylagani haqiqatga mos kelmaganini ko'rsatadi; haqiqiy vaziyat odatda keyin aytiladi.",
+          "ru": "以为 — глагол «думать», «полагать», «ошибочно считать». Показывает, что мысль не соответствовала действительности; настоящий факт обычно сообщается позже.",
+          "en": "以为 is a verb meaning “to think” or “to assume”, used when what the speaker thought turns out not to match reality. The real situation usually follows."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 以为 + …  →  … deb o'yladi, lekin aslida boshqacha",
+          "ru": "Подлежащее + 以为 + …  →  думал, что…, но на самом деле…",
+          "en": "Subject + 以为 + …  →  thought that…, but actually…"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "她汉语说得那么好，我还以为她是中国人。",
+          "py": "Tā Hànyǔ shuō de nàme hǎo, wǒ hái yǐwéi tā shì Zhōngguórén.",
+          "uz": "U Xitoy tilida shunchalik yaxshi gapiradiki, men uni Xitoylik deb o'yladim.",
+          "ru": "Она так хорошо говорит по-китайски, что я подумал, что она китаянка.",
+          "en": "She speaks Chinese so well that I thought she was Chinese."
+        },
+        {
+          "type": "ex",
+          "zh": "马克以为今天是星期一，到了学校一看，没人来上课，才发现今天是星期天。",
+          "py": "Mǎkè yǐwéi jīntiān shì Xīngqīyī, dào le xuéxiào yī kàn, méi rén lái shàngkè, cái fāxiàn jīntiān shì Xīngqītiān.",
+          "uz": "Mark bugun dushanba deb o'ylagan edi. Maktabga borib hech kim yo'qligini ko'rgach, bugun yakshanba ekanini bildi.",
+          "ru": "Марк думал, что сегодня понедельник. Придя в школу и увидев, что никого нет, он понял, что сегодня воскресенье.",
+          "en": "Mark thought it was Monday. When he got to school and saw nobody there, he realised it was Sunday."
+        },
+        {
+          "type": "ex",
+          "zh": "我以为新工作比以前的好，没想到还没有以前好呢。",
+          "py": "Wǒ yǐwéi xīn gōngzuò bǐ yǐqián de hǎo, méi xiǎngdào hái méiyǒu yǐqián hǎo ne.",
+          "uz": "Yangi ishim avvalgisidan yaxshiroq deb o'ylagandim, kutilmaganda avvalgisichalik ham emas ekan.",
+          "ru": "Я думал, что новая работа лучше прежней, но оказалось, что нет.",
+          "en": "I thought the new job would be better than the old one, but it turned out not to be."
+        },
+        {
+          "type": "h",
+          "uz": "以为 va 觉得 farqi",
+          "ru": "以为 и 觉得",
+          "en": "以为 vs. 觉得"
+        },
+        {
+          "type": "ex",
+          "zh": "我以为今天不开会，结果还是开了。",
+          "py": "Wǒ yǐwéi jīntiān bù kāihuì, jiéguǒ háishì kāi le.",
+          "uz": "Bugun yig'ilish bo'lmaydi deb o'ylagandim, ammo baribir bo'ldi.",
+          "ru": "Я думал, сегодня не будет собрания, но оно всё-таки состоялось.",
+          "en": "I thought there wouldn't be a meeting today, but there was."
+        },
+        {
+          "type": "ex",
+          "zh": "我觉得这本书很好。",
+          "py": "Wǒ juéde zhè běn shū hěn hǎo.",
+          "uz": "Menimcha, bu kitob juda yaxshi.",
+          "ru": "По-моему, эта книга очень хорошая.",
+          "en": "I think this book is very good."
+        },
+        {
+          "type": "note",
+          "uz": "以为 → noto'g'ri taxmin.\n觉得 → shaxsiy fikr; noto'g'ri ekani anglashilmaydi.",
+          "ru": "以为 → ошибочное предположение.\n觉得 → личное мнение, без намёка на ошибку.",
+          "en": "以为 → a mistaken assumption.\n觉得 → a personal opinion, with no implication of being wrong."
+        },
+        {
+          "type": "h",
+          "uz": "以为 va 认为 farqi",
+          "ru": "以为 и 认为",
+          "en": "以为 vs. 认为"
+        },
+        {
+          "type": "ex",
+          "zh": "很多专家认为这是最好的办法。",
+          "py": "Hěn duō zhuānjiā rènwéi zhè shì zuì hǎo de bànfǎ.",
+          "uz": "Ko'plab mutaxassislar buni eng yaxshi usul deb hisoblaydi.",
+          "ru": "Многие специалисты считают, что это лучший способ.",
+          "en": "Many experts believe this is the best solution."
+        },
+        {
+          "type": "note",
+          "uz": "认为 → rasmiyroq «hisoblamoq»; xato bo'lishi shart emas.",
+          "ru": "认为 → более формальное «считать»; не предполагает ошибки.",
+          "en": "认为 → a more formal “to hold the view that”; it does not imply the view is wrong."
+        },
+        {
+          "type": "note",
+          "uz": "以为 = deb o'ylamoq, ammo adashmoq\nHaqiqat odatda keyinroq ma'lum bo'ladi.",
+          "ru": "以为 = ошибочно думать\nНастоящий факт обычно выясняется позже.",
+          "en": "以为 = to think or assume, mistakenly\nThe truth usually comes out afterwards."
+        }
+      ]
+    },
+    {
+      "slug": "yuanlai",
+      "title": "原来",
+      "pinyin": "yuánlái",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "原来 bir necha vazifada ishlatiladi:\n1. Ot — «avvallari», «dastlab».\n2. Sifat — «asl», «oldingi».\n3. Ravish — «ilgari» (hozir vaziyat o'zgargan).\n4. Ravish — «demak», «ma'lum bo'lishicha» (yangi ma'lumotni anglash).",
+          "ru": "原来 имеет несколько функций:\n1. Существительное — «раньше», «в прошлом».\n2. Прилагательное — «прежний», «первоначальный».\n3. Наречие — «раньше» (сейчас иначе).\n4. Наречие — «оказывается», «так вот».",
+          "en": "原来 has several uses:\n1. Noun — “the past”, “formerly”.\n2. Adjective — “original”, “former”.\n3. Adverb — “formerly” (things have changed).\n4. Adverb — “it turns out”, “so…” (realising something new)."
+        },
+        {
+          "type": "h",
+          "uz": "1. 原来 — ot",
+          "ru": "1. 原来 как существительное",
+          "en": "1. 原来 as a noun"
+        },
+        {
+          "type": "ex",
+          "zh": "坐火车从北京到上海，原来最快差不多需要十二个小时，现在有了高铁，五个小时就能到。",
+          "py": "Zuò huǒchē cóng Běijīng dào Shànghǎi, yuánlái zuì kuài chàbuduō xūyào shí'èr gè xiǎoshí, xiànzài yǒu le gāotiě, wǔ gè xiǎoshí jiù néng dào.",
+          "uz": "Ilgari Pekindan Shanxayga poyezdda borish eng tez holatda ham qariyb o'n ikki soat olardi; hozir tezyurar poyezd bilan besh soatda yetib borish mumkin.",
+          "ru": "Раньше самый быстрый поезд из Пекина в Шанхай шёл почти двенадцать часов; теперь, с высокоскоростной дорогой, дорога занимает пять часов.",
+          "en": "The fastest train from Beijing to Shanghai used to take nearly twelve hours; now, with high-speed rail, it takes five."
+        },
+        {
+          "type": "h",
+          "uz": "2. 原来 — sifat",
+          "ru": "2. 原来 как прилагательное",
+          "en": "2. 原来 as an adjective"
+        },
+        {
+          "type": "formula",
+          "uz": "原来的 + Ot",
+          "ru": "原来的 + Существительное",
+          "en": "原来的 + Noun"
+        },
+        {
+          "type": "ex",
+          "zh": "按原来的计划应该是两周，但是我们可以提前完成。",
+          "py": "Àn yuánlái de jìhuà yīnggāi shì liǎng zhōu, dànshì wǒmen kěyǐ tíqián wánchéng.",
+          "uz": "Asl rejaga ko'ra ikki hafta bo'lishi kerak edi, lekin biz muddatidan oldin tugatishimiz mumkin.",
+          "ru": "По первоначальному плану — две недели, но мы можем закончить раньше.",
+          "en": "According to the original plan it should take two weeks, but we can finish early."
+        },
+        {
+          "type": "h",
+          "uz": "3. 原来 — ravish («ilgari»)",
+          "ru": "3. 原来 как наречие («раньше»)",
+          "en": "3. 原来 as an adverb (formerly)"
+        },
+        {
+          "type": "ex",
+          "zh": "她原来是汉语老师，现在已经成了一名律师。",
+          "py": "Tā yuánlái shì Hànyǔ lǎoshī, xiànzài yǐjīng chéng le yī míng lǜshī.",
+          "uz": "U ilgari Xitoy tili o'qituvchisi edi, hozir esa advokat bo'ldi.",
+          "ru": "Раньше она была преподавателем китайского, а теперь стала юристом.",
+          "en": "She used to be a Chinese teacher; now she's a lawyer."
+        },
+        {
+          "type": "h",
+          "uz": "4. 原来 — ravish («ma'lum bo'lishicha»)",
+          "ru": "4. 原来 как наречие («оказывается»)",
+          "en": "4. 原来 as an adverb (realisation)"
+        },
+        {
+          "type": "p",
+          "uz": "Gapiruvchi ilgari bilmagan haqiqatni endi anglaganini ko'rsatadi. 原来 egadan oldin ham, keyin ham kelishi mumkin.",
+          "ru": "Показывает, что говорящий узнал ранее неизвестный факт. 原来 может стоять до или после подлежащего.",
+          "en": "Shows the speaker discovering something they didn't know. 原来 can go before or after the subject."
+        },
+        {
+          "type": "ex",
+          "zh": "马克一直等李明回电话，可是电话一晚上都没来，原来李明把马克的电话号码记错了。",
+          "py": "Mǎkè yīzhí děng Lǐ Míng huí diànhuà, kěshì diànhuà yī wǎnshang dōu méi lái, yuánlái Lǐ Míng bǎ Mǎkè de diànhuà hàomǎ jì cuò le.",
+          "uz": "Mark butun kecha Li Minning qo'ng'irog'ini kutdi, ammo qo'ng'iroq bo'lmadi — ma'lum bo'lishicha, Li Min uning telefon raqamini noto'g'ri yozib olgan ekan.",
+          "ru": "Марк весь вечер ждал звонка Ли Мина, но звонка так и не было — оказалось, Ли Мин неправильно записал его номер.",
+          "en": "Mark waited all evening for Li Ming's call, but it never came — it turned out Li Ming had written his number down wrong."
+        },
+        {
+          "type": "h",
+          "uz": "原来 va 本来 farqi",
+          "ru": "原来 и 本来",
+          "en": "原来 vs. 本来"
+        },
+        {
+          "type": "ex",
+          "zh": "原来你会说中文！",
+          "py": "Yuánlái nǐ huì shuō Zhōngwén!",
+          "uz": "Demak, sen Xitoy tilida gapira olar ekansan!",
+          "ru": "Оказывается, ты говоришь по-китайски!",
+          "en": "So you can speak Chinese!"
+        },
+        {
+          "type": "ex",
+          "zh": "我本来想去。",
+          "py": "Wǒ běnlái xiǎng qù.",
+          "uz": "Men aslida bormoqchi edim.",
+          "ru": "Я изначально хотел пойти.",
+          "en": "I originally wanted to go."
+        },
+        {
+          "type": "note",
+          "uz": "原来 → ilgari bilinmagan haqiqatni anglash yoki oldingi holat.\n本来 → asl reja, asl holat yoki bo'lishi kerak bo'lgan holat.",
+          "ru": "原来 → прежняя ситуация или неожиданно выяснившийся факт.\n本来 → первоначальный план или то, как должно было быть.",
+          "en": "原来 → a former situation, or a newly discovered fact.\n本来 → the original plan, or what ought to have been."
+        }
+      ]
+    },
+    {
+      "slug": "yuanlai-vs-benlai",
+      "title": "原来 / 本来",
+      "pinyin": "yuánlái / běnlái",
+      "label": "比一比",
+      "labelTranslation": "Taqqoslash",
+      "labelTranslation_ru": "Сравнение",
+      "labelTranslation_en": "Compare",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "O'xshashligi",
+          "ru": "Сходство",
+          "en": "Similarities"
+        },
+        {
+          "type": "p",
+          "uz": "原来 va 本来 ikkalasi ham sifat bo'lib «asl», «oldingi» ma'nosini beradi, va ikkalasi ham ravish bo'lib o'tgan holat hozirgidan farq qilishini bildiradi.",
+          "ru": "原来 и 本来 оба могут быть прилагательными со значением «прежний», «первоначальный», и оба как наречия показывают, что раньше было иначе.",
+          "en": "Both 原来 and 本来 can be adjectives meaning “original” or “former”, and both as adverbs can say the past differed from now."
+        },
+        {
+          "type": "ex",
+          "zh": "这是它原来的颜色，不过现在已经穿了好几年，颜色都变了。",
+          "py": "Zhè shì tā yuánlái de yánsè, bùguò xiànzài yǐjīng chuān le hǎojǐ nián, yánsè dōu biàn le.",
+          "uz": "Bu uning asl rangi, lekin bir necha yil kiyilgani uchun rangi o'zgarib ketgan.",
+          "ru": "Это его первоначальный цвет, но за несколько лет носки он изменился.",
+          "en": "This was its original colour, but after several years of wear the colour has changed."
+        },
+        {
+          "type": "ex",
+          "zh": "这是它本来的颜色，不过现在已经穿了好几年，颜色都变了。",
+          "py": "Zhè shì tā běnlái de yánsè, bùguò xiànzài yǐjīng chuān le hǎojǐ nián, yánsè dōu biàn le.",
+          "uz": "Bu uning asl rangi, lekin bir necha yil kiyilgani uchun rangi o'zgarib ketgan.",
+          "ru": "Это его первоначальный цвет, но за несколько лет носки он изменился.",
+          "en": "This was its original colour, but after several years of wear the colour has changed."
+        },
+        {
+          "type": "ex",
+          "zh": "我家原来住这儿附近，不过这里以前不像现在有这么多楼房。",
+          "py": "Wǒ jiā yuánlái zhù zhèr fùjìn, bùguò zhèlǐ yǐqián bù xiàng xiànzài yǒu zhème duō lóufáng.",
+          "uz": "Uyimiz ilgari shu atrofda edi, ammo o'shanda bu yerda hozirgidek ko'p bino yo'q edi.",
+          "ru": "Раньше наша семья жила неподалёку, но тогда здесь не было столько зданий.",
+          "en": "My family used to live near here, but back then there weren't nearly as many buildings."
+        },
+        {
+          "type": "note",
+          "uz": "Bu gaplarda 原来 va 本来 bir xil ma'noda ishlatiladi.",
+          "ru": "В этих предложениях 原来 и 本来 равнозначны.",
+          "en": "In these sentences 原来 and 本来 are interchangeable."
+        },
+        {
+          "type": "h",
+          "uz": "Farqlari — 原来",
+          "ru": "Различия — 原来",
+          "en": "Difference — 原来"
+        },
+        {
+          "type": "ex",
+          "zh": "我还以为是谁帮我打扫房间呢，原来是你啊！",
+          "py": "Wǒ hái yǐwéi shì shéi bāng wǒ dǎsǎo fángjiān ne, yuánlái shì nǐ a!",
+          "uz": "Xonamni kim tozalagan ekan deb o'ylayotgandim — demak, sen ekansan!",
+          "ru": "Я всё думал, кто убрал мою комнату. Оказывается, это был ты!",
+          "en": "I was wondering who had cleaned my room. It turns out it was you!"
+        },
+        {
+          "type": "h",
+          "uz": "Farqlari — 本来",
+          "ru": "Различия — 本来",
+          "en": "Difference — 本来"
+        },
+        {
+          "type": "ex",
+          "zh": "这本书本来应该昨天还给你，真不好意思。",
+          "py": "Zhè běn shū běnlái yīnggāi zuótiān huán gěi nǐ, zhēn bù hǎoyìsi.",
+          "uz": "Bu kitobni aslida kecha qaytarishim kerak edi — juda uzr.",
+          "ru": "Вообще-то я должен был вернуть тебе эту книгу вчера. Извини.",
+          "en": "I should have returned this book to you yesterday. I'm really sorry."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa taqqoslash",
+          "ru": "Краткое сравнение",
+          "en": "Quick comparison"
+        },
+        {
+          "type": "table",
+          "head": [
+            "原来",
+            "本来"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "demak…, ma'lum bo'lishicha",
+                "aslida…, asl reja bo'yicha"
+              ],
+              "ru": [
+                "оказывается…",
+                "вообще-то…, изначально…"
+              ],
+              "en": [
+                "it turns out…",
+                "originally… / should have…"
+              ]
+            },
+            {
+              "uz": [
+                "yangi bilib olingan haqiqat",
+                "asl holat yoki reja"
+              ],
+              "ru": [
+                "неожиданно выяснившийся факт",
+                "первоначальный план"
+              ],
+              "en": [
+                "a newly discovered fact",
+                "the original plan or expectation"
+              ]
+            },
+            {
+              "uz": [
+                "«voy, shunday ekan!»",
+                "«shunday bo'lishi kerak edi»"
+              ],
+              "ru": [
+                "выражает осознание",
+                "выражает исходное намерение"
+              ],
+              "en": [
+                "expresses realisation",
+                "expresses what was supposed to happen"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "原来 → yangi anglangan haqiqat\n本来 → asl holat yoki asl reja",
+          "ru": "原来 → неожиданно выяснившийся факт\n本来 → первоначальный план или намерение",
+          "en": "原来 → a newly discovered fact\n本来 → the original situation, plan or expectation"
+        }
+      ]
+    },
+    {
+      "slug": "bing",
+      "title": "并",
+      "pinyin": "bìng",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "并 — ravish bo'lib, odatda 不 yoki 没有 dan oldin keladi va inkorni kuchaytiradi. Ko'pincha noto'g'ri fikrni tuzatish yoki haqiqat kutilganidan boshqacha ekanini ta'kidlash uchun ishlatiladi.",
+          "ru": "并 — наречие, которое ставится перед 不 или 没有 и усиливает отрицание. Часто опровергает распространённое мнение.",
+          "en": "并 is an adverb placed before 不 or 没有 to strengthen a negative, often correcting a misunderstanding."
+        },
+        {
+          "type": "p",
+          "uz": "Tarjimasi: «umuman», «aslida … emas», «hech ham».",
+          "ru": "Переводится как «совсем не», «вовсе не», «на самом деле не».",
+          "en": "Often translated as “not really”, “not at all”, “actually not”, “by no means”."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "并 + 不 / 没有 + Fe'l yoki Sifat",
+          "ru": "并 + 不 / 没有 + Глагол или Прилагательное",
+          "en": "并 + 不 / 没有 + Verb or Adjective"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "其实，人们将来做什么工作可能和上学学的专业并没有太大关系。",
+          "py": "Qíshí, rénmen jiānglái zuò shénme gōngzuò kěnéng hé shàngxué xué de zhuānyè bìng méiyǒu tài dà guānxi.",
+          "uz": "Aslida, odamning kelajakdagi kasbi universitetda o'qigan mutaxassisligi bilan unchalik bog'liq emas.",
+          "ru": "На самом деле будущая работа человека может быть вовсе не связана с его специальностью.",
+          "en": "In fact, what work people do later may have very little to do with what they studied."
+        },
+        {
+          "type": "ex",
+          "zh": "我原来以为做生意很简单，后来才发现其实并不容易。",
+          "py": "Wǒ yuánlái yǐwéi zuò shēngyi hěn jiǎndān, hòulái cái fāxiàn qíshí bìng bù róngyì.",
+          "uz": "Biznes qilish oson deb o'ylagandim, keyin esa u umuman oson emasligini bildim.",
+          "ru": "Раньше я думал, что вести дела легко, но потом понял, что это вовсе не так.",
+          "en": "I used to think business was simple; later I found it isn't easy at all."
+        },
+        {
+          "type": "ex",
+          "zh": "根据调查，人每天晚上最少应该睡七个小时，但是这并不适合每一个人。",
+          "py": "Gēnjù diàochá, rén měi tiān wǎnshang zuìshǎo yīnggāi shuì qī gè xiǎoshí, dànshì zhè bìng bù shìhé měi yī gè rén.",
+          "uz": "Tadqiqotlarga ko'ra, odam har kecha kamida yetti soat uxlashi kerak, ammo bu hamma uchun ham mos emas.",
+          "ru": "Согласно исследованиям, спать нужно не менее семи часов, однако это подходит далеко не всем.",
+          "en": "Research says people should sleep at least seven hours a night, but this isn't suitable for everyone."
+        },
+        {
+          "type": "h",
+          "uz": "并 va 不 farqi",
+          "ru": "并 и 不",
+          "en": "并 vs. 不"
+        },
+        {
+          "type": "ex",
+          "zh": "这个工作不容易。",
+          "py": "Zhège gōngzuò bù róngyì.",
+          "uz": "Bu ish oson emas.",
+          "ru": "Эта работа нелёгкая.",
+          "en": "This job isn't easy."
+        },
+        {
+          "type": "ex",
+          "zh": "这个工作并不容易。",
+          "py": "Zhège gōngzuò bìng bù róngyì.",
+          "uz": "Bu ish aslida umuman oson emas.",
+          "ru": "Эта работа вовсе не лёгкая.",
+          "en": "This job is actually not easy at all."
+        },
+        {
+          "type": "note",
+          "uz": "并 deyarli har doim 不 yoki 没有 bilan keladi: 并不、并没有、并不是、并非.\n並 ijobiy gaplarda ishlatilmaydi — 并很好 yoki 并喜欢 deyilmaydi.",
+          "ru": "并 почти всегда с 不 или 没有: 并不、并没有、并不是、并非.\nВ утвердительных предложениях не употребляется — нельзя сказать 并很好 или 并喜欢.",
+          "en": "并 nearly always goes with 不 or 没有: 并不, 并没有, 并不是, 并非.\nIt is not used in affirmative sentences — 并很好 and 并喜欢 are wrong."
+        }
+      ]
+    },
+    {
+      "slug": "anzhao",
+      "title": "按照",
+      "pinyin": "ànzhào",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "按照 — predlog bo'lib, «…ga ko'ra», «…asosida», «…bo'yicha», «…ga muvofiq» ma'nosini bildiradi. Ish reja, qoida, talab, qonun yoki standart asosida bajarilganini ko'rsatadi.",
+          "ru": "按照 — предлог со значением «согласно», «в соответствии с», «по». Показывает, что действие выполняется по плану, правилам, требованиям или стандарту.",
+          "en": "按照 is a preposition meaning “according to”, “in accordance with”. It marks an action carried out following a plan, rule, requirement or standard."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "按照 + Reja / Qoida / Talab + Fe'l",
+          "ru": "按照 + План / Правило / Требование + Глагол",
+          "en": "按照 + Plan / Rule / Standard + Verb"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "我们今年的工作都已经按照计划完成了。",
+          "py": "Wǒmen jīnnián de gōngzuò dōu yǐjīng ànzhào jìhuà wánchéng le.",
+          "uz": "Bu yilgi barcha ishlarimiz reja bo'yicha yakunlandi.",
+          "ru": "Вся работа этого года уже выполнена согласно плану.",
+          "en": "All of this year's work has been completed according to plan."
+        },
+        {
+          "type": "ex",
+          "zh": "这回材料都按照银行的要求准备好了吧？",
+          "py": "Zhè huí cáiliào dōu ànzhào yínháng de yāoqiú zhǔnbèi hǎo le ba?",
+          "uz": "Bu safar barcha hujjatlar bank talablariga muvofiq tayyorlandimi?",
+          "ru": "В этот раз все документы подготовлены по требованиям банка?",
+          "en": "Have all the documents been prepared according to the bank's requirements this time?"
+        },
+        {
+          "type": "ex",
+          "zh": "按照经验，这个问题应该可以很快解决，请大家放心。",
+          "py": "Ànzhào jīngyàn, zhège wèntí yīnggāi kěyǐ hěn kuài jiějué, qǐng dàjiā fàngxīn.",
+          "uz": "Tajribaga ko'ra, bu muammo tez hal bo'lishi kerak — xavotir olmang.",
+          "ru": "Судя по опыту, эту проблему можно решить быстро, не волнуйтесь.",
+          "en": "From experience, this problem should be solved quickly — please don't worry."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p uchraydigan birikmalar",
+          "ru": "Частые сочетания",
+          "en": "Common collocations"
+        },
+        {
+          "type": "p",
+          "uz": "按照 ko'pincha quyidagilar bilan keladi: 计划、要求、规定、法律、标准、时间、顺序、经验.",
+          "ru": "按照 часто употребляется с: 计划、要求、规定、法律、标准、时间、顺序、经验.",
+          "en": "按照 commonly goes with: 计划, 要求, 规定, 法律, 标准, 时间, 顺序, 经验."
+        },
+        {
+          "type": "h",
+          "uz": "按照 va 根据 farqi",
+          "ru": "按照 и 根据",
+          "en": "按照 vs. 根据"
+        },
+        {
+          "type": "ex",
+          "zh": "按照计划完成。",
+          "py": "Ànzhào jìhuà wánchéng.",
+          "uz": "Reja bo'yicha bajarish.",
+          "ru": "Выполнить согласно плану.",
+          "en": "Complete it according to the plan."
+        },
+        {
+          "type": "ex",
+          "zh": "根据调查。",
+          "py": "Gēnjù diàochá.",
+          "uz": "Tadqiqot natijalariga ko'ra.",
+          "ru": "Согласно исследованию.",
+          "en": "According to the survey."
+        },
+        {
+          "type": "table",
+          "head": [
+            "按照",
+            "根据"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "…ga muvofiq",
+                "…ga ko'ra"
+              ],
+              "ru": [
+                "согласно, в соответствии с",
+                "на основании"
+              ],
+              "en": [
+                "in accordance with",
+                "based on"
+              ]
+            },
+            {
+              "uz": [
+                "qoida yoki reja bo'yicha harakat",
+                "dalil yoki ma'lumotga asoslanish"
+              ],
+              "ru": [
+                "следование правилу или плану",
+                "опора на факты или данные"
+              ],
+              "en": [
+                "following a rule or plan",
+                "basing on facts or evidence"
+              ]
+            },
+            {
+              "uz": [
+                "reja, talab, standart",
+                "fakt, tadqiqot, ma'lumot"
+              ],
+              "ru": [
+                "план, требования, стандарт",
+                "исследование, данные"
+              ],
+              "en": [
+                "plan, requirements, standards",
+                "research, information"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "按照 = …ga muvofiq, …bo'yicha\nHarakat qaysi qoidaga asoslanganini bildiradi.",
+          "ru": "按照 = согласно, в соответствии с\nПодчёркивает следование правилу или инструкции.",
+          "en": "按照 = according to, in accordance with\nIt emphasises following a guideline."
+        }
+      ]
+    },
+    {
+      "slug": "shenzhi",
+      "title": "甚至",
+      "pinyin": "shènzhì",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "甚至 — ravish bo'lib, «hatto», «hatto … ham» ma'nosini bildiradi. Eng kuchli, eng kutilmagan misolni ta'kidlaydi va odatda ro'yxatdagi oxirgi elementdan oldin keladi.",
+          "ru": "甚至 — наречие «даже», «вплоть до того, что». Выделяет самый неожиданный пример и обычно стоит перед последним элементом перечисления.",
+          "en": "甚至 is an adverb meaning “even”. It marks the most surprising or extreme item, usually the last in a series."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "A，B，甚至 C  →  A, B, hatto C",
+          "ru": "A，B，甚至 C  →  A, B и даже C",
+          "en": "A, B, 甚至 C  →  A, B, and even C"
+        },
+        {
+          "type": "p",
+          "uz": "甚至 ot, fe'l yoki butun gapdan oldin kelishi mumkin.",
+          "ru": "甚至 может стоять перед существительным, глаголом или целым предложением.",
+          "en": "甚至 can come before a noun, a verb, or a whole clause."
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "这个房子离您公司也不远，您可以坐公共汽车甚至可以骑自行车上班。",
+          "py": "Zhège fángzi lí nín gōngsī yě bù yuǎn, nín kěyǐ zuò gōnggòng qìchē shènzhì kěyǐ qí zìxíngchē shàngbān.",
+          "uz": "Bu uy kompaniyangizdan uzoq emas — avtobusda, hatto velosipedda ham ishga borishingiz mumkin.",
+          "ru": "Этот дом недалеко от вашей компании — можно ездить на работу на автобусе или даже на велосипеде.",
+          "en": "This place isn't far from your company — you could take the bus, or even cycle to work."
+        },
+        {
+          "type": "ex",
+          "zh": "很多时候，我们不得不去做一些自己不愿意做甚至是非常不喜欢的工作。",
+          "py": "Hěn duō shíhou, wǒmen bùdébù qù zuò yīxiē zìjǐ bù yuànyì zuò shènzhì shì fēicháng bù xǐhuan de gōngzuò.",
+          "uz": "Ko'p hollarda biz o'zimiz istamaydigan, hatto juda yoqtirmaydigan ishlarni qilishga majbur bo'lamiz.",
+          "ru": "Часто нам приходится делать работу, которую мы не хотим и даже очень не любим.",
+          "en": "Often we have to do work we don't want to do, or even strongly dislike."
+        },
+        {
+          "type": "ex",
+          "zh": "迟到会让别人觉得你没有责任心，使你错过重要的机会，甚至会让别人不再相信你。",
+          "py": "Chídào huì ràng biérén juéde nǐ méiyǒu zérènxīn, shǐ nǐ cuòguò zhòngyào de jīhuì, shènzhì huì ràng biérén bù zài xiāngxìn nǐ.",
+          "uz": "Kechikish boshqalarda sizni mas'uliyatsiz degan taassurot qoldiradi, muhim imkoniyatlarni boy berishingizga olib keladi, hatto odamlarning ishonchini yo'qotishingiz mumkin.",
+          "ru": "Опоздание создаёт впечатление безответственности, лишает важных возможностей и даже может лишить вас доверия людей.",
+          "en": "Being late makes people think you're irresponsible, causes you to miss important opportunities, and can even make people stop trusting you."
+        },
+        {
+          "type": "h",
+          "uz": "Qayerda keladi?",
+          "ru": "Где стоит?",
+          "en": "Where it goes"
+        },
+        {
+          "type": "ex",
+          "zh": "甚至孩子都知道。",
+          "py": "Shènzhì háizi dōu zhīdào.",
+          "uz": "Hatto bolalar ham buni biladi.",
+          "ru": "Даже дети это знают.",
+          "en": "Even children know it."
+        },
+        {
+          "type": "ex",
+          "zh": "他甚至忘了自己的生日。",
+          "py": "Tā shènzhì wàng le zìjǐ de shēngrì.",
+          "uz": "U hatto tug'ilgan kunini ham unutdi.",
+          "ru": "Он даже забыл свой день рождения.",
+          "en": "He even forgot his own birthday."
+        },
+        {
+          "type": "ex",
+          "zh": "他没来，甚至连电话都没打。",
+          "py": "Tā méi lái, shènzhì lián diànhuà dōu méi dǎ.",
+          "uz": "U kelmadi, hatto qo'ng'iroq ham qilmadi.",
+          "ru": "Он не пришёл и даже не позвонил.",
+          "en": "He didn't come; he didn't even call."
+        },
+        {
+          "type": "h",
+          "uz": "甚至 va 连……都…… farqi",
+          "ru": "甚至 и 连……都……",
+          "en": "甚至 vs. 连……都……"
+        },
+        {
+          "type": "ex",
+          "zh": "他会英语、法语，甚至汉语。",
+          "py": "Tā huì Yīngyǔ, Fǎyǔ, shènzhì Hànyǔ.",
+          "uz": "U Ingliz, Fransuz, hatto Xitoy tilini ham biladi.",
+          "ru": "Он знает английский, французский и даже китайский.",
+          "en": "He speaks English, French, and even Chinese."
+        },
+        {
+          "type": "ex",
+          "zh": "他连自己的名字都不会写。",
+          "py": "Tā lián zìjǐ de míngzi dōu bù huì xiě.",
+          "uz": "U hatto o'z ismini ham yoza olmaydi.",
+          "ru": "Он даже своё имя написать не может.",
+          "en": "He can't even write his own name."
+        },
+        {
+          "type": "note",
+          "uz": "甚至 → ro'yxatdagi eng kuchli misolni ta'kidlaydi.\n连……都…… → kutilmagan holatni yanada kuchliroq ta'kidlaydi.",
+          "ru": "甚至 → выделяет самый крайний пример в перечислении.\n连……都…… → ещё сильнее подчёркивает неожиданность.",
+          "en": "甚至 → highlights the most extreme item in a list.\n连……都…… → places even stronger emphasis on the unexpected."
+        }
+      ]
+    }
   ]
 }
