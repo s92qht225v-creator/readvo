@@ -1,0 +1,572 @@
+{
+  "book": "standard-course",
+  "bookTitle": "HSK标准教程",
+  "level": 4,
+  "volume": "上",
+  "unit": 2,
+  "slug": "true-friends",
+  "title": "真正的朋友",
+  "pinyin": "Zhēnzhèng de péngyou",
+  "titleTranslation": "Haqiqiy do'stlar",
+  "titleTranslation_ru": "Настоящие друзья",
+  "titleTranslation_en": "True Friends",
+  "dateAdded": "2026-08-07",
+  "texts": [
+    {
+      "id": "hsk4-l2-t1",
+      "slug": "text-1",
+      "label": "课文一",
+      "labelTranslation": "Matn 1",
+      "labelTranslation_ru": "Текст 1",
+      "labelTranslation_en": "Text 1",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "适应",
+          "py": "shìyìng",
+          "uz": "moslashmoq, ko'nikmoq",
+          "ru": "приспосабливаться, привыкать",
+          "en": "to adapt, to get used to"
+        },
+        {
+          "zh": "交",
+          "py": "jiāo",
+          "uz": "(do'st) orttirmoq",
+          "ru": "заводить (друзей)",
+          "en": "to make (friends)"
+        },
+        {
+          "zh": "平时",
+          "py": "píngshí",
+          "uz": "odatda, oddiy kunlarda",
+          "ru": "обычно, в обычное время",
+          "en": "usually, ordinarily"
+        },
+        {
+          "zh": "逛",
+          "py": "guàng",
+          "uz": "aylanmoq, sayr qilmoq",
+          "ru": "гулять, прогуливаться",
+          "en": "to stroll, to wander"
+        },
+        {
+          "zh": "短信",
+          "py": "duǎnxìn",
+          "uz": "SMS, qisqa xabar",
+          "ru": "СМС, сообщение",
+          "en": "text message"
+        },
+        {
+          "zh": "正好",
+          "py": "zhènghǎo",
+          "uz": "ayni vaqti, aynan",
+          "ru": "как раз, кстати",
+          "en": "just right, as it happens"
+        },
+        {
+          "zh": "夏",
+          "py": "Xià",
+          "uz": "Sya (familiya)",
+          "ru": "Ся (фамилия)",
+          "en": "Xia (surname)"
+        },
+        {
+          "zh": "马克",
+          "py": "Mǎkè",
+          "uz": "Mark (ism)",
+          "ru": "Марк (имя)",
+          "en": "Mark (name)"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l2-t1-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l2-t1-s1",
+              "text_original": "来中国快一年了，你适应这儿的生活了吗？",
+              "pinyin": "Lái Zhōngguó kuài yī nián le, nǐ shìyìng zhèr de shēnghuó le ma?",
+              "text_translation": "Xitoyga kelganingga bir yil bo'lay deb qoldi, bu yerdagi hayotga moslashdingmi?",
+              "text_translation_ru": "Ты в Китае уже почти год — привык к здешней жизни?",
+              "text_translation_en": "You've been in China almost a year — have you got used to life here?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t1-s2",
+              "text_original": "开始有点儿不习惯，后来就慢慢适应了，最近我还交了一个中国朋友。",
+              "pinyin": "Kāishǐ yǒudiǎnr bù xíguàn, hòulái jiù mànmàn shìyìng le, zuìjìn wǒ hái jiāo le yī gè Zhōngguó péngyou.",
+              "text_translation": "Boshida biroz ko'nikmagandim, keyin asta-sekin moslashdim, yaqinda hatto bitta Xitoylik do'st ham orttirdim.",
+              "text_translation_ru": "Сначала было немного непривычно, потом постепенно привык, а недавно даже завёл китайского друга.",
+              "text_translation_en": "At first I wasn't used to it, but then I gradually adapted, and recently I even made a Chinese friend.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t1-s3",
+              "text_original": "那就好，快给我讲讲你新交的中国朋友。",
+              "pinyin": "Nà jiù hǎo, kuài gěi wǒ jiǎngjiang nǐ xīn jiāo de Zhōngguó péngyou.",
+              "text_translation": "Yaxshi bo'libdi, tezroq yangi orttirgan Xitoylik do'sting haqida gapirib ber.",
+              "text_translation_ru": "Это хорошо! Расскажи скорее о своём новом китайском друге.",
+              "text_translation_en": "That's good — tell me about your new Chinese friend.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t1-s4",
+              "text_original": "我们是在图书馆认识的。",
+              "pinyin": "Wǒmen shì zài túshūguǎn rènshi de.",
+              "text_translation": "Biz kutubxonada tanishganmiz.",
+              "text_translation_ru": "Мы познакомились в библиотеке.",
+              "text_translation_en": "We met in the library.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t1-s5",
+              "text_original": "平时我们常常一起看书、逛街、踢足球。",
+              "pinyin": "Píngshí wǒmen chángcháng yīqǐ kànshū, guàngjiē, tī zúqiú.",
+              "text_translation": "Odatda biz tez-tez birga kitob o'qiymiz, do'kon aylanamiz, futbol o'ynaymiz.",
+              "text_translation_ru": "Обычно мы часто вместе читаем, гуляем по магазинам и играем в футбол.",
+              "text_translation_en": "We often read, go shopping and play football together.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t1-s6",
+              "text_original": "有时候他还给我发一些幽默短信。",
+              "pinyin": "Yǒu shíhou tā hái gěi wǒ fā yīxiē yōumò duǎnxìn.",
+              "text_translation": "Ba'zan u menga hazil SMS'lar ham yuboradi.",
+              "text_translation_ru": "Иногда он ещё присылает мне смешные сообщения.",
+              "text_translation_en": "Sometimes he even sends me funny text messages.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t1-s7",
+              "text_original": "你的这个朋友真不错！",
+              "pinyin": "Nǐ de zhège péngyou zhēn bùcuò!",
+              "text_translation": "Bu do'sting rostdan ham zo'r ekan!",
+              "text_translation_ru": "Твой друг действительно замечательный!",
+              "text_translation_en": "Your friend sounds great!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t1-s8",
+              "text_original": "下次介绍我们认识认识，怎么样？",
+              "pinyin": "Xià cì jièshào wǒmen rènshi rènshi, zěnmeyàng?",
+              "text_translation": "Keyingi safar bizni tanishtirib qo'ysang, qanday bo'ladi?",
+              "text_translation_ru": "В следующий раз познакомь нас, хорошо?",
+              "text_translation_en": "Introduce us next time — how about it?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t1-s9",
+              "text_original": "没问题！",
+              "pinyin": "Méi wèntí!",
+              "text_translation": "Muammo yo'q!",
+              "text_translation_ru": "Без проблем!",
+              "text_translation_en": "No problem!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t1-s10",
+              "text_original": "我们下午要去踢足球，正好一起去吧。",
+              "pinyin": "Wǒmen xiàwǔ yào qù tī zúqiú, zhènghǎo yīqǐ qù ba.",
+              "text_translation": "Biz tushdan keyin futbol o'ynagani boramiz — ayni vaqti, birga boraylik.",
+              "text_translation_ru": "Мы днём идём играть в футбол — как раз пойдём вместе.",
+              "text_translation_en": "We're going to play football this afternoon — perfect, come along.",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l2-t2",
+      "slug": "text-2",
+      "label": "课文二",
+      "labelTranslation": "Matn 2",
+      "labelTranslation_ru": "Текст 2",
+      "labelTranslation_en": "Text 2",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "白桦"
+      },
+      "vocab": [
+        {
+          "zh": "聚会",
+          "py": "jùhuì",
+          "uz": "uchrashuv, yig'in",
+          "ru": "встреча, вечеринка",
+          "en": "gathering, get-together"
+        },
+        {
+          "zh": "联系",
+          "py": "liánxì",
+          "uz": "bog'lanmoq, aloqa qilmoq",
+          "ru": "связываться, поддерживать связь",
+          "en": "to contact, to keep in touch"
+        },
+        {
+          "zh": "差不多",
+          "py": "chàbuduō",
+          "uz": "taxminan, deyarli",
+          "ru": "почти, примерно",
+          "en": "almost, about"
+        },
+        {
+          "zh": "专门",
+          "py": "zhuānmén",
+          "uz": "maxsus, atayin",
+          "ru": "специально",
+          "en": "specially, specifically"
+        },
+        {
+          "zh": "毕业",
+          "py": "bìyè",
+          "uz": "bitirmoq (o'quv yurtini)",
+          "ru": "заканчивать учёбу, выпускаться",
+          "en": "to graduate"
+        },
+        {
+          "zh": "麻烦",
+          "py": "máfan",
+          "uz": "bezovta qilmoq; ovora",
+          "ru": "беспокоить; хлопотный",
+          "en": "to trouble (someone); troublesome"
+        },
+        {
+          "zh": "林",
+          "py": "Lín",
+          "uz": "Lin (familiya)",
+          "ru": "Линь (фамилия)",
+          "en": "Lin (surname)"
+        },
+        {
+          "zh": "张远",
+          "py": "Zhāng Yuǎn",
+          "uz": "Chjan Yuan (ism)",
+          "ru": "Чжан Юань (имя)",
+          "en": "Zhang Yuan (name)"
+        },
+        {
+          "zh": "上海",
+          "py": "Shànghǎi",
+          "uz": "Shanxay (shahar)",
+          "ru": "Шанхай (город)",
+          "en": "Shanghai (city)"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l2-t2-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l2-t2-s1",
+              "text_original": "星期天同学聚会，你能来吗？",
+              "pinyin": "Xīngqītiān tóngxué jùhuì, nǐ néng lái ma?",
+              "text_translation": "Yakshanba kuni sinfdoshlar uchrashuvi bo'ladi, kela olasanmi?",
+              "text_translation_ru": "В воскресенье встреча одноклассников — сможешь прийти?",
+              "text_translation_en": "There's a class reunion on Sunday — can you come?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t2-s2",
+              "text_original": "能来。",
+              "pinyin": "Néng lái.",
+              "text_translation": "Kela olaman.",
+              "text_translation_ru": "Смогу.",
+              "text_translation_en": "Yes, I can.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t2-s3",
+              "text_original": "班里同学你联系得怎么样了？",
+              "pinyin": "Bān lǐ tóngxué nǐ liánxì de zěnmeyàng le?",
+              "text_translation": "Sinfdoshlar bilan bog'lanish qanday ketyapti?",
+              "text_translation_ru": "Как у тебя дела со связью с одноклассниками?",
+              "text_translation_en": "How's it going getting in touch with everyone?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t2-s4",
+              "text_original": "来多少人？",
+              "pinyin": "Lái duōshao rén?",
+              "text_translation": "Necha kishi keladi?",
+              "text_translation_ru": "Сколько человек придёт?",
+              "text_translation_en": "How many are coming?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t2-s5",
+              "text_original": "差不多一半儿吧，张远还专门从国外飞回来呢。",
+              "pinyin": "Chàbuduō yībànr ba, Zhāng Yuǎn hái zhuānmén cóng guówài fēi huílái ne.",
+              "text_translation": "Taxminan yarmi. Chjan Yuan hatto maxsus chet eldan uchib keladi.",
+              "text_translation_ru": "Примерно половина. Чжан Юань даже специально прилетит из-за границы.",
+              "text_translation_en": "About half. Zhang Yuan is even flying back from abroad specially.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t2-s6",
+              "text_original": "是吗？",
+              "pinyin": "Shì ma?",
+              "text_translation": "Rostdanmi?",
+              "text_translation_ru": "Правда?",
+              "text_translation_en": "Really?",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t2-s7",
+              "text_original": "毕业都快十年了，真想大家啊！",
+              "pinyin": "Bìyè dōu kuài shí nián le, zhēn xiǎng dàjiā a!",
+              "text_translation": "Bitirganimizga o'n yil bo'lay deb qoldi, hammani juda sog'indim!",
+              "text_translation_ru": "Прошло почти десять лет после выпуска — я так соскучился по всем!",
+              "text_translation_en": "It's almost ten years since we graduated — I really miss everyone!",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t2-s8",
+              "text_original": "对了，今天早上，我在地铁站遇到了王静，她毕业后就去上海工作了，她这次是来旅游的。",
+              "pinyin": "Duì le, jīntiān zǎoshang, wǒ zài dìtiězhàn yùdào le Wáng Jìng, tā bìyè hòu jiù qù Shànghǎi gōngzuò le, tā zhè cì shì lái lǚyóu de.",
+              "text_translation": "Aytgancha, bugun ertalab metro bekatida Van Tszinni uchratdim. U bitirgandan keyin Shanxayga ishlagani ketgan edi, bu safar sayohat qilgani kelibdi.",
+              "text_translation_ru": "Кстати, сегодня утром я встретил на станции метро Ван Цзин. После выпуска она уехала работать в Шанхай, а сейчас приехала как туристка.",
+              "text_translation_en": "By the way, this morning I ran into Wang Jing at the subway station. She went to work in Shanghai after graduating, and this time she's here as a tourist.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t2-s9",
+              "text_original": "那太好了！",
+              "pinyin": "Nà tài hǎo le!",
+              "text_translation": "Bu juda yaxshi!",
+              "text_translation_ru": "Как здорово!",
+              "text_translation_en": "That's great!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t2-s10",
+              "text_original": "麻烦你跟她联系一下，请她一起来参加同学聚会。",
+              "pinyin": "Máfan nǐ gēn tā liánxì yīxià, qǐng tā yīqǐ lái cānjiā tóngxué jùhuì.",
+              "text_translation": "Iltimos, u bilan bog'lanib, sinfdoshlar uchrashuviga birga kelishini so'ra.",
+              "text_translation_ru": "Свяжись с ней, пожалуйста, и пригласи её на встречу одноклассников.",
+              "text_translation_en": "Could you get in touch with her and invite her to the reunion?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t2-s11",
+              "text_original": "聚会就在学校门口那个饭店，六点半。",
+              "pinyin": "Jùhuì jiù zài xuéxiào ménkǒu nàge fàndiàn, liù diǎn bàn.",
+              "text_translation": "Uchrashuv maktab darvozasi oldidagi o'sha restoranda, soat olti yarimda.",
+              "text_translation_ru": "Встреча в том ресторане у ворот школы, в половине седьмого.",
+              "text_translation_en": "The reunion is at that restaurant by the school gate, at half past six.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t2-s12",
+              "text_original": "别迟到啊！",
+              "pinyin": "Bié chídào a!",
+              "text_translation": "Kechikma!",
+              "text_translation_ru": "Не опаздывай!",
+              "text_translation_en": "Don't be late!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t2-s13",
+              "text_original": "放心吧。",
+              "pinyin": "Fàngxīn ba.",
+              "text_translation": "Xotirjam bo'l.",
+              "text_translation_ru": "Не волнуйся.",
+              "text_translation_en": "Don't worry.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t2-s14",
+              "text_original": "星期天六点半见！",
+              "pinyin": "Xīngqītiān liù diǎn bàn jiàn!",
+              "text_translation": "Yakshanba soat olti yarimda ko'rishamiz!",
+              "text_translation_ru": "Увидимся в воскресенье в половине седьмого!",
+              "text_translation_en": "See you Sunday at half past six!",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hsk4-l2-t3",
+      "slug": "text-3",
+      "label": "课文三",
+      "labelTranslation": "Matn 3",
+      "labelTranslation_ru": "Текст 3",
+      "labelTranslation_en": "Text 3",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "茉莉",
+        "B": "苏打"
+      },
+      "vocab": [
+        {
+          "zh": "好像",
+          "py": "hǎoxiàng",
+          "uz": "go'yo, o'xshaydi",
+          "ru": "как будто, кажется",
+          "en": "as if, to seem"
+        },
+        {
+          "zh": "重新",
+          "py": "chóngxīn",
+          "uz": "qaytadan, yangidan",
+          "ru": "снова, заново",
+          "en": "again, anew"
+        },
+        {
+          "zh": "尽管",
+          "py": "jǐnguǎn",
+          "uz": "garchi, …bo'lsa-da",
+          "ru": "хотя, несмотря на",
+          "en": "even though, although"
+        },
+        {
+          "zh": "真正",
+          "py": "zhēnzhèng",
+          "uz": "haqiqiy, chin",
+          "ru": "настоящий, подлинный",
+          "en": "true, genuine"
+        },
+        {
+          "zh": "友谊",
+          "py": "yǒuyì",
+          "uz": "do'stlik",
+          "ru": "дружба",
+          "en": "friendship"
+        }
+      ],
+      "sections": [
+        {
+          "id": "hsk4-l2-t3-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l2-t3-s1",
+              "text_original": "这是什么时候的照片？",
+              "pinyin": "Zhè shì shénme shíhou de zhàopiàn?",
+              "text_translation": "Bu qachongi surat?",
+              "text_translation_ru": "Это фотография какого времени?",
+              "text_translation_en": "When was this photo taken?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t3-s2",
+              "text_original": "你真年轻！",
+              "pinyin": "Nǐ zhēn niánqīng!",
+              "text_translation": "Juda yosh ekansan!",
+              "text_translation_ru": "Ты такая молодая!",
+              "text_translation_en": "You look so young!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t3-s3",
+              "text_original": "这是上大学时的照片。",
+              "pinyin": "Zhè shì shàng dàxué shí de zhàopiàn.",
+              "text_translation": "Bu universitetda o'qigan paytdagi surat.",
+              "text_translation_ru": "Это фотография студенческих лет.",
+              "text_translation_en": "This is from my university days.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t3-s4",
+              "text_original": "一看到这张照片，我就想起过去那段快乐的日子，好像重新回到了校园。",
+              "pinyin": "Yī kàndào zhè zhāng zhàopiàn, wǒ jiù xiǎngqǐ guòqù nà duàn kuàilè de rìzi, hǎoxiàng chóngxīn huídào le xiàoyuán.",
+              "text_translation": "Bu suratni ko'rishim bilanoq o'sha baxtli kunlar esimga tushadi — go'yo yana talabalik shaharchasiga qaytgandekman.",
+              "text_translation_ru": "Как только я вижу эту фотографию, я вспоминаю те счастливые дни — будто снова вернулась в кампус.",
+              "text_translation_en": "The moment I see this photo I remember those happy days — as if I were back on campus again.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t3-s5",
+              "text_original": "旁边这个人一定是你的好朋友吧？",
+              "pinyin": "Pángbiān zhège rén yīdìng shì nǐ de hǎo péngyou ba?",
+              "text_translation": "Yoningdagi bu odam, albatta, yaqin do'stingdir?",
+              "text_translation_ru": "Человек рядом — наверняка твоя близкая подруга?",
+              "text_translation_en": "The person next to you must be a close friend?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t3-s6",
+              "text_original": "你们现在还联系吗？",
+              "pinyin": "Nǐmen xiànzài hái liánxì ma?",
+              "text_translation": "Hozir ham bog'lanib turasizlarmi?",
+              "text_translation_ru": "Вы до сих пор общаетесь?",
+              "text_translation_en": "Are you still in touch?",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t3-s7",
+              "text_original": "当然了，尽管已经毕业这么多年，我们还是经常联系的，每次都有说不完的话。",
+              "pinyin": "Dāngrán le, jǐnguǎn yǐjīng bìyè zhème duō nián, wǒmen háishi jīngcháng liánxì de, měi cì dōu yǒu shuō bu wán de huà.",
+              "text_translation": "Albatta. Bitirganimizga shuncha yil bo'lgan bo'lsa-da, biz hamon tez-tez bog'lanib turamiz va har safar gapimiz tugamaydi.",
+              "text_translation_ru": "Конечно. Хотя прошло уже столько лет после выпуска, мы всё равно часто общаемся, и каждый раз разговорам нет конца.",
+              "text_translation_en": "Of course. Even though it's been so many years since we graduated, we're still often in touch, and every time we have endless things to say.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t3-s8",
+              "text_original": "真羡慕你！",
+              "pinyin": "Zhēn xiànmù nǐ!",
+              "text_translation": "Senga juda havas qilaman!",
+              "text_translation_ru": "Как я тебе завидую!",
+              "text_translation_en": "I really envy you!",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t3-s9",
+              "text_original": "我上大学时最好的朋友去了南方工作，我们俩已经好久没联系了。",
+              "pinyin": "Wǒ shàng dàxué shí zuì hǎo de péngyou qù le Nánfāng gōngzuò, wǒmen liǎ yǐjīng hǎojiǔ méi liánxì le.",
+              "text_translation": "Universitetdagi eng yaqin do'stim Janubga ishlagani ketgan, biz ancha vaqtdan beri bog'lanmaganmiz.",
+              "text_translation_ru": "Моя лучшая университетская подруга уехала работать на Юг, и мы давно не общались.",
+              "text_translation_en": "My best friend from university went south for work, and we haven't been in touch for a long time.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t3-s10",
+              "text_original": "我一会儿就给她打个电话。",
+              "pinyin": "Wǒ yīhuìr jiù gěi tā dǎ ge diànhuà.",
+              "text_translation": "Birozdan keyin unga qo'ng'iroq qilaman.",
+              "text_translation_ru": "Я скоро ей позвоню.",
+              "text_translation_en": "I'll give her a call in a bit.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l2-t3-s11",
+              "text_original": "对。",
+              "pinyin": "Duì.",
+              "text_translation": "To'g'ri.",
+              "text_translation_ru": "Верно.",
+              "text_translation_en": "Right.",
+              "speaker": "B"
+            },
+            {
+              "id": "hsk4-l2-t3-s12",
+              "text_original": "要知道，能有一个真正的朋友，有一段真正的友谊，是多么不容易！",
+              "pinyin": "Yào zhīdào, néng yǒu yī gè zhēnzhèng de péngyou, yǒu yī duàn zhēnzhèng de yǒuyì, shì duōme bù róngyì!",
+              "text_translation": "Bilasanmi, haqiqiy do'stga ega bo'lish, haqiqiy do'stlikka ega bo'lish qanchalik qiyin!",
+              "text_translation_ru": "Знаешь, как непросто иметь настоящего друга и настоящую дружбу!",
+              "text_translation_en": "You know, how hard it is to have a true friend and a true friendship!",
+              "speaker": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
