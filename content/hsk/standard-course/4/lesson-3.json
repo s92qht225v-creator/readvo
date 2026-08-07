@@ -782,5 +782,943 @@
       ],
       "title": "中山装和旗袍"
     }
+  ],
+  "grammar": [
+    {
+      "slug": "ting",
+      "title": "挺",
+      "pinyin": "tǐng",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "挺 — ravish bo'lib, «juda», «ancha», «anchayin» ma'nosini bildiradi. Ma'nosi 很 ga o'xshaydi, ammo og'zaki nutqda tabiiyroq eshitiladi.",
+          "ru": "挺 — наречие со значением «довольно», «весьма». По значению близко к 很, но звучит естественнее в разговорной речи.",
+          "en": "挺 is an adverb meaning “quite”, “rather”, “pretty”. Close to 很 in meaning, but far more natural in spoken Chinese."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 挺 + Sifat + 的",
+          "ru": "Подлежащее + 挺 + Прилагательное + 的",
+          "en": "Subject + 挺 + Adjective + 的"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 挺 + Fe'l + 的",
+          "ru": "Подлежащее + 挺 + Глагол + 的",
+          "en": "Subject + 挺 + Verb + 的"
+        },
+        {
+          "type": "h",
+          "uz": "Sifat bilan",
+          "ru": "С прилагательными",
+          "en": "With adjectives"
+        },
+        {
+          "type": "ex",
+          "zh": "他们问的问题都挺容易的。",
+          "py": "Tāmen wèn de wèntí dōu tǐng róngyì de.",
+          "uz": "Ular bergan savollar ancha oson ekan.",
+          "ru": "Вопросы, которые они задавали, были довольно лёгкими.",
+          "en": "The questions they asked were quite easy."
+        },
+        {
+          "type": "ex",
+          "zh": "这家店的东西挺好的，我经常来这儿买东西。",
+          "py": "Zhè jiā diàn de dōngxi tǐng hǎo de, wǒ jīngcháng lái zhèr mǎi dōngxi.",
+          "uz": "Bu do'kondagi mahsulotlar juda yaxshi, men bu yerga tez-tez xarid qilgani kelaman.",
+          "ru": "Товары в этом магазине довольно хорошие, я часто прихожу сюда за покупками.",
+          "en": "The things in this shop are pretty good — I often come here to shop."
+        },
+        {
+          "type": "h",
+          "uz": "Fe'l bilan",
+          "ru": "С глаголами",
+          "en": "With verbs"
+        },
+        {
+          "type": "p",
+          "uz": "挺 ba'zi fe'llar bilan ham keladi, ayniqsa 喜欢 kabi his-tuyg'u fe'llari bilan.",
+          "ru": "挺 может употребляться и с глаголами, особенно выражающими чувства, например 喜欢.",
+          "en": "挺 can also modify verbs, especially ones expressing feeling or preference such as 喜欢."
+        },
+        {
+          "type": "ex",
+          "zh": "我挺喜欢这个地方的，周围环境比以前住的地方安静很多。",
+          "py": "Wǒ tǐng xǐhuan zhège dìfang de, zhōuwéi huánjìng bǐ yǐqián zhù de dìfang ānjìng hěn duō.",
+          "uz": "Menga bu joy juda yoqadi — atrofi ilgari yashagan joyimga qaraganda ancha tinch.",
+          "ru": "Мне очень нравится это место: здесь намного тише, чем там, где я жил раньше.",
+          "en": "I quite like this place — the surroundings are much quieter than where I used to live."
+        },
+        {
+          "type": "h",
+          "uz": "挺 va 很 farqi",
+          "ru": "挺 и 很",
+          "en": "挺 vs. 很"
+        },
+        {
+          "type": "ex",
+          "zh": "今天很冷。",
+          "py": "Jīntiān hěn lěng.",
+          "uz": "Bugun juda sovuq.",
+          "ru": "Сегодня очень холодно.",
+          "en": "It's very cold today."
+        },
+        {
+          "type": "ex",
+          "zh": "今天挺冷的。",
+          "py": "Jīntiān tǐng lěng de.",
+          "uz": "Bugun ancha sovuq ekan.",
+          "ru": "Сегодня довольно холодно.",
+          "en": "It's quite cold today."
+        },
+        {
+          "type": "note",
+          "uz": "很 → neytral, eng ko'p ishlatiladigan kuchaytiruvchi.\n挺 → norasmiyroq, suhbat uslubida va ko'pincha ijobiy bahoda.",
+          "ru": "很 → нейтральное и самое употребимое.\n挺 → более разговорное, часто для положительной оценки.",
+          "en": "很 → neutral, the default intensifier.\n挺 → more conversational, often for a positive impression."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "formula",
+          "uz": "挺 + Sifat + 的  →  juda / ancha",
+          "ru": "挺 + Прилагательное + 的  →  довольно / весьма",
+          "en": "挺 + Adjective + 的  →  quite / pretty"
+        },
+        {
+          "type": "ex",
+          "zh": "挺漂亮的。",
+          "py": "Tǐng piàoliang de.",
+          "uz": "Juda chiroyli.",
+          "ru": "Очень красиво.",
+          "en": "Quite beautiful."
+        },
+        {
+          "type": "ex",
+          "zh": "挺容易的。",
+          "py": "Tǐng róngyì de.",
+          "uz": "Ancha oson.",
+          "ru": "Довольно легко.",
+          "en": "Quite easy."
+        },
+        {
+          "type": "ex",
+          "zh": "挺好的。",
+          "py": "Tǐng hǎo de.",
+          "uz": "Juda yaxshi.",
+          "ru": "Очень хорошо.",
+          "en": "Pretty good."
+        },
+        {
+          "type": "note",
+          "uz": "挺 ≈ 很\nAsosan og'zaki nutqda.\nEng ko'p uchraydigan qolip: 挺 + Sifat + 的",
+          "ru": "挺 ≈ 很\nЧаще в разговорной речи.\nСамая частая конструкция: 挺 + Прилагательное + 的",
+          "en": "挺 ≈ 很\nMostly spoken Chinese.\nMost common pattern: 挺 + Adjective + 的"
+        }
+      ]
+    },
+    {
+      "slug": "benlai",
+      "title": "本来",
+      "pinyin": "běnlái",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "本来 — ravish, ikki asosiy ma'noga ega:\n1. «Aslida», «bo'lishi kerak edi» — mantiqan yoki odat bo'yicha shunday bo'lishi kerakligi.\n2. «Dastlab», «avval», «ilgari» — oldingi holat.",
+          "ru": "本来 — наречие с двумя значениями:\n1. «Вообще-то», «по идее», «должен был».\n2. «Изначально», «раньше», «сначала».",
+          "en": "本来 is an adverb with two main meanings:\n1. “By rights”, “should have” — what logically ought to have been.\n2. “Originally”, “at first” — an earlier situation."
+        },
+        {
+          "type": "h",
+          "uz": "1. «Aslida», «bo'lishi kerak edi»",
+          "ru": "1. «По идее», «должен был»",
+          "en": "1. “By rights” / “should have”"
+        },
+        {
+          "type": "formula",
+          "uz": "Ega + 本来 + 应该 + Fe'l",
+          "ru": "Подлежащее + 本来 + 应该 + Глагол",
+          "en": "Subject + 本来 + 应该 + Verb"
+        },
+        {
+          "type": "ex",
+          "zh": "这件事本来应该听他的。",
+          "py": "Zhè jiàn shì běnlái yīnggāi tīng tā de.",
+          "uz": "Bu masalada aslida uning gapiga quloq solish kerak edi.",
+          "ru": "В этом вопросе нам вообще-то следовало послушать его.",
+          "en": "We should have listened to him about this."
+        },
+        {
+          "type": "h",
+          "uz": "2. «Dastlab», «avval»",
+          "ru": "2. «Изначально», «раньше»",
+          "en": "2. “Originally” / “at first”"
+        },
+        {
+          "type": "ex",
+          "zh": "我本来不会开车，但现在开得特别好。",
+          "py": "Wǒ běnlái bù huì kāichē, dàn xiànzài kāi de tèbié hǎo.",
+          "uz": "Men avvallari mashina haydashni bilmasdim, ammo hozir juda yaxshi haydayman.",
+          "ru": "Раньше я не умел водить машину, но теперь вожу очень хорошо.",
+          "en": "I couldn't drive before, but now I drive very well."
+        },
+        {
+          "type": "ex",
+          "zh": "这次招聘本来是小李负责的。",
+          "py": "Zhè cì zhāopìn běnlái shì Xiǎo Lǐ fùzé de.",
+          "uz": "Bu ishga qabul jarayoniga dastlab Syao Li mas'ul edi.",
+          "ru": "Изначально за этот набор отвечал Сяо Ли.",
+          "en": "Xiao Li was originally in charge of this recruitment."
+        },
+        {
+          "type": "h",
+          "uz": "本来 va 原来 farqi",
+          "ru": "本来 и 原来",
+          "en": "本来 vs. 原来"
+        },
+        {
+          "type": "ex",
+          "zh": "我本来想去。",
+          "py": "Wǒ běnlái xiǎng qù.",
+          "uz": "Men aslida bormoqchi edim.",
+          "ru": "Я изначально хотел пойти.",
+          "en": "I originally wanted to go."
+        },
+        {
+          "type": "ex",
+          "zh": "原来你会说中文！",
+          "py": "Yuánlái nǐ huì shuō Zhōngwén!",
+          "uz": "Demak, sen Xitoy tilida gapira olar ekansan!",
+          "ru": "Так вот, оказывается, ты говоришь по-китайски!",
+          "en": "So you can speak Chinese!"
+        },
+        {
+          "type": "note",
+          "uz": "本来 → asl holat, dastlabki reja yoki bo'lishi kerak bo'lgan holat.\n原来 → keyin bilib olingan haqiqat, «voy, shunday ekan».",
+          "ru": "本来 → первоначальный план или исходная ситуация.\n原来 → неожиданно выяснившийся факт.",
+          "en": "本来 → the original situation, plan, or what ought to have been.\n原来 → something newly discovered or realised."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "ex",
+          "zh": "本来应该告诉你。",
+          "py": "Běnlái yīnggāi gàosu nǐ.",
+          "uz": "Aslida senga aytishim kerak edi.",
+          "ru": "Вообще-то я должен был сказать тебе.",
+          "en": "I should have told you."
+        },
+        {
+          "type": "ex",
+          "zh": "我本来不会游泳。",
+          "py": "Wǒ běnlái bù huì yóuyǒng.",
+          "uz": "Men avvallari suzishni bilmasdim.",
+          "ru": "Раньше я не умел плавать.",
+          "en": "I couldn't swim before."
+        },
+        {
+          "type": "note",
+          "uz": "本来 ≠ 原来\n本来 → asl holat yoki reja\n原来 → keyin bilib olingan haqiqat",
+          "ru": "本来 ≠ 原来\n本来 → первоначальный план\n原来 → неожиданно выяснившийся факт",
+          "en": "本来 ≠ 原来\n本来 → the original plan or situation\n原来 → a newly discovered fact"
+        }
+      ]
+    },
+    {
+      "slug": "lingwai",
+      "title": "另外",
+      "pinyin": "lìngwài",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "另外 uch xil vazifada ishlatiladi:\n1. Olmosh — «boshqa», «yana bir».\n2. Ravish — «bundan tashqari», «yana», «qo'shimcha ravishda».\n3. Bog'lovchi — «bundan tashqari», «shuningdek».",
+          "ru": "另外 имеет три функции:\n1. Местоимение — «другой», «ещё один».\n2. Наречие — «кроме того», «дополнительно».\n3. Союз — «кроме того», «к тому же».",
+          "en": "另外 has three uses:\n1. Pronoun — “another”, “other”.\n2. Adverb — “in addition”, “besides”.\n3. Conjunction — “besides”, “furthermore”."
+        },
+        {
+          "type": "h",
+          "uz": "1. 另外 — olmosh",
+          "ru": "1. 另外 как местоимение",
+          "en": "1. 另外 as a pronoun"
+        },
+        {
+          "type": "formula",
+          "uz": "另外 (+ 的) + Son + Ot",
+          "ru": "另外 (+ 的) + Числительное + Существительное",
+          "en": "另外 (+ 的) + Number + Noun"
+        },
+        {
+          "type": "ex",
+          "zh": "前面车有点儿多，我们走另外一条路，不会迟到的。",
+          "py": "Qiánmiàn chē yǒudiǎnr duō, wǒmen zǒu lìngwài yī tiáo lù, bù huì chídào de.",
+          "uz": "Oldinda mashina ko'proq — boshqa yo'ldan ketamiz, kech qolmaymiz.",
+          "ru": "Впереди многовато машин — поедем другой дорогой, не опоздаем.",
+          "en": "There are rather a lot of cars ahead — let's take another road, we won't be late."
+        },
+        {
+          "type": "ex",
+          "zh": "这件衣服有点儿大，你试试另外的那件吧。",
+          "py": "Zhè jiàn yīfu yǒudiǎnr dà, nǐ shìshi lìngwài de nà jiàn ba.",
+          "uz": "Bu kiyim biroz katta — ana u boshqasini kiyib ko'r.",
+          "ru": "Эта одежда великовата — примерь ту, другую.",
+          "en": "This one's a bit big — try the other one."
+        },
+        {
+          "type": "h",
+          "uz": "2. 另外 — ravish",
+          "ru": "2. 另外 как наречие",
+          "en": "2. 另外 as an adverb"
+        },
+        {
+          "type": "p",
+          "uz": "Ko'pincha 还、再、又 bilan birga keladi.",
+          "ru": "Часто употребляется вместе с 还, 再, 又.",
+          "en": "Often used together with 还, 再 or 又."
+        },
+        {
+          "type": "ex",
+          "zh": "除了她说的，我另外又补充了几条意见。",
+          "py": "Chúle tā shuō de, wǒ lìngwài yòu bǔchōng le jǐ tiáo yìjiàn.",
+          "uz": "U aytganlardan tashqari, men yana bir nechta fikr qo'shdim.",
+          "ru": "Кроме того, что сказала она, я добавил ещё несколько замечаний.",
+          "en": "Besides what she said, I added a few more suggestions."
+        },
+        {
+          "type": "ex",
+          "zh": "家里的空调坏了，咱们另外再买一个吧。",
+          "py": "Jiālǐ de kōngtiáo huài le, zánmen lìngwài zài mǎi yī gè ba.",
+          "uz": "Uydagi konditsioner buzilibdi — keling, yana bittasini olaylik.",
+          "ru": "Кондиционер дома сломался — давай купим ещё один.",
+          "en": "The air conditioner at home is broken — let's buy another one."
+        },
+        {
+          "type": "h",
+          "uz": "3. 另外 — bog'lovchi",
+          "ru": "3. 另外 как союз",
+          "en": "3. 另外 as a conjunction"
+        },
+        {
+          "type": "ex",
+          "zh": "我学的就是法律专业，而且同事们都很喜欢我。",
+          "py": "Wǒ xué de jiù shì fǎlǜ zhuānyè, érqiě tóngshìmen dōu hěn xǐhuan wǒ.",
+          "uz": "Men aynan huquq yo'nalishida o'qiganman, hamkasblarim ham meni yaxshi ko'radi.",
+          "ru": "Я как раз училась на юриста, и коллеги ко мне хорошо относятся.",
+          "en": "Law is exactly what I studied, and my colleagues all like me."
+        },
+        {
+          "type": "ex",
+          "zh": "另外，收入也不错。",
+          "py": "Lìngwài, shōurù yě bùcuò.",
+          "uz": "Bundan tashqari, daromad ham yaxshi.",
+          "ru": "Кроме того, и доход неплохой.",
+          "en": "Besides, the income is good too."
+        },
+        {
+          "type": "ex",
+          "zh": "现在上网买东西很方便，卖家可以把你买的东西送到你办公室或者家里。",
+          "py": "Xiànzài shàngwǎng mǎi dōngxi hěn fāngbiàn, màijiā kěyǐ bǎ nǐ mǎi de dōngxi sòngdào nǐ bàngōngshì huòzhě jiālǐ.",
+          "uz": "Hozir internetdan xarid qilish juda qulay — sotuvchi olgan narsangizni ofisingizga yoki uyingizga yetkazib beradi.",
+          "ru": "Сейчас покупать через интернет очень удобно: продавец доставит покупку в офис или домой.",
+          "en": "Shopping online is very convenient now — the seller delivers to your office or home."
+        },
+        {
+          "type": "ex",
+          "zh": "另外，还比较便宜。",
+          "py": "Lìngwài, hái bǐjiào piányi.",
+          "uz": "Bundan tashqari, narxi ham arzonroq.",
+          "ru": "Кроме того, это ещё и дешевле.",
+          "en": "In addition, it's cheaper too."
+        },
+        {
+          "type": "h",
+          "uz": "另外 va 别的 farqi",
+          "ru": "另外 и 别的",
+          "en": "另外 vs. 别的"
+        },
+        {
+          "type": "note",
+          "uz": "另外 → yana bir; bundan tashqari; qo'shimcha ravishda.\n别的 → faqat «boshqa» ma'nosini bildiradi: 别的人, 别的问题.",
+          "ru": "另外 → ещё один; кроме того; дополнительно.\n别的 → только «другой»: 别的人, 别的问题.",
+          "en": "另外 → another; in addition; besides.\n别的 → simply “other”: 别的人, 别的问题."
+        }
+      ]
+    },
+    {
+      "slug": "lingwai-vs-ling",
+      "title": "另外 / 另",
+      "pinyin": "lìngwài / lìng",
+      "label": "比一比",
+      "labelTranslation": "Taqqoslash",
+      "labelTranslation_ru": "Сравнение",
+      "labelTranslation_en": "Compare",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "O'xshashligi",
+          "ru": "Сходство",
+          "en": "Similarities"
+        },
+        {
+          "type": "p",
+          "uz": "另外 va 另 ikkalasi ham «boshqa», «yana bir» ma'nosini bildiradi va ikkalasi ham olmosh yoki ravish bo'la oladi.",
+          "ru": "另外 и 另 оба означают «другой», «ещё один» и оба могут быть местоимением или наречием.",
+          "en": "Both 另外 and 另 mean “another” or “other”, and both can be a pronoun or an adverb."
+        },
+        {
+          "type": "ex",
+          "zh": "他一边说谢谢，一边从手里拿出另外一本书。",
+          "py": "Tā yībiān shuō xièxie, yībiān cóng shǒu lǐ ná chū lìngwài yī běn shū.",
+          "uz": "U rahmat aytar ekan, qo'lidan yana bir kitobni chiqardi.",
+          "ru": "Поблагодарив, он достал ещё одну книгу.",
+          "en": "While thanking them, he took out another book."
+        },
+        {
+          "type": "ex",
+          "zh": "他一边说谢谢，一边从手里拿出另一本书。",
+          "py": "Tā yībiān shuō xièxie, yībiān cóng shǒu lǐ ná chū lìng yī běn shū.",
+          "uz": "U rahmat aytar ekan, qo'lidan yana bir kitobni chiqardi.",
+          "ru": "Поблагодарив, он достал ещё одну книгу.",
+          "en": "While thanking them, he took out another book."
+        },
+        {
+          "type": "note",
+          "uz": "Ikkala gapning ma'nosi bir xil.",
+          "ru": "Оба варианта означают одно и то же.",
+          "en": "Both sentences mean the same thing."
+        },
+        {
+          "type": "h",
+          "uz": "1. Olmosh sifatida",
+          "ru": "1. Как местоимения",
+          "en": "1. As pronouns"
+        },
+        {
+          "type": "formula",
+          "uz": "另外 + Son + Ot  ·  另外的 + Ot",
+          "ru": "另外 + Числ. + Сущ.  ·  另外的 + Сущ.",
+          "en": "另外 + Number + Noun  ·  另外的 + Noun"
+        },
+        {
+          "type": "formula",
+          "uz": "另 + Son + Ot",
+          "ru": "另 + Числительное + Существительное",
+          "en": "另 + Number + Noun"
+        },
+        {
+          "type": "note",
+          "uz": "另一本书 to'g'ri, 另的书 esa noto'g'ri — 另 «的» bilan ishlatilmaydi.",
+          "ru": "另一本书 — верно, 另的书 — неверно: 另 не употребляется с 的.",
+          "en": "另一本书 is correct; 另的书 is not — 另 does not take 的."
+        },
+        {
+          "type": "h",
+          "uz": "2. Ravish sifatida",
+          "ru": "2. Как наречия",
+          "en": "2. As adverbs"
+        },
+        {
+          "type": "ex",
+          "zh": "另找别人。",
+          "py": "Lìng zhǎo biérén.",
+          "uz": "Boshqa odam toping.",
+          "ru": "Найдите другого человека.",
+          "en": "Find someone else."
+        },
+        {
+          "type": "ex",
+          "zh": "另买一个。",
+          "py": "Lìng mǎi yī gè.",
+          "uz": "Yana bittasini sotib oling.",
+          "ru": "Купите ещё один.",
+          "en": "Buy another one."
+        },
+        {
+          "type": "ex",
+          "zh": "另外提供不少新的材料。",
+          "py": "Lìngwài tígōng bùshǎo xīn de cáiliào.",
+          "uz": "Qo'shimcha ravishda anchagina yangi material taqdim etdi.",
+          "ru": "Дополнительно предоставил немало новых материалов.",
+          "en": "Additionally provided a good deal of new material."
+        },
+        {
+          "type": "note",
+          "uz": "另 odatda bir bo'g'inli fe'llar bilan; 另外 esa deyarli har qanday fe'l bilan ishlatiladi.",
+          "ru": "另 обычно с односложными глаголами; 另外 — практически с любыми.",
+          "en": "另 usually goes with monosyllabic verbs; 另外 works with almost any verb."
+        },
+        {
+          "type": "h",
+          "uz": "3. Bog'lovchi sifatida",
+          "ru": "3. Как союз",
+          "en": "3. As a conjunction"
+        },
+        {
+          "type": "ex",
+          "zh": "冬季应该注意多吃水果。",
+          "py": "Dōngjì yīnggāi zhùyì duō chī shuǐguǒ.",
+          "uz": "Qishda ko'proq meva yeyishga e'tibor berish kerak.",
+          "ru": "Зимой следует есть больше фруктов.",
+          "en": "In winter you should eat more fruit."
+        },
+        {
+          "type": "ex",
+          "zh": "另外，还要记得多喝水。",
+          "py": "Lìngwài, hái yào jìde duō hē shuǐ.",
+          "uz": "Bundan tashqari, ko'proq suv ichishni ham unutmang.",
+          "ru": "Кроме того, не забывайте пить больше воды.",
+          "en": "Besides, remember to drink more water."
+        },
+        {
+          "type": "note",
+          "uz": "另 bu vazifada ishlatilmaydi.",
+          "ru": "另 в этой функции не употребляется.",
+          "en": "另 cannot be used this way."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa taqqoslash",
+          "ru": "Краткое сравнение",
+          "en": "Quick comparison"
+        },
+        {
+          "type": "table",
+          "head": [
+            "另外",
+            "另"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "olmosh, ravish va bog'lovchi",
+                "olmosh va ravish"
+              ],
+              "ru": [
+                "местоимение, наречие и союз",
+                "местоимение и наречие"
+              ],
+              "en": [
+                "pronoun, adverb and conjunction",
+                "pronoun and adverb"
+              ]
+            },
+            {
+              "uz": [
+                "另外的… mumkin",
+                "另的… mumkin emas"
+              ],
+              "ru": [
+                "форма 另外的… возможна",
+                "форма 另的… невозможна"
+              ],
+              "en": [
+                "另外的… is possible",
+                "另的… is not"
+              ]
+            },
+            {
+              "uz": [
+                "har xil fe'llar bilan",
+                "asosan bir bo'g'inli fe'llar bilan"
+              ],
+              "ru": [
+                "с разными глаголами",
+                "обычно с односложными глаголами"
+              ],
+              "en": [
+                "with many kinds of verb",
+                "usually with monosyllabic verbs"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "另外 — eng ko'p ishlatiladigan, ko'p vazifali shakl.\n另 — qisqaroq shakl: 另一本、另找、另买.",
+          "ru": "另外 — самая распространённая и универсальная форма.\n另 — более краткая: 另一本, 另找, 另买.",
+          "en": "另外 is the common, versatile form.\n另 is the shorter one: 另一本, 另找, 另买."
+        }
+      ]
+    },
+    {
+      "slug": "shouxian-qici",
+      "title": "首先……其次……",
+      "pinyin": "shǒuxiān… qícì…",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "首先……其次…… ketma-ketlikni ko'rsatadi — fikr, sabab yoki bosqichlarni tartib bilan sanaydi.\n首先 — birinchidan, avvalo\n其次 — ikkinchidan, keyin",
+          "ru": "首先……其次…… служит для последовательного перечисления мыслей, причин или этапов.\n首先 — во-первых, прежде всего\n其次 — во-вторых, затем",
+          "en": "首先……其次…… presents ideas, reasons or steps in sequence.\n首先 — first, first of all\n其次 — second, next"
+        },
+        {
+          "type": "p",
+          "uz": "Bu konstruksiya ko'proq yozma va rasmiy uslubda uchraydi.",
+          "ru": "Эта конструкция чаще встречается в письменной и официальной речи.",
+          "en": "This pattern is common in formal and written Chinese."
+        },
+        {
+          "type": "h",
+          "uz": "首先……其次……",
+          "ru": "首先……其次……",
+          "en": "首先……其次……"
+        },
+        {
+          "type": "ex",
+          "zh": "不管做什么事情，首先应该明白你为什么要做，其次要知道怎么做。",
+          "py": "Bùguǎn zuò shénme shìqing, shǒuxiān yīnggāi míngbai nǐ wèishénme yào zuò, qícì yào zhīdào zěnme zuò.",
+          "uz": "Nima ish qilishingizdan qat'i nazar, avvalo nima uchun qilayotganingizni tushunishingiz, keyin esa qanday qilishni bilishingiz kerak.",
+          "ru": "Что бы ты ни делал, во-первых, нужно понимать зачем, а во-вторых — знать как.",
+          "en": "Whatever you do, first understand why you're doing it, and second know how to do it."
+        },
+        {
+          "type": "ex",
+          "zh": "首先，要穿正式的衣服，这会给面试者留下一个好的印象。",
+          "py": "Shǒuxiān, yào chuān zhèngshì de yīfu, zhè huì gěi miànshìzhě liúxià yī gè hǎo de yìnxiàng.",
+          "uz": "Avvalo rasmiy kiyim kiying — bu suhbat oluvchida yaxshi taassurot qoldiradi.",
+          "ru": "Во-первых, наденьте официальную одежду — это произведёт хорошее впечатление.",
+          "en": "First, wear formal clothes — it leaves the interviewer with a good impression."
+        },
+        {
+          "type": "ex",
+          "zh": "其次，应聘时不要紧张。",
+          "py": "Qícì, yìngpìn shí bùyào jǐnzhāng.",
+          "uz": "Ikkinchidan, suhbat vaqtida hayajonlanmang.",
+          "ru": "Во-вторых, не волнуйтесь на собеседовании.",
+          "en": "Second, don't be nervous at the interview."
+        },
+        {
+          "type": "h",
+          "uz": "首先 — ravish",
+          "ru": "首先 как наречие",
+          "en": "首先 as an adverb"
+        },
+        {
+          "type": "p",
+          "uz": "Yolg'iz ishlatilganda «avvalo», «eng avval», «birinchi navbatda» ma'nosini bildiradi.",
+          "ru": "Само по себе означает «прежде всего», «в первую очередь».",
+          "en": "Used alone it means “first of all”, “before anything else”."
+        },
+        {
+          "type": "ex",
+          "zh": "不管以后做什么工作，你首先应该有一个好身体。",
+          "py": "Bùguǎn yǐhòu zuò shénme gōngzuò, nǐ shǒuxiān yīnggāi yǒu yī gè hǎo shēntǐ.",
+          "uz": "Kelajakda qanday ish qilishingizdan qat'i nazar, avvalo sog'lom bo'lishingiz kerak.",
+          "ru": "Какую бы работу ты ни выбрал, прежде всего нужно крепкое здоровье.",
+          "en": "Whatever job you do in future, the first thing you need is good health."
+        },
+        {
+          "type": "ex",
+          "zh": "很多人遇到不明白的地方，首先想到的是上网查一查。",
+          "py": "Hěn duō rén yùdào bù míngbai de dìfang, shǒuxiān xiǎngdào de shì shàngwǎng chá yī chá.",
+          "uz": "Ko'pchilik tushunmagan narsaga duch kelganda, eng avval internetdan qidirishni o'ylaydi.",
+          "ru": "Столкнувшись с непонятным, многие прежде всего думают поискать в интернете.",
+          "en": "When people run into something they don't understand, the first thing they think of is searching online."
+        },
+        {
+          "type": "h",
+          "uz": "首先 va 第一 farqi",
+          "ru": "首先 и 第一",
+          "en": "首先 vs. 第一"
+        },
+        {
+          "type": "ex",
+          "zh": "我是第一。",
+          "py": "Wǒ shì dì-yī.",
+          "uz": "Men birinchi o'rindaman.",
+          "ru": "Я первый.",
+          "en": "I am first."
+        },
+        {
+          "type": "ex",
+          "zh": "第一课。",
+          "py": "Dì-yī kè.",
+          "uz": "Birinchi dars.",
+          "ru": "Первый урок.",
+          "en": "Lesson One."
+        },
+        {
+          "type": "note",
+          "uz": "首先 → fikr yoki bosqichlarni tartiblash uchun: 首先……其次……最后……\n第一 → tartib raqami yoki o'rin.",
+          "ru": "首先 → для перечисления мыслей или этапов: 首先……其次……最后……\n第一 → номер или место в порядке.",
+          "en": "首先 → organises ideas or steps: 首先……其次……最后……\n第一 → a rank or ordinal number."
+        },
+        {
+          "type": "note",
+          "uz": "首先 = avvalo, birinchi navbatda\n其次 = ikkinchidan\nKo'proq yozma va rasmiy uslubda.",
+          "ru": "首先 = прежде всего, во-первых\n其次 = во-вторых\nЧаще в письменной и официальной речи.",
+          "en": "首先 = first of all\n其次 = secondly\nMostly formal writing and speeches."
+        }
+      ]
+    },
+    {
+      "slug": "buguan",
+      "title": "不管",
+      "pinyin": "bùguǎn",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "不管 — bog'lovchi bo'lib, «qanday bo'lmasin», «nima bo'lishidan qat'i nazar» ma'nosini bildiradi. Har qanday sharoitda ham natija o'zgarmasligini ko'rsatadi.",
+          "ru": "不管 — союз со значением «независимо от…», «что бы ни…». Показывает, что результат одинаков при любом условии.",
+          "en": "不管 is a conjunction meaning “no matter”, “regardless of”. It says the result is the same under any condition."
+        },
+        {
+          "type": "p",
+          "uz": "Ikkinchi gapda odatda 都 ishlatiladi.",
+          "ru": "Во второй части обычно используется 都.",
+          "en": "The second clause usually contains 都."
+        },
+        {
+          "type": "h",
+          "uz": "Qolip 1: savol so'zi bilan",
+          "ru": "Модель 1: с вопросительным словом",
+          "en": "Pattern 1: with a question word"
+        },
+        {
+          "type": "formula",
+          "uz": "不管 + Savol so'zi + ……，都……",
+          "ru": "不管 + Вопросительное слово + ……，都……",
+          "en": "不管 + Question word + …，都…"
+        },
+        {
+          "type": "p",
+          "uz": "Savol so'zlari: 什么、谁、怎么、哪儿 / 哪里、多（么）",
+          "ru": "Вопросительные слова: 什么、谁、怎么、哪儿 / 哪里、多（么）",
+          "en": "Question words: 什么、谁、怎么、哪儿 / 哪里、多（么）"
+        },
+        {
+          "type": "ex",
+          "zh": "山本不管做什么事都非常认真。",
+          "py": "Shānběn bùguǎn zuò shénme shì dōu fēicháng rènzhēn.",
+          "uz": "Yamamoto nima ish qilmasin, uni juda jiddiy bajaradi.",
+          "ru": "Что бы ни делал Ямамото, он всегда очень серьёзен.",
+          "en": "No matter what Yamamoto does, he is always very serious."
+        },
+        {
+          "type": "ex",
+          "zh": "不管谁来，我都欢迎。",
+          "py": "Bùguǎn shéi lái, wǒ dōu huānyíng.",
+          "uz": "Kim kelishidan qat'i nazar, men hammani kutib olaman.",
+          "ru": "Кто бы ни пришёл, я всех встречу.",
+          "en": "No matter who comes, I welcome them."
+        },
+        {
+          "type": "ex",
+          "zh": "不管去哪儿，我们都一起去。",
+          "py": "Bùguǎn qù nǎr, wǒmen dōu yīqǐ qù.",
+          "uz": "Qayerga bormaylik, birga boramiz.",
+          "ru": "Куда бы мы ни пошли, мы пойдём вместе.",
+          "en": "No matter where we go, we go together."
+        },
+        {
+          "type": "h",
+          "uz": "Qolip 2: 还是 bilan",
+          "ru": "Модель 2: с 还是",
+          "en": "Pattern 2: with 还是"
+        },
+        {
+          "type": "formula",
+          "uz": "不管是 A，还是 B，都……",
+          "ru": "不管是 A，还是 B，都……",
+          "en": "不管是 A，还是 B，都…"
+        },
+        {
+          "type": "ex",
+          "zh": "不管是上课、上班，还是与别人约会，准时都非常重要。",
+          "py": "Bùguǎn shì shàngkè, shàngbān, háishì yǔ biérén yuēhuì, zhǔnshí dōu fēicháng zhòngyào.",
+          "uz": "Dars bo'ladimi, ish bo'ladimi yoki uchrashuv bo'ladimi — vaqtida borish har doim juda muhim.",
+          "ru": "Неважно, занятия, работа или встреча — пунктуальность всегда очень важна.",
+          "en": "Whether it's class, work or meeting someone, being on time always matters."
+        },
+        {
+          "type": "h",
+          "uz": "Qolip 3: A 不 A bilan",
+          "ru": "Модель 3: с A 不 A",
+          "en": "Pattern 3: with A 不 A"
+        },
+        {
+          "type": "formula",
+          "uz": "不管 + A 不 A，都……",
+          "ru": "不管 + A 不 A，都……",
+          "en": "不管 + A 不 A，都…"
+        },
+        {
+          "type": "ex",
+          "zh": "不管忙不忙，他每天都要锻炼一个小时身体。",
+          "py": "Bùguǎn máng bù máng, tā měitiān dōu yào duànliàn yī gè xiǎoshí shēntǐ.",
+          "uz": "Band bo'ladimi yoki bo'lmaydimi, u har kuni bir soat mashq qiladi.",
+          "ru": "Занят он или нет, он каждый день час занимается спортом.",
+          "en": "Whether he's busy or not, he exercises for an hour every day."
+        },
+        {
+          "type": "h",
+          "uz": "不管 va 无论 farqi",
+          "ru": "不管 и 无论",
+          "en": "不管 vs. 无论"
+        },
+        {
+          "type": "ex",
+          "zh": "不管你去哪儿，我都支持你。",
+          "py": "Bùguǎn nǐ qù nǎr, wǒ dōu zhīchí nǐ.",
+          "uz": "Qayerga borsang ham, men seni qo'llab-quvvatlayman.",
+          "ru": "Куда бы ты ни пошёл, я тебя поддержу.",
+          "en": "No matter where you go, I'll support you."
+        },
+        {
+          "type": "ex",
+          "zh": "无论你去哪儿，我都支持你。",
+          "py": "Wúlùn nǐ qù nǎr, wǒ dōu zhīchí nǐ.",
+          "uz": "Qayerga borsang ham, men seni qo'llab-quvvatlayman.",
+          "ru": "Куда бы ты ни пошёл, я тебя поддержу.",
+          "en": "No matter where you go, I'll support you."
+        },
+        {
+          "type": "note",
+          "uz": "不管 → ko'proq og'zaki nutqda.\n无论 → ma'nosi deyarli bir xil, ammo rasmiyroq va yozma uslubda.",
+          "ru": "不管 → чаще в разговорной речи.\n无论 → почти то же значение, но более официальное и книжное.",
+          "en": "不管 → more common in speech.\n无论 → nearly the same meaning, but more formal and written."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "table",
+          "head": [
+            "不管……都……",
+            "→"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "不管 + 什么……都……",
+                "nima bo'lishidan qat'i nazar"
+              ],
+              "ru": [
+                "不管 + 什么……都……",
+                "что бы ни…"
+              ],
+              "en": [
+                "不管 + 什么…都…",
+                "no matter what"
+              ]
+            },
+            {
+              "uz": [
+                "不管谁……都……",
+                "kim bo'lishidan qat'i nazar"
+              ],
+              "ru": [
+                "不管谁……都……",
+                "кто бы ни…"
+              ],
+              "en": [
+                "不管谁…都…",
+                "no matter who"
+              ]
+            },
+            {
+              "uz": [
+                "不管是 A 还是 B……都……",
+                "A yoki B bo'lishidan qat'i nazar"
+              ],
+              "ru": [
+                "不管是 A 还是 B……都……",
+                "будь то A или B"
+              ],
+              "en": [
+                "不管是 A 还是 B…都…",
+                "whether A or B"
+              ]
+            },
+            {
+              "uz": [
+                "不管 A 不 A……都……",
+                "A bo'ladimi yoki bo'lmaydimi"
+              ],
+              "ru": [
+                "不管 A 不 A……都……",
+                "независимо от того, A или нет"
+              ],
+              "en": [
+                "不管 A 不 A…都…",
+                "whether… or not"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "不管 = qat'i nazar\nOdatda ikkinchi gapda 都 ishlatiladi.\n还是 va A 不 A qoliplari bilan juda ko'p uchraydi.",
+          "ru": "不管 = независимо от, что бы ни…\nВо второй части обычно 都.\nЧасто с конструкциями 还是 и A 不 A.",
+          "en": "不管 = no matter / regardless of\n都 usually appears in the second clause.\nCommon with the 还是 and A 不 A patterns."
+        }
+      ]
+    }
   ]
 }
