@@ -13259,6 +13259,10 @@ body {
    unreadable, and the pinyin is half the point of an example. Sized explicitly
    so it tracks the characters instead. */
 .hskg__ex-zh rt { font-size: 0.62em; }
+/* Characters sat flush against each other, so wide syllables collided: the
+   tightest pair in the corpus (Zhāng|zhè) measured 0px apart. 0.14em opens it
+   to 6px. In em so it holds if the example type changes. */
+.hskg__ex-zh ruby { margin: 0 0.14em; }
 .hskg__ex-tr { font-size: 0.95rem; color: #777; margin-top: 2px; }
 
 /* Two-line rule — the line break is meaningful, so keep it. */
