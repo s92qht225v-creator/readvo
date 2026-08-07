@@ -568,5 +568,527 @@
         }
       ]
     }
+  ],
+  "grammar": [
+    {
+      "slug": "zhenghao",
+      "title": "正好",
+      "pinyin": "zhènghǎo",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "正好 ikki xil vazifada ishlatiladi:\n1. Sifat — «aynan mos», «to'g'ri keladigan», «na ko'p, na kam».\n2. Ravish — «aynan o'sha paytda», «tasodifan», «qulay fursatda».",
+          "ru": "正好 имеет два основных значения:\n1. Прилагательное — «как раз», «в самый раз», «точно подходит».\n2. Наречие — «как раз», «именно в этот момент», «случайно», «кстати».",
+          "en": "正好 has two common uses:\n1. Adjective — “just right”, “exactly”, “perfectly suitable”.\n2. Adverb — “just in time”, “just happened to”, “by coincidence”."
+        },
+        {
+          "type": "h",
+          "uz": "1. 正好 — sifat",
+          "ru": "1. 正好 как прилагательное",
+          "en": "1. 正好 as an adjective"
+        },
+        {
+          "type": "p",
+          "uz": "Bu holda 正好 biror narsa aynan kerakli miqdor, vaqt, o'lcham yoki darajada ekanini bildiradi: na ko'p, na kam; na erta, na kech.",
+          "ru": "В этом значении 正好 означает, что что-то идеально подходит по времени, количеству, размеру или степени: не слишком много и не слишком мало, не слишком рано и не слишком поздно.",
+          "en": "As an adjective, 正好 means something is exactly right in time, quantity, size or degree — neither too much nor too little, neither too early nor too late."
+        },
+        {
+          "type": "ex",
+          "zh": "苹果八块五，西瓜十一块五，正好二十块。",
+          "py": "Píngguǒ bā kuài wǔ, xīguā shíyī kuài wǔ, zhènghǎo èrshí kuài.",
+          "uz": "Olma sakkiz yarim yuan, tarvuz o'n bir yarim yuan — jami aynan yigirma yuan.",
+          "ru": "Яблоки стоят 8,5 юаня, арбуз — 11,5 юаня. Вместе получается ровно 20 юаней.",
+          "en": "The apples are ¥8.5 and the watermelon ¥11.5 — exactly ¥20 together."
+        },
+        {
+          "type": "ex",
+          "zh": "你来得正好，我的钱包不见了，借我点儿钱吧。",
+          "py": "Nǐ lái de zhènghǎo, wǒ de qiánbāo bújiàn le, jiè wǒ diǎnr qián ba.",
+          "uz": "Ayni vaqtida kelding — hamyonim yo'qolib qolibdi, menga ozroq pul qarz ber.",
+          "ru": "Ты пришёл как раз вовремя. Я потерял кошелёк, одолжи мне немного денег.",
+          "en": "You came at just the right time. I've lost my wallet — could you lend me some money?"
+        },
+        {
+          "type": "h",
+          "uz": "2. 正好 — ravish",
+          "ru": "2. 正好 как наречие",
+          "en": "2. 正好 as an adverb"
+        },
+        {
+          "type": "p",
+          "uz": "Bu holda 正好 «aynan o'sha paytda», «tasodifan», «qulay fursatda» degan ma'noni bildiradi. Ko'pincha ikki voqea bir vaqtda sodir bo'lganini yoki vaziyat juda qulay ekanini ifodalaydi.",
+          "ru": "В этом значении 正好 означает «как раз», «именно в этот момент», «случайно». Обычно показывает, что два события совпали по времени или появилась удобная возможность.",
+          "en": "As an adverb, 正好 means “just happened to”, “just in time”, or “it works out perfectly”. It often shows two events coinciding, or ideal timing."
+        },
+        {
+          "type": "ex",
+          "zh": "我们下午要去踢足球，正好一起去吧。",
+          "py": "Wǒmen xiàwǔ yào qù tī zúqiú, zhènghǎo yīqǐ qù ba.",
+          "uz": "Tushdan keyin futbol o'ynagani boramiz — qulay fursat ekan, birga boraylik.",
+          "ru": "Мы днём идём играть в футбол. Как раз, пойдём вместе.",
+          "en": "We're going to play football this afternoon — the timing works out, come with us."
+        },
+        {
+          "type": "ex",
+          "zh": "我妹妹出生那天，正好下雪，所以爸爸妈妈叫她“小雪”。",
+          "py": "Wǒ mèimei chūshēng nà tiān, zhènghǎo xiàxuě, suǒyǐ bàba māma jiào tā Xiǎoxuě.",
+          "uz": "Singlim tug'ilgan kuni aynan qor yog'gan edi, shuning uchun ota-onam unga «Syaosyue» deb ism qo'yishgan.",
+          "ru": "В день рождения моей младшей сестры как раз шёл снег, поэтому родители назвали её «Сяосюэ».",
+          "en": "It happened to snow the day my little sister was born, so my parents named her “Xiaoxue”."
+        },
+        {
+          "type": "h",
+          "uz": "正好 va 刚 farqi",
+          "ru": "正好 и 刚",
+          "en": "正好 vs. 刚"
+        },
+        {
+          "type": "ex",
+          "zh": "我刚回来。",
+          "py": "Wǒ gāng huílái.",
+          "uz": "Men hozirgina qaytdim.",
+          "ru": "Я только что вернулся.",
+          "en": "I just came back."
+        },
+        {
+          "type": "ex",
+          "zh": "你来得正好。",
+          "py": "Nǐ lái de zhènghǎo.",
+          "uz": "Sen ayni vaqtida kelding.",
+          "ru": "Ты пришёл как раз вовремя.",
+          "en": "You came at just the right time."
+        },
+        {
+          "type": "note",
+          "uz": "刚 → hozirgina; vaqtni bildiradi.\n正好 → aynan mos, aynan o'sha paytda, tasodifan.",
+          "ru": "刚 → «только что», подчёркивает недавность действия.\n正好 → «как раз», «вовремя», «случайно».",
+          "en": "刚 → “just now”, emphasising that something happened recently.\n正好 → “just right”, “just in time”, “by coincidence”."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "formula",
+          "uz": "正好 + son / miqdor  →  aynan, na ko'p na kam",
+          "ru": "正好 + число / количество  →  ровно, точно",
+          "en": "正好 + number / quantity  →  exactly"
+        },
+        {
+          "type": "ex",
+          "zh": "正好二十块。",
+          "py": "Zhènghǎo èrshí kuài.",
+          "uz": "Aynan yigirma yuan.",
+          "ru": "Ровно 20 юаней.",
+          "en": "Exactly ¥20."
+        },
+        {
+          "type": "formula",
+          "uz": "正好 + fe'l  →  aynan shu paytda / qulay fursatda",
+          "ru": "正好 + глагол  →  как раз / вовремя / кстати",
+          "en": "正好 + verb  →  just in time / by coincidence"
+        },
+        {
+          "type": "ex",
+          "zh": "正好一起去吧。",
+          "py": "Zhènghǎo yīqǐ qù ba.",
+          "uz": "Qulay fursat ekan, birga boraylik.",
+          "ru": "Как раз, пойдём вместе.",
+          "en": "The timing's perfect — let's go together."
+        },
+        {
+          "type": "note",
+          "uz": "正好 ikki ma'noda ishlatiladi:\naynan mos (miqdor, vaqt, daraja)\naynan o'sha paytda / tasodifan / qulay fursatda",
+          "ru": "正好 имеет два значения:\nкак раз / точно подходит\nкак раз вовремя / случайно / кстати",
+          "en": "正好 has two meanings:\njust right / exactly\njust in time / happened to / by coincidence"
+        }
+      ]
+    },
+    {
+      "slug": "chabuduo",
+      "title": "差不多",
+      "pinyin": "chàbuduō",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "差不多 ikki xil vazifada ishlatiladi:\n1. Sifat — «o'xshash», «deyarli bir xil», «katta farqi yo'q».\n2. Ravish — «deyarli», «taxminan», «qariyb».",
+          "ru": "差不多 имеет два основных значения:\n1. Прилагательное — «похожий», «почти одинаковый».\n2. Наречие — «почти», «примерно», «около».",
+          "en": "差不多 has two common uses:\n1. Adjective — “similar”, “almost the same”.\n2. Adverb — “almost”, “nearly”, “approximately”."
+        },
+        {
+          "type": "h",
+          "uz": "1. 差不多 — sifat",
+          "ru": "1. 差不多 как прилагательное",
+          "en": "1. 差不多 as an adjective"
+        },
+        {
+          "type": "p",
+          "uz": "Bu holda 差不多 ikki yoki undan ortiq narsa bir-biriga juda o'xshash yoki orasidagi farq juda kichik ekanini bildiradi.",
+          "ru": "В этом значении 差不多 означает, что два или несколько предметов очень похожи или почти не отличаются.",
+          "en": "As an adjective, 差不多 means two or more things are very similar, with little difference between them."
+        },
+        {
+          "type": "ex",
+          "zh": "这两个电子词典看上去差不多，左边这个怎么这么贵？",
+          "py": "Zhè liǎng ge diànzǐ cídiǎn kàn shàngqu chàbuduō, zuǒbiān zhège zěnme zhème guì?",
+          "uz": "Bu ikkita elektron lug'at deyarli bir xil ko'rinadi — chapdagisi nega buncha qimmat?",
+          "ru": "Эти два электронных словаря выглядят почти одинаково. Почему тот, что слева, такой дорогой?",
+          "en": "These two electronic dictionaries look almost the same — why is the one on the left so expensive?"
+        },
+        {
+          "type": "ex",
+          "zh": "他们俩是在国外旅游的时候认识的，性格差不多，所以很快就成了好朋友。",
+          "py": "Tāmen liǎ shì zài guówài lǚyóu de shíhou rènshi de, xìnggé chàbuduō, suǒyǐ hěn kuài jiù chéng le hǎo péngyou.",
+          "uz": "Ular chet elda sayohat qilayotganda tanishishgan. Xarakterlari o'xshash bo'lgani uchun tez orada yaqin do'st bo'lib qolishgan.",
+          "ru": "Они познакомились во время путешествия за границей. Их характеры были очень похожи, поэтому они быстро стали хорошими друзьями.",
+          "en": "They met while travelling abroad. Their personalities were similar, so they quickly became good friends."
+        },
+        {
+          "type": "h",
+          "uz": "2. 差不多 — ravish",
+          "ru": "2. 差不多 как наречие",
+          "en": "2. 差不多 as an adverb"
+        },
+        {
+          "type": "p",
+          "uz": "Bu holda 差不多 «deyarli», «taxminan», «qariyb» degan ma'noni bildiradi — miqdor, vaqt, masofa yoki daraja aniq emas, ammo juda yaqin.",
+          "ru": "В этом значении 差不多 означает «почти», «примерно», «около» — о количестве, времени, расстоянии или степени, близких к точному значению.",
+          "en": "As an adverb, 差不多 means “almost”, “nearly” or “approximately” — a quantity, time, distance or degree close to, but not exactly, a value."
+        },
+        {
+          "type": "ex",
+          "zh": "班里同学你联系得怎么样了？来多少人？",
+          "py": "Bān lǐ tóngxué nǐ liánxì de zěnmeyàng le? Lái duōshao rén?",
+          "uz": "Sinfdoshlar bilan bog'landingmi? Necha kishi keladi?",
+          "ru": "Ты связался с одноклассниками? Сколько человек придёт?",
+          "en": "Have you contacted the classmates? How many are coming?"
+        },
+        {
+          "type": "ex",
+          "zh": "差不多一半儿吧。",
+          "py": "Chàbuduō yībànr ba.",
+          "uz": "Taxminan yarmi.",
+          "ru": "Примерно половина.",
+          "en": "About half."
+        },
+        {
+          "type": "ex",
+          "zh": "女儿上中学后，个子长得特别快，现在都快一米七了，差不多跟我一样高了。",
+          "py": "Nǚ'ér shàng zhōngxué hòu, gèzi zhǎng de tèbié kuài, xiànzài dōu kuài yī mǐ qī le, chàbuduō gēn wǒ yīyàng gāo le.",
+          "uz": "Qizim o'rta maktabga chiqqandan keyin juda tez bo'y cho'zdi. Hozir bo'yi bir metr yetmishga yaqin — deyarli men bilan barobar.",
+          "ru": "После того как дочь пошла в среднюю школу, она очень быстро выросла. Сейчас её рост почти 1,7 метра — почти с меня.",
+          "en": "After my daughter started middle school she grew very fast. She's nearly 1.7 metres now — almost as tall as me."
+        },
+        {
+          "type": "h",
+          "uz": "差不多 va 正好 farqi",
+          "ru": "差不多 и 正好",
+          "en": "差不多 vs. 正好"
+        },
+        {
+          "type": "ex",
+          "zh": "差不多二十块。",
+          "py": "Chàbuduō èrshí kuài.",
+          "uz": "Taxminan yigirma yuan.",
+          "ru": "Около 20 юаней.",
+          "en": "About ¥20."
+        },
+        {
+          "type": "ex",
+          "zh": "正好二十块。",
+          "py": "Zhènghǎo èrshí kuài.",
+          "uz": "Aynan yigirma yuan.",
+          "ru": "Ровно 20 юаней.",
+          "en": "Exactly ¥20."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa qoida",
+          "ru": "Краткое правило",
+          "en": "Quick rule"
+        },
+        {
+          "type": "formula",
+          "uz": "差不多 + ot / sifat  →  deyarli bir xil, o'xshash",
+          "ru": "差不多 + сущ. / прил.  →  почти одинаковый, похожий",
+          "en": "差不多 + noun / adjective  →  similar, almost the same"
+        },
+        {
+          "type": "ex",
+          "zh": "性格差不多。",
+          "py": "Xìnggé chàbuduō.",
+          "uz": "Xarakterlari o'xshash.",
+          "ru": "Характеры похожи.",
+          "en": "Their personalities are similar."
+        },
+        {
+          "type": "formula",
+          "uz": "差不多 + son / miqdor  →  taxminan, qariyb",
+          "ru": "差不多 + число / количество  →  примерно, около",
+          "en": "差不多 + number / quantity  →  approximately, nearly"
+        },
+        {
+          "type": "ex",
+          "zh": "差不多一半。",
+          "py": "Chàbuduō yībàn.",
+          "uz": "Taxminan yarmi.",
+          "ru": "Примерно половина.",
+          "en": "About half."
+        },
+        {
+          "type": "note",
+          "uz": "差不多 ≠ 正好\n差不多 = taxminan\n正好 = aynan",
+          "ru": "差不多 ≠ 正好\n差不多 = примерно\n正好 = ровно / точно",
+          "en": "差不多 ≠ 正好\n差不多 = approximately\n正好 = exactly"
+        }
+      ]
+    },
+    {
+      "slug": "chabuduo-vs-jihu",
+      "title": "差不多 / 几乎",
+      "pinyin": "chàbuduō / jīhū",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "O'xshashligi",
+          "ru": "Сходство",
+          "en": "Similarities"
+        },
+        {
+          "type": "p",
+          "uz": "差不多 va 几乎 ikkalasi ham ravish sifatida «deyarli», «juda yaqin» degan ma'noni bildiradi.",
+          "ru": "差不多 и 几乎 могут использоваться как наречия со значением «почти», «очень близко к…».",
+          "en": "Both 差不多 and 几乎 work as adverbs meaning “almost”, “nearly”, “very close to”."
+        },
+        {
+          "type": "ex",
+          "zh": "他汉语说得很好，差不多跟中国人一样。",
+          "py": "Tā Hànyǔ shuō de hěn hǎo, chàbuduō gēn Zhōngguórén yīyàng.",
+          "uz": "U Xitoy tilida juda yaxshi gapiradi — deyarli Xitoyliklardek.",
+          "ru": "Он очень хорошо говорит по-китайски — почти как китаец.",
+          "en": "He speaks Chinese very well — almost like a native speaker."
+        },
+        {
+          "type": "ex",
+          "zh": "他汉语说得很好，几乎跟中国人一样。",
+          "py": "Tā Hànyǔ shuō de hěn hǎo, jīhū gēn Zhōngguórén yīyàng.",
+          "uz": "U Xitoy tilida juda yaxshi gapiradi — deyarli Xitoyliklardek.",
+          "ru": "Он очень хорошо говорит по-китайски — почти как китаец.",
+          "en": "He speaks Chinese very well — almost like a native speaker."
+        },
+        {
+          "type": "note",
+          "uz": "Bu gapda ikkalasi ham ishlatilaveradi.",
+          "ru": "В этом предложении подходят оба варианта.",
+          "en": "Either word works in this sentence."
+        },
+        {
+          "type": "h",
+          "uz": "1. Sifat bilan",
+          "ru": "1. С прилагательными",
+          "en": "1. With adjectives"
+        },
+        {
+          "type": "p",
+          "uz": "差不多 bir bo'g'inli sifat oldidan to'g'ridan-to'g'ri kelishi mumkin; 几乎 esa odatda 一样、这么、那么、了 kabi so'zlar bilan keladi.",
+          "ru": "差不多 может стоять прямо перед односложным прилагательным; 几乎 обычно требует слов 一样, 这么, 那么 или 了.",
+          "en": "差不多 can go directly before a monosyllabic adjective; 几乎 usually needs words such as 一样, 这么, 那么 or 了."
+        },
+        {
+          "type": "ex",
+          "zh": "他们俩差不多高。",
+          "py": "Tāmen liǎ chàbuduō gāo.",
+          "uz": "Ularning bo'yi deyarli bir xil.",
+          "ru": "Они почти одинакового роста.",
+          "en": "They're about the same height."
+        },
+        {
+          "type": "ex",
+          "zh": "他们俩几乎一样高。",
+          "py": "Tāmen liǎ jīhū yīyàng gāo.",
+          "uz": "Ularning bo'yi deyarli bir xil.",
+          "ru": "Они почти одного роста.",
+          "en": "They're almost the same height."
+        },
+        {
+          "type": "ex",
+          "zh": "他比我几乎高了一头。",
+          "py": "Tā bǐ wǒ jīhū gāo le yī tóu.",
+          "uz": "U mendan deyarli bir bosh baland.",
+          "ru": "Он почти на голову выше меня.",
+          "en": "He's almost a head taller than me."
+        },
+        {
+          "type": "h",
+          "uz": "2. Son bilan",
+          "ru": "2. С числительными",
+          "en": "2. With numbers"
+        },
+        {
+          "type": "ex",
+          "zh": "李老师差不多六十岁了。",
+          "py": "Lǐ lǎoshī chàbuduō liùshí suì le.",
+          "uz": "Li ustoz taxminan oltmish yoshda.",
+          "ru": "Учителю Ли примерно шестьдесят лет.",
+          "en": "Teacher Li is about sixty."
+        },
+        {
+          "type": "note",
+          "uz": "几乎六十岁 deb aytilmaydi — son oldidan 几乎 ishlatilmaydi.",
+          "ru": "几乎六十岁 так не говорят — перед числительным 几乎 не употребляется.",
+          "en": "几乎六十岁 is not used — 几乎 does not go before a number."
+        },
+        {
+          "type": "h",
+          "uz": "3. Sifat vazifasida",
+          "ru": "3. Как прилагательное",
+          "en": "3. As an adjective"
+        },
+        {
+          "type": "ex",
+          "zh": "姐妹俩性格差不多。",
+          "py": "Jiěmèi liǎ xìnggé chàbuduō.",
+          "uz": "Ikki opa-singilning xarakteri deyarli bir xil.",
+          "ru": "У двух сестёр очень похожие характеры.",
+          "en": "The two sisters have similar personalities."
+        },
+        {
+          "type": "note",
+          "uz": "几乎 bunday ishlatilmaydi — u sifat bo'lib kelmaydi.",
+          "ru": "几乎 так использовать нельзя — оно не бывает прилагательным.",
+          "en": "几乎 cannot be used this way — it is never an adjective."
+        },
+        {
+          "type": "h",
+          "uz": "4. «Sal qolsa…» ma'nosi",
+          "ru": "4. «Чуть не…»",
+          "en": "4. “Almost happened”"
+        },
+        {
+          "type": "p",
+          "uz": "几乎 ba'zan «sal qolsa…», «oz qoldi…» ma'nosini bildiradi — sodir bo'lishi mumkin bo'lgan, lekin oxir-oqibat sodir bo'lmagan holat.",
+          "ru": "几乎 может означать, что что-то едва не произошло, но в итоге не произошло.",
+          "en": "几乎 can express that something almost happened but in the end did not."
+        },
+        {
+          "type": "ex",
+          "zh": "这件事我几乎忘了告诉你了。",
+          "py": "Zhè jiàn shì wǒ jīhū wàng le gàosu nǐ le.",
+          "uz": "Bu ishni senga aytishni sal qolsa unutib yuborardim.",
+          "ru": "Я чуть не забыл рассказать тебе об этом.",
+          "en": "I almost forgot to tell you about this."
+        },
+        {
+          "type": "note",
+          "uz": "Bu ma'noda 差不多 ishlatilmaydi.",
+          "ru": "差不多 в этом значении не используется.",
+          "en": "差不多 cannot be used with this meaning."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa taqqoslash",
+          "ru": "Краткое сравнение",
+          "en": "Quick comparison"
+        },
+        {
+          "type": "table",
+          "head": [
+            "差不多",
+            "几乎"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "taxminan, deyarli bir xil",
+                "deyarli; sal qolsa sodir bo'lardi"
+              ],
+              "ru": [
+                "примерно, почти одинаковый",
+                "почти; чуть не произошло"
+              ],
+              "en": [
+                "approximately, almost the same",
+                "almost; almost happened"
+              ]
+            },
+            {
+              "uz": [
+                "son oldidan kelishi mumkin",
+                "son oldidan kelmaydi"
+              ],
+              "ru": [
+                "может стоять перед числительным",
+                "не ставится перед числительным"
+              ],
+              "en": [
+                "can go before a number",
+                "cannot go before a number"
+              ]
+            },
+            {
+              "uz": [
+                "sifat bo'lib ham ishlatiladi",
+                "sifat bo'lib ishlatilmaydi"
+              ],
+              "ru": [
+                "может быть прилагательным",
+                "не бывает прилагательным"
+              ],
+              "en": [
+                "can be an adjective",
+                "cannot be an adjective"
+              ]
+            },
+            {
+              "uz": [
+                "«sal qolsa…» ma'nosi yo'q",
+                "«sal qolsa…» ma'nosini bildiradi"
+              ],
+              "ru": [
+                "не означает «чуть не…»",
+                "может означать «чуть не…»"
+              ],
+              "en": [
+                "cannot mean “almost happened”",
+                "can mean “almost happened”"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "差不多 → taxminan, deyarli bir xil, o'xshash\n几乎 → deyarli; sal qolsa…, lekin sodir bo'lmagan",
+          "ru": "差不多 → примерно, почти одинаковый, похожий\n几乎 → почти; чуть не…, но действие не произошло",
+          "en": "差不多 → almost, approximately, similar\n几乎 → almost; almost happened, but didn't"
+        }
+      ]
+    }
   ]
 }
