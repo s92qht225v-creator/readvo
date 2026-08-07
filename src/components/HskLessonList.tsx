@@ -98,6 +98,7 @@ export function HskLessonList({ lessons, book, level }: { lessons: HskLesson[]; 
                               {language === 'ru' ? (text.labelTranslation_ru || text.labelTranslation)
                                 : language === 'en' ? (text.labelTranslation_en || text.labelTranslation)
                                 : text.labelTranslation}
+                              {text.title && <>{' · '}{text.title}</>}
                             </span>
                             <span className="hsk__part-arrow" aria-hidden="true">›</span>
                           </Link>

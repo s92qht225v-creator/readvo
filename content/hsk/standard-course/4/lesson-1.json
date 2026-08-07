@@ -532,6 +532,57 @@
           ]
         }
       ]
+    },
+    {
+      "id": "hsk4-l1-culture",
+      "slug": "culture",
+      "label": "文化",
+      "title": "中国的情人节——七夕节",
+      "labelTranslation": "Madaniyat",
+      "labelTranslation_ru": "Культура",
+      "labelTranslation_en": "Culture",
+      "level": 4,
+      "dictationKeyboard": true,
+      "voices": {
+        "A": "白桦"
+      },
+      "sections": [
+        {
+          "id": "hsk4-l1-culture-sec1",
+          "type": "text",
+          "heading": "",
+          "subheading": "",
+          "sentences": [
+            {
+              "id": "hsk4-l1-culture-s1",
+              "text_original": "每年农历七月初七这一天是中国汉族的传统节日“七夕节”。",
+              "pinyin": "Měi nián nónglì qīyuè chūqī zhè yī tiān shì Zhōngguó Hànzú de chuántǒng jiérì Qīxī Jié.",
+              "text_translation": "Har yili oy taqvimi bo'yicha yettinchi oyning yettinchi kuni Xitoy xan xalqining an'anaviy bayrami — «Sisi bayrami» nishonlanadi.",
+              "text_translation_ru": "Каждый год седьмого числа седьмого месяца по лунному календарю отмечается традиционный праздник китайцев хань — «Циси».",
+              "text_translation_en": "The seventh day of the seventh lunar month each year is the traditional Han Chinese festival “Qixi”.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-culture-s2",
+              "text_original": "因为当天活动的主要参加者是少女，而节日活动的内容又是以“乞巧（穿针引线、做些小物品、摆上些瓜果）”为主，所以人们称这天为“乞巧节”或“少女节”、“女儿节”。",
+              "pinyin": "Yīnwèi dàngtiān huódòng de zhǔyào cānjiāzhě shì shàonǚ, ér jiérì huódòng de nèiróng yòu shì yǐ qǐqiǎo chuān zhēn yǐn xiàn, zuò xiē xiǎo wùpǐn, bǎi shàng xiē guāguǒ wéi zhǔ, suǒyǐ rénmen chēng zhè tiān wéi Qǐqiǎo Jié huò Shàonǚ Jié, Nǚ'ér Jié.",
+              "text_translation": "O'sha kungi tadbirlarning asosiy ishtirokchilari qizlar bo'lgani va bayram mazmuni asosan «chevarlik so'rash» (ignaga ip o'tkazish, mayda buyumlar yasash, mevalar tortiq qilish) bilan bog'liq bo'lgani uchun, odamlar bu kunni «Chevarlik bayrami», «Qizlar bayrami» yoki «Qiz bolalar bayrami» deb ataydi.",
+              "text_translation_ru": "Поскольку главные участницы праздника — девушки, а его содержание связано прежде всего с «испрашиванием мастерства» (вдевание нити в иглу, изготовление мелких поделок, подношение фруктов), этот день называют «праздником мастерства», «праздником девушек» или «праздником дочерей».",
+              "text_translation_en": "Because the main participants that day are young women, and the festivities centre on “praying for skill” (threading needles, making small handicrafts, laying out fruit), people also call it the “Skill-Praying Festival”, the “Maidens' Festival” or the “Daughters' Festival”.",
+              "speaker": "A"
+            },
+            {
+              "id": "hsk4-l1-culture-s3",
+              "text_original": "“七夕节”来源于牛郎和织女的爱情故事，是中国传统节日中最具浪漫色彩的节日，也被认为是“中国的情人节”。",
+              "pinyin": "Qīxī Jié láiyuán yú Niúláng hé Zhīnǚ de àiqíng gùshi, shì Zhōngguó chuántǒng jiérì zhōng zuì jù làngmàn sècǎi de jiérì, yě bèi rènwéi shì Zhōngguó de Qíngrén Jié.",
+              "text_translation": "«Sisi bayrami» Niulan va Chjinyuyning sevgi afsonasidan kelib chiqqan; u Xitoy an'anaviy bayramlari ichida eng romantigi bo'lib, «Xitoy Sevishganlar kuni» deb ham hisoblanadi.",
+              "text_translation_ru": "Праздник Циси восходит к легенде о любви Пастуха и Ткачихи; это самый романтичный из традиционных китайских праздников, его считают «китайским Днём святого Валентина».",
+              "text_translation_en": "Qixi comes from the love story of the Cowherd and the Weaver Girl. It is the most romantic of China's traditional festivals, and is also regarded as “Chinese Valentine's Day”.",
+              "speaker": "A"
+            }
+          ]
+        }
+      ]
     }
   ],
   "grammar": [

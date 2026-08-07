@@ -16,6 +16,10 @@ import path from 'path';
  */
 
 export interface HskText {
+  /** Shown after the label in the lesson list, as grammar points do. Texts
+   *  labelled 课文一 need no title; a 文化 section does — "Madaniyat" alone
+   *  says nothing about which passage it is. */
+  title?: string;
   id: string;
   slug: string;                 // 'text-1'
   label: string;                // 课文一
