@@ -1089,6 +1089,188 @@
           "en": "差不多 → almost, approximately, similar\n几乎 → almost; almost happened, but didn't"
         }
       ]
+    },
+    {
+      "slug": "jinguan",
+      "title": "尽管",
+      "pinyin": "jǐnguǎn",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "尽管 bog'lovchisi «garchi… bo'lsa ham», «…ga qaramay», «shunga qaramasdan» degan ma'noni bildiradi.",
+          "ru": "尽管 — союз со значением «хотя», «несмотря на то что», «пусть даже».",
+          "en": "尽管 is a conjunction meaning “although”, “though”, “even though”, or “despite”."
+        },
+        {
+          "type": "p",
+          "uz": "Birinchi gapda haqiqiy fakt yoki mavjud holat aytiladi, ikkinchi gapda esa odatda kutilmagan yoki unga zid natija keladi.",
+          "ru": "В первой части сообщается реальный факт или существующая ситуация, а во второй — неожиданный или противоположный результат.",
+          "en": "The first clause states a real fact or existing situation; the second presents an unexpected or contrasting result."
+        },
+        {
+          "type": "p",
+          "uz": "Ikkinchi gapda ko'pincha quyidagilar ishlatiladi:\n但是 — ammo\n可是 — lekin\n却 — biroq\n还是 — baribir",
+          "ru": "Во второй части часто используются:\n但是 — но\n可是 — однако\n却 — тем не менее\n还是 — всё равно",
+          "en": "The second clause is often introduced by:\n但是 — but\n可是 — however\n却 — yet\n还是 — still"
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qolip",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "尽管 + Fakt，(但是 / 可是 / 却 / 还是) + Natija",
+          "ru": "尽管 + Факт，(但是 / 可是 / 却 / 还是) + Результат",
+          "en": "尽管 + Fact，(但是 / 可是 / 却 / 还是) + Result"
+        },
+        {
+          "type": "h",
+          "uz": "Misollar",
+          "ru": "Примеры",
+          "en": "Examples"
+        },
+        {
+          "type": "ex",
+          "zh": "尽管已经毕业这么多年，我们还是经常联系的。",
+          "py": "Jǐnguǎn yǐjīng bìyè zhème duō nián, wǒmen háishì jīngcháng liánxì de.",
+          "uz": "Garchi universitetni tugatganimizga ko'p yil bo'lgan bo'lsa ham, biz hali ham tez-tez aloqada bo'lamiz.",
+          "ru": "Хотя мы окончили университет много лет назад, мы до сих пор часто общаемся.",
+          "en": "Although we graduated many years ago, we still keep in touch regularly."
+        },
+        {
+          "type": "ex",
+          "zh": "男朋友送给我的这份礼物尽管不贵，但却让我非常感动。",
+          "py": "Nán péngyou sòng gěi wǒ de zhè fèn lǐwù jǐnguǎn bù guì, dàn què ràng wǒ fēicháng gǎndòng.",
+          "uz": "Yigitim bergan bu sovg'a qimmat bo'lmasa ham, meni juda ta'sirlantirdi.",
+          "ru": "Хотя подарок моего парня был недорогим, он очень меня тронул.",
+          "en": "Although the gift from my boyfriend wasn't expensive, it moved me deeply."
+        },
+        {
+          "type": "ex",
+          "zh": "叔叔最大的爱好就是打篮球。",
+          "py": "Shūshu zuì dà de àihào jiù shì dǎ lánqiú.",
+          "uz": "Amakimning eng sevimli mashg'uloti — basketbol o'ynash.",
+          "ru": "Любимое занятие моего дяди — баскетбол.",
+          "en": "My uncle's favourite hobby is playing basketball."
+        },
+        {
+          "type": "ex",
+          "zh": "尽管现在工作很忙，可到了周末他还是会跟朋友去打球。",
+          "py": "Jǐnguǎn xiànzài gōngzuò hěn máng, kě dào le zhōumò tā háishì huì gēn péngyou qù dǎqiú.",
+          "uz": "Garchi hozir ishi juda band bo'lsa ham, dam olish kunlari baribir do'stlari bilan basketbol o'ynaydi.",
+          "ru": "Хотя сейчас он очень занят на работе, по выходным он всё равно играет с друзьями.",
+          "en": "Although he's very busy with work now, he still plays basketball with his friends at the weekend."
+        },
+        {
+          "type": "h",
+          "uz": "尽管 va 即使 farqi",
+          "ru": "尽管 и 即使",
+          "en": "尽管 vs. 即使"
+        },
+        {
+          "type": "p",
+          "uz": "尽管 → haqiqiy yoki mavjud holat haqida gapiradi.",
+          "ru": "尽管 → говорит о реальном, уже существующем факте.",
+          "en": "尽管 → introduces a real fact or existing situation."
+        },
+        {
+          "type": "ex",
+          "zh": "尽管今天下雨，我们还是去了。",
+          "py": "Jǐnguǎn jīntiān xiàyǔ, wǒmen háishì qù le.",
+          "uz": "Bugun yomg'ir yog'gan bo'lsa ham, biz baribir bordik.",
+          "ru": "Хотя сегодня шёл дождь, мы всё равно пошли.",
+          "en": "Although it rained today, we still went."
+        },
+        {
+          "type": "p",
+          "uz": "即使 → taxminiy yoki ehtimoliy holat haqida gapiradi.",
+          "ru": "即使 → говорит о предполагаемом условии.",
+          "en": "即使 → introduces a hypothetical condition."
+        },
+        {
+          "type": "ex",
+          "zh": "即使明天下雨，我们也去。",
+          "py": "Jíshǐ míngtiān xiàyǔ, wǒmen yě qù.",
+          "uz": "Ertaga yomg'ir yog'sa ham, biz baribir boramiz.",
+          "ru": "Даже если завтра пойдёт дождь, мы всё равно пойдём.",
+          "en": "Even if it rains tomorrow, we'll still go."
+        },
+        {
+          "type": "h",
+          "uz": "Qisqa taqqoslash",
+          "ru": "Краткое сравнение",
+          "en": "Quick comparison"
+        },
+        {
+          "type": "table",
+          "head": [
+            "尽管",
+            "即使"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "garchi…, …ga qaramay",
+                "hatto … bo'lsa ham"
+              ],
+              "ru": [
+                "хотя, несмотря на то что",
+                "даже если"
+              ],
+              "en": [
+                "although, even though",
+                "even if"
+              ]
+            },
+            {
+              "uz": [
+                "haqiqiy fakt",
+                "taxminiy shart"
+              ],
+              "ru": [
+                "реальный факт",
+                "предполагаемое условие"
+              ],
+              "en": [
+                "a real fact",
+                "a hypothetical condition"
+              ]
+            },
+            {
+              "uz": [
+                "ko'pincha 但是、可是、却、还是 bilan",
+                "ko'pincha 也 bilan"
+              ],
+              "ru": [
+                "часто с 但是、可是、却、还是",
+                "обычно с 也"
+              ],
+              "en": [
+                "often with 但是、可是、却、还是",
+                "usually with 也"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "尽管 → haqiqiy holatga qaramay\n即使 → taxminiy holatda ham",
+          "ru": "尽管 → несмотря на реальный факт\n即使 → даже при предполагаемом условии",
+          "en": "尽管 → despite a real fact\n即使 → even under a hypothetical condition"
+        }
+      ]
     }
   ]
 }
