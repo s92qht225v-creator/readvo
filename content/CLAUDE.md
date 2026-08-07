@@ -435,3 +435,15 @@ When Chinese text contains quoted words like `"有"字句` or `"A……，B呢�
 ```bash
 python3 -c "import json; json.load(open('content/lessonX-pageY.json'))"
 ```
+
+## Arabic digits break pinyin alignment
+
+Write numbers in Chinese characters (七个小时), never as digits (7个小时), in any
+text that renders ruby pinyin — dialogues, HSK texts, grammar examples.
+
+`alignPinyinToText` pairs one pinyin syllable to one character token, and it
+groups a digit with the character after it. The digit then takes no pinyin and
+**every syllable in the rest of the sentence shifts by one**, silently. Measured:
+`睡(shuì) 7个(qī) 小(gè) 时(xiǎo) ，(shí) …` — wrong from the digit onward.
+
+Padding the pinyin to compensate does not fix it; only Chinese numerals do.
