@@ -1179,6 +1179,162 @@
           "en": "Remember:\n由于 = because of, due to.\n由于 + clause → a full reason clause follows.\n由于 + noun → a noun phrase follows.\nMore formal than 因为."
         }
       ]
+    },
+    {
+      "slug": "biru",
+      "title": "比如",
+      "pinyin": "bǐrú",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "比如 misol keltirish uchun ishlatiladi: «masalan», «misol uchun».\nU fikr, narsa yoki vaziyatni aniqroq tushuntirish uchun aniq misol kiritadi.",
+          "ru": "比如 вводит пример: «например», «к примеру».\nОно приводит конкретный пример, поясняющий мысль, предмет или ситуацию.",
+          "en": "比如 introduces an example: “for example”, “for instance”.\nIt gives a concrete case that makes an idea, thing or situation clearer."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "比如 + misol → Masalan, …",
+          "ru": "比如 + пример → Например, …",
+          "en": "比如 + example → For example, …"
+        },
+        {
+          "type": "p",
+          "uz": "比如 gap boshida ham, gap o'rtasida ham kelaveradi.",
+          "ru": "比如 может стоять и в начале предложения, и внутри него.",
+          "en": "比如 can open a sentence or sit in the middle of one."
+        },
+        {
+          "type": "h",
+          "uz": "Misol keltirish",
+          "ru": "Приведение примера",
+          "en": "Giving an example"
+        },
+        {
+          "type": "ex",
+          "zh": "还有人说，小时候幸福是一件东西，比如一块橡皮、一块糖，得到了就很幸福。",
+          "py": "Hái yǒu rén shuō, xiǎo shíhou xìngfú shì yī jiàn dōngxi, bǐrú yī kuài xiàngpí, yī kuài táng, dédào le jiù hěn xìngfú.",
+          "uz": "Yana kimdir shunday deydi: bolalikda baxt — bu bir narsa, masalan bir bo'lak o'chirg'ich yoki bir dona konfet; uni olsang bas, baxtlisan.",
+          "ru": "А кто-то говорит: в детстве счастье — это вещь, например ластик или конфета; получил — и счастлив.",
+          "en": "Others say this: in childhood happiness is a thing — a rubber, say, or a sweet — and getting it makes you happy."
+        },
+        {
+          "type": "h",
+          "uz": "Fikrni aniqroq tushuntirish",
+          "ru": "Более точное объяснение мысли",
+          "en": "Making an idea clearer"
+        },
+        {
+          "type": "ex",
+          "zh": "每个人都有自己特别感兴趣的东西，比如，作家爱写小说，画家爱画画儿。",
+          "py": "Měi gè rén dōu yǒu zìjǐ tèbié gǎn xìngqù de dōngxi, bǐrú, zuòjiā ài xiě xiǎoshuō, huàjiā ài huà huàr.",
+          "uz": "Har kimning o'ziga xos qiziqadigan narsasi bor. Masalan, yozuvchi roman yozishni, rassom esa rasm chizishni yaxshi ko'radi.",
+          "ru": "У каждого есть то, что его особенно занимает. Например, писатель любит писать романы, а художник — рисовать.",
+          "en": "Everyone has something that particularly interests them. Writers, for example, love writing novels, and painters love to paint."
+        },
+        {
+          "type": "ex",
+          "zh": "我们只有了解了自己的兴趣爱好后，才能更好地发展自己。",
+          "py": "Wǒmen zhǐyǒu liǎojiě le zìjǐ de xìngqù àihào hòu, cái néng gèng hǎo de fāzhǎn zìjǐ.",
+          "uz": "Faqat o'z qiziqish va mashg'ulotlarimizni anglaganimizdan keyingina o'zimizni yaxshiroq rivojlantira olamiz.",
+          "ru": "Только поняв свои интересы и увлечения, мы можем развиваться лучше.",
+          "en": "Only once we understand our own interests can we develop ourselves properly."
+        },
+        {
+          "type": "h",
+          "uz": "Reja tushuntirishda",
+          "ru": "Примеры при объяснении плана",
+          "en": "Listing items in a plan"
+        },
+        {
+          "type": "ex",
+          "zh": "旅游前最好做个计划，比如要去几个地方，怎么坐车，带哪些东西，一共要玩儿多少天等。",
+          "py": "Lǚyóu qián zuì hǎo zuò gè jìhuà, bǐrú yào qù jǐ gè dìfang, zěnme zuò chē, dài nǎxiē dōngxi, yīgòng yào wánr duōshao tiān děng.",
+          "uz": "Sayohatdan oldin reja tuzgan ma'qul — masalan, nechta joyga borish, qanday transportda yurish, nimalarni olish, jami necha kun dam olish va hokazo.",
+          "ru": "Перед поездкой лучше составить план: например, сколько мест посетить, на чём ехать, что взять с собой, сколько всего дней отдыхать и так далее.",
+          "en": "It's best to make a plan before travelling — how many places to visit, how to get about, what to take, how many days in all, and so on."
+        },
+        {
+          "type": "h",
+          "uz": "比如 va 例如 farqi",
+          "ru": "比如 и 例如",
+          "en": "比如 vs. 例如"
+        },
+        {
+          "type": "ex",
+          "zh": "我喜欢很多运动，比如游泳、跑步和打篮球。",
+          "py": "Wǒ xǐhuan hěn duō yùndòng, bǐrú yóuyǒng, pǎobù hé dǎ lánqiú.",
+          "uz": "Men ko'p sport turini yaxshi ko'raman — masalan, suzish, yugurish va basketbol.",
+          "ru": "Я люблю много видов спорта — например, плавание, бег и баскетбол.",
+          "en": "I like a lot of sports — swimming, running and basketball, for example."
+        },
+        {
+          "type": "ex",
+          "zh": "有很多方法可以提高汉语水平，例如多听、多说、多读。",
+          "py": "Yǒu hěn duō fāngfǎ kěyǐ tígāo Hànyǔ shuǐpíng, lìrú duō tīng, duō shuō, duō dú.",
+          "uz": "Xitoy tili darajasini oshirishning ko'p usuli bor — masalan, ko'proq tinglash, gapirish va o'qish.",
+          "ru": "Есть много способов повысить уровень китайского — например, больше слушать, говорить и читать.",
+          "en": "There are many ways to improve your Chinese — listening, speaking and reading more, for instance."
+        },
+        {
+          "type": "table",
+          "head": [
+            "比如",
+            "例如"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "Kundalik va og'zaki nutqda",
+                "Rasmiy va yozma nutqda"
+              ],
+              "ru": [
+                "В повседневной и разговорной речи",
+                "В официальной и письменной речи"
+              ],
+              "en": [
+                "Everyday and spoken",
+                "Formal and written"
+              ]
+            },
+            {
+              "uz": [
+                "Suhbatda eng ko'p uchraydi",
+                "Maqola, hujjat, darslikda ko'proq"
+              ],
+              "ru": [
+                "Чаще всего в разговоре",
+                "Чаще в статьях, документах, учебниках"
+              ],
+              "en": [
+                "The usual choice in conversation",
+                "More at home in articles and documents"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n比如 = masalan, misol uchun.\nUndan keyin aniq misol keladi.\nOg'zaki nutqda juda keng ishlatiladi; 例如 ma'nodosh, lekin rasmiyroq.",
+          "ru": "Запомните:\n比如 = например, к примеру.\nПосле него идёт конкретный пример.\nОчень частотно в разговорной речи; 例如 — синоним, но официальнее.",
+          "en": "Remember:\n比如 = for example, for instance.\nA concrete example follows it.\nVery common in speech; 例如 means the same but is more formal."
+        }
+      ]
     }
   ]
 }
