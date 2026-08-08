@@ -2,8 +2,13 @@ import { unstable_cache } from 'next/cache';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 export interface GlossaryEntry { zh: string; py: string; uz: string; ru: string; en: string; hsk?: number }
-export type VocabRef = string | { zh: string; py?: string; uz?: string; ru?: string; en?: string };
-export interface VocabItem { zh: string; py: string; uz: string; ru: string; en: string }
+/** `proper: true` marks a personal or place name (专有名词). It rides through to
+ *  `attachWordLevels`, which segments the name as ONE word and treats it as
+ *  off-list so its pinyin shows at every HSK level — you cannot guess how to
+ *  read a name. */
+export type VocabRef = string
+  | { zh: string; py?: string; uz?: string; ru?: string; en?: string; proper?: boolean };
+export interface VocabItem { zh: string; py: string; uz: string; ru: string; en: string; proper?: boolean }
 
 export function normPy(py: string): string {
   return py.normalize('NFC').trim().replace(/\s+/g, ' ').toLowerCase();
@@ -78,7 +83,10 @@ export async function resolveVocab(refs: VocabRef[]): Promise<VocabItem[]> {
     if (candidates.length === 1 && !wantPy) entry = candidates[0];
     else if (wantPy) entry = candidates.find((c) => normPy(c.py) === normPy(wantPy));
     else entry = undefined; // ambiguous bare ref: skip (validation catches authoring errors)
-    const o: { py?: string; uz?: string; ru?: string; en?: string } = typeof ref === 'string' ? {} : ref;
+    const o: { py?: string; uz?: string; ru?: string; en?: string; proper?: boolean } = typeof ref === 'string' ? {} : ref;
+    // `proper` is authored on the ref, never stored in the glossary, so it has
+    // to be copied onto every result shape below or it is silently lost.
+    const proper = o.proper ? { proper: true as const } : {};
     if (!entry) {
       // No glossary row. A SELF-CONTAINED ref — one that carries its own pinyin
       // and at least an Uzbek gloss — has everything the Words tab needs, so
@@ -88,7 +96,7 @@ export async function resolveVocab(refs: VocabRef[]): Promise<VocabItem[]> {
       // it only works because such a ref genuinely lacks the data to render.
       // Prefer adding the word to the glossary anyway — that is what makes it
       // reusable across dialogues, and editable without a deploy.
-      if (o.py && o.uz) out.push({ zh, py: o.py, uz: o.uz, ru: o.ru ?? '', en: o.en ?? '' });
+      if (o.py && o.uz) out.push({ zh, py: o.py, uz: o.uz, ru: o.ru ?? '', en: o.en ?? '', ...proper });
       continue;
     }
     out.push({
@@ -97,6 +105,7 @@ export async function resolveVocab(refs: VocabRef[]): Promise<VocabItem[]> {
       uz: o.uz ?? entry.uz,
       ru: o.ru ?? entry.ru,
       en: o.en ?? entry.en,
+      ...proper,
     });
   }
   return out;

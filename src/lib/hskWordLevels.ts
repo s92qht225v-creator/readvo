@@ -27,7 +27,11 @@ const MAX_WORD = 4;
 
 type Word = { i?: [number, number]; p?: string };
 type Sentence = { text_original: string; pinyin?: string; words?: Word[]; charLvls?: (number | null)[] };
-type Dialogue = { sections?: { sentences?: Sentence[] }[] };
+type Dialogue = {
+  sections?: { sentences?: Sentence[] }[];
+  /** Vocab entries flagged `proper` are personal/place names — see below. */
+  vocab?: { zh?: string; proper?: boolean }[];
+};
 
 const isHan = (c: string) => /[一-鿿]/.test(c);
 
@@ -62,6 +66,24 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
     }
   }
 
+  // Personal and place names (专有名词, flagged `proper` in a text's vocab).
+  //
+  // Two things go wrong without this, and both were visible on 李进:
+  //   1. The name isn't in CC-CEDICT, so it segments per character — 李 (a
+  //      surname, off-list) kept its pinyin while 进 (HSK 1) was hidden, giving
+  //      a half-annotated name that reads as a bug.
+  //   2. Even segmented whole, a name built from ordinary characters (王静,
+  //      孙月) would take the MAX of their HSK levels and be hidden entirely.
+  // A name has no HSK level and its reading cannot be guessed from the
+  // characters, so it is always one word and always off-list: pinyin at every
+  // level. `properSet` is consulted before the dictionary and short-circuits
+  // `wordLevel`.
+  const properSet = new Set(
+    (dialogue.vocab ?? []).filter((v) => v?.proper && v.zh).map((v) => v.zh as string),
+  );
+  const properMax = Math.max(0, ...[...properSet].map((w) => [...w].length));
+
+
   // Level of a word: HSK headword level, else the max over its largest known
   // SUB-WORDS, else null.
   //
@@ -70,6 +92,10 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
   // off-list and showed pinyin for it at every level. Decomposing into 有 + 时候
   // (both level 1) gets it right. Same for 工作时间 → 工作 + 时间.
   const wordLevel = (zh: string, py?: string): number | null => {
+    // A name is off-list by definition — never fall through to the HSK lookup
+    // or the character decomposition below, which would give 王静 the max of
+    // 王 and 静 and hide the whole name at level 4.
+    if (properSet.has(zh)) return null;
     const exact = py ? byKey.get(`${zh}|${toneless(py)}`) : undefined;
     const whole = exact ?? hskWhole.get(zh);
     if (whole !== undefined) return whole;
@@ -100,6 +126,7 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
   };
 
   const dict = segWords();
+
   for (const s of sentences) {
     const text = [...s.text_original];
     const lvls: (number | null)[] = new Array(text.length).fill(undefined) as (number | null)[];
@@ -114,6 +141,11 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
     } else {
       // Longest match starting at `at`, or 0 if none beyond a bare character.
       const matchLen = (at: number): number => {
+        // Names first, and beyond MAX_WORD if need be (李老师 is 3, but a full
+        // name can be longer than an ordinary compound).
+        for (let len = Math.min(properMax, text.length - at); len >= 2; len--) {
+          if (properSet.has(text.slice(at, at + len).join(''))) return len;
+        }
         for (let len = Math.min(MAX_WORD, text.length - at); len >= 2; len--) {
           const cand = text.slice(at, at + len).join('');
           if (dict.has(cand) || hskWhole.has(cand)) return len;

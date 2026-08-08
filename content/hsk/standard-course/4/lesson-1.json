@@ -11,43 +11,6 @@
   "titleTranslation_ru": "Простая любовь",
   "titleTranslation_en": "Simple Love",
   "dateAdded": "2026-07-28",
-  "properNouns": [
-    {
-      "zh": "孙月",
-      "py": "Sūn Yuè",
-      "uz": "Sun Yue (ism)",
-      "ru": "Сунь Юэ (имя)",
-      "en": "Sun Yue (name)"
-    },
-    {
-      "zh": "王静",
-      "py": "Wáng Jìng",
-      "uz": "Van Jing (ism)",
-      "ru": "Ван Цзин (имя)",
-      "en": "Wang Jing (name)"
-    },
-    {
-      "zh": "李进",
-      "py": "Lǐ Jìn",
-      "uz": "Li Jin (ism)",
-      "ru": "Ли Цзинь (имя)",
-      "en": "Li Jin (name)"
-    },
-    {
-      "zh": "李老师",
-      "py": "Lǐ lǎoshī",
-      "uz": "Li o'qituvchi",
-      "ru": "учитель Ли",
-      "en": "Teacher Li"
-    },
-    {
-      "zh": "高老师",
-      "py": "Gāo lǎoshī",
-      "uz": "Gao o'qituvchi",
-      "ru": "учитель Гао",
-      "en": "Teacher Gao"
-    }
-  ],
   "texts": [
     {
       "id": "hsk4-l1-t1",
@@ -65,7 +28,31 @@
         "深",
         "熟悉",
         "不仅",
-        "性格"
+        "性格",
+        {
+          "zh": "孙月",
+          "py": "Sūn Yuè",
+          "uz": "Sun Yue (ism)",
+          "ru": "Сунь Юэ (имя)",
+          "en": "Sun Yue (name)",
+          "proper": true
+        },
+        {
+          "zh": "王静",
+          "py": "Wáng Jìng",
+          "uz": "Van Jing (ism)",
+          "ru": "Ван Цзин (имя)",
+          "en": "Wang Jing (name)",
+          "proper": true
+        },
+        {
+          "zh": "李进",
+          "py": "Lǐ Jìn",
+          "uz": "Li Jin (ism)",
+          "ru": "Ли Цзинь (имя)",
+          "en": "Li Jin (name)",
+          "proper": true
+        }
       ],
       "sections": [
         {
@@ -164,7 +151,23 @@
         "最好",
         "共同",
         "适合",
-        "幸福"
+        "幸福",
+        {
+          "zh": "李老师",
+          "py": "Lǐ lǎoshī",
+          "uz": "Li o'qituvchi",
+          "ru": "учитель Ли",
+          "en": "Teacher Li",
+          "proper": true
+        },
+        {
+          "zh": "高老师",
+          "py": "Gāo lǎoshī",
+          "uz": "Gao o'qituvchi",
+          "ru": "учитель Гао",
+          "en": "Teacher Gao",
+          "proper": true
+        }
       ],
       "sections": [
         {
