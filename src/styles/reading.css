@@ -1419,11 +1419,19 @@ body {
   font-size: 0.69em;
   color: #dc2626;
   line-height: 1.2;
-  /* Sits 2px above the character, not 4px. The placeholder (--empty) carries
-     the same margin, so lowering it doesn't change reserved row height and
-     toggling pinyin still causes no reflow. */
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   white-space: nowrap;
+  /* Lower the pinyin toward the character. Measured on production: the visual
+     ink gap is 11px, of which only 4px is this margin — 5.4px is half-leading
+     baked into .dr-char-zh's own line box (line-height 1.3 on a 36px glyph)
+     and 1.7px is the pinyin's. Shrinking the margin therefore barely shows,
+     and cutting .dr-char-zh's line-height would strip the same 5.4px from
+     BELOW every character too, tightening dialogue line spacing that nobody
+     asked to change. A relative offset moves the glyph only: no effect on the
+     char box, the reserved pinyin row, or line height, so toggling pinyin
+     still causes no reflow. 11px − 6px ≈ 5px of white space left. */
+  position: relative;
+  top: 6px;
 }
 
 .dr-char-py--empty {
