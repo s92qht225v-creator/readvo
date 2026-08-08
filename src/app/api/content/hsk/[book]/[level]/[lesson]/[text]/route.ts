@@ -42,7 +42,18 @@ export async function GET(
     titleTranslation_ru: found.lesson.titleTranslation_ru,
     titleTranslation_en: found.lesson.titleTranslation_en,
   } as Parameters<typeof resolveDialogueVocab>[0]);
-  await attachWordLevels(dialogue);
+  // Course texts annotate the book's 生词 for THIS text, not everything at or
+  // above the level — see attachWordLevels. Spans come from the AUTHORED vocab
+  // (`found.text.vocab`), so a ref that misses the glossary loses its Words-tab
+  // card without also going unannotated in the text.
+  const annotateOnly = (found.text.vocab ?? [])
+    .map((v: unknown) => {
+      if (typeof v === 'string') return v;
+      const o = v as { zh?: string; proper?: boolean | string };
+      return typeof o?.proper === 'string' ? o.proper : o?.zh;
+    })
+    .filter((z): z is string => !!z);
+  await attachWordLevels(dialogue, { annotateOnly });
 
   return NextResponse.json({ dialogue }, { headers: { 'Cache-Control': 'no-store, private' } });
 }

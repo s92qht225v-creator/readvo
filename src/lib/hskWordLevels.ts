@@ -47,8 +47,52 @@ const isHan = (c: string) => /[一-鿿]/.test(c);
  * off-list. This keeps a compound like 每天 (每=2, 天=1 → level 2) uniform.
  * Mutates and returns the dialogue.
  */
-export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise<T> {
+export async function attachWordLevels<T extends Dialogue>(
+  dialogue: T,
+  opts: { annotateOnly?: string[] } = {},
+): Promise<T> {
   const sentences = (dialogue.sections ?? []).flatMap((s) => s.sentences ?? []);
+
+  // ── vocabOnly: annotate exactly this text's new words ──────────────────
+  //
+  // HSK Standard Course texts ship the book's own 生词 list, so "new" is a
+  // stated fact rather than something to infer from a level. The level rule is
+  // nearly vacuous here anyway: in a level-4 text every interesting word IS
+  // level 4, so it annotated 中年 and 就是 (in no word list) exactly as loudly
+  // as the seven words the lesson actually teaches.
+  //
+  // Free dialogues keep the level rule — they have no authoritative new-word
+  // list, so there is nothing else to key on.
+  //
+  // The caller passes the spans (from the AUTHORED vocab, not the glossary-
+  // resolved list — a ref that fails to resolve should lose its Words-tab card,
+  // never its annotation). An empty list means the text has no 生词 of its own,
+  // e.g. a 文化 passage: fall through to the level rule rather than stripping
+  // every annotation from the hardest text in the unit.
+  //
+  // A span is the vocab entry itself, except where `proper` names a part:
+  // `proper: "李"` on 李老师 annotates the surname and leaves 老师, an ordinary
+  // word, bare. Needs no HSK data at all, so no database round-trip.
+  if (opts.annotateOnly?.length) {
+    const spans = opts.annotateOnly;
+    for (const s of sentences) {
+      const text = [...s.text_original];
+      // 0, not 1: `hidePy` is `level < dialogueLevel`, so a level-1 book needs
+      // something below 1 to count as hidden.
+      const lvls: (number | null)[] = new Array(text.length).fill(0);
+      for (const span of spans) {
+        const t = [...span];
+        for (let i = 0; i + t.length <= text.length; i++) {
+          if (t.every((c, k) => text[i + k] === c)) {
+            for (let k = 0; k < t.length; k++) lvls[i + k] = null;
+          }
+        }
+      }
+      s.charLvls = lvls;
+    }
+    return dialogue;
+  }
+
   const chars = new Set<string>();
   for (const s of sentences) for (const c of s.text_original) if (isHan(c)) chars.add(c);
   if (chars.size === 0) return dialogue;
