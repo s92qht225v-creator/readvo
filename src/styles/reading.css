@@ -1401,6 +1401,19 @@ body {
   /* Gap is overridden to 0 below when pinyin is off so character spacing
      stays natural without ruby labels overhead. */
   column-gap: 0.18em;
+  /* .dr-char-py and .dr-char-zh both use line-height: 1 so the pinyin↔character
+     gap is a single stated value (see .dr-char-py). Their half-leading used to
+     do three other jobs silently; each is now stated here, in em off this row's
+     24px base so it scales with the reader's A−/A+ exactly as the leading did.
+       row-gap      7.2px — separates WRAPPED rows. Was zh's 5.4px bottom
+                    leading + py's 1.66px top leading; at line-height 1 those
+                    rows would otherwise collide.
+       padding-top  1.68px — was py's top half-leading (card's inner top space).
+       padding-bot  5.4px  — was zh's bottom half-leading (inner bottom space).
+     .dr-line's own 8px padding is untouched, so card breathing is unchanged. */
+  row-gap: 0.3em;
+  padding-top: 0.07em;
+  padding-bottom: 0.225em;
 }
 
 /* When pinyin is hidden, collapse the inter-character gap so CJK rendering
@@ -1418,20 +1431,21 @@ body {
 .dr-char-py {
   font-size: 0.69em;
   color: #dc2626;
-  line-height: 1.2;
-  margin-bottom: 4px;
+  /* line-height: 1 makes this box hug its glyph, so the gap below is THIS
+     margin and nothing else. With the old 1.2/1.3 line-heights the 11px gap
+     was 4px margin + 1.7px of the pinyin's own half-leading + 5.4px of
+     .dr-char-zh's — so editing the margin moved barely a third of it, and the
+     leading terms were invisible in the CSS. Now one value owns the gap.
+     It is em (not px) because .dialogue-reader carries an inline
+     font-size: 80–150% from the A−/A+ control and every size below it is em;
+     a px gap would drift against the glyphs (measured: 12.6% → 15.9% of glyph
+     height across that range). 0.3 × 16.56px ≈ 5px at 100%, and it stays 5px
+     relative to the text at every size.
+     The half-leading this removes was also separating wrapped rows and padding
+     the card — both re-stated on .dr-line-chars, see there. */
+  line-height: 1;
+  margin-bottom: 0.3em;
   white-space: nowrap;
-  /* Lower the pinyin toward the character. Measured on production: the visual
-     ink gap is 11px, of which only 4px is this margin — 5.4px is half-leading
-     baked into .dr-char-zh's own line box (line-height 1.3 on a 36px glyph)
-     and 1.7px is the pinyin's. Shrinking the margin therefore barely shows,
-     and cutting .dr-char-zh's line-height would strip the same 5.4px from
-     BELOW every character too, tightening dialogue line spacing that nobody
-     asked to change. A relative offset moves the glyph only: no effect on the
-     char box, the reserved pinyin row, or line height, so toggling pinyin
-     still causes no reflow. 11px − 6px ≈ 5px of white space left. */
-  position: relative;
-  top: 6px;
 }
 
 .dr-char-py--empty {
@@ -1445,7 +1459,13 @@ body {
 .dr-char-zh {
   font-size: 1.5em;
   color: #1a1a2e;
-  line-height: 1.3;
+  /* Hugs the glyph. The old 1.3 put 5.4px of half-leading ABOVE the character
+     (the biggest single term in the pinyin gap) and an equal 5.4px BELOW it,
+     where it was quietly acting as wrapped-row separation and card padding.
+     Symmetric leading can't be trimmed on one side only, so both sides are
+     removed here and the below-side is re-stated explicitly on
+     .dr-line-chars (row-gap + padding-bottom). */
+  line-height: 1;
 }
 
 
