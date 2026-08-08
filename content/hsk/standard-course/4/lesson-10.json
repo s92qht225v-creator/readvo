@@ -1335,6 +1335,176 @@
           "en": "Remember:\n比如 = for example, for instance.\nA concrete example follows it.\nVery common in speech; 例如 means the same but is more formal."
         }
       ]
+    },
+    {
+      "slug": "zai-kanlai",
+      "title": "在……看来",
+      "pinyin": "zài… kànlái",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "在……看来 kimningdir nuqtayi nazarini, fikrini yoki qarashini bildiradi:\n«…ning fikricha», «…ning nazarida», «…ga ko'ra».\nBu kirish ibora bo'lib, undan keyin aytilayotgan fikr keladi.",
+          "ru": "在……看来 выражает чьё-либо мнение, точку зрения или взгляд:\n«по мнению…», «с точки зрения…», «на взгляд…».\nЭто вводное выражение, после которого идёт само мнение.",
+          "en": "在……看来 gives someone's viewpoint or opinion:\n“in someone's opinion”, “in someone's view”, “from someone's point of view”.\nIt is a parenthetical, and the opinion itself follows it."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "在 + shaxs / guruh + 看来，fikr。",
+          "ru": "在 + человек / группа + 看来，мнение。",
+          "en": "在 + person / group + 看来, opinion."
+        },
+        {
+          "type": "p",
+          "uz": "在我看来，…… — Mening fikrimcha, …\n在他看来，…… — Uning fikricha, …\n在很多人看来，…… — Ko'pchilikning fikricha, …",
+          "ru": "在我看来，…… — По моему мнению, …\n在他看来，…… — По его мнению, …\n在很多人看来，…… — По мнению многих, …",
+          "en": "在我看来，…… — In my opinion, …\n在他看来，…… — In his opinion, …\n在很多人看来，…… — In many people's opinion, …"
+        },
+        {
+          "type": "h",
+          "uz": "Fikr bildirish",
+          "ru": "Выражение мнения",
+          "en": "Expressing an opinion"
+        },
+        {
+          "type": "ex",
+          "zh": "在很多人看来，听流行音乐仅仅是年轻人的爱好，其实现在不少中老年人对流行歌曲也很感兴趣。",
+          "py": "Zài hěn duō rén kànlái, tīng liúxíng yīnyuè jǐnjǐn shì niánqīng rén de àihào, qíshí xiànzài bù shǎo zhōnglǎonián rén duì liúxíng gēqǔ yě hěn gǎn xìngqù.",
+          "uz": "Ko'pchilikning nazarida, mashhur musiqa tinglash faqat yoshlarning mashg'uloti. Aslida esa hozir ko'p o'rta va keksa yoshdagilar ham estrada qo'shiqlariga qiziqadi.",
+          "ru": "По мнению многих, слушать популярную музыку — увлечение исключительно молодых. На деле сейчас немало людей среднего и старшего возраста тоже интересуются эстрадными песнями.",
+          "en": "In many people's view, listening to pop music is a young person's hobby. In fact plenty of middle-aged and older people are keen on pop songs nowadays."
+        },
+        {
+          "type": "ex",
+          "zh": "在我看来，比赛结果并不是最重要的，在参加比赛的过程中使自己获得提高更重要。",
+          "py": "Zài wǒ kànlái, bǐsài jiéguǒ bìng bùshì zuì zhòngyào de, zài cānjiā bǐsài de guòchéng zhōng shǐ zìjǐ huòdé tígāo gèng zhòngyào.",
+          "uz": "Mening fikrimcha, musobaqa natijasi eng muhimi emas — qatnashish jarayonida o'zingni o'stirishing muhimroq.",
+          "ru": "По-моему, результат соревнования вовсе не самое важное — куда важнее вырасти в самом процессе участия.",
+          "en": "In my view the result of the contest is not the main thing — what matters more is improving yourself in the course of taking part."
+        },
+        {
+          "type": "h",
+          "uz": "Savolga javob berishda",
+          "ru": "В ответ на вопрос",
+          "en": "Answering a question"
+        },
+        {
+          "type": "ex",
+          "zh": "你觉得在选择职业时，收入重要吗？",
+          "py": "Nǐ juéde zài xuǎnzé zhíyè shí, shōurù zhòngyào ma?",
+          "uz": "Sencha, kasb tanlashda daromad muhimmi?",
+          "ru": "Как ты думаешь, важен ли доход при выборе профессии?",
+          "en": "Do you think income matters when choosing a career?"
+        },
+        {
+          "type": "ex",
+          "zh": "在我看来，赚钱多少不是最重要的，兴趣才是关键。",
+          "py": "Zài wǒ kànlái, zhuànqián duōshao bùshì zuì zhòngyào de, xìngqù cái shì guānjiàn.",
+          "uz": "Mening fikrimcha, qancha pul topish eng muhimi emas — asosiysi qiziqish.",
+          "ru": "По-моему, не самое главное, сколько зарабатываешь, — главное интерес.",
+          "en": "The way I see it, how much you earn isn't the main thing — interest is what counts."
+        },
+        {
+          "type": "h",
+          "uz": "在……看来 va 我认为 farqi",
+          "ru": "在……看来 и 我认为",
+          "en": "在……看来 vs. 我认为"
+        },
+        {
+          "type": "ex",
+          "zh": "在我看来，这个工作很有意义。",
+          "py": "Zài wǒ kànlái, zhège gōngzuò hěn yǒu yìyì.",
+          "uz": "Mening nazarimda, bu ish juda mazmunli.",
+          "ru": "На мой взгляд, эта работа очень значима.",
+          "en": "In my view this job is very worthwhile."
+        },
+        {
+          "type": "ex",
+          "zh": "我认为，这个工作很有意义。",
+          "py": "Wǒ rènwéi, zhège gōngzuò hěn yǒu yìyì.",
+          "uz": "Menimcha, bu ish juda mazmunli.",
+          "ru": "Я считаю, что эта работа очень значима.",
+          "en": "I think this job is very worthwhile."
+        },
+        {
+          "type": "table",
+          "head": [
+            "在……看来",
+            "我认为"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "Shaxsiy qarash, nuqtayi nazar",
+                "Oddiy fikr bildirish"
+              ],
+              "ru": [
+                "Личная точка зрения, взгляд",
+                "Простое выражение мнения"
+              ],
+              "en": [
+                "A personal viewpoint or perspective",
+                "A plain statement of opinion"
+              ]
+            },
+            {
+              "uz": [
+                "Boshqa odam yoki guruh ham bo'la oladi: 在他看来、在很多人看来",
+                "Faqat gapiruvchining o'zi"
+              ],
+              "ru": [
+                "Может относиться и к другим: 在他看来, 在很多人看来",
+                "Только сам говорящий"
+              ],
+              "en": [
+                "Can name anyone: 在他看来, 在很多人看来",
+                "Only the speaker"
+              ]
+            },
+            {
+              "uz": [
+                "Odatda gap boshida, kirish ibora sifatida",
+                "Kesim vazifasida, gap ichida"
+              ],
+              "ru": [
+                "Обычно в начале, как вводное",
+                "Как сказуемое, внутри предложения"
+              ],
+              "en": [
+                "Usually opens the sentence, parenthetically",
+                "Works as the predicate"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "Diqqat: 在……看来 va 对……来说 (5-bo'lim) bir xil emas.\n在……看来 → kimning FIKRI: 在我看来，这个工作很有意义。\n对……来说 → kim uchun MUHIM yoki tegishli: 对我来说，这个工作很重要。",
+          "ru": "Внимание: 在……看来 и 对……来说 (урок 5) — не одно и то же.\n在……看来 → чьё МНЕНИЕ: 在我看来，这个工作很有意义。\n对……来说 → для кого это ВАЖНО или актуально: 对我来说，这个工作很重要。",
+          "en": "Careful: 在……看来 and 对……来说 (unit 5) are not the same.\n在……看来 → whose JUDGEMENT it is: 在我看来，这个工作很有意义。\n对……来说 → who it MATTERS to: 对我来说，这个工作很重要。"
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n在……看来 = …ning fikricha, …ning nazarida.\n在 dan keyin kimning qarashi ekani ko'rsatiladi.\nBu yerda 看来 «qaraganda» emas, «nazarida» ma'nosini beradi.\nOdatda gap boshida keladi.",
+          "ru": "Запомните:\n在……看来 = по мнению…, с точки зрения….\nПосле 在 указывается, чья это точка зрения.\n看来 здесь значит не «похоже», а «на взгляд».\nОбычно стоит в начале предложения.",
+          "en": "Remember:\n在……看来 = in someone's opinion, in someone's view.\nWhat follows 在 names whose view it is.\n看来 here does not mean “it seems” but “in the eyes of”.\nIt normally opens the sentence."
+        }
+      ]
     }
   ]
 }
