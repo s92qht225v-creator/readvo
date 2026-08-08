@@ -1,0 +1,227 @@
+{
+  "id": "hsk2-dialogue38",
+  "slug": "id-like-a-coffee",
+  "title": "我要一杯咖啡",
+  "pinyin": "Wǒ yào yì bēi kā fēi",
+  "titleTranslation": "Menga bir chashka qahva bering",
+  "titleTranslation_ru": "Мне, пожалуйста, чашку кофе",
+  "titleTranslation_en": "I'd like a coffee",
+  "description_uz": "«Menga bir chashka qahva bering» — qahvaxonada buyurtma berish suhbati. Bu dialog buyurtma berish, tanlov qilish (issiq yoki muzli, katta yoki o'rtacha) va qancha kutish kerakligini so'rashni o'rgatadi. 还是 bilan tanlov savoli, 还要别的吗 va 稍等 kabi xizmat ko'rsatish iboralari — kafeda o'zingizni erkin his qilish uchun eng kerakli so'zlar.",
+  "description_ru": "«Мне, пожалуйста, чашку кофе» — разговор при заказе в кофейне. Диалог учит делать заказ, выбирать (горячий или со льдом, большой или средний) и спрашивать, сколько ждать. Вопрос выбора с 还是, служебные фразы 还要别的吗 и 稍等 — именно то, что нужно, чтобы уверенно чувствовать себя в кафе.",
+  "description_en": "«I'd like a coffee» — ordering at a coffee shop. This dialogue teaches placing an order, choosing between options (hot or iced, large or medium) and asking how long the wait will be. Choice questions with 还是, plus service phrases like 还要别的吗 and 稍等 — exactly what you need to feel at ease in a café.",
+  "category_uz": "Qahvaxonada",
+  "category_ru": "В кофейне",
+  "category_en": "At the Café",
+  "level": 2,
+  "dictationKeyboard": true,
+  "tag": "ovqat",
+  "dateAdded": "2026-08-08",
+  "vocab": [
+    {
+      "zh": "咖啡",
+      "py": "kāfēi",
+      "uz": "qahva",
+      "ru": "кофе",
+      "en": "coffee"
+    },
+    {
+      "zh": "杯",
+      "py": "bēi",
+      "uz": "chashka; stakan (sanoq so'zi)",
+      "ru": "чашка; стакан (счётное слово)",
+      "en": "cup; glass (measure word)"
+    },
+    {
+      "zh": "热",
+      "py": "rè",
+      "uz": "issiq",
+      "ru": "горячий",
+      "en": "hot"
+    },
+    {
+      "zh": "冰",
+      "py": "bīng",
+      "uz": "muz; muzli",
+      "ru": "лёд; со льдом",
+      "en": "ice; iced"
+    },
+    {
+      "zh": "还是",
+      "py": "háishì",
+      "uz": "yoki (tanlov savolida)",
+      "ru": "или (в вопросе выбора)",
+      "en": "or (in a choice question)"
+    },
+    {
+      "zh": "蛋糕",
+      "py": "dàngāo",
+      "uz": "tort",
+      "ru": "торт, пирожное",
+      "en": "cake"
+    },
+    {
+      "zh": "稍等",
+      "py": "shāo děng",
+      "uz": "biroz kutib turing",
+      "ru": "подождите немного",
+      "en": "one moment, please wait"
+    },
+    {
+      "zh": "多久",
+      "py": "duō jiǔ",
+      "uz": "qancha vaqt",
+      "ru": "как долго",
+      "en": "how long"
+    },
+    {
+      "zh": "分钟",
+      "py": "fēnzhōng",
+      "uz": "daqiqa",
+      "ru": "минута",
+      "en": "minute"
+    },
+    {
+      "zh": "别的",
+      "py": "bié de",
+      "uz": "boshqa (narsa)",
+      "ru": "другое, что-нибудь ещё",
+      "en": "other, anything else"
+    }
+  ],
+  "sections": [
+    {
+      "id": "d38-sec1",
+      "type": "text",
+      "heading": "",
+      "subheading": "",
+      "sentences": [
+        {
+          "id": "d38-s1",
+          "text_original": "你好，我要一杯咖啡。",
+          "pinyin": "Nǐ hǎo, wǒ yào yì bēi kā fēi.",
+          "text_translation": "Assalomu alaykum, menga bir chashka qahva bering.",
+          "text_translation_ru": "Здравствуйте, мне, пожалуйста, чашку кофе.",
+          "text_translation_en": "Hello, I'd like a coffee.",
+          "speaker": "A"
+        },
+        {
+          "id": "d38-s2",
+          "text_original": "好的，您要热的还是冰的？",
+          "pinyin": "Hǎo de, nín yào rè de hái shì bīng de?",
+          "text_translation": "Xo'p bo'ladi. Issiq bo'lsinmi yoki muzlimi?",
+          "text_translation_ru": "Хорошо. Вам горячий или со льдом?",
+          "text_translation_en": "Certainly. Would you like it hot or iced?",
+          "speaker": "B"
+        },
+        {
+          "id": "d38-s3",
+          "text_original": "热的。",
+          "pinyin": "Rè de.",
+          "text_translation": "Issiq bo'lsin.",
+          "text_translation_ru": "Горячий.",
+          "text_translation_en": "Hot, please.",
+          "speaker": "A"
+        },
+        {
+          "id": "d38-s4",
+          "text_original": "大杯还是中杯？",
+          "pinyin": "Dà bēi hái shì zhōng bēi?",
+          "text_translation": "Katta chashkami yoki o'rtachami?",
+          "text_translation_ru": "Большую или среднюю?",
+          "text_translation_en": "Large or medium?",
+          "speaker": "B"
+        },
+        {
+          "id": "d38-s5",
+          "text_original": "中杯就行。",
+          "pinyin": "Zhōng bēi jiù xíng.",
+          "text_translation": "O'rtachasi bo'lsa bo'ldi.",
+          "text_translation_ru": "Средней будет достаточно.",
+          "text_translation_en": "Medium is fine.",
+          "speaker": "A"
+        },
+        {
+          "id": "d38-s6",
+          "text_original": "还要别的吗？",
+          "pinyin": "Hái yào bié de ma?",
+          "text_translation": "Yana biror narsa kerakmi?",
+          "text_translation_ru": "Что-нибудь ещё?",
+          "text_translation_en": "Anything else?",
+          "speaker": "B"
+        },
+        {
+          "id": "d38-s7",
+          "text_original": "再要一块蛋糕。",
+          "pinyin": "Zài yào yí kuài dàn gāo.",
+          "text_translation": "Yana bir bo'lak tort bering.",
+          "text_translation_ru": "Ещё кусочек торта.",
+          "text_translation_en": "And a slice of cake, please.",
+          "speaker": "A"
+        },
+        {
+          "id": "d38-s8",
+          "text_original": "好的，您稍等。",
+          "pinyin": "Hǎo de, nín shāo děng.",
+          "text_translation": "Xo'p bo'ladi, biroz kutib turing.",
+          "text_translation_ru": "Хорошо, подождите немного.",
+          "text_translation_en": "Certainly, one moment please.",
+          "speaker": "B"
+        },
+        {
+          "id": "d38-s9",
+          "text_original": "请问咖啡要等多久？",
+          "pinyin": "Qǐng wèn kā fēi yào děng duō jiǔ?",
+          "text_translation": "Kechirasiz, qahvani qancha kutish kerak?",
+          "text_translation_ru": "Скажите, пожалуйста, сколько ждать кофе?",
+          "text_translation_en": "Excuse me, how long will the coffee take?",
+          "speaker": "A"
+        },
+        {
+          "id": "d38-s10",
+          "text_original": "五分钟就好。",
+          "pinyin": "Wǔ fēn zhōng jiù hǎo.",
+          "text_translation": "Besh daqiqada tayyor bo'ladi.",
+          "text_translation_ru": "Через пять минут будет готов.",
+          "text_translation_en": "About five minutes.",
+          "speaker": "B"
+        },
+        {
+          "id": "d38-s11",
+          "text_original": "好的，我坐那边等。",
+          "pinyin": "Hǎo de, wǒ zuò nà biān děng.",
+          "text_translation": "Yaxshi, men anavi yerda o'tirib kutaman.",
+          "text_translation_ru": "Хорошо, я подожду вон там.",
+          "text_translation_en": "All right, I'll wait over there.",
+          "speaker": "A"
+        },
+        {
+          "id": "d38-s12",
+          "text_original": "好，好了我叫您。",
+          "pinyin": "Hǎo, hǎo le wǒ jiào nín.",
+          "text_translation": "Xo'p, tayyor bo'lganda chaqiraman.",
+          "text_translation_ru": "Хорошо, как будет готово — позову.",
+          "text_translation_en": "Fine, I'll call you when it's ready.",
+          "speaker": "B"
+        },
+        {
+          "id": "d38-s13",
+          "text_original": "谢谢！",
+          "pinyin": "Xiè xie!",
+          "text_translation": "Rahmat!",
+          "text_translation_ru": "Спасибо!",
+          "text_translation_en": "Thank you!",
+          "speaker": "A"
+        },
+        {
+          "id": "d38-s14",
+          "text_original": "不客气。",
+          "pinyin": "Bú kè qi.",
+          "text_translation": "Arzimaydi.",
+          "text_translation_ru": "Не за что.",
+          "text_translation_en": "You're welcome.",
+          "speaker": "B"
+        }
+      ]
+    }
+  ]
+}
