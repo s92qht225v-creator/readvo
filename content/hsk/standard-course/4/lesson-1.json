@@ -247,12 +247,12 @@
         "缺点",
         "接受",
         {
-          "zh": "高老师",
-          "py": "Gāo lǎoshī",
-          "uz": "Gao ustoz",
-          "ru": "учитель Гао",
-          "en": "Teacher Gao",
-          "proper": "高"
+          "zh": "高",
+          "py": "Gāo",
+          "uz": "Gao (familiya)",
+          "ru": "Гао (фамилия)",
+          "en": "Gao (surname)",
+          "proper": true
         }
       ],
       "sections": [
