@@ -871,6 +871,14 @@
         },
         {
           "type": "ex",
+          "zh": "难道你不减肥了？",
+          "py": "Nándào nǐ bù jiǎnféi le?",
+          "uz": "Nahotki endi ozishni tashlagan bo'lsang? (Ozishing kerak edi-ku.)",
+          "ru": "Неужели ты больше не худеешь? (Ты ведь должна была продолжать.)",
+          "en": "Don't tell me you've given up dieting? (You were supposed to keep at it.)"
+        },
+        {
+          "type": "ex",
           "zh": "喂，都十点了，你怎么还不来？",
           "py": "Wèi, dōu shí diǎn le, nǐ zěnme hái bù lái?",
           "uz": "Alo, soat o'n bo'ldi-ku, nega hali kelmayapsan?",
