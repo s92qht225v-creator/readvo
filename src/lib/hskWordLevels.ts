@@ -84,6 +84,19 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
   const properMax = Math.max(0, ...[...properSet].map((w) => [...w].length));
 
 
+  // Easiest HSK word beginning with a given character. hskWhole was filled by a
+  // `zh.like.<char>*` prefix query, so every such word is already loaded.
+  const fallbackMemo = new Map<string, number | null>();
+  const charFallback = (c: string): number | null => {
+    if (fallbackMemo.has(c)) return fallbackMemo.get(c)!;
+    let min: number | null = null;
+    for (const [w, l] of hskWhole) {
+      if (w.startsWith(c) && (min === null || l < min)) min = l;
+    }
+    fallbackMemo.set(c, min);
+    return min;
+  };
+
   // Level of a word: HSK headword level, else the max over its largest known
   // SUB-WORDS, else null.
   //
@@ -122,7 +135,19 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
       return out;
     };
     const mx = best(0);
-    return mx ? mx : null; // 0 means "no parts" → treat as off-list
+    if (mx) return mx;
+
+    // A single character with no headword of its own. 没 is the case that
+    // exposed this: HSK 3.0 lists 没有 (level 1) but not 没 alone, so 没 came
+    // back off-list and kept its pinyin in every text at every level — the one
+    // annotated character in an otherwise bare sentence.
+    //
+    // Fall back to the EASIEST HSK word that starts with the character: that is
+    // where a learner first meets it. 没 → 没有 → level 1. If the character only
+    // ever begins hard words the level stays high and the pinyin still shows,
+    // which is the safe direction to fail in.
+    if ([...zh].length === 1) return charFallback(zh);
+    return null; // 0 means "no parts" → treat as off-list
   };
 
   const dict = segWords();
@@ -153,10 +178,27 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
         return 0;
       };
 
+      // 数词/指示词 + 量词 + 名词: after one of these, the next character is a
+      // classifier, so a dictionary match starting ON the classifier is reading
+      // across a word boundary. 两个人 matched 个人 ("individual", HSK 5) and
+      // showed pinyin for 个 and 人 — both level 1 — in a level-4 text.
+      // Measured over the whole corpus: 个人 follows a quantifier 80 times (all
+      // classifier readings) and a non-quantifier 15 times (all genuine 个人),
+      // so this test separates them cleanly and leaves real 个人 alone.
+      const QUANT = new Set([...'0123456789一二三四五六七八九十百千万亿两半几每整多某这那各']);
+
       let i = 0;
       while (i < text.length) {
         if (!isHan(text[i])) { i += 1; continue; }
         let hit = matchLen(i);
+
+        if (hit >= 2 && i > 0 && QUANT.has(text[i - 1])) {
+          const single = wordLevel(text[i]);
+          const greedy = wordLevel(text.slice(i, i + hit).join(''));
+          // Only split when the classifier really is the easier reading; this
+          // leaves compounds where the first char is no simpler untouched.
+          if (single !== null && (greedy === null || single < greedy)) hit = 1;
+        }
 
         // Greedy longest-match sometimes swallows a rare CC-CEDICT entry that
         // straddles two ordinary words: 没有同事在旁边 matched 在旁 ("at one's
