@@ -2,13 +2,20 @@ import { unstable_cache } from 'next/cache';
 import { getSupabaseAdmin } from '@/lib/supabase-server';
 
 export interface GlossaryEntry { zh: string; py: string; uz: string; ru: string; en: string; hsk?: number }
-/** `proper: true` marks a personal or place name (专有名词). It rides through to
- *  `attachWordLevels`, which segments the name as ONE word and treats it as
- *  off-list so its pinyin shows at every HSK level — you cannot guess how to
- *  read a name. */
+/** Marks a personal or place name (专有名词). It rides through to
+ *  `attachWordLevels`, which treats the name as off-list so its pinyin shows at
+ *  every HSK level — you cannot guess how to read a name.
+ *
+ *  `true`   — the whole entry is the name (李进, 王静).
+ *  `"..."`  — only this part is (`proper: "李"` on 李老师). A title like 老师 is
+ *             an ordinary HSK 1 word the learner already knows, so annotating it
+ *             is noise; and dropping the flag altogether isn't the answer either,
+ *             because a surname that happens to be an HSK headword (高, level 2)
+ *             would then lose its pinyin. Naming the span settles both. */
+export type ProperFlag = boolean | string;
 export type VocabRef = string
-  | { zh: string; py?: string; uz?: string; ru?: string; en?: string; proper?: boolean };
-export interface VocabItem { zh: string; py: string; uz: string; ru: string; en: string; proper?: boolean }
+  | { zh: string; py?: string; uz?: string; ru?: string; en?: string; proper?: ProperFlag };
+export interface VocabItem { zh: string; py: string; uz: string; ru: string; en: string; proper?: ProperFlag }
 
 export function normPy(py: string): string {
   return py.normalize('NFC').trim().replace(/\s+/g, ' ').toLowerCase();
@@ -83,10 +90,10 @@ export async function resolveVocab(refs: VocabRef[]): Promise<VocabItem[]> {
     if (candidates.length === 1 && !wantPy) entry = candidates[0];
     else if (wantPy) entry = candidates.find((c) => normPy(c.py) === normPy(wantPy));
     else entry = undefined; // ambiguous bare ref: skip (validation catches authoring errors)
-    const o: { py?: string; uz?: string; ru?: string; en?: string; proper?: boolean } = typeof ref === 'string' ? {} : ref;
+    const o: { py?: string; uz?: string; ru?: string; en?: string; proper?: ProperFlag } = typeof ref === 'string' ? {} : ref;
     // `proper` is authored on the ref, never stored in the glossary, so it has
     // to be copied onto every result shape below or it is silently lost.
-    const proper = o.proper ? { proper: true as const } : {};
+    const proper = o.proper ? { proper: o.proper } : {};
     if (!entry) {
       // No glossary row. A SELF-CONTAINED ref — one that carries its own pinyin
       // and at least an Uzbek gloss — has everything the Words tab needs, so

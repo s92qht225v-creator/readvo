@@ -30,7 +30,7 @@ type Sentence = { text_original: string; pinyin?: string; words?: Word[]; charLv
 type Dialogue = {
   sections?: { sentences?: Sentence[] }[];
   /** Vocab entries flagged `proper` are personal/place names — see below. */
-  vocab?: { zh?: string; proper?: boolean }[];
+  vocab?: { zh?: string; proper?: boolean | string }[];
 };
 
 const isHan = (c: string) => /[一-鿿]/.test(c);
@@ -78,8 +78,15 @@ export async function attachWordLevels<T extends Dialogue>(dialogue: T): Promise
   // characters, so it is always one word and always off-list: pinyin at every
   // level. `properSet` is consulted before the dictionary and short-circuits
   // `wordLevel`.
+  // `proper: "李"` on 李老师 marks only the surname: 老师 is an ordinary HSK 1
+  // word, so blanket-nulling the whole span annotated a word the learner knows.
+  // NOTE this makes that character off-list for the WHOLE text, so name a
+  // character that is only ever the name in this text (高 as a surname, not 高 in
+  // 高兴).
   const properSet = new Set(
-    (dialogue.vocab ?? []).filter((v) => v?.proper && v.zh).map((v) => v.zh as string),
+    (dialogue.vocab ?? [])
+      .filter((v) => v?.proper && v.zh)
+      .map((v) => (typeof v.proper === 'string' ? v.proper : (v.zh as string))),
   );
   const properMax = Math.max(0, ...[...properSet].map((w) => [...w].length));
 

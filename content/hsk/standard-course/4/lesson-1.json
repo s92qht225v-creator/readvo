@@ -158,15 +158,7 @@
           "uz": "Li ustoz",
           "ru": "учитель Ли",
           "en": "Teacher Li",
-          "proper": true
-        },
-        {
-          "zh": "高老师",
-          "py": "Gāo lǎoshī",
-          "uz": "Gao o'qituvchi",
-          "ru": "учитель Гао",
-          "en": "Teacher Gao",
-          "proper": true
+          "proper": "李"
         }
       ],
       "sections": [
@@ -585,7 +577,8 @@
             }
           ]
         }
-      ]
+      ],
+      "vocab": []
     }
   ],
   "grammar": [
