@@ -946,6 +946,56 @@
           "en": "Doesn't he know? (He ought to.)"
         },
         {
+          "type": "h",
+          "uz": "Oddiy savol va 难道 bilan savol",
+          "ru": "Обычный вопрос и вопрос с 难道",
+          "en": "A plain question vs. one with 难道"
+        },
+        {
+          "type": "ex",
+          "zh": "你不去吗？",
+          "py": "Nǐ bù qù ma?",
+          "uz": "Bormaysanmi? (Oddiy savol — javob noma'lum.)",
+          "ru": "Ты не идёшь? (Обычный вопрос — ответ неизвестен.)",
+          "en": "Aren't you going? (A plain question — the answer is unknown.)"
+        },
+        {
+          "type": "ex",
+          "zh": "难道你不去吗？",
+          "py": "Nándào nǐ bù qù ma?",
+          "uz": "Nahotki bormasang?! (Men borasan deb o'ylagandim.)",
+          "ru": "Неужели ты не идёшь?! (Я думал, что ты пойдёшь.)",
+          "en": "Don't tell me you're not going?! (I thought you were.)"
+        },
+        {
+          "type": "note",
+          "uz": "难道 oddiy savolni kuchli ritorik savolga aylantiradi.",
+          "ru": "难道 превращает обычный вопрос в сильный риторический.",
+          "en": "难道 turns a plain question into a strong rhetorical one."
+        },
+        {
+          "type": "h",
+          "uz": "Ikki shaklni yonma-yon ko'ring",
+          "ru": "Две формы рядом",
+          "en": "The two forms side by side"
+        },
+        {
+          "type": "ex",
+          "zh": "难道你不喜欢吗？",
+          "py": "Nándào nǐ bù xǐhuan ma?",
+          "uz": "Nahotki senga yoqmasa? → Asl ma'no: senga yoqadi.",
+          "ru": "Неужели тебе не нравится? → На самом деле: нравится.",
+          "en": "Don't you like it? → What it means: you do like it."
+        },
+        {
+          "type": "ex",
+          "zh": "难道你喜欢吗？",
+          "py": "Nándào nǐ xǐhuan ma?",
+          "uz": "Nahotki senga yoqsa? → Asl ma'no: senga yoqmaydi.",
+          "ru": "Неужели тебе нравится? → На самом деле: не нравится.",
+          "en": "You actually like it? → What it means: you don't."
+        },
+        {
           "type": "note",
           "uz": "Eslab qoling:\n难道 = nahotki, axir…\nRitorik savolni kuchaytiradi, javobni kutmaydi.\nTasdiq shakl → inkor ma'no; inkor shakl → tasdiq ma'no.",
           "ru": "Запомните:\n难道 = неужели, разве.\nУсиливает риторический вопрос, ответа не ждёт.\nУтвердительная форма → отрицательный смысл; отрицательная → утвердительный.",
@@ -1011,6 +1061,22 @@
           "en": "We keep in touch via WeChat."
         },
         {
+          "type": "ex",
+          "zh": "这个节目我一直在看，它介绍了很多生活中的小知识。",
+          "py": "Zhège jiémù wǒ yīzhí zài kàn, tā jièshào le hěn duō shēnghuó zhōng de xiǎo zhīshi.",
+          "uz": "Men bu ko'rsatuvni anchadan beri ko'rib kelaman — unda kundalik hayotga oid ko'p mayda bilim beriladi.",
+          "ru": "Я давно смотрю эту передачу — в ней рассказывают много бытовых мелочей, которые полезно знать.",
+          "en": "I've been watching this programme for a while — it covers a lot of small, useful facts about daily life."
+        },
+        {
+          "type": "ex",
+          "zh": "很多以前我没有注意到的问题，现在通过它了解了不少。",
+          "py": "Hěn duō yǐqián wǒ méiyǒu zhùyì dào de wèntí, xiànzài tōngguò tā liǎojiě le bù shǎo.",
+          "uz": "Ilgari e'tibor bermagan ko'p narsani endi shu ko'rsatuv orqali ancha tushunib oldim.",
+          "ru": "О многом, чего раньше не замечал, я теперь благодаря ей узнал немало.",
+          "en": "A lot of things I'd never noticed before, I now understand much better through it."
+        },
+        {
           "type": "h",
           "uz": "2. 通过 — «o'tib ketmoq»",
           "ru": "2. 通过 — «проходить сквозь»",
@@ -1045,6 +1111,14 @@
           "uz": "Men o'sha kompaniyaning suhbatidan o'tdim.",
           "ru": "Я прошёл собеседование в той компании.",
           "en": "I passed the interview at that company."
+        },
+        {
+          "type": "ex",
+          "zh": "经理对我印象不错，他要我明天就正式去上班。",
+          "py": "Jīnglǐ duì wǒ yìnxiàng bùcuò, tā yào wǒ míngtiān jiù zhèngshì qù shàngbān.",
+          "uz": "Menejerda men haqimda yaxshi taassurot qolibdi — ertadanoq rasman ishga chiqishimni aytdi.",
+          "ru": "У менеджера сложилось обо мне хорошее впечатление — он попросил меня официально выйти на работу уже завтра.",
+          "en": "The manager formed a good impression of me — he asked me to start officially tomorrow."
         },
         {
           "type": "ex",
@@ -1325,11 +1399,19 @@
         },
         {
           "type": "ex",
-          "zh": "虽然收入高，可是经常要加班。",
-          "py": "Suīrán shōurù gāo, kěshì jīngcháng yào jiābān.",
-          "uz": "Daromad yuqori bo'lsa-da, tez-tez qo'shimcha ishlashga to'g'ri keladi.",
-          "ru": "Хотя зарплата высокая, но часто приходится работать сверхурочно.",
-          "en": "The pay is high, but you often have to work overtime."
+          "zh": "你怎么又想换工作了，这儿的收入不是挺高的吗？",
+          "py": "Nǐ zěnme yòu xiǎng huàn gōngzuò le, zhèr de shōurù bùshì tǐng gāo de ma?",
+          "uz": "Nega yana ish almashtirmoqchisan? Bu yerda daromad yaxshi-ku?",
+          "ru": "Почему ты опять хочешь сменить работу? Разве здесь не хорошая зарплата?",
+          "en": "Why do you want to change jobs again? Isn't the pay here quite good?"
+        },
+        {
+          "type": "ex",
+          "zh": "虽然收入高，可是经常要加班，很少有时间和家人在一起。",
+          "py": "Suīrán shōurù gāo, kěshì jīngcháng yào jiābān, hěn shǎo yǒu shíjiān hé jiārén zài yīqǐ.",
+          "uz": "Daromad yuqori bo'lsa-da, tez-tez qo'shimcha ishlashga to'g'ri keladi — oila bilan birga bo'lishga vaqt juda kam.",
+          "ru": "Хотя зарплата высокая, часто приходится работать сверхурочно — на семью почти не остаётся времени.",
+          "en": "The pay is high, but there's constant overtime — I hardly have any time with my family."
         },
         {
           "type": "ex",
@@ -1353,11 +1435,11 @@
         },
         {
           "type": "ex",
-          "zh": "小时候，大家都说我像我妈。",
-          "py": "Xiǎo shíhou, dàjiā dōu shuō wǒ xiàng wǒ mā.",
-          "uz": "Kichkinaligimda hamma meni onamga o'xshaydi derdi.",
-          "ru": "В детстве все говорили, что я похож на маму.",
-          "en": "When I was little, everyone said I looked like my mother."
+          "zh": "小时候，大家都说我像我妈妈，尤其是性格。",
+          "py": "Xiǎo shíhou, dàjiā dōu shuō wǒ xiàng wǒ māma, yóuqí shì xìnggé.",
+          "uz": "Kichkinaligimda hamma meni onamga o'xshaydi derdi — ayniqsa fe'l-atvorim.",
+          "ru": "В детстве все говорили, что я похож на маму, особенно характером.",
+          "en": "When I was little everyone said I took after my mother — my character especially."
         },
         {
           "type": "ex",
@@ -1391,19 +1473,33 @@
         },
         {
           "type": "ex",
-          "zh": "我想去，可是没时间。",
-          "py": "Wǒ xiǎng qù, kěshì méi shíjiān.",
-          "uz": "Borgim bor, lekin vaqtim yo'q.",
-          "ru": "Хочу пойти, но нет времени.",
-          "en": "I want to go, but I've no time."
+          "zh": "虽然他很忙，可是他还是来帮我了。",
+          "py": "Suīrán tā hěn máng, kěshì tā háishì lái bāng wǒ le.",
+          "uz": "U juda band bo'lsa-da, baribir menga yordamga keldi.",
+          "ru": "Хотя он был очень занят, он всё равно пришёл мне помочь.",
+          "en": "Busy as he was, he still came to help me."
         },
         {
           "type": "ex",
-          "zh": "我想去，但是没时间。",
-          "py": "Wǒ xiǎng qù, dànshì méi shíjiān.",
-          "uz": "Borgim bor, ammo vaqtim yo'q.",
-          "ru": "Хочу пойти, однако времени нет.",
-          "en": "I want to go, however I've no time."
+          "zh": "虽然他很忙，但是他还是来帮我了。",
+          "py": "Suīrán tā hěn máng, dànshì tā háishì lái bāng wǒ le.",
+          "uz": "U juda band bo'lsa-da, baribir menga yordamga keldi.",
+          "ru": "Хотя он был очень занят, он всё равно пришёл мне помочь.",
+          "en": "Busy as he was, he still came to help me."
+        },
+        {
+          "type": "note",
+          "uz": "Ikkala gapning ma'nosi bir xil — farq faqat uslubda.",
+          "ru": "Смысл обоих предложений одинаков — разница только в стиле.",
+          "en": "Both sentences mean the same — the difference is register alone."
+        },
+        {
+          "type": "ex",
+          "zh": "虽然很贵，可是我还是想买。",
+          "py": "Suīrán hěn guì, kěshì wǒ háishì xiǎng mǎi.",
+          "uz": "Qimmat bo'lsa-da, baribir sotib olgim keladi.",
+          "ru": "Хотя дорого, я всё равно хочу это купить.",
+          "en": "It's expensive, but I still want to buy it."
         },
         {
           "type": "ex",
@@ -1511,11 +1607,19 @@
         },
         {
           "type": "ex",
+          "zh": "小张，你这份计划书写得不错，就按照这个计划去做市场调查吧。",
+          "py": "Xiǎo Zhāng, nǐ zhè fèn jìhuàshū xiě de bùcuò, jiù ànzhào zhège jìhuà qù zuò shìchǎng diàochá ba.",
+          "uz": "Syao Chjan, bu reja hujjatingiz yaxshi yozilibdi — shu reja bo'yicha bozor tadqiqotini o'tkazing.",
+          "ru": "Сяо Чжан, план у вас написан неплохо — проведите исследование рынка по нему.",
+          "en": "Xiao Zhang, this plan is well written — go and do the market research according to it."
+        },
+        {
+          "type": "ex",
           "zh": "下个月把调查结果交上来。",
           "py": "Xià gè yuè bǎ diàochá jiéguǒ jiāo shànglái.",
-          "uz": "Kelasi oy tadqiqot natijalarini topshiring.",
+          "uz": "Kelasi oy tadqiqot natijasini topshiring.",
           "ru": "В следующем месяце сдайте результаты исследования.",
-          "en": "Hand in the survey results next month."
+          "en": "Hand in the research results next month."
         },
         {
           "type": "ex",
@@ -1555,11 +1659,11 @@
         },
         {
           "type": "ex",
-          "zh": "结果一个月之内瘦了十公斤。",
-          "py": "Jiéguǒ yī gè yuè zhī nèi shòu le shí gōngjīn.",
-          "uz": "Natijada bir oy ichida o'n kilo tashladi.",
-          "ru": "В итоге за месяц она сбросила десять килограммов.",
-          "en": "As a result she lost ten kilos within a month."
+          "zh": "结果马竟然在一个月之内瘦了二十斤。",
+          "py": "Jiéguǒ mǎ jìngrán zài yī gè yuè zhī nèi shòu le èrshí jīn.",
+          "uz": "Natijada bir oy ichida... ot yigirma jin (o'n kilo) ozibdi! (Xotini emas — ot.)",
+          "ru": "В итоге за месяц похудела… лошадь, на двадцать цзиней (десять кило)! (Не жена — лошадь.)",
+          "en": "And the result? Within a month the horse had lost twenty jin (ten kilos)! (The horse — not his wife.)"
         },
         {
           "type": "ex",
@@ -1598,6 +1702,36 @@
           "uz": "U har kuni yarim tungacha o'qidi, lekin oxir-oqibat baribir imtihondan o'tolmadi.",
           "ru": "Он каждый день учился до полуночи, а в итоге всё равно не сдал экзамен.",
           "en": "He studied until midnight every day, and in the end he still didn't pass."
+        },
+        {
+          "type": "ex",
+          "zh": "他没有好好准备，结果考试没通过。",
+          "py": "Tā méiyǒu hǎohāo zhǔnbèi, jiéguǒ kǎoshì méi tōngguò.",
+          "uz": "U yaxshilab tayyorlanmadi, natijada imtihondan o'tolmadi.",
+          "ru": "Он толком не подготовился и в итоге не сдал экзамен.",
+          "en": "He didn't prepare properly, and in the end he failed the exam."
+        },
+        {
+          "type": "h",
+          "uz": "Kichik kamchiliklar to'planganda",
+          "ru": "Когда мелочи накапливаются",
+          "en": "When small shortfalls add up"
+        },
+        {
+          "type": "ex",
+          "zh": "有些人爱说“差不多”。",
+          "py": "Yǒuxiē rén ài shuō chàbuduō.",
+          "uz": "Ba'zilar «deyarli bo'ldi» deyishni yaxshi ko'radi.",
+          "ru": "Некоторые любят говорить: «почти готово».",
+          "en": "Some people like to say “near enough”."
+        },
+        {
+          "type": "ex",
+          "zh": "例如，每天的工作都是完成得差不多，结果，积累下来，就变成差很多了。",
+          "py": "Lìrú, měitiān de gōngzuò dōu shì wánchéng de chàbuduō, jiéguǒ, jīlěi xiàlái, jiù biànchéng chà hěn duō le.",
+          "uz": "Masalan, har kungi ish «deyarli» tugaydi — natijada bular to'planib, oxirida farq juda katta bo'lib chiqadi.",
+          "ru": "Например, каждый день работа сделана «почти» — в результате это накапливается, и разница выходит очень большая.",
+          "en": "Each day's work is “near enough” done — and the result, once it all piles up, is a very long way off."
         },
         {
           "type": "note",
