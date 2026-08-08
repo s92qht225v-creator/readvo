@@ -119,7 +119,7 @@ Speaker turns are white cards with a coloured left strip — the old `A:` / `B:`
 - `.dr-line` - One turn: white card, `border-left: 3px solid var(--dr-speaker, #378add)`, `border-radius: 0 8px 8px 0`, `box-shadow`, `margin-bottom: 14px`, `padding: 8px 12px`, `cursor: pointer`
 - `.dr-line--spa` / `--spb` / `--spc` - Speaker hue via `--dr-speaker`: `#dc2626` (red, A) / `#378add` (blue, B) / `#ef9f27` (amber, C). Colour only — the strip stays on the left for all speakers
 - `.dr-line-chars` - Char row (flex wrap, `column-gap: 0.18em`). ⚠️ The `:not(:has(.dr-char-py))` collapse below it is **dead since 2026-08-07** — the pinyin row is reserved even when pinyin is off, so toggling changes neither line spacing nor character spacing.
-- `.dr-char-py` - Per-char progressive pinyin (`font-size: 0.69em`, `color: #dc2626`, `margin-bottom: 4px`)
+- `.dr-char-py` - Per-char progressive pinyin (`font-size: 0.69em`, `color: #dc2626`, `margin-bottom: 2px` — lowered from 4px on 2026-08-08; the `--empty` placeholder shares the margin so row height is unchanged)
 - `.dr-char-py--empty` - `visibility: hidden` placeholder (component fills it with a non-breaking space so below-level words still reserve the pinyin-row height, keeping line heights even)
 
 ### Reader chrome — translation bar & ⋮ menu (2026-08-07)

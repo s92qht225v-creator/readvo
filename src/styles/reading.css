@@ -1419,7 +1419,10 @@ body {
   font-size: 0.69em;
   color: #dc2626;
   line-height: 1.2;
-  margin-bottom: 4px;
+  /* Sits 2px above the character, not 4px. The placeholder (--empty) carries
+     the same margin, so lowering it doesn't change reserved row height and
+     toggling pinyin still causes no reflow. */
+  margin-bottom: 2px;
   white-space: nowrap;
 }
 
