@@ -746,5 +746,439 @@
         }
       ]
     }
+  ],
+  "grammar": [
+    {
+      "slug": "buguo",
+      "title": "不过",
+      "pinyin": "bùguò",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "不过 ikki xil vazifada ishlatiladi:\n1. Bog'lovchi — «ammo», «lekin», «biroq». Oldingi fikrga qo'shimcha yoki tuzatish kiritadi.\n2. Ravish — «atigi», «faqat», «xolos». Miqdor yoki daraja kamligini ta'kidlaydi.",
+          "ru": "不过 употребляется в двух функциях:\n1. Союз — «но», «однако», «всё же». Вводит дополнение или уточнение к предыдущей мысли.\n2. Наречие — «всего лишь», «только», «просто». Подчёркивает небольшое количество или степень.",
+          "en": "不过 has two uses:\n1. A conjunction — “but”, “however”. It adds to or qualifies what came before.\n2. An adverb — “only”, “merely”, “just”. It stresses that the amount or degree is small."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "A，不过 B。→ A, ammo B.\n不过 + miqdor / son → atigi, faqat…",
+          "ru": "A，不过 B。→ A, но B.\n不过 + количество / число → всего лишь, только…",
+          "en": "A, 不过 B. → A, but B.\n不过 + amount / number → only, merely…"
+        },
+        {
+          "type": "h",
+          "uz": "1. Bog'lovchi: qarama-qarshi fikr",
+          "ru": "1. Союз: противопоставление",
+          "en": "1. Conjunction: contrast"
+        },
+        {
+          "type": "p",
+          "uz": "不过 oldingi fikrni butunlay inkor qilmaydi — u vaziyatning boshqa tomonini qo'shadi.",
+          "ru": "不过 не отрицает предыдущую мысль полностью — оно добавляет другую сторону ситуации.",
+          "en": "不过 does not reject what came before — it adds another side of the situation."
+        },
+        {
+          "type": "ex",
+          "zh": "除了工作以外，家里还有母亲和儿子需要照顾。",
+          "py": "Chúle gōngzuò yǐwài, jiā lǐ hái yǒu mǔqīn hé érzi xūyào zhàogù.",
+          "uz": "Ishdan tashqari uyda onam va o'g'limga ham qarashim kerak.",
+          "ru": "Кроме работы, дома ещё мама и сын, за которыми нужен уход.",
+          "en": "Besides work, there's my mother and my son at home to look after."
+        },
+        {
+          "type": "ex",
+          "zh": "不过现在我很幸福。",
+          "py": "Bùguò xiànzài wǒ hěn xìngfú.",
+          "uz": "Lekin hozir men baxtliman.",
+          "ru": "И всё же сейчас я счастлива.",
+          "en": "But I'm happy now."
+        },
+        {
+          "type": "h",
+          "uz": "Fikrni yumshatish yoki to'ldirish",
+          "ru": "Смягчение или уточнение",
+          "en": "Softening or qualifying"
+        },
+        {
+          "type": "ex",
+          "zh": "你再早来一会儿就好了，那辆车刚开走，你只能等下一辆了。",
+          "py": "Nǐ zài zǎo lái yīhuìr jiù hǎo le, nà liàng chē gāng kāi zǒu, nǐ zhǐ néng děng xià yī liàng le.",
+          "uz": "Bir oz ertaroq kelganingda yaxshi bo'lardi. Hozirgina o'sha avtobus jo'nab ketdi — endi keyingisini kutasan.",
+          "ru": "Было бы лучше, если бы ты пришёл чуть раньше. Тот автобус только что ушёл — придётся ждать следующий.",
+          "en": "It would have been better if you'd come a little earlier. That bus has just gone — you'll have to wait for the next."
+        },
+        {
+          "type": "ex",
+          "zh": "不过也不用多长时间，估计十几分钟就来了。",
+          "py": "Bùguò yě bùyòng duō cháng shíjiān, gūjì shí jǐ fēnzhōng jiù lái le.",
+          "uz": "Lekin uzoq kutmaysan — taxminan o'n besh daqiqada keladi.",
+          "ru": "Впрочем, ждать недолго — думаю, минут через пятнадцать придёт.",
+          "en": "It won't be long though — about fifteen minutes, I'd say."
+        },
+        {
+          "type": "h",
+          "uz": "2. Ravish: «atigi, xolos»",
+          "ru": "2. Наречие: «всего лишь»",
+          "en": "2. Adverb: “only, merely”"
+        },
+        {
+          "type": "ex",
+          "zh": "我们不过谈了点儿工作方面的问题，别的都没谈。",
+          "py": "Wǒmen bùguò tán le diǎnr gōngzuò fāngmiàn de wèntí, bié de dōu méi tán.",
+          "uz": "Biz atigi ishga oid bir nechta masalani gaplashdik, boshqa hech narsani muhokama qilmadik.",
+          "ru": "Мы всего лишь обсудили пару рабочих вопросов, больше ничего.",
+          "en": "We only discussed a couple of work matters — nothing else."
+        },
+        {
+          "type": "h",
+          "uz": "Minnatdorchilikka javobda",
+          "ru": "В ответ на благодарность",
+          "en": "Replying to thanks"
+        },
+        {
+          "type": "ex",
+          "zh": "没有你的帮助，我们肯定不能按时完成任务，真是太谢谢你了。",
+          "py": "Méiyǒu nǐ de bāngzhù, wǒmen kěndìng bù néng ànshí wánchéng rènwu, zhēnshi tài xièxie nǐ le.",
+          "uz": "Sening yordamingsiz vazifani o'z vaqtida tugata olmasdik. Katta rahmat senga.",
+          "ru": "Без твоей помощи мы точно не успели бы вовремя. Огромное тебе спасибо.",
+          "en": "Without your help we'd never have finished on time. Thank you so much."
+        },
+        {
+          "type": "ex",
+          "zh": "你太客气了，我不过是给了些建议，这一切都是你们辛苦努力的结果。",
+          "py": "Nǐ tài kèqi le, wǒ bùguò shì gěi le xiē jiànyì, zhè yīqiè dōu shì nǐmen xīnkǔ nǔlì de jiéguǒ.",
+          "uz": "Bekorga aytyapsan. Men shunchaki bir nechta maslahat berdim, xolos — bularning bari sizlarning mehnatingiz natijasi.",
+          "ru": "Ну что ты. Я всего лишь дал пару советов — всё это плод вашего труда.",
+          "en": "You're too kind. I only gave a few suggestions — all this is the result of your hard work."
+        },
+        {
+          "type": "h",
+          "uz": "不过 va 但是 farqi",
+          "ru": "不过 и 但是",
+          "en": "不过 vs. 但是"
+        },
+        {
+          "type": "table",
+          "head": [
+            "不过",
+            "但是"
+          ],
+          "rows": [
+            {
+              "uz": [
+                "So'zlashuvda ko'proq",
+                "Neytralroq, yozma nutqqa yaqin"
+              ],
+              "ru": [
+                "Чаще в разговорной речи",
+                "Нейтральнее, ближе к письменной речи"
+              ],
+              "en": [
+                "More conversational",
+                "More neutral, closer to written style"
+              ]
+            },
+            {
+              "uz": [
+                "Qarama-qarshilikni yumshoqroq beradi",
+                "Qarama-qarshilikni aniqroq ta'kidlaydi"
+              ],
+              "ru": [
+                "Смягчает противопоставление",
+                "Выражает противопоставление прямее"
+              ],
+              "en": [
+                "Softens the contrast",
+                "States the contrast more directly"
+              ]
+            },
+            {
+              "uz": [
+                "Ravish ham bo'la oladi: «atigi»",
+                "Ravish bo'la olmaydi ❌"
+              ],
+              "ru": [
+                "Может быть и наречием: «всего лишь»",
+                "Наречием быть не может ❌"
+              ],
+              "en": [
+                "Can also be an adverb: “only”",
+                "Cannot be an adverb ❌"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n不过 → ammo, lekin (bog'lovchi).\n不过 → atigi, faqat, xolos (ravish).\nBog'lovchi sifatida ikkinchi gap boshida turadi; ravish sifatida miqdor oldidan keladi.\n但是 ga qaraganda yumshoqroq va og'zaki.",
+          "ru": "Запомните:\n不过 → но, однако (союз).\n不过 → всего лишь, только (наречие).\nКак союз стоит в начале второй части; как наречие — перед количеством.\nМягче и разговорнее, чем 但是.",
+          "en": "Remember:\n不过 → but, however (conjunction).\n不过 → only, merely (adverb).\nAs a conjunction it opens the second clause; as an adverb it precedes the amount.\nSofter and more spoken than 但是."
+        }
+      ]
+    },
+    {
+      "slug": "queshi",
+      "title": "确实",
+      "pinyin": "quèshí",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "确实 — ravish bo'lib, biror fakt, holat yoki fikr haqiqatan ham to'g'ri ekanini tasdiqlaydi.\nGapiruvchining ishonchini bildiradi: «haqiqatan ham», «rostdan ham», «darhaqiqat».",
+          "ru": "确实 — наречие, подтверждающее, что факт, ситуация или утверждение действительно соответствуют действительности.\nВыражает уверенность говорящего: «действительно», «в самом деле», «правда».",
+          "en": "确实 is an adverb confirming that a fact, situation or statement really is the case.\nIt conveys the speaker's certainty: “indeed”, “really”, “truly”."
+        },
+        {
+          "type": "h",
+          "uz": "Asosiy qoida",
+          "ru": "Основная структура",
+          "en": "Basic structure"
+        },
+        {
+          "type": "formula",
+          "uz": "确实 + Fe'l / Sifat\n确实是 + Ot",
+          "ru": "确实 + Глагол / Прилагательное\n确实是 + Существительное",
+          "en": "确实 + Verb / Adjective\n确实是 + Noun"
+        },
+        {
+          "type": "ex",
+          "zh": "确实很好。",
+          "py": "Quèshí hěn hǎo.",
+          "uz": "Haqiqatan ham yaxshi.",
+          "ru": "Действительно хорошо.",
+          "en": "It really is good."
+        },
+        {
+          "type": "ex",
+          "zh": "他确实很聪明。",
+          "py": "Tā quèshí hěn cōngming.",
+          "uz": "U haqiqatan ham aqlli.",
+          "ru": "Он действительно умный.",
+          "en": "He really is clever."
+        },
+        {
+          "type": "ex",
+          "zh": "这确实是一个问题。",
+          "py": "Zhè quèshí shì yīgè wèntí.",
+          "uz": "Bu haqiqatan ham muammo.",
+          "ru": "Это действительно проблема.",
+          "en": "This really is a problem."
+        },
+        {
+          "type": "h",
+          "uz": "Faktni tasdiqlash",
+          "ru": "Подтверждение факта",
+          "en": "Confirming a fact"
+        },
+        {
+          "type": "p",
+          "uz": "确实 holatning chindan ham shundayligini ta'kidlaydi — gapiruvchi taxmin qilmayapti, tasdiqlayapti.",
+          "ru": "确实 подчёркивает, что ситуация действительно такова — говорящий не предполагает, а подтверждает.",
+          "en": "确实 stresses that the situation genuinely holds — the speaker is confirming, not guessing."
+        },
+        {
+          "type": "ex",
+          "zh": "爱情确实是结婚的重要原因，但仅有爱情是不够的。",
+          "py": "Àiqíng quèshí shì jiéhūn de zhòngyào yuányīn, dàn jǐn yǒu àiqíng shì bù gòu de.",
+          "uz": "Sevgi haqiqatan ham turmush qurishning muhim sababi, lekin yolg'iz sevgining o'zi yetarli emas.",
+          "ru": "Любовь действительно важная причина для брака, но одной любви недостаточно.",
+          "en": "Love really is an important reason for marrying, but love alone is not enough."
+        },
+        {
+          "type": "h",
+          "uz": "Suhbatdoshning gapini tasdiqlash",
+          "ru": "Подтверждение слов собеседника",
+          "en": "Confirming what someone said"
+        },
+        {
+          "type": "ex",
+          "zh": "好几年没见，你还是这么爱开玩笑，我哪儿有你说的那么年轻。",
+          "py": "Hǎo jǐ nián méi jiàn, nǐ háishì zhème ài kāi wánxiào, wǒ nǎr yǒu nǐ shuō de nàme niánqīng.",
+          "uz": "Bir necha yil ko'rishmadik, sen hamon hazilkashsan. Qayoqda men sen aytgancha yosh bo'lay.",
+          "ru": "Не виделись несколько лет, а ты всё такой же шутник. Куда мне до той молодости, о которой ты говоришь.",
+          "en": "We haven't met in years and you still love a joke. I'm hardly as young as you make out."
+        },
+        {
+          "type": "ex",
+          "zh": "我说的是真的，你确实比以前更年轻、更漂亮了。",
+          "py": "Wǒ shuō de shì zhēn de, nǐ quèshí bǐ yǐqián gèng niánqīng, gèng piàoliang le.",
+          "uz": "Aytganim rost — sen haqiqatan ham avvalgidan yoshroq va chiroyliroq bo'libsan.",
+          "ru": "Я говорю правду — ты действительно стала моложе и красивее, чем раньше.",
+          "en": "I mean it — you really do look younger and prettier than before."
+        },
+        {
+          "type": "h",
+          "uz": "Ko'p ishlatiladigan birikmalar",
+          "ru": "Частые сочетания",
+          "en": "Common expressions"
+        },
+        {
+          "type": "p",
+          "uz": "确实不错 — haqiqatan ham yaxshi\n确实很重要 — haqiqatan ham muhim\n确实存在 — haqiqatan ham mavjud\n确实是这样 — haqiqatan ham shunday",
+          "ru": "确实不错 — действительно неплохо\n确实很重要 — действительно важно\n确实存在 — действительно существует\n确实是这样 — действительно так",
+          "en": "确实不错 — really rather good\n确实很重要 — genuinely important\n确实存在 — really does exist\n确实是这样 — that is indeed so"
+        },
+        {
+          "type": "ex",
+          "zh": "他确实很努力。",
+          "py": "Tā quèshí hěn nǔlì.",
+          "uz": "U haqiqatan ham tirishqoq.",
+          "ru": "Он действительно очень старается.",
+          "en": "He really does work hard."
+        },
+        {
+          "type": "ex",
+          "zh": "这确实是个好办法。",
+          "py": "Zhè quèshí shì gè hǎo bànfǎ.",
+          "uz": "Bu haqiqatan ham yaxshi usul.",
+          "ru": "Это действительно хороший способ.",
+          "en": "That really is a good way to do it."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n确实 = haqiqatan ham, rostdan ham.\nFakt yoki holatning rostligini tasdiqlaydi.\nFe'l yoki sifatdan oldin keladi; ot oldidan 确实是 shakli ishlatiladi.",
+          "ru": "Запомните:\n确实 = действительно, в самом деле.\nПодтверждает истинность факта или ситуации.\nСтавится перед глаголом или прилагательным; перед существительным — 确实是.",
+          "en": "Remember:\n确实 = indeed, really.\nIt confirms that something is true.\nIt precedes a verb or adjective; before a noun use 确实是."
+        }
+      ]
+    },
+    {
+      "slug": "youyu",
+      "title": "由于",
+      "pinyin": "yóuyú",
+      "label": "语法",
+      "labelTranslation": "Grammatika",
+      "labelTranslation_ru": "Грамматика",
+      "labelTranslation_en": "Grammar",
+      "blocks": [
+        {
+          "type": "h",
+          "uz": "Ma'nosi",
+          "ru": "Значение",
+          "en": "Meaning"
+        },
+        {
+          "type": "p",
+          "uz": "由于 sababni bildiradi: «… sababli», «… tufayli».\nIkki xil ishlatiladi:\n1. Bog'lovchi — undan keyin butun gap keladi.\n2. Ko'makchi — undan keyin ot yoki ot birikmasi keladi.",
+          "ru": "由于 выражает причину: «из-за», «вследствие», «в связи с».\nУпотребляется двояко:\n1. Как союз — после него идёт целое предложение.\n2. Как предлог — после него идёт существительное или именная группа.",
+          "en": "由于 states a cause: “because of”, “due to”.\nIt works two ways:\n1. As a conjunction — a full clause follows.\n2. As a preposition — a noun or noun phrase follows."
+        },
+        {
+          "type": "h",
+          "uz": "1. 由于 + Gap",
+          "ru": "1. 由于 + Предложение",
+          "en": "1. 由于 + Clause"
+        },
+        {
+          "type": "formula",
+          "uz": "由于 + Sabab，Natija。",
+          "ru": "由于 + Причина，Результат。",
+          "en": "由于 + Reason, Result."
+        },
+        {
+          "type": "ex",
+          "zh": "今年春节他们本来打算出国去逛逛，但是由于家里的老人突然生病了，所以他们只好放弃了这个计划。",
+          "py": "Jīnnián Chūnjié tāmen běnlái dǎsuàn chūguó qù guàngguang, dànshì yóuyú jiā lǐ de lǎorén tūrán shēngbìng le, suǒyǐ tāmen zhǐhǎo fàngqì le zhège jìhuà.",
+          "uz": "Bu yilgi Bahor bayramida ular chet elga sayohatni rejalashtirgan edi, lekin uydagi keksa kishi to'satdan kasal bo'lib qolgani sababli bu rejadan voz kechishga to'g'ri keldi.",
+          "ru": "На Праздник весны в этом году они собирались съездить за границу, но из-за того, что дома внезапно заболел пожилой человек, им пришлось отказаться от этого плана.",
+          "en": "They had planned to travel abroad this Spring Festival, but because an elderly relative fell suddenly ill, they had to give the plan up."
+        },
+        {
+          "type": "ex",
+          "zh": "当你生病了，如果由于缺钱而不能及时去看医生，你的健康都很难得到保证，就更别说幸福了。",
+          "py": "Dāng nǐ shēngbìng le, rúguǒ yóuyú quē qián ér bù néng jíshí qù kàn yīshēng, nǐ de jiànkāng dōu hěn nán dédào bǎozhèng, jiù gèng bié shuō xìngfú le.",
+          "uz": "Kasal bo'lganingda pul yetishmagani sababli o'z vaqtida shifokorga bora olmasang, sog'liging ham kafolatlanmaydi — baxt haqida-ku gapirmasa ham bo'ladi.",
+          "ru": "Если ты заболел и из-за нехватки денег не можешь вовремя попасть к врачу, то и здоровье трудно сохранить — а о счастье и говорить не приходится.",
+          "en": "If you fall ill and can't see a doctor in time for lack of money, even your health can't be assured — let alone your happiness."
+        },
+        {
+          "type": "h",
+          "uz": "2. 由于 + Ot",
+          "ru": "2. 由于 + Существительное",
+          "en": "2. 由于 + Noun"
+        },
+        {
+          "type": "formula",
+          "uz": "由于 + Ot / Ot birikmasi，Natija。",
+          "ru": "由于 + Существительное / Именная группа，Результат。",
+          "en": "由于 + Noun / Noun phrase, Result."
+        },
+        {
+          "type": "ex",
+          "zh": "由于种种原因，我们不得不改变原来的计划。",
+          "py": "Yóuyú zhǒngzhǒng yuányīn, wǒmen bùdébù gǎibiàn yuánlái de jìhuà.",
+          "uz": "Turli sabablar tufayli dastlabki rejamizni o'zgartirishga majbur bo'ldik.",
+          "ru": "По разным причинам нам пришлось изменить первоначальный план.",
+          "en": "For various reasons we had to change our original plan."
+        },
+        {
+          "type": "ex",
+          "zh": "由于工作的需要，我去年十月去了趟上海，跟一家公司去谈生意。",
+          "py": "Yóuyú gōngzuò de xūyào, wǒ qùnián shíyuè qù le tàng Shànghǎi, gēn yī jiā gōngsī qù tán shēngyi.",
+          "uz": "Ish taqozosi bilan o'tgan yil oktabrda Shanxayga borib, bir kompaniya bilan savdo masalasini gaplashdim.",
+          "ru": "В связи с рабочей необходимостью в октябре прошлого года я съездил в Шанхай обсудить дела с одной компанией.",
+          "en": "Work required it, so last October I made a trip to Shanghai to talk business with a company."
+        },
+        {
+          "type": "h",
+          "uz": "由于 va 因为 farqi",
+          "ru": "由于 и 因为",
+          "en": "由于 vs. 因为"
+        },
+        {
+          "type": "ex",
+          "zh": "由于天气不好，比赛取消了。",
+          "py": "Yóuyú tiānqì bù hǎo, bǐsài qǔxiāo le.",
+          "uz": "Ob-havo yomonligi sababli musobaqa bekor qilindi.",
+          "ru": "Из-за плохой погоды соревнование отменили.",
+          "en": "The match was cancelled due to the bad weather."
+        },
+        {
+          "type": "ex",
+          "zh": "因为天气不好，比赛取消了。",
+          "py": "Yīnwèi tiānqì bù hǎo, bǐsài qǔxiāo le.",
+          "uz": "Ob-havo yomon bo'lgani uchun musobaqa bekor qilindi.",
+          "ru": "Соревнование отменили, потому что погода была плохой.",
+          "en": "The match was cancelled because the weather was bad."
+        },
+        {
+          "type": "note",
+          "uz": "由于 → rasmiy va yozma uslubga yaqin.\n因为 → kundalik va og'zaki nutqda tabiiyroq.\nMa'no bir xil; farq uslubda.",
+          "ru": "由于 → ближе к официальной и письменной речи.\n因为 → естественнее в повседневной и разговорной.\nСмысл один; разница в стиле.",
+          "en": "由于 → belongs to formal, written style.\n因为 → sounds more natural in everyday speech.\nSame meaning; the difference is register."
+        },
+        {
+          "type": "note",
+          "uz": "Eslab qoling:\n由于 = sababli, tufayli.\n由于 + gap → to'liq sabab gapi.\n由于 + ot → sababni bildiruvchi ot birikmasi.\n因为 dan rasmiyroq.",
+          "ru": "Запомните:\n由于 = из-за, вследствие.\n由于 + предложение → целое предложение-причина.\n由于 + существительное → именная группа-причина.\nОфициальнее, чем 因为.",
+          "en": "Remember:\n由于 = because of, due to.\n由于 + clause → a full reason clause follows.\n由于 + noun → a noun phrase follows.\nMore formal than 因为."
+        }
+      ]
+    }
   ]
 }
